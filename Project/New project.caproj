@@ -9,7 +9,9 @@
     <app-id>com.mycompany.myapp</app-id>
     <unique-id>9nlt6syxjeh4</unique-id>
     <saved-with-version>22100</saved-with-version>
-    <used-plugins />
+    <used-plugins>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+    </used-plugins>
     <used-behaviors />
     <used-effects />
     <configurations>
@@ -37,7 +39,11 @@
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
-    <object-folder />
+    <object-folder>
+        <object-type name="Keyboard" sid="5709207833352554">
+            <plugin id="Keyboard" />
+        </object-type>
+    </object-folder>
     <families />
     <layout-folder>
         <layout>Layout 1.xml</layout>
@@ -45,7 +51,9 @@
     <event-folder>
         <event-sheet>Event sheet 1.xml</event-sheet>
     </event-folder>
-    <global-instances />
+    <global-instances>
+        <global-instance type="Keyboard" uid="0" />
+    </global-instances>
     <sounds-folder />
     <music-folder />
     <files-folder>
