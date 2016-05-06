@@ -1,8 +1,9 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>Event Sheet 1</name>
+    <name>Level 1</name>
     <events>
+        <include>Player</include>
         <include>Bat</include>
     </events>
 </c2eventsheet>

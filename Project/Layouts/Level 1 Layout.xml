@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
-    <name>Layout 1</name>
+    <name>Level 1 Layout</name>
     <sid>8977988543359503</sid>
-    <event-sheet>Event Sheet 1</event-sheet>
+    <event-sheet>Level 1</event-sheet>
     <size>
         <width>5000</width>
         <height>960</height>
@@ -6984,6 +6984,27 @@
                     </world>
                 </instance>
                 <instance type="Sprite2" uid="220">
+                  <properties>
+                    <initial-visibility>Visible</initial-visibility>
+                    <initial-animation>Default</initial-animation>
+                    <initial-frame>0</initial-frame>
+                    <collisions>Enabled</collisions>
+                  </properties>
+                  <blend-mode>0</blend-mode>
+                  <effect-fallback>0</effect-fallback>
+                  <world>
+                    <x>576</x>
+                    <y>798</y>
+                    <z>0</z>
+                    <width>30</width>
+                    <height>30</height>
+                    <depth>0</depth>
+                    <hotspotX>0.5</hotspotX>
+                    <hotspotY>0.5</hotspotY>
+                    <angle>0</angle>
+                  </world>
+                </instance>
+                <instance type="Player_arm_left" uid="222">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -6992,16 +7013,19 @@
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
                     <world>
-                        <x>576</x>
-                        <y>798</y>
+                        <x>149.993743896</x>
+                        <y>994.348327637</y>
                         <z>0</z>
-                        <width>30</width>
-                        <height>30</height>
+                        <width>35</width>
+                        <height>10</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
+                        <hotspotX>0</hotspotX>
                         <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
+                        <angle>3.141592741</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
@@ -7024,14 +7048,56 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Player" uid="1">
+                <instance type="Player_Frame" uid="1">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>145</x>
+                        <y>929</y>
+                        <z>0</z>
+                        <width>22</width>
+                        <height>38</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Player_Box" uid="215">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Dash>false</Dash>
+                        <Dash_Speed>1300</Dash_Speed>
+                        <Dash_Time>0.1</Dash_Time>
+                        <Life>5</Life>
+                    </instance-variables>
                     <behavior-instances>
+                        <behavior-instance type="Platform">
+                            <properties>
+                                <max-speed>160</max-speed>
+                                <acceleration>15000</acceleration>
+                                <deceleration>1500</deceleration>
+                                <jump-strength>480</jump-strength>
+                                <gravity>1500</gravity>
+                                <max-fall-speed>1000</max-fall-speed>
+                                <double-jump>Enabled</double-jump>
+                                <jump-sustain>0</jump-sustain>
+                                <default-controls>No</default-controls>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
                         <behavior-instance type="BoundToLayout">
                             <properties>
                                 <bound-by>Edge</bound-by>
@@ -7042,32 +7108,44 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
-                        <behavior-instance type="Platform">
-                            <properties>
-                                <max-speed>160</max-speed>
-                                <acceleration>1500</acceleration>
-                                <deceleration>1500</deceleration>
-                                <jump-strength>480</jump-strength>
-                                <gravity>1500</gravity>
-                                <max-fall-speed>1000</max-fall-speed>
-                                <double-jump>Enabled</double-jump>
-                                <jump-sustain>0</jump-sustain>
-                                <default-controls>Yes</default-controls>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
+                        <behavior-instance type="Timer" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>69</x>
-                        <y>941</y>
+                        <x>84</x>
+                        <y>932</y>
                         <z>0</z>
                         <width>22</width>
                         <height>38</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Player_arm_right" uid="220">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>149.530090332</x>
+                        <y>910.156555176</y>
+                        <z>0</z>
+                        <width>35</width>
+                        <height>10</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
