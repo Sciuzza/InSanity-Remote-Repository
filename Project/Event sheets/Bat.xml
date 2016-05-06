@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Bat</name>
+    <events>
+        <variable constant="0" name="speed" sid="5940727590646808" static="0" type="number">30</variable>
+        <variable constant="0" name="r" sid="3112115074765168" static="0" type="number">0</variable>
+        <variable constant="0" name="t" sid="873822755696051" static="0" type="number">0</variable>
+        <event-group description="" sid="2842277594571084" title="Bat Spawn">
+            <sub-events>
+                <event-block sid="1640697239736702">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="6503524916007683" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="4812566256143744" type="Bat" />
+                        <action id="0" name="Spawn another object" sid="4414313485960973" type="BatSpawn">
+                            <param id="0" name="Object">Bat</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="102661828021616">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="6409472968579572" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block disabled="1" sid="172210299452034">
+                    <conditions>
+                        <condition behavior="LineOfSight" disabled="1" id="0" name="Has LOS to object" sid="9396305843056498" type="Bat">
+                            <param id="0" name="Object">Player</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="783635486351448" type="Bat">
+                            <param id="0" name="X">self.X - 1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block disabled="1" sid="7843110799478664">
+                            <conditions />
+                            <actions>
+                                <action id="-2" name="Set Y" sid="6351111016329001" type="Bat">
+                                    <param id="0" name="Y">Player.Y - Bat.ExpY</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block disabled="1" sid="9163386750187697">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="2251648830330155" type="System" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="1574607724887703" type="Bat">
+                    <param id="0" name="Instance variable">BatX</param>
+                    <param id="1" name="Value">bat.X - Player.X</param>
+                </action>
+                <action id="-10" name="Set value" sid="5694040042154082" type="Bat">
+                    <param id="0" name="Instance variable">ExpY</param>
+                    <param id="1" name="Value">(bat.BatX)^(1.1)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3935514790772808">
+            <conditions>
+                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="900150401083358" type="Bat">
+                    <param id="0" name="Object">Player</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="9065188592401163" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="CustomMovement" disabled="1" id="5" name="Accelerate toward position" sid="8021330310417492" type="Bat">
+                    <param id="0" name="Acceleration">250</param>
+                    <param id="1" name="X">BatSpawn.X + cos(time*300)*200</param>
+                    <param id="2" name="Y">BatSpawn.Y + sin(time*300)*300</param>
+                </action>
+                <action id="-9" name="Set value" sid="3053488142704022" type="System">
+                    <param id="0" name="Variable">r</param>
+                    <param id="1" name="Value">distance(Sprite2.X,Sprite2.y,Bat.X,bat.y)</param>
+                </action>
+                <action id="-10" name="Add to" sid="4113899662796165" type="System">
+                    <param id="0" name="Variable">t</param>
+                    <param id="1" name="Value">dt</param>
+                </action>
+                <action id="-3" name="Set position" sid="9587223502630304" type="Bat">
+                    <param id="0" name="X">Sprite2.X + (cos(t*speed)*r)</param>
+                    <param id="1" name="Y">Sprite2.Y + (sin(t*speed)*r) </param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="4281232086846674">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="8609281349796087" type="Bat">
+                            <param id="0" name="Object">Batchenesò</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="2396400124835534" type="Bat">
+                            <param id="0" name="X">Sprite2.X - (cos(t*speed)*r)</param>
+                            <param id="1" name="Y">Sprite2.Y - (sin(t*speed)*r) </param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>
