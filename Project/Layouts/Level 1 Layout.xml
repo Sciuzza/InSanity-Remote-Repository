@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
-    <name>Layout 1</name>
+    <name>Level 1 Layout</name>
     <sid>8977988543359503</sid>
-    <event-sheet>Event sheet 1</event-sheet>
+    <event-sheet>Level 1</event-sheet>
     <size>
         <width>5000</width>
         <height>960</height>
@@ -106,6 +106,60 @@
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>-0.245457262</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="BatSpawn" uid="215">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="LineOfSight">
+                            <properties>
+                                <obstacles>Solids</obstacles>
+                                <range>500</range>
+                                <cone-of-view>360</cone-of-view>
+                                <use-collision-cells>Yes</use-collision-cells>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>703</x>
+                        <y>795</y>
+                        <z>0</z>
+                        <width>30</width>
+                        <height>30</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Batchenesò" uid="216">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>448</x>
+                        <y>797</y>
+                        <z>0</z>
+                        <width>30</width>
+                        <height>30</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
@@ -335,10 +389,10 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>736</x>
-                        <y>856</y>
+                        <y>861.5</y>
                         <z>0</z>
                         <width>32</width>
-                        <height>176</height>
+                        <height>167</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -6929,6 +6983,27 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="Sprite2" uid="220">
+                  <properties>
+                    <initial-visibility>Visible</initial-visibility>
+                    <initial-animation>Default</initial-animation>
+                    <initial-frame>0</initial-frame>
+                    <collisions>Enabled</collisions>
+                  </properties>
+                  <blend-mode>0</blend-mode>
+                  <effect-fallback>0</effect-fallback>
+                  <world>
+                    <x>576</x>
+                    <y>798</y>
+                    <z>0</z>
+                    <width>30</width>
+                    <height>30</height>
+                    <depth>0</depth>
+                    <hotspotX>0.5</hotspotX>
+                    <hotspotY>0.5</hotspotY>
+                    <angle>0</angle>
+                  </world>
+                </instance>
                 <instance type="Player_arm_left" uid="222">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -6936,11 +7011,11 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
                     </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
                     <world>
                         <x>149.993743896</x>
                         <y>994.348327637</y>
@@ -7017,7 +7092,7 @@
                                 <jump-strength>480</jump-strength>
                                 <gravity>1500</gravity>
                                 <max-fall-speed>1000</max-fall-speed>
-                                <double-jump>Disabled</double-jump>
+                                <double-jump>Enabled</double-jump>
                                 <jump-sustain>0</jump-sustain>
                                 <default-controls>No</default-controls>
                                 <initial-state>Enabled</initial-state>
@@ -7093,7 +7168,57 @@
             <use-render-cells>0</use-render-cells>
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
-            <instances />
+            <instances>
+                <instance type="Bat" uid="11">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <BatX>0</BatX>
+                        <BatY>0</BatY>
+                        <ExpY>0</ExpY>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="LineOfSight">
+                            <properties>
+                                <obstacles>Solids</obstacles>
+                                <range>300</range>
+                                <cone-of-view>360</cone-of-view>
+                                <use-collision-cells>Yes</use-collision-cells>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="CustomMovement">
+                            <properties>
+                                <stepping-mode>None</stepping-mode>
+                                <pixels-per-step>5</pixels-per-step>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="BoundToLayout">
+                            <properties>
+                                <bound-by>Edge</bound-by>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-75</x>
+                        <y>618</y>
+                        <z>0</z>
+                        <width>16</width>
+                        <height>16</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+            </instances>
             <effects />
         </layer>
         <layer name="Overlay" sid="7230448396373021">
@@ -7149,28 +7274,6 @@
                         <z>0</z>
                         <width>80</width>
                         <height>48</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Sprite6" uid="11">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>728</x>
-                        <y>760</y>
-                        <z>0</z>
-                        <width>16</width>
-                        <height>16</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>

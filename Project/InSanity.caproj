@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2project>
-    <name>New project</name>
+    <name>InSanity</name>
     <description></description>
     <version>1.0.0.0</version>
     <author></author>
@@ -15,10 +15,12 @@
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
+        <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
@@ -104,11 +106,34 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite6" sid="7884223432551516">
+        <object-type name="Bat" sid="7884223432551516">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="BatX" sid="4670948607156722" type="number" />
+                <instance-variable name="BatY" sid="1884183841010604" type="number" />
+                <instance-variable name="ExpY" sid="1079819207196919" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="LineOfSight" sid="6684630113665934">
+                    <behavior id="LOS" />
+                </behavior-type>
+                <behavior-type name="CustomMovement" sid="9314069687911626">
+                    <behavior id="custom" />
+                </behavior-type>
+                <behavior-type name="BoundToLayout" sid="1968005525338989">
+                    <behavior id="bound" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1391804875812191" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -146,6 +171,35 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="BatSpawn" sid="2841017944658397">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="LineOfSight" sid="6440365585988595">
+                    <behavior id="LOS" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2481485363676638" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Batchenesò" sid="3633508069008424">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8495433961458674" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite2" sid="4983057067379472">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9368341480735007" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+              </animation-folder>
+            </object-type>
         <object-type name="Player_Box" sid="8534937278847791">
             <plugin id="Sprite" />
             <instance-variables>
@@ -216,11 +270,12 @@
     </object-folder>
     <families />
     <layout-folder>
-        <layout>Layout 1.xml</layout>
+        <layout>Level 1 Layout.xml</layout>
     </layout-folder>
     <event-folder>
-        <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>Level 1.xml</event-sheet>
         <event-sheet>Player.xml</event-sheet>
+        <event-sheet>Bat.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="216" />
