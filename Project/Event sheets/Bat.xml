@@ -31,8 +31,8 @@
             <sub-events>
                 <event-block disabled="1" sid="172210299452034">
                     <conditions>
-                        <condition behavior="LineOfSight" disabled="1" id="0" name="Has LOS to object" sid="9396305843056498" type="Bat">
-                            <param id="0" name="Object">Player</param>
+                        <condition behavior="LineOfSight" disabled="1" id="0" name="Has LOS to object" sid="9135498748240823" type="Bat">
+                            <param id="0" name="Object">Player_Frame</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -45,7 +45,7 @@
                             <conditions />
                             <actions>
                                 <action id="-2" name="Set Y" sid="6351111016329001" type="Bat">
-                                    <param id="0" name="Y">Player.Y - Bat.ExpY</param>
+                                    <param id="0" name="Y">Player_Frame.Y - Bat.ExpY</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -60,7 +60,7 @@
             <actions>
                 <action id="-10" name="Set value" sid="1574607724887703" type="Bat">
                     <param id="0" name="Instance variable">BatX</param>
-                    <param id="1" name="Value">bat.X - Player.X</param>
+                    <param id="1" name="Value">bat.X - Player_Frame.X</param>
                 </action>
                 <action id="-10" name="Set value" sid="5694040042154082" type="Bat">
                     <param id="0" name="Instance variable">ExpY</param>
@@ -70,8 +70,8 @@
         </event-block>
         <event-block sid="3935514790772808">
             <conditions>
-                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="900150401083358" type="Bat">
-                    <param id="0" name="Object">Player</param>
+                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="9135498748240823" type="Bat">
+                    <param id="0" name="Object">Player_Frame</param>
                 </condition>
                 <condition id="-4" name="Trigger once while true" sid="9065188592401163" type="System" />
             </conditions>
