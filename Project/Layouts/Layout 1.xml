@@ -6929,6 +6929,31 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="Player_arm_left" uid="222">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>149.993743896</x>
+                        <y>994.348327637</y>
+                        <z>0</z>
+                        <width>35</width>
+                        <height>10</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>3.141592741</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -6958,8 +6983,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>133</x>
-                        <y>931</y>
+                        <x>145</x>
+                        <y>929</y>
                         <z>0</z>
                         <width>22</width>
                         <height>38</height>
@@ -6979,22 +7004,22 @@
                     </properties>
                     <instance-variables>
                         <Dash>false</Dash>
-                        <Dash_Speed>3000</Dash_Speed>
-                        <Dash_Time>0.5</Dash_Time>
+                        <Dash_Speed>1300</Dash_Speed>
+                        <Dash_Time>0.1</Dash_Time>
                         <Life>5</Life>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
                             <properties>
                                 <max-speed>160</max-speed>
-                                <acceleration>1500</acceleration>
+                                <acceleration>15000</acceleration>
                                 <deceleration>1500</deceleration>
                                 <jump-strength>480</jump-strength>
                                 <gravity>1500</gravity>
                                 <max-fall-speed>1000</max-fall-speed>
                                 <double-jump>Disabled</double-jump>
                                 <jump-sustain>0</jump-sustain>
-                                <default-controls>Yes</default-controls>
+                                <default-controls>No</default-controls>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
@@ -7021,6 +7046,31 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Player_arm_right" uid="220">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>149.530090332</x>
+                        <y>910.156555176</y>
+                        <z>0</z>
+                        <width>35</width>
+                        <height>10</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
