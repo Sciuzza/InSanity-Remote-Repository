@@ -219,7 +219,7 @@
         <layout>Layout 1.xml</layout>
     </layout-folder>
     <event-folder>
-        <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>Level 1.xml</event-sheet>
         <event-sheet>Player.xml</event-sheet>
     </event-folder>
     <global-instances>
