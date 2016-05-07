@@ -6984,27 +6984,6 @@
                     </world>
                 </instance>
                 <instance type="Sprite2" uid="220">
-                  <properties>
-                    <initial-visibility>Visible</initial-visibility>
-                    <initial-animation>Default</initial-animation>
-                    <initial-frame>0</initial-frame>
-                    <collisions>Enabled</collisions>
-                  </properties>
-                  <blend-mode>0</blend-mode>
-                  <effect-fallback>0</effect-fallback>
-                  <world>
-                    <x>576</x>
-                    <y>798</y>
-                    <z>0</z>
-                    <width>30</width>
-                    <height>30</height>
-                    <depth>0</depth>
-                    <hotspotX>0.5</hotspotX>
-                    <hotspotY>0.5</hotspotY>
-                    <angle>0</angle>
-                  </world>
-                </instance>
-                <instance type="Player_arm_left" uid="222">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -7013,19 +6992,16 @@
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
-                    <behavior-instances>
-                        <behavior-instance type="Pin" />
-                    </behavior-instances>
                     <world>
-                        <x>149.993743896</x>
-                        <y>994.348327637</y>
+                        <x>576</x>
+                        <y>798</y>
                         <z>0</z>
-                        <width>35</width>
-                        <height>10</height>
+                        <width>30</width>
+                        <height>30</height>
                         <depth>0</depth>
-                        <hotspotX>0</hotspotX>
+                        <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
-                        <angle>3.141592741</angle>
+                        <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
@@ -7058,8 +7034,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>145</x>
-                        <y>929</y>
+                        <x>135.078536987</x>
+                        <y>1040.755371094</y>
                         <z>0</z>
                         <width>22</width>
                         <height>38</height>
@@ -7070,7 +7046,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Player_Box" uid="215">
+                <instance type="Player_Box" uid="7">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -7081,7 +7057,11 @@
                         <Dash>false</Dash>
                         <Dash_Speed>1300</Dash_Speed>
                         <Dash_Time>0.1</Dash_Time>
+                        <Dash_Charges>2</Dash_Charges>
+                        <Dash_Recharge_Time>2</Dash_Recharge_Time>
                         <Life>5</Life>
+                        <Weapon_Level>0</Weapon_Level>
+                        <Stun_Ability>true</Stun_Ability>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -7113,8 +7093,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>84</x>
-                        <y>932</y>
+                        <x>99</x>
+                        <y>941</y>
                         <z>0</z>
                         <width>22</width>
                         <height>38</height>
@@ -7125,7 +7105,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Player_arm_right" uid="220">
+                <instance type="Player_arm" uid="8">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -7138,8 +7118,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>149.530090332</x>
-                        <y>910.156555176</y>
+                        <x>116.359741211</x>
+                        <y>983.496032715</y>
                         <z>0</z>
                         <width>35</width>
                         <height>10</height>
@@ -7237,7 +7217,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Sprite5" uid="7">
+                <instance type="Sprite5" uid="221">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -7259,7 +7239,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite5" uid="8">
+                <instance type="Sprite5" uid="247">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -7277,6 +7257,105 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Weapon" uid="250">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Fire_Rate>1</Fire_Rate>
+                        <Cooldown>-1</Cooldown>
+                        <Fire_Rate_Stun>5</Fire_Rate_Stun>
+                        <Cooldown_Stun>-1</Cooldown_Stun>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>153.588638306</x>
+                        <y>983.711608887</y>
+                        <z>0</z>
+                        <width>10</width>
+                        <height>5</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0.600000024</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Bullet_1_Player" uid="252">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>220</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>Yes</set-angle>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>174.851531982</x>
+                        <y>979.885253906</y>
+                        <z>0</z>
+                        <width>5</width>
+                        <height>5</height>
+                        <depth>0</depth>
+                        <hotspotX>0.600000024</hotspotX>
+                        <hotspotY>0.600000024</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Bullet_S_Player" uid="253">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>220</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>Yes</set-angle>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>174.989013672</x>
+                        <y>987.840454102</y>
+                        <z>0</z>
+                        <width>5</width>
+                        <height>5</height>
+                        <depth>0</depth>
+                        <hotspotX>0.600000024</hotspotX>
+                        <hotspotY>0.600000024</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

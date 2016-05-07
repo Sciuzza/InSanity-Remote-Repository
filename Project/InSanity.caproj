@@ -15,6 +15,7 @@
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
@@ -198,15 +199,19 @@
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9368341480735007" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
-              </animation-folder>
-            </object-type>
+            </animation-folder>
+        </object-type>
         <object-type name="Player_Box" sid="8534937278847791">
             <plugin id="Sprite" />
             <instance-variables>
                 <instance-variable name="Dash" sid="6826631774586031" type="boolean" />
                 <instance-variable name="Dash_Speed" sid="2456396320476892" type="number" />
                 <instance-variable name="Dash_Time" sid="8688270445844714" type="number" />
+                <instance-variable name="Dash_Charges" sid="7268462837022067" type="number" />
+                <instance-variable name="Dash_Recharge_Time" sid="5105309756605938" type="number" />
                 <instance-variable name="Life" sid="3845622154724521" type="number" />
+                <instance-variable name="Weapon_Level" sid="3044682161141949" type="number" />
+                <instance-variable name="Stun_Ability" sid="1945475441277138" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Platform" sid="2921180046897222">
@@ -234,7 +239,7 @@
         <object-type name="Keyboard" sid="9665573294785792">
             <plugin id="Keyboard" />
         </object-type>
-        <object-type name="Player_arm_right" sid="762512349025176">
+        <object-type name="Player_arm" sid="762512349025176">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="Pin" sid="5183469742938545">
@@ -244,7 +249,7 @@
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1813640071147861" speed="5">
                     <frame duration="1" hotspotX="0" hotspotY="0.5">
-                        <image-point name="Bullet" x="1" y="0.5" />
+                        <image-point name="Weapon" x="1" y="0.5" />
                     </frame>
                 </animation>
             </animation-folder>
@@ -252,18 +257,50 @@
         <object-type name="Mouse" sid="1595201238588392">
             <plugin id="Mouse" />
         </object-type>
-        <object-type name="Player_arm_left" sid="6147761295736624">
+        <object-type name="Weapon" sid="750073493641859">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Fire_Rate" sid="1794148460839657" type="number" />
+                <instance-variable name="Cooldown" sid="3507058040547016" type="number" />
+                <instance-variable name="Fire_Rate_Stun" sid="7350295780344543" type="number" />
+                <instance-variable name="Cooldown_Stun" sid="5331748575458811" type="number" />
+            </instance-variables>
             <behaviors>
-                <behavior-type name="Pin" sid="434046851593749">
+                <behavior-type name="Pin" sid="4650939058635455">
                     <behavior id="Pin" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9816469996026731" speed="5">
-                    <frame duration="1" hotspotX="0" hotspotY="0.5">
-                        <image-point name="Bullet" x="1" y="0.5" />
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9808566782359263" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0.6">
+                        <image-point name="Bullet" x="1" y="0.6" />
                     </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Bullet_1_Player" sid="5621274157505816">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="5324309418235322">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8931452151050704" speed="5">
+                    <frame duration="1" hotspotX="0.6" hotspotY="0.6" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Bullet_S_Player" sid="9451235331979199">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="8404592046043866">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7746226562710699" speed="5">
+                    <frame duration="1" hotspotX="0.6" hotspotY="0.6" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -278,8 +315,8 @@
         <event-sheet>Bat.xml</event-sheet>
     </event-folder>
     <global-instances>
-        <global-instance type="Keyboard" uid="216" />
-        <global-instance type="Mouse" uid="221" />
+        <global-instance type="Keyboard" uid="248" />
+        <global-instance type="Mouse" uid="249" />
     </global-instances>
     <sounds-folder />
     <music-folder />
