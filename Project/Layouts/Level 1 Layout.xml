@@ -6569,31 +6569,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Player_arm_left" uid="222">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Pin" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>-40</x>
-                        <y>616</y>
-                        <z>0</z>
-                        <width>35</width>
-                        <height>10</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>3.141592741</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="SolidObjects" uid="232">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
