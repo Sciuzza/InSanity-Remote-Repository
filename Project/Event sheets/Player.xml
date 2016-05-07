@@ -37,12 +37,14 @@
         </event-group>
         <event-group description="" sid="7306184510969658" title="Movement System">
             <sub-events>
+                <comment>Sergio - Telecamera: creare un oggetto telecamera pinnato al player e mettete lo scrollTo a questo oggetto</comment>
                 <event-block sid="6031953689227749">
                     <conditions>
                         <condition id="-1" name="Every tick" sid="4751166781875761" type="System" />
                     </conditions>
                     <actions />
                     <sub-events>
+                        <comment>Sergio - Bug: se ,mentre muovo il personaggio verso destra, tenendo premuto il tasto destra tengo premuto anche quelo sinistra e poi rilascio il tasto destra il personaggio fa Moonwalk</comment>
                         <event-block sid="3630734222599256">
                             <conditions>
                                 <condition id="2" name="Key is down" sid="9318585171684976" type="Keyboard">
@@ -67,6 +69,7 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <comment>Sergio - Design: se il mouse si trova dietro il personaggio (a seconda di come è girato) dovrebbe comunque indirizzargli la pistola. per esempio, se il giocatore è rivolto verso destra e il mouse è in-alto-a-sinistra, il braccio dovrebbe essere indirizzato verso in-alto-a-destra</comment>
                         <event-block sid="6143606942759854">
                             <conditions>
                                 <condition id="-8" name="Compare two values" sid="2315537195981908" type="System">
@@ -121,6 +124,10 @@
                         <action id="7" name="Set mirrored" sid="7958999356001076" type="Player_Frame">
                             <param id="0" name="State">0</param>
                         </action>
+                        <action id="4" name="Set animation" sid="3490779172511706" type="Player_Frame">
+                            <param id="0" name="Animation">&quot;Walking&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
                         <action id="-9" name="Destroy" sid="3802839745445942" type="Player_arm_right" />
                         <action id="-3" name="Create object" sid="215382005661204" type="System">
                             <param id="0" name="Object to create">Player_arm_left</param>
@@ -144,6 +151,10 @@
                         <action id="7" name="Set mirrored" sid="936175515115041" type="Player_Frame">
                             <param id="0" name="State">1</param>
                         </action>
+                        <action id="4" name="Set animation" sid="4712006251591992" type="Player_Frame">
+                            <param id="0" name="Animation">&quot;Walking&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
                         <action id="-9" name="Destroy" sid="3893468928132083" type="Player_arm_left" />
                         <action id="-3" name="Create object" sid="4091157454591902" type="System">
                             <param id="0" name="Object to create">Player_arm_right</param>
@@ -154,6 +165,41 @@
                         <action behavior="Pin" id="0" name="Pin to object" sid="285774242284815" type="Player_arm_right">
                             <param id="0" name="Pin to">Player_Box</param>
                             <param id="1" name="Mode">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2551632331959588">
+                    <conditions>
+                        <condition behavior="Platform" id="2" name="Is on floor" sid="6315830804001889" type="Player_Box" />
+                        <condition behavior="Platform" id="0" name="Is moving" sid="1315898374863702" type="Player_Box" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="9096465815021884" type="Player_Frame">
+                            <param id="0" name="Animation">&quot;Walking&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4144943247676905">
+                    <conditions>
+                        <condition behavior="Platform" id="2" name="Is on floor" sid="5599226897931527" type="Player_Box" />
+                        <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="9074874672895566" type="Player_Box" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="4666814698797858" type="Player_Frame">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4698229573226753">
+                    <conditions>
+                        <condition behavior="Platform" id="5" name="On jump" sid="6605819026694777" type="Player_Box" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="8907704011543644" type="Player_Frame">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>

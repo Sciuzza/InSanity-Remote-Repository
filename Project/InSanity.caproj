@@ -13,6 +13,7 @@
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Tilemap" version="1">Tilemap</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
@@ -47,7 +48,7 @@
         <prop name="Physics engine">Box2D asm.js</prop>
         <prop name="Preload sounds">Yes</prop>
         <prop name="Preview browser">(default)</prop>
-        <prop name="Sampling">Linear</prop>
+        <prop name="Sampling">Point</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
     <object-folder>
@@ -67,12 +68,18 @@
         <object-type name="Player_Frame" sid="9135498748240823">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7747551573148316" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3019279558857857" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Drako-PC\Downloads\documents-export-2016-05-07\character_3.png" />
+                </animation>
+                <animation framecount="4" loop="1" name="Walking" pingpong="0" repeatcount="1" repeatto="0" sid="7747551573148316" speed="15">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Drako-PC\Downloads\documents-export-2016-05-07\character_1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Drako-PC\Downloads\documents-export-2016-05-07\character_2.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Drako-PC\Downloads\documents-export-2016-05-07\character_3.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Drako-PC\Downloads\documents-export-2016-05-07\character_4.png" />
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite3" sid="2245287717022135">
+        <object-type name="SolidObjects" sid="2245287717022135">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="Solid" sid="9331363195371243">
@@ -198,8 +205,8 @@
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9368341480735007" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
-              </animation-folder>
-            </object-type>
+            </animation-folder>
+        </object-type>
         <object-type name="Player_Box" sid="8534937278847791">
             <plugin id="Sprite" />
             <instance-variables>
@@ -211,9 +218,6 @@
             <behaviors>
                 <behavior-type name="Platform" sid="2921180046897222">
                     <behavior id="Platform" />
-                </behavior-type>
-                <behavior-type name="BoundToLayout" sid="4720578348362988">
-                    <behavior id="bound" />
                 </behavior-type>
                 <behavior-type name="ScrollTo" sid="8409657294054946">
                     <behavior id="scrollto" />
@@ -267,19 +271,68 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Platforms" sid="4185296759679686">
+            <plugin id="Tilemap" />
+            <behaviors>
+                <behavior-type name="Solid" sid="8473742560254559">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+            <tiles />
+        </object-type>
+        <object-type name="BridgePiece" sid="272262031150451">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="9037566235843455">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6807717055991827" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite3" sid="1622374566521191">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2068371519608211" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite6" sid="9782528809921935">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4032230195030078" speed="5">
+                    <frame duration="1" hotspotX="0.490196" hotspotY="0.460784" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite10" sid="7293634952704866">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4771055081569859" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Drako-PC\Downloads\01 - intro.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
         <layout>Level 1 Layout.xml</layout>
+        <layout>Intro Layout.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Level 1.xml</event-sheet>
         <event-sheet>Player.xml</event-sheet>
         <event-sheet>Bat.xml</event-sheet>
+        <event-sheet>Intro Sheet.xml</event-sheet>
     </event-folder>
     <global-instances>
-        <global-instance type="Keyboard" uid="216" />
-        <global-instance type="Mouse" uid="221" />
+        <global-instance type="Keyboard" uid="248" />
+        <global-instance type="Mouse" uid="249" />
     </global-instances>
     <sounds-folder />
     <music-folder />
