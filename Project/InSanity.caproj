@@ -21,8 +21,6 @@
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
-        <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
-        <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
@@ -131,12 +129,6 @@
                 <behavior-type name="LineOfSight" sid="6684630113665934">
                     <behavior id="LOS" />
                 </behavior-type>
-                <behavior-type name="CustomMovement" sid="9314069687911626">
-                    <behavior id="custom" />
-                </behavior-type>
-                <behavior-type name="BoundToLayout" sid="1968005525338989">
-                    <behavior id="bound" />
-                </behavior-type>
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1391804875812191" speed="5">
@@ -198,18 +190,10 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Batchenesò" sid="3633508069008424">
+        <object-type name="CenterEllipse" sid="3633508069008424">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8495433961458674" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Sprite2" sid="4983057067379472">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9368341480735007" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
@@ -358,6 +342,19 @@
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7746226562710699" speed="5">
                     <frame duration="1" hotspotX="0.6" hotspotY="0.6" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BatArmor" sid="730067428361466">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="7903457532812327">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1464568290630794" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
