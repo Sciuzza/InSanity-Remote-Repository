@@ -73,10 +73,16 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Drako-PC\Downloads\documents-export-2016-05-07\character_3.png" />
                 </animation>
                 <animation framecount="4" loop="1" name="Walking" pingpong="0" repeatcount="1" repeatto="0" sid="7747551573148316" speed="15">
-                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Drako-PC\Downloads\documents-export-2016-05-07\character_1.png" />
+                    <frame duration="1" hotspotX="0.53125" hotspotY="1" original-source="C:\Users\Drako-PC\Downloads\documents-export-2016-05-07\character_1.png" />
                     <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Drako-PC\Downloads\documents-export-2016-05-07\character_2.png" />
                     <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Drako-PC\Downloads\documents-export-2016-05-07\character_3.png" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Drako-PC\Downloads\documents-export-2016-05-07\character_4.png" />
+                    <frame duration="1" hotspotX="0.517241" hotspotY="1" original-source="C:\Users\Drako-PC\Downloads\documents-export-2016-05-07\character_4.png" />
+                </animation>
+                <animation framecount="4" loop="0" name="WalkingBack" pingpong="0" repeatcount="1" repeatto="0" sid="7211544174993121" speed="5">
+                    <frame duration="1" hotspotX="0.517241" hotspotY="1" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Player_Frame\Walking\003.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Player_Frame\Walking\002.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Player_Frame\Walking\001.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Player_Frame\Walking\000.png" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -234,8 +240,8 @@
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4169132313550607" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="1">
-                        <image-point name="Arm_point_Right" x="0.772727" y="0.526316" />
-                        <image-point name="Arm_point_Left" x="0.227273" y="0.526316" />
+                        <image-point name="Arm_point_Right" x="0.772727" y="0.527778" />
+                        <image-point name="Arm_point_Left" x="0.227273" y="0.527778" />
                     </frame>
                 </animation>
             </animation-folder>
@@ -327,8 +333,8 @@
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4771055081569859" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Drako-PC\Downloads\01 - intro.png" />
                 </animation>
-              </animation-folder>
-            </object-type>
+            </animation-folder>
+        </object-type>
         <object-type name="Bullet_1_Player" sid="5621274157505816">
             <plugin id="Sprite" />
             <behaviors>
@@ -368,8 +374,8 @@
         <event-sheet>Intro Sheet.xml</event-sheet>
     </event-folder>
     <global-instances>
-        <global-instance type="Keyboard" uid="248" />
-        <global-instance type="Mouse" uid="249" />
+        <global-instance type="Keyboard" uid="263" />
+        <global-instance type="Mouse" uid="267" />
     </global-instances>
     <sounds-folder />
     <music-folder />

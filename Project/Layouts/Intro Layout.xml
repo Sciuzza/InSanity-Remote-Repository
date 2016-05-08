@@ -236,7 +236,11 @@
                         <Dash>false</Dash>
                         <Dash_Speed>1300</Dash_Speed>
                         <Dash_Time>0.1</Dash_Time>
+                        <Dash_Charges>2</Dash_Charges>
+                        <Dash_Recharge_Time>2</Dash_Recharge_Time>
                         <Life>5</Life>
+                        <Weapon_Level>0</Weapon_Level>
+                        <Stun_Ability>true</Stun_Ability>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -267,7 +271,7 @@
                         <y>229</y>
                         <z>0</z>
                         <width>22</width>
-                        <height>38</height>
+                        <height>36</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>1</hotspotY>
@@ -288,8 +292,8 @@
                         <x>768</x>
                         <y>-148</y>
                         <z>0</z>
-                        <width>40</width>
-                        <height>40</height>
+                        <width>30</width>
+                        <height>36</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>1</hotspotY>

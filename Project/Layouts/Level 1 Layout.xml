@@ -7091,11 +7091,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>145</x>
-                        <y>758</y>
+                        <x>137.674621582</x>
+                        <y>754.915466309</y>
                         <z>0</z>
-                        <width>40</width>
-                        <height>40</height>
+                        <width>30</width>
+                        <height>36</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>1</hotspotY>
@@ -7145,11 +7145,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>72</x>
-                        <y>768</y>
+                        <x>82.409645081</x>
+                        <y>751.808044434</y>
                         <z>0</z>
                         <width>22</width>
-                        <height>38</height>
+                        <height>36</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>1</hotspotY>
@@ -7313,7 +7313,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Weapon" uid="250">
+                <instance type="Weapon" uid="222">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -7344,7 +7344,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Bullet_1_Player" uid="252">
+                <instance type="Bullet_1_Player" uid="248">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -7378,7 +7378,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Bullet_S_Player" uid="253">
+                <instance type="Bullet_S_Player" uid="249">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
