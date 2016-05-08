@@ -630,6 +630,6 @@
             </sub-events>
         </event-group>
         <event-group description="" sid="8219006173856015" title="Interaction Effects on Player" />
-        <event-group description="" sid="6807124942313139" title="Interaction on Passive Objects" />
+        <event-group description="" sid="6807124942313139" title="Interaction on General Passive Objects" />
     </events>
 </c2eventsheet>
