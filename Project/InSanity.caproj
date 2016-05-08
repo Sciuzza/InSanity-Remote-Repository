@@ -69,19 +69,22 @@
         <object-type name="Player_Frame" sid="9135498748240823">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3019279558857857" speed="5">
+                <animation framecount="1" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="3019279558857857" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Drako-PC\Downloads\documents-export-2016-05-07\character_3.png" />
                 </animation>
-                <animation framecount="4" loop="1" name="Walking" pingpong="0" repeatcount="1" repeatto="0" sid="7747551573148316" speed="15">
+                <animation framecount="4" loop="1" name="Walking" pingpong="0" repeatcount="1" repeatto="0" sid="7747551573148316" speed="14">
                     <frame duration="1" hotspotX="0.53125" hotspotY="1" original-source="C:\Users\Drako-PC\Downloads\documents-export-2016-05-07\character_1.png" />
                     <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Drako-PC\Downloads\documents-export-2016-05-07\character_2.png" />
                     <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Drako-PC\Downloads\documents-export-2016-05-07\character_3.png" />
                     <frame duration="1" hotspotX="0.517241" hotspotY="1" original-source="C:\Users\Drako-PC\Downloads\documents-export-2016-05-07\character_4.png" />
                 </animation>
-                <animation framecount="4" loop="0" name="WalkingBack" pingpong="0" repeatcount="1" repeatto="0" sid="7211544174993121" speed="5">
+                <animation framecount="4" loop="1" name="WalkingBack" pingpong="0" repeatcount="1" repeatto="0" sid="7211544174993121" speed="7">
                     <frame duration="1" hotspotX="0.517241" hotspotY="1" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Player_Frame\Walking\003.png" />
                     <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Player_Frame\Walking\002.png" />
                     <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Player_Frame\Walking\001.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Player_Frame\Walking\000.png" />
+                </animation>
+                <animation framecount="1" loop="0" name="Jumping" pingpong="0" repeatcount="1" repeatto="0" sid="4860506938165352" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Player_Frame\Walking\000.png" />
                 </animation>
             </animation-folder>

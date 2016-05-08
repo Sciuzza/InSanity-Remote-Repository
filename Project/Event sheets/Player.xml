@@ -268,64 +268,67 @@
         </event-group>
         <event-group description="" sid="472934543903872" title="Animation System">
             <sub-events>
-                <event-block sid="2551632331959588">
+                <event-block sid="2498759683467663">
                     <conditions>
-                        <condition behavior="Platform" id="2" name="Is on floor" sid="6315830804001889" type="Player_Box" />
-                        <condition behavior="Platform" id="0" name="Is moving" sid="1315898374863702" type="Player_Box" />
+                        <condition behavior="Platform" id="0" name="Is moving" sid="707603224963742" type="Player_Box" />
+                        <condition behavior="Platform" id="2" name="Is on floor" sid="7045900952068755" type="Player_Box" />
+                        <condition id="-6" name="Every X seconds" sid="9962009521160648" type="System">
+                            <param id="0" name="Interval (seconds)">dt</param>
+                        </condition>
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="231236758239804">
+                        <event-block sid="7041815246831684">
                             <conditions>
-                                <condition id="2" name="Key is down" sid="7077354546022541" type="Keyboard">
+                                <condition id="2" name="Key is down" sid="8960934504571971" type="Keyboard">
                                     <param id="0" name="Key">68 (D)</param>
                                 </condition>
-                                <condition id="7" inverted="1" name="Is mirrored" sid="8658665605445816" type="Player_Frame" />
+                                <condition id="7" inverted="1" name="Is mirrored" sid="8363988830054761" type="Player_Frame" />
                             </conditions>
                             <actions>
-                                <action id="4" name="Set animation" sid="9096465815021884" type="Player_Frame">
+                                <action id="4" name="Set animation" sid="6589620956619595" type="Player_Frame">
                                     <param id="0" name="Animation">&quot;Walking&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="4232654096282833">
+                        <event-block sid="612171916958107">
                             <conditions>
-                                <condition id="2" name="Key is down" sid="1246887557901126" type="Keyboard">
+                                <condition id="2" name="Key is down" sid="4575157440798713" type="Keyboard">
                                     <param id="0" name="Key">65 (A)</param>
                                 </condition>
-                                <condition id="7" name="Is mirrored" sid="4744057978746455" type="Player_Frame" />
+                                <condition id="7" name="Is mirrored" sid="1729615058582785" type="Player_Frame" />
                             </conditions>
                             <actions>
-                                <action id="4" name="Set animation" sid="683483501249985" type="Player_Frame">
+                                <action id="4" name="Set animation" sid="5466014839656535" type="Player_Frame">
                                     <param id="0" name="Animation">&quot;Walking&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="2281527339982005">
+                        <event-block sid="1104304493114176">
                             <conditions>
-                                <condition id="2" name="Key is down" sid="2039001847800453" type="Keyboard">
+                                <condition id="2" name="Key is down" sid="6263479475825961" type="Keyboard">
                                     <param id="0" name="Key">68 (D)</param>
                                 </condition>
-                                <condition id="7" name="Is mirrored" sid="2194218165896487" type="Player_Frame" />
+                                <condition id="7" name="Is mirrored" sid="8999418436879173" type="Player_Frame" />
                             </conditions>
                             <actions>
-                                <action id="4" name="Set animation" sid="5435500689196196" type="Player_Frame">
+                                <action id="4" name="Set animation" sid="1049465675097281" type="Player_Frame">
                                     <param id="0" name="Animation">&quot;WalkingBack&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="4535153304811582">
+                        <event-block sid="5709850252178752">
                             <conditions>
-                                <condition id="2" name="Key is down" sid="820254897223486" type="Keyboard">
+                                <condition id="2" name="Key is down" sid="1872032900140473" type="Keyboard">
                                     <param id="0" name="Key">65 (A)</param>
                                 </condition>
-                                <condition id="7" inverted="1" name="Is mirrored" sid="5768771806388528" type="Player_Frame" />
+                                <condition id="7" inverted="1" name="Is mirrored" sid="5878987336463455" type="Player_Frame" />
                             </conditions>
                             <actions>
-                                <action id="4" name="Set animation" sid="8297181394088802" type="Player_Frame">
+                                <action id="4" name="Set animation" sid="5318301772484174" type="Player_Frame">
                                     <param id="0" name="Animation">&quot;WalkingBack&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
@@ -333,14 +336,13 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="4144943247676905">
+                <event-block sid="3369438209422849">
                     <conditions>
-                        <condition behavior="Platform" id="2" name="Is on floor" sid="5599226897931527" type="Player_Box" />
-                        <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="9074874672895566" type="Player_Box" />
+                        <condition behavior="Platform" id="7" name="On stopped" sid="7126262430710693" type="Player_Box" />
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="4666814698797858" type="Player_Frame">
-                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                        <action id="4" name="Set animation" sid="7728989063488316" type="Player_Frame">
+                            <param id="0" name="Animation">&quot;Idle&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
@@ -350,11 +352,41 @@
                         <condition behavior="Platform" id="5" name="On jump" sid="6605819026694777" type="Player_Box" />
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="8907704011543644" type="Player_Frame">
-                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                        <action id="4" name="Set animation" sid="318586545615696" type="Player_Frame">
+                            <param id="0" name="Animation">&quot;Jumping&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
+                </event-block>
+                <event-block sid="4491270990527305">
+                    <conditions>
+                        <condition behavior="Platform" id="9" name="On landed" sid="9015026583006328" type="Player_Box" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="507437352306771">
+                            <conditions>
+                                <condition behavior="Platform" id="0" name="Is moving" sid="3702537273911" type="Player_Box" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="8451005335525775" type="Player_Frame">
+                                    <param id="0" name="Animation">&quot;Walking&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5201941063212143">
+                            <conditions>
+                                <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="7128933490683739" type="Player_Box" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="905719224234571" type="Player_Frame">
+                                    <param id="0" name="Animation">&quot;Idle&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
@@ -414,6 +446,9 @@
                                 <event-block sid="1569783139534558">
                                     <conditions>
                                         <condition id="7" inverted="1" name="Is mirrored" sid="7588367950447383" type="Player_Frame" />
+                                        <condition id="2" inverted="1" name="Key is down" sid="5171876377519753" type="Keyboard">
+                                            <param id="0" name="Key">65 (A)</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action behavior="Platform" id="7" name="Simulate control" sid="9109525434481311" type="Player_Box">
@@ -424,6 +459,9 @@
                                 <event-block sid="5223053911181299">
                                     <conditions>
                                         <condition id="7" name="Is mirrored" sid="1138757172385581" type="Player_Frame" />
+                                        <condition id="2" inverted="1" name="Key is down" sid="4644625204659446" type="Keyboard">
+                                            <param id="0" name="Key">68 (D)</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action behavior="Platform" id="7" name="Simulate control" sid="1505494725719069" type="Player_Box">
