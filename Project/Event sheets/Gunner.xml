@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Gunner</name>
+    <events>
+        <event-group description="" sid="5627994621737997" title="Start setup">
+            <sub-events>
+                <event-block sid="3761315968339204">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="8538637579589262" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="6738835069024387" type="GunnerArm">
+                            <param id="0" name="X">Gunner.ImagePointX(1)</param>
+                            <param id="1" name="Y">Gunner.ImagePointY(1)</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="5153776057279758" type="GunnerArm">
+                            <param id="0" name="Pin to">Gunner</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="1555537359114846" title="Movement &amp; Mirror System">
+            <sub-events>
+                <comment>Spiegazione: Posizionare a coppie lo sprite &quot;SideMarker&quot; per delimitare l&apos;area di movimento del Gunner </comment>
+                <event-block sid="8234096816531334">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="7526897406700601" type="Gunner">
+                            <param id="0" name="Instance variable">action</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;right&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="8341947522642092" type="Gunner">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="3832157522076997" type="Gunner">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Pin" id="1" name="Unpin" sid="6478234195576747" type="GunnerArm" />
+                        <action id="-26" name="Move to layer" sid="2491900198188935" type="GunnerArm">
+                            <param id="0" name="Layer">&quot;Enemies&quot;</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="9308196759101492" type="GunnerArm">
+                            <param id="0" name="X">Gunner.ImagePointX(1)</param>
+                            <param id="1" name="Y">Gunner.ImagePointY(1)</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="662137855813131" type="GunnerArm">
+                            <param id="0" name="Pin to">Gunner</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8519896462593004">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="9704611384353815" type="Gunner">
+                            <param id="0" name="Instance variable">action</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;left&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="8361967871186501" type="Gunner">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="7825575057504778" type="Gunner">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Pin" id="1" name="Unpin" sid="9035726910183396" type="GunnerArm" />
+                        <action id="-26" name="Move to layer" sid="9729908732064912" type="GunnerArm">
+                            <param id="0" name="Layer">&quot;Level&quot;</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="433968777228069" type="GunnerArm">
+                            <param id="0" name="X">Gunner.ImagePointX(2)</param>
+                            <param id="1" name="Y">Gunner.ImagePointY(2)</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="4111292058693349" type="GunnerArm">
+                            <param id="0" name="Pin to">Gunner</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9125250938311176">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="2481943975754624" type="Gunner">
+                            <param id="0" name="Object">SideMarker</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="5801296483000294">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="4117968280566419" type="Gunner">
+                                    <param id="0" name="Instance variable">action</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">&quot;right&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="1808205371089686" type="Gunner">
+                                    <param id="0" name="Instance variable">action</param>
+                                    <param id="1" name="Value">&quot;left&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="642290669207071">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="1314056532434055" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="168856270035132" type="Gunner">
+                                    <param id="0" name="Instance variable">action</param>
+                                    <param id="1" name="Value">&quot;right&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <comment>Arms mirror part</comment>
+    </events>
+</c2eventsheet>
