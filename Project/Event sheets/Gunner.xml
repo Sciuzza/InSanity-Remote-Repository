@@ -50,7 +50,7 @@
                         </action>
                         <action behavior="Pin" id="0" name="Pin to object" sid="662137855813131" type="GunnerArm">
                             <param id="0" name="Pin to">Gunner</param>
-                            <param id="1" name="Mode">0</param>
+                            <param id="1" name="Mode">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -79,7 +79,7 @@
                         </action>
                         <action behavior="Pin" id="0" name="Pin to object" sid="4111292058693349" type="GunnerArm">
                             <param id="0" name="Pin to">Gunner</param>
-                            <param id="1" name="Mode">0</param>
+                            <param id="1" name="Mode">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -121,6 +121,5 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <comment>Arms mirror part</comment>
     </events>
 </c2eventsheet>
