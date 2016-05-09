@@ -100,11 +100,17 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite4" sid="3810333344609471">
+        <object-type name="Obstacle" sid="3810333344609471">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="DistanceObs" sid="3573491484582459" type="number" />
+            </instance-variables>
             <behaviors>
                 <behavior-type name="Solid" sid="2366690251442397">
                     <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="Timer" sid="6782153648883804">
+                    <behavior id="Timer" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
