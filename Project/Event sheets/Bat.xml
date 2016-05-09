@@ -3,112 +3,121 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Bat</name>
     <events>
-        <variable constant="0" name="speed" sid="5940727590646808" static="0" type="number">30</variable>
-        <variable constant="0" name="r" sid="3112115074765168" static="0" type="number">0</variable>
-        <variable constant="0" name="t" sid="873822755696051" static="0" type="number">0</variable>
-        <event-group description="" sid="2842277594571084" title="Bat Spawn">
+        <variable constant="0" name="batHealth" sid="7708902170349921" static="0" type="number">2</variable>
+        <variable constant="0" name="X" sid="2711989797849876" static="0" type="number">0</variable>
+        <variable constant="0" name="Y" sid="8818058152452902" static="0" type="number">0</variable>
+        <variable constant="0" name="A" sid="9868331277332384" static="0" type="number">90</variable>
+        <event-group description="" sid="7102243465795764" title="Bat Spawn">
             <sub-events>
-                <event-block sid="1640697239736702">
+                <event-block sid="3178456686477456">
                     <conditions>
-                        <condition id="-2" name="On start of layout" sid="6503524916007683" type="System" />
+                        <condition id="-2" name="On start of layout" sid="4876009236331549" type="System" />
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" sid="4812566256143744" type="Bat" />
-                        <action id="0" name="Spawn another object" sid="4414313485960973" type="BatSpawn">
+                        <action id="-9" name="Destroy" sid="194955768163976" type="Bat" />
+                        <action id="0" name="Spawn another object" sid="6131887818401013" type="BatSpawn">
                             <param id="0" name="Object">Bat</param>
-                            <param id="1" name="Layer">0</param>
+                            <param id="1" name="Layer">6</param>
                             <param id="2" name="Image point">0</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="102661828021616">
-            <conditions>
-                <condition id="-1" name="Every tick" sid="6409472968579572" type="System" />
-            </conditions>
-            <actions />
+        <event-group description="" sid="1152175695656894" title="Bat Movement">
             <sub-events>
-                <event-block disabled="1" sid="172210299452034">
+                <event-block sid="927442992441931">
                     <conditions>
-                        <condition behavior="LineOfSight" disabled="1" id="0" name="Has LOS to object" sid="9396305843056498" type="Bat">
-                            <param id="0" name="Object">Player</param>
+                        <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="9396319653377754" type="BatSpawn">
+                            <param id="0" name="Object">Player_Box</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-1" name="Set X" sid="783635486351448" type="Bat">
-                            <param id="0" name="X">self.X - 1</param>
+                        <action id="-9" name="Set value" sid="6565582802967885" type="System">
+                            <param id="0" name="Variable">X</param>
+                            <param id="1" name="Value">cos(time*50)*80</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="3550067039463114" type="System">
+                            <param id="0" name="Variable">Y</param>
+                            <param id="1" name="Value">sin(time*50)*250</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="3698532288311119" type="Bat">
+                            <param id="0" name="X">X*cos(A) - Y*sin(A) + CenterEllipse.X</param>
+                            <param id="1" name="Y">Y*cos(A) + X*sin(A) + CenterEllipse.Y</param>
                         </action>
                     </actions>
-                    <sub-events>
-                        <event-block disabled="1" sid="7843110799478664">
-                            <conditions />
-                            <actions>
-                                <action id="-2" name="Set Y" sid="6351111016329001" type="Bat">
-                                    <param id="0" name="Y">Player.Y - Bat.ExpY</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
                 </event-block>
-            </sub-events>
-        </event-block>
-        <event-block disabled="1" sid="9163386750187697">
-            <conditions>
-                <condition id="-1" name="Every tick" sid="2251648830330155" type="System" />
-            </conditions>
-            <actions>
-                <action id="-10" name="Set value" sid="1574607724887703" type="Bat">
-                    <param id="0" name="Instance variable">BatX</param>
-                    <param id="1" name="Value">bat.X - Player.X</param>
-                </action>
-                <action id="-10" name="Set value" sid="5694040042154082" type="Bat">
-                    <param id="0" name="Instance variable">ExpY</param>
-                    <param id="1" name="Value">(bat.BatX)^(1.1)</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="3935514790772808">
-            <conditions>
-                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="900150401083358" type="Bat">
-                    <param id="0" name="Object">Player</param>
-                </condition>
-                <condition id="-4" name="Trigger once while true" sid="9065188592401163" type="System" />
-            </conditions>
-            <actions>
-                <action behavior="CustomMovement" disabled="1" id="5" name="Accelerate toward position" sid="8021330310417492" type="Bat">
-                    <param id="0" name="Acceleration">250</param>
-                    <param id="1" name="X">BatSpawn.X + cos(time*300)*200</param>
-                    <param id="2" name="Y">BatSpawn.Y + sin(time*300)*300</param>
-                </action>
-                <action id="-9" name="Set value" sid="3053488142704022" type="System">
-                    <param id="0" name="Variable">r</param>
-                    <param id="1" name="Value">distance(Sprite2.X,Sprite2.y,Bat.X,bat.y)</param>
-                </action>
-                <action id="-10" name="Add to" sid="4113899662796165" type="System">
-                    <param id="0" name="Variable">t</param>
-                    <param id="1" name="Value">dt</param>
-                </action>
-                <action id="-3" name="Set position" sid="9587223502630304" type="Bat">
-                    <param id="0" name="X">Sprite2.X + (cos(t*speed)*r)</param>
-                    <param id="1" name="Y">Sprite2.Y + (sin(t*speed)*r) </param>
-                </action>
-            </actions>
-            <sub-events>
-                <event-block sid="4281232086846674">
+                <event-block sid="2142289212933025">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="8609281349796087" type="Bat">
-                            <param id="0" name="Object">Batchenesò</param>
-                        </condition>
+                        <condition id="-1" name="Every tick" sid="6556131031027391" type="System" />
                     </conditions>
                     <actions>
-                        <action id="-3" name="Set position" sid="2396400124835534" type="Bat">
-                            <param id="0" name="X">Sprite2.X - (cos(t*speed)*r)</param>
-                            <param id="1" name="Y">Sprite2.Y - (sin(t*speed)*r) </param>
+                        <action id="-3" name="Set position" sid="1381643192819868" type="CenterEllipse">
+                            <param id="0" name="X">Player_Box.X</param>
+                            <param id="1" name="Y">Player_Box.Y - 100</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
-        </event-block>
+        </event-group>
+        <event-group description="" sid="7416522911668573" title="Bat combat part">
+            <sub-events>
+                <event-block sid="2436537726219514">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="2372644996311497" type="Bullet_1_Player">
+                            <param id="0" name="Object">Bat</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="8449610013866733" type="System">
+                            <param id="0" name="Variable">batHealth</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3389968907546167">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="2392817195519455" type="System">
+                            <param id="0" name="Variable">batHealth</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="9692389452451764" type="Bat" />
+                    </actions>
+                </event-block>
+                <comment>Da sistemare il pin</comment>
+                <event-block disabled="1" sid="3488539051382917">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="1852054121197572" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="2279171327408402" type="BatArmor">
+                            <param id="0" name="Pin to">Bat</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="8640311563528283" type="BatArmor">
+                            <param id="0" name="X">Bat.X - 9</param>
+                            <param id="1" name="Y">bat.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="5474137138634766">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="8536243616405663" type="Bullet_1_Player">
+                            <param id="0" name="Object">BatArmor</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="6824099185084661" type="BatArmor" />
+                        <action id="-9" name="Set value" sid="6446911980452811" type="System">
+                            <param id="0" name="Variable">batHealth</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

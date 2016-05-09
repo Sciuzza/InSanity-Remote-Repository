@@ -23,26 +23,37 @@
                         <condition id="-2" name="On start of layout" sid="1659333244872277" type="System" />
                     </conditions>
                     <actions>
-                        <action id="-3" name="Set position" sid="9910082415026229" type="Player_arm_right">
+                        <action id="-3" name="Set position" sid="9910082415026229" type="Player_arm">
                             <param id="0" name="X">Player_Box.ImagePointX(1)</param>
                             <param id="1" name="Y">Player_Box.ImagePointY(1)</param>
                         </action>
-                        <action behavior="Pin" id="0" name="Pin to object" sid="6778656464220162" type="Player_arm_right">
+                        <action behavior="Pin" id="0" name="Pin to object" sid="6778656464220162" type="Player_arm">
                             <param id="0" name="Pin to">Player_Box</param>
                             <param id="1" name="Mode">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="3133739501716994" type="Weapon">
+                            <param id="0" name="X">Player_arm.ImagePointX(1)</param>
+                            <param id="1" name="Y">Player_arm.ImagePointY(1)</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="447731277570355" type="Weapon">
+                            <param id="0" name="Pin to">Player_arm</param>
+                            <param id="1" name="Mode">0</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="7306184510969658" title="Movement System">
+        <event-group description="" sid="7306184510969658" title="Movement System and Mirror Management">
             <sub-events>
+                <comment>Sergio - Telecamera: creare un oggetto telecamera pinnato al player e mettete lo scrollTo a questo oggetto</comment>
+                <comment>Custom Side Movement and Arm Rotation Simulation</comment>
                 <event-block sid="6031953689227749">
                     <conditions>
                         <condition id="-1" name="Every tick" sid="4751166781875761" type="System" />
                     </conditions>
                     <actions />
                     <sub-events>
+                        <comment>Sergio - Bug: se ,mentre muovo il personaggio verso destra, tenendo premuto il tasto destra tengo premuto anche quelo sinistra e poi rilascio il tasto destra il personaggio fa Moonwalk</comment>
                         <event-block sid="3630734222599256">
                             <conditions>
                                 <condition id="2" name="Key is down" sid="9318585171684976" type="Keyboard">
@@ -54,6 +65,28 @@
                                     <param id="0" name="Control">0</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="8743483996343446">
+                                    <conditions>
+                                        <condition id="7" inverted="1" name="Is mirrored" sid="75338070234841" type="Player_Frame" />
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="1" name="Set max speed" sid="7272465611953222" type="Player_Box">
+                                            <param id="0" name="Max Speed">80</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="9677684781386167">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="9534677695144428" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="1" name="Set max speed" sid="8070112007303345" type="Player_Box">
+                                            <param id="0" name="Max Speed">160</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="2941542751343403">
                             <conditions>
@@ -66,39 +99,66 @@
                                     <param id="0" name="Control">1</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="8341874558028959">
+                                    <conditions>
+                                        <condition id="7" inverted="1" name="Is mirrored" sid="6189254470517807" type="Player_Frame" />
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="1" name="Set max speed" sid="7958635982357701" type="Player_Box">
+                                            <param id="0" name="Max Speed">160</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="4245580089640336">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="7241104828400385" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="1" name="Set max speed" sid="1789819665122324" type="Player_Box">
+                                            <param id="0" name="Max Speed">80</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
+                        <comment>Sergio - Design: se il mouse si trova dietro il personaggio (a seconda di come è girato) dovrebbe comunque indirizzargli la pistola. per esempio, se il giocatore è rivolto verso destra e il mouse è in-alto-a-sinistra, il braccio dovrebbe essere indirizzato verso in-alto-a-destra</comment>
                         <event-block sid="6143606942759854">
                             <conditions>
-                                <condition id="-8" name="Compare two values" sid="2315537195981908" type="System">
-                                    <param id="0" name="First value">Mouse.X</param>
-                                    <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Second value">Player_Box.ImagePointX(1)</param>
+                                <condition id="-6" name="Every X seconds" sid="2315537195981908" type="System">
+                                    <param id="0" name="Interval (seconds)">dt</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="-22" name="Set angle toward position" sid="3397812061868229" type="Player_arm_right">
-                                    <param id="0" name="X">Mouse.X</param>
-                                    <param id="1" name="Y">Mouse.Y</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="2331645710316312">
-                            <conditions>
-                                <condition id="-8" name="Compare two values" sid="7144371325669489" type="System">
-                                    <param id="0" name="First value">Mouse.X</param>
-                                    <param id="1" name="Comparison">2</param>
-                                    <param id="2" name="Second value">Player_Box.ImagePointX(2)</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-22" name="Set angle toward position" sid="4583510037447634" type="Player_arm_left">
-                                    <param id="0" name="X">Mouse.X</param>
-                                    <param id="1" name="Y">Mouse.Y</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block any="1" sid="529299710635785">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="3961607868367941" type="System">
+                                            <param id="0" name="First value">Mouse.X</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Second value">Player_Box.ImagePointX(2)</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="4122100057043605" type="System">
+                                            <param id="0" name="First value">Mouse.X</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Second value">Player_Box.ImagePointX(1)</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-22" name="Set angle toward position" sid="3397812061868229" type="Player_arm">
+                                            <param id="0" name="X">Mouse.X</param>
+                                            <param id="1" name="Y">Mouse.Y</param>
+                                        </action>
+                                        <action id="-8" name="Set angle" sid="7525098447519297" type="Weapon">
+                                            <param id="0" name="Angle">Player_arm.Angle</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
+                <comment>Custom Jump</comment>
                 <event-block sid="4100116143255704">
                     <conditions>
                         <condition id="0" name="On key pressed" sid="6858473566790117" type="Keyboard">
@@ -111,51 +171,222 @@
                         </action>
                     </actions>
                 </event-block>
+                <comment>Mirror Management</comment>
                 <event-block sid="4069099936506352">
                     <conditions>
-                        <condition id="0" name="On key pressed" sid="7684703722989717" type="Keyboard">
-                            <param id="0" name="Key">65 (A)</param>
+                        <condition id="-8" name="Compare two values" sid="7684703722989717" type="System">
+                            <param id="0" name="First value">Mouse.X</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">Player_Box.ImagePointX(2)</param>
                         </condition>
+                        <condition id="-4" name="Trigger once while true" sid="6052675818598458" type="System" />
                     </conditions>
                     <actions>
                         <action id="7" name="Set mirrored" sid="7958999356001076" type="Player_Frame">
                             <param id="0" name="State">0</param>
                         </action>
-                        <action id="-9" name="Destroy" sid="3802839745445942" type="Player_arm_right" />
-                        <action id="-3" name="Create object" sid="215382005661204" type="System">
-                            <param id="0" name="Object to create">Player_arm_left</param>
-                            <param id="1" name="Layer">&quot;Level&quot;</param>
-                            <param id="2" name="X">Player_Box.ImagePointX(2)</param>
-                            <param id="3" name="Y">Player_Box.ImagePointY(2)</param>
+                        <action behavior="Pin" id="1" name="Unpin" sid="3802839745445942" type="Player_arm" />
+                        <action behavior="Pin" id="1" name="Unpin" sid="852619954097469" type="Weapon" />
+                        <action id="-26" name="Move to layer" sid="2328420435099483" type="Weapon">
+                            <param id="0" name="Layer">&quot;Level&quot;</param>
                         </action>
-                        <action behavior="Pin" id="0" name="Pin to object" sid="6454329877456026" type="Player_arm_left">
+                        <action id="-26" name="Move to layer" sid="3410942837064655" type="Player_arm">
+                            <param id="0" name="Layer">&quot;Level&quot;</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="423723229766955" type="Player_arm">
+                            <param id="0" name="X">Player_Box.ImagePointX(2)</param>
+                            <param id="1" name="Y">Player_Box.ImagePointY(2)</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="6454329877456026" type="Player_arm">
                             <param id="0" name="Pin to">Player_Box</param>
                             <param id="1" name="Mode">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="6489231054588103" type="Weapon">
+                            <param id="0" name="X">Player_arm.ImagePointX(1)</param>
+                            <param id="1" name="Y">Player_arm.ImagePointY(1)</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="876284781439511" type="Weapon">
+                            <param id="0" name="Pin to">Player_arm</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                        <action id="-22" name="Set angle toward position" sid="5462513044918309" type="Player_arm">
+                            <param id="0" name="X">Mouse.X</param>
+                            <param id="1" name="Y">Mouse.Y</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="1944479293207028" type="Weapon">
+                            <param id="0" name="Angle">Player_arm.Angle</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="6546779832539114">
                     <conditions>
-                        <condition id="0" name="On key pressed" sid="5773009776092947" type="Keyboard">
-                            <param id="0" name="Key">68 (D)</param>
+                        <condition id="-8" name="Compare two values" sid="5773009776092947" type="System">
+                            <param id="0" name="First value">Mouse.X</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">Player_Box.ImagePointX(1)</param>
                         </condition>
+                        <condition id="-4" name="Trigger once while true" sid="2976886199193845" type="System" />
                     </conditions>
                     <actions>
                         <action id="7" name="Set mirrored" sid="936175515115041" type="Player_Frame">
                             <param id="0" name="State">1</param>
                         </action>
-                        <action id="-9" name="Destroy" sid="3893468928132083" type="Player_arm_left" />
-                        <action id="-3" name="Create object" sid="4091157454591902" type="System">
-                            <param id="0" name="Object to create">Player_arm_right</param>
-                            <param id="1" name="Layer">&quot;Player&quot;</param>
-                            <param id="2" name="X">Player_Box.ImagePointX(1)</param>
-                            <param id="3" name="Y">Player_Box.ImagePointY(1)</param>
+                        <action behavior="Pin" id="1" name="Unpin" sid="5744049756045183" type="Player_arm" />
+                        <action behavior="Pin" id="1" name="Unpin" sid="5296329379991318" type="Weapon" />
+                        <action id="-26" name="Move to layer" sid="202569840694217" type="Weapon">
+                            <param id="0" name="Layer">&quot;Player&quot;</param>
                         </action>
-                        <action behavior="Pin" id="0" name="Pin to object" sid="285774242284815" type="Player_arm_right">
+                        <action id="-26" name="Move to layer" sid="2792197645776529" type="Player_arm">
+                            <param id="0" name="Layer">&quot;Player&quot;</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="6557018989578489" type="Player_arm">
+                            <param id="0" name="X">Player_Box.ImagePointX(1)</param>
+                            <param id="1" name="Y">Player_Box.ImagePointY(1)</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="285774242284815" type="Player_arm">
                             <param id="0" name="Pin to">Player_Box</param>
                             <param id="1" name="Mode">1</param>
                         </action>
+                        <action id="-3" name="Set position" sid="9499698809610813" type="Weapon">
+                            <param id="0" name="X">Player_arm.ImagePointX(1)</param>
+                            <param id="1" name="Y">Player_arm.ImagePointY(1)</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="3746670302461627" type="Weapon">
+                            <param id="0" name="Pin to">Player_arm</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                        <action id="-22" name="Set angle toward position" sid="4254345339864071" type="Player_arm">
+                            <param id="0" name="X">Mouse.X</param>
+                            <param id="1" name="Y">Mouse.Y</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="1404772355930818" type="Weapon">
+                            <param id="0" name="Angle">Player_arm.Angle</param>
+                        </action>
                     </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="472934543903872" title="Animation System">
+            <sub-events>
+                <event-block sid="2498759683467663">
+                    <conditions>
+                        <condition behavior="Platform" id="0" name="Is moving" sid="707603224963742" type="Player_Box" />
+                        <condition behavior="Platform" id="2" name="Is on floor" sid="7045900952068755" type="Player_Box" />
+                        <condition id="-6" name="Every X seconds" sid="9962009521160648" type="System">
+                            <param id="0" name="Interval (seconds)">dt</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="7041815246831684">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="8960934504571971" type="Keyboard">
+                                    <param id="0" name="Key">68 (D)</param>
+                                </condition>
+                                <condition id="7" inverted="1" name="Is mirrored" sid="8363988830054761" type="Player_Frame" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="6589620956619595" type="Player_Frame">
+                                    <param id="0" name="Animation">&quot;Walking&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="612171916958107">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="4575157440798713" type="Keyboard">
+                                    <param id="0" name="Key">65 (A)</param>
+                                </condition>
+                                <condition id="7" name="Is mirrored" sid="1729615058582785" type="Player_Frame" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="5466014839656535" type="Player_Frame">
+                                    <param id="0" name="Animation">&quot;Walking&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1104304493114176">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="6263479475825961" type="Keyboard">
+                                    <param id="0" name="Key">68 (D)</param>
+                                </condition>
+                                <condition id="7" name="Is mirrored" sid="8999418436879173" type="Player_Frame" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="1049465675097281" type="Player_Frame">
+                                    <param id="0" name="Animation">&quot;WalkingBack&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5709850252178752">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="1872032900140473" type="Keyboard">
+                                    <param id="0" name="Key">65 (A)</param>
+                                </condition>
+                                <condition id="7" inverted="1" name="Is mirrored" sid="5878987336463455" type="Player_Frame" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="5318301772484174" type="Player_Frame">
+                                    <param id="0" name="Animation">&quot;WalkingBack&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="3369438209422849">
+                    <conditions>
+                        <condition behavior="Platform" id="7" name="On stopped" sid="7126262430710693" type="Player_Box" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="7728989063488316" type="Player_Frame">
+                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4698229573226753">
+                    <conditions>
+                        <condition behavior="Platform" id="5" name="On jump" sid="6605819026694777" type="Player_Box" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="318586545615696" type="Player_Frame">
+                            <param id="0" name="Animation">&quot;Jumping&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4491270990527305">
+                    <conditions>
+                        <condition behavior="Platform" id="9" name="On landed" sid="9015026583006328" type="Player_Box" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="507437352306771">
+                            <conditions>
+                                <condition behavior="Platform" id="0" name="Is moving" sid="3702537273911" type="Player_Box" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="8451005335525775" type="Player_Frame">
+                                    <param id="0" name="Animation">&quot;Walking&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5201941063212143">
+                            <conditions>
+                                <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="7128933490683739" type="Player_Box" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="905719224234571" type="Player_Frame">
+                                    <param id="0" name="Animation">&quot;Idle&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
@@ -170,6 +401,11 @@
                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="7978749006509958" type="Player_Box">
                             <param id="0" name="Instance variable">Dash</param>
                         </condition>
+                        <condition id="-7" name="Compare instance variable" sid="4633323946734303" type="Player_Box">
+                            <param id="0" name="Instance variable">Dash_Charges</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action behavior="Timer" id="0" name="Start timer" sid="2455268916139787" type="Player_Box">
@@ -179,6 +415,10 @@
                         </action>
                         <action id="-13" name="Set boolean" sid="1209745848959962" type="Player_Box">
                             <param id="0" name="Instance variable">Dash</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-12" name="Subtract from" sid="248979118994254" type="Player_Box">
+                            <param id="0" name="Instance variable">Dash_Charges</param>
                             <param id="1" name="Value">1</param>
                         </action>
                     </actions>
@@ -206,6 +446,9 @@
                                 <event-block sid="1569783139534558">
                                     <conditions>
                                         <condition id="7" inverted="1" name="Is mirrored" sid="7588367950447383" type="Player_Frame" />
+                                        <condition id="2" inverted="1" name="Key is down" sid="5171876377519753" type="Keyboard">
+                                            <param id="0" name="Key">65 (A)</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action behavior="Platform" id="7" name="Simulate control" sid="9109525434481311" type="Player_Box">
@@ -216,6 +459,9 @@
                                 <event-block sid="5223053911181299">
                                     <conditions>
                                         <condition id="7" name="Is mirrored" sid="1138757172385581" type="Player_Frame" />
+                                        <condition id="2" inverted="1" name="Key is down" sid="4644625204659446" type="Keyboard">
+                                            <param id="0" name="Key">68 (D)</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action behavior="Platform" id="7" name="Simulate control" sid="1505494725719069" type="Player_Box">
@@ -243,8 +489,185 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="7879587871920382">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="552707534944657" type="Player_Box">
+                            <param id="0" name="Instance variable">Dash_Charges</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" sid="1784255004092137" type="Player_Box">
+                            <param id="0" name="Instance variable">Dash_Charges</param>
+                            <param id="1" name="Value">dt/Self.Dash_Recharge_Time</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="9509171548339771" title="Offensive System" />
+        <event-group description="" sid="9509171548339771" title="Offensive System">
+            <sub-events>
+                <comment>Weapons = Left and Right Mouse Button Abilities</comment>
+                <event-block sid="367054856785644">
+                    <conditions>
+                        <condition id="2" name="Mouse button is down" sid="8517732758700562" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="5613375146448199">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="5425205641457751" type="Player_Box">
+                                    <param id="0" name="Instance variable">Weapon_Level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="4515713748046414">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="2349875990101666" type="Weapon">
+                                            <param id="0" name="Instance variable">Cooldown</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">-1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="3783778561415573" type="System">
+                                            <param id="0" name="Object to create">Bullet_1_Player</param>
+                                            <param id="1" name="Layer">&quot;Player&quot;</param>
+                                            <param id="2" name="X">Weapon.ImagePointX(1)</param>
+                                            <param id="3" name="Y">Weapon.ImagePointY(1)</param>
+                                        </action>
+                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="7662234191576808" type="Bullet_1_Player">
+                                            <param id="0" name="Angle">Weapon.Angle</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="9594998783923453" type="Weapon">
+                                            <param id="0" name="Instance variable">Cooldown</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="6975143899787424">
+                    <conditions>
+                        <condition id="2" name="Mouse button is down" sid="6972980529279924" type="Mouse">
+                            <param id="0" name="Mouse button">2</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="3219316923445066" type="Player_Box">
+                            <param id="0" name="Instance variable">Stun_Ability</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="5240343779061478">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="1010645854563397" type="Player_Box">
+                                    <param id="0" name="Instance variable">Weapon_Level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="3976409085855127">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="9391225885327437" type="Weapon">
+                                            <param id="0" name="Instance variable">Cooldown_Stun</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">-1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="5815514889288922" type="System">
+                                            <param id="0" name="Object to create">Bullet_S_Player</param>
+                                            <param id="1" name="Layer">&quot;Player&quot;</param>
+                                            <param id="2" name="X">Weapon.ImagePointX(1)</param>
+                                            <param id="3" name="Y">Weapon.ImagePointY(1)</param>
+                                        </action>
+                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="2257942088926028" type="Bullet_S_Player">
+                                            <param id="0" name="Angle">Weapon.Angle</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="4417652499738583" type="Weapon">
+                                            <param id="0" name="Instance variable">Cooldown_Stun</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Cooldowns System</comment>
+                <event-block sid="5247213099338823">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="8259808193139965" type="Weapon">
+                            <param id="0" name="Instance variable">Cooldown</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" sid="5592059803151332" type="Weapon">
+                            <param id="0" name="Instance variable">Cooldown</param>
+                            <param id="1" name="Value">dt</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5745867931040279">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="3919651918135057" type="Weapon">
+                            <param id="0" name="Instance variable">Cooldown</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">Self.Fire_Rate</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="4396622774072201" type="Weapon">
+                            <param id="0" name="Instance variable">Cooldown</param>
+                            <param id="1" name="Value">-1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1739382504617413">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="4742877448006515" type="Weapon">
+                            <param id="0" name="Instance variable">Cooldown_Stun</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" sid="1706119682440356" type="Weapon">
+                            <param id="0" name="Instance variable">Cooldown_Stun</param>
+                            <param id="1" name="Value">dt</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6492063723076256">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="1666634982064412" type="Weapon">
+                            <param id="0" name="Instance variable">Cooldown_Stun</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">Self.Fire_Rate_Stun</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="2278222579409305" type="Weapon">
+                            <param id="0" name="Instance variable">Cooldown_Stun</param>
+                            <param id="1" name="Value">-1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="8219006173856015" title="Interaction Effects on Player" />
+        <event-group description="" sid="6807124942313139" title="Interaction on General Passive Objects" />
     </events>
 </c2eventsheet>
