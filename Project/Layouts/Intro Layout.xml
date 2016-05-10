@@ -68,10 +68,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>158</x>
+                        <x>156.588623047</x>
                         <y>246</y>
                         <z>0</z>
-                        <width>1040</width>
+                        <width>1037.177246094</width>
                         <height>22</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
@@ -97,10 +97,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1229</x>
+                        <x>1232.38671875</x>
                         <y>247</y>
                         <z>0</z>
-                        <width>1040</width>
+                        <width>1033.22668457</width>
                         <height>24</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
@@ -235,7 +235,7 @@
                     <instance-variables>
                         <Dash>false</Dash>
                         <Dash_Speed>1300</Dash_Speed>
-                        <Dash_Time>0.1</Dash_Time>
+                        <Dash_Time>0.07</Dash_Time>
                         <Dash_Charges>2</Dash_Charges>
                         <Dash_Recharge_Time>2</Dash_Recharge_Time>
                         <Life>5</Life>
@@ -294,8 +294,8 @@
                         <x>768</x>
                         <y>-111</y>
                         <z>0</z>
-                        <width>30</width>
-                        <height>36</height>
+                        <width>40</width>
+                        <height>40</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>1</hotspotY>
