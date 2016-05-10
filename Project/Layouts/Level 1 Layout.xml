@@ -163,28 +163,13 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                  <instance type="SideMarker" uid="272">
+                <instance type="Sprite9" uid="5">
                     <properties>
-                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1059</x>
-                        <y>708</y>
-                        <z>0</z>
-                        <width>20</width>
-                        <height>20</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                    </world>
-                  </instance>
-                  <instance type="Sprite9" uid="5">
                     <behavior-instances>
                         <behavior-instance type="Solid">
                             <properties>
@@ -204,6 +189,110 @@
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0.237590834</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="AngleHelper" uid="249">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <parent>0</parent>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-160</x>
+                        <y>829</y>
+                        <z>0</z>
+                        <width>35</width>
+                        <height>10</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0.5</opacity>
+                    </world>
+                </instance>
+                <instance type="GunnerBullet" uid="272">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>400</speed>
+                                <acceleration>800</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>Yes</set-angle>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-323</x>
+                        <y>765</y>
+                        <z>0</z>
+                        <width>15</width>
+                        <height>5</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Gunner" uid="294">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Health>2</Health>
+                        <turn>false</turn>
+                        <inRange>false</inRange>
+                        <firerate>1</firerate>
+                        <firetimer>0</firetimer>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Platform">
+                            <properties>
+                                <max-speed>100</max-speed>
+                                <acceleration>200</acceleration>
+                                <deceleration>200</deceleration>
+                                <jump-strength>650</jump-strength>
+                                <gravity>1500</gravity>
+                                <max-fall-speed>1000</max-fall-speed>
+                                <double-jump>Disabled</double-jump>
+                                <jump-sustain>0</jump-sustain>
+                                <default-controls>No</default-controls>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>573</x>
+                        <y>985</y>
+                        <z>0</z>
+                        <width>10</width>
+                        <height>40</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
@@ -6161,7 +6250,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Campana2" uid="272">
+                <instance type="Campana2" uid="1">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -6754,7 +6843,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="SolidObjects" uid="1">
+                <instance type="SolidObjects" uid="4">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -6783,7 +6872,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="SolidObjects" uid="4">
+                <instance type="SolidObjects" uid="6">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -6812,7 +6901,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Border" uid="6">
+                <instance type="Border" uid="7">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -7394,7 +7483,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Player_Frame" uid="7">
+                <instance type="Player_Frame" uid="8">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -7416,7 +7505,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Player_Box" uid="8">
+                <instance type="Player_Box" uid="11">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -7432,7 +7521,7 @@
                         <Life>5</Life>
                         <Weapon_Level>0</Weapon_Level>
                         <Stun_Ability>true</Stun_Ability>
-                        <W_Is_Enabled>false</W_Is_Enabled>
+                        <W_Is_Enabled>true</W_Is_Enabled>
                         <Dash_Is_Enabled>false</Dash_Is_Enabled>
                     </instance-variables>
                     <behavior-instances>
@@ -7444,7 +7533,7 @@
                                 <jump-strength>480</jump-strength>
                                 <gravity>1500</gravity>
                                 <max-fall-speed>1000</max-fall-speed>
-                                <double-jump>Disabled</double-jump>
+                                <double-jump>Enabled</double-jump>
                                 <jump-sustain>0</jump-sustain>
                                 <default-controls>No</default-controls>
                                 <initial-state>Enabled</initial-state>
@@ -7472,7 +7561,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Player_arm" uid="11">
+                <instance type="Player_arm" uid="220">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -7516,7 +7605,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Bat" uid="220">
+                <instance type="Bat" uid="221">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -7553,7 +7642,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="BatArmor" uid="221">
+                <instance type="BatArmor" uid="222">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -7578,7 +7667,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Gunner" uid="269">
+                <instance type="Gunner" uid="247">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -7586,7 +7675,11 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <action>right</action>
+                        <Health>2</Health>
+                        <turn>false</turn>
+                        <inRange>false</inRange>
+                        <firerate>1</firerate>
+                        <firetimer>0</firetimer>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -7603,20 +7696,12 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
-                        <behavior-instance type="LineOfSight">
-                            <properties>
-                                <obstacles>Solids</obstacles>
-                                <range>300</range>
-                                <cone-of-view>360</cone-of-view>
-                                <use-collision-cells>Yes</use-collision-cells>
-                            </properties>
-                        </behavior-instance>
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1355</x>
-                        <y>652</y>
+                        <x>2437</x>
+                        <y>911</y>
                         <z>0</z>
                         <width>10</width>
                         <height>40</height>
@@ -7627,48 +7712,30 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="GunnerArm" uid="270">
+                <instance type="GunnerArm" uid="248">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <Rotation>0</Rotation>
+                        <parent>0</parent>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>293</x>
-                        <y>987</y>
+                        <x>-98</x>
+                        <y>643</y>
                         <z>0</z>
                         <width>35</width>
                         <height>10</height>
                         <depth>0</depth>
-                        <hotspotX>1.003999949</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="SideMarker" uid="271">
-                    <properties>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1443</x>
-                        <y>655</y>
-                        <z>0</z>
-                        <width>20</width>
-                        <height>20</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
+                        <hotspotX>0</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
@@ -7693,7 +7760,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Sprite5" uid="222">
+                <instance type="Sprite5" uid="254">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -7715,7 +7782,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite5" uid="247">
+                <instance type="Sprite5" uid="255">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -7737,7 +7804,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Weapon" uid="248">
+                <instance type="Weapon" uid="256">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -7768,7 +7835,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Bullet_1_Player" uid="249">
+                <instance type="Bullet_1_Player" uid="257">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -7802,7 +7869,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Bullet_S_Player" uid="254">
+                <instance type="Bullet_S_Player" uid="258">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
