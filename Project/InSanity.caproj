@@ -13,6 +13,7 @@
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
@@ -217,6 +218,8 @@
                 <instance-variable name="Life" sid="3845622154724521" type="number" />
                 <instance-variable name="Weapon_Level" sid="3044682161141949" type="number" />
                 <instance-variable name="Stun_Ability" sid="1945475441277138" type="boolean" />
+                <instance-variable name="W_Is_Enabled" sid="1795983416350465" type="boolean" />
+                <instance-variable name="Dash_Is_Enabled" sid="1879918981139579" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Platform" sid="2921180046897222">
@@ -447,6 +450,29 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Tutorial" sid="4256727726716031">
+            <plugin id="Text" />
+            <instance-variables>
+                <instance-variable name="State" sid="9012519349935521" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Pin" sid="740797945949481">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="Bat_Waypoint" sid="75566700446438">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="ID" sid="1297985664469506" type="number" />
+                <instance-variable name="Next_ID" sid="1745185098612998" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4168058952292933" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -460,8 +486,8 @@
         <event-sheet>Intro Sheet.xml</event-sheet>
     </event-folder>
     <global-instances>
-        <global-instance type="Keyboard" uid="263" />
-        <global-instance type="Mouse" uid="267" />
+        <global-instance type="Keyboard" uid="267" />
+        <global-instance type="Mouse" uid="286" />
     </global-instances>
     <sounds-folder />
     <music-folder />

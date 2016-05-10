@@ -175,6 +175,9 @@
                         <condition id="0" name="On key pressed" sid="6858473566790117" type="Keyboard">
                             <param id="0" name="Key">87 (W)</param>
                         </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="6591019612112243" type="Player_Box">
+                            <param id="0" name="Instance variable">W_Is_Enabled</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action behavior="Platform" id="7" name="Simulate control" sid="8863943325903398" type="Player_Box">
@@ -416,6 +419,9 @@
                             <param id="0" name="Instance variable">Dash_Charges</param>
                             <param id="1" name="Comparison">5</param>
                             <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="3485983593776909" type="Player_Box">
+                            <param id="0" name="Instance variable">Dash_Is_Enabled</param>
                         </condition>
                     </conditions>
                     <actions>
