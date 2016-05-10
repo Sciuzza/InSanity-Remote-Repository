@@ -5,6 +5,17 @@
     <events>
         <event-group description="" sid="2374178828000635" title="General Starting Setup">
             <sub-events>
+                <event-block sid="1576274383478166">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="7394473842820258" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="4847706705108421" type="System">
+                            <param id="0" name="Variable">FR_IND</param>
+                            <param id="1" name="Value">1*dt</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="2464216364253991">
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="5903393410181678" type="System">
@@ -163,6 +174,9 @@
                     <conditions>
                         <condition id="0" name="On key pressed" sid="6858473566790117" type="Keyboard">
                             <param id="0" name="Key">87 (W)</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="6591019612112243" type="Player_Box">
+                            <param id="0" name="Instance variable">W_Is_Enabled</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -406,6 +420,9 @@
                             <param id="1" name="Comparison">5</param>
                             <param id="2" name="Value">1</param>
                         </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="3485983593776909" type="Player_Box">
+                            <param id="0" name="Instance variable">Dash_Is_Enabled</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action behavior="Timer" id="0" name="Start timer" sid="2455268916139787" type="Player_Box">
@@ -435,41 +452,31 @@
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block sid="2496432857889821">
+                        <event-block sid="1569783139534558">
                             <conditions>
-                                <condition id="-6" name="Every X seconds" sid="2226241450775153" type="System">
-                                    <param id="0" name="Interval (seconds)">dt</param>
+                                <condition id="7" inverted="1" name="Is mirrored" sid="7588367950447383" type="Player_Frame" />
+                                <condition id="2" inverted="1" name="Key is down" sid="5171876377519753" type="Keyboard">
+                                    <param id="0" name="Key">65 (A)</param>
                                 </condition>
                             </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="1569783139534558">
-                                    <conditions>
-                                        <condition id="7" inverted="1" name="Is mirrored" sid="7588367950447383" type="Player_Frame" />
-                                        <condition id="2" inverted="1" name="Key is down" sid="5171876377519753" type="Keyboard">
-                                            <param id="0" name="Key">65 (A)</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="Platform" id="7" name="Simulate control" sid="9109525434481311" type="Player_Box">
-                                            <param id="0" name="Control">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="5223053911181299">
-                                    <conditions>
-                                        <condition id="7" name="Is mirrored" sid="1138757172385581" type="Player_Frame" />
-                                        <condition id="2" inverted="1" name="Key is down" sid="4644625204659446" type="Keyboard">
-                                            <param id="0" name="Key">68 (D)</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="Platform" id="7" name="Simulate control" sid="1505494725719069" type="Player_Box">
-                                            <param id="0" name="Control">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
+                            <actions>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="9109525434481311" type="Player_Box">
+                                    <param id="0" name="Control">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5223053911181299">
+                            <conditions>
+                                <condition id="7" name="Is mirrored" sid="1138757172385581" type="Player_Frame" />
+                                <condition id="2" inverted="1" name="Key is down" sid="4644625204659446" type="Keyboard">
+                                    <param id="0" name="Key">68 (D)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="1505494725719069" type="Player_Box">
+                                    <param id="0" name="Control">0</param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
@@ -668,6 +675,70 @@
             </sub-events>
         </event-group>
         <event-group description="" sid="8219006173856015" title="Interaction Effects on Player" />
-        <event-group description="" sid="6807124942313139" title="Interaction on General Passive Objects" />
+        <event-group description="" sid="6807124942313139" title="Interaction on General Passive Objects">
+            <sub-events>
+                <event-group description="" sid="7374267314962865" title="Dash through Special Objects">
+                    <sub-events>
+                        <comment>Dash Through Obstacle 16 width object</comment>
+                        <event-block sid="7448679637333062">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="1194710177405565" type="System" />
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="9669478260430882" type="Player_Box">
+                                    <param id="0" name="Instance variable">Dash</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="5392903964776729" type="Obstacle">
+                                    <param id="0" name="Instance variable">DistanceObs</param>
+                                    <param id="1" name="Value">abs(Player_Box.ImagePointX(0) - Obstacle.ImagePointX(0))</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9493975960328131">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="9130657367102314" type="System">
+                                    <param id="0" name="First value">Obstacle.DistanceObs</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Second value">60</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="1928565559218346">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="7771004569386403" type="Player_Box">
+                                            <param id="0" name="Instance variable">Dash</param>
+                                        </condition>
+                                        <condition id="-4" name="Trigger once while true" sid="3831658374772773" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Solid" id="0" name="Set enabled" sid="5203064309260707" type="Obstacle">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                        <action behavior="Timer" id="0" name="Start timer" sid="4375416946023472" type="Obstacle">
+                                            <param id="0" name="Duration">0.5</param>
+                                            <param id="1" name="Type">0</param>
+                                            <param id="2" name="Tag">&quot;Dodged&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="8559448871080235">
+                            <conditions>
+                                <condition behavior="Timer" id="0" name="On timer" sid="5451950434489347" type="Obstacle">
+                                    <param id="0" name="Tag">&quot;Dodged&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Solid" id="0" name="Set enabled" sid="430131362141297" type="Obstacle">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

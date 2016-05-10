@@ -13,7 +13,7 @@
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
-        <plugin author="Scirra" id="Tilemap" version="1">Tilemap</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
@@ -51,7 +51,7 @@
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
     <object-folder>
-        <object-type name="Sprite" sid="2996343322065376">
+        <object-type name="Border" sid="2996343322065376">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="Solid" sid="3303967909418127">
@@ -100,11 +100,17 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite4" sid="3810333344609471">
+        <object-type name="Obstacle" sid="3810333344609471">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="DistanceObs" sid="3573491484582459" type="number" />
+            </instance-variables>
             <behaviors>
                 <behavior-type name="Solid" sid="2366690251442397">
                     <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="Timer" sid="6782153648883804">
+                    <behavior id="Timer" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
@@ -212,6 +218,8 @@
                 <instance-variable name="Life" sid="3845622154724521" type="number" />
                 <instance-variable name="Weapon_Level" sid="3044682161141949" type="number" />
                 <instance-variable name="Stun_Ability" sid="1945475441277138" type="boolean" />
+                <instance-variable name="W_Is_Enabled" sid="1795983416350465" type="boolean" />
+                <instance-variable name="Dash_Is_Enabled" sid="1879918981139579" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Platform" sid="2921180046897222">
@@ -275,16 +283,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Platforms" sid="4185296759679686">
-            <plugin id="Tilemap" />
-            <behaviors>
-                <behavior-type name="Solid" sid="8473742560254559">
-                    <behavior id="solid" />
-                </behavior-type>
-            </behaviors>
-            <texture />
-            <tiles />
-        </object-type>
         <object-type name="BridgePiece" sid="272262031150451">
             <plugin id="Sprite" />
             <behaviors>
@@ -298,7 +296,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite3" sid="1622374566521191">
+        <object-type name="ErbaPlaceholder" sid="1622374566521191">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2068371519608211" speed="5">
@@ -306,11 +304,11 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite6" sid="9782528809921935">
+        <object-type name="QuadranteOrologio" sid="9782528809921935">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4032230195030078" speed="5">
-                    <frame duration="1" hotspotX="0.490196" hotspotY="0.460784" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -400,6 +398,120 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9526728298304309" speed="5">
+                </animation>
+              </animation-folder>
+            </object-type>
+        <object-type name="Campana1" sid="6388403299870468">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7812200178826647" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Campana2" sid="3676565150372281">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="583268297485644" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Campana3" sid="1121073539377497">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9684151753034472" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Campana4" sid="4680830311919848">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5558723217912444" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Campanone" sid="7253691184115012">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1896304080453951" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.511111" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite15" sid="5525802569170408">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3321997199422017" speed="5">
+                    <frame duration="1" hotspotX="0.519608" hotspotY="0.54902" />
+                </animation>
+                <animation framecount="1" loop="0" name="Flipped" pingpong="0" repeatcount="1" repeatto="0" sid="9119102886332256" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite16" sid="3933715526111571">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2302563890159457" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="-0.0625" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Lancetta" sid="6834712122918531">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6685420337217652" speed="5">
+                    <frame duration="1" hotspotX="1.125" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="HitLancetta" sid="5332960050985993">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2745861243136683" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PiattaformaAttraversabile" sid="4242928662593286">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="38720928348217" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Death" sid="5950101315486754">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8936833533086032" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Tutorial" sid="4256727726716031">
+            <plugin id="Text" />
+            <instance-variables>
+                <instance-variable name="State" sid="9012519349935521" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Pin" sid="740797945949481">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="Bat_Waypoint" sid="75566700446438">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="ID" sid="1297985664469506" type="number" />
+                <instance-variable name="Next_ID" sid="1745185098612998" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4168058952292933" speed="5">
+>>>>>>> 0921e2618624fe0b23ae26242c66b7818d96d854
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
@@ -418,8 +530,8 @@
         <event-sheet>Gunner.xml</event-sheet>
     </event-folder>
     <global-instances>
-        <global-instance type="Keyboard" uid="263" />
-        <global-instance type="Mouse" uid="267" />
+        <global-instance type="Keyboard" uid="267" />
+        <global-instance type="Mouse" uid="286" />
     </global-instances>
     <sounds-folder />
     <music-folder />

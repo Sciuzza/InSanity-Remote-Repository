@@ -3,6 +3,177 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Intro Sheet</name>
     <events>
+        <variable constant="0" name="FR_IND" sid="8553848638491284" static="0" type="number">0</variable>
         <include>Player</include>
+        <include>Bat</include>
+        <event-group description="" sid="5028891194073158" title="General Game Starting Setup">
+            <sub-events>
+                <comment>First Tutorial</comment>
+                <event-block sid="894811346939846">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="6954140605493007" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="2084223837139962" type="Tutorial">
+                            <param id="0" name="Text">&quot;Usa i tasti A e D per muoverti dietro e avanti&quot; &amp; newline &amp; &quot;Utilizza il mouse per dare la direzione&quot;</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="2350489128070414" type="Tutorial">
+                            <param id="0" name="X">Player_Box.ImagePointX(0) - Tutorial.Width/2</param>
+                            <param id="1" name="Y">71</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="5808882289534388" type="Tutorial">
+                            <param id="0" name="Pin to">Player_Box</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="5247559551024046" type="Tutorial">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="4466431984269211" title="Tutorial">
+            <sub-events>
+                <comment>First Tutorial Off</comment>
+                <event-block sid="3654035169875921">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="6086974888938161" type="Tutorial">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="5761932762415038">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="6279032838083455" type="Keyboard">
+                                    <param id="0" name="Key">68 (D)</param>
+                                </condition>
+                                <condition id="0" name="On key pressed" sid="3879679662194436" type="Keyboard">
+                                    <param id="0" name="Key">65 (A)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="4045835429598506" type="Tutorial">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="5582889824518018" type="Tutorial">
+                                    <param id="0" name="Instance variable">State</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Second Tutorial and Jump Enabled</comment>
+                <event-block sid="7730727282793657">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="7134951783011349" type="System">
+                            <param id="0" name="First value">Player_Box.ImagePointX(0)</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">300</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="2768611717871596" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="3788905888334063" type="Tutorial">
+                            <param id="0" name="Text">&quot;Usa il tasto W per saltare le macerie&quot;</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="1379905508359347" type="Player_Box">
+                            <param id="0" name="Instance variable">W_Is_Enabled</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="2389619023513097" type="Tutorial">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Second Tutorial Off</comment>
+                <event-block sid="7468003070829821">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="2649023493176895" type="Tutorial">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="1459964743146608">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="9225947120984629" type="Keyboard">
+                                    <param id="0" name="Key">87 (W)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="6485684074824826" type="Tutorial">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="320477862612003" type="Tutorial">
+                                    <param id="0" name="Instance variable">State</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <comment>Third Tutorial and Dash Enabled</comment>
+                <event-block sid="8193297896884573">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="6734172108163342" type="System">
+                            <param id="0" name="First value">Player_Box.ImagePointX(0)</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">600</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="92725267180648" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set font size" sid="6384541405213606" type="Tutorial">
+                            <param id="0" name="Size (pt)">5</param>
+                        </action>
+                        <action id="0" name="Set text" sid="6280439533075851" type="Tutorial">
+                            <param id="0" name="Text">&quot;Mentre salti il burrone, premi il tasto Barra Spaziatrice e compi una scatto nella direzione verso cui ti stai muovendo; questo scatto consuma 1 stamina (barra verde in alto a sinistra) e non puoi eseguirlo se la barra è vuota &quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="3403451487014013" type="Tutorial">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="2087399612704273" type="Player_Box">
+                            <param id="0" name="Instance variable">Dash_Is_Enabled</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Third Tutorial Off</comment>
+                <event-block sid="3157980044121201">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="3591293435801042" type="Tutorial">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="1488477421667375">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="8267846045757768" type="System">
+                                    <param id="0" name="First value">Player_Box.ImagePointX(0)</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">800</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="8015647149286829" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="950232709510536" type="Tutorial">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
