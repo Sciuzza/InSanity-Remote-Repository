@@ -241,8 +241,11 @@
                         <Life>5</Life>
                         <Weapon_Level>0</Weapon_Level>
                         <Stun_Ability>false</Stun_Ability>
-                        <W_Is_Enabled>false</W_Is_Enabled>
+                        <Jump_Is_On>false</Jump_Is_On>
                         <Dash_Is_Enabled>false</Dash_Is_Enabled>
+                        <Side_Movement_Is_On>true</Side_Movement_Is_On>
+                        <Weapon_Is_On>false</Weapon_Is_On>
+                        <Mouse_Look_Is_On>true</Mouse_Look_Is_On>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -523,82 +526,20 @@
                     <behavior-instances>
                         <behavior-instance type="Bullet">
                             <properties>
-                                <speed>400</speed>
+                                <speed>200</speed>
                                 <acceleration>0</acceleration>
                                 <gravity>0</gravity>
                                 <bounce-off-solids>No</bounce-off-solids>
-                                <set-angle>Yes</set-angle>
-                                <initial-state>Enabled</initial-state>
+                                <set-angle>No</set-angle>
+                                <initial-state>Disabled</initial-state>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1199.727050781</x>
-                        <y>121.202407837</y>
-                        <z>0</z>
-                        <width>16</width>
-                        <height>16</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Bat_Waypoint" uid="301">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <ID>7</ID>
-                        <Next_ID_1>0</Next_ID_1>
-                        <Next_ID_2>4</Next_ID_2>
-                        <Next_ID_3>5</Next_ID_3>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Pin" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1162</x>
-                        <y>90</y>
-                        <z>0</z>
-                        <width>16</width>
-                        <height>16</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Bat_Waypoint" uid="302">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <ID>0</ID>
-                        <Next_ID_1>4</Next_ID_1>
-                        <Next_ID_2>5</Next_ID_2>
-                        <Next_ID_3>6</Next_ID_3>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Pin" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1200</x>
-                        <y>140</y>
+                        <x>1204.390991211</x>
+                        <y>133.925201416</y>
                         <z>0</z>
                         <width>16</width>
                         <height>16</height>
@@ -628,101 +569,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1162</x>
-                        <y>185</y>
-                        <z>0</z>
-                        <width>16</width>
-                        <height>16</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Bat_Waypoint" uid="304">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <ID>5</ID>
-                        <Next_ID_1>0</Next_ID_1>
-                        <Next_ID_2>4</Next_ID_2>
-                        <Next_ID_3>7</Next_ID_3>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Pin" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1022</x>
-                        <y>90</y>
-                        <z>0</z>
-                        <width>16</width>
-                        <height>16</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Bat_Waypoint" uid="305">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <ID>4</ID>
-                        <Next_ID_1>7</Next_ID_1>
-                        <Next_ID_2>1</Next_ID_2>
-                        <Next_ID_3>3</Next_ID_3>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Pin" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>984</x>
-                        <y>140</y>
-                        <z>0</z>
-                        <width>16</width>
-                        <height>16</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Bat_Waypoint" uid="306">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <ID>6</ID>
-                        <Next_ID_1>5</Next_ID_1>
-                        <Next_ID_2>7</Next_ID_2>
-                        <Next_ID_3>0</Next_ID_3>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Pin" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1092</x>
-                        <y>50</y>
+                        <x>1140</x>
+                        <y>192</y>
                         <z>0</z>
                         <width>16</width>
                         <height>16</height>
@@ -752,8 +600,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1022</x>
-                        <y>185</y>
+                        <x>1044</x>
+                        <y>192</y>
                         <z>0</z>
                         <width>16</width>
                         <height>16</height>

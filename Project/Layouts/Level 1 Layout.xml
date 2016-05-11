@@ -1029,7 +1029,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite6" uid="294">
+                <instance type="Sprite6" uid="0">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1114,7 +1114,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Border" uid="0">
+                <instance type="Border" uid="1">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -6491,7 +6491,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Campana2" uid="1">
+                <instance type="Campana2" uid="4">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -7084,7 +7084,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="SolidObjects" uid="4">
+                <instance type="SolidObjects" uid="6">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -7113,7 +7113,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="SolidObjects" uid="6">
+                <instance type="SolidObjects" uid="7">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -7142,7 +7142,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Border" uid="7">
+                <instance type="Border" uid="8">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -7637,7 +7637,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Player_Frame" uid="8">
+                <instance type="Player_Frame" uid="11">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -7659,7 +7659,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Player_Box" uid="11">
+                <instance type="Player_Box" uid="220">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -7675,8 +7675,11 @@
                         <Life>5</Life>
                         <Weapon_Level>0</Weapon_Level>
                         <Stun_Ability>true</Stun_Ability>
-                        <W_Is_Enabled>true</W_Is_Enabled>
+                        <Jump_Is_On>true</Jump_Is_On>
                         <Dash_Is_Enabled>false</Dash_Is_Enabled>
+                        <Side_Movement_Is_On>false</Side_Movement_Is_On>
+                        <Weapon_Is_On>false</Weapon_Is_On>
+                        <Mouse_Look_Is_On>true</Mouse_Look_Is_On>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -7715,7 +7718,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Player_arm" uid="220">
+                <instance type="Player_arm" uid="221">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -7759,7 +7762,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Bat" uid="221">
+                <instance type="Bat" uid="222">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -7796,7 +7799,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="BatArmor" uid="222">
+                <instance type="BatArmor" uid="247">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -7821,7 +7824,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Gunner" uid="247">
+                <instance type="Gunner" uid="248">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -7866,7 +7869,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="GunnerArm" uid="248">
+                <instance type="GunnerArm" uid="254">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -7914,7 +7917,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Sprite5" uid="254">
+                <instance type="Sprite5" uid="255">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -7936,7 +7939,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite5" uid="255">
+                <instance type="Sprite5" uid="256">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -7958,7 +7961,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Weapon" uid="256">
+                <instance type="Weapon" uid="257">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -7989,7 +7992,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Bullet_1_Player" uid="257">
+                <instance type="Bullet_1_Player" uid="258">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -8023,7 +8026,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Bullet_S_Player" uid="258">
+                <instance type="Bullet_S_Player" uid="259">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>

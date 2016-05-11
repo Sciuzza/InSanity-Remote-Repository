@@ -61,6 +61,9 @@
                 <event-block sid="6031953689227749">
                     <conditions>
                         <condition id="-1" name="Every tick" sid="4751166781875761" type="System" />
+                        <condition id="-8" name="Is boolean instance variable set" sid="1333414688665008" type="Player_Box">
+                            <param id="0" name="Instance variable">Side_Movement_Is_On</param>
+                        </condition>
                     </conditions>
                     <actions />
                     <sub-events>
@@ -176,7 +179,7 @@
                             <param id="0" name="Key">87 (W)</param>
                         </condition>
                         <condition id="-8" name="Is boolean instance variable set" sid="6591019612112243" type="Player_Box">
-                            <param id="0" name="Instance variable">W_Is_Enabled</param>
+                            <param id="0" name="Instance variable">Jump_Is_On</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -192,6 +195,9 @@
                             <param id="0" name="First value">Mouse.X</param>
                             <param id="1" name="Comparison">2</param>
                             <param id="2" name="Second value">Player_Box.ImagePointX(2)</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="1049767334022502" type="Player_Box">
+                            <param id="0" name="Instance variable">Mouse_Look_Is_On</param>
                         </condition>
                         <condition id="-4" name="Trigger once while true" sid="6052675818598458" type="System" />
                     </conditions>
@@ -238,6 +244,9 @@
                             <param id="0" name="First value">Mouse.X</param>
                             <param id="1" name="Comparison">4</param>
                             <param id="2" name="Second value">Player_Box.ImagePointX(1)</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="1387040944020206" type="Player_Box">
+                            <param id="0" name="Instance variable">Mouse_Look_Is_On</param>
                         </condition>
                         <condition id="-4" name="Trigger once while true" sid="2976886199193845" type="System" />
                     </conditions>
@@ -521,6 +530,9 @@
                         <condition id="2" name="Mouse button is down" sid="8517732758700562" type="Mouse">
                             <param id="0" name="Mouse button">0</param>
                         </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="6212420367955395" type="Player_Box">
+                            <param id="0" name="Instance variable">Weapon_Is_On</param>
+                        </condition>
                     </conditions>
                     <actions />
                     <sub-events>
@@ -569,6 +581,9 @@
                         </condition>
                         <condition id="-8" name="Is boolean instance variable set" sid="3219316923445066" type="Player_Box">
                             <param id="0" name="Instance variable">Stun_Ability</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="8208191465584513" type="Player_Box">
+                            <param id="0" name="Instance variable">Weapon_Is_On</param>
                         </condition>
                     </conditions>
                     <actions />

@@ -387,8 +387,11 @@
                 <instance-variable name="Life" sid="3845622154724521" type="number" />
                 <instance-variable name="Weapon_Level" sid="3044682161141949" type="number" />
                 <instance-variable name="Stun_Ability" sid="1945475441277138" type="boolean" />
-                <instance-variable name="W_Is_Enabled" sid="1795983416350465" type="boolean" />
+                <instance-variable name="Jump_Is_On" sid="1795983416350465" type="boolean" />
                 <instance-variable name="Dash_Is_Enabled" sid="1879918981139579" type="boolean" />
+                <instance-variable name="Side_Movement_Is_On" sid="3035546929993088" type="boolean" />
+                <instance-variable name="Weapon_Is_On" sid="848793439590951" type="boolean" />
+                <instance-variable name="Mouse_Look_Is_On" sid="8848278697414034" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Platform" sid="2921180046897222">
