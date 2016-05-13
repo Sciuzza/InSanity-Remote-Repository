@@ -169,6 +169,10 @@
                                 <action id="-15" name="Set visible" sid="950232709510536" type="Tutorial">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
+                                <action id="-10" name="Set value" sid="2891613193902414" type="Tutorial">
+                                    <param id="0" name="Instance variable">State</param>
+                                    <param id="1" name="Value">3</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
@@ -182,7 +186,7 @@
                         <condition id="-7" name="Compare instance variable" sid="8031215530208991" type="Tutorial">
                             <param id="0" name="Instance variable">State</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">02</param>
+                            <param id="2" name="Value">3</param>
                         </condition>
                         <condition id="-4" name="Trigger once while true" sid="1874850701197684" type="System" />
                     </conditions>
@@ -203,75 +207,12 @@
                             <param id="0" name="Instance variable">Mouse_Look_Is_On</param>
                             <param id="1" name="Value">0</param>
                         </action>
-                        <action id="-10" name="Set value" sid="5599437960131959" type="Tutorial">
-                            <param id="0" name="Instance variable">State</param>
-                            <param id="1" name="Value">3</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="5457383644509488">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="2584032905449499" type="Tutorial">
-                            <param id="0" name="Instance variable">State</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">3</param>
-                        </condition>
-                        <condition id="-15" name="Pick nearest/furthest" sid="9640063175590825" type="Bat_Waypoint">
-                            <param id="0" name="Which">0</param>
-                            <param id="1" name="X">Bat_Testing.X</param>
-                            <param id="2" name="Y">Bat_Testing.Y</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-8" name="Set angle" sid="1735771016434286" type="Bat_Testing">
-                            <param id="0" name="Angle">angle(Bat_Testing.X,Bat_Testing.Y,Player_Box.ImagePointX(1),Player_Box.ImagePointY(1))</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block sid="270804201078792">
-                            <conditions>
-                                <condition id="-4" name="Trigger once while true" sid="8033396148059729" type="System" />
-                            </conditions>
-                            <actions>
-                                <action behavior="Bullet" id="5" name="Set enabled" sid="7841682942272437" type="Bat_Testing">
-                                    <param id="0" name="State">1</param>
-                                </action>
-                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="1602157932867223" type="Bat_Testing">
-                                    <param id="0" name="Angle">angle(Bat_Testing.X,Bat_Testing.Y,Bat_Waypoint.X,Bat_Waypoint.Y)</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="2753563891568099">
-                    <conditions>
-                        <condition id="-14" name="Pick by unique ID" sid="8066110901717449" type="Bat_Waypoint">
-                            <param id="0" name="Unique ID">303</param>
-                        </condition>
-                        <condition id="9" name="Is overlapping at offset" sid="6064126218700252" type="Bat_Testing">
-                            <param id="0" name="Object">Bat_Waypoint</param>
-                            <param id="1" name="Offset X">12</param>
-                            <param id="2" name="Offset Y">12</param>
-                        </condition>
-                        <condition id="-4" name="Trigger once while true" sid="1879710981121986" type="System" />
-                    </conditions>
-                    <actions>
-                        <action behavior="Bullet" id="5" name="Set enabled" sid="1668451423962236" type="Bat_Testing">
-                            <param id="0" name="State">0</param>
-                        </action>
-                        <action id="0" name="Set text" sid="121314615769742" type="Tutorial">
-                            <param id="0" name="Text">&quot;Lo scatto serve anche ad evitare gli attacchi e, in alcuni casi, a superare i nemici stessi, Premi Spazio per Schivare l&apos;attacco nemico&quot;</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="3883730435049951" type="Tutorial">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="9507715514881096" type="Tutorial">
-                            <param id="0" name="Instance variable">State</param>
-                            <param id="1" name="Value">4</param>
-                        </action>
-                        <action id="-13" name="Set boolean" sid="8891047139191312" type="Player_Box">
-                            <param id="0" name="Instance variable">Dash_Is_Enabled</param>
+                        <action id="-10" name="Set value" sid="8763189606095226" type="Bat_Testing">
+                            <param id="0" name="Instance variable">Target_ID</param>
                             <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="7841682942272437" type="Bat_Testing">
+                            <param id="0" name="State">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -280,23 +221,108 @@
                         <condition id="0" name="On key pressed" sid="3743231273798703" type="Keyboard">
                             <param id="0" name="Key">32 (Barra Spaziatrice)</param>
                         </condition>
-                        <condition id="-7" name="Compare instance variable" sid="9941680424449157" type="Tutorial">
-                            <param id="0" name="Instance variable">State</param>
+                        <condition id="-7" name="Compare instance variable" sid="8822078156520865" type="Bat_Testing">
+                            <param id="0" name="Instance variable">Target_ID</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">4</param>
-                        </condition>
-                        <condition id="-14" name="Pick by unique ID" sid="4914305578029722" type="Bat_Waypoint">
-                            <param id="0" name="Unique ID">289</param>
+                            <param id="2" name="Value">2</param>
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-10" name="Set value" sid="4258555389072518" type="Tutorial">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Value">4</param>
+                        </action>
                         <action behavior="Bullet" id="5" name="Set enabled" sid="7556231481704933" type="Bat_Testing">
                             <param id="0" name="State">1</param>
                         </action>
-                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="4970346977405926" type="Bat_Testing">
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="8572637695518758" title="BatMovement">
+            <sub-events>
+                <event-block sid="8207212908638269">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="4506892518931288" type="Bat_Waypoint">
+                            <param id="0" name="Instance variable">ID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Bat_Testing.Target_ID</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-22" name="Set angle toward position" sid="1735771016434286" type="Bat_Testing">
+                            <param id="0" name="X">Player_Box.ImagePointX(1)</param>
+                            <param id="1" name="Y">Player_Box.ImagePointY(1)</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="1602157932867223" type="Bat_Testing">
                             <param id="0" name="Angle">angle(Bat_Testing.X,Bat_Testing.Y,Bat_Waypoint.X,Bat_Waypoint.Y)</param>
                         </action>
                     </actions>
+                </event-block>
+                <event-block sid="9123130867727396">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="2905510167355279" type="Bat_Testing">
+                            <param id="0" name="Object">Bat_Waypoint</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="132407574816273" type="Bat_Waypoint">
+                            <param id="0" name="Instance variable">ID</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">Bat_Testing.Target_ID</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="2899084142228185">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="2864790141518692" type="Bat_Waypoint">
+                                    <param id="0" name="Instance variable">ID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="9051079349692127">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="354906652602956" type="Tutorial">
+                                            <param id="0" name="Instance variable">State</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">3</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="3966039387694975" type="Bat_Testing">
+                                            <param id="0" name="Instance variable">Target_ID</param>
+                                            <param id="1" name="Value">Bat_Waypoint.Next_ID_1</param>
+                                        </action>
+                                        <action behavior="Bullet" id="5" name="Set enabled" sid="5357594499388168" type="Bat_Testing">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="6866930268302423" type="Tutorial">
+                                            <param id="0" name="Text">&quot;Lo scatto serve anche ad evitare gli attacchi e, in alcuni casi, a superare i nemici stessi, Premi Spazio per Schivare l&apos;attacco nemico&quot;</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="4142561592025352" type="Tutorial">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="8108318192035784" type="Player_Box">
+                                            <param id="0" name="Instance variable">Dash_Is_Enabled</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="1042093942506612">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="4151014157662378" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="5" name="Set enabled" sid="171865543352897" type="Bat_Testing">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>

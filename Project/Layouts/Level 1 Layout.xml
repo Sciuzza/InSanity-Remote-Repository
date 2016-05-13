@@ -7650,11 +7650,11 @@
                         <x>135.378814697</x>
                         <y>981.444335938</y>
                         <z>0</z>
-                        <width>40</width>
-                        <height>40</height>
+                        <width>16</width>
+                        <height>37</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>1</hotspotY>
+                        <hotspotX>0.3125</hotspotX>
+                        <hotspotY>0.972972989</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
