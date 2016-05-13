@@ -68,56 +68,56 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="2" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="3019279558857857" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\dbga_08\Desktop\Main_Character\Idle\Idle_1_r.png">
+                    <frame duration="1" hotspotX="0.3125" hotspotY="0.972973" original-source="C:\Users\dbga_08\Desktop\Main_Character\Idle\Idle_1_r.png">
                         <collision-poly>
-                            <point x="0.41875" y="0.075" />
-                            <point x="0.681249" y="0.075" />
-                            <point x="0.693749" y="1" />
-                            <point x="0.41875" y="1" />
+                            <point x="0.109375" y="0" />
+                            <point x="0.765623" y="0" />
+                            <point x="0.796872" y="0.972973" />
+                            <point x="0.109375" y="0.972973" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\dbga_08\Desktop\Main_Character\Idle\Idle_2_r.png">
+                    <frame duration="1" hotspotX="0.3125" hotspotY="0.972222" original-source="C:\Users\dbga_08\Desktop\Main_Character\Idle\Idle_2_r.png">
                         <collision-poly>
-                            <point x="0.4" y="0.18125" />
-                            <point x="0.668749" y="0.18125" />
-                            <point x="0.674999" y="1" />
-                            <point x="0.4" y="1" />
+                            <point x="0.0625" y="0.0625" />
+                            <point x="0.734372" y="0.0625" />
+                            <point x="0.749997" y="0.972222" />
+                            <point x="0.0625" y="0.972222" />
                         </collision-poly>
                     </frame>
                 </animation>
                 <animation framecount="4" loop="1" name="Walking" pingpong="0" repeatcount="1" repeatto="0" sid="7747551573148316" speed="12">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.975" original-source="C:\Users\dbga_08\Desktop\Main_Character\Forward_walk\walk_1_r.png">
+                    <frame duration="1" hotspotX="0.607143" hotspotY="0.972973" original-source="C:\Users\dbga_08\Desktop\Main_Character\Forward_walk\walk_1_r.png">
                         <collision-poly>
-                            <point x="0.45" y="0.1" />
-                            <point x="0.675" y="0.1" />
-                            <point x="0.675" y="0.975" />
-                            <point x="0.225" y="0.975" />
-                            <point x="0.225" y="0.825" />
+                            <point x="0.535714" y="0.027027" />
+                            <point x="0.857143" y="0.027027" />
+                            <point x="0.857143" y="0.972973" />
+                            <point x="0.214286" y="0.972973" />
+                            <point x="0.214286" y="0.810811" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\dbga_08\Desktop\Main_Character\Forward_walk\walk_2_r.png">
+                    <frame duration="1" hotspotX="0.541667" hotspotY="0.973684" original-source="C:\Users\dbga_08\Desktop\Main_Character\Forward_walk\walk_2_r.png">
                         <collision-poly>
-                            <point x="0.35" y="0.15" />
-                            <point x="0.725" y="0.15" />
-                            <point x="0.725" y="1" />
-                            <point x="0.35" y="1" />
+                            <point x="0.291667" y="0.0789474" />
+                            <point x="0.916667" y="0.0789474" />
+                            <point x="0.916667" y="0.973684" />
+                            <point x="0.291667" y="0.973684" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\dbga_08\Desktop\Main_Character\Forward_walk\walk_3_r.png">
+                    <frame duration="1" hotspotX="0.565217" hotspotY="0.973684" original-source="C:\Users\dbga_08\Desktop\Main_Character\Forward_walk\walk_3_r.png">
                         <collision-poly>
-                            <point x="0.325" y="0.15" />
-                            <point x="0.675" y="0.15" />
-                            <point x="0.675" y="1" />
-                            <point x="0.325" y="1" />
+                            <point x="0.26087" y="0.0789474" />
+                            <point x="0.869565" y="0.0789474" />
+                            <point x="0.869565" y="0.973684" />
+                            <point x="0.26087" y="0.973684" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.975" original-source="C:\Users\dbga_08\Desktop\Main_Character\Forward_walk\walk_4_r.png">
+                    <frame duration="1" hotspotX="0.541667" hotspotY="0.972973" original-source="C:\Users\dbga_08\Desktop\Main_Character\Forward_walk\walk_4_r.png">
                         <collision-poly>
-                            <point x="0.46875" y="0.175" />
-                            <point x="0.675" y="0.175" />
-                            <point x="0.75" y="0.975" />
-                            <point x="0.2" y="0.975" />
-                            <point x="0.34375" y="0.50625" />
+                            <point x="0.489583" y="0.108108" />
+                            <point x="0.833333" y="0.108108" />
+                            <point x="0.958333" y="0.972973" />
+                            <point x="0.0416667" y="0.972973" />
+                            <point x="0.28125" y="0.466216" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -387,8 +387,11 @@
                 <instance-variable name="Life" sid="3845622154724521" type="number" />
                 <instance-variable name="Weapon_Level" sid="3044682161141949" type="number" />
                 <instance-variable name="Stun_Ability" sid="1945475441277138" type="boolean" />
-                <instance-variable name="W_Is_Enabled" sid="1795983416350465" type="boolean" />
+                <instance-variable name="Jump_Is_On" sid="1795983416350465" type="boolean" />
                 <instance-variable name="Dash_Is_Enabled" sid="1879918981139579" type="boolean" />
+                <instance-variable name="Side_Movement_Is_On" sid="3035546929993088" type="boolean" />
+                <instance-variable name="Weapon_Is_On" sid="848793439590951" type="boolean" />
+                <instance-variable name="Mouse_Look_Is_On" sid="8848278697414034" type="boolean" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Platform" sid="2921180046897222">

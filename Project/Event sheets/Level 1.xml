@@ -12,7 +12,7 @@
             </conditions>
             <actions>
                 <action id="-13" name="Set boolean" sid="9114021650844201" type="Player_Box">
-                    <param id="0" name="Instance variable">W_Is_Enabled</param>
+                    <param id="0" name="Instance variable">Jump_Is_On</param>
                     <param id="1" name="Value">1</param>
                 </action>
                 <action id="-13" name="Set boolean" sid="7297018650480899" type="Player_Box">
