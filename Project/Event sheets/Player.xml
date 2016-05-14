@@ -136,39 +136,40 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <comment>Sergio - Design: se il mouse si trova dietro il personaggio (a seconda di come è girato) dovrebbe comunque indirizzargli la pistola. per esempio, se il giocatore è rivolto verso destra e il mouse è in-alto-a-sinistra, il braccio dovrebbe essere indirizzato verso in-alto-a-destra</comment>
-                        <event-block sid="6143606942759854">
+                    </sub-events>
+                </event-block>
+                <comment>Sergio - Design: se il mouse si trova dietro il personaggio (a seconda di come è girato) dovrebbe comunque indirizzargli la pistola. per esempio, se il giocatore è rivolto verso destra e il mouse è in-alto-a-sinistra, il braccio dovrebbe essere indirizzato verso in-alto-a-destra</comment>
+                <event-block sid="6143606942759854">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="2315537195981908" type="System" />
+                        <condition id="-8" name="Is boolean instance variable set" sid="6027617324859087" type="Player_Box">
+                            <param id="0" name="Instance variable">Mouse_Look_Is_On</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="529299710635785">
                             <conditions>
-                                <condition id="-6" name="Every X seconds" sid="2315537195981908" type="System">
-                                    <param id="0" name="Interval (seconds)">dt</param>
+                                <condition id="-8" name="Compare two values" sid="3961607868367941" type="System">
+                                    <param id="0" name="First value">Mouse.X</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">Player_Box.ImagePointX(2)</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="4122100057043605" type="System">
+                                    <param id="0" name="First value">Mouse.X</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">Player_Box.ImagePointX(1)</param>
                                 </condition>
                             </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block any="1" sid="529299710635785">
-                                    <conditions>
-                                        <condition id="-8" name="Compare two values" sid="3961607868367941" type="System">
-                                            <param id="0" name="First value">Mouse.X</param>
-                                            <param id="1" name="Comparison">2</param>
-                                            <param id="2" name="Second value">Player_Box.ImagePointX(2)</param>
-                                        </condition>
-                                        <condition id="-8" name="Compare two values" sid="4122100057043605" type="System">
-                                            <param id="0" name="First value">Mouse.X</param>
-                                            <param id="1" name="Comparison">4</param>
-                                            <param id="2" name="Second value">Player_Box.ImagePointX(1)</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-22" name="Set angle toward position" sid="3397812061868229" type="Player_arm">
-                                            <param id="0" name="X">Mouse.X</param>
-                                            <param id="1" name="Y">Mouse.Y</param>
-                                        </action>
-                                        <action id="-8" name="Set angle" sid="7525098447519297" type="Weapon">
-                                            <param id="0" name="Angle">Player_arm.Angle</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
+                            <actions>
+                                <action id="-22" name="Set angle toward position" sid="3397812061868229" type="Player_arm">
+                                    <param id="0" name="X">Mouse.X</param>
+                                    <param id="1" name="Y">Mouse.Y</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="7525098447519297" type="Weapon">
+                                    <param id="0" name="Angle">Player_arm.Angle</param>
+                                </action>
+                            </actions>
                         </event-block>
                     </sub-events>
                 </event-block>

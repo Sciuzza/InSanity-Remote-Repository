@@ -19,6 +19,10 @@
                     <param id="0" name="Instance variable">Dash_Is_Enabled</param>
                     <param id="1" name="Value">1</param>
                 </action>
+                <action id="-13" name="Set boolean" sid="9887546103924306" type="Player_Box">
+                    <param id="0" name="Instance variable">Weapon_Is_On</param>
+                    <param id="1" name="Value">1</param>
+                </action>
             </actions>
         </event-block>
     </events>
