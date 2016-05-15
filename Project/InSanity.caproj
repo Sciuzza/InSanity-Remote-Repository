@@ -26,6 +26,7 @@
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
+        <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
@@ -955,14 +956,6 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="Death" sid="5950101315486754">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8936833533086032" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
-            </object-type>
             <object-type name="ErbaPlaceholder" sid="1622374566521191">
                 <plugin id="Sprite" />
                 <animation-folder>
@@ -1771,6 +1764,11 @@
             </object-type>
             <object-type name="PiattaformaAttraversabile" sid="4242928662593286">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Jumpthru" sid="2323355837722024">
+                        <behavior id="jumpthru" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="38720928348217" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -1820,6 +1818,14 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8343458530361119" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Death" sid="5950101315486754">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8936833533086032" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>

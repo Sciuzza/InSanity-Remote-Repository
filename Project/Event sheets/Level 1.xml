@@ -163,6 +163,10 @@
                 <action behavior="ScrollTo" id="1" name="Set enabled" sid="832454708825241" type="Camera">
                     <param id="0" name="State">1</param>
                 </action>
+                <action disabled="1" id="0" name="Call function" sid="8523818285678959" type="Function">
+                    <param id="0" name="Name">&quot;Create Gunner&quot;</param>
+                    <param id="1" name="Parameter {n}">1{###}2</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="3380901498772188">
@@ -174,6 +178,23 @@
                 </condition>
             </conditions>
             <actions />
+        </event-block>
+        <event-block sid="141524641579449">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="7815576005212318" type="Player_Box">
+                    <param id="0" name="Object">PiattaformaAttraversabile</param>
+                </condition>
+                <condition id="-14" name="Pick by unique ID" sid="6661199641595623" type="PiattaformaAttraversabile">
+                    <param id="0" name="Unique ID">218</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="ScrollTo" id="0" name="Shake" sid="82141162843938" type="Camera">
+                    <param id="0" name="Magnitude">20</param>
+                    <param id="1" name="Duration">0.4</param>
+                    <param id="2" name="Mode">0</param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>
