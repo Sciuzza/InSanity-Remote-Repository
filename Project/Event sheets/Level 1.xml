@@ -23,7 +23,157 @@
                     <param id="0" name="Instance variable">Weapon_Is_On</param>
                     <param id="1" name="Value">1</param>
                 </action>
+                <action id="0" name="Play" sid="4820105181646115" type="Audio">
+                    <param id="0" name="Audio file">Metal_Gong-Dianakc-109711828</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+                <action behavior="Timer" id="0" name="Start timer" sid="6584727146892518" type="chiesaCampanaGrande">
+                    <param id="0" name="Duration">10</param>
+                    <param id="1" name="Type">1</param>
+                    <param id="2" name="Tag">&quot;Bell Puzzle Sound&quot;</param>
+                </action>
             </actions>
+        </event-block>
+        <event-block sid="7108536761829105">
+            <conditions>
+                <condition behavior="Timer" id="0" name="On timer" sid="8661150823082771" type="chiesaCampanaGrande">
+                    <param id="0" name="Tag">&quot;Bell Puzzle Sound&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="2791811761303707" type="Audio">
+                    <param id="0" name="Audio file">Metal_Gong-Dianakc-109711828</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="414653501459436">
+            <conditions>
+                <condition id="-8" name="Compare two values" sid="288311008901006" type="System">
+                    <param id="0" name="First value">Player_Box.X</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Second value">1700</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="3442383486626414" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Call function" sid="9133851393221135" type="Function">
+                    <param id="0" name="Name">&quot;Player Stop&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="-11" name="Add to" sid="5774767273203249" type="Player_Box">
+                    <param id="0" name="Instance variable">Level_1_Phases</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action behavior="ScrollTo" id="1" name="Set enabled" sid="6359733845004564" type="Camera">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6933543516231514">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="3938842588188019" type="Player_Box">
+                    <param id="0" name="Instance variable">Level_1_Phases</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-7" name="Scroll to position" sid="5793581694544942" type="System">
+                    <param id="0" name="X">lerp(scrollx,1991,0.01)</param>
+                    <param id="1" name="Y">lerp(scrolly,397,0.01)</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="6125025156844191">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="3007776859748618" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Timer" id="0" name="Start timer" sid="5721356875207243" type="chiesaCampanaGrande">
+                            <param id="0" name="Duration">4</param>
+                            <param id="1" name="Type">0</param>
+                            <param id="2" name="Tag">&quot;Layout On Bell&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="7431318797093913">
+            <conditions>
+                <condition behavior="Timer" id="0" name="On timer" sid="9900088555504179" type="chiesaCampanaGrande">
+                    <param id="0" name="Tag">&quot;Layout On Bell&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Add to" sid="5367360905425582" type="Player_Box">
+                    <param id="0" name="Instance variable">Level_1_Phases</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3708461865043512">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="1404454728899346" type="Player_Box">
+                    <param id="0" name="Instance variable">Level_1_Phases</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-7" name="Scroll to position" sid="1479860323133407" type="System">
+                    <param id="0" name="X">lerp(scrollx,Player_Box.X, 0.01)</param>
+                    <param id="1" name="Y">lerp(scrolly,Player_Box.Y,0.01)</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="4206828730092499">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="1889556150449942" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Timer" id="0" name="Start timer" sid="7741634291573079" type="Player_Box">
+                            <param id="0" name="Duration">4</param>
+                            <param id="1" name="Type">0</param>
+                            <param id="2" name="Tag">&quot;Layout On Player&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="8322170417831664">
+            <conditions>
+                <condition behavior="Timer" id="0" name="On timer" sid="2679653593914262" type="Player_Box">
+                    <param id="0" name="Tag">&quot;Layout On Player&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Add to" sid="7238383882342673" type="Player_Box">
+                    <param id="0" name="Instance variable">Level_1_Phases</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Call function" sid="3822272824885781" type="Function">
+                    <param id="0" name="Name">&quot;Player Free&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action behavior="ScrollTo" id="1" name="Set enabled" sid="832454708825241" type="Camera">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3380901498772188">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="5888318615911435" type="Player_Box">
+                    <param id="0" name="Instance variable">Level_1_Phases</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+            </conditions>
+            <actions />
         </event-block>
     </events>
 </c2eventsheet>

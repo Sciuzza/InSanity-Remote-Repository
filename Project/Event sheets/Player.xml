@@ -50,6 +50,14 @@
                             <param id="0" name="Pin to">Player_arm</param>
                             <param id="1" name="Mode">0</param>
                         </action>
+                        <action id="-3" name="Set position" sid="2848212624485829" type="Camera">
+                            <param id="0" name="X">Player_Box.X</param>
+                            <param id="1" name="Y">Player_Box.Y</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="9616826306647698" type="Camera">
+                            <param id="0" name="Pin to">Player_Box</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -754,6 +762,76 @@
                         </event-block>
                     </sub-events>
                 </event-group>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="6973483184084773" title="Functions">
+            <sub-events>
+                <event-block sid="3371547448061693">
+                    <conditions>
+                        <condition id="0" name="On function" sid="3540985799094532" type="Function">
+                            <param id="0" name="Name">&quot;Player Stop&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="2366483149673355" type="Player_Box">
+                            <param id="0" name="Instance variable">Stun_Ability</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="8621454996837875" type="Player_Box">
+                            <param id="0" name="Instance variable">Jump_Is_On</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="2631878185471796" type="Player_Box">
+                            <param id="0" name="Instance variable">Dash_Is_Enabled</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="2889795674040388" type="Player_Box">
+                            <param id="0" name="Instance variable">Side_Movement_Is_On</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="9890813161979356" type="Player_Box">
+                            <param id="0" name="Instance variable">Weapon_Is_On</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="5294257694187227" type="Player_Box">
+                            <param id="0" name="Instance variable">Mouse_Look_Is_On</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9361475313463536">
+                    <conditions>
+                        <condition id="0" name="On function" sid="2795511065129631" type="Function">
+                            <param id="0" name="Name">&quot;Player Free&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="360559912642394" type="Player_Box">
+                            <param id="0" name="Instance variable">Stun_Ability</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="5193995377601576" type="Player_Box">
+                            <param id="0" name="Instance variable">Jump_Is_On</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="3686449542061804" type="Player_Box">
+                            <param id="0" name="Instance variable">Dash_Is_Enabled</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="8781441820360042" type="Player_Box">
+                            <param id="0" name="Instance variable">Side_Movement_Is_On</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="9485246450483894" type="Player_Box">
+                            <param id="0" name="Instance variable">Weapon_Is_On</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="4613790586275358" type="Player_Box">
+                            <param id="0" name="Instance variable">Mouse_Look_Is_On</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
     </events>

@@ -336,5 +336,24 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" sid="9497860395969869" title="Gunner Functions">
+            <sub-events>
+                <event-block sid="7112969465916299">
+                    <conditions>
+                        <condition id="0" name="On function" sid="813406118837939" type="Function">
+                            <param id="0" name="Name">&quot;Create Gunner&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="7501723358968499" type="System">
+                            <param id="0" name="Object to create">Gunner</param>
+                            <param id="1" name="Layer">&quot;Player&quot;</param>
+                            <param id="2" name="X">Function.Param(0)</param>
+                            <param id="3" name="Y">function.Param(1)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

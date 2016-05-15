@@ -13,7 +13,7 @@
     </margins>
     <unbounded-scrolling>0</unbounded-scrolling>
     <layers>
-        <layer name="Background" sid="2769096610576848">
+        <layer name="Background Intro" sid="2769096610576848">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>0</transparent>
@@ -29,7 +29,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Sprite10" uid="270">
+                <instance type="Sfondo_Intro" uid="270">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -246,6 +246,7 @@
                         <Side_Movement_Is_On>true</Side_Movement_Is_On>
                         <Weapon_Is_On>false</Weapon_Is_On>
                         <Mouse_Look_Is_On>true</Mouse_Look_Is_On>
+                        <Level_1_Phases>0</Level_1_Phases>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -259,11 +260,6 @@
                                 <double-jump>Enabled</double-jump>
                                 <jump-sustain>0</jump-sustain>
                                 <default-controls>No</default-controls>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="ScrollTo">
-                            <properties>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
@@ -370,7 +366,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="Level" sid="4009961243806715">
+        <layer name="Level Intro" sid="4009961243806715">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -451,7 +447,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="Player" sid="6650967121719506">
+        <layer name="Player Intro" sid="6650967121719506">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -678,7 +674,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="Hud" sid="6442199477174233">
+        <layer name="Hud Intro" sid="6442199477174233">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -741,6 +737,36 @@
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Camera" uid="311">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="ScrollTo">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>213</x>
+                        <y>-68</y>
+                        <z>0</z>
+                        <width>8</width>
+                        <height>8</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
