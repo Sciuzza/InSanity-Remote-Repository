@@ -50,7 +50,7 @@
                             <param id="0" name="Pin to">Player_arm</param>
                             <param id="1" name="Mode">0</param>
                         </action>
-                        <action id="-3" name="Set position" sid="2848212624485829" type="Camera">
+                        <action disabled="1" id="-3" name="Set position" sid="2848212624485829" type="Camera">
                             <param id="0" name="X">Player_Box.X</param>
                             <param id="1" name="Y">Player_Box.Y</param>
                         </action>
@@ -711,21 +711,10 @@
                                     <param id="0" name="Instance variable">Dash</param>
                                 </condition>
                             </conditions>
-                            <actions>
-                                <action id="-10" name="Set value" sid="5392903964776729" type="Obstacle">
-                                    <param id="0" name="Instance variable">DistanceObs</param>
-                                    <param id="1" name="Value">abs(Player_Box.ImagePointX(0) - Obstacle.ImagePointX(0))</param>
-                                </action>
-                            </actions>
+                            <actions />
                         </event-block>
                         <event-block sid="9493975960328131">
-                            <conditions>
-                                <condition id="-8" name="Compare two values" sid="9130657367102314" type="System">
-                                    <param id="0" name="First value">Obstacle.DistanceObs</param>
-                                    <param id="1" name="Comparison">3</param>
-                                    <param id="2" name="Second value">60</param>
-                                </condition>
-                            </conditions>
+                            <conditions />
                             <actions />
                             <sub-events>
                                 <event-block sid="1928565559218346">
@@ -735,30 +724,9 @@
                                         </condition>
                                         <condition id="-4" name="Trigger once while true" sid="3831658374772773" type="System" />
                                     </conditions>
-                                    <actions>
-                                        <action behavior="Solid" id="0" name="Set enabled" sid="5203064309260707" type="Obstacle">
-                                            <param id="0" name="State">0</param>
-                                        </action>
-                                        <action behavior="Timer" id="0" name="Start timer" sid="4375416946023472" type="Obstacle">
-                                            <param id="0" name="Duration">0.5</param>
-                                            <param id="1" name="Type">0</param>
-                                            <param id="2" name="Tag">&quot;Dodged&quot;</param>
-                                        </action>
-                                    </actions>
+                                    <actions />
                                 </event-block>
                             </sub-events>
-                        </event-block>
-                        <event-block sid="8559448871080235">
-                            <conditions>
-                                <condition behavior="Timer" id="0" name="On timer" sid="5451950434489347" type="Obstacle">
-                                    <param id="0" name="Tag">&quot;Dodged&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Solid" id="0" name="Set enabled" sid="430131362141297" type="Obstacle">
-                                    <param id="0" name="State">1</param>
-                                </action>
-                            </actions>
                         </event-block>
                     </sub-events>
                 </event-group>
