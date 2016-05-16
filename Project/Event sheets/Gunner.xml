@@ -39,7 +39,39 @@
                     <actions>
                         <action id="-22" name="Set angle toward position" sid="6915565044351428" type="AngleHelper">
                             <param id="0" name="X">Player_Box.X</param>
-                            <param id="1" name="Y">Player_Box.Y</param>
+                            <param id="1" name="Y">Player_Box.Y - 20</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="151337598101512">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="199155159354435" type="System">
+                            <param id="0" name="Interval (seconds)">dt</param>
+                        </condition>
+                        <condition id="-11" name="For Each" sid="3598908841420857" type="System">
+                            <param id="0" name="Object">Gunner</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="6470357149280115" type="Idle_2_arms2">
+                            <param id="0" name="Object">Gunner</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1397912077658777">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="4506146281060644" type="System">
+                            <param id="0" name="Interval (seconds)">dt</param>
+                        </condition>
+                        <condition id="-11" name="For Each" sid="1677595637362146" type="System">
+                            <param id="0" name="Object">GunnerBullet</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="4878745376144942" type="Gunner_bullet">
+                            <param id="0" name="Object">GunnerBullet</param>
+                            <param id="1" name="Image point (optional)">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -79,6 +111,9 @@
                                 <action id="7" name="Set mirrored" sid="4483111418452212" type="Gunner">
                                     <param id="0" name="State">0</param>
                                 </action>
+                                <action id="7" name="Set mirrored" sid="8452096716397342" type="Idle_2_arms2">
+                                    <param id="0" name="State">0</param>
+                                </action>
                             </actions>
                         </event-block>
                         <event-block sid="9947806531396212">
@@ -87,6 +122,9 @@
                             </conditions>
                             <actions>
                                 <action id="7" name="Set mirrored" sid="9755703107243365" type="Gunner">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="7" name="Set mirrored" sid="7128839362209821" type="Idle_2_arms2">
                                     <param id="0" name="State">1</param>
                                 </action>
                             </actions>
@@ -136,6 +174,75 @@
                     </conditions>
                     <actions />
                     <sub-events>
+                        <event-block sid="8169831580788128">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="9515781732236874" type="Gunner">
+                                    <param id="0" name="Instance variable">Health</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="2960494592754199" type="Idle_2_arms2">
+                                    <param id="0" name="Animation">&quot;Idle&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4133466793688619">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="1592265847898392" type="Gunner">
+                                    <param id="0" name="Instance variable">Health</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="2" name="Stop" sid="7846070940764113" type="Idle_2_arms2" />
+                                <action id="4" name="Set animation" sid="1217537576600643" type="Idle_2_arms2">
+                                    <param id="0" name="Animation">&quot;Idle1Arm&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6506561634062335">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="9669120346549085" type="Gunner">
+                                    <param id="0" name="Instance variable">Health</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="2" name="Stop" sid="1425010742963477" type="Idle_2_arms2" />
+                                <action id="4" name="Set animation" sid="9040185615774589" type="Idle_2_arms2">
+                                    <param id="0" name="Animation">&quot;IdleNoArms&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="3520028928183643" type="GunnerArm" />
+                                <action id="-9" name="Destroy" sid="8770530622654363" type="AngleHelper" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="7386758234521887">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="7828903690888292" type="Gunner">
+                                    <param id="0" name="Instance variable">Health</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="2" name="Stop" sid="5577745150246518" type="Idle_2_arms2" />
+                                <action disabled="1" id="4" name="Set animation" sid="523237468879968" type="Idle_2_arms2">
+                                    <param id="0" name="Animation">&quot;Death&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action disabled="1" id="3" name="Start" sid="249856102014265" type="Idle_2_arms2">
+                                    <param id="0" name="From">1</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="8736659442093614" type="Gunner" />
+                            </actions>
+                        </event-block>
                         <event-block sid="427374976163065">
                             <conditions>
                                 <condition id="0" name="On collision with another object" sid="946368489965836" type="Bullet_1_Player">
@@ -150,28 +257,37 @@
                                 <action id="-9" name="Destroy" sid="6042574634158951" type="Bullet_1_Player" />
                             </actions>
                         </event-block>
-                        <event-block sid="4017179228256051">
+                        <event-block sid="820934338068578">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="1864263623171248" type="AngleHelper">
-                                    <param id="0" name="Instance variable">parent</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">Gunner.UID</param>
+                                <condition id="0" name="On collision with another object" sid="7815987368011841" type="Gunner">
+                                    <param id="0" name="Object">Player_Box</param>
                                 </condition>
-                                <condition id="-7" name="Compare instance variable" sid="7783914712719663" type="GunnerArm">
-                                    <param id="0" name="Instance variable">parent</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">Gunner.UID</param>
-                                </condition>
-                                <condition id="-7" name="Compare instance variable" sid="614859543723581" type="Gunner">
-                                    <param id="0" name="Instance variable">Health</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">0</param>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="9030970614712989" type="Player_Box">
+                                    <param id="0" name="Instance variable">Dash</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Destroy" sid="1141190446121275" type="Gunner" />
-                                <action id="-9" name="Destroy" sid="8186094778736041" type="GunnerArm" />
-                                <action id="-9" name="Destroy" sid="1394666540844243" type="AngleHelper" />
+                                <action id="-12" name="Subtract from" sid="5010759477372284" type="Player_Box">
+                                    <param id="0" name="Instance variable">Life</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4744663016557404">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="1757530277788304" type="GunnerBullet">
+                                    <param id="0" name="Object">Player_Box</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="8019361810141004" type="Player_Box">
+                                    <param id="0" name="Instance variable">Dash</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Subtract from" sid="137031588061859" type="Player_Box">
+                                    <param id="0" name="Instance variable">Life</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="8687189121145413" type="GunnerBullet" />
                             </actions>
                         </event-block>
                         <event-block sid="1627657074160439">
@@ -352,6 +468,18 @@
                             <param id="3" name="Y">function.Param(1)</param>
                         </action>
                     </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="1458404785867545" title="Gunner Animation">
+            <sub-events>
+                <event-block sid="5569416955118979">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="1765991777872621" type="System">
+                            <param id="0" name="Interval (seconds)">dt</param>
+                        </condition>
+                    </conditions>
+                    <actions />
                 </event-block>
             </sub-events>
         </event-group>

@@ -609,5 +609,24 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" sid="4708193757907444" title="Bat Function">
+            <sub-events>
+                <event-block sid="4621679408472039">
+                    <conditions>
+                        <condition id="0" name="On function" sid="3770818267987054" type="Function">
+                            <param id="0" name="Name">&quot;Create Bat&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="4753755957319846" type="System">
+                            <param id="0" name="Object to create">Bat_Testing</param>
+                            <param id="1" name="Layer">&quot;Player&quot;</param>
+                            <param id="2" name="X">Function.Param(0)</param>
+                            <param id="3" name="Y">Function.Param(1)</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

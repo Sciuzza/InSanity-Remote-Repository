@@ -26,7 +26,7 @@
         </event-group>
         <event-group description="" sid="1152175695656894" title="Bat Movement">
             <sub-events>
-                <event-block sid="927442992441931">
+                <event-block disabled="1" sid="927442992441931">
                     <conditions>
                         <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="9396319653377754" type="BatSpawn">
                             <param id="0" name="Object">Player_Box</param>
@@ -47,7 +47,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="2142289212933025">
+                <event-block disabled="1" sid="2142289212933025">
                     <conditions>
                         <condition id="-1" name="Every tick" sid="6556131031027391" type="System" />
                     </conditions>
@@ -114,6 +114,25 @@
                         <action id="-9" name="Set value" sid="6446911980452811" type="System">
                             <param id="0" name="Variable">batHealth</param>
                             <param id="1" name="Value">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="6462884865858022" title="Bat Functions">
+            <sub-events>
+                <event-block sid="3936018006833171">
+                    <conditions>
+                        <condition id="0" name="On function" sid="308157686487826" type="Function">
+                            <param id="0" name="Name">&quot;Create Bat&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="8530167028345947" type="System">
+                            <param id="0" name="Object to create">Bat_Testing</param>
+                            <param id="1" name="Layer">&quot;Player&quot;</param>
+                            <param id="2" name="X">Function.Param(0)</param>
+                            <param id="3" name="Y">Function.Param(1)</param>
                         </action>
                     </actions>
                 </event-block>

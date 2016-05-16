@@ -1214,6 +1214,85 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="Idle_2_arms2" sid="3294699164694506">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="2" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="8622874504708802" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.5" y="0.025" />
+                                <point x="0.6" y="0.4" />
+                                <point x="0.775" y="0.5" />
+                                <point x="0.6" y="0.6" />
+                                <point x="0.5" y="1" />
+                                <point x="0.325" y="0.675" />
+                                <point x="0.275" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="0.225" y="0.225" />
+                                <point x="0.5" y="0.075" />
+                                <point x="0.6" y="0.4" />
+                                <point x="0.775" y="0.5" />
+                                <point x="0.6" y="0.6" />
+                                <point x="0.5" y="1" />
+                                <point x="0.3" y="0.7" />
+                                <point x="0.25" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="6" loop="0" name="Death" pingpong="0" repeatcount="1" repeatto="0" sid="3583067986583221" speed="10">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="2" loop="1" name="Idle1Arm" pingpong="0" repeatcount="1" repeatto="0" sid="7440532832506998" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="2" loop="1" name="IdleNoArms" pingpong="0" repeatcount="1" repeatto="0" sid="5043616700259537" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="2" loop="0" name="Hit" pingpong="0" repeatcount="1" repeatto="0" sid="9029560902197554" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="2" loop="0" name="Hit1Arm" pingpong="0" repeatcount="1" repeatto="0" sid="2628988999962138" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="2" loop="0" name="HitnoArms" pingpong="0" repeatcount="1" repeatto="0" sid="3933122954203379" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="5" loop="0" name="Walk" pingpong="0" repeatcount="1" repeatto="0" sid="1606403417512163" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="5" loop="0" name="Walk1Arm" pingpong="0" repeatcount="1" repeatto="0" sid="6928003659271721" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                    <animation framecount="5" loop="0" name="WalknoArms" pingpong="0" repeatcount="1" repeatto="0" sid="1334139573479962" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Bat">
             <object-type name="Bat" sid="7884223432551516">
@@ -1865,6 +1944,31 @@
             </object-type>
         </object-folder>
         <object-folder name="Hud" />
+        <object-type name="Gunner_bullet" sid="437790361586321">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1168499446392513" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.45" y="0.45" />
+                            <point x="0.5" y="0.45" />
+                            <point x="0.525" y="0.475" />
+                            <point x="0.5" y="0.5" />
+                            <point x="0.5" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.45" y="0.45" />
+                            <point x="0.5" y="0.45" />
+                            <point x="0.525" y="0.475" />
+                            <point x="0.5" y="0.5" />
+                            <point x="0.5" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
