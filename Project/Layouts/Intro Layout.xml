@@ -64,7 +64,6 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
-                        <behavior-instance type="Pin" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -94,7 +93,6 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
-                        <behavior-instance type="Pin" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -124,7 +122,6 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
-                        <behavior-instance type="Pin" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -154,7 +151,6 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
-                        <behavior-instance type="Pin" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -184,7 +180,6 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
-                        <behavior-instance type="Pin" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -214,7 +209,6 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
-                        <behavior-instance type="Pin" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -244,15 +238,14 @@
                         <Dash_Time>0.1</Dash_Time>
                         <Dash_Charges>2</Dash_Charges>
                         <Dash_Recharge_Time>2</Dash_Recharge_Time>
+                        <Life>5</Life>
                         <Weapon_Level>0</Weapon_Level>
                         <Stun_Ability>false</Stun_Ability>
-                        <Life>5</Life>
                         <Jump_Is_On>false</Jump_Is_On>
-                        <Dash_Is_On>false</Dash_Is_On>
+                        <Dash_Is_Enabled>false</Dash_Is_Enabled>
                         <Side_Movement_Is_On>true</Side_Movement_Is_On>
                         <Weapon_Is_On>false</Weapon_Is_On>
                         <Mouse_Look_Is_On>true</Mouse_Look_Is_On>
-                        <Stun_Is_On>false</Stun_Is_On>
                         <Level_1_Phases>0</Level_1_Phases>
                     </instance-variables>
                     <behavior-instances>
@@ -325,7 +318,6 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
-                        <behavior-instance type="Pin" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -355,7 +347,6 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
-                        <behavior-instance type="Pin" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
