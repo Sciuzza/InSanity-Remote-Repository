@@ -25,6 +25,7 @@
         <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
         <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
@@ -307,6 +308,11 @@
             </object-type>
             <object-type name="lampione2" sid="8743774424929647">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="2529464702065177">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1322406585561729" speed="5">
                         <frame duration="1" hotspotX="0.52" hotspotY="0.5" original-source="C:\Users\dbga_21\Downloads\Elementi_livello-2016-05-12\Elementi livello\lampione.png">
@@ -344,6 +350,11 @@
             </object-type>
             <object-type name="lampione4" sid="1709992109148265">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="5314438645625285">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5919329183467694" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_21\Downloads\Elementi_livello-2016-05-12\Elementi livello\lampione 03.png">
@@ -363,6 +374,11 @@
             </object-type>
             <object-type name="lampione5" sid="6870771220364909">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="8743558979603817">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6858796237773945" speed="5">
                         <frame duration="1" hotspotX="0.52" hotspotY="0.5" original-source="C:\Users\dbga_21\Downloads\Elementi_livello-2016-05-12\Elementi livello\lampione 02.png">
@@ -464,6 +480,11 @@
             </object-type>
             <object-type name="ponteBlocco" sid="2378339021331234">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Sine" sid="3287905248614806">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1553809169032944" speed="5">
                         <frame duration="1" hotspotX="0.501416" hotspotY="0.502994" original-source="C:\Users\dbga_21\Downloads\Elementi_livello-2016-05-12\Elementi livello\ponte - blocco 1.png">
@@ -1174,6 +1195,9 @@
                     <behavior-type name="Platform" sid="1618933463262937">
                         <behavior id="Platform" />
                     </behavior-type>
+                    <behavior-type name="Timer" sid="2740580015205257">
+                        <behavior id="Timer" />
+                    </behavior-type>
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6523740985293865" speed="5">
@@ -1369,14 +1393,15 @@
                     <instance-variable name="Dash_Time" sid="8688270445844714" type="number" />
                     <instance-variable name="Dash_Charges" sid="7268462837022067" type="number" />
                     <instance-variable name="Dash_Recharge_Time" sid="5105309756605938" type="number" />
-                    <instance-variable name="Life" sid="3845622154724521" type="number" />
                     <instance-variable name="Weapon_Level" sid="3044682161141949" type="number" />
                     <instance-variable name="Stun_Ability" sid="1945475441277138" type="boolean" />
+                    <instance-variable name="Life" sid="3845622154724521" type="number" />
                     <instance-variable name="Jump_Is_On" sid="1795983416350465" type="boolean" />
-                    <instance-variable name="Dash_Is_Enabled" sid="1879918981139579" type="boolean" />
+                    <instance-variable name="Dash_Is_On" sid="1879918981139579" type="boolean" />
                     <instance-variable name="Side_Movement_Is_On" sid="3035546929993088" type="boolean" />
                     <instance-variable name="Weapon_Is_On" sid="848793439590951" type="boolean" />
                     <instance-variable name="Mouse_Look_Is_On" sid="8848278697414034" type="boolean" />
+                    <instance-variable name="Stun_Is_On" sid="5933630748220251" type="boolean" />
                     <instance-variable name="Level_1_Phases" sid="3744297378801938" type="number" />
                 </instance-variables>
                 <behaviors>
@@ -1630,6 +1655,9 @@
                     <behavior-type name="Solid" sid="9331363195371243">
                         <behavior id="solid" />
                     </behavior-type>
+                    <behavior-type name="Pin" sid="4450457329663005">
+                        <behavior id="Pin" />
+                    </behavior-type>
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8589230056666439" speed="5">
@@ -1641,6 +1669,9 @@
         <object-folder name="Special Objects">
             <object-type name="chiesaCampanaPiccola" sid="5588226861564504">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Right_Order" sid="2371442772404931" type="boolean" />
+                </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6889431733249155" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_21\Downloads\Elementi_livello-2016-05-12\Elementi livello\chiesa - campana piccola.png">
@@ -1659,6 +1690,9 @@
             </object-type>
             <object-type name="chiesaCampanaPiccola2" sid="5700490833777781">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Right_Order" sid="9511418444629414" type="boolean" />
+                </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9937090292159006" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_21\Downloads\Elementi_livello-2016-05-12\Elementi livello\chiesa - campana piccola.png">
@@ -1677,6 +1711,9 @@
             </object-type>
             <object-type name="chiesaCampanaPiccola3" sid="2037178599575883">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Right_Order" sid="2600331212583827" type="boolean" />
+                </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8156685717416747" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_21\Downloads\Elementi_livello-2016-05-12\Elementi livello\chiesa - campana piccola.png">
@@ -1695,6 +1732,9 @@
             </object-type>
             <object-type name="chiesaCampanaPiccola4" sid="609147865961266">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Right_Order" sid="6169615275241781" type="boolean" />
+                </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="822008896869922" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_21\Downloads\Elementi_livello-2016-05-12\Elementi livello\chiesa - campana piccola.png">
@@ -1830,22 +1870,27 @@
                     </animation>
                 </animation-folder>
             </object-type>
-        </object-folder>
-        <object-folder name="Support Gaming Objects">
-            <object-type name="Function" sid="5168276115033472">
-                <plugin id="Function" />
+            <object-type name="StunCode" sid="35300776816981">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="6331281520231468">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
             </object-type>
-            <object-type name="Audio" sid="7851188984822128">
-                <plugin id="Audio" />
+            <object-type name="Stun_Ability" sid="9478407386212979">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="7467922195678907">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7261126194399867" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
             </object-type>
-            <object-type name="Keyboard" sid="9665573294785792">
-                <plugin id="Keyboard" />
-            </object-type>
-            <object-type name="Mouse" sid="1595201238588392">
-                <plugin id="Mouse" />
-            </object-type>
-        </object-folder>
-        <object-folder name="Tutorial">
             <object-type name="Tutorial" sid="4256727726716031">
                 <plugin id="Text" />
                 <instance-variables>
@@ -1862,6 +1907,49 @@
                         <behavior id="Fade" />
                     </behavior-type>
                 </behaviors>
+            </object-type>
+            <object-type name="Record_2" sid="2701529555939743">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="7111925380425405">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9621902287477083" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="DestructibleObject" sid="8049678738425349">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Flash" sid="9348747807369144">
+                        <behavior id="Flash" />
+                    </behavior-type>
+                    <behavior-type name="Solid" sid="9356744865727497">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7355461057395705" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Support Gaming Objects">
+            <object-type name="Function" sid="5168276115033472">
+                <plugin id="Function" />
+            </object-type>
+            <object-type name="Audio" sid="7851188984822128">
+                <plugin id="Audio" />
+            </object-type>
+            <object-type name="Keyboard" sid="9665573294785792">
+                <plugin id="Keyboard" />
+            </object-type>
+            <object-type name="Mouse" sid="1595201238588392">
+                <plugin id="Mouse" />
             </object-type>
         </object-folder>
         <object-folder name="Hud" />

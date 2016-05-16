@@ -140,7 +140,7 @@
                             <param id="0" name="Visibility">1</param>
                         </action>
                         <action id="-13" name="Set boolean" sid="2087399612704273" type="Player_Box">
-                            <param id="0" name="Instance variable">Dash_Is_Enabled</param>
+                            <param id="0" name="Instance variable">Dash_Is_On</param>
                             <param id="1" name="Value">1</param>
                         </action>
                     </actions>
@@ -194,7 +194,7 @@
                             <param id="1" name="Value">0</param>
                         </action>
                         <action id="-13" name="Set boolean" sid="6174527816197637" type="Player_Box">
-                            <param id="0" name="Instance variable">Dash_Is_Enabled</param>
+                            <param id="0" name="Instance variable">Dash_Is_On</param>
                             <param id="1" name="Value">0</param>
                         </action>
                         <action id="-13" name="Set boolean" sid="4675724807974809" type="Player_Box">
@@ -289,7 +289,7 @@
                                             <param id="0" name="Visibility">1</param>
                                         </action>
                                         <action id="-13" name="Set boolean" sid="8108318192035784" type="Player_Box">
-                                            <param id="0" name="Instance variable">Dash_Is_Enabled</param>
+                                            <param id="0" name="Instance variable">Dash_Is_On</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
                                         <action id="-8" name="Set angle" sid="2810305659522137" type="Bat_Testing">
@@ -326,7 +326,7 @@
                                     <param id="1" name="Value">1</param>
                                 </action>
                                 <action id="-13" name="Set boolean" sid="2520158775534465" type="Player_Box">
-                                    <param id="0" name="Instance variable">Dash_Is_Enabled</param>
+                                    <param id="0" name="Instance variable">Dash_Is_On</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
                             </actions>
@@ -410,7 +410,7 @@
                         <action id="-9" name="Destroy" sid="6577758666510715" type="Bat_Testing" />
                         <action behavior="Fade" id="1" name="Start fade" sid="3646680167954984" type="Tutorial" />
                         <action id="-13" name="Set boolean" sid="2363661180844818" type="Player_Box">
-                            <param id="0" name="Instance variable">Dash_Is_Enabled</param>
+                            <param id="0" name="Instance variable">Dash_Is_On</param>
                             <param id="1" name="Value">1</param>
                         </action>
                         <action id="-13" name="Set boolean" sid="3863147269511761" type="Player_Box">

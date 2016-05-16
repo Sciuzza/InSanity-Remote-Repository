@@ -439,7 +439,7 @@
                             <param id="2" name="Value">1</param>
                         </condition>
                         <condition id="-8" name="Is boolean instance variable set" sid="3485983593776909" type="Player_Box">
-                            <param id="0" name="Instance variable">Dash_Is_Enabled</param>
+                            <param id="0" name="Instance variable">Dash_Is_On</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -593,6 +593,9 @@
                         </condition>
                         <condition id="-8" name="Is boolean instance variable set" sid="8208191465584513" type="Player_Box">
                             <param id="0" name="Instance variable">Weapon_Is_On</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="11347104203684" type="Player_Box">
+                            <param id="0" name="Instance variable">Stun_Is_On</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -774,7 +777,7 @@
                     </conditions>
                     <actions>
                         <action id="-13" name="Set boolean" sid="2366483149673355" type="Player_Box">
-                            <param id="0" name="Instance variable">Stun_Ability</param>
+                            <param id="0" name="Instance variable">Stun_Is_On</param>
                             <param id="1" name="Value">0</param>
                         </action>
                         <action id="-13" name="Set boolean" sid="8621454996837875" type="Player_Box">
@@ -782,7 +785,7 @@
                             <param id="1" name="Value">0</param>
                         </action>
                         <action id="-13" name="Set boolean" sid="2631878185471796" type="Player_Box">
-                            <param id="0" name="Instance variable">Dash_Is_Enabled</param>
+                            <param id="0" name="Instance variable">Dash_Is_On</param>
                             <param id="1" name="Value">0</param>
                         </action>
                         <action id="-13" name="Set boolean" sid="2889795674040388" type="Player_Box">
@@ -807,7 +810,7 @@
                     </conditions>
                     <actions>
                         <action id="-13" name="Set boolean" sid="360559912642394" type="Player_Box">
-                            <param id="0" name="Instance variable">Stun_Ability</param>
+                            <param id="0" name="Instance variable">Stun_Is_On</param>
                             <param id="1" name="Value">1</param>
                         </action>
                         <action id="-13" name="Set boolean" sid="5193995377601576" type="Player_Box">
@@ -815,7 +818,7 @@
                             <param id="1" name="Value">1</param>
                         </action>
                         <action id="-13" name="Set boolean" sid="3686449542061804" type="Player_Box">
-                            <param id="0" name="Instance variable">Dash_Is_Enabled</param>
+                            <param id="0" name="Instance variable">Dash_Is_On</param>
                             <param id="1" name="Value">1</param>
                         </action>
                         <action id="-13" name="Set boolean" sid="8781441820360042" type="Player_Box">
