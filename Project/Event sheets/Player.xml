@@ -390,6 +390,17 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="573759240633501">
+                    <conditions>
+                        <condition behavior="Platform" id="6" name="On fall" sid="8701099532334252" type="Player_Box" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="8663158298325014" type="Player_Frame">
+                            <param id="0" name="Animation">&quot;Falling&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="4491270990527305">
                     <conditions>
                         <condition behavior="Platform" id="9" name="On landed" sid="9015026583006328" type="Player_Box" />
@@ -419,6 +430,61 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="8501161426342484">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="5042923902190254" type="Bat">
+                            <param id="0" name="Object">Player_Frame</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="9837973702742784" type="Player_Frame">
+                            <param id="0" name="Animation">&quot;Hit&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2205715275502933">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="6701416529603105" type="GunnerBullet">
+                            <param id="0" name="Object">Player_Frame</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="2528448233417136" type="Player_Frame">
+                            <param id="0" name="Animation">&quot;Hit&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7134722704926311">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="9695475913329328" type="Player_Box">
+                            <param id="0" name="Instance variable">Life</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="7786655537261009" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="5631826144076539" type="Player_Frame">
+                            <param id="0" name="Animation">&quot;Dying&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6928633700001263">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="7613989907679355" type="Player_Frame">
+                            <param id="0" name="Animation">&quot;Dying&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="9174841331682116" type="Player_Frame">
+                            <param id="0" name="Animation">&quot;Dead&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
@@ -698,7 +764,47 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="8219006173856015" title="Interaction Effects on Player" />
+        <event-group description="" sid="8219006173856015" title="Interaction Effects on Player">
+            <sub-events>
+                <event-block sid="2012969064881611">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="5406356219381521" type="Bat">
+                            <param id="0" name="Object">Player_Frame</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="1885626262781614" type="Player_Box">
+                            <param id="0" name="Instance variable">Life</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="80755280411788">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="3842337975151567" type="GunnerBullet">
+                            <param id="0" name="Object">Player_Frame</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="7464101752206057" type="Player_Box">
+                            <param id="0" name="Instance variable">Life</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4064749475666615">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="2719524129036121" type="Player_Box">
+                            <param id="0" name="Instance variable">Life</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="3196463836323442" type="System" />
+                    </conditions>
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
         <event-group description="" sid="6807124942313139" title="Interaction on General Passive Objects">
             <sub-events>
                 <event-group description="" sid="7374267314962865" title="Dash through Special Objects">

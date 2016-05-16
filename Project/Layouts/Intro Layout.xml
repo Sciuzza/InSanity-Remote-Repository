@@ -13,7 +13,7 @@
     </margins>
     <unbounded-scrolling>0</unbounded-scrolling>
     <layers>
-        <layer name="Background Intro" sid="2769096610576848">
+        <layer name="Background" sid="2769096610576848">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>0</transparent>
@@ -366,7 +366,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="Level Intro" sid="4009961243806715">
+        <layer name="Level" sid="4009961243806715">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -447,7 +447,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="Player Intro" sid="6650967121719506">
+        <layer name="Player" sid="6650967121719506">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -671,10 +671,66 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="Player_Box" uid="288">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Dash>false</Dash>
+                        <Dash_Speed>1300</Dash_Speed>
+                        <Dash_Time>0.1</Dash_Time>
+                        <Dash_Charges>2</Dash_Charges>
+                        <Dash_Recharge_Time>2</Dash_Recharge_Time>
+                        <Weapon_Level>0</Weapon_Level>
+                        <Stun_Ability>false</Stun_Ability>
+                        <Life>5</Life>
+                        <Jump_Is_On>false</Jump_Is_On>
+                        <Dash_Is_On>false</Dash_Is_On>
+                        <Side_Movement_Is_On>true</Side_Movement_Is_On>
+                        <Weapon_Is_On>false</Weapon_Is_On>
+                        <Mouse_Look_Is_On>true</Mouse_Look_Is_On>
+                        <Stun_Is_On>false</Stun_Is_On>
+                        <Level_1_Phases>0</Level_1_Phases>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Platform">
+                            <properties>
+                                <max-speed>160</max-speed>
+                                <acceleration>15000</acceleration>
+                                <deceleration>1500</deceleration>
+                                <jump-strength>480</jump-strength>
+                                <gravity>1500</gravity>
+                                <max-fall-speed>1000</max-fall-speed>
+                                <double-jump>Enabled</double-jump>
+                                <jump-sustain>0</jump-sustain>
+                                <default-controls>No</default-controls>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Timer" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>102</x>
+                        <y>229</y>
+                        <z>0</z>
+                        <width>22</width>
+                        <height>36</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
-        <layer name="Hud Intro" sid="6442199477174233">
+        <layer name="Hud" sid="6442199477174233">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
