@@ -238,6 +238,12 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <Fire_Rate>1</Fire_Rate>
+                        <Cooldown>-1</Cooldown>
+                        <Fire_Rate_Stun>5</Fire_Rate_Stun>
+                        <Cooldown_Stun>-1</Cooldown_Stun>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
                     </behavior-instances>
@@ -247,11 +253,11 @@
                         <x>81</x>
                         <y>-40</y>
                         <z>0</z>
-                        <width>35</width>
-                        <height>10</height>
+                        <width>17</width>
+                        <height>7</height>
                         <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.05882353</hotspotX>
+                        <hotspotY>0.714285731</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -397,6 +403,28 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="Death" uid="80">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>672</x>
+                        <y>387</y>
+                        <z>0</z>
+                        <width>1280</width>
+                        <height>248</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -416,37 +444,6 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Weapon" uid="299">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Fire_Rate>1</Fire_Rate>
-                        <Cooldown>-1</Cooldown>
-                        <Fire_Rate_Stun>5</Fire_Rate_Stun>
-                        <Cooldown_Stun>-1</Cooldown_Stun>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Pin" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>93</x>
-                        <y>-58</y>
-                        <z>0</z>
-                        <width>10</width>
-                        <height>5</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0.600000024</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="Bat_Testing" uid="301">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -590,8 +587,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>48</x>
-                        <y>-19</y>
+                        <x>47</x>
+                        <y>-28</y>
                         <z>0</z>
                         <width>16</width>
                         <height>37</height>
@@ -638,8 +635,12 @@
                         <Dash_Charges>2</Dash_Charges>
                         <Dash_Recharge_Time>2</Dash_Recharge_Time>
                         <Weapon_Level>0</Weapon_Level>
+                        <Weapon_Loader>4</Weapon_Loader>
+                        <Weapon_Max_Loader>4</Weapon_Max_Loader>
+                        <Reloading>false</Reloading>
                         <Stun_Ability>false</Stun_Ability>
                         <Life>5</Life>
+                        <Checkpoint>0</Checkpoint>
                         <Jump_Is_On>false</Jump_Is_On>
                         <Dash_Is_On>false</Dash_Is_On>
                         <Side_Movement_Is_On>true</Side_Movement_Is_On>
@@ -647,6 +648,7 @@
                         <Mouse_Look_Is_On>true</Mouse_Look_Is_On>
                         <Stun_Is_On>false</Stun_Is_On>
                         <Level_1_Phases>0</Level_1_Phases>
+                        <First_Phase_Triggered>false</First_Phase_Triggered>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -657,21 +659,22 @@
                                 <jump-strength>480</jump-strength>
                                 <gravity>1500</gravity>
                                 <max-fall-speed>1000</max-fall-speed>
-                                <double-jump>Enabled</double-jump>
+                                <double-jump>Disabled</double-jump>
                                 <jump-sustain>0</jump-sustain>
                                 <default-controls>No</default-controls>
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="Timer" />
+                        <behavior-instance type="Persist" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>102</x>
-                        <y>229</y>
+                        <x>103</x>
+                        <y>232</y>
                         <z>0</z>
-                        <width>22</width>
+                        <width>11.636363983</width>
                         <height>36</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
@@ -780,10 +783,86 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="Bullet_1_Player" uid="3">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>400</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>Yes</set-angle>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>128.292175293</x>
+                        <y>-58.559341431</y>
+                        <z>0</z>
+                        <width>5</width>
+                        <height>4</height>
+                        <depth>0</depth>
+                        <hotspotX>0.800000012</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Bullet_S_Player" uid="11">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>400</speed>
+                                <acceleration>0</acceleration>
+                                <gravity>0</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>Yes</set-angle>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>123.160629272</x>
+                        <y>-40.598754883</y>
+                        <z>0</z>
+                        <width>5</width>
+                        <height>5</height>
+                        <depth>0</depth>
+                        <hotspotX>0.600000024</hotspotX>
+                        <hotspotY>0.600000024</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
     </layers>
-    <nonworld-instances />
+    <nonworld-instances>
+        <instance type="MinutesContainer" uid="81">
+            <properties>
+                <width>10</width>
+                <height>1</height>
+                <depth>1</depth>
+            </properties>
+        </instance>
+    </nonworld-instances>
     <effects />
 </c2layout>

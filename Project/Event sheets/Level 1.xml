@@ -28,6 +28,40 @@
                             <param id="1" name="Type">1</param>
                             <param id="2" name="Tag">&quot;Bell Puzzle Sound&quot;</param>
                         </action>
+                        <action id="-10" name="Set value" sid="5365195446300009" type="Player_Box">
+                            <param id="0" name="Instance variable">Weapon_Max_Loader</param>
+                            <param id="1" name="Value">Weapon_Max_Loader_Temp</param>
+                        </action>
+                        <action id="2" name="Stop" sid="6746251571539744" type="CheckPoint" />
+                        <action id="1" name="Set size" sid="3506362689263001" type="MinutesContainer">
+                            <param id="0" name="Width">4</param>
+                            <param id="1" name="Height">1</param>
+                            <param id="2" name="Depth">1</param>
+                        </action>
+                        <action id="4" name="Set at XYZ" sid="7490869024871606" type="MinutesContainer">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Z">0</param>
+                            <param id="3" name="Value">00</param>
+                        </action>
+                        <action id="4" name="Set at XYZ" sid="2338454044462042" type="MinutesContainer">
+                            <param id="0" name="X">1</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Z">0</param>
+                            <param id="3" name="Value">15</param>
+                        </action>
+                        <action id="4" name="Set at XYZ" sid="1676922173755401" type="MinutesContainer">
+                            <param id="0" name="X">2</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Z">0</param>
+                            <param id="3" name="Value">30</param>
+                        </action>
+                        <action id="4" name="Set at XYZ" sid="331694110444246" type="MinutesContainer">
+                            <param id="0" name="X">3</param>
+                            <param id="1" name="Y">0</param>
+                            <param id="2" name="Z">0</param>
+                            <param id="3" name="Value">45</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="7108536761829105">
@@ -52,6 +86,9 @@
                             <param id="1" name="Comparison">5</param>
                             <param id="2" name="Second value">1700</param>
                         </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="1254316597314672" type="Player_Box">
+                            <param id="0" name="Instance variable">First_Phase_Triggered</param>
+                        </condition>
                         <condition id="-4" name="Trigger once while true" sid="3442383486626414" type="System" />
                     </conditions>
                     <actions>
@@ -66,6 +103,10 @@
                         <action behavior="ScrollTo" id="1" name="Set enabled" sid="6359733845004564" type="Camera">
                             <param id="0" name="State">0</param>
                         </action>
+                        <action id="-13" name="Set boolean" sid="6246933646941025" type="Player_Box">
+                            <param id="0" name="Instance variable">First_Phase_Triggered</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="5540095216447123">
@@ -78,6 +119,42 @@
                         </action>
                         <action id="-16" name="Set opacity" sid="3481956917409686" type="Tutorial">
                             <param id="0" name="Opacity">100</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3402366016564468">
+                    <conditions>
+                        <condition behavior="Fade" id="0" name="On fade-out finished" sid="5894360562542446" type="StunCode" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="5456728635657792" type="StunCode">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="9461594048687265" type="StunCode">
+                            <param id="0" name="Opacity">100</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2372058269328929">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="8195817272567133" type="Player_Box">
+                            <param id="0" name="Object">CheckPoint</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="9010965611962455" type="CheckPoint">
+                            <param id="0" name="Instance variable">Is_Taken</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="2591199855148298" type="CheckPoint">
+                            <param id="0" name="Instance variable">Is_Taken</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="4030270341854787" type="Player_Box">
+                            <param id="0" name="Instance variable">Checkpoint</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="2896342169110801" type="CheckPoint">
+                            <param id="0" name="Frame number">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -173,18 +250,6 @@
                         </action>
                         <action behavior="ScrollTo" id="1" name="Set enabled" sid="832454708825241" type="Camera">
                             <param id="0" name="State">1</param>
-                        </action>
-                        <action disabled="1" id="0" name="Call function" sid="8523818285678959" type="Function">
-                            <param id="0" name="Name">&quot;Create Gunner&quot;</param>
-                            <param id="1" name="Parameter {n}">1{###}2</param>
-                        </action>
-                        <action disabled="1" id="0" name="Call function" sid="8210519737637451" type="Function">
-                            <param id="0" name="Name">&quot;Create Gunner&quot;</param>
-                            <param id="1" name="Parameter {n}">1{###}2</param>
-                        </action>
-                        <action disabled="1" id="0" name="Call function" sid="4268552063486441" type="Function">
-                            <param id="0" name="Name">&quot;Create Gunner&quot;</param>
-                            <param id="1" name="Parameter {n}">1{###}2</param>
                         </action>
                     </actions>
                 </event-block>
@@ -287,6 +352,7 @@
                                 <action id="11" name="Set collisions enabled" sid="72865323908161" type="chiesaCampanaPiccola">
                                     <param id="0" name="Collisions">0</param>
                                 </action>
+                                <action id="-9" name="Destroy" sid="7043564264926886" type="Bullet_1_Player" />
                             </actions>
                             <sub-events>
                                 <event-block sid="3611849329446366">
@@ -326,6 +392,7 @@
                                 <action id="11" name="Set collisions enabled" sid="6440753940651315" type="chiesaCampanaPiccola2">
                                     <param id="0" name="Collisions">0</param>
                                 </action>
+                                <action id="-9" name="Destroy" sid="8699848540479523" type="Bullet_1_Player" />
                             </actions>
                             <sub-events>
                                 <event-block sid="7176319618622067">
@@ -365,6 +432,7 @@
                                 <action id="11" name="Set collisions enabled" sid="2268356302234113" type="chiesaCampanaPiccola3">
                                     <param id="0" name="Collisions">0</param>
                                 </action>
+                                <action id="-9" name="Destroy" sid="4316650670919662" type="Bullet_1_Player" />
                             </actions>
                             <sub-events>
                                 <event-block sid="4709391685319197">
@@ -404,6 +472,7 @@
                                 <action id="11" name="Set collisions enabled" sid="1265903916766158" type="chiesaCampanaPiccola4">
                                     <param id="0" name="Collisions">0</param>
                                 </action>
+                                <action id="-9" name="Destroy" sid="2354193329224768" type="Bullet_1_Player" />
                             </actions>
                             <sub-events>
                                 <event-block sid="966023740693738">
@@ -619,6 +688,9 @@
                     </conditions>
                     <actions>
                         <action behavior="Fade" id="1" name="Start fade" sid="2010809180145082" type="Record_2" />
+                        <action id="11" name="Set collisions enabled" sid="9239735707151576" type="Record_2">
+                            <param id="0" name="Collisions">0</param>
+                        </action>
                         <action id="-15" name="Set visible" sid="1700253704888525" type="Tutorial">
                             <param id="0" name="Visibility">1</param>
                         </action>
@@ -629,6 +701,10 @@
                             <param id="0" name="Duration">3</param>
                             <param id="1" name="Type">0</param>
                             <param id="2" name="Tag">&quot;Record 2&quot;</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="6708328310202786" type="Player_Box">
+                            <param id="0" name="Instance variable">Weapon_Max_Loader</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -659,6 +735,7 @@
                             <param id="1" name="Type">0</param>
                             <param id="2" name="Tag">&quot;Object Destroying&quot;</param>
                         </action>
+                        <action id="-9" name="Destroy" sid="2902830855172761" type="Bullet_S_Player" />
                     </actions>
                 </event-block>
                 <event-block sid="7488153956422878">
@@ -695,10 +772,6 @@
                             <param id="0" name="Duration">2</param>
                             <param id="1" name="Type">0</param>
                             <param id="2" name="Tag">&quot;Bridge Going Down&quot;</param>
-                        </action>
-                        <action id="0" name="Call function" sid="8868499222842658" type="Function">
-                            <param id="0" name="Name">&quot;Create Gunner&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
                     <sub-events>
@@ -864,6 +937,143 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="1022993488234217" title="Final Phase">
+            <sub-events>
+                <variable constant="0" name="Hours" sid="3206254877518839" static="0" type="number">0</variable>
+                <variable constant="0" name="Minutes" sid="843987332269158" static="0" type="number">0</variable>
+                <event-block sid="2387766830078752">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="246989400879454" type="Bullet_1_Player">
+                            <param id="0" name="Object">Eye</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="8687483088951114" type="Eye">
+                            <param id="0" name="Instance variable">Immune</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="4422195735544084" type="Bullet_1_Player" />
+                        <action id="-11" name="Add to" sid="6183445210118093" type="Eye">
+                            <param id="0" name="Instance variable">Hit</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6756832143136958">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="4818828981028047" type="Eye">
+                            <param id="0" name="Instance variable">Hit</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">4</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="8006418765986916" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="8324695334402379" type="Eye">
+                            <param id="0" name="Animation">&quot;Blinking&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="9569357647148423" type="Eye">
+                            <param id="0" name="Instance variable">Immune</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="8561840324645042" type="Eye">
+                            <param id="0" name="Instance variable">Hit</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="4472640126975348" type="StunCode">
+                            <param id="0" name="X">5070</param>
+                            <param id="1" name="Y">390</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="6291199387876769" type="StunCode">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="6204726382452189" type="System">
+                            <param id="0" name="Variable">Hours</param>
+                            <param id="1" name="Value">random(1,25)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="6077354966872908" type="System">
+                            <param id="0" name="Variable">Minutes</param>
+                            <param id="1" name="Value">random(0,4)</param>
+                        </action>
+                        <action disabled="1" id="0" name="Set text" sid="6260784861585804" type="StunCode">
+                            <param id="0" name="Text">Hours &amp; &quot;:&quot; &amp; MinutesContainer.At(Minutes)</param>
+                        </action>
+                        <action id="0" name="Set text" sid="6184308634157841" type="StunCode">
+                            <param id="0" name="Text">&quot;16:30&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8067167555361844">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="7381881551105664" type="Eye">
+                            <param id="0" name="Animation">&quot;Blinking&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="4964352995011874" type="Eye">
+                            <param id="0" name="Instance variable">Immune</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="5126874756594171" type="Eye">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="2868767700715896" type="StunCode" />
+                    </actions>
+                </event-block>
+                <event-block sid="7115290670223422">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="7312179697952026" type="Bullet_1_Player">
+                            <param id="0" name="Object">orologioLancettaCorto</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-18" name="Rotate clockwise" sid="7564152787913964" type="orologioLancettaCorto">
+                            <param id="0" name="Degrees">30</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="2147132471911113" type="Bullet_1_Player" />
+                    </actions>
+                </event-block>
+                <event-block sid="2008337318556543">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="5104024775556754" type="Bullet_1_Player">
+                            <param id="0" name="Object">orologioLancettaLunga</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-18" name="Rotate clockwise" sid="6799674685553541" type="orologioLancettaLunga">
+                            <param id="0" name="Degrees">30</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="4921773943722206" type="Bullet_1_Player" />
+                    </actions>
+                </event-block>
+                <event-block sid="729271547017801">
+                    <conditions>
+                        <condition id="-11" name="Is within angle" sid="9421599827819908" type="orologioLancettaCorto">
+                            <param id="0" name="Within">0.5</param>
+                            <param id="1" name="Angle">30</param>
+                        </condition>
+                        <condition id="-11" name="Is within angle" sid="3373863481988876" type="orologioLancettaLunga">
+                            <param id="0" name="Within">0.5</param>
+                            <param id="1" name="Angle">180</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="7836231014735898" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="7573788730522675" type="StunCode">
+                            <param id="0" name="X">6246</param>
+                            <param id="1" name="Y">100</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="2280012806405771" type="StunCode">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="4546511316968442" type="StunCode">
+                            <param id="0" name="Text">&quot;Nice Done Duuuude&quot;</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
