@@ -1320,59 +1320,60 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="2" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="3019279558857857" speed="5">
-                        <frame duration="1" hotspotX="0.3125" hotspotY="0.972973" original-source="C:\Users\Sciuzza\Desktop\Project\Animations\Player_Frame\Idle\000.png">
-                            <image-point name="Right_Arm_Pos" x="0.5625" y="0.405405" />
-                            <image-point name="Left_Arm_Pos" x="0.1875" y="0.405405" />
+                        <frame duration="1" hotspotX="0.388889" hotspotY="0.972973" original-source="C:\Users\Sciuzza\Desktop\Animations\Player_Frame\Idle\000.png">
                             <collision-poly>
-                                <point x="0.109375" y="0" />
-                                <point x="0.765623" y="0" />
-                                <point x="0.796872" y="0.972973" />
-                                <point x="0.109375" y="0.972973" />
+                                <point x="0.219135" y="0" />
+                                <point x="1" y="0" />
+                                <point x="0.628082" y="0.431248" />
+                                <point x="0.929013" y="0.952343" />
+                                <point x="0" y="0.945038" />
+                                <point x="0" y="0.440378" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.3125" hotspotY="0.972222" original-source="C:\Users\Sciuzza\Desktop\Project\Animations\Player_Frame\Idle\001.png">
+                        <frame duration="1" hotspotX="0.388889" hotspotY="0.972222" original-source="C:\Users\Sciuzza\Desktop\Animations\Player_Frame\Idle\001.png">
                             <collision-poly>
-                                <point x="0.0625" y="0.0625" />
-                                <point x="0.734372" y="0.0625" />
-                                <point x="0.749997" y="0.972222" />
-                                <point x="0.0625" y="0.972222" />
+                                <point x="0.219135" y="0" />
+                                <point x="1" y="0" />
+                                <point x="0.589493" y="0.403378" />
+                                <point x="1" y="0.941787" />
+                                <point x="0" y="0.930212" />
                             </collision-poly>
                         </frame>
                     </animation>
                     <animation framecount="4" loop="1" name="Walking" pingpong="0" repeatcount="1" repeatto="0" sid="7747551573148316" speed="12">
-                        <frame duration="1" hotspotX="0.607143" hotspotY="0.972973" original-source="C:\Users\Sciuzza\Desktop\Project\Animations\Player_Frame\Walking\000.png">
+                        <frame duration="1" hotspotX="0.565217" hotspotY="0.973684" original-source="C:\Users\Sciuzza\Desktop\Project\Animations\Player_Frame\Walking\000.png">
                             <collision-poly>
-                                <point x="0.602678" y="0.0844594" />
-                                <point x="0.857143" y="0.027027" />
-                                <point x="0.857143" y="0.972973" />
-                                <point x="0.53125" y="0.699324" />
-                                <point x="0.214286" y="0.810811" />
+                                <point x="0.743788" y="0.00995726" />
+                                <point x="1" y="0" />
+                                <point x="1" y="0.945235" />
+                                <point x="0.619565" y="0.657183" />
+                                <point x="0.0683235" y="0.774538" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.541667" hotspotY="0.973684" original-source="C:\Users\Sciuzza\Desktop\Project\Animations\Player_Frame\Walking\001.png">
+                        <frame duration="1" hotspotX="0.6" hotspotY="1" original-source="C:\Users\Sciuzza\Desktop\Project\Animations\Player_Frame\Walking\001.png">
                             <collision-poly>
-                                <point x="0.484375" y="0.236842" />
-                                <point x="0.921875" y="0.0296053" />
-                                <point x="0.703125" y="0.832237" />
-                                <point x="0.46875" y="0.980263" />
+                                <point x="0.56875" y="0.152047" />
+                                <point x="1" y="0" />
+                                <point x="1" y="0.813597" />
+                                <point x="0.5375" y="0.97807" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.565217" hotspotY="0.973684" original-source="C:\Users\Sciuzza\Desktop\Project\Animations\Player_Frame\Walking\002.png">
+                        <frame duration="1" hotspotX="0.56" hotspotY="0.973684" original-source="C:\Users\Sciuzza\Desktop\Project\Animations\Player_Frame\Walking\002.png">
                             <collision-poly>
-                                <point x="0.51087" y="0.256579" />
-                                <point x="0.885869" y="0.0526316" />
-                                <point x="0.831522" y="0.878289" />
-                                <point x="0.309783" y="0.970395" />
+                                <point x="0.577392" y="0.191136" />
+                                <point x="1" y="0" />
+                                <point x="1" y="0.845567" />
+                                <point x="0.255653" y="0.942521" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.541667" hotspotY="0.972973" original-source="C:\Users\Sciuzza\Desktop\Project\Animations\Player_Frame\Walking\003.png">
+                        <frame duration="1" hotspotX="0.541667" hotspotY="0.973684" original-source="C:\Users\Sciuzza\Desktop\Project\Animations\Player_Frame\Walking\003.png">
                             <collision-poly>
-                                <point x="0.583333" y="0.0405404" />
-                                <point x="0.822916" y="0.0506756" />
-                                <point x="0.684896" y="0.501689" />
-                                <point x="0.953125" y="0.966216" />
-                                <point x="0.166667" y="0.922297" />
-                                <point x="0.28125" y="0.466216" />
+                                <point x="0.680555" y="0" />
+                                <point x="1" y="0" />
+                                <point x="0.849827" y="0.449146" />
+                                <point x="1" y="0.938122" />
+                                <point x="0" y="0.891892" />
+                                <point x="0.177083" y="0.411806" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -1404,7 +1405,7 @@
                                 <point x="0.478125" y="1" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.975" original-source="C:\Users\Sciuzza\Desktop\Project\Animations\Player_Frame\WalkingBack\003.png">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Sciuzza\Desktop\Project\Animations\Player_Frame\WalkingBack\003.png">
                             <collision-poly>
                                 <point x="0.55625" y="0.109375" />
                                 <point x="0.709375" y="0.13125" />

@@ -577,28 +577,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Player_Frame" uid="289">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>47</x>
-                        <y>-28</y>
-                        <z>0</z>
-                        <width>16</width>
-                        <height>37</height>
-                        <depth>0</depth>
-                        <hotspotX>0.3125</hotspotX>
-                        <hotspotY>0.972972989</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="Door_Area" uid="304">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
@@ -847,6 +825,28 @@
                         <depth>0</depth>
                         <hotspotX>0.600000024</hotspotX>
                         <hotspotY>0.600000024</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Player_Frame" uid="82">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>40.607025146</x>
+                        <y>-25.916748047</y>
+                        <z>0</z>
+                        <width>18</width>
+                        <height>37</height>
+                        <depth>0</depth>
+                        <hotspotX>0.388888896</hotspotX>
+                        <hotspotY>0.972972989</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
