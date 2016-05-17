@@ -1030,11 +1030,66 @@
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6523740985293865" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                            <image-point name="RightArm" x="0.84" y="0.5" />
-                            <image-point name="LeftArm" x="0.16" y="0.5" />
-                        </frame>
+                    <animation framecount="2" loop="0" name="No_Arms_Idle" pingpong="0" repeatcount="1" repeatto="0" sid="6523740985293865" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\NoArms_Idle\000.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\NoArms_Idle\001.png" />
+                    </animation>
+                    <animation framecount="5" loop="0" name="2_Arms_Walk" pingpong="0" repeatcount="1" repeatto="0" sid="9819221054279116" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\2Arms_Walk\000.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\2Arms_Walk\001.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\2Arms_Walk\002.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\2Arms_Walk\003.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\2Arms_Walk\004.png" />
+                    </animation>
+                    <animation framecount="5" loop="0" name="No_Arms_Walk" pingpong="0" repeatcount="1" repeatto="0" sid="2535715770522335" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\NoArms_Walk\000.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\NoArms_Walk\001.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\NoArms_Walk\002.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\NoArms_Walk\003.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\NoArms_Walk\004.png" />
+                    </animation>
+                    <animation framecount="6" loop="0" name="Death" pingpong="0" repeatcount="1" repeatto="0" sid="1010745617952286" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\Death\000.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\Death\001.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\Death\002.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\Death\003.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\Death\004.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\Death\005.png" />
+                    </animation>
+                    <animation framecount="4" loop="0" name="2Arms_Shoot" pingpong="0" repeatcount="1" repeatto="0" sid="4510332829741255" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\2Arms_Shoot\000.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\2Arms_Shoot\001.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\2Arms_Shoot\002.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\2Arms_Shoot\003.png" />
+                    </animation>
+                    <animation framecount="2" loop="0" name="2Arms_Idle" pingpong="0" repeatcount="1" repeatto="0" sid="1090741839800835" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\2Arms_Idle\000.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\2Arms_Idle\001.png" />
+                    </animation>
+                    <animation framecount="2" loop="0" name="2Arms_Hit" pingpong="0" repeatcount="1" repeatto="0" sid="2649951405281953" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\2Arms_Hit\000.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\2Arms_Hit\001.png" />
+                    </animation>
+                    <animation framecount="5" loop="0" name="1Arm_Walk" pingpong="0" repeatcount="1" repeatto="0" sid="1911614271971235" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\1Arm_Walk\000.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\1Arm_Walk\001.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\1Arm_Walk\002.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\1Arm_Walk\003.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\1Arm_Walk\004.png" />
+                    </animation>
+                    <animation framecount="4" loop="0" name="1Arm_Shoot" pingpong="0" repeatcount="1" repeatto="0" sid="5291076271356702" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\1Arm_Shoot\000.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\1Arm_Shoot\001.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\1Arm_Shoot\002.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\1Arm_Shoot\003.png" />
+                    </animation>
+                    <animation framecount="2" loop="0" name="1Arm_Idle" pingpong="0" repeatcount="1" repeatto="0" sid="1982551008371102" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\1Arm_Idle\000.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\1Arm_Idle\001.png" />
+                    </animation>
+                    <animation framecount="2" loop="0" name="1Arm_Hit" pingpong="0" repeatcount="1" repeatto="0" sid="8024249168071725" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\1Arm_Hit\000.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\1Arm_Hit\001.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1064,22 +1119,8 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9608160429950309" speed="5">
-                        <frame duration="1" hotspotX="0.6" hotspotY="0.5" original-source="C:\Users\Sciuzza\Desktop\Project\Animations\Gunner_bullet\Default\000.png">
-                            <collision-poly>
-                                <point x="0.2" y="0.25" />
-                                <point x="0.8" y="0.25" />
-                                <point x="0.8" y="0.75" />
-                                <point x="0.2" y="0.75" />
-                            </collision-poly>
-                        </frame>
-                        <frame duration="1" hotspotX="0.6" hotspotY="0.5" original-source="C:\Users\Sciuzza\Desktop\Project\Animations\Gunner_bullet\Default\001.png">
-                            <collision-poly>
-                                <point x="0.2" y="0.25" />
-                                <point x="0.8" y="0.25" />
-                                <point x="0.8" y="0.75" />
-                                <point x="0.2" y="0.75" />
-                            </collision-poly>
-                        </frame>
+                        <frame duration="1" hotspotX="0.6" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner_bullet\Default\000.png" />
+                        <frame duration="1" hotspotX="0.6" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner_bullet\Default\001.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1098,15 +1139,33 @@
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1391804875812191" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                            <collision-poly>
-                                <point x="1" y="1" />
-                                <point x="0" y="1" />
-                                <point x="0" y="0" />
-                                <point x="1" y="0" />
-                            </collision-poly>
-                        </frame>
+                    <animation framecount="3" loop="0" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="1391804875812191" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Bat\Idle\000.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Bat\Idle\001.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Bat\Idle\002.png" />
+                    </animation>
+                    <animation framecount="2" loop="0" name="Glide" pingpong="0" repeatcount="1" repeatto="0" sid="8143721668171351" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Bat\Glide\000.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Bat\Glide\001.png" />
+                    </animation>
+                    <animation framecount="2" loop="0" name="Glide_Mouth" pingpong="0" repeatcount="1" repeatto="0" sid="6498213199597096" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Bat\Glide_Mouth\000.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Bat\Glide_Mouth\001.png" />
+                    </animation>
+                    <animation framecount="3" loop="0" name="Idle_Mouth" pingpong="0" repeatcount="1" repeatto="0" sid="6943465473516948" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Bat\Idle_Mouth\000.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Bat\Idle_Mouth\001.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Bat\Idle_Mouth\002.png" />
+                    </animation>
+                    <animation framecount="3" loop="0" name="Idle_RedEye" pingpong="0" repeatcount="1" repeatto="0" sid="11782257580549" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Bat\Idle_RedEye\000.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Bat\Idle_RedEye\001.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Bat\Idle_RedEye\002.png" />
+                    </animation>
+                    <animation framecount="3" loop="0" name="Idle_RedEye_Mouth" pingpong="0" repeatcount="1" repeatto="0" sid="6717162779573932" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Bat\Idle_RedEye_Mouth\000.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Bat\Idle_RedEye_Mouth\001.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Bat\Idle_RedEye_Mouth\002.png" />
                     </animation>
                 </animation-folder>
             </object-type>
