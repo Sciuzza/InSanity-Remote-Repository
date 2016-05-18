@@ -1020,16 +1020,21 @@
                     <instance-variable name="inRange" sid="4301067650658528" type="boolean" />
                     <instance-variable name="firerate" sid="6181547876616644" type="number" />
                     <instance-variable name="firetimer" sid="4985254399281625" type="number" />
+                    <instance-variable name="range" sid="116899821237139" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Platform" sid="1618933463262937">
                         <behavior id="Platform" />
                     </behavior-type>
-                    <behavior-type name="Timer" sid="2740580015205257">
-                        <behavior id="Timer" />
+                    <behavior-type name="LineOfSight" sid="2085716022090815">
+                        <behavior id="LOS" />
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
+                    <animation framecount="2" loop="0" name="2Arms_Idle" pingpong="0" repeatcount="1" repeatto="0" sid="1090741839800835" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\2Arms_Idle\000.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\2Arms_Idle\001.png" />
+                    </animation>
                     <animation framecount="2" loop="0" name="No_Arms_Idle" pingpong="0" repeatcount="1" repeatto="0" sid="6523740985293865" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\NoArms_Idle\000.png" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\NoArms_Idle\001.png" />
@@ -1061,10 +1066,6 @@
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\2Arms_Shoot\001.png" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\2Arms_Shoot\002.png" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\2Arms_Shoot\003.png" />
-                    </animation>
-                    <animation framecount="2" loop="0" name="2Arms_Idle" pingpong="0" repeatcount="1" repeatto="0" sid="1090741839800835" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\2Arms_Idle\000.png" />
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\2Arms_Idle\001.png" />
                     </animation>
                     <animation framecount="2" loop="0" name="2Arms_Hit" pingpong="0" repeatcount="1" repeatto="0" sid="2649951405281953" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\2Arms_Hit\000.png" />
@@ -1121,6 +1122,29 @@
                     <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9608160429950309" speed="5">
                         <frame duration="1" hotspotX="0.6" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner_bullet\Default\000.png" />
                         <frame duration="1" hotspotX="0.6" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner_bullet\Default\001.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="AngleHelper2" sid="5432840243734985">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="parent" sid="6179143422291894" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1671363332472049" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="GunnerArm2" sid="5903169294700753">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Rotation" sid="9854552778096555" type="number" />
+                    <instance-variable name="parent" sid="4603981452034134" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1127465687610747" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1242,6 +1266,90 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8495433961458674" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="WayPoint1" sid="3627281712086456">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5243129675165223" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="WayPoint2" sid="7510734875790572">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9446374597816795" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="WayPoint3" sid="4515395221080161">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1698704133412627" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="WayPoint4" sid="4743524929407931">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5288351619346837" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="WayPoint5" sid="8009993601217379">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="739587031538547" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="WayPoint6" sid="3867638613925649">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2820205902856839" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BatTrap" sid="6353498434003229">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9098667897715318" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Biter" sid="6055436314664527">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="ID_Check" sid="4871854314152081" type="number" />
+                    <instance-variable name="biterLife" sid="9879131355517693" type="number" />
+                    <instance-variable name="ShootCheck" sid="2637910725827668" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Bullet" sid="275893119324974">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1440251929555632" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Imagepoint 1" x="0.9" y="0.5" />
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BiterBack" sid="6071897470233735">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7093125492905592" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
