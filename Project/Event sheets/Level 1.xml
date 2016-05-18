@@ -929,7 +929,6 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <comment>Enemt part to be inserted</comment>
                 <event-block sid="9333919718095623">
                     <conditions>
                         <condition behavior="Timer" id="0" name="On timer" sid="5235769039464977" type="Player_Box">
