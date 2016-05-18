@@ -1368,7 +1368,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>-23</x>
-                        <y>541</y>
+                        <y>531</y>
                         <z>0</z>
                         <width>48</width>
                         <height>1080</height>
@@ -3969,10 +3969,10 @@
                         <x>-195</x>
                         <y>745</y>
                         <z>0</z>
-                        <width>8.100000381</width>
-                        <height>34.224998474</height>
+                        <width>16</width>
+                        <height>37</height>
                         <depth>0</depth>
-                        <hotspotX>0.388888896</hotspotX>
+                        <hotspotX>0.3125</hotspotX>
                         <hotspotY>0.972972989</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Level 2</name>
+    <events>
+        <include>Botola</include>
+        <include>Player</include>
+        <include>Gunner</include>
+        <include>Bat</include>
+        <event-block sid="2578436640526765">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="9020802935763986" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="9890456511206512">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="5312118513131931" type="System">
+                            <param id="0" name="Object">BotolaSeparaLivello</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="5320305941086014" type="BotolaSeparaLivello">
+                            <param id="0" name="Instance variable">PositionX</param>
+                            <param id="1" name="Value">self.X</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="7883796115041777" type="BotolaSeparaLivello">
+                            <param id="0" name="Instance variable">PositionY</param>
+                            <param id="1" name="Value">self.Y</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Botola</name>
+    <events>
+        <event-block sid="116964994274847">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="698311039767941" type="Bullet_S_Player">
+                    <param id="0" name="Object">LevaAlta</param>
+                </condition>
+                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="6284270860183199" type="BotolaSeparaLivello">
+                    <param id="0" name="Instance variable">IsPositioned</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="2490156982782495" type="Bullet_1_Player" />
+                <action id="4" name="Set animation" sid="5959524806959318" type="LevaAlta">
+                    <param id="0" name="Animation">&quot;Flipped&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="7197097244491782" type="BotolaSeparaLivello">
+                    <param id="0" name="Instance variable">IsMoving</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1043079138539274">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="9143384257291141" type="BotolaSeparaLivello">
+                    <param id="0" name="Instance variable">IsMoving</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Set Y" sid="4744849049741659" type="BotolaSeparaLivello">
+                    <param id="0" name="Y">self.Y+1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="1189467395628277">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="2410251537615811" type="System">
+                            <param id="0" name="First value">BotolaSeparaLivello.Y</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">BotolaSeparaLivello.PositionY + 1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="7708775657581248" type="BotolaSeparaLivello">
+                            <param id="0" name="Instance variable">IsMoving</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="2871344110784112">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="7186033090498521" type="BotolaSeparaLivello">
+                    <param id="0" name="Instance variable">IsMoving</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="3735001970357178" type="BotolaSeparaLivello">
+                    <param id="0" name="X">self.X+1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="4391442709362378">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="1184938184396693" type="System">
+                            <param id="0" name="First value">BotolaSeparaLivello.X</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Second value">BotolaSeparaLivello.PositionX + 134</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="4454158386252786" type="BotolaSeparaLivello">
+                            <param id="0" name="Instance variable">IsMoving</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="3366923867598309">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="8867700448680146" type="BotolaSeparaLivello">
+                    <param id="0" name="Instance variable">IsMoving</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Set Y" sid="9767033189503225" type="BotolaSeparaLivello">
+                    <param id="0" name="Y">self.Y-1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="3150874120812452">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="9326946156644305" type="System">
+                            <param id="0" name="First value">BotolaSeparaLivello.Y</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">BotolaSeparaLivello.PositionY -1 </param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="167790276018998" type="BotolaSeparaLivello">
+                            <param id="0" name="Instance variable">IsPositioned</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="3828659174962773" type="BotolaSeparaLivello">
+                            <param id="0" name="Instance variable">IsMoving</param>
+                            <param id="1" name="Value">4</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>
