@@ -844,8 +844,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>3928.280029297</x>
-                        <y>635.743896484</y>
+                        <x>3950</x>
+                        <y>635.744018555</y>
                         <z>0</z>
                         <width>162</width>
                         <height>166</height>
@@ -881,8 +881,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>4098.379882813</x>
-                        <y>635.74395752</y>
+                        <x>4120</x>
+                        <y>635.744018555</y>
                         <z>0</z>
                         <width>172</width>
                         <height>166</height>
@@ -918,14 +918,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>4300</x>
-                        <y>637</y>
+                        <x>4315</x>
+                        <y>720</y>
                         <z>0</z>
                         <width>172</width>
                         <height>166</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotY>1</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -3857,8 +3857,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>3938.914306641</x>
-                        <y>627.131347656</y>
+                        <x>3960</x>
+                        <y>627.130981445</y>
                         <z>0</z>
                         <width>145.817810059</width>
                         <height>42.699279785</height>
@@ -3887,8 +3887,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>4107.576171875</x>
-                        <y>620.978637695</y>
+                        <x>4130</x>
+                        <y>620.979003906</y>
                         <z>0</z>
                         <width>137.183761597</width>
                         <height>53.255004883</height>
@@ -3917,8 +3917,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>4309.660644531</x>
-                        <y>620.8359375</y>
+                        <x>4325</x>
+                        <y>620.835998535</y>
                         <z>0</z>
                         <width>137.184005737</width>
                         <height>53.255001068</height>
@@ -4014,7 +4014,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <Fire_Rate>1</Fire_Rate>
+                        <Fire_Rate>0.5</Fire_Rate>
                         <Cooldown>-1</Cooldown>
                         <Fire_Rate_Stun>5</Fire_Rate_Stun>
                         <Cooldown_Stun>-1</Cooldown_Stun>
@@ -4057,13 +4057,13 @@
                         <Stun_Ability>false</Stun_Ability>
                         <Life>5</Life>
                         <Checkpoint>0</Checkpoint>
-                        <Jump_Is_On>false</Jump_Is_On>
-                        <Dash_Is_On>false</Dash_Is_On>
+                        <Jump_Is_On>true</Jump_Is_On>
+                        <Dash_Is_On>true</Dash_Is_On>
                         <Side_Movement_Is_On>true</Side_Movement_Is_On>
-                        <Weapon_Is_On>false</Weapon_Is_On>
+                        <Weapon_Is_On>true</Weapon_Is_On>
                         <Mouse_Look_Is_On>true</Mouse_Look_Is_On>
-                        <Stun_Is_On>false</Stun_Is_On>
-                        <Level_1_Phases>6</Level_1_Phases>
+                        <Stun_Is_On>true</Stun_Is_On>
+                        <Level_1_Phases>0</Level_1_Phases>
                         <First_Phase_Triggered>false</First_Phase_Triggered>
                         <Bridge_Destroyed>false</Bridge_Destroyed>
                     </instance-variables>
@@ -4088,8 +4088,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>2852</x>
-                        <y>564</y>
+                        <x>77</x>
+                        <y>606</y>
                         <z>0</z>
                         <width>11.636363983</width>
                         <height>36</height>
@@ -4385,13 +4385,94 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Tutorial" uid="316">
+                <instance type="HudText" uid="1488">
                     <properties>
                         <text>Text</text>
                         <initial-visibility>Invisible</initial-visibility>
-                        <font>Arial,-11,400,0</font>
+                        <font>Courier,-27,400,0</font>
                         <color>255,255,255</color>
-                        <horizontal-alignment>Left</horizontal-alignment>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Top</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>Yes</active-at-start>
+                                <fade-in-time>0</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>3</fade-out-time>
+                                <destroy>No</destroy>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Anchor">
+                            <properties>
+                                <left-edge>None</left-edge>
+                                <top-edge>Window top</top-edge>
+                                <right-edge>None</right-edge>
+                                <bottom-edge>None</bottom-edge>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>0</x>
+                        <y>-219</y>
+                        <z>0</z>
+                        <width>321</width>
+                        <height>156</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="BackGround_Hud_Text" uid="1489">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>No</active-at-start>
+                                <fade-in-time>0</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>3</fade-out-time>
+                                <destroy>No</destroy>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-396</x>
+                        <y>52</y>
+                        <z>0</z>
+                        <width>321</width>
+                        <height>156</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Tutorial" uid="316">
+                    <properties>
+                        <text>Text</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Courier,-20,400,0</font>
+                        <color>255,255,255</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
                         <hotspot>Top-left</hotspot>
                         <wrapping>Word</wrapping>
@@ -4404,7 +4485,7 @@
                         <behavior-instance type="Timer" />
                         <behavior-instance type="Anchor">
                             <properties>
-                                <left-edge>Window left</left-edge>
+                                <left-edge>None</left-edge>
                                 <top-edge>Window top</top-edge>
                                 <right-edge>None</right-edge>
                                 <bottom-edge>None</bottom-edge>
@@ -4416,7 +4497,7 @@
                                 <active-at-start>No</active-at-start>
                                 <fade-in-time>0</fade-in-time>
                                 <wait-time>0</wait-time>
-                                <fade-out-time>0.3</fade-out-time>
+                                <fade-out-time>3</fade-out-time>
                                 <destroy>No</destroy>
                             </properties>
                         </behavior-instance>
@@ -4424,11 +4505,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>0</x>
-                        <y>0</y>
+                        <x>79.5</x>
+                        <y>5</y>
                         <z>0</z>
-                        <width>319</width>
-                        <height>85</height>
+                        <width>321</width>
+                        <height>156</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
