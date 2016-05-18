@@ -38,8 +38,8 @@
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
     <window-size>
-        <width>320</width>
-        <height>240</height>
+        <width>480</width>
+        <height>360</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
@@ -484,6 +484,11 @@
             </object-type>
             <object-type name="ponteBlocco2" sid="4253820159358168">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Sine" sid="1668719326838326">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3249942111523638" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_21\Downloads\Elementi_livello-2016-05-12\Elementi livello\ponte - blocco 3.png">
@@ -521,6 +526,11 @@
             </object-type>
             <object-type name="ponteBlocco3" sid="5549862846425074">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Sine" sid="3796943286619258">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="927534724302376" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_21\Downloads\Elementi_livello-2016-05-12\Elementi livello\ponte - blocco 4.png">
@@ -844,6 +854,29 @@
                                 <point x="0.49848" y="0.93617" />
                                 <point x="0.528875" y="0.629787" />
                                 <point x="0.121581" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="ponteBlocco4" sid="7294078956027025">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Sine" sid="4573191561738123">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="547651346955857" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_21\Downloads\Elementi_livello-2016-05-12\Elementi livello\ponte - blocco 3.png">
+                            <collision-poly>
+                                <point x="0.145349" y="0.150602" />
+                                <point x="0.5" y="0.0843373" />
+                                <point x="0.866279" y="0.138554" />
+                                <point x="0.936047" y="0.5" />
+                                <point x="0.5" y="1" />
+                                <point x="0.145349" y="0.849398" />
+                                <point x="0.180233" y="0.5" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -1316,6 +1349,7 @@
                     <instance-variable name="Stun_Is_On" sid="5933630748220251" type="boolean" />
                     <instance-variable name="Level_1_Phases" sid="3744297378801938" type="number" />
                     <instance-variable name="First_Phase_Triggered" sid="9708494785123097" type="boolean" />
+                    <instance-variable name="Bridge_Destroyed" sid="7716916467687827" type="boolean" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Platform" sid="2921180046897222">
@@ -1431,12 +1465,12 @@
                                 <point x="0.345588" y="0.960526" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Sciuzza\Desktop\Project\Animations\Player_Frame\WalkingBack\003.png">
+                        <frame duration="1" hotspotX="0.473684" hotspotY="0.973684" original-source="C:\Users\Sciuzza\Desktop\Project\Animations\Player_Frame\WalkingBack\003.png">
                             <collision-poly>
-                                <point x="0.55625" y="0.109375" />
-                                <point x="0.709375" y="0.13125" />
-                                <point x="0.696875" y="0.978125" />
-                                <point x="0.4" y="0.828125" />
+                                <point x="0.592105" y="0.0361842" />
+                                <point x="0.914474" y="0.0592105" />
+                                <point x="0.888158" y="0.950658" />
+                                <point x="0.263158" y="0.792763" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -1641,16 +1675,83 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="PonteBlocco_Destr_Obj" sid="894440774205366">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="9066264298075833">
+                        <behavior id="solid" />
+                    </behavior-type>
+                    <behavior-type name="Pin" sid="2226068989278778">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2738616643450799" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="PonteBlocco_Destr_Obj2" sid="564212627127924">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="8894452818352834">
+                        <behavior id="solid" />
+                    </behavior-type>
+                    <behavior-type name="Pin" sid="8916343218531466">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3590569493758575" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="PonteBlocco_Destr_Obj3" sid="8622209082434571">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="240975748295101">
+                        <behavior id="solid" />
+                    </behavior-type>
+                    <behavior-type name="Pin" sid="9708785122012356">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1195318526140695" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="PonteBlocco_Destr_Obj4" sid="3546625508899789">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="7035305102025248">
+                        <behavior id="solid" />
+                    </behavior-type>
+                    <behavior-type name="Pin" sid="6316254517571346">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9194373511496332" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Special Objects">
             <object-type name="chiesaCampanaPiccola" sid="5588226861564504">
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable name="Right_Order" sid="2371442772404931" type="boolean" />
+                    <instance-variable name="Vibrating" sid="1901996825185263" type="boolean" />
+                    <instance-variable name="To_The_Right" sid="7596527548337185" type="boolean" />
+                    <instance-variable name="To_The_Left" sid="7835727563198539" type="boolean" />
                 </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6889431733249155" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_21\Downloads\Elementi_livello-2016-05-12\Elementi livello\chiesa - campana piccola.png">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\Users\dbga_21\Downloads\Elementi_livello-2016-05-12\Elementi livello\chiesa - campana piccola.png">
                             <collision-poly>
                                 <point x="0.416667" y="0.208333" />
                                 <point x="0.5" y="0" />
@@ -1671,7 +1772,7 @@
                 </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9937090292159006" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_21\Downloads\Elementi_livello-2016-05-12\Elementi livello\chiesa - campana piccola.png">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.770833" original-source="C:\Users\dbga_21\Downloads\Elementi_livello-2016-05-12\Elementi livello\chiesa - campana piccola.png">
                             <collision-poly>
                                 <point x="0.416667" y="0.208333" />
                                 <point x="0.5" y="0" />
@@ -1692,7 +1793,7 @@
                 </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8156685717416747" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_21\Downloads\Elementi_livello-2016-05-12\Elementi livello\chiesa - campana piccola.png">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.770833" original-source="C:\Users\dbga_21\Downloads\Elementi_livello-2016-05-12\Elementi livello\chiesa - campana piccola.png">
                             <collision-poly>
                                 <point x="0.416667" y="0.208333" />
                                 <point x="0.5" y="0" />
@@ -1713,7 +1814,7 @@
                 </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="822008896869922" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_21\Downloads\Elementi_livello-2016-05-12\Elementi livello\chiesa - campana piccola.png">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.770833" original-source="C:\Users\dbga_21\Downloads\Elementi_livello-2016-05-12\Elementi livello\chiesa - campana piccola.png">
                             <collision-poly>
                                 <point x="0.416667" y="0.208333" />
                                 <point x="0.5" y="0" />
@@ -1736,7 +1837,7 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1882433832567976" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_21\Downloads\Elementi_livello-2016-05-12\Elementi livello\chiesa - campana grande.png">
+                        <frame duration="1" hotspotX="0.517241" hotspotY="0.8" original-source="C:\Users\dbga_21\Downloads\Elementi_livello-2016-05-12\Elementi livello\chiesa - campana grande.png">
                             <collision-poly>
                                 <point x="0.413793" y="0.24" />
                                 <point x="0.5" y="0" />
@@ -1909,18 +2010,7 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7355461057395705" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Desktop\Project\Animations\pietraDaRompereDopoChiesa\Default\000.png">
-                            <collision-poly>
-                                <point x="0.258065" y="0.121212" />
-                                <point x="0.5" y="0.0151515" />
-                                <point x="0.741935" y="0.121212" />
-                                <point x="0.790323" y="0.5" />
-                                <point x="0.887097" y="0.94697" />
-                                <point x="0.5" y="0.992424" />
-                                <point x="0.129032" y="0.939394" />
-                                <point x="0.0967742" y="0.5" />
-                            </collision-poly>
-                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Desktop\Project\Animations\pietraDaRompereDopoChiesa\Default\000.png" />
                     </animation>
                 </animation-folder>
             </object-type>

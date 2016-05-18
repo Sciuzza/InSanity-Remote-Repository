@@ -218,14 +218,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1949.672363281</x>
-                        <y>187.518615723</y>
+                        <x>1949.67199707</x>
+                        <y>205</y>
                         <z>0</z>
                         <width>24</width>
                         <height>48</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotY>0.770833313</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -243,14 +243,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>2031.868896484</x>
-                        <y>189.556365967</y>
+                        <x>2031.869018555</x>
+                        <y>205</y>
                         <z>0</z>
                         <width>24</width>
                         <height>48</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotY>0.770833313</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -268,14 +268,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>2106.131835938</x>
-                        <y>282.306762695</y>
+                        <x>2106.132080078</x>
+                        <y>293</y>
                         <z>0</z>
                         <width>24</width>
                         <height>48</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotY>0.770833313</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -493,50 +493,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ponteBlocco2" uid="34">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>4283</x>
-                        <y>637</y>
-                        <z>0</z>
-                        <width>172</width>
-                        <height>166</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="ponteBlocco3" uid="35">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>4457</x>
-                        <y>637</y>
-                        <z>0</z>
-                        <width>162</width>
-                        <height>166</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="salita2" uid="36">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -660,14 +616,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1991.081542969</x>
-                        <y>397.704193115</y>
+                        <x>1991.08203125</x>
+                        <y>420</y>
                         <z>0</z>
                         <width>58</width>
                         <height>100</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.517241359</hotspotX>
+                        <hotspotY>0.800000012</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -844,18 +800,21 @@
                     </properties>
                     <instance-variables>
                         <Right_Order>false</Right_Order>
+                        <Vibrating>false</Vibrating>
+                        <To_The_Right>false</To_The_Right>
+                        <To_The_Left>false</To_The_Left>
                     </instance-variables>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>1879.899047852</x>
-                        <y>283.93737793</y>
+                        <y>258</y>
                         <z>0</z>
                         <width>24</width>
                         <height>48</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -867,6 +826,21 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Horizontal</movement>
+                                <wave>Sine</wave>
+                                <period>0.5</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>5</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -889,11 +863,63 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Horizontal</movement>
+                                <wave>Sine</wave>
+                                <period>0.5</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>5</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>4098.379882813</x>
                         <y>635.74395752</y>
+                        <z>0</z>
+                        <width>172</width>
+                        <height>166</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="ponteBlocco4" uid="61">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Sine">
+                            <properties>
+                                <active-on-start>Yes</active-on-start>
+                                <movement>Horizontal</movement>
+                                <wave>Sine</wave>
+                                <period>0.5</period>
+                                <period-random>0</period-random>
+                                <period-offset>0</period-offset>
+                                <period-offset-random>0</period-offset-random>
+                                <magnitude>5</magnitude>
+                                <magnitude-random>0</magnitude-random>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>4300</x>
+                        <y>637</y>
                         <z>0</z>
                         <width>172</width>
                         <height>166</height>
@@ -2122,66 +2148,6 @@
                         <opacity>0.5</opacity>
                     </world>
                 </instance>
-                <instance type="SolidObjects" uid="60">
-                    <properties>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Solid">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Pin" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>4288.427734375</x>
-                        <y>621.832092285</y>
-                        <z>0</z>
-                        <width>145</width>
-                        <height>57</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0.131258592</angle>
-                        <opacity>0.5</opacity>
-                    </world>
-                </instance>
-                <instance type="SolidObjects" uid="61">
-                    <properties>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Solid">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Pin" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>4464.9921875</x>
-                        <y>631.874755859</y>
-                        <z>0</z>
-                        <width>147</width>
-                        <height>57</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>-0.125518605</angle>
-                        <opacity>0.5</opacity>
-                    </world>
-                </instance>
                 <instance type="SolidObjects" uid="62">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
@@ -3034,66 +3000,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="SolidObjects" uid="323">
-                    <properties>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Solid">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Pin" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>3935.139892578</x>
-                        <y>627.350769043</y>
-                        <z>0</z>
-                        <width>145</width>
-                        <height>57</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>-0.129516989</angle>
-                        <opacity>0.5</opacity>
-                    </world>
-                </instance>
-                <instance type="SolidObjects" uid="324">
-                    <properties>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Solid">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Pin" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>4108.305664063</x>
-                        <y>617.436035156</y>
-                        <z>0</z>
-                        <width>145</width>
-                        <height>57</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0.131258592</angle>
-                        <opacity>0.5</opacity>
-                    </world>
-                </instance>
                 <instance type="SolidObjects" uid="325">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
@@ -3112,8 +3018,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>3578</x>
-                        <y>600</y>
+                        <x>3537</x>
+                        <y>1131</y>
                         <z>0</z>
                         <width>353</width>
                         <height>41</height>
@@ -3869,7 +3775,7 @@
                     <properties>
                         <text>Text</text>
                         <initial-visibility>Invisible</initial-visibility>
-                        <font>Arial,-16</font>
+                        <font>Courier,-16,400,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Top</vertical-alignment>
@@ -3901,6 +3807,126 @@
                         <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="PonteBlocco_Destr_Obj" uid="35">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>3578</x>
+                        <y>600</y>
+                        <z>0</z>
+                        <width>353</width>
+                        <height>41</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0.5</opacity>
+                    </world>
+                </instance>
+                <instance type="PonteBlocco_Destr_Obj3" uid="34">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>3938.914306641</x>
+                        <y>627.131347656</y>
+                        <z>0</z>
+                        <width>145.817810059</width>
+                        <height>42.699279785</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>-0.145028681</angle>
+                        <opacity>0.5</opacity>
+                    </world>
+                </instance>
+                <instance type="PonteBlocco_Destr_Obj2" uid="60">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>4107.576171875</x>
+                        <y>620.978637695</y>
+                        <z>0</z>
+                        <width>137.183761597</width>
+                        <height>53.255004883</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0.100975752</angle>
+                        <opacity>0.5</opacity>
+                    </world>
+                </instance>
+                <instance type="PonteBlocco_Destr_Obj4" uid="83">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>4309.660644531</x>
+                        <y>620.8359375</y>
+                        <z>0</z>
+                        <width>137.184005737</width>
+                        <height>53.255001068</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0.100967295</angle>
+                        <opacity>0.5</opacity>
                     </world>
                 </instance>
             </instances>
@@ -4037,8 +4063,9 @@
                         <Weapon_Is_On>false</Weapon_Is_On>
                         <Mouse_Look_Is_On>true</Mouse_Look_Is_On>
                         <Stun_Is_On>false</Stun_Is_On>
-                        <Level_1_Phases>0</Level_1_Phases>
+                        <Level_1_Phases>6</Level_1_Phases>
                         <First_Phase_Triggered>false</First_Phase_Triggered>
+                        <Bridge_Destroyed>false</Bridge_Destroyed>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -4061,8 +4088,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>73</x>
-                        <y>620</y>
+                        <x>2852</x>
+                        <y>564</y>
                         <z>0</z>
                         <width>11.636363983</width>
                         <height>36</height>

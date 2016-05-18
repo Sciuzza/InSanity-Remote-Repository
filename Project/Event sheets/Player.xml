@@ -752,7 +752,7 @@
                                             <param id="1" name="Value">0</param>
                                         </action>
                                         <action behavior="Timer" id="0" name="Start timer" sid="7627492042056812" type="Player_Box">
-                                            <param id="0" name="Duration">0.5</param>
+                                            <param id="0" name="Duration">0.3</param>
                                             <param id="1" name="Type">0</param>
                                             <param id="2" name="Tag">&quot;Stun Charging&quot;</param>
                                         </action>
@@ -965,7 +965,7 @@
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block disabled="1" sid="5475296757625984">
+                        <event-block sid="5475296757625984">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="4163083271595153" type="Player_Box">
                                     <param id="0" name="Instance variable">Checkpoint</param>
@@ -974,19 +974,36 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-46" name="Recreate initial objects" sid="7918068000632183" type="System">
-                                    <param id="0" name="Object">ponteBlocco</param>
-                                    <param id="1" name="From X">3398</param>
-                                    <param id="2" name="From Y">500</param>
-                                    <param id="3" name="To X">3760</param>
-                                    <param id="4" name="To Y">900</param>
+                                <action id="-9" name="Destroy" sid="8939835986931185" type="ponteBlocco" />
+                                <action id="-9" name="Destroy" sid="8746962245135526" type="PonteBlocco_Destr_Obj" />
+                                <action id="-9" name="Destroy" sid="8313868994428711" type="ponteBlocco2" />
+                                <action id="-9" name="Destroy" sid="3390033473643687" type="PonteBlocco_Destr_Obj2" />
+                                <action id="-9" name="Destroy" sid="7532389099200429" type="ponteBlocco3" />
+                                <action id="-9" name="Destroy" sid="6310543535336768" type="PonteBlocco_Destr_Obj3" />
+                                <action id="-9" name="Destroy" sid="9812858227628601" type="ponteBlocco4" />
+                                <action id="-9" name="Destroy" sid="1182946002389689" type="PonteBlocco_Destr_Obj4" />
+                                <action id="-13" name="Set boolean" sid="6982624348464399" type="Player_Box">
+                                    <param id="0" name="Instance variable">Bridge_Destroyed</param>
+                                    <param id="1" name="Value">0</param>
                                 </action>
-                                <action id="-46" name="Recreate initial objects" sid="8084637369920163" type="System">
-                                    <param id="0" name="Object">SolidObjects</param>
-                                    <param id="1" name="From X">3402</param>
-                                    <param id="2" name="From Y">500</param>
-                                    <param id="3" name="To X">3754</param>
-                                    <param id="4" name="To Y">637</param>
+                                <action id="-10" name="Set value" sid="2352825085310025" type="Player_Box">
+                                    <param id="0" name="Instance variable">Level_1_Phases</param>
+                                    <param id="1" name="Value">6</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="37447001291617" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="1450656618791052" type="System">
+                                    <param id="0" name="Object to create">ponteBlocco</param>
+                                    <param id="1" name="Layer">&quot;Background&quot;</param>
+                                    <param id="2" name="X">3578</param>
+                                    <param id="3" name="Y">637</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="4316301597899985" type="System">
+                                    <param id="0" name="Object to create">PonteBlocco_Destr_Obj</param>
+                                    <param id="1" name="Layer">&quot;Background&quot;</param>
+                                    <param id="2" name="X">3578</param>
+                                    <param id="3" name="Y">600</param>
                                 </action>
                             </actions>
                         </event-block>

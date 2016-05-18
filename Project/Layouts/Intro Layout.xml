@@ -627,6 +627,7 @@
                         <Stun_Is_On>false</Stun_Is_On>
                         <Level_1_Phases>0</Level_1_Phases>
                         <First_Phase_Triggered>false</First_Phase_Triggered>
+                        <Bridge_Destroyed>false</Bridge_Destroyed>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -650,10 +651,32 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>103</x>
-                        <y>232</y>
+                        <y>221</y>
                         <z>0</z>
                         <width>11.636363983</width>
                         <height>36</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Player_Frame" uid="82">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>40.607025146</x>
+                        <y>-25.916748047</y>
+                        <z>0</z>
+                        <width>18</width>
+                        <height>37</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>1</hotspotY>
@@ -825,28 +848,6 @@
                         <depth>0</depth>
                         <hotspotX>0.600000024</hotspotX>
                         <hotspotY>0.600000024</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Player_Frame" uid="82">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>40.607025146</x>
-                        <y>-25.916748047</y>
-                        <z>0</z>
-                        <width>18</width>
-                        <height>37</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>1</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

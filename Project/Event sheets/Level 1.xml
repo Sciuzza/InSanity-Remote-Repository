@@ -89,6 +89,11 @@
                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="1254316597314672" type="Player_Box">
                             <param id="0" name="Instance variable">First_Phase_Triggered</param>
                         </condition>
+                        <condition id="-7" name="Compare instance variable" sid="8564119952314786" type="Player_Box">
+                            <param id="0" name="Instance variable">Level_1_Phases</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
                         <condition id="-4" name="Trigger once while true" sid="3442383486626414" type="System" />
                     </conditions>
                     <actions>
@@ -353,6 +358,15 @@
                                     <param id="0" name="Collisions">0</param>
                                 </action>
                                 <action id="-9" name="Destroy" sid="7043564264926886" type="Bullet_1_Player" />
+                                <action id="-13" name="Set boolean" sid="1552613784955339" type="chiesaCampanaPiccola">
+                                    <param id="0" name="Instance variable">Vibrating</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action behavior="Timer" id="0" name="Start timer" sid="4074511051578363" type="Player_Box">
+                                    <param id="0" name="Duration">4</param>
+                                    <param id="1" name="Type">0</param>
+                                    <param id="2" name="Tag">&quot;Bell 1 Vibrating&quot;</param>
+                                </action>
                             </actions>
                             <sub-events>
                                 <event-block sid="3611849329446366">
@@ -375,6 +389,89 @@
                                     </actions>
                                 </event-block>
                             </sub-events>
+                        </event-block>
+                        <event-block sid="3158305957455762">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="16483723996739" type="chiesaCampanaPiccola">
+                                    <param id="0" name="Instance variable">Vibrating</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-18" name="Rotate clockwise" sid="6525244118583348" type="chiesaCampanaPiccola">
+                                    <param id="0" name="Degrees">45*dt</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="7158787933885467">
+                                    <conditions>
+                                        <condition id="-11" name="Is within angle" sid="1819666401576377" type="chiesaCampanaPiccola">
+                                            <param id="0" name="Within">0.5</param>
+                                            <param id="1" name="Angle"> 45</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="4487430994751125" type="chiesaCampanaPiccola">
+                                            <param id="0" name="Instance variable">To_The_Right</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="2165927433125454">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="3312995269383993" type="chiesaCampanaPiccola">
+                                            <param id="0" name="Instance variable">To_The_Right</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-18" name="Rotate clockwise" sid="4312250634213449" type="chiesaCampanaPiccola">
+                                            <param id="0" name="Degrees">(-90)*(dt)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="5605906386943758">
+                                    <conditions>
+                                        <condition id="-11" name="Is within angle" sid="2427978504007973" type="chiesaCampanaPiccola">
+                                            <param id="0" name="Within">0.5</param>
+                                            <param id="1" name="Angle"> -45</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="2865576496518846" type="chiesaCampanaPiccola">
+                                            <param id="0" name="Instance variable">To_The_Left</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="1551974057311672" type="chiesaCampanaPiccola">
+                                            <param id="0" name="Instance variable">To_The_Right</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="7272791569014034">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="561057149135436" type="chiesaCampanaPiccola">
+                                            <param id="0" name="Instance variable">To_The_Left</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-18" name="Rotate clockwise" sid="1236211424750133" type="chiesaCampanaPiccola">
+                                            <param id="0" name="Degrees">45*dt</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="4493593028511676">
+                            <conditions>
+                                <condition behavior="Timer" id="0" name="On timer" sid="7062682321542473" type="Player_Box">
+                                    <param id="0" name="Tag">&quot;Bell 1 Vibrating&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="7474542249241352" type="chiesaCampanaPiccola">
+                                    <param id="0" name="Instance variable">Vibrating</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
                         </event-block>
                         <event-block sid="2174056306152117">
                             <conditions>
@@ -748,88 +845,83 @@
                         <action id="-9" name="Destroy" sid="5690685706891599" type="DestructibleObject" />
                     </actions>
                 </event-block>
-                <event-block sid="1070635653222303">
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="6642791773137268" title="Phase 7 = The Bridge">
+            <sub-events>
+                <event-block sid="8139600812960505">
                     <conditions>
-                        <condition id="-8" name="Compare two values" sid="4095572668079447" type="System">
+                        <condition id="-8" name="Compare two values" sid="6387970449180671" type="System">
                             <param id="0" name="First value">Player_Box.X</param>
                             <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Second value">3450</param>
+                            <param id="2" name="Second value">3250</param>
                         </condition>
-                        <condition id="-4" name="Trigger once while true" sid="5541335047323281" type="System" />
+                        <condition id="-4" name="Trigger once while true" sid="1188869613030785" type="System" />
                     </conditions>
                     <actions>
-                        <action behavior="ScrollTo" id="0" name="Shake" sid="8109954596909758" type="Camera">
+                        <action behavior="ScrollTo" id="0" name="Shake" sid="9462775308596027" type="Camera">
                             <param id="0" name="Magnitude">10</param>
                             <param id="1" name="Duration">2</param>
                             <param id="2" name="Mode">0</param>
                         </action>
-                        <action behavior="Timer" id="0" name="Start timer" sid="5228261818903584" type="Player_Box">
+                        <action behavior="Timer" id="0" name="Start timer" sid="5845396456506054" type="Player_Box">
                             <param id="0" name="Duration">2</param>
                             <param id="1" name="Type">0</param>
                             <param id="2" name="Tag">&quot;Bridge Going Down&quot;</param>
                         </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="504972376477394" type="PonteBlocco_Destr_Obj">
+                            <param id="0" name="Pin to">ponteBlocco</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
                     </actions>
                     <sub-events>
-                        <event-block sid="1582976988321524">
+                        <event-block sid="5810242018233803">
                             <conditions>
-                                <condition id="-14" name="Pick by unique ID" sid="8288694485050762" type="lampione4">
+                                <condition id="-14" name="Pick by unique ID" sid="1169644508726371" type="lampione4">
                                     <param id="0" name="Unique ID">265</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="Pin" id="0" name="Pin to object" sid="6197188213990176" type="lampione4">
+                                <action behavior="Pin" id="0" name="Pin to object" sid="4334764587697901" type="lampione4">
                                     <param id="0" name="Pin to">ponteBlocco</param>
                                     <param id="1" name="Mode">0</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="2347783028880935">
+                        <event-block sid="3950156988886253">
                             <conditions>
-                                <condition id="-14" name="Pick by unique ID" sid="5217232924498811" type="lampione5">
+                                <condition id="-14" name="Pick by unique ID" sid="8219445861313341" type="lampione5">
                                     <param id="0" name="Unique ID">105</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="Pin" id="0" name="Pin to object" sid="7966547104104024" type="lampione5">
+                                <action behavior="Pin" id="0" name="Pin to object" sid="7434606336964079" type="lampione5">
                                     <param id="0" name="Pin to">ponteBlocco</param>
                                     <param id="1" name="Mode">0</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="7363146180273202">
+                        <event-block sid="8026033763768108">
                             <conditions>
-                                <condition id="-14" name="Pick by unique ID" sid="36156271932562" type="lampione5">
+                                <condition id="-14" name="Pick by unique ID" sid="8439643835503933" type="lampione5">
                                     <param id="0" name="Unique ID">267</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="Pin" id="0" name="Pin to object" sid="2162789782367293" type="lampione5">
+                                <action behavior="Pin" id="0" name="Pin to object" sid="3046580023279124" type="lampione5">
                                     <param id="0" name="Pin to">ponteBlocco</param>
                                     <param id="1" name="Mode">0</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="1665000028717062">
+                        <event-block sid="1168904752530928">
                             <conditions>
-                                <condition id="-14" name="Pick by unique ID" sid="8793257113345777" type="lampione2">
+                                <condition id="-14" name="Pick by unique ID" sid="136617568309142" type="lampione2">
                                     <param id="0" name="Unique ID">106</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="Pin" id="0" name="Pin to object" sid="8668723344074462" type="lampione2">
-                                    <param id="0" name="Pin to">ponteBlocco</param>
-                                    <param id="1" name="Mode">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="2436193243841795">
-                            <conditions>
-                                <condition id="-14" name="Pick by unique ID" sid="5380324172093246" type="SolidObjects">
-                                    <param id="0" name="Unique ID">325</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Pin" id="0" name="Pin to object" sid="1121630571919896" type="SolidObjects">
+                                <action behavior="Pin" id="0" name="Pin to object" sid="3202749631626814" type="lampione2">
                                     <param id="0" name="Pin to">ponteBlocco</param>
                                     <param id="1" name="Mode">0</param>
                                 </action>
@@ -837,10 +929,6 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-            </sub-events>
-        </event-group>
-        <event-group description="" sid="6642791773137268" title="Phase 7 = The Bridge">
-            <sub-events>
                 <comment>Enemt part to be inserted</comment>
                 <event-block sid="9333919718095623">
                     <conditions>
@@ -861,6 +949,20 @@
                             <param id="0" name="Instance variable">Level_1_Phases</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">7</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="6258099084609009" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="3266155231411787" type="Player_Box">
+                            <param id="0" name="Instance variable">Bridge_Destroyed</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4732334730975914">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="1591079402956214" type="Player_Box">
+                            <param id="0" name="Instance variable">Bridge_Destroyed</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -884,6 +986,7 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="4458984927638834" type="ponteBlocco" />
+                        <action id="-9" name="Destroy" sid="5610704984418875" type="PonteBlocco_Destr_Obj" />
                     </actions>
                     <sub-events>
                         <event-block sid="9913278867171458">
@@ -926,17 +1029,104 @@
                                 <action id="-9" name="Destroy" sid="2920438093033534" type="lampione2" />
                             </actions>
                         </event-block>
-                        <event-block sid="4381984431780026">
-                            <conditions>
-                                <condition id="-14" name="Pick by unique ID" sid="6773733941894097" type="SolidObjects">
-                                    <param id="0" name="Unique ID">325</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Destroy" sid="5610704984418875" type="SolidObjects" />
-                            </actions>
-                        </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="1070635653222303">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="4095572668079447" type="System">
+                            <param id="0" name="First value">Player_Box.X</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">3790</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="5541335047323281" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="ScrollTo" id="0" name="Shake" sid="8109954596909758" type="Camera">
+                            <param id="0" name="Magnitude">10</param>
+                            <param id="1" name="Duration">2</param>
+                            <param id="2" name="Mode">0</param>
+                        </action>
+                        <action behavior="Timer" id="0" name="Start timer" sid="5228261818903584" type="Player_Box">
+                            <param id="0" name="Duration">2</param>
+                            <param id="1" name="Type">0</param>
+                            <param id="2" name="Tag">&quot;Bridges Going Down&quot;</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="1121630571919896" type="PonteBlocco_Destr_Obj3">
+                            <param id="0" name="Pin to">ponteBlocco3</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="2068709702676931" type="PonteBlocco_Destr_Obj2">
+                            <param id="0" name="Pin to">ponteBlocco2</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="1435416796376023" type="PonteBlocco_Destr_Obj4">
+                            <param id="0" name="Pin to">ponteBlocco4</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2872133002733097">
+                    <conditions>
+                        <condition behavior="Timer" id="0" name="On timer" sid="542117463822487" type="Player_Box">
+                            <param id="0" name="Tag">&quot;Bridges Going Down&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" sid="3349993493630248" type="Player_Box">
+                            <param id="0" name="Instance variable">Level_1_Phases</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9364353099092836">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="3203677082501487" type="Player_Box">
+                            <param id="0" name="Instance variable">Level_1_Phases</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">8</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Sine" id="0" name="Set active" sid="5653203702050924" type="ponteBlocco2">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="6798531818923953" type="ponteBlocco2">
+                            <param id="0" name="X">Self.X</param>
+                            <param id="1" name="Y">Self.Y + 30*dt</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="1946448325182299" type="ponteBlocco3">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="502981478152693" type="ponteBlocco3">
+                            <param id="0" name="X">Self.X</param>
+                            <param id="1" name="Y">Self.Y + 30*dt</param>
+                        </action>
+                        <action behavior="Sine" id="0" name="Set active" sid="5797267806494191" type="ponteBlocco4">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="6292126373314376" type="ponteBlocco4">
+                            <param id="0" name="X">Self.X</param>
+                            <param id="1" name="Y">Self.Y + 30*dt</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="9031844093396298">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="1620238366672429" type="System">
+                            <param id="0" name="First value">ponteBlocco.Y</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Second value">806</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="4540745855488827" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="262481461810364" type="ponteBlocco" />
+                        <action id="-9" name="Destroy" sid="1400181846298694" type="PonteBlocco_Destr_Obj" />
+                        <action id="-13" name="Set boolean" sid="866385462612748" type="Player_Box">
+                            <param id="0" name="Instance variable">Bridge_Destroyed</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
@@ -1168,7 +1358,7 @@
                         <condition id="-7" name="Compare instance variable" sid="7932973676914356" type="Player_Box">
                             <param id="0" name="Instance variable">Level_1_Phases</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">8</param>
+                            <param id="2" name="Value">9</param>
                         </condition>
                         <condition id="-4" name="Trigger once while true" sid="7836231014735898" type="System" />
                     </conditions>
