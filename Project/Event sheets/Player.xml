@@ -479,6 +479,63 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="6786048163379708">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="1260082178508563" type="Bat">
+                            <param id="0" name="Object">Player_Frame</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="1731329656662895" type="Player_Frame">
+                            <param id="0" name="Animation">&quot;Hit&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5940283560768445">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="8962151361478888" type="GunnerBullet">
+                            <param id="0" name="Object">Player_Frame</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="6876739936310323" type="Player_Frame">
+                            <param id="0" name="Animation">&quot;Hit&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="2838035921892383">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="2715556077393357" type="Player_Box">
+                            <param id="0" name="Object">Death</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="2710739051634761" type="Player_Box">
+                            <param id="0" name="Instance variable">Life</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="1080339070587323" type="Player_Frame">
+                            <param id="0" name="Animation">&quot;Dying&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2358804934668">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="5760780096663513" type="Player_Frame">
+                            <param id="0" name="Animation">&quot;Dying&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="3640173652236117" type="Player_Frame">
+                            <param id="0" name="Animation">&quot;Dead&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="2445809030387704" title="Defensive System">
@@ -895,14 +952,11 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="4064749475666615">
+                <event-block sid="847422302875697">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="2719524129036121" type="Player_Box">
-                            <param id="0" name="Instance variable">Life</param>
-                            <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Value">0</param>
+                        <condition id="4" name="On finished" sid="9645833042706791" type="Player_Frame">
+                            <param id="0" name="Animation">&quot;Dying&quot;</param>
                         </condition>
-                        <condition id="-4" name="Trigger once while true" sid="3196463836323442" type="System" />
                     </conditions>
                     <actions>
                         <action id="0" name="Call function" sid="9478600158476952" type="Function">

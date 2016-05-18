@@ -748,11 +748,6 @@
                         <action id="-9" name="Destroy" sid="5690685706891599" type="DestructibleObject" />
                     </actions>
                 </event-block>
-            </sub-events>
-        </event-group>
-        <event-group description="" sid="6642791773137268" title="Phase 7 = The Bridge">
-            <sub-events>
-                <comment>Enemt part to be inserted</comment>
                 <event-block sid="1070635653222303">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="4095572668079447" type="System">
@@ -842,6 +837,11 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="6642791773137268" title="Phase 7 = The Bridge">
+            <sub-events>
+                <comment>Enemt part to be inserted</comment>
                 <event-block sid="9333919718095623">
                     <conditions>
                         <condition behavior="Timer" id="0" name="On timer" sid="5235769039464977" type="Player_Box">
@@ -940,10 +940,26 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="1022993488234217" title="Final Phase">
+        <event-group description="" sid="1022993488234217" title="Phase 8 = The Eye Enigma">
             <sub-events>
-                <variable constant="0" name="Hours" sid="3206254877518839" static="0" type="number">0</variable>
-                <variable constant="0" name="Minutes" sid="843987332269158" static="0" type="number">0</variable>
+                <event-block sid="7496530689708356">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="3614904834455585" type="Player_Box">
+                            <param id="0" name="Instance variable">Checkpoint</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="9679689403301136" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" sid="1514366678640687" type="Player_Box">
+                            <param id="0" name="Instance variable">Level_1_Phases</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <variable constant="0" name="Hours_to_degrees" sid="3206254877518839" static="0" type="number">-1</variable>
+                <variable constant="0" name="Minutes_to_degrees" sid="843987332269158" static="0" type="number">-1</variable>
                 <event-block sid="2387766830078752">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="246989400879454" type="Bullet_1_Player">
@@ -990,21 +1006,110 @@
                         <action id="-15" name="Set visible" sid="6291199387876769" type="StunCode">
                             <param id="0" name="Visibility">1</param>
                         </action>
-                        <action id="-9" name="Set value" sid="6204726382452189" type="System">
-                            <param id="0" name="Variable">Hours</param>
-                            <param id="1" name="Value">random(1,25)</param>
+                        <action id="-10" name="Set value" sid="6204726382452189" type="Eye">
+                            <param id="0" name="Instance variable">Hours</param>
+                            <param id="1" name="Value">floor(random(0,25))</param>
                         </action>
-                        <action id="-9" name="Set value" sid="6077354966872908" type="System">
-                            <param id="0" name="Variable">Minutes</param>
-                            <param id="1" name="Value">random(0,4)</param>
+                        <action id="-10" name="Set value" sid="6077354966872908" type="Eye">
+                            <param id="0" name="Instance variable">Minutes</param>
+                            <param id="1" name="Value">floor(random(0,4))</param>
                         </action>
-                        <action disabled="1" id="0" name="Set text" sid="6260784861585804" type="StunCode">
-                            <param id="0" name="Text">Hours &amp; &quot;:&quot; &amp; MinutesContainer.At(Minutes)</param>
-                        </action>
-                        <action id="0" name="Set text" sid="6184308634157841" type="StunCode">
-                            <param id="0" name="Text">&quot;16:30&quot;</param>
+                        <action id="0" name="Set text" sid="6260784861585804" type="StunCode">
+                            <param id="0" name="Text">Eye.Hours &amp; &quot;:&quot; &amp; MinutesContainer.At(Eye.Minutes)</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="7462497895387493">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="20978137092242" type="Eye">
+                                    <param id="0" name="Instance variable">Hours</param>
+                                    <param id="1" name="Comparison">1</param>
+                                    <param id="2" name="Value">15</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="7368793964528574" type="System">
+                                    <param id="0" name="Variable">Hours_to_degrees</param>
+                                    <param id="1" name="Value">((eye.Hours  -9)*30) + 180 </param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6723462242541237">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="6467366177470729" type="Eye">
+                                    <param id="0" name="Instance variable">Hours</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">15</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="9120604698069678" type="System">
+                                    <param id="0" name="Variable">Hours_to_degrees</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9886386557960754">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="7245539461990461" type="Eye">
+                                    <param id="0" name="Instance variable">Minutes</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="2552716120567036" type="System">
+                                    <param id="0" name="Variable">Minutes_to_degrees</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8598430321872502">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="6690515834317434" type="Eye">
+                                    <param id="0" name="Instance variable">Minutes</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="854630463757664" type="System">
+                                    <param id="0" name="Variable">Minutes_to_degrees</param>
+                                    <param id="1" name="Value">90</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1372388784072123">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="6493000414776817" type="Eye">
+                                    <param id="0" name="Instance variable">Minutes</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="1732857217274217" type="System">
+                                    <param id="0" name="Variable">Minutes_to_degrees</param>
+                                    <param id="1" name="Value">180</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2311910147279842">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="9687495177751235" type="Eye">
+                                    <param id="0" name="Instance variable">Minutes</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="3052232673734687" type="System">
+                                    <param id="0" name="Variable">Minutes_to_degrees</param>
+                                    <param id="1" name="Value">270</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="8067167555361844">
                     <conditions>
@@ -1054,11 +1159,16 @@
                     <conditions>
                         <condition id="-11" name="Is within angle" sid="9421599827819908" type="orologioLancettaCorto">
                             <param id="0" name="Within">0.5</param>
-                            <param id="1" name="Angle">30</param>
+                            <param id="1" name="Angle">Hours_to_degrees</param>
                         </condition>
                         <condition id="-11" name="Is within angle" sid="3373863481988876" type="orologioLancettaLunga">
                             <param id="0" name="Within">0.5</param>
-                            <param id="1" name="Angle">180</param>
+                            <param id="1" name="Angle">Minutes_to_degrees</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="7932973676914356" type="Player_Box">
+                            <param id="0" name="Instance variable">Level_1_Phases</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">8</param>
                         </condition>
                         <condition id="-4" name="Trigger once while true" sid="7836231014735898" type="System" />
                     </conditions>
@@ -1072,6 +1182,10 @@
                         </action>
                         <action id="0" name="Set text" sid="4546511316968442" type="StunCode">
                             <param id="0" name="Text">&quot;Nice Done Duuuude&quot;</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="5088382370458116" type="Player_Box">
+                            <param id="0" name="Instance variable">Level_1_Phases</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
