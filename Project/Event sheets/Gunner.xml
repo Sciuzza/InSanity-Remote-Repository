@@ -18,7 +18,7 @@
                         <action id="0" name="Spawn another object" sid="2355832058454214" type="Gunner">
                             <param id="0" name="Object">AngleHelper2</param>
                             <param id="1" name="Layer">10</param>
-                            <param id="2" name="Image point">0</param>
+                            <param id="2" name="Image point">1</param>
                         </action>
                         <action id="-10" name="Set value" sid="4574838431621849" type="AngleHelper2">
                             <param id="0" name="Instance variable">parent</param>
@@ -36,7 +36,7 @@
                     <actions>
                         <action id="-22" name="Set angle toward position" sid="9157191631050252" type="AngleHelper2">
                             <param id="0" name="X">Player_Box.X</param>
-                            <param id="1" name="Y">Player_Box.Y</param>
+                            <param id="1" name="Y">Player_Box.Y - 20</param>
                         </action>
                     </actions>
                 </event-block>
@@ -160,6 +160,21 @@
                     </actions>
                 </event-block>
                 <comment>Animation </comment>
+                <event-block sid="7705296856881437">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="2378231476281806" type="Gunner">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="4745440818358225" type="Gunner">
+                            <param id="0" name="Animation">&quot;2Arms_Idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="1831744878981654">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="5020287908968234" type="Gunner">
@@ -201,8 +216,23 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" sid="8786063261270122" type="Gunner" />
+                        <action id="4" name="Set animation" sid="9375425354292377" type="Gunner">
+                            <param id="0" name="Animation">&quot;Death&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="6330879829882946">
+                            <conditions>
+                                <condition id="4" name="On finished" sid="8636964543137729" type="Gunner">
+                                    <param id="0" name="Animation">&quot;Death&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="1033701873888112" type="Gunner" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
