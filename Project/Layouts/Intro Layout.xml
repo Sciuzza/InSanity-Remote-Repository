@@ -651,6 +651,7 @@
                         <First_Phase_Triggered>false</First_Phase_Triggered>
                         <Bridge_Destroyed>false</Bridge_Destroyed>
                         <Level_2_Phases>0</Level_2_Phases>
+                        <Is_Dead>false</Is_Dead>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -687,7 +688,7 @@
                 </instance>
                 <instance type="Camera" uid="311">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Disabled</collisions>
@@ -803,6 +804,7 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="DestroyOutsideLayout" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>

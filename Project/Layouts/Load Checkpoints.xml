@@ -136,7 +136,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="checkpoint7_unsel" uid="1648">
+                <instance type="checkpoint7_unsel" uid="1475">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -158,7 +158,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="checkpoint2_unsel" uid="1649">
+                <instance type="checkpoint2_unsel" uid="1476">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -180,7 +180,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="checkpoint3_unsel" uid="1650">
+                <instance type="checkpoint3_unsel" uid="1477">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -202,7 +202,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="checkpoint1_unsel" uid="1651">
+                <instance type="checkpoint1_unsel" uid="1478">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -224,7 +224,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="level3_unsel" uid="1652">
+                <instance type="level3_unsel" uid="1479">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -246,7 +246,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="level1_unsel" uid="1653">
+                <instance type="level1_unsel" uid="1480">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -268,7 +268,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="checkpoint1_sel" uid="1470">
+                <instance type="checkpoint1_sel" uid="1481">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -290,7 +290,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="checkpoint2_sel" uid="1656">
+                <instance type="checkpoint2_sel" uid="1482">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -312,7 +312,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="checkpoint3_sel" uid="1657">
+                <instance type="checkpoint3_sel" uid="1483">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -334,7 +334,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="level2_unsel" uid="1658">
+                <instance type="level2_unsel" uid="1484">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -356,7 +356,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text" uid="1659">
+                <instance type="Text" uid="1485">
                     <properties>
                         <text>Premi Esc per tornare al menù principale</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -383,7 +383,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="checkpoint4_sel" uid="1660">
+                <instance type="checkpoint4_sel" uid="1486">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -405,7 +405,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="checkpoint5_sel" uid="1661">
+                <instance type="checkpoint5_sel" uid="1487">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -427,7 +427,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="checkpoint6_sel" uid="1662">
+                <instance type="checkpoint6_sel" uid="1617">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -471,7 +471,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="loadcheck_title2" uid="1468">
+                <instance type="loadcheck_title2" uid="1618">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>

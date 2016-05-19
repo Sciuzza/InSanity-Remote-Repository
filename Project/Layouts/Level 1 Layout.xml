@@ -943,28 +943,28 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-              <instance type="ponteInizio" uid="30">
-                <properties>
-                  <initial-visibility>Visible</initial-visibility>
-                  <initial-animation>Default</initial-animation>
-                  <initial-frame>0</initial-frame>
-                  <collisions>Enabled</collisions>
-                </properties>
-                <blend-mode>0</blend-mode>
-                <effect-fallback>0</effect-fallback>
-                <world>
-                  <x>3149</x>
-                  <y>613</y>
-                  <z>0</z>
-                  <width>508</width>
-                  <height>214</height>
-                  <depth>0</depth>
-                  <hotspotX>0.5</hotspotX>
-                  <hotspotY>0.5</hotspotY>
-                  <angle>0</angle>
-                  <opacity>1</opacity>
-                </world>
-              </instance>
+                <instance type="ponteInizio" uid="30">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>3149</x>
+                        <y>613</y>
+                        <z>0</z>
+                        <width>508</width>
+                        <height>214</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
                 <instance type="ponteBlocco" uid="31">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -2111,6 +2111,8 @@
                         <Level_1_Phases>0</Level_1_Phases>
                         <First_Phase_Triggered>false</First_Phase_Triggered>
                         <Bridge_Destroyed>false</Bridge_Destroyed>
+                        <Level_2_Phases>0</Level_2_Phases>
+                        <Is_Dead>false</Is_Dead>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -2133,8 +2135,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>23</x>
-                        <y>625</y>
+                        <x>66</x>
+                        <y>605</y>
                         <z>0</z>
                         <width>11.636363983</width>
                         <height>36</height>
@@ -4608,7 +4610,7 @@
                 </instance>
                 <instance type="Camera" uid="306">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Disabled</collisions>

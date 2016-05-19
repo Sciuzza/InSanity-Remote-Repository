@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2project>
     <name>InSanity</name>
-    <description></description>
+    <description>ggg</description>
     <version>1.0.0.2</version>
     <author></author>
     <author-email></author-email>
@@ -30,6 +30,7 @@
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
+        <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
         <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
@@ -44,7 +45,7 @@
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
-    <first-layout>Intro Layout</first-layout>
+    <first-layout>Menu Start</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
@@ -1499,6 +1500,9 @@
                     <behavior-type name="Bullet" sid="5324309418235322">
                         <behavior id="Bullet" />
                     </behavior-type>
+                    <behavior-type name="DestroyOutsideLayout" sid="6574668715343045">
+                        <behavior id="destroy" />
+                    </behavior-type>
                 </behaviors>
                 <animation-folder>
                     <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8931452151050704" speed="5">
@@ -1601,6 +1605,7 @@
                     <instance-variable name="First_Phase_Triggered" sid="9708494785123097" type="boolean" />
                     <instance-variable name="Bridge_Destroyed" sid="7716916467687827" type="boolean" />
                     <instance-variable name="Level_2_Phases" sid="521681513767556" type="number" />
+                    <instance-variable name="Is_Dead" sid="5701586237341312" type="boolean" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Platform" sid="2921180046897222">
@@ -5014,10 +5019,10 @@
                             <point x="0.037037" y="0.777778" />
                             <point x="0.0277778" y="0.5" />
                         </collision-poly>
-                      </frame>
-                    </animation>
-                  </animation-folder>
-                </object-type>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
         <object-type name="ChiesaRosone" sid="4229314007884404">
             <plugin id="Sprite" />
             <animation-folder>
@@ -5052,10 +5057,10 @@
                             <point x="0.037037" y="0.777778" />
                             <point x="0.0277778" y="0.5" />
                         </collision-poly>
-                      </frame>
-                    </animation>
-                  </animation-folder>
-                </object-type>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
         <object-type name="ChiesaRosoneBuco" sid="6861539916340974">
             <plugin id="Sprite" />
             <animation-folder>
@@ -5145,10 +5150,10 @@
                             <point x="0.498382" y="0.736842" />
                             <point x="0.0355987" y="0.710526" />
                         </collision-poly>
-                      </frame>
-                    </animation>
-                  </animation-folder>
-                </object-type>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
         <object-type name="chiesaPedana" sid="8677235444237415">
             <plugin id="Sprite" />
             <animation-folder>
@@ -5195,10 +5200,10 @@
                             <point x="0.498382" y="0.736842" />
                             <point x="0.0355987" y="0.710526" />
                         </collision-poly>
-                      </frame>
-                    </animation>
-                  </animation-folder>
-                </object-type>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
         <object-type name="villaCorrimano" sid="7250874244255904">
             <plugin id="Sprite" />
             <animation-folder>
@@ -5443,7 +5448,6 @@
                 </behavior-type>
             </behaviors>
         </object-type>
-=======
         <object-type name="villaPorta" sid="1372160707680929">
             <plugin id="Sprite" />
             <animation-folder>
@@ -5467,7 +5471,6 @@
                 </animation>
             </animation-folder>
         </object-type>
->>>>>>> New_Design_Hub
     </object-folder>
     <families />
     <layout-folder>
@@ -5500,9 +5503,9 @@
         <event-sheet>Cutscene Start Sheet.xml</event-sheet>
     </event-folder>
     <global-instances>
-        <global-instance type="Keyboard" uid="1664" />
-        <global-instance type="Mouse" uid="1665" />
-        <global-instance type="Audio" uid="1666">
+        <global-instance type="Keyboard" uid="1699" />
+        <global-instance type="Mouse" uid="1700" />
+        <global-instance type="Audio" uid="1701">
             <properties>
                 <timescale-audio>Off</timescale-audio>
                 <saveload>All</saveload>
@@ -5516,7 +5519,7 @@
                 <roll-off-factor>1</roll-off-factor>
             </properties>
         </global-instance>
-        <global-instance type="Function" uid="1667" />
+        <global-instance type="Function" uid="1702" />
     </global-instances>
     <sounds-folder>
         <sound-folder name="PlaceHolder Sounds">

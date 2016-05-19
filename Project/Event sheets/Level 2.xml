@@ -60,58 +60,31 @@
                                     <param id="0" name="Animation">&quot;Flipped&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="906659163528177" type="Player_Box">
-                                    <param id="0" name="Instance variable">Level_2_Phases</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
                                 <action id="0" name="Call function" sid="3418404247590641" type="Function">
                                     <param id="0" name="Name">&quot;Player Stop&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
-                                <action behavior="ScrollTo" id="1" name="Set enabled" sid="4860728395238043" type="Camera">
-                                    <param id="0" name="State">0</param>
+                                <action id="-3" name="Set position" sid="7066386173027625" type="Camera">
+                                    <param id="0" name="X">lerp(Self.X,1660,0.02)</param>
+                                    <param id="1" name="Y">lerp(Self.Y,2206,0.02)</param>
                                 </action>
                             </actions>
                         </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="5989225639747636">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="6121446376773093" type="Player_Box">
-                            <param id="0" name="Instance variable">Level_2_Phases</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-7" name="Scroll to position" sid="5040043473869508" type="System">
-                            <param id="0" name="X">lerp(scrollx,1660,0.06)</param>
-                            <param id="1" name="Y">lerp(scrolly,2206,0.06)</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block sid="1530428201603225">
+                        <event-block sid="1815096721343271">
                             <conditions>
-                                <condition id="-4" name="Trigger once while true" sid="1786033429864516" type="System" />
-                            </conditions>
-                            <actions>
-                                <action behavior="Timer" id="0" name="Start timer" sid="2920451854742305" type="Player_Box">
-                                    <param id="0" name="Duration">4</param>
-                                    <param id="1" name="Type">0</param>
-                                    <param id="2" name="Tag">&quot;Camera On Hatch&quot;</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="4439747125430295">
-                            <conditions>
-                                <condition behavior="Timer" id="0" name="On timer" sid="8331888398606731" type="Player_Box">
-                                    <param id="0" name="Tag">&quot;Camera On Hatch&quot;</param>
+                                <condition id="-1" name="Compare X" sid="1700214387476983" type="Camera">
+                                    <param id="0" name="Comparison">3</param>
+                                    <param id="1" name="X co-ordinate">1660</param>
+                                </condition>
+                                <condition id="-2" name="Compare Y" sid="3517563028810585" type="Camera">
+                                    <param id="0" name="Comparison">3</param>
+                                    <param id="1" name="Y co-ordinate">2206</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-10" name="Set value" sid="846629436345913" type="Player_Box">
+                                <action id="-10" name="Set value" sid="906659163528177" type="Player_Box">
                                     <param id="0" name="Instance variable">Level_2_Phases</param>
-                                    <param id="1" name="Value">2</param>
+                                    <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -122,13 +95,13 @@
                         <condition id="-7" name="Compare instance variable" sid="7000661646590556" type="Player_Box">
                             <param id="0" name="Instance variable">Level_2_Phases</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">2</param>
+                            <param id="2" name="Value">1</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="-3" name="Set position" sid="4212203219055333" type="BotolaSeparaLivello">
                             <param id="0" name="X">Self.X</param>
-                            <param id="1" name="Y">Self.Y + 1*dt</param>
+                            <param id="1" name="Y">Self.Y + 20*dt</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -187,12 +160,54 @@
                             <param id="2" name="Value">4</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-7" name="Scroll to position" sid="9146213592393405" type="System">
-                            <param id="0" name="X">lerp(scrollx,1660,0.06)</param>
-                            <param id="1" name="Y">lerp(scrolly,2206,0.06)</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="2276248076828023">
+                            <conditions>
+                                <condition id="7" inverted="1" name="Is mirrored" sid="1937549501307974" type="Player_Frame" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="2802504429040237" type="Camera">
+                                    <param id="0" name="X">lerp(Self.X,Player_Box.X + 30,0.03)</param>
+                                    <param id="1" name="Y">lerp(Self.Y,Player_Box.Y - 80,0.03)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9774947647350792">
+                            <conditions>
+                                <condition id="7" name="Is mirrored" sid="5997916699175203" type="Player_Frame" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="1949333338263381" type="Camera">
+                                    <param id="0" name="X">lerp(Self.X,Player_Box.X - 30,0.03)</param>
+                                    <param id="1" name="Y">lerp(Self.Y,Player_Box.Y - 80,0.03)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="652870891150836">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="7438780853861994" type="Camera">
+                                    <param id="0" name="Comparison">3</param>
+                                    <param id="1" name="X co-ordinate">1660</param>
+                                </condition>
+                                <condition id="-2" name="Compare Y" sid="2801177962634882" type="Camera">
+                                    <param id="0" name="Comparison">3</param>
+                                    <param id="1" name="Y co-ordinate">2206</param>
+                                </condition>
+                                <condition id="-8" name="Compare two values" sid="7415290899801983" type="System">
+                                    <param id="0" name="First value">Camera.X</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="6949172172716657" type="Player_Box">
+                                    <param id="0" name="Instance variable">Level_2_Phases</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
