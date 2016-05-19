@@ -479,6 +479,63 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="6786048163379708">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="1260082178508563" type="Bat">
+                            <param id="0" name="Object">Player_Frame</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="1731329656662895" type="Player_Frame">
+                            <param id="0" name="Animation">&quot;Hit&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5940283560768445">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="8962151361478888" type="GunnerBullet">
+                            <param id="0" name="Object">Player_Frame</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="6876739936310323" type="Player_Frame">
+                            <param id="0" name="Animation">&quot;Hit&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="2838035921892383">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="2715556077393357" type="Player_Box">
+                            <param id="0" name="Object">Death</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="2710739051634761" type="Player_Box">
+                            <param id="0" name="Instance variable">Life</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="1080339070587323" type="Player_Frame">
+                            <param id="0" name="Animation">&quot;Dying&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2358804934668">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="5760780096663513" type="Player_Frame">
+                            <param id="0" name="Animation">&quot;Dying&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="3640173652236117" type="Player_Frame">
+                            <param id="0" name="Animation">&quot;Dead&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="2445809030387704" title="Defensive System">
@@ -695,7 +752,7 @@
                                             <param id="1" name="Value">0</param>
                                         </action>
                                         <action behavior="Timer" id="0" name="Start timer" sid="7627492042056812" type="Player_Box">
-                                            <param id="0" name="Duration">0.5</param>
+                                            <param id="0" name="Duration">0.3</param>
                                             <param id="1" name="Type">0</param>
                                             <param id="2" name="Tag">&quot;Stun Charging&quot;</param>
                                         </action>
@@ -726,6 +783,9 @@
                         </action>
                         <action behavior="Bullet" id="3" name="Set angle of motion" sid="2257942088926028" type="Bullet_S_Player">
                             <param id="0" name="Angle">Player_arm.Angle</param>
+                        </action>
+                        <action behavior="Bullet" id="6" name="Set distance travelled" sid="3413464790944121" type="Bullet_S_Player">
+                            <param id="0" name="Distance">50</param>
                         </action>
                     </actions>
                 </event-block>
@@ -895,14 +955,11 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="4064749475666615">
+                <event-block sid="847422302875697">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="2719524129036121" type="Player_Box">
-                            <param id="0" name="Instance variable">Life</param>
-                            <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Value">0</param>
+                        <condition id="4" name="On finished" sid="9645833042706791" type="Player_Frame">
+                            <param id="0" name="Animation">&quot;Dying&quot;</param>
                         </condition>
-                        <condition id="-4" name="Trigger once while true" sid="3196463836323442" type="System" />
                     </conditions>
                     <actions>
                         <action id="0" name="Call function" sid="9478600158476952" type="Function">
@@ -911,7 +968,7 @@
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block disabled="1" sid="5475296757625984">
+                        <event-block sid="5475296757625984">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="4163083271595153" type="Player_Box">
                                     <param id="0" name="Instance variable">Checkpoint</param>
@@ -920,19 +977,75 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-46" name="Recreate initial objects" sid="7918068000632183" type="System">
-                                    <param id="0" name="Object">ponteBlocco</param>
-                                    <param id="1" name="From X">3398</param>
-                                    <param id="2" name="From Y">500</param>
-                                    <param id="3" name="To X">3760</param>
-                                    <param id="4" name="To Y">900</param>
+                                <action id="-9" name="Destroy" sid="8939835986931185" type="ponteBlocco" />
+                                <action id="-9" name="Destroy" sid="8746962245135526" type="PonteBlocco_Destr_Obj" />
+                                <action id="-9" name="Destroy" sid="8313868994428711" type="ponteBlocco2" />
+                                <action id="-9" name="Destroy" sid="3390033473643687" type="PonteBlocco_Destr_Obj2" />
+                                <action id="-9" name="Destroy" sid="7532389099200429" type="ponteBlocco3" />
+                                <action id="-9" name="Destroy" sid="6310543535336768" type="PonteBlocco_Destr_Obj3" />
+                                <action id="-9" name="Destroy" sid="9812858227628601" type="ponteBlocco4" />
+                                <action id="-9" name="Destroy" sid="1182946002389689" type="PonteBlocco_Destr_Obj4" />
+                                <action id="-13" name="Set boolean" sid="6982624348464399" type="Player_Box">
+                                    <param id="0" name="Instance variable">Bridge_Destroyed</param>
+                                    <param id="1" name="Value">0</param>
                                 </action>
-                                <action id="-46" name="Recreate initial objects" sid="8084637369920163" type="System">
-                                    <param id="0" name="Object">SolidObjects</param>
-                                    <param id="1" name="From X">3402</param>
-                                    <param id="2" name="From Y">500</param>
-                                    <param id="3" name="To X">3754</param>
-                                    <param id="4" name="To Y">637</param>
+                                <action id="-10" name="Set value" sid="2352825085310025" type="Player_Box">
+                                    <param id="0" name="Instance variable">Level_1_Phases</param>
+                                    <param id="1" name="Value">5</param>
+                                </action>
+                                <action behavior="Timer" id="1" name="Stop timer" sid="1646914043609147" type="Player_Box">
+                                    <param id="0" name="Tag">&quot;Bridge Going Down&quot;</param>
+                                </action>
+                                <action behavior="Timer" id="1" name="Stop timer" sid="4629815323778287" type="Player_Box">
+                                    <param id="0" name="Tag">&quot;Bridges Going Down&quot;</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="1450656618791052" type="System">
+                                    <param id="0" name="Object to create">ponteBlocco</param>
+                                    <param id="1" name="Layer">&quot;Background&quot;</param>
+                                    <param id="2" name="X">3578</param>
+                                    <param id="3" name="Y">637</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="4316301597899985" type="System">
+                                    <param id="0" name="Object to create">PonteBlocco_Destr_Obj</param>
+                                    <param id="1" name="Layer">&quot;Background&quot;</param>
+                                    <param id="2" name="X">3578</param>
+                                    <param id="3" name="Y">600</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="1415613128095663" type="System">
+                                    <param id="0" name="Object to create">ponteBlocco2</param>
+                                    <param id="1" name="Layer">&quot;Background&quot;</param>
+                                    <param id="2" name="X">3950</param>
+                                    <param id="3" name="Y">635.744</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="8674688082275394" type="System">
+                                    <param id="0" name="Object to create">PonteBlocco_Destr_Obj2</param>
+                                    <param id="1" name="Layer">&quot;Background&quot;</param>
+                                    <param id="2" name="X">3960</param>
+                                    <param id="3" name="Y">627.131</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="5473117184589619" type="System">
+                                    <param id="0" name="Object to create">ponteBlocco3</param>
+                                    <param id="1" name="Layer">&quot;Background&quot;</param>
+                                    <param id="2" name="X">4120</param>
+                                    <param id="3" name="Y">635.744</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="9799274665005687" type="System">
+                                    <param id="0" name="Object to create">PonteBlocco_Destr_Obj3</param>
+                                    <param id="1" name="Layer">&quot;Background&quot;</param>
+                                    <param id="2" name="X">4130</param>
+                                    <param id="3" name="Y">620.979</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="8242672816905739" type="System">
+                                    <param id="0" name="Object to create">ponteBlocco4</param>
+                                    <param id="1" name="Layer">&quot;Background&quot;</param>
+                                    <param id="2" name="X">4315</param>
+                                    <param id="3" name="Y">720</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="742346067912341" type="System">
+                                    <param id="0" name="Object to create">PonteBlocco_Destr_Obj4</param>
+                                    <param id="1" name="Layer">&quot;Background&quot;</param>
+                                    <param id="2" name="X">4325</param>
+                                    <param id="3" name="Y">620.836</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -960,6 +1073,33 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="4577278886057416" type="Bullet_S_Player" />
+                    </actions>
+                </event-block>
+                <event-block sid="9721736914024902">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="1092430809085201" type="Player_Box">
+                            <param id="0" name="Object">CheckPoint</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="7754065646473125" type="CheckPoint">
+                            <param id="0" name="Instance variable">Is_Taken</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="6695047291232153" type="CheckPoint">
+                            <param id="0" name="Instance variable">Is_Taken</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="6200049069175031" type="Player_Box">
+                            <param id="0" name="Instance variable">Checkpoint</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="3913864182258917" type="CheckPoint">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="8349509397680858" type="Player_Box">
+                            <param id="0" name="Instance variable">Life</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-group description="" sid="7374267314962865" title="Dash through Special Objects">
@@ -1018,6 +1158,283 @@
                             <actions>
                                 <action behavior="Solid" id="0" name="Set enabled" sid="430131362141297" type="Obstacle">
                                     <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="9962853270690088" title="Hud Linking System">
+            <sub-events>
+                <event-group description="" sid="4793969069808939" title="Stamina Hud System">
+                    <sub-events>
+                        <event-block sid="4817458332046503">
+                            <conditions>
+                                <condition id="-2" name="On start of layout" sid="8610940742435476" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="8864279307768793" type="Function">
+                                    <param id="0" name="Name">&quot;Hud Stamina&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8768681548691114">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="4869857607226475" type="Player_Box">
+                                    <param id="0" name="Instance variable">Dash</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="5816667533994386" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="7169020970043956" type="Function">
+                                    <param id="0" name="Name">&quot;Hud Stamina&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6972456405778241">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="9799322888210662" type="Player_Box">
+                                    <param id="0" name="Instance variable">Dash_Charges</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="7905323679432235" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="2842591187645693" type="Function">
+                                    <param id="0" name="Name">&quot;Hud Stamina&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9519464588775894">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="4119857820777376" type="Player_Box">
+                                    <param id="0" name="Instance variable">Dash_Charges</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="4488703588245054" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="8047664396091683" type="Function">
+                                    <param id="0" name="Name">&quot;Hud Stamina&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8843640248600249">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="4086316809663497" type="Player_Box">
+                                    <param id="0" name="Instance variable">Dash_Charges</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="5897100768960821" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="3779300741764843" type="Function">
+                                    <param id="0" name="Name">&quot;Hud Stamina&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="1725500130718967" title="Bullet Hud System">
+                    <sub-events>
+                        <event-block sid="9808823312264792">
+                            <conditions>
+                                <condition behavior="Timer" id="0" name="On timer" sid="3802759512807174" type="Player_Box">
+                                    <param id="0" name="Tag">&quot;Reloading&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="5091247819156421" type="Function">
+                                    <param id="0" name="Name">&quot;Hud Bullets&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4281056819150052">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="4219011485400305" type="Player_arm">
+                                    <param id="0" name="Instance variable">Cooldown</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="8704249656550073" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="2008201010223583">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="5800441044500113" type="Player_Box">
+                                            <param id="0" name="Instance variable">Weapon_Loader</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="7849461373278388" type="Pallottola" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="6764066239030429">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="4024511228932645" type="Player_Box">
+                                            <param id="0" name="Instance variable">Weapon_Loader</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="5978210774980179" type="Pallottola2" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="3493127733517353">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="9982523833785335" type="Player_Box">
+                                            <param id="0" name="Instance variable">Weapon_Loader</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="9557501166338278" type="Pallottola3" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="2236911830614519">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="2499017388971669" type="Player_Box">
+                                            <param id="0" name="Instance variable">Weapon_Loader</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">3</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="7434912950361237" type="Pallottola4" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="6057748470653286">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="5969679745317623" type="Player_Box">
+                                            <param id="0" name="Instance variable">Weapon_Loader</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">4</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="4163081429920055" type="Pallottola5" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="3373527574328338">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="6162311920503052" type="Player_Box">
+                                            <param id="0" name="Instance variable">Weapon_Loader</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">5</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="5162803173746866" type="Pallottola6" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="9654380172493272">
+                            <conditions>
+                                <condition id="-2" name="On start of layout" sid="2383492926409899" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="706910113779208" type="Function">
+                                    <param id="0" name="Name">&quot;Hud Bullets&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="2771341757682592" title="Life Hud System">
+                    <sub-events>
+                        <event-block sid="3495872666278566">
+                            <conditions>
+                                <condition id="-2" name="On start of layout" sid="6341190971260848" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="6471495159516422" type="Function">
+                                    <param id="0" name="Name">&quot;Hud Life&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7667619080995293">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="3660925021601931" type="Bat">
+                                    <param id="0" name="Object">Player_Frame</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="991534402809256" type="Function">
+                                    <param id="0" name="Name">&quot;Hud Life&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3343761710141409">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="3662484762901291" type="GunnerBullet">
+                                    <param id="0" name="Object">Player_Frame</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="9804168672908902" type="Function">
+                                    <param id="0" name="Name">&quot;Hud Life&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4886328213926934">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="3425409504422214" type="Player_Box">
+                                    <param id="0" name="Object">Death</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="6395058009393101" type="Function">
+                                    <param id="0" name="Name">&quot;Hud Life&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5484348901766847">
+                            <conditions>
+                                <condition id="4" name="On finished" sid="3507634443774209" type="Player_Frame">
+                                    <param id="0" name="Animation">&quot;Dying&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="3387984134772837" type="Function">
+                                    <param id="0" name="Name">&quot;Hud Life&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2688937417085522">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="1458163985009093" type="Player_Box">
+                                    <param id="0" name="Object">CheckPoint</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="6087055082066701" type="CheckPoint">
+                                    <param id="0" name="Instance variable">Is_Taken</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="9440164679988573" type="Function">
+                                    <param id="0" name="Name">&quot;Hud Life&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1124,7 +1541,7 @@
                                         </action>
                                         <action id="-10" name="Set value" sid="6459257047312696" type="Player_Box">
                                             <param id="0" name="Instance variable">Life</param>
-                                            <param id="1" name="Value">5</param>
+                                            <param id="1" name="Value">3</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1141,7 +1558,7 @@
                                         </action>
                                         <action id="-10" name="Set value" sid="3865192301311827" type="Player_Box">
                                             <param id="0" name="Instance variable">Life</param>
-                                            <param id="1" name="Value">5</param>
+                                            <param id="1" name="Value">3</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -1165,7 +1582,7 @@
                                 </action>
                                 <action id="-10" name="Set value" sid="10153230491297" type="Player_Box">
                                     <param id="0" name="Instance variable">Life</param>
-                                    <param id="1" name="Value">5</param>
+                                    <param id="1" name="Value">3</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1187,8 +1604,726 @@
                                 </action>
                                 <action id="-10" name="Set value" sid="24973076352491" type="Player_Box">
                                     <param id="0" name="Instance variable">Life</param>
-                                    <param id="1" name="Value">5</param>
+                                    <param id="1" name="Value">3</param>
                                 </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="6732543891765954">
+                    <conditions>
+                        <condition id="0" name="On function" sid="5099353094602827" type="Function">
+                            <param id="0" name="Name">&quot;Hud Bullets&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="3508052350860982" type="Pallottola" />
+                        <action id="-9" name="Destroy" sid="1069617425803036" type="Pallottola2" />
+                        <action id="-9" name="Destroy" sid="1955374860075489" type="Pallottola3" />
+                        <action id="-9" name="Destroy" sid="6820397059035511" type="Pallottola4" />
+                        <action id="-9" name="Destroy" sid="9237758087264072" type="Pallottola5" />
+                        <action id="-9" name="Destroy" sid="2912564683014676" type="Pallottola6" />
+                    </actions>
+                    <sub-events>
+                        <event-block sid="2543049506740333">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="8441118741656218" type="Player_Box">
+                                    <param id="0" name="Instance variable">Weapon_Loader</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="5111554642891321" type="System">
+                                    <param id="0" name="Object to create">Pallottola</param>
+                                    <param id="1" name="Layer">&quot;Hud&quot;</param>
+                                    <param id="2" name="X">Hud_Corpo.ImagePointX(7)</param>
+                                    <param id="3" name="Y">Hud_Corpo.ImagePointY(7)</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="3804010312145105" type="Pallottola">
+                                    <param id="0" name="Pin to">Hud_Corpo</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action id="-25" name="Move to bottom" sid="8204454787800949" type="Pallottola" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="9529040729837663">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="1138184200920031" type="Player_Box">
+                                    <param id="0" name="Instance variable">Weapon_Loader</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="8564094341696747" type="System">
+                                    <param id="0" name="Object to create">Pallottola</param>
+                                    <param id="1" name="Layer">&quot;Hud&quot;</param>
+                                    <param id="2" name="X">Hud_Corpo.ImagePointX(7)</param>
+                                    <param id="3" name="Y">Hud_Corpo.ImagePointY(7)</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="5741164206015121" type="System">
+                                    <param id="0" name="Object to create">Pallottola2</param>
+                                    <param id="1" name="Layer">&quot;Hud&quot;</param>
+                                    <param id="2" name="X">Hud_Corpo.ImagePointX(8)</param>
+                                    <param id="3" name="Y">Hud_Corpo.ImagePointY(8)</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="2874884675329961" type="Pallottola">
+                                    <param id="0" name="Pin to">Hud_Corpo</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="6292501394618865" type="Pallottola2">
+                                    <param id="0" name="Pin to">Hud_Corpo</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action id="-25" name="Move to bottom" sid="9055975222806388" type="Pallottola" />
+                                <action id="-25" name="Move to bottom" sid="5037081521646086" type="Pallottola2" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="3990451278053589">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="5442587369117832" type="Player_Box">
+                                    <param id="0" name="Instance variable">Weapon_Loader</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="4000314740669859" type="System">
+                                    <param id="0" name="Object to create">Pallottola</param>
+                                    <param id="1" name="Layer">&quot;Hud&quot;</param>
+                                    <param id="2" name="X">Hud_Corpo.ImagePointX(7)</param>
+                                    <param id="3" name="Y">Hud_Corpo.ImagePointY(7)</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="548220790001684" type="System">
+                                    <param id="0" name="Object to create">Pallottola2</param>
+                                    <param id="1" name="Layer">&quot;Hud&quot;</param>
+                                    <param id="2" name="X">Hud_Corpo.ImagePointX(8)</param>
+                                    <param id="3" name="Y">Hud_Corpo.ImagePointY(8)</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="8467914306515222" type="System">
+                                    <param id="0" name="Object to create">Pallottola3</param>
+                                    <param id="1" name="Layer">&quot;Hud&quot;</param>
+                                    <param id="2" name="X">Hud_Corpo.ImagePointX(9)</param>
+                                    <param id="3" name="Y">Hud_Corpo.ImagePointY(9)</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="2630266994438328" type="Pallottola">
+                                    <param id="0" name="Pin to">Hud_Corpo</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="8872601199887783" type="Pallottola2">
+                                    <param id="0" name="Pin to">Hud_Corpo</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="1084529352778519" type="Pallottola3">
+                                    <param id="0" name="Pin to">Hud_Corpo</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action id="-25" name="Move to bottom" sid="867022070677266" type="Pallottola" />
+                                <action id="-25" name="Move to bottom" sid="7119518073337107" type="Pallottola2" />
+                                <action id="-25" name="Move to bottom" sid="2034561341044752" type="Pallottola3" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="345347541365037">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="2558771401055686" type="Player_Box">
+                                    <param id="0" name="Instance variable">Weapon_Loader</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="3969475013322312" type="System">
+                                    <param id="0" name="Object to create">Pallottola</param>
+                                    <param id="1" name="Layer">&quot;Hud&quot;</param>
+                                    <param id="2" name="X">Hud_Corpo.ImagePointX(7)</param>
+                                    <param id="3" name="Y">Hud_Corpo.ImagePointY(7)</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="9560139165988616" type="System">
+                                    <param id="0" name="Object to create">Pallottola2</param>
+                                    <param id="1" name="Layer">&quot;Hud&quot;</param>
+                                    <param id="2" name="X">Hud_Corpo.ImagePointX(8)</param>
+                                    <param id="3" name="Y">Hud_Corpo.ImagePointY(8)</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="5535476868095957" type="System">
+                                    <param id="0" name="Object to create">Pallottola3</param>
+                                    <param id="1" name="Layer">&quot;Hud&quot;</param>
+                                    <param id="2" name="X">Hud_Corpo.ImagePointX(9)</param>
+                                    <param id="3" name="Y">Hud_Corpo.ImagePointY(9)</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="2072155505608385" type="System">
+                                    <param id="0" name="Object to create">Pallottola4</param>
+                                    <param id="1" name="Layer">&quot;Hud&quot;</param>
+                                    <param id="2" name="X">Hud_Corpo.ImagePointX(10)</param>
+                                    <param id="3" name="Y">Hud_Corpo.ImagePointY(10)</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="1670045989095749" type="Pallottola">
+                                    <param id="0" name="Pin to">Hud_Corpo</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="9923044454772788" type="Pallottola2">
+                                    <param id="0" name="Pin to">Hud_Corpo</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="3149735124986308" type="Pallottola3">
+                                    <param id="0" name="Pin to">Hud_Corpo</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="7819394541520938" type="Pallottola4">
+                                    <param id="0" name="Pin to">Hud_Corpo</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action id="-25" name="Move to bottom" sid="3816369475385027" type="Pallottola" />
+                                <action id="-25" name="Move to bottom" sid="4586409802778094" type="Pallottola2" />
+                                <action id="-25" name="Move to bottom" sid="2303445713910125" type="Pallottola3" />
+                                <action id="-25" name="Move to bottom" sid="4692985535503005" type="Pallottola4" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="3899032627375546">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="9976138290854542" type="Player_Box">
+                                    <param id="0" name="Instance variable">Weapon_Loader</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="8231711174639992" type="System">
+                                    <param id="0" name="Object to create">Pallottola</param>
+                                    <param id="1" name="Layer">&quot;Hud&quot;</param>
+                                    <param id="2" name="X">Hud_Corpo.ImagePointX(7)</param>
+                                    <param id="3" name="Y">Hud_Corpo.ImagePointY(7)</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="9083233384435684" type="System">
+                                    <param id="0" name="Object to create">Pallottola2</param>
+                                    <param id="1" name="Layer">&quot;Hud&quot;</param>
+                                    <param id="2" name="X">Hud_Corpo.ImagePointX(8)</param>
+                                    <param id="3" name="Y">Hud_Corpo.ImagePointY(8)</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="589246576525653" type="System">
+                                    <param id="0" name="Object to create">Pallottola3</param>
+                                    <param id="1" name="Layer">&quot;Hud&quot;</param>
+                                    <param id="2" name="X">Hud_Corpo.ImagePointX(9)</param>
+                                    <param id="3" name="Y">Hud_Corpo.ImagePointY(9)</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="6034719255520164" type="System">
+                                    <param id="0" name="Object to create">Pallottola4</param>
+                                    <param id="1" name="Layer">&quot;Hud&quot;</param>
+                                    <param id="2" name="X">Hud_Corpo.ImagePointX(10)</param>
+                                    <param id="3" name="Y">Hud_Corpo.ImagePointY(10)</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="4734328539038791" type="System">
+                                    <param id="0" name="Object to create">Pallottola5</param>
+                                    <param id="1" name="Layer">&quot;Hud&quot;</param>
+                                    <param id="2" name="X">Hud_Corpo.ImagePointX(11)</param>
+                                    <param id="3" name="Y">Hud_Corpo.ImagePointY(11)</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="7594767629852456" type="Pallottola">
+                                    <param id="0" name="Pin to">Hud_Corpo</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="1710169404474682" type="Pallottola2">
+                                    <param id="0" name="Pin to">Hud_Corpo</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="341706081128559" type="Pallottola3">
+                                    <param id="0" name="Pin to">Hud_Corpo</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="3203292062401765" type="Pallottola4">
+                                    <param id="0" name="Pin to">Hud_Corpo</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="2376584235163125" type="Pallottola5">
+                                    <param id="0" name="Pin to">Hud_Corpo</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action id="-25" name="Move to bottom" sid="2718105979279681" type="Pallottola" />
+                                <action id="-25" name="Move to bottom" sid="267051547977306" type="Pallottola2" />
+                                <action id="-25" name="Move to bottom" sid="5997912224540075" type="Pallottola3" />
+                                <action id="-25" name="Move to bottom" sid="9262003142338491" type="Pallottola4" />
+                                <action id="-25" name="Move to bottom" sid="2967515560266621" type="Pallottola5" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="6333349100235991">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="8522887028173152" type="Player_Box">
+                                    <param id="0" name="Instance variable">Weapon_Loader</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">6</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="6641715754093044" type="System">
+                                    <param id="0" name="Object to create">Pallottola</param>
+                                    <param id="1" name="Layer">&quot;Hud&quot;</param>
+                                    <param id="2" name="X">Hud_Corpo.ImagePointX(7)</param>
+                                    <param id="3" name="Y">Hud_Corpo.ImagePointY(7)</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="6865023479744656" type="System">
+                                    <param id="0" name="Object to create">Pallottola2</param>
+                                    <param id="1" name="Layer">&quot;Hud&quot;</param>
+                                    <param id="2" name="X">Hud_Corpo.ImagePointX(8)</param>
+                                    <param id="3" name="Y">Hud_Corpo.ImagePointY(8)</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="16769149316566" type="System">
+                                    <param id="0" name="Object to create">Pallottola3</param>
+                                    <param id="1" name="Layer">&quot;Hud&quot;</param>
+                                    <param id="2" name="X">Hud_Corpo.ImagePointX(9)</param>
+                                    <param id="3" name="Y">Hud_Corpo.ImagePointY(9)</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="415896363933928" type="System">
+                                    <param id="0" name="Object to create">Pallottola4</param>
+                                    <param id="1" name="Layer">&quot;Hud&quot;</param>
+                                    <param id="2" name="X">Hud_Corpo.ImagePointX(10)</param>
+                                    <param id="3" name="Y">Hud_Corpo.ImagePointY(10)</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="2752854222255913" type="System">
+                                    <param id="0" name="Object to create">Pallottola5</param>
+                                    <param id="1" name="Layer">&quot;Hud&quot;</param>
+                                    <param id="2" name="X">Hud_Corpo.ImagePointX(11)</param>
+                                    <param id="3" name="Y">Hud_Corpo.ImagePointY(11)</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="5310225104932013" type="System">
+                                    <param id="0" name="Object to create">Pallottola6</param>
+                                    <param id="1" name="Layer">&quot;Hud&quot;</param>
+                                    <param id="2" name="X">Hud_Corpo.ImagePointX(12)</param>
+                                    <param id="3" name="Y">Hud_Corpo.ImagePointY(12)</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="624399123514575" type="Pallottola">
+                                    <param id="0" name="Pin to">Hud_Corpo</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="2071856311847208" type="Pallottola2">
+                                    <param id="0" name="Pin to">Hud_Corpo</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="444567687227971" type="Pallottola3">
+                                    <param id="0" name="Pin to">Hud_Corpo</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="6790605295741999" type="Pallottola4">
+                                    <param id="0" name="Pin to">Hud_Corpo</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="8076800910053904" type="Pallottola5">
+                                    <param id="0" name="Pin to">Hud_Corpo</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="2573908668402418" type="Pallottola6">
+                                    <param id="0" name="Pin to">Hud_Corpo</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action id="-25" name="Move to bottom" sid="2045260497163959" type="Pallottola" />
+                                <action id="-25" name="Move to bottom" sid="7186595443179039" type="Pallottola2" />
+                                <action id="-25" name="Move to bottom" sid="3778461910111783" type="Pallottola3" />
+                                <action id="-25" name="Move to bottom" sid="9608843602457875" type="Pallottola4" />
+                                <action id="-25" name="Move to bottom" sid="2995577304688738" type="Pallottola5" />
+                                <action id="-25" name="Move to bottom" sid="3234812461138312" type="Pallottola6" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="1476201688266384">
+                    <conditions>
+                        <condition id="0" name="On function" sid="3109306895361702" type="Function">
+                            <param id="0" name="Name">&quot;Hud Life&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="5406220618020422" type="Barra_Vita_Piena_Alta" />
+                        <action id="-9" name="Destroy" sid="941734339176146" type="Barra_Vita_Piena_Centro" />
+                        <action id="-9" name="Destroy" sid="6595265461219924" type="Barra_Vita_Piena_Bassa" />
+                        <action id="-9" name="Destroy" sid="7166294970424109" type="Barra_Vita_Vuota_Alta" />
+                        <action id="-9" name="Destroy" sid="4375643056124944" type="Barra_Vita_Vuota_Centro" />
+                        <action id="-9" name="Destroy" sid="926900457394895" type="Barra_Vita_Vuota_Bassa" />
+                    </actions>
+                    <sub-events>
+                        <event-block sid="1048369797203095">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="8381879444582457" type="Player_Box">
+                                    <param id="0" name="Instance variable">Life</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="8921485987908952" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="5207786674908945" type="System">
+                                    <param id="0" name="Object to create">Barra_Vita_Vuota_Bassa</param>
+                                    <param id="1" name="Layer">&quot;Hud&quot;</param>
+                                    <param id="2" name="X">Hud_Corpo.ImagePointX(1)</param>
+                                    <param id="3" name="Y">Hud_Corpo.ImagePointY(1)</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="7714053850662218" type="System">
+                                    <param id="0" name="Object to create">Barra_Vita_Vuota_Centro</param>
+                                    <param id="1" name="Layer">&quot;Hud&quot;</param>
+                                    <param id="2" name="X">Hud_Corpo.ImagePointX(2)</param>
+                                    <param id="3" name="Y">Hud_Corpo.ImagePointY(2)</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="9019714285042232" type="System">
+                                    <param id="0" name="Object to create">Barra_Vita_Vuota_Alta</param>
+                                    <param id="1" name="Layer">&quot;Hud&quot;</param>
+                                    <param id="2" name="X">Hud_Corpo.ImagePointX(3)</param>
+                                    <param id="3" name="Y">Hud_Corpo.ImagePointY(3)</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="8506779642853809" type="Barra_Vita_Vuota_Bassa">
+                                    <param id="0" name="Pin to">Hud_Corpo</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="9597106259179246" type="Barra_Vita_Vuota_Centro">
+                                    <param id="0" name="Pin to">Hud_Corpo</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="2523433174263914" type="Barra_Vita_Vuota_Alta">
+                                    <param id="0" name="Pin to">Hud_Corpo</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action id="-25" name="Move to bottom" sid="8566412605712178" type="Barra_Vita_Vuota_Bassa" />
+                                <action id="-25" name="Move to bottom" sid="9586112566192334" type="Barra_Vita_Vuota_Centro" />
+                                <action id="-25" name="Move to bottom" sid="818050475460677" type="Barra_Vita_Vuota_Alta" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="6353761591271788">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="1184431673475001" type="Player_Box">
+                                    <param id="0" name="Instance variable">Life</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="3302278505765712" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="8583756075759441" type="System">
+                                    <param id="0" name="Object to create">Barra_Vita_Piena_Bassa</param>
+                                    <param id="1" name="Layer">&quot;Hud&quot;</param>
+                                    <param id="2" name="X">Hud_Corpo.ImagePointX(1)</param>
+                                    <param id="3" name="Y">Hud_Corpo.ImagePointY(1)</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="5259498905120301" type="System">
+                                    <param id="0" name="Object to create">Barra_Vita_Vuota_Centro</param>
+                                    <param id="1" name="Layer">&quot;Hud&quot;</param>
+                                    <param id="2" name="X">Hud_Corpo.ImagePointX(2)</param>
+                                    <param id="3" name="Y">Hud_Corpo.ImagePointY(2)</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="5625752829800766" type="System">
+                                    <param id="0" name="Object to create">Barra_Vita_Vuota_Alta</param>
+                                    <param id="1" name="Layer">&quot;Hud&quot;</param>
+                                    <param id="2" name="X">Hud_Corpo.ImagePointX(3)</param>
+                                    <param id="3" name="Y">Hud_Corpo.ImagePointY(3)</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="1612744209645159" type="Barra_Vita_Piena_Bassa">
+                                    <param id="0" name="Pin to">Hud_Corpo</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="2072208351450515" type="Barra_Vita_Vuota_Centro">
+                                    <param id="0" name="Pin to">Hud_Corpo</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="7031403458805539" type="Barra_Vita_Vuota_Alta">
+                                    <param id="0" name="Pin to">Hud_Corpo</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action id="-25" name="Move to bottom" sid="5226089847341372" type="Barra_Vita_Piena_Bassa" />
+                                <action id="-25" name="Move to bottom" sid="2408650584750196" type="Barra_Vita_Vuota_Centro" />
+                                <action id="-25" name="Move to bottom" sid="1047607631861505" type="Barra_Vita_Vuota_Alta" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="9235675550836526">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="3152250097559177" type="Player_Box">
+                                    <param id="0" name="Instance variable">Life</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="3809366428423191" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="3370977760175096" type="System">
+                                    <param id="0" name="Object to create">Barra_Vita_Piena_Bassa</param>
+                                    <param id="1" name="Layer">&quot;Hud&quot;</param>
+                                    <param id="2" name="X">Hud_Corpo.ImagePointX(1)</param>
+                                    <param id="3" name="Y">Hud_Corpo.ImagePointY(1)</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="8996786263292383" type="System">
+                                    <param id="0" name="Object to create">Barra_Vita_Piena_Centro</param>
+                                    <param id="1" name="Layer">&quot;Hud&quot;</param>
+                                    <param id="2" name="X">Hud_Corpo.ImagePointX(2)</param>
+                                    <param id="3" name="Y">Hud_Corpo.ImagePointY(2)</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="5504807921156775" type="System">
+                                    <param id="0" name="Object to create">Barra_Vita_Vuota_Alta</param>
+                                    <param id="1" name="Layer">&quot;Hud&quot;</param>
+                                    <param id="2" name="X">Hud_Corpo.ImagePointX(3)</param>
+                                    <param id="3" name="Y">Hud_Corpo.ImagePointY(3)</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="1517105276126037" type="Barra_Vita_Piena_Bassa">
+                                    <param id="0" name="Pin to">Hud_Corpo</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="7738410251557489" type="Barra_Vita_Piena_Centro">
+                                    <param id="0" name="Pin to">Hud_Corpo</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="9583374678466765" type="Barra_Vita_Vuota_Alta">
+                                    <param id="0" name="Pin to">Hud_Corpo</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action id="-25" name="Move to bottom" sid="3874428149572713" type="Barra_Vita_Piena_Bassa" />
+                                <action id="-25" name="Move to bottom" sid="9917895427476758" type="Barra_Vita_Piena_Centro" />
+                                <action id="-25" name="Move to bottom" sid="6622440370962233" type="Barra_Vita_Vuota_Alta" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="5329955860431199">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="272782354174534" type="Player_Box">
+                                    <param id="0" name="Instance variable">Life</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="4215709850789149" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="1023542171197664" type="System">
+                                    <param id="0" name="Object to create">Barra_Vita_Piena_Bassa</param>
+                                    <param id="1" name="Layer">&quot;Hud&quot;</param>
+                                    <param id="2" name="X">Hud_Corpo.ImagePointX(1)</param>
+                                    <param id="3" name="Y">Hud_Corpo.ImagePointY(1)</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="4156533084150439" type="System">
+                                    <param id="0" name="Object to create">Barra_Vita_Piena_Centro</param>
+                                    <param id="1" name="Layer">&quot;Hud&quot;</param>
+                                    <param id="2" name="X">Hud_Corpo.ImagePointX(2)</param>
+                                    <param id="3" name="Y">Hud_Corpo.ImagePointY(2)</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="838449682125494" type="System">
+                                    <param id="0" name="Object to create">Barra_Vita_Piena_Alta</param>
+                                    <param id="1" name="Layer">&quot;Hud&quot;</param>
+                                    <param id="2" name="X">Hud_Corpo.ImagePointX(3)</param>
+                                    <param id="3" name="Y">Hud_Corpo.ImagePointY(3)</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="2781597141456718" type="Barra_Vita_Piena_Bassa">
+                                    <param id="0" name="Pin to">Hud_Corpo</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="6205936756865392" type="Barra_Vita_Piena_Centro">
+                                    <param id="0" name="Pin to">Hud_Corpo</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="4282079643793887" type="Barra_Vita_Piena_Alta">
+                                    <param id="0" name="Pin to">Hud_Corpo</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action id="-25" name="Move to bottom" sid="6889568090016122" type="Barra_Vita_Piena_Bassa" />
+                                <action id="-25" name="Move to bottom" sid="541586952304612" type="Barra_Vita_Piena_Centro" />
+                                <action id="-25" name="Move to bottom" sid="8860559001899306" type="Barra_Vita_Piena_Alta" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="7495176524857477">
+                    <conditions>
+                        <condition id="0" name="On function" sid="4656949860047346" type="Function">
+                            <param id="0" name="Name">&quot;Hud Stamina&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="4916406647717964" type="Stamin_Piena" />
+                        <action id="-9" name="Destroy" sid="3576671021301487" type="Stamin_Piena2" />
+                        <action id="-9" name="Destroy" sid="6053001728756328" type="Stamin_Piena3" />
+                        <action id="-9" name="Destroy" sid="1386790196776907" type="Stamina_Vuota" />
+                        <action id="-9" name="Destroy" sid="6588127930146646" type="Stamina_Vuota2" />
+                        <action id="-9" name="Destroy" sid="8419011179667735" type="Stamina_Vuota3" />
+                    </actions>
+                    <sub-events>
+                        <event-block sid="2648475469136473">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="4920999988686033" type="Player_Box">
+                                    <param id="0" name="Instance variable">Dash_Charges</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="6411565874367023" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="8633702541840786" type="System">
+                                    <param id="0" name="Object to create">Stamina_Vuota</param>
+                                    <param id="1" name="Layer">&quot;Hud&quot;</param>
+                                    <param id="2" name="X">Hud_Corpo.ImagePointX(4)</param>
+                                    <param id="3" name="Y">Hud_Corpo.ImagePointY(4)</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="3870891051620377" type="System">
+                                    <param id="0" name="Object to create">Stamina_Vuota2</param>
+                                    <param id="1" name="Layer">&quot;Hud&quot;</param>
+                                    <param id="2" name="X">Hud_Corpo.ImagePointX(5)</param>
+                                    <param id="3" name="Y">Hud_Corpo.ImagePointY(5)</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="5225184051086775" type="System">
+                                    <param id="0" name="Object to create">Stamina_Vuota3</param>
+                                    <param id="1" name="Layer">&quot;Hud&quot;</param>
+                                    <param id="2" name="X">Hud_Corpo.ImagePointX(6)</param>
+                                    <param id="3" name="Y">Hud_Corpo.ImagePointY(6)</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="8307965014573726" type="Stamina_Vuota">
+                                    <param id="0" name="Pin to">Hud_Corpo</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="2568391898759375" type="Stamina_Vuota2">
+                                    <param id="0" name="Pin to">Hud_Corpo</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="2944251531248206" type="Stamina_Vuota3">
+                                    <param id="0" name="Pin to">Hud_Corpo</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action id="-24" name="Move to top" sid="6182805136613577" type="Stamina_Vuota" />
+                                <action id="-24" name="Move to top" sid="1220797578795032" type="Stamina_Vuota2" />
+                                <action id="-24" name="Move to top" sid="2117978343246859" type="Stamina_Vuota3" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="9084273355779018">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="7945761582453744" type="Player_Box">
+                                    <param id="0" name="Instance variable">Dash_Charges</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="3779303790399461" type="Player_Box">
+                                    <param id="0" name="Instance variable">Dash_Charges</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="1312375849855138" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="8729102846841974" type="System">
+                                    <param id="0" name="Object to create">Stamin_Piena</param>
+                                    <param id="1" name="Layer">&quot;Hud&quot;</param>
+                                    <param id="2" name="X">Hud_Corpo.ImagePointX(4)</param>
+                                    <param id="3" name="Y">Hud_Corpo.ImagePointY(4)</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="9195560373729074" type="System">
+                                    <param id="0" name="Object to create">Stamina_Vuota2</param>
+                                    <param id="1" name="Layer">&quot;Hud&quot;</param>
+                                    <param id="2" name="X">Hud_Corpo.ImagePointX(5)</param>
+                                    <param id="3" name="Y">Hud_Corpo.ImagePointY(5)</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="4955907552550215" type="System">
+                                    <param id="0" name="Object to create">Stamina_Vuota3</param>
+                                    <param id="1" name="Layer">&quot;Hud&quot;</param>
+                                    <param id="2" name="X">Hud_Corpo.ImagePointX(6)</param>
+                                    <param id="3" name="Y">Hud_Corpo.ImagePointY(6)</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="580435111298599" type="Stamin_Piena">
+                                    <param id="0" name="Pin to">Hud_Corpo</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="8542431154831059" type="Stamina_Vuota2">
+                                    <param id="0" name="Pin to">Hud_Corpo</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="8518549070969274" type="Stamina_Vuota3">
+                                    <param id="0" name="Pin to">Hud_Corpo</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action id="-24" name="Move to top" sid="9516908156712448" type="Stamin_Piena" />
+                                <action id="-24" name="Move to top" sid="4074071033675819" type="Stamina_Vuota2" />
+                                <action id="-24" name="Move to top" sid="9316800486509901" type="Stamina_Vuota3" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="9679435174416519">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="5295541822070919" type="Player_Box">
+                                    <param id="0" name="Instance variable">Dash_Charges</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="7522288597224838" type="Player_Box">
+                                    <param id="0" name="Instance variable">Dash_Charges</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="3269382331490017" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="9197052046424499" type="System">
+                                    <param id="0" name="Object to create">Stamin_Piena</param>
+                                    <param id="1" name="Layer">&quot;Hud&quot;</param>
+                                    <param id="2" name="X">Hud_Corpo.ImagePointX(4)</param>
+                                    <param id="3" name="Y">Hud_Corpo.ImagePointY(4)</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="4391394058021148" type="System">
+                                    <param id="0" name="Object to create">Stamin_Piena2</param>
+                                    <param id="1" name="Layer">&quot;Hud&quot;</param>
+                                    <param id="2" name="X">Hud_Corpo.ImagePointX(5)</param>
+                                    <param id="3" name="Y">Hud_Corpo.ImagePointY(5)</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="1330325563002149" type="System">
+                                    <param id="0" name="Object to create">Stamina_Vuota3</param>
+                                    <param id="1" name="Layer">&quot;Hud&quot;</param>
+                                    <param id="2" name="X">Hud_Corpo.ImagePointX(6)</param>
+                                    <param id="3" name="Y">Hud_Corpo.ImagePointY(6)</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="3503174148396662" type="Stamin_Piena">
+                                    <param id="0" name="Pin to">Hud_Corpo</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="9690035733256317" type="Stamin_Piena2">
+                                    <param id="0" name="Pin to">Hud_Corpo</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="6447774201646486" type="Stamina_Vuota3">
+                                    <param id="0" name="Pin to">Hud_Corpo</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action id="-24" name="Move to top" sid="7972439128773682" type="Stamin_Piena" />
+                                <action id="-24" name="Move to top" sid="7243451819655843" type="Stamin_Piena2" />
+                                <action id="-24" name="Move to top" sid="8869157503867561" type="Stamina_Vuota3" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="8771825844283365">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="9583228704047403" type="Player_Box">
+                                    <param id="0" name="Instance variable">Dash_Charges</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="8517472835524679" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="2848378464552393" type="System">
+                                    <param id="0" name="Object to create">Stamin_Piena</param>
+                                    <param id="1" name="Layer">&quot;Hud&quot;</param>
+                                    <param id="2" name="X">Hud_Corpo.ImagePointX(4)</param>
+                                    <param id="3" name="Y">Hud_Corpo.ImagePointY(4)</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="5600267009175376" type="System">
+                                    <param id="0" name="Object to create">Stamin_Piena2</param>
+                                    <param id="1" name="Layer">&quot;Hud&quot;</param>
+                                    <param id="2" name="X">Hud_Corpo.ImagePointX(5)</param>
+                                    <param id="3" name="Y">Hud_Corpo.ImagePointY(5)</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="9462873113156175" type="System">
+                                    <param id="0" name="Object to create">Stamin_Piena3</param>
+                                    <param id="1" name="Layer">&quot;Hud&quot;</param>
+                                    <param id="2" name="X">Hud_Corpo.ImagePointX(6)</param>
+                                    <param id="3" name="Y">Hud_Corpo.ImagePointY(6)</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="779392725418148" type="Stamin_Piena">
+                                    <param id="0" name="Pin to">Hud_Corpo</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="5866770888641496" type="Stamin_Piena2">
+                                    <param id="0" name="Pin to">Hud_Corpo</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="4998078851571126" type="Stamin_Piena3">
+                                    <param id="0" name="Pin to">Hud_Corpo</param>
+                                    <param id="1" name="Mode">1</param>
+                                </action>
+                                <action id="-24" name="Move to top" sid="1002427317216204" type="Stamin_Piena" />
+                                <action id="-24" name="Move to top" sid="4656498977046462" type="Stamin_Piena2" />
+                                <action id="-24" name="Move to top" sid="3331692572706486" type="Stamin_Piena3" />
                             </actions>
                         </event-block>
                     </sub-events>

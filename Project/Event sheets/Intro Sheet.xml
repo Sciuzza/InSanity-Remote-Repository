@@ -14,12 +14,30 @@
                         <condition id="-2" name="On start of layout" sid="6954140605493007" type="System" />
                     </conditions>
                     <actions>
+                        <action id="-20" name="Set layout scale" sid="9014675773411351" type="System">
+                            <param id="0" name="Scale">1.50</param>
+                        </action>
+                        <action id="3" name="Set font size" sid="2098691972759238" type="Tutorial">
+                            <param id="0" name="Size (pt)">6</param>
+                        </action>
                         <action id="0" name="Set text" sid="2084223837139962" type="Tutorial">
                             <param id="0" name="Text">&quot;Usa i tasti A e D per muoverti dietro e avanti&quot; &amp; newline &amp; &quot;Utilizza il mouse per dare la direzione&quot;</param>
                         </action>
                         <action id="-10" name="Set value" sid="5247559551024046" type="Tutorial">
                             <param id="0" name="Instance variable">State</param>
                             <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="8556763005623337" type="BackGround_Hud_Text">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-25" name="Move to bottom" sid="6305878108574513" type="BackGround_Hud_Text" />
+                        <action id="-3" name="Set position" sid="7279471503630892" type="BackGround_Hud_Text">
+                            <param id="0" name="X">Tutorial.X </param>
+                            <param id="1" name="Y">Tutorial.Y - 5</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="8816257046297695" type="BackGround_Hud_Text">
+                            <param id="0" name="Pin to">Tutorial</param>
+                            <param id="1" name="Mode">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -32,6 +50,19 @@
                             <param id="0" name="Visibility">0</param>
                         </action>
                         <action id="-16" name="Set opacity" sid="8759226513446083" type="Tutorial">
+                            <param id="0" name="Opacity">100</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6089736344648547">
+                    <conditions>
+                        <condition behavior="Fade" id="0" name="On fade-out finished" sid="6743231097875787" type="BackGround_Hud_Text" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="487445842066334" type="BackGround_Hud_Text">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="3039161942865017" type="BackGround_Hud_Text">
                             <param id="0" name="Opacity">100</param>
                         </action>
                     </actions>
@@ -66,6 +97,7 @@
                                     <param id="1" name="Value">1</param>
                                 </action>
                                 <action behavior="Fade" id="1" name="Start fade" sid="9481883613629431" type="Tutorial" />
+                                <action behavior="Fade" id="1" name="Start fade" sid="4432996027523207" type="BackGround_Hud_Text" />
                             </actions>
                         </event-block>
                     </sub-events>
@@ -81,6 +113,9 @@
                         <condition id="-4" name="Trigger once while true" sid="2768611717871596" type="System" />
                     </conditions>
                     <actions>
+                        <action id="3" name="Set font size" sid="6325002793711139" type="Tutorial">
+                            <param id="0" name="Size (pt)">8</param>
+                        </action>
                         <action id="0" name="Set text" sid="3788905888334063" type="Tutorial">
                             <param id="0" name="Text">&quot;Usa il tasto W per saltare le macerie&quot;</param>
                         </action>
@@ -89,6 +124,9 @@
                             <param id="1" name="Value">1</param>
                         </action>
                         <action id="-15" name="Set visible" sid="2389619023513097" type="Tutorial">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="9774276374069064" type="BackGround_Hud_Text">
                             <param id="0" name="Visibility">1</param>
                         </action>
                     </actions>
@@ -112,6 +150,7 @@
                             </conditions>
                             <actions>
                                 <action behavior="Fade" id="1" name="Start fade" sid="6724856424884699" type="Tutorial" />
+                                <action behavior="Fade" id="1" name="Start fade" sid="5894728371115915" type="BackGround_Hud_Text" />
                                 <action id="-10" name="Set value" sid="320477862612003" type="Tutorial">
                                     <param id="0" name="Instance variable">State</param>
                                     <param id="1" name="Value">2</param>
@@ -132,12 +171,15 @@
                     </conditions>
                     <actions>
                         <action id="3" name="Set font size" sid="6384541405213606" type="Tutorial">
-                            <param id="0" name="Size (pt)">5</param>
+                            <param id="0" name="Size (pt)">4</param>
                         </action>
                         <action id="0" name="Set text" sid="6280439533075851" type="Tutorial">
                             <param id="0" name="Text">&quot;Mentre salti il burrone, premi il tasto Barra Spaziatrice e compi una scatto nella direzione verso cui ti stai muovendo; questo scatto consuma 1 stamina (barra verde in alto a sinistra) e non puoi eseguirlo se la barra è vuota &quot;</param>
                         </action>
                         <action id="-15" name="Set visible" sid="3403451487014013" type="Tutorial">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="578347123913858" type="BackGround_Hud_Text">
                             <param id="0" name="Visibility">1</param>
                         </action>
                         <action id="-13" name="Set boolean" sid="2087399612704273" type="Player_Box">
@@ -168,6 +210,7 @@
                             </conditions>
                             <actions>
                                 <action behavior="Fade" id="1" name="Start fade" sid="8948449374630004" type="Tutorial" />
+                                <action behavior="Fade" id="1" name="Start fade" sid="8896079925963615" type="BackGround_Hud_Text" />
                                 <action id="-10" name="Set value" sid="2891613193902414" type="Tutorial">
                                     <param id="0" name="Instance variable">State</param>
                                     <param id="1" name="Value">3</param>
@@ -283,11 +326,22 @@
                                         <action behavior="Bullet" id="5" name="Set enabled" sid="5357594499388168" type="Bat_Testing">
                                             <param id="0" name="State">0</param>
                                         </action>
+                                        <action id="3" name="Set font size" sid="9186903445865298" type="Tutorial">
+                                            <param id="0" name="Size (pt)">6</param>
+                                        </action>
                                         <action id="0" name="Set text" sid="6866930268302423" type="Tutorial">
                                             <param id="0" name="Text">&quot;Lo scatto serve anche ad evitare gli attacchi e, in alcuni casi, a superare i nemici stessi, Premi Spazio per Schivare l&apos;attacco nemico&quot;</param>
                                         </action>
                                         <action id="-15" name="Set visible" sid="4142561592025352" type="Tutorial">
                                             <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="6629372536764201" type="BackGround_Hud_Text">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-25" name="Move to bottom" sid="5228603527842279" type="BackGround_Hud_Text" />
+                                        <action id="-3" name="Set position" sid="4000335720294036" type="BackGround_Hud_Text">
+                                            <param id="0" name="X">Tutorial.X + 80</param>
+                                            <param id="1" name="Y">Tutorial.Y + 40</param>
                                         </action>
                                         <action id="-13" name="Set boolean" sid="8108318192035784" type="Player_Box">
                                             <param id="0" name="Instance variable">Dash_Is_On</param>
@@ -315,8 +369,14 @@
                                 <action id="-15" name="Set visible" sid="6336585999410668" type="Tutorial">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
+                                <action id="3" name="Set font size" sid="3513011359722867" type="Tutorial">
+                                    <param id="0" name="Size (pt)">4</param>
+                                </action>
                                 <action id="0" name="Set text" sid="3156342973276449" type="Tutorial">
                                     <param id="0" name="Text">&quot;Ogni nemico ha un punto debole: il biter può essere ucciso solamente sparandogli nella parte posteriore del corpo. Premendo il tasto sinistro del mouse il personaggio sparerà nella direzione verso cui il mouse punta&quot;</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="9068563989132671" type="BackGround_Hud_Text">
+                                    <param id="0" name="Visibility">1</param>
                                 </action>
                                 <action id="-13" name="Set boolean" sid="7856070152012083" type="Player_Box">
                                     <param id="0" name="Instance variable">Mouse_Look_Is_On</param>
@@ -359,6 +419,7 @@
                             <param id="0" name="State">1</param>
                         </action>
                         <action behavior="Fade" id="1" name="Start fade" sid="7298208585554811" type="Tutorial" />
+                        <action behavior="Fade" id="1" name="Start fade" sid="6597045421454763" type="BackGround_Hud_Text" />
                     </actions>
                 </event-block>
                 <event-block sid="99539245043708">
@@ -410,6 +471,7 @@
                     <actions>
                         <action id="-9" name="Destroy" sid="6577758666510715" type="Bat_Testing" />
                         <action behavior="Fade" id="1" name="Start fade" sid="3646680167954984" type="Tutorial" />
+                        <action behavior="Fade" id="1" name="Start fade" sid="5737278016548955" type="BackGround_Hud_Text" />
                         <action id="-13" name="Set boolean" sid="2363661180844818" type="Player_Box">
                             <param id="0" name="Instance variable">Dash_Is_On</param>
                             <param id="1" name="Value">1</param>
@@ -439,8 +501,14 @@
                         <action id="-15" name="Set visible" sid="3262190080860917" type="Tutorial">
                             <param id="0" name="Visibility">1</param>
                         </action>
+                        <action id="3" name="Set font size" sid="152423767683479" type="Tutorial">
+                            <param id="0" name="Size (pt)">10</param>
+                        </action>
                         <action id="0" name="Set text" sid="7486977039328032" type="Tutorial">
                             <param id="0" name="Text">&quot;Raggiungimi il prima possibile... ho paura...&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="1158385193565389" type="BackGround_Hud_Text">
+                            <param id="0" name="Visibility">1</param>
                         </action>
                         <action behavior="Timer" id="0" name="Start timer" sid="7230548632663213" type="Tutorial">
                             <param id="0" name="Duration">3</param>
@@ -464,6 +532,9 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="3" name="Set font size" sid="1711032078432363" type="Tutorial">
+                            <param id="0" name="Size (pt)">4</param>
+                        </action>
                         <action id="0" name="Set text" sid="499213096582054" type="Tutorial">
                             <param id="0" name="Text">&quot;L’oggetto raccolto è un ricordo. Essi permettono di potenziare il personaggio (in questo caso aumentando di 1 la capienza del caricatore) e conoscere la storia del personaggio. Il numero di ricordi ottenuti e totali dell’attuale livello sono visualizzabili in basso a sinistra&quot;</param>
                         </action>
