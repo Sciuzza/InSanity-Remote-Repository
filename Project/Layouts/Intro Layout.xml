@@ -650,6 +650,7 @@
                         <Level_1_Phases>0</Level_1_Phases>
                         <First_Phase_Triggered>false</First_Phase_Triggered>
                         <Bridge_Destroyed>false</Bridge_Destroyed>
+                        <Level_2_Phases>0</Level_2_Phases>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -695,7 +696,7 @@
                 <x>0</x>
                 <y>0</y>
             </parallax>
-            <zoom-rate>1</zoom-rate>
+            <zoom-rate>0</zoom-rate>
             <opacity>1</opacity>
             <force-own-texture>0</force-own-texture>
             <global>0</global>

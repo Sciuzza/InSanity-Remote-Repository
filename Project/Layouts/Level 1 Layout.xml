@@ -4066,6 +4066,7 @@
                         <Level_1_Phases>0</Level_1_Phases>
                         <First_Phase_Triggered>false</First_Phase_Triggered>
                         <Bridge_Destroyed>false</Bridge_Destroyed>
+                        <Level_2_Phases>0</Level_2_Phases>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">

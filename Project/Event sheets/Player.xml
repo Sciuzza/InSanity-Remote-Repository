@@ -1096,6 +1096,10 @@
                         <action id="5" name="Set frame" sid="3913864182258917" type="CheckPoint">
                             <param id="0" name="Frame number">1</param>
                         </action>
+                        <action id="-10" name="Set value" sid="8349509397680858" type="Player_Box">
+                            <param id="0" name="Instance variable">Life</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-group description="" sid="7374267314962865" title="Dash through Special Objects">
@@ -1413,6 +1417,22 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Call function" sid="3387984134772837" type="Function">
+                                    <param id="0" name="Name">&quot;Hud Life&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2688937417085522">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="1458163985009093" type="Player_Box">
+                                    <param id="0" name="Object">CheckPoint</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="6087055082066701" type="CheckPoint">
+                                    <param id="0" name="Instance variable">Is_Taken</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="9440164679988573" type="Function">
                                     <param id="0" name="Name">&quot;Hud Life&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>

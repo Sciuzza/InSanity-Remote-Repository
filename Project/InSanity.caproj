@@ -1292,6 +1292,7 @@
                     <instance-variable name="Level_1_Phases" sid="3744297378801938" type="number" />
                     <instance-variable name="First_Phase_Triggered" sid="9708494785123097" type="boolean" />
                     <instance-variable name="Bridge_Destroyed" sid="7716916467687827" type="boolean" />
+                    <instance-variable name="Level_2_Phases" sid="521681513767556" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Platform" sid="2921180046897222">
@@ -3257,7 +3258,7 @@
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                     <animation framecount="1" loop="0" name="Giallo" pingpong="0" repeatcount="1" repeatto="0" sid="7655135368571145" speed="5">
-                        <frame duration="1" hotspotX="-1.#IND" hotspotY="-1.#IND" original-source="C:\Users\dbga_23\Documents\Repository Database\InSanity Local\Project\Animations\CristalloEnigmaFinale\Verde\000.png">
+                        <frame duration="1" hotspotX="-1" hotspotY="-1" original-source="C:\Users\dbga_23\Documents\Repository Database\InSanity Local\Project\Animations\CristalloEnigmaFinale\Verde\000.png">
                             <collision-poly>
                                 <point x="0.178571" y="0.0746269" />
                                 <point x="0.5" y="0.0746269" />
