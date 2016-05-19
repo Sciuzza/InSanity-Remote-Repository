@@ -1,63 +1,63 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>Menu Start Sheet</name>
+    <name>Pause Sheet</name>
     <events>
-        <event-block sid="3601430021331483">
+        <event-block sid="8390851471690165">
             <conditions>
-                <condition id="0" name="On key pressed" sid="1512581234933399" type="Keyboard">
+                <condition id="0" name="On key pressed" sid="1838905921931039" type="Keyboard">
                     <param id="0" name="Key">87 (W)</param>
                 </condition>
             </conditions>
             <actions />
             <sub-events>
-                <event-block sid="525699643355302">
+                <event-block sid="5065489883581803">
                     <conditions>
-                        <condition id="-9" name="Is visible" sid="5651375891504471" type="newgame_sel" />
+                        <condition id="-9" name="Is visible" sid="3298304176661732" type="continue_sel" />
                     </conditions>
                     <actions>
-                        <action id="-15" name="Set visible" sid="9981041867468328" type="credits_sel">
+                        <action id="-15" name="Set visible" sid="2068750446394835" type="exit_sel">
                             <param id="0" name="Visibility">1</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="5232949929318792" type="newgame_sel">
+                        <action id="-15" name="Set visible" sid="8419121098847454" type="continue_sel">
                             <param id="0" name="Visibility">0</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="4791543855299189">
+                <event-block sid="7696689685564155">
                     <conditions>
-                        <condition id="-22" name="Else" sid="2391426796879495" type="System" />
+                        <condition id="-22" name="Else" sid="5422963638744626" type="System" />
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="1188769599865446">
+                        <event-block sid="1102352914966258">
                             <conditions>
-                                <condition id="-9" name="Is visible" sid="7670486168236237" type="loadcheck_sel" />
+                                <condition id="-9" name="Is visible" sid="3262385333790662" type="restart_sel" />
                             </conditions>
                             <actions>
-                                <action id="-15" name="Set visible" sid="4831867310994884" type="newgame_sel">
+                                <action id="-15" name="Set visible" sid="3452433308343344" type="continue_sel">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
-                                <action id="-15" name="Set visible" sid="8493136820463221" type="loadcheck_sel">
+                                <action id="-15" name="Set visible" sid="6247124254990612" type="restart_sel">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="2459596240340857">
+                        <event-block sid="7177876480417434">
                             <conditions>
-                                <condition id="-22" name="Else" sid="372615462995875" type="System" />
+                                <condition id="-22" name="Else" sid="2950767322709802" type="System" />
                             </conditions>
                             <actions />
                             <sub-events>
-                                <event-block sid="1346592241153776">
+                                <event-block sid="7929503658532952">
                                     <conditions>
-                                        <condition id="-9" name="Is visible" sid="924197751262862" type="credits_sel" />
+                                        <condition id="-9" name="Is visible" sid="1984651086511245" type="exit_sel" />
                                     </conditions>
                                     <actions>
-                                        <action id="-15" name="Set visible" sid="2989395014894485" type="loadcheck_sel">
+                                        <action id="-15" name="Set visible" sid="5459134403637284" type="restart_sel">
                                             <param id="0" name="Visibility">1</param>
                                         </action>
-                                        <action id="-15" name="Set visible" sid="8388251988421448" type="credits_sel">
+                                        <action id="-15" name="Set visible" sid="7405881859937935" type="exit_sel">
                                             <param id="0" name="Visibility">0</param>
                                         </action>
                                     </actions>
@@ -68,61 +68,61 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="2911634525392475">
+        <event-block sid="9210477026552497">
             <conditions>
-                <condition id="0" name="On key pressed" sid="7681212457779216" type="Keyboard">
+                <condition id="0" name="On key pressed" sid="2675932530408084" type="Keyboard">
                     <param id="0" name="Key">83 (S)</param>
                 </condition>
             </conditions>
             <actions />
             <sub-events>
-                <event-block sid="4796330241328891">
+                <event-block sid="7230202092988873">
                     <conditions>
-                        <condition id="-9" name="Is visible" sid="2470907079811607" type="newgame_sel" />
+                        <condition id="-9" name="Is visible" sid="2559568087997618" type="continue_sel" />
                     </conditions>
                     <actions>
-                        <action id="-15" name="Set visible" sid="7702725435641244" type="loadcheck_sel">
+                        <action id="-15" name="Set visible" sid="3415860339665047" type="restart_sel">
                             <param id="0" name="Visibility">1</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="1625909916543788" type="newgame_sel">
+                        <action id="-15" name="Set visible" sid="3901181367442872" type="continue_sel">
                             <param id="0" name="Visibility">0</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="117203701909">
+                <event-block sid="9746729313997976">
                     <conditions>
-                        <condition id="-22" name="Else" sid="3035346600756514" type="System" />
+                        <condition id="-22" name="Else" sid="9338018841879968" type="System" />
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="440727110379909">
+                        <event-block sid="5887086032892546">
                             <conditions>
-                                <condition id="-9" name="Is visible" sid="4758571191032577" type="loadcheck_sel" />
+                                <condition id="-9" name="Is visible" sid="9040317214709737" type="restart_sel" />
                             </conditions>
                             <actions>
-                                <action id="-15" name="Set visible" sid="9734350713529141" type="credits_sel">
+                                <action id="-15" name="Set visible" sid="6793260099452368" type="exit_sel">
                                     <param id="0" name="Visibility">1</param>
                                 </action>
-                                <action id="-15" name="Set visible" sid="6337200980444901" type="loadcheck_sel">
+                                <action id="-15" name="Set visible" sid="4844465489538216" type="restart_sel">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="2336559949082082">
+                        <event-block sid="15658650797024">
                             <conditions>
-                                <condition id="-22" name="Else" sid="3528364356572727" type="System" />
+                                <condition id="-22" name="Else" sid="1608931584855035" type="System" />
                             </conditions>
                             <actions />
                             <sub-events>
-                                <event-block sid="9925886116179151">
+                                <event-block sid="5624332831707542">
                                     <conditions>
-                                        <condition id="-9" name="Is visible" sid="5003695148800776" type="credits_sel" />
+                                        <condition id="-9" name="Is visible" sid="8892519158521136" type="exit_sel" />
                                     </conditions>
                                     <actions>
-                                        <action id="-15" name="Set visible" sid="39069549957455" type="newgame_sel">
+                                        <action id="-15" name="Set visible" sid="883943611640474" type="continue_sel">
                                             <param id="0" name="Visibility">1</param>
                                         </action>
-                                        <action id="-15" name="Set visible" sid="6148638394145068" type="credits_sel">
+                                        <action id="-15" name="Set visible" sid="8745495541581691" type="exit_sel">
                                             <param id="0" name="Visibility">0</param>
                                         </action>
                                     </actions>
@@ -133,53 +133,53 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="242708909123386">
+        <event-block sid="647712718003209">
             <conditions>
-                <condition id="0" name="On key pressed" sid="2406070131438563" type="Keyboard">
+                <condition id="0" name="On key pressed" sid="2693798019541321" type="Keyboard">
                     <param id="0" name="Key">32 (Barra Spaziatrice)</param>
                 </condition>
             </conditions>
             <actions />
             <sub-events>
-                <event-block sid="103715805541841">
+                <event-block sid="7698174582052235">
                     <conditions>
-                        <condition id="-9" name="Is visible" sid="7936743781191673" type="newgame_sel" />
+                        <condition id="-9" name="Is visible" sid="6337644964523608" type="continue_sel" />
                     </conditions>
                     <actions>
-                        <action id="-2" name="Go to layout" sid="4483924693904588" type="System">
-                            <param id="0" name="Layout">Cutscene Start</param>
+                        <action id="-2" name="Go to layout" sid="7208283780827364" type="System">
+                            <param id="0" name="Layout">Level 2 Layout</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="3267737168116669">
+                <event-block sid="2211993907375225">
                     <conditions>
-                        <condition id="-22" name="Else" sid="107818856439546" type="System" />
+                        <condition id="-22" name="Else" sid="3544660702469154" type="System" />
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="769373495703949">
+                        <event-block sid="3585986402647736">
                             <conditions>
-                                <condition id="-9" name="Is visible" sid="9599570154555813" type="loadcheck_sel" />
+                                <condition id="-9" name="Is visible" sid="6934449093168466" type="restart_sel" />
                             </conditions>
                             <actions>
-                                <action id="-2" name="Go to layout" sid="6925467456556214" type="System">
-                                    <param id="0" name="Layout">Load Checkpoints</param>
+                                <action id="-2" name="Go to layout" sid="4614034233117999" type="System">
+                                    <param id="0" name="Layout">Level 1 Layout</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="8539829540224137">
+                        <event-block sid="5592590126305181">
                             <conditions>
-                                <condition id="-22" name="Else" sid="7013163864529787" type="System" />
+                                <condition id="-22" name="Else" sid="5397297916711973" type="System" />
                             </conditions>
                             <actions />
                             <sub-events>
-                                <event-block sid="3012825343413489">
+                                <event-block sid="20800644560425">
                                     <conditions>
-                                        <condition id="-9" name="Is visible" sid="702236445718015" type="credits_sel" />
+                                        <condition id="-9" name="Is visible" sid="9189552241189054" type="exit_sel" />
                                     </conditions>
                                     <actions>
-                                        <action id="-2" name="Go to layout" sid="9848163387371793" type="System">
-                                            <param id="0" name="Layout">Credits</param>
+                                        <action id="-2" name="Go to layout" sid="2924789962984747" type="System">
+                                            <param id="0" name="Layout">Menu Start</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -188,6 +188,18 @@
                     </sub-events>
                 </event-block>
             </sub-events>
+        </event-block>
+        <event-block sid="95546629246248">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="7031064663726787" type="Keyboard">
+                    <param id="0" name="Key">27 (Esc)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="3503539638657324" type="System">
+                    <param id="0" name="Layout">Level 1 Layout</param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>
