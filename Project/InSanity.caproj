@@ -3240,6 +3240,380 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="EndLevelBG" sid="188302460879646">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4432890639075941" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Text2" sid="629168182705189">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="TimeText" sid="9982261124967623">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="EnemiesText" sid="3000554549265727">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="EnemiesText2" sid="7507731155341344">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="restart_sel" sid="5836732884304098">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6641556371903673" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_67\Dropbox\DBGA\Platform Shooter 2D\restart_sel.png">
+                        <collision-poly>
+                            <point x="0.037037" y="0.222222" />
+                            <point x="0.5" y="0.138889" />
+                            <point x="0.958333" y="0.25" />
+                            <point x="0.976852" y="0.5" />
+                            <point x="0.962963" y="0.777778" />
+                            <point x="0.5" y="0.805556" />
+                            <point x="0.037037" y="0.777778" />
+                            <point x="0.0277778" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="restart_unsel" sid="4596829181560128">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="332401281698632" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_67\Dropbox\DBGA\Platform Shooter 2D\restart_unsel.png">
+                        <collision-poly>
+                            <point x="0.037037" y="0.222222" />
+                            <point x="0.5" y="0.138889" />
+                            <point x="0.958333" y="0.25" />
+                            <point x="0.976852" y="0.5" />
+                            <point x="0.962963" y="0.777778" />
+                            <point x="0.5" y="0.805556" />
+                            <point x="0.037037" y="0.777778" />
+                            <point x="0.0277778" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="restart_unsel2" sid="8762122002220456">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5249775078668937" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_67\Dropbox\DBGA\Platform Shooter 2D\restart_unsel.png">
+                        <collision-poly>
+                            <point x="0.037037" y="0.222222" />
+                            <point x="0.5" y="0.138889" />
+                            <point x="0.958333" y="0.25" />
+                            <point x="0.976852" y="0.5" />
+                            <point x="0.962963" y="0.777778" />
+                            <point x="0.5" y="0.805556" />
+                            <point x="0.037037" y="0.777778" />
+                            <point x="0.0277778" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="continue_unsel" sid="5224163968067066">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1294158157859424" speed="5">
+                    <frame duration="1" hotspotX="0.504274" hotspotY="0.514286" original-source="C:\Users\dbga_67\Dropbox\DBGA\Platform Shooter 2D\continue_unsel.png">
+                        <collision-poly>
+                            <point x="0.0769231" y="0.257143" />
+                            <point x="0.495726" y="0.171429" />
+                            <point x="0.923077" y="0.257143" />
+                            <point x="0.948718" y="0.485714" />
+                            <point x="0.923077" y="0.742857" />
+                            <point x="0.495726" y="0.8" />
+                            <point x="0.0854701" y="0.714286" />
+                            <point x="0.0512821" y="0.485714" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="continue_sel" sid="3088966173148338">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3493524060612822" speed="5">
+                    <frame duration="1" hotspotX="0.504274" hotspotY="0.514286" original-source="C:\Users\dbga_67\Dropbox\DBGA\Platform Shooter 2D\continue_sel.png">
+                        <collision-poly>
+                            <point x="0.0769231" y="0.257143" />
+                            <point x="0.495726" y="0.171429" />
+                            <point x="0.923077" y="0.257143" />
+                            <point x="0.948718" y="0.485714" />
+                            <point x="0.923077" y="0.742857" />
+                            <point x="0.495726" y="0.8" />
+                            <point x="0.0854701" y="0.714286" />
+                            <point x="0.0512821" y="0.485714" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="exit_sel" sid="1183604274236413">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="481951366653172" speed="5">
+                    <frame duration="1" hotspotX="0.501618" hotspotY="0.5" original-source="C:\Users\dbga_67\Dropbox\DBGA\Platform Shooter 2D\exit_sel.png">
+                        <collision-poly>
+                            <point x="0.0226537" y="0.184211" />
+                            <point x="0.970874" y="0.236842" />
+                            <point x="0.983819" y="0.5" />
+                            <point x="0.964401" y="0.710526" />
+                            <point x="0.498382" y="0.736842" />
+                            <point x="0.0355987" y="0.710526" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="exit_unsel" sid="6922046131841326">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2031691596581606" speed="5">
+                    <frame duration="1" hotspotX="0.501618" hotspotY="0.5" original-source="C:\Users\dbga_67\Dropbox\DBGA\Platform Shooter 2D\exit_unsel.png">
+                        <collision-poly>
+                            <point x="0.0226537" y="0.184211" />
+                            <point x="0.970874" y="0.236842" />
+                            <point x="0.983819" y="0.5" />
+                            <point x="0.964401" y="0.710526" />
+                            <point x="0.498382" y="0.736842" />
+                            <point x="0.0355987" y="0.710526" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="endlevel_title" sid="5946975712252026">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="179634719146425" speed="5">
+                    <frame duration="1" hotspotX="0.50062" hotspotY="0.505495" original-source="C:\Users\dbga_67\Dropbox\DBGA\Platform Shooter 2D\endlevel_title.png">
+                        <collision-poly>
+                            <point x="0.023544" y="0.208791" />
+                            <point x="0.49938" y="0.186813" />
+                            <point x="0.972739" y="0.241758" />
+                            <point x="0.988848" y="0.494505" />
+                            <point x="0.972739" y="0.758242" />
+                            <point x="0.0285006" y="0.747253" />
+                            <point x="0.0136307" y="0.494505" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="credits_title2" sid="7180402680894221">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4885161846846099" speed="5">
+                    <frame duration="1" hotspotX="0.50165" hotspotY="0.506494" original-source="C:\Users\dbga_67\Dropbox\DBGA\Platform Shooter 2D\credits_title.png">
+                        <collision-poly>
+                            <point x="0.0627063" y="0.246753" />
+                            <point x="0.49835" y="0.324675" />
+                            <point x="0.940594" y="0.233766" />
+                            <point x="0.963696" y="0.493506" />
+                            <point x="0.970297" y="0.883117" />
+                            <point x="0.49835" y="0.649351" />
+                            <point x="0.049505" y="0.805195" />
+                            <point x="0.0264026" y="0.493506" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="loadcheck_title2" sid="8427705304739516">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3028038312692195" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505495" original-source="C:\Users\dbga_67\Dropbox\DBGA\Platform Shooter 2D\loadcheck_title.png">
+                        <collision-poly>
+                            <point x="0.0250627" y="0.21978" />
+                            <point x="0.5" y="0.142857" />
+                            <point x="0.969925" y="0.263736" />
+                            <point x="0.972431" y="0.758242" />
+                            <point x="0.5" y="0.714286" />
+                            <point x="0.0288221" y="0.747253" />
+                            <point x="0.0075188" y="0.494505" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="pause_title" sid="7417151819398836">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6381484704279111" speed="5">
+                    <frame duration="1" hotspotX="0.501961" hotspotY="0.507246" original-source="C:\Users\dbga_67\Dropbox\DBGA\Platform Shooter 2D\pause_title.png">
+                        <collision-poly>
+                            <point x="0.0588235" y="0.217391" />
+                            <point x="0.498039" y="0.144928" />
+                            <point x="0.937255" y="0.231884" />
+                            <point x="0.964706" y="0.492754" />
+                            <point x="0.952941" y="0.826087" />
+                            <point x="0.498039" y="0.884058" />
+                            <point x="0.0352941" y="0.869565" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="dash" sid="7112464811768688">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="3115404162419518">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="3" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3346641303558341" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.425" y="0.425" />
+                            <point x="0.5" y="0.1" />
+                            <point x="0.675" y="0.325" />
+                            <point x="0.675" y="0.5" />
+                            <point x="0.7" y="0.7" />
+                            <point x="0.5" y="0.85" />
+                            <point x="0.375" y="0.625" />
+                            <point x="0.4" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.425" y="0.425" />
+                            <point x="0.5" y="0.1" />
+                            <point x="0.675" y="0.325" />
+                            <point x="0.675" y="0.5" />
+                            <point x="0.7" y="0.7" />
+                            <point x="0.5" y="0.85" />
+                            <point x="0.25" y="0.75" />
+                            <point x="0.375" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.425" y="0.425" />
+                            <point x="0.5" y="0.1" />
+                            <point x="0.675" y="0.325" />
+                            <point x="0.675" y="0.5" />
+                            <point x="0.7" y="0.7" />
+                            <point x="0.5" y="0.9" />
+                            <point x="0.225" y="0.775" />
+                            <point x="0.375" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="cristalloRossoOmbra" sid="1315415063387738">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7964630772541107" speed="5">
+                    <frame duration="1" hotspotX="0.504274" hotspotY="0.5" original-source="C:\Users\dbga_67\Downloads\cristallo rosso ombra.png">
+                        <collision-poly>
+                            <point x="0.145299" y="0.708333" />
+                            <point x="0.495726" y="0.333333" />
+                            <point x="0.735043" y="0.5" />
+                            <point x="0.495726" y="0.791667" />
+                            <point x="0.196581" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="cristalloRosso" sid="9902645214668254">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="1915187271260112">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="487312413044576" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_67\Downloads\cristallo rosso.png">
+                        <collision-poly>
+                            <point x="0.178571" y="0.0746269" />
+                            <point x="0.5" y="0.0746269" />
+                            <point x="0.642857" y="0.149254" />
+                            <point x="0.928571" y="0.5" />
+                            <point x="0.785714" y="0.910448" />
+                            <point x="0.5" y="0.985075" />
+                            <point x="0.25" y="0.895522" />
+                            <point x="0.0357143" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="IntroText1" sid="8019606742033335">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Fade" sid="4839409172818508">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="IntroText2" sid="4831009758691425">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Fade" sid="4166522680464952">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="IntroText3" sid="1557615761479555">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Fade" sid="7520052043754799">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="IntroText4" sid="5760638144948952">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Fade" sid="1508424692728357">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="IntroText5" sid="4053443914992692">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Fade" sid="933935833271664">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="IntroText6" sid="6444051538995">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Fade" sid="1613767869764076">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="ContinueText" sid="8698221872651781">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Fade" sid="1266511790785597">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
+        <object-type name="IntroText7" sid="3803190954076168">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Fade" sid="4510876978852458">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -3250,6 +3624,9 @@
         <layout>Menu Start.xml</layout>
         <layout>Credits.xml</layout>
         <layout>Load Checkpoints.xml</layout>
+        <layout>End Level.xml</layout>
+        <layout>Pause.xml</layout>
+        <layout>Cutscene Start.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Level 1.xml</event-sheet>
@@ -3263,6 +3640,9 @@
         <event-sheet>Menu Start Sheet.xml</event-sheet>
         <event-sheet>Credits Sheet.xml</event-sheet>
         <event-sheet>Load Checkpoints Sheet.xml</event-sheet>
+        <event-sheet>End Level Sheet.xml</event-sheet>
+        <event-sheet>Pause Sheet.xml</event-sheet>
+        <event-sheet>Cutscene Start Sheet.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="309" />
