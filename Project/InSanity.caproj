@@ -161,7 +161,7 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3115489310280078" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.502857" original-source="C:\Users\dbga_21\Downloads\Elementi_livello-2016-05-12\Elementi livello\albero foreground 1.png">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.502347" original-source="C:\Users\dbga_08\Downloads\Elementi_livello-2016-05-19\Elementi livello\Siluette albero 02.png">
                             <collision-poly>
                                 <point x="0" y="0.371429" />
                                 <point x="0" y="0" />
@@ -180,7 +180,7 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8889901904530033" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.502857" original-source="C:\Users\dbga_21\Downloads\Elementi_livello-2016-05-12\Elementi livello\albero foreground 1.png">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.503145" original-source="C:\Users\dbga_08\Downloads\Elementi_livello-2016-05-19\Elementi livello\Siluette albero 01.png">
                             <collision-poly>
                                 <point x="1" y="1" />
                                 <point x="1" y="1" />
@@ -199,7 +199,7 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="914884852107521" speed="5">
-                        <frame duration="1" hotspotX="0.501393" hotspotY="0.5" original-source="C:\Users\dbga_21\Downloads\Elementi_livello-2016-05-12\Elementi livello\chiesa - chiesa.png">
+                        <frame duration="1" hotspotX="0.501458" hotspotY="0.5" original-source="C:\Users\dbga_08\Downloads\Elementi_livello-2016-05-19\Elementi livello\Chiesa - chiesa.png">
                             <collision-poly>
                                 <point x="0.264624" y="0.184825" />
                                 <point x="0.498607" y="0.0116732" />
@@ -845,7 +845,7 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3948594426632155" speed="5">
-                        <frame duration="1" hotspotX="0.50152" hotspotY="0.5" original-source="C:\Users\dbga_21\Downloads\Elementi_livello-2016-05-12\Elementi livello\villa.png">
+                        <frame duration="1" hotspotX="0.50152" hotspotY="0.501683" original-source="C:\Users\dbga_08\Downloads\Elementi_livello-2016-05-19\Elementi livello\villa - staccata dal corrimano.png">
                             <collision-poly>
                                 <point x="0.337386" y="0.23617" />
                                 <point x="0.49848" y="0" />
@@ -2002,7 +2002,7 @@
                 </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6889431733249155" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\Users\dbga_21\Downloads\Elementi_livello-2016-05-12\Elementi livello\chiesa - campana piccola.png">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\Users\dbga_08\Downloads\Elementi_livello-2016-05-19\Elementi livello\chiesa - campana piccola.png">
                             <collision-poly>
                                 <point x="0.416667" y="0.208333" />
                                 <point x="0.5" y="0" />
@@ -2023,7 +2023,7 @@
                 </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9937090292159006" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.770833" original-source="C:\Users\dbga_21\Downloads\Elementi_livello-2016-05-12\Elementi livello\chiesa - campana piccola.png">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.770833" original-source="C:\Users\dbga_08\Downloads\Elementi_livello-2016-05-19\Elementi livello\chiesa - campana piccola.png">
                             <collision-poly>
                                 <point x="0.416667" y="0.208333" />
                                 <point x="0.5" y="0" />
@@ -2044,7 +2044,7 @@
                 </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8156685717416747" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.770833" original-source="C:\Users\dbga_21\Downloads\Elementi_livello-2016-05-12\Elementi livello\chiesa - campana piccola.png">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.770833" original-source="C:\Users\dbga_08\Downloads\Elementi_livello-2016-05-19\Elementi livello\chiesa - campana piccola.png">
                             <collision-poly>
                                 <point x="0.416667" y="0.208333" />
                                 <point x="0.5" y="0" />
@@ -2065,7 +2065,7 @@
                 </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="822008896869922" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.770833" original-source="C:\Users\dbga_21\Downloads\Elementi_livello-2016-05-12\Elementi livello\chiesa - campana piccola.png">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.770833" original-source="C:\Users\dbga_08\Downloads\Elementi_livello-2016-05-19\Elementi livello\chiesa - campana piccola.png">
                             <collision-poly>
                                 <point x="0.416667" y="0.208333" />
                                 <point x="0.5" y="0" />
@@ -2088,7 +2088,7 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1882433832567976" speed="5">
-                        <frame duration="1" hotspotX="0.517241" hotspotY="0.8" original-source="C:\Users\dbga_21\Downloads\Elementi_livello-2016-05-12\Elementi livello\chiesa - campana grande.png">
+                        <frame duration="1" hotspotX="0.517241" hotspotY="0.8" original-source="C:\Users\dbga_08\Downloads\Elementi_livello-2016-05-19\Elementi livello\chiesa - campana grande.png">
                             <collision-poly>
                                 <point x="0.413793" y="0.24" />
                                 <point x="0.5" y="0" />
@@ -2126,7 +2126,7 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="567639556103273" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_08\Downloads\01 - intro - lucchetto.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -5014,6 +5014,25 @@
                             <point x="0.037037" y="0.777778" />
                             <point x="0.0277778" y="0.5" />
                         </collision-poly>
+                      </frame>
+                    </animation>
+                  </animation-folder>
+                </object-type>
+        <object-type name="ChiesaRosone" sid="4229314007884404">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="980566206468943" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_08\Downloads\Elementi_livello-2016-05-19\Elementi livello\Chiesa - rosone.png">
+                        <collision-poly>
+                            <point x="0.147059" y="0.147059" />
+                            <point x="0.5" y="0" />
+                            <point x="0.852941" y="0.147059" />
+                            <point x="1" y="0.5" />
+                            <point x="0.852941" y="0.852941" />
+                            <point x="0.5" y="1" />
+                            <point x="0.147059" y="0.852941" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
                     </frame>
                 </animation>
             </animation-folder>
@@ -5032,6 +5051,25 @@
                             <point x="0.5" y="0.805556" />
                             <point x="0.037037" y="0.777778" />
                             <point x="0.0277778" y="0.5" />
+                        </collision-poly>
+                      </frame>
+                    </animation>
+                  </animation-folder>
+                </object-type>
+        <object-type name="ChiesaRosoneBuco" sid="6861539916340974">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5675372153809167" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_08\Downloads\Elementi_livello-2016-05-19\Elementi livello\Chiesa - rosone buco.png">
+                        <collision-poly>
+                            <point x="0.147059" y="0.147059" />
+                            <point x="0.5" y="0" />
+                            <point x="0.852941" y="0.147059" />
+                            <point x="1" y="0.5" />
+                            <point x="0.852941" y="0.852941" />
+                            <point x="0.5" y="1" />
+                            <point x="0.147059" y="0.852941" />
+                            <point x="0" y="0.5" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -5107,6 +5145,39 @@
                             <point x="0.498382" y="0.736842" />
                             <point x="0.0355987" y="0.710526" />
                         </collision-poly>
+                      </frame>
+                    </animation>
+                  </animation-folder>
+                </object-type>
+        <object-type name="chiesaPedana" sid="8677235444237415">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1429412498553994" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_08\Downloads\Elementi_livello-2016-05-19\Elementi livello\chiesa - pedana 02.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="chiesaPedana2" sid="5908517793514557">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="840946286069959" speed="5">
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.5" original-source="C:\Users\dbga_08\Downloads\Elementi_livello-2016-05-19\Elementi livello\chiesa - pedana 01.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="chiesaPiano" sid="591178333914347">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2698554615207023" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.503937" original-source="C:\Users\dbga_08\Downloads\Elementi_livello-2016-05-19\Elementi livello\chiesa -  piano.png">
+                        <collision-poly>
+                            <point x="0.011976" y="0.0314961" />
+                            <point x="0.5" y="0" />
+                            <point x="0.988024" y="0.0314961" />
+                            <point x="0.994012" y="0.984252" />
+                            <point x="0.5" y="1" />
+                            <point x="0.0179641" y="0.952756" />
+                        </collision-poly>
                     </frame>
                 </animation>
             </animation-folder>
@@ -5123,6 +5194,25 @@
                             <point x="0.964401" y="0.710526" />
                             <point x="0.498382" y="0.736842" />
                             <point x="0.0355987" y="0.710526" />
+                        </collision-poly>
+                      </frame>
+                    </animation>
+                  </animation-folder>
+                </object-type>
+        <object-type name="villaCorrimano" sid="7250874244255904">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7363739098400773" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501639" original-source="C:\Users\dbga_08\Downloads\Elementi_livello-2016-05-19\Elementi livello\villa - corrimano.png">
+                        <collision-poly>
+                            <point x="0.379433" y="0.35082" />
+                            <point x="0.5" y="0.15082" />
+                            <point x="0.996454" y="0.00327869" />
+                            <point x="1" y="0.498361" />
+                            <point x="0.87234" y="0.881967" />
+                            <point x="0.5" y="0.934426" />
+                            <point x="0.351064" y="0.67541" />
+                            <point x="0.421986" y="0.498361" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -5353,6 +5443,31 @@
                 </behavior-type>
             </behaviors>
         </object-type>
+=======
+        <object-type name="villaPorta" sid="1372160707680929">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1905367490521289" speed="5">
+                    <frame duration="1" hotspotX="0.514286" hotspotY="0.5" original-source="C:\Users\dbga_08\Downloads\Elementi_livello-2016-05-19\Elementi livello\villa - porta 01.png">
+                        <collision-poly>
+                            <point x="0.171429" y="0.0666667" />
+                            <point x="0.485714" y="0.0222222" />
+                            <point x="0.714286" y="0.111111" />
+                            <point x="0.971429" y="0.5" />
+                            <point x="0.6" y="0.844444" />
+                            <point x="0.114286" y="0.955556" />
+                            <point x="0.0285714" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="3" loop="0" name="Open" pingpong="0" repeatcount="1" repeatto="0" sid="8626111484975647" speed="5">
+                    <frame duration="1" hotspotX="0.514286" hotspotY="0.5" original-source="C:\Users\dbga_08\Downloads\Elementi_livello-2016-05-19\Elementi livello\villa - porta 01.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_08\Downloads\Elementi_livello-2016-05-19\Elementi livello\villa - porta 02.png" />
+                    <frame duration="1" hotspotX="0.571429" hotspotY="0.507246" original-source="C:\Users\dbga_08\Downloads\Elementi_livello-2016-05-19\Elementi livello\villa - porta 03.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+>>>>>>> New_Design_Hub
     </object-folder>
     <families />
     <layout-folder>
