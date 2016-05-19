@@ -639,7 +639,7 @@
                         <Weapon_Max_Loader>4</Weapon_Max_Loader>
                         <Reloading>false</Reloading>
                         <Stun_Ability>false</Stun_Ability>
-                        <Life>5</Life>
+                        <Life>3</Life>
                         <Checkpoint>0</Checkpoint>
                         <Jump_Is_On>true</Jump_Is_On>
                         <Dash_Is_On>true</Dash_Is_On>
@@ -976,6 +976,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1079,8 +1082,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-125.484298706</x>
-                        <y>30.454589844</y>
+                        <x>-144.608810425</x>
+                        <y>38.650787354</y>
                         <z>0</z>
                         <width>8</width>
                         <height>9</height>
@@ -1136,7 +1139,7 @@
                         <height>9</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.555555999</hotspotY>
+                        <hotspotY>0.555555582</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -1161,7 +1164,7 @@
                         <height>9</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.555555999</hotspotY>
+                        <hotspotY>0.555555582</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -1186,7 +1189,7 @@
                         <height>9</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.555555999</hotspotY>
+                        <hotspotY>0.555555582</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -1211,7 +1214,7 @@
                         <height>9</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.555555999</hotspotY>
+                        <hotspotY>0.555555582</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

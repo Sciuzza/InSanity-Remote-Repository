@@ -420,7 +420,7 @@
                         <Weapon_Max_Loader>4</Weapon_Max_Loader>
                         <Reloading>false</Reloading>
                         <Stun_Ability>false</Stun_Ability>
-                        <Life>5</Life>
+                        <Life>3</Life>
                         <Checkpoint>0</Checkpoint>
                         <Jump_Is_On>true</Jump_Is_On>
                         <Dash_Is_On>true</Dash_Is_On>

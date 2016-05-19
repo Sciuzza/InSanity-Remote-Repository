@@ -1396,13 +1396,238 @@
                             <param id="0" name="Visibility">1</param>
                         </action>
                         <action id="0" name="Set text" sid="4546511316968442" type="Tutorial">
-                            <param id="0" name="Text">&quot;Nice Done Duuuude&quot;</param>
+                            <param id="0" name="Text">&quot;Well Done Duuuude&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="4801233913497702" type="BackGround_Hud_Text">
+                            <param id="0" name="Visibility">1</param>
                         </action>
                         <action id="-10" name="Set value" sid="5088382370458116" type="Player_Box">
                             <param id="0" name="Instance variable">Level_1_Phases</param>
                             <param id="1" name="Value">9</param>
                         </action>
                     </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="9985355930870102" title="Phase 9-13 = Door opening and Level 2 Opening">
+            <sub-events>
+                <event-block sid="5099039258549648">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="972902464754742" type="Player_Box">
+                            <param id="0" name="Instance variable">Level_1_Phases</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">9</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="8638518093205241">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="8788337375389075" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="1391566513810529" type="Function">
+                                    <param id="0" name="Name">&quot;Player Stop&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-10" name="Set value" sid="7307254413377276" type="Player_Box">
+                                    <param id="0" name="Instance variable">Level_1_Phases</param>
+                                    <param id="1" name="Value">10</param>
+                                </action>
+                                <action behavior="ScrollTo" id="1" name="Set enabled" sid="9935991445930203" type="Camera">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="2068802040185604">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="5652888787208208" type="Player_Box">
+                            <param id="0" name="Instance variable">Level_1_Phases</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">10</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Scroll to position" sid="6338519783701012" type="System">
+                            <param id="0" name="X">lerp(scrollx,6530,0.02)</param>
+                            <param id="1" name="Y">lerp(scrolly,150,0.02)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="2478678269111816">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="1111609411133085" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Timer" id="0" name="Start timer" sid="7372810948058796" type="Player_Box">
+                                    <param id="0" name="Duration">2.5</param>
+                                    <param id="1" name="Type">0</param>
+                                    <param id="2" name="Tag">&quot;Door Opening&quot;</param>
+                                </action>
+                                <action behavior="Fade" id="1" name="Start fade" sid="4965225838228062" type="Tutorial" />
+                                <action behavior="Fade" id="1" name="Start fade" sid="9490318089146025" type="BackGround_Hud_Text" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="3288016733769539">
+                            <conditions>
+                                <condition behavior="Timer" id="0" name="On timer" sid="8926955919332629" type="Player_Box">
+                                    <param id="0" name="Tag">&quot;Door Opening&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="2007099569374776" type="Player_Box">
+                                    <param id="0" name="Instance variable">Level_1_Phases</param>
+                                    <param id="1" name="Value">11</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="9512284971496712">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="702372799732494" type="Player_Box">
+                            <param id="0" name="Instance variable">Level_1_Phases</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">11</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Scroll to position" sid="158791389964364" type="System">
+                            <param id="0" name="X">lerp(scrollx,Player_Box.X, 0.04)</param>
+                            <param id="1" name="Y">lerp(scrolly,Player_Box.Y,0.04)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="1491992711417896">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="4462261041533925" type="System" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Timer" id="0" name="Start timer" sid="5529382384350865" type="Player_Box">
+                                    <param id="0" name="Duration">2</param>
+                                    <param id="1" name="Type">0</param>
+                                    <param id="2" name="Tag">&quot;Door Opening Return&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="411797144151436">
+                            <conditions>
+                                <condition behavior="Timer" id="0" name="On timer" sid="8395450458796256" type="Player_Box">
+                                    <param id="0" name="Tag">&quot;Door Opening Return&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="4557320734609956" type="Player_Box">
+                                    <param id="0" name="Instance variable">Level_1_Phases</param>
+                                    <param id="1" name="Value">12</param>
+                                </action>
+                                <action id="0" name="Call function" sid="5992530965813242" type="Function">
+                                    <param id="0" name="Name">&quot;Player Free&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action behavior="ScrollTo" id="1" name="Set enabled" sid="3563563556726762" type="Camera">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="1443394482019171">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="3850831196118359" type="Player_Box">
+                            <param id="0" name="Instance variable">Level_1_Phases</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">12</param>
+                        </condition>
+                        <condition id="1" name="Is overlapping another object" sid="3406552792181186" type="Player_Frame">
+                            <param id="0" name="Object">Door_Area</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="1901884241453269">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="1222409152912614" type="Keyboard">
+                                    <param id="0" name="Key">81 (Q)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-34" name="Set layer background color" sid="9415755706921261" type="System">
+                                    <param id="0" name="Layer">&quot;Hud&quot;</param>
+                                    <param id="1" name="Color">rgb(0, 0, 0)</param>
+                                </action>
+                                <action id="-18" name="Set layer opacity" sid="7942930258318802" type="System">
+                                    <param id="0" name="Layer">&quot;Hud&quot;</param>
+                                    <param id="1" name="Opacity">0</param>
+                                </action>
+                                <action id="-35" name="Set layer transparent" sid="4481624228842639" type="System">
+                                    <param id="0" name="Layer">&quot;Hud&quot;</param>
+                                    <param id="1" name="Mode">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="8329206127045694" type="Player_Box">
+                                    <param id="0" name="Instance variable">Level_1_Phases</param>
+                                    <param id="1" name="Value">13</param>
+                                </action>
+                                <action behavior="Fade" id="1" name="Start fade" sid="3886748948573932" type="Tutorial" />
+                                <action behavior="Fade" id="1" name="Start fade" sid="8891171642113667" type="BackGround_Hud_Text" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="9902039908336479">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="6153161628961622" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="4411414824666192" type="Tutorial">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="0" name="Set text" sid="2149898451406866" type="Tutorial">
+                                    <param id="0" name="Text">&quot;Premi Q per entrare&quot;</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="3716511304891074" type="BackGround_Hud_Text">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="4626137330520194">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="1433709316198887" type="Player_Box">
+                            <param id="0" name="Instance variable">Level_1_Phases</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">13</param>
+                        </condition>
+                        <condition id="-17" name="Compare opacity" sid="3323150852064062" type="System">
+                            <param id="0" name="Layer">&quot;Hud&quot;</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Opacity">100</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-18" name="Set layer opacity" sid="3253672105061821" type="System">
+                            <param id="0" name="Layer">&quot;Hud&quot;</param>
+                            <param id="1" name="Opacity">LayerOpacity(&quot;Hud&quot;) + 100*dt</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="9217216961744571">
+                            <conditions>
+                                <condition id="-17" name="Compare opacity" sid="7386898048062011" type="System">
+                                    <param id="0" name="Layer">&quot;Hud&quot;</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Opacity">100</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="8581171631014502" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="3359482404250361" type="System">
+                                    <param id="0" name="Layout">Level 2 Layout</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
