@@ -1036,45 +1036,41 @@
                         </frame>
                     </animation>
                     <animation framecount="2" loop="0" name="No_Arms_Idle" pingpong="0" repeatcount="1" repeatto="0" sid="6523740985293865" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\NoArms_Idle\000.png">
-                            <image-point name="Arm" x="0.525" y="0.6" />
-                        </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\NoArms_Idle\001.png">
-                            <image-point name="Arm" x="0.525" y="0.6" />
-                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_23\Documents\Repository Database\InSanity Local\Project\Animations\Gunner\NoArms_Idle\000.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_23\Documents\Repository Database\InSanity Local\Project\Animations\Gunner\NoArms_Idle\001.png" />
                     </animation>
                     <animation framecount="5" loop="0" name="2_Arms_Walk" pingpong="0" repeatcount="1" repeatto="0" sid="9819221054279116" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\2Arms_Walk\000.png">
-                            <image-point name="Arm" x="0.525" y="0.6" />
+                        <frame duration="1" hotspotX="-1.#IND" hotspotY="-1.#IND" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\2Arms_Walk\000.png">
+                            <image-point name="Arm" x="-1.#IND" y="-1.#IND" />
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\2Arms_Walk\001.png">
-                            <image-point name="Arm" x="0.525" y="0.6" />
+                        <frame duration="1" hotspotX="-1.#IND" hotspotY="-1.#IND" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\2Arms_Walk\001.png">
+                            <image-point name="Arm" x="-1.#IND" y="-1.#IND" />
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\2Arms_Walk\002.png">
-                            <image-point name="Arm" x="0.525" y="0.6" />
+                        <frame duration="1" hotspotX="-1.#IND" hotspotY="-1.#IND" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\2Arms_Walk\002.png">
+                            <image-point name="Arm" x="-1.#IND" y="-1.#IND" />
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\2Arms_Walk\003.png">
-                            <image-point name="Arm" x="0.525" y="0.6" />
+                        <frame duration="1" hotspotX="-1.#IND" hotspotY="-1.#IND" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\2Arms_Walk\003.png">
+                            <image-point name="Arm" x="-1.#IND" y="-1.#IND" />
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\2Arms_Walk\004.png">
-                            <image-point name="Arm" x="0.525" y="0.6" />
+                        <frame duration="1" hotspotX="-1.#IND" hotspotY="-1.#IND" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\2Arms_Walk\004.png">
+                            <image-point name="Arm" x="-1.#IND" y="-1.#IND" />
                         </frame>
                     </animation>
                     <animation framecount="5" loop="0" name="No_Arms_Walk" pingpong="0" repeatcount="1" repeatto="0" sid="2535715770522335" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\NoArms_Walk\000.png">
-                            <image-point name="Arm" x="0.525" y="0.6" />
+                        <frame duration="1" hotspotX="-1.#IND" hotspotY="-1.#IND" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\NoArms_Walk\000.png">
+                            <image-point name="Arm" x="-1.#IND" y="-1.#IND" />
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\NoArms_Walk\001.png">
-                            <image-point name="Arm" x="0.525" y="0.6" />
+                        <frame duration="1" hotspotX="-1.#IND" hotspotY="-1.#IND" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\NoArms_Walk\001.png">
+                            <image-point name="Arm" x="-1.#IND" y="-1.#IND" />
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\NoArms_Walk\002.png">
-                            <image-point name="Arm" x="0.525" y="0.6" />
+                        <frame duration="1" hotspotX="-1.#IND" hotspotY="-1.#IND" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\NoArms_Walk\002.png">
+                            <image-point name="Arm" x="-1.#IND" y="-1.#IND" />
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\NoArms_Walk\003.png">
-                            <image-point name="Arm" x="0.525" y="0.6" />
+                        <frame duration="1" hotspotX="-1.#IND" hotspotY="-1.#IND" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\NoArms_Walk\003.png">
+                            <image-point name="Arm" x="-1.#IND" y="-1.#IND" />
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\NoArms_Walk\004.png">
-                            <image-point name="Arm" x="0.525" y="0.6" />
+                        <frame duration="1" hotspotX="-1.#IND" hotspotY="-1.#IND" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\NoArms_Walk\004.png">
+                            <image-point name="Arm" x="-1.#IND" y="-1.#IND" />
                         </frame>
                     </animation>
                     <animation framecount="6" loop="0" name="Death" pingpong="0" repeatcount="1" repeatto="0" sid="1010745617952286" speed="5">
@@ -4527,9 +4523,9 @@
         <event-sheet>Load Checkpoints Sheet.xml</event-sheet>
     </event-folder>
     <global-instances>
-        <global-instance type="Keyboard" uid="1644" />
-        <global-instance type="Mouse" uid="1645" />
-        <global-instance type="Audio" uid="1646">
+        <global-instance type="Keyboard" uid="1664" />
+        <global-instance type="Mouse" uid="1665" />
+        <global-instance type="Audio" uid="1666">
             <properties>
                 <timescale-audio>Off</timescale-audio>
                 <saveload>All</saveload>
@@ -4543,7 +4539,7 @@
                 <roll-off-factor>1</roll-off-factor>
             </properties>
         </global-instance>
-        <global-instance type="Function" uid="1647" />
+        <global-instance type="Function" uid="1667" />
     </global-instances>
     <sounds-folder>
         <sound-folder name="PlaceHolder Sounds">
