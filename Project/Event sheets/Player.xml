@@ -15,6 +15,30 @@
                             <param id="1" name="Value">1*dt</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="1755169578109478">
+                            <conditions>
+                                <condition id="7" inverted="1" name="Is mirrored" sid="1594855479962237" type="Player_Frame" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="5179257005674975" type="Camera">
+                                    <param id="0" name="X">lerp(Self.X,Player_Box.X + 30,0.03)</param>
+                                    <param id="1" name="Y">lerp(Self.Y,Player_Box.Y - 80,0.03)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7745897832976138">
+                            <conditions>
+                                <condition id="7" name="Is mirrored" sid="7189922042243847" type="Player_Frame" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="9586309763945552" type="Camera">
+                                    <param id="0" name="X">lerp(Self.X,Player_Box.X - 30,0.03)</param>
+                                    <param id="1" name="Y">lerp(Self.Y,Player_Box.Y - 80,0.03)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="2464216364253991">
                     <conditions>
@@ -42,11 +66,11 @@
                             <param id="0" name="Pin to">Player_Box</param>
                             <param id="1" name="Mode">1</param>
                         </action>
-                        <action id="-3" name="Set position" sid="2848212624485829" type="Camera">
+                        <action disabled="1" id="-3" name="Set position" sid="2848212624485829" type="Camera">
                             <param id="0" name="X">Player_Box.X</param>
                             <param id="1" name="Y">Player_Box.Y - 80</param>
                         </action>
-                        <action behavior="Pin" id="0" name="Pin to object" sid="9616826306647698" type="Camera">
+                        <action behavior="Pin" disabled="1" id="0" name="Pin to object" sid="9616826306647698" type="Camera">
                             <param id="0" name="Pin to">Player_Box</param>
                             <param id="1" name="Mode">1</param>
                         </action>

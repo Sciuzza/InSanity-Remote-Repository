@@ -4306,10 +4306,10 @@
                 </instance>
                 <instance type="Camera" uid="306">
                     <properties>
-                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
+                        <collisions>Disabled</collisions>
                     </properties>
                     <behavior-instances>
                         <behavior-instance type="ScrollTo">
@@ -4400,7 +4400,7 @@
                 <x>0</x>
                 <y>0</y>
             </parallax>
-            <zoom-rate>1</zoom-rate>
+            <zoom-rate>0</zoom-rate>
             <opacity>1</opacity>
             <force-own-texture>0</force-own-texture>
             <global>0</global>
@@ -4410,7 +4410,7 @@
             <instances>
                 <instance type="HudText" uid="1488">
                     <properties>
-                        <text>Text</text>
+                        <text></text>
                         <initial-visibility>Invisible</initial-visibility>
                         <font>Courier,-27,400,0</font>
                         <color>255,255,255</color>
@@ -4491,7 +4491,7 @@
                 </instance>
                 <instance type="Tutorial" uid="316">
                     <properties>
-                        <text>Text</text>
+                        <text></text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Courier,-20,400,0</font>
                         <color>255,255,255</color>
