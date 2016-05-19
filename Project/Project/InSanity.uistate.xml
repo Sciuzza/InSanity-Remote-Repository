@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2uistate>
+    <!--This is a UI state file - its content describes the user interface settings when the project was last open.
+It is entirely optional and the project will load without it.  If you are placing the project under source control,
+you probably do not want to add any .uistate.xml files to the repository.-->
+    <configurations>
+        <active>
+            <configuration name="HTML5" />
+        </active>
+        <display name="HTML5" />
+    </configurations>
+    <open-tabs>
+        <layout order="0">Level 1 Layout</layout>
+        <layout active="1" order="2">Level 2 Layout</layout>
+        <event-sheet order="1">Gunner</event-sheet>
+        <event-sheet order="3">Charger</event-sheet>
+        <event-sheet order="4">Bat</event-sheet>
+    </open-tabs>
+    <properties>
+        <property expanded="1" name="About" />
+        <property expanded="1" name="Project settings" />
+        <property expanded="0" name="Window Size" />
+        <property expanded="1" name="Configuration Settings" />
+    </properties>
+    <families-expanded root="1" />
+    <folders-expanded>
+        <folder expanded="1" path="object-folder/" />
+        <folder expanded="1" path="object-folder/Background/" />
+        <folder expanded="1" path="object-folder/Unused Sprites/" />
+        <folder expanded="1" path="object-folder/Gunner/" />
+        <folder expanded="1" path="object-folder/Bat/" />
+        <folder expanded="1" path="object-folder/Player/" />
+        <folder expanded="1" path="object-folder/Solid Objects/" />
+        <folder expanded="1" path="object-folder/Special Objects/" />
+        <folder expanded="1" path="object-folder/Support Gaming Objects/" />
+        <folder expanded="1" path="object-folder/Hud/" />
+        <folder expanded="1" path="object-folder/Da Sistemare/" />
+        <folder expanded="1" path="layout-folder/" />
+        <folder expanded="1" path="event-folder/" />
+        <folder expanded="1" path="file-folder/" />
+        <folder expanded="1" path="sound-folder/" />
+        <folder expanded="1" path="music-folder/" />
+        <folder expanded="1" path="file-folder/Icons/" />
+        <folder expanded="1" path="sound-folder/PlaceHolder Sounds/" />
+        <folder expanded="1" path="animation-folder/albero/" />
+        <folder expanded="1" path="animation-folder/albero2/" />
+        <folder expanded="1" path="animation-folder/albero3/" />
+        <folder expanded="1" path="animation-folder/albero4/" />
+        <folder expanded="1" path="animation-folder/albero5/" />
+        <folder expanded="1" path="animation-folder/alberoForeground2/" />
+        <folder expanded="1" path="animation-folder/alberoForeground3/" />
+        <folder expanded="1" path="animation-folder/chiesaChiesa/" />
+        <folder expanded="1" path="animation-folder/colonna/" />
+        <folder expanded="1" path="animation-folder/colonna2/" />
+        <folder expanded="1" path="animation-folder/colonna3/" />
+        <folder expanded="1" path="animation-folder/fontana4/" />
+        <folder expanded="1" path="animation-folder/lampione/" />
+        <folder expanded="1" path="animation-folder/lampione2/" />
+        <folder expanded="1" path="animation-folder/lampione3/" />
+        <folder expanded="1" path="animation-folder/lampione4/" />
+        <folder expanded="1" path="animation-folder/lampione5/" />
+        <folder expanded="1" path="animation-folder/orologioTorre/" />
+        <folder expanded="1" path="animation-folder/orologioTorreDritta/" />
+        <folder expanded="1" path="animation-folder/pavimentoChiesa/" />
+        <folder expanded="1" path="animation-folder/ponteBlocco/" />
+        <folder expanded="1" path="animation-folder/salita2/" />
+        <folder expanded="1" path="animation-folder/ponteBlocco2/" />
+        <folder expanded="1" path="animation-folder/ponteBlocco2InizioRottura/" />
+        <folder expanded="1" path="animation-folder/ponteBlocco3/" />
+        <folder expanded="1" path="animation-folder/ponteInizio/" />
+        <folder expanded="1" path="animation-folder/salita3/" />
+        <folder expanded="1" path="animation-folder/sentieroSalitaBlocco/" />
+        <folder expanded="1" path="animation-folder/Sfondo_Level_1/" />
+        <folder expanded="1" path="animation-folder/Sfondo_Intro/" />
+        <folder expanded="1" path="animation-folder/Sprite/" />
+        <folder expanded="1" path="animation-folder/Sprite12/" />
+        <folder expanded="1" path="animation-folder/Sprite13/" />
+        <folder expanded="1" path="animation-folder/Sprite14/" />
+        <folder expanded="1" path="animation-folder/Sprite17/" />
+        <folder expanded="1" path="animation-folder/Sprite18/" />
+        <folder expanded="1" path="animation-folder/Sprite2/" />
+        <folder expanded="1" path="animation-folder/Sprite3/" />
+        <folder expanded="1" path="animation-folder/Sprite4/" />
+        <folder expanded="1" path="animation-folder/Sprite6/" />
+        <folder expanded="1" path="animation-folder/staccionata/" />
+        <folder expanded="1" path="animation-folder/staccionata3/" />
+        <folder expanded="1" path="animation-folder/villa/" />
+        <folder expanded="1" path="animation-folder/ponteBlocco4/" />
+        <folder expanded="1" path="animation-folder/albero6/" />
+        <folder expanded="1" path="animation-folder/alberoForeground/" />
+        <folder expanded="1" path="animation-folder/Obstacle/" />
+        <folder expanded="1" path="animation-folder/salita/" />
+        <folder expanded="1" path="animation-folder/sentiero/" />
+        <folder expanded="1" path="animation-folder/staccionata2/" />
+        <folder expanded="1" path="animation-folder/AngleHelper/" />
+        <folder expanded="1" path="animation-folder/Gunner/" />
+        <folder expanded="1" path="animation-folder/GunnerArm/" />
+        <folder expanded="1" path="animation-folder/GunnerBullet/" />
+        <folder expanded="1" path="animation-folder/AngleHelper2/" />
+        <folder expanded="1" path="animation-folder/GunnerArm2/" />
+        <folder expanded="1" path="animation-folder/Toleft/" />
+        <folder expanded="1" path="animation-folder/Toright/" />
+        <folder expanded="1" path="animation-folder/Bat/" />
+        <folder expanded="1" path="animation-folder/Bat_Testing/" />
+        <folder expanded="1" path="animation-folder/Bat_Waypoint/" />
+        <folder expanded="1" path="animation-folder/BatArmor/" />
+        <folder expanded="1" path="animation-folder/BatSpawn/" />
+        <folder expanded="1" path="animation-folder/CenterEllipse/" />
+        <folder expanded="1" path="animation-folder/WayPoint1/" />
+        <folder expanded="1" path="animation-folder/WayPoint2/" />
+        <folder expanded="1" path="animation-folder/WayPoint3/" />
+        <folder expanded="1" path="animation-folder/WayPoint4/" />
+        <folder expanded="1" path="animation-folder/WayPoint5/" />
+        <folder expanded="1" path="animation-folder/WayPoint8/" />
+        <folder expanded="1" path="animation-folder/BatTrap/" />
+        <folder expanded="1" path="animation-folder/Biter/" />
+        <folder expanded="1" path="animation-folder/BiterBack/" />
+        <folder expanded="1" path="animation-folder/Wall2/" />
+        <folder expanded="1" path="animation-folder/Wall1/" />
+        <folder expanded="1" path="animation-folder/WayPoint6/" />
+        <folder expanded="1" path="animation-folder/WayPoint7/" />
+        <folder expanded="1" path="animation-folder/Bullet_1_Player/" />
+        <folder expanded="1" path="animation-folder/Bullet_S_Player/" />
+        <folder expanded="1" path="animation-folder/Player_arm/" />
+        <folder expanded="1" path="animation-folder/Player_Box/" />
+        <folder expanded="1" path="animation-folder/Player_Frame/" />
+        <folder expanded="1" path="animation-folder/Border/" />
+        <folder expanded="1" path="animation-folder/SolidObjects/" />
+        <folder expanded="1" path="animation-folder/PonteBlocco_Destr_Obj/" />
+        <folder expanded="1" path="animation-folder/PonteBlocco_Destr_Obj2/" />
+        <folder expanded="1" path="animation-folder/PonteBlocco_Destr_Obj3/" />
+        <folder expanded="1" path="animation-folder/PonteBlocco_Destr_Obj4/" />
+        <folder expanded="1" path="animation-folder/chiesaCampanaPiccola/" />
+        <folder expanded="1" path="animation-folder/chiesaCampanaPiccola2/" />
+        <folder expanded="1" path="animation-folder/chiesaCampanaPiccola3/" />
+        <folder expanded="1" path="animation-folder/chiesaCampanaPiccola4/" />
+        <folder expanded="1" path="animation-folder/chiesaCampanaGrande/" />
+        <folder expanded="1" path="animation-folder/Door_Area/" />
+        <folder expanded="1" path="animation-folder/Padlock/" />
+        <folder expanded="1" path="animation-folder/PiattaformaAttraversabile/" />
+        <folder expanded="1" path="animation-folder/Record_1/" />
+        <folder expanded="1" path="animation-folder/Camera/" />
+        <folder expanded="1" path="animation-folder/Trigger_Bat_Intro/" />
+        <folder expanded="1" path="animation-folder/Death/" />
+        <folder expanded="1" path="animation-folder/Stun_Ability/" />
+        <folder expanded="1" path="animation-folder/Record_2/" />
+        <folder expanded="1" path="animation-folder/DestructibleObject/" />
+        <folder expanded="1" path="animation-folder/CheckPoint/" />
+        <folder expanded="1" path="animation-folder/Eye/" />
+        <folder expanded="1" path="animation-folder/Destr_Obj_Explosion/" />
+        <folder expanded="1" path="animation-folder/Destr_Obj_Fragment_1/" />
+        <folder expanded="1" path="animation-folder/Destr_Obj_Fragment_2/" />
+        <folder expanded="1" path="animation-folder/Destr_Obj_Fragment_3/" />
+        <folder expanded="1" path="animation-folder/orologioLancettaCorto/" />
+        <folder expanded="1" path="animation-folder/orologioLancettaLunga/" />
+        <folder expanded="1" path="animation-folder/BackGround_Hud_Text/" />
+        <folder expanded="1" path="animation-folder/Hud_Corpo/" />
+        <folder expanded="1" path="animation-folder/Barra_Vita_Piena_Alta/" />
+        <folder expanded="1" path="animation-folder/Barra_Vita_Piena_Centro/" />
+        <folder expanded="1" path="animation-folder/Barra_Vita_Piena_Bassa/" />
+        <folder expanded="1" path="animation-folder/Barra_Vita_Vuota_Alta/" />
+        <folder expanded="1" path="animation-folder/Barra_Vita_Vuota_Bassa/" />
+        <folder expanded="1" path="animation-folder/Barra_Vita_Vuota_Centro/" />
+        <folder expanded="1" path="animation-folder/Pallottola/" />
+        <folder expanded="1" path="animation-folder/Stamin_Piena/" />
+        <folder expanded="1" path="animation-folder/Stamina_Vuota/" />
+        <folder expanded="1" path="animation-folder/Pallottola2/" />
+        <folder expanded="1" path="animation-folder/Pallottola3/" />
+        <folder expanded="1" path="animation-folder/Pallottola4/" />
+        <folder expanded="1" path="animation-folder/Pallottola5/" />
+        <folder expanded="1" path="animation-folder/Pallottola6/" />
+        <folder expanded="1" path="animation-folder/Stamin_Piena2/" />
+        <folder expanded="1" path="animation-folder/Stamin_Piena3/" />
+        <folder expanded="1" path="animation-folder/Stamina_Vuota2/" />
+        <folder expanded="1" path="animation-folder/Stamina_Vuota3/" />
+        <folder expanded="1" path="animation-folder/ArcoBack/" />
+        <folder expanded="1" path="animation-folder/ArcoFront/" />
+        <folder expanded="1" path="animation-folder/BossBraccioDx/" />
+        <folder expanded="1" path="animation-folder/BossBraccioDx2/" />
+        <folder expanded="1" path="animation-folder/BossBraccioSx/" />
+        <folder expanded="1" path="animation-folder/BossBusto/" />
+        <folder expanded="1" path="animation-folder/BossCappello/" />
+        <folder expanded="1" path="animation-folder/BossCervello/" />
+        <folder expanded="1" path="animation-folder/BossGambaSx/" />
+        <folder expanded="1" path="animation-folder/BossGambaSx2/" />
+        <folder expanded="1" path="animation-folder/BossOcchioDx/" />
+        <folder expanded="1" path="animation-folder/BossOcchioSx/" />
+        <folder expanded="1" path="animation-folder/BossTesta/" />
+        <folder expanded="1" path="animation-folder/BotolaSeparaLivello/" />
+        <folder expanded="1" path="animation-folder/BotolaSeparaLivelloAdattatoreConPavimento/" />
+        <folder expanded="1" path="animation-folder/checkpoint1_sel/" />
+        <folder expanded="1" path="animation-folder/checkpoint1_unsel/" />
+        <folder expanded="1" path="animation-folder/checkpoint2_sel/" />
+        <folder expanded="1" path="animation-folder/checkpoint2_unsel/" />
+        <folder expanded="1" path="animation-folder/checkpoint3_sel/" />
+        <folder expanded="1" path="animation-folder/checkpoint3_unsel/" />
+        <folder expanded="1" path="animation-folder/checkpoint4_sel/" />
+        <folder expanded="1" path="animation-folder/checkpoint4_unsel/" />
+        <folder expanded="1" path="animation-folder/checkpoint5_sel/" />
+        <folder expanded="1" path="animation-folder/checkpoint5_unsel/" />
+        <folder expanded="1" path="animation-folder/checkpoint6_sel/" />
+        <folder expanded="1" path="animation-folder/checkpoint6_unsel/" />
+        <folder expanded="1" path="animation-folder/checkpoint7_sel/" />
+        <folder expanded="1" path="animation-folder/checkpoint7_unsel/" />
+        <folder expanded="1" path="animation-folder/Chiave/" />
+        <folder expanded="1" path="animation-folder/credits_sel/" />
+        <folder expanded="1" path="animation-folder/credits_title/" />
+        <folder expanded="1" path="animation-folder/credits_unsel/" />
+        <folder expanded="1" path="animation-folder/CristalloEnigmaFinale/" />
+        <folder expanded="1" path="animation-folder/FineMuroAltoDestra/" />
+        <folder expanded="1" path="animation-folder/FineMuroAltoDestra2/" />
+        <folder expanded="1" path="animation-folder/FineMuroBassoDestra/" />
+        <folder expanded="1" path="animation-folder/FineMuroBassoSinistra/" />
+        <folder expanded="1" path="animation-folder/FineMuroSpessoreAlto/" />
+        <folder expanded="1" path="animation-folder/FineMuroSpessoreBasso/" />
+        <folder expanded="1" path="animation-folder/FineMuroSpessoreBasso2/" />
+        <folder expanded="1" path="animation-folder/GabbiaBlu/" />
+        <folder expanded="1" path="animation-folder/GabbiaGialla/" />
+        <folder expanded="1" path="animation-folder/GabbiaRossa/" />
+        <folder expanded="1" path="animation-folder/LevaAlta/" />
+        <folder expanded="1" path="animation-folder/LevaBlocco/" />
+        <folder expanded="1" path="animation-folder/level1_sel/" />
+        <folder expanded="1" path="animation-folder/level1_unsel/" />
+        <folder expanded="1" path="animation-folder/level2_sel/" />
+        <folder expanded="1" path="animation-folder/level2_unsel/" />
+        <folder expanded="1" path="animation-folder/level3_sel/" />
+        <folder expanded="1" path="animation-folder/level3_unsel/" />
+        <folder expanded="1" path="animation-folder/loadcheck_sel/" />
+        <folder expanded="1" path="animation-folder/loadcheck_title/" />
+        <folder expanded="1" path="animation-folder/loadcheck_unsel/" />
+        <folder expanded="1" path="animation-folder/MoglieMorta/" />
+        <folder expanded="1" path="animation-folder/MuroDistruttibileArco/" />
+        <folder expanded="1" path="animation-folder/MuroDistruttibileSottoArcoPezzo/" />
+        <folder expanded="1" path="animation-folder/MuroBase/" />
+        <folder expanded="1" path="animation-folder/newgame_sel/" />
+        <folder expanded="1" path="animation-folder/newgame_unsel/" />
+        <folder expanded="1" path="animation-folder/Ombra/" />
+        <folder expanded="1" path="animation-folder/Pavimento/" />
+        <folder expanded="1" path="animation-folder/PedanaLibro/" />
+        <folder expanded="1" path="animation-folder/PedanaLibro3/" />
+        <folder expanded="1" path="animation-folder/PedanaLibroMobile/" />
+        <folder expanded="1" path="animation-folder/PortaBoss/" />
+        <folder expanded="1" path="animation-folder/SpessorePavimento/" />
+        <folder expanded="1" path="animation-folder/Sprite16/" />
+        <folder expanded="1" path="animation-folder/Sprite5/" />
+        <folder expanded="1" path="animation-folder/Sprite7/" />
+        <folder expanded="1" path="animation-folder/Sprite8/" />
+        <folder expanded="1" path="animation-folder/title/" />
+        <folder expanded="1" path="animation-folder/TraveOrizzontale/" />
+        <folder expanded="1" path="animation-folder/TraveOrizzontale2/" />
+        <folder expanded="1" path="animation-folder/testLvl/" />
+        <folder expanded="1" path="animation-folder/Cavaliere/" />
+        <folder expanded="1" path="animation-folder/Cavaliere2/" />
+        <folder expanded="1" path="animation-folder/Teschio/" />
+        <folder expanded="1" path="animation-folder/pedana/" />
+        <folder expanded="1" path="animation-folder/Quadro/" />
+        <folder expanded="1" path="animation-folder/Finestra/" />
+        <folder expanded="1" path="animation-folder/Libreria/" />
+        <folder expanded="1" path="animation-folder/Libreria2/" />
+        <folder expanded="1" path="animation-folder/Quadro2/" />
+        <folder expanded="1" path="animation-folder/Quadro3/" />
+        <folder expanded="1" path="animation-folder/Quadro4/" />
+        <folder expanded="1" path="animation-folder/Teschio2/" />
+        <folder expanded="1" path="animation-folder/Finestra2/" />
+        <folder expanded="1" path="animation-folder/vetrata/" />
+        <folder expanded="1" path="animation-folder/vetrata2/" />
+        <folder expanded="1" path="animation-folder/Statua/" />
+        <folder expanded="1" path="animation-folder/Statua2/" />
+        <folder expanded="1" path="animation-folder/BucoMuroLaterale/" />
+        <folder expanded="1" path="animation-folder/BucoMuroLaterale2/" />
+        <folder expanded="1" path="animation-folder/BucoMuroLateraleMuroCopriPersonaggio/" />
+        <folder expanded="1" path="animation-folder/BucoMuroLateraleMuroCopriPersonaggio2/" />
+        <folder expanded="1" path="animation-folder/Charger/" />
+        <folder expanded="1" path="animation-folder/ChargerArm/" />
+        <folder expanded="1" path="animation-folder/ChargerTrap/" />
+        <folder expanded="1" path="animation-folder/ChargerHead/" />
+        <folder expanded="1" path="animation-folder/ChargerSpawn/" />
+    </folders-expanded>
+</c2uistate>

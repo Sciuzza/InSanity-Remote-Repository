@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Charger</name>
+    <events>
+        <event-block sid="6772935651339478">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="6007474290277714" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="1410082540426184" type="Charger" />
+            </actions>
+        </event-block>
+        <event-group description="" sid="9886073759428402" title="Movement System">
+            <sub-events>
+                <event-block sid="238929628615972">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="9017829734024706" type="Player_Box">
+                            <param id="0" name="Object">ChargerTrap</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="1849395456235186" type="ChargerSpawn">
+                            <param id="0" name="Object">Charger</param>
+                            <param id="1" name="Layer">8</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="7722174699470304" type="ChargerTrap" />
+                    </actions>
+                </event-block>
+                <event-block sid="12009058190983">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="5520262015597041" type="Charger">
+                            <param id="0" name="Comparison">4</param>
+                            <param id="1" name="X co-ordinate">Player_Box.X</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="3294158063723313" type="Charger">
+                            <param id="0" name="Instance variable">isMoving</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="4608645586432191" type="Charger">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="2767673109747403" type="Charger">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="6001967287763493" type="ChargerArm">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2714823121799695">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="6007941458875268" type="Charger">
+                            <param id="0" name="Comparison">2</param>
+                            <param id="1" name="X co-ordinate">Player_Box.X</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="6499209669969275" type="Charger">
+                            <param id="0" name="Instance variable">isMoving</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="4696591464097781" type="Charger">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="6551273161342638" type="Charger">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="4535667375567784" type="ChargerArm">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9633620162636387">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="213060715334242" type="System">
+                            <param id="0" name="Interval (seconds)">random(1,3)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="1" name="Set max speed" sid="9102036732746689" type="Charger">
+                            <param id="0" name="Max Speed">random(80,200)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1306815513252336">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="5082541418321943" type="System">
+                            <param id="0" name="Interval (seconds)">dt</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="9758596972810739" type="ChargerHead">
+                            <param id="0" name="Object">Charger</param>
+                            <param id="1" name="Image point (optional)">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="5620142069917818" title="Charger Attack">
+            <sub-events>
+                <event-block sid="4156269119197647">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="8252540471714424" type="Charger">
+                            <param id="0" name="Object">Player_Box</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="4661110079648159" type="Player_Box">
+                            <param id="0" name="Instance variable">Dash</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="3611952654271377" type="Player_Box">
+                            <param id="0" name="Instance variable">Life</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7400291615678023">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="8744333678802504" type="Bullet_1_Player">
+                            <param id="0" name="Object">Charger</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="9018768736850155" type="Bullet_1_Player" />
+                    </actions>
+                </event-block>
+                <event-block sid="4514397417874887">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="4694644815542867" type="Bullet_1_Player">
+                            <param id="0" name="Object">ChargerHead</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="4443980683112081" type="Bullet_1_Player" />
+                        <action id="-12" name="Subtract from" sid="3359016154228036" type="ChargerHead">
+                            <param id="0" name="Instance variable">Life</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9045514158046365">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="6225341596746452" type="ChargerHead">
+                            <param id="0" name="Instance variable">Life</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="2987330964070857" type="Charger">
+                            <param id="0" name="Instance variable">isMoving</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="7012439341630306" type="Charger">
+                            <param id="0" name="Animation">&quot;Idle_whole&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6553739681056348">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="5622233723237368" type="ChargerHead">
+                            <param id="0" name="Instance variable">Life</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="4204722312362074" type="Charger">
+                            <param id="0" name="Instance variable">isMoving</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="5954035498220538" type="Charger">
+                            <param id="0" name="Animation">&quot;Idle_eye&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="494688320851391">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="6908987182834447" type="ChargerHead">
+                            <param id="0" name="Instance variable">Life</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="1208527473265361" type="Charger">
+                            <param id="0" name="Instance variable">isMoving</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="3204668887928002" type="Charger">
+                            <param id="0" name="Animation">&quot;Idle_no_eye&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
