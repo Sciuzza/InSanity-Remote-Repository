@@ -29,7 +29,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Sfondo_Intro" uid="1467">
+                <instance type="Sfondo_Intro" uid="1481">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -70,7 +70,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Text" uid="1455">
+                <instance type="Text" uid="1482">
                     <properties>
                         <text>Designers</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -97,7 +97,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text" uid="1456">
+                <instance type="Text" uid="1483">
                     <properties>
                         <text>Sergio Osimo [Lead]</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -124,7 +124,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text" uid="1457">
+                <instance type="Text" uid="1484">
                     <properties>
                         <text>Gonzalo Ponce de Leon</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -151,7 +151,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text" uid="1458">
+                <instance type="Text" uid="1485">
                     <properties>
                         <text>Matteo Micucci [Project Lead]</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -178,7 +178,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text" uid="1459">
+                <instance type="Text" uid="1486">
                     <properties>
                         <text>Thomas Palagi</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -205,7 +205,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text" uid="1460">
+                <instance type="Text" uid="1487">
                     <properties>
                         <text>Programmers</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -232,7 +232,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text" uid="1461">
+                <instance type="Text" uid="1617">
                     <properties>
                         <text>Cristiano Piromalli [Lead]</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -259,7 +259,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text" uid="1462">
+                <instance type="Text" uid="1618">
                     <properties>
                         <text>Lorenzo Bresciani</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -286,7 +286,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text" uid="1463">
+                <instance type="Text" uid="1619">
                     <properties>
                         <text>Artists</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -313,7 +313,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text" uid="1464">
+                <instance type="Text" uid="1620">
                     <properties>
                         <text>Matteo Bonetto [Lead]</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -340,7 +340,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text" uid="1465">
+                <instance type="Text" uid="1621">
                     <properties>
                         <text>Luca Previdi</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -367,7 +367,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text" uid="1454">
+                <instance type="Text" uid="1622">
                     <properties>
                         <text>Premi Esc per tornare al menù principale</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -394,7 +394,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="credits_title" uid="1466">
+                <instance type="credits_title" uid="1623">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
