@@ -3190,7 +3190,18 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6505986773248285" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.52381" hotspotY="0.511628" original-source="C:\Users\Drako-PC\Downloads\Caricamento_quarta_parte-2016-05-19\Caricamento quarta parte\Chiave boss.png">
+                            <collision-poly>
+                                <point x="0.333333" y="0.162791" />
+                                <point x="0.47619" y="0" />
+                                <point x="0.666667" y="0.162791" />
+                                <point x="0.571429" y="0.488372" />
+                                <point x="0.571429" y="0.790698" />
+                                <point x="0.47619" y="1" />
+                                <point x="0.142857" y="0.930233" />
+                                <point x="0.380952" y="0.488372" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -3254,10 +3265,10 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Rosso" pingpong="0" repeatcount="1" repeatto="0" sid="1085234116334646" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Drako-PC\Downloads\Caricamento_quarta_parte-2016-05-19\Caricamento quarta parte\Cristallo chiave roso.png" />
                     </animation>
                     <animation framecount="1" loop="0" name="Giallo" pingpong="0" repeatcount="1" repeatto="0" sid="7655135368571145" speed="5">
-                        <frame duration="1" hotspotX="-1" hotspotY="-1" original-source="C:\Users\dbga_23\Documents\Repository Database\InSanity Local\Project\Animations\CristalloEnigmaFinale\Verde\000.png">
+                        <frame duration="1" hotspotX="-1" hotspotY="-1" original-source="C:\Users\Drako-PC\Downloads\Caricamento_quarta_parte-2016-05-19\Caricamento quarta parte\Cristallo chiave verde.png">
                             <collision-poly>
                                 <point x="0.178571" y="0.0746269" />
                                 <point x="0.5" y="0.0746269" />
@@ -3271,7 +3282,7 @@
                         </frame>
                     </animation>
                     <animation framecount="1" loop="0" name="Blu" pingpong="0" repeatcount="1" repeatto="0" sid="2336835218420327" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Drako-PC\Downloads\Caricamento_quarta_parte-2016-05-19\Caricamento quarta parte\Cristallo chiave azzurro.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -3366,15 +3377,37 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8472369705149283" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Drako-PC\Downloads\Caricamento_quarta_parte-2016-05-19\Caricamento quarta parte\Cristallo azzurro.png">
+                            <collision-poly>
+                                <point x="0.177083" y="0.0745614" />
+                                <point x="0.5" y="0.0833333" />
+                                <point x="0.645833" y="0.149123" />
+                                <point x="0.927083" y="0.5" />
+                                <point x="0.791667" y="0.912281" />
+                                <point x="0.5" y="0.986842" />
+                                <point x="0.25" y="0.894737" />
+                                <point x="0.0416667" y="0.5" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="GabbiaGialla" sid="5700652689978519">
+            <object-type name="GabbiaVerde" sid="5700652689978519">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4983264132302067" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.502347" original-source="C:\Users\Drako-PC\Downloads\Caricamento_quarta_parte-2016-05-19\Caricamento quarta parte\Cristallo verde.png">
+                            <collision-poly>
+                                <point x="0.09375" y="0.0422535" />
+                                <point x="0.5" y="0.0328638" />
+                                <point x="0.729167" y="0.122066" />
+                                <point x="0.9375" y="0.497653" />
+                                <point x="0.791667" y="0.906103" />
+                                <point x="0.5" y="0.985915" />
+                                <point x="0.260417" y="0.882629" />
+                                <point x="0.0416667" y="0.497653" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -3382,7 +3415,18 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1083303519809708" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.505263" hotspotY="0.502242" original-source="C:\Users\Drako-PC\Downloads\Caricamento_quarta_parte-2016-05-19\Caricamento quarta parte\Cristallo rosso.png">
+                            <collision-poly>
+                                <point x="0.326316" y="0.139013" />
+                                <point x="0.494737" y="0.0403587" />
+                                <point x="0.821053" y="0.0762332" />
+                                <point x="0.968421" y="0.497758" />
+                                <point x="0.726316" y="0.883408" />
+                                <point x="0.494737" y="0.986547" />
+                                <point x="0.210526" y="0.910314" />
+                                <point x="0.0736842" y="0.497758" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -3808,7 +3852,7 @@
             </object-type>
             <object-type name="Tilemap" sid="4027029593588347">
                 <plugin id="Tilemap" />
-                <texture original-source="C:\Users\dbga_08\Downloads\Level_2-2016-05-17\Level 2\Muro Tile.png" />
+                <texture original-source="C:\Users\Drako-PC\Downloads\documents-export-2016-05-19\Muro Tile.png" />
                 <tiles />
             </object-type>
             <object-type name="title" sid="7841960847394966">
@@ -3842,6 +3886,53 @@
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6261163259137973" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_08\Downloads\Level_2-2016-05-17\Level 2\Trave orizzontale 01.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="CristalloEnigmaFinale2" sid="7252625923148092">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Rosso" pingpong="0" repeatcount="1" repeatto="0" sid="2582722174897129" speed="5">
+                        <frame duration="1" hotspotX="0.503448" hotspotY="0.5" original-source="C:\Users\Drako-PC\Downloads\Caricamento_quarta_parte-2016-05-19\Caricamento quarta parte\Cristallo chiave roso.png">
+                            <collision-poly>
+                                <point x="0.324138" y="0.22381" />
+                                <point x="0.496552" y="0.00952381" />
+                                <point x="0.744828" y="0.17619" />
+                                <point x="0.951724" y="0.5" />
+                                <point x="0.875862" y="0.914286" />
+                                <point x="0.496552" y="1" />
+                                <point x="0.158621" y="0.890476" />
+                                <point x="0.0206897" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Verde" pingpong="0" repeatcount="1" repeatto="0" sid="4577513539022187" speed="5">
+                        <frame duration="1" hotspotX="-1" hotspotY="-1" original-source="C:\Users\Drako-PC\Downloads\Caricamento_quarta_parte-2016-05-19\Caricamento quarta parte\Cristallo chiave verde.png">
+                            <collision-poly>
+                                <point x="0.178571" y="0.0746269" />
+                                <point x="0.5" y="0.0746269" />
+                                <point x="0.642857" y="0.149254" />
+                                <point x="0.928571" y="0.5" />
+                                <point x="0.785714" y="0.910448" />
+                                <point x="0.5" y="0.985075" />
+                                <point x="0.25" y="0.895522" />
+                                <point x="0.0357143" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Blu" pingpong="0" repeatcount="1" repeatto="0" sid="9645127296064937" speed="5">
+                        <frame duration="1" hotspotX="0.503448" hotspotY="0.5" original-source="C:\Users\Drako-PC\Downloads\Caricamento_quarta_parte-2016-05-19\Caricamento quarta parte\Cristallo chiave azzurro.png">
+                            <collision-poly>
+                                <point x="0.324138" y="0.22381" />
+                                <point x="0.496552" y="0.00952381" />
+                                <point x="0.744828" y="0.17619" />
+                                <point x="0.951724" y="0.5" />
+                                <point x="0.875862" y="0.914286" />
+                                <point x="0.496552" y="1" />
+                                <point x="0.158621" y="0.890476" />
+                                <point x="0.0206897" y="0.5" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -4327,6 +4418,81 @@
                     <frame duration="1" hotspotX="0.514286" hotspotY="0.5" original-source="C:\Users\dbga_08\Downloads\Elementi_livello-2016-05-19\Elementi livello\villa - porta 01.png" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_08\Downloads\Elementi_livello-2016-05-19\Elementi livello\villa - porta 02.png" />
                     <frame duration="1" hotspotX="0.571429" hotspotY="0.507246" original-source="C:\Users\dbga_08\Downloads\Elementi_livello-2016-05-19\Elementi livello\villa - porta 03.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PortaBossColonnaDietro" sid="1576513101585289">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="689386816807973" speed="5">
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.502994" original-source="C:\Users\Drako-PC\Downloads\Caricamento_quarta_parte-2016-05-19\Caricamento quarta parte\Porta boss - colonna dietro.png">
+                        <collision-poly>
+                            <point x="0.355556" y="0.0958084" />
+                            <point x="0.488889" y="0.0538922" />
+                            <point x="0.955556" y="0.011976" />
+                            <point x="0.666667" y="0.497006" />
+                            <point x="0.733333" y="0.928144" />
+                            <point x="0.488889" y="1" />
+                            <point x="0.0444444" y="0.988024" />
+                            <point x="0.0888889" y="0.497006" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PortaBossColonnaFronte" sid="3304305443328095">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8012935156672444" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.502732" original-source="C:\Users\Drako-PC\Downloads\Caricamento_quarta_parte-2016-05-19\Caricamento quarta parte\Porta boss - colonna fronte.png">
+                        <collision-poly>
+                            <point x="0.01" y="0.00546448" />
+                            <point x="0.5" y="0.010929" />
+                            <point x="0.62" y="0.20765" />
+                            <point x="1" y="0.497268" />
+                            <point x="0.62" y="0.79235" />
+                            <point x="0.5" y="1" />
+                            <point x="0.25" y="0.863388" />
+                            <point x="0.29" y="0.497268" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PortaBossPortone" sid="8275092747019573">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3227400515011864" speed="5">
+                    <frame duration="1" hotspotX="0.507937" hotspotY="0.503226" original-source="C:\Users\Drako-PC\Downloads\Caricamento_quarta_parte-2016-05-19\Caricamento quarta parte\Porta boss - portone.png">
+                        <collision-poly>
+                            <point x="0.174603" y="0.0709677" />
+                            <point x="0.492063" y="0.0387097" />
+                            <point x="0.857143" y="0.0580645" />
+                            <point x="0.920635" y="0.496774" />
+                            <point x="0.920635" y="0.967742" />
+                            <point x="0.174603" y="0.929032" />
+                            <point x="0.0793651" y="0.496774" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PortaBossLucchetto" sid="4330624691928087">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8744515241700756" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Drako-PC\Downloads\Caricamento_quarta_parte-2016-05-19\Caricamento quarta parte\Porta boss - lucchetto.png">
+                        <collision-poly>
+                            <point x="0.296875" y="0.24359" />
+                            <point x="0.5" y="0.141026" />
+                            <point x="0.71875" y="0.230769" />
+                            <point x="0.765625" y="0.5" />
+                            <point x="0.953125" y="0.961538" />
+                            <point x="0.5" y="0.871795" />
+                            <point x="0.28125" y="0.769231" />
+                            <point x="0.234375" y="0.5" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
