@@ -74,7 +74,7 @@
                     <properties>
                         <text>Designers</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Papyrus,-16,700,0</font>
+                        <font>Courier,-16,700,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -101,7 +101,7 @@
                     <properties>
                         <text>Sergio Osimo [Lead]</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Papyrus,-11,400,0</font>
+                        <font>DejaVu Sans Condensed,-11,400,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -128,7 +128,7 @@
                     <properties>
                         <text>Gonzalo Ponce de Leon</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Papyrus,-11,400,0</font>
+                        <font>DejaVu Sans Condensed,-11,400,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -155,7 +155,7 @@
                     <properties>
                         <text>Matteo Micucci [Project Lead]</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Papyrus,-11,400,0</font>
+                        <font>DejaVu Sans Condensed,-11,400,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -182,7 +182,7 @@
                     <properties>
                         <text>Thomas Palagi</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Papyrus,-11,400,0</font>
+                        <font>DejaVu Sans Condensed,-11,400,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -209,7 +209,7 @@
                     <properties>
                         <text>Programmers</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Papyrus,-16,700,0</font>
+                        <font>Courier,-16,700,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -236,7 +236,7 @@
                     <properties>
                         <text>Cristiano Piromalli [Lead]</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Papyrus,-11,400,0</font>
+                        <font>DejaVu Sans Condensed,-11,400,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -263,7 +263,7 @@
                     <properties>
                         <text>Lorenzo Bresciani</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Papyrus,-11,400,0</font>
+                        <font>DejaVu Sans Condensed,-11,400,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -290,7 +290,7 @@
                     <properties>
                         <text>Artists</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Papyrus,-16,700,0</font>
+                        <font>Courier,-16,700,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -317,7 +317,7 @@
                     <properties>
                         <text>Matteo Bonetto [Lead]</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Papyrus,-11,400,0</font>
+                        <font>DejaVu Sans Condensed,-11,400,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -344,7 +344,7 @@
                     <properties>
                         <text>Luca Previdi</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Papyrus,-11,400,0</font>
+                        <font>DejaVu Sans Condensed,-11,400,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -371,7 +371,7 @@
                     <properties>
                         <text>Premi Esc per tornare al menù principale</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Papyrus,-9,700,0</font>
+                        <font>Courier New,-9,700,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -383,7 +383,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>34.828964233</x>
-                        <y>269.921203613</y>
+                        <y>273.921203613</y>
                         <z>0</z>
                         <width>330.342071533</width>
                         <height>30.513168335</height>
@@ -394,7 +394,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="credits_title2" uid="1474">
+                <instance type="credits_title" uid="1643">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -404,14 +404,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>200.141998291</x>
-                        <y>45.368999481</y>
+                        <x>200.173370361</x>
+                        <y>38.717018127</y>
                         <z>0</z>
-                        <width>101.724998474</width>
-                        <height>25.823999405</height>
+                        <width>95.349182129</width>
+                        <height>32.592082977</height>
                         <depth>0</depth>
-                        <hotspotX>0.501650155</hotspotX>
-                        <hotspotY>0.506493509</hotspotY>
+                        <hotspotX>0.50181818</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

@@ -29,7 +29,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Tilemap" uid="1445">
+                <instance type="Tilemap" uid="1464">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <tile-width>64</tile-width>
@@ -61,7 +61,7 @@
                         <data>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0,1,1,0,0,0,0,5,0,0,0,0,0,5,0,0,0,0,0,5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,7,1,1,1,1,1,1,1,1,1,6,1,1,1,1,1,6,1,1,1,1,1,6,2,2,2,2,2,2,2,2,2,2,2,1,2,1,2,2,2,7,2,2,2,1,1,2,2,2,2,7,2,2,2,2,2,7,2,2,2,2,2,7,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,5,3,3,3,1,1,3,3,3,3,5,3,3,3,3,0,5,3,3,3,3,0,5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,6,1,1,1,1,1,1,1,1,1,6,1,1,1,1,1,6,1,1,1,1,1,6,2,2,2,2,2,2,2,2,2,2,2,2,1,1,2,0,2,7,2,2,2,1,1,2,2,2,2,7,2,2,2,2,2,7,2,2,2,2,2,7,3,3,3,3,3,3,3,3,3,3,3,1,1,1,3,3,3,5,3,3,3,5,3,3,3,3,3,5,3,3,3,3,0,5,3,3,3,3,0,5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,6,1,1,1,6,1,1,1,1,1,6,1,1,1,1,1,6,1,1,1,1,1,6,2,2,2,2,2,2,2,2,2,2,2,1,1,1,1,2,2,7,2,2,2,7,2,2,2,2,2,7,2,2,2,2,2,7,2,2,2,2,2,7,3,3,3,3,3,3,3,3,3,3,3,1,3,3,1,3,3,7,3,3,3,5,3,3,3,3,3,5,3,3,3,3,0,5,3,3,3,3,0,5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,1,1,1,6,1,1,1,1,1,6,1,1,1,1,1,6,1,1,1,1,1,6,2,2,2,2,2,2,2,2,2,2,1,1,1,1,2,2,2,6,2,2,2,7,2,2,2,2,2,7,2,2,2,2,2,7,2,2,2,2,2,7,3,3,3,3,3,3,3,3,3,3,3,1,1,1,1,3,3,7,3,3,3,5,3,3,3,3,3,5,3,3,3,3,0,5,3,3,3,3,0,8,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,1,1,1,6,1,1,1,1,1,6,1,1,1,1,1,6,1,1,1,1,1,9,2,2,2,2,2,2,2,2,2,2,2,1,2,2,1,2,2,6,2,2,2,7,2,2,2,2,2,7,2,2,2,2,2,7,2,2,2,2,0,5,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,7,3,3,3,5,3,3,3,3,3,5,3,3,3,3,0,5,3,3,3,3,0,5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,7,1,1,1,6,1,1,1,1,1,6,1,1,1,1,1,6,1,1,1,1,1,6,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,7,2,2,2,2,2,7,2,2,2,2,2,7,2,2,2,2,2,7,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,5,3,3,3,3,3,5,3,3,3,3,0,5,3,3,3,3,0,5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,6,1,1,1,1,1,6,1,1,1,1,1,6,1,1,1,1,1,6,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,7,2,2,2,2,2,7,2,2,2,2,2,7,2,2,2,2,2,7,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,5,4,4,4,4,4,5,3,3,3,3,0,5,3,3,3,3,0,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,1,1,1,1,1,7,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,6,2,2,2,2,2,8,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,3,3,3,0,9,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,1,1,1,1,1,6,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,2,2,2,2,2,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,0,0,0,0,0,5,3,3,3,3,0,5,3,3,3,3,0,5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,6,1,1,1,1,1,6,1,1,1,1,1,6,1,1,1,1,1,6,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,7,2,2,2,2,2,7,2,2,2,2,2,7,2,2,2,2,2,7,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,5,3,3,3,3,3,5,3,3,3,3,0,5,3,3,3,3,0,5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,6,1,1,1,1,1,6,1,1,1,1,1,6,1,1,1,1,1,6,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,7,2,2,2,2,2,7,2,2,2,2,2,7,2,2,2,2,2,7,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,5,3,3,3,3,3,5,3,3,3,3,0,5,3,3,3,3,0,5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,6,1,1,1,1,1,6,1,1,1,1,1,6,1,1,1,1,1,6,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,7,2,2,2,2,2,7,2,2,2,2,2,7,2,2,2,2,2,7,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,5,3,3,3,3,3,5,3,3,3,3,0,5,3,3,3,3,0,5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,6,1,1,1,1,1,6,1,1,1,1,1,6,1,1,1,1,1,6,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,7,2,2,2,2,2,7,2,2,2,2,2,7,2,2,2,2,2,7,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,5,3,3,3,3,3,5,3,3,3,3,0,5,3,3,3,3,0,5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,6,1,1,1,1,1,6,1,1,1,1,1,6,1,1,1,1,1,7,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,7,2,2,2,2,2,7,2,2,2,2,2,7,2,2,2,2,2,8,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,5,3,3,3,3,3,5,3,3,3,3,0,5,3,3,3,3,0,9,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,6,1,1,1,1,1,6,1,1,1,1,1,6,1,1,1,1,1,6,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,7,2,2,2,2,2,7,2,2,2,2,2,7,2,2,2,2,2,7,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,4,4,4,4,5,4,4,4,4,4,6,4,4,4,4,1,6,4,4,4,4,0,5</data>
                     </tilemap-data>
                 </instance>
-                <instance type="BossTesta" uid="1446">
+                <instance type="BossTesta" uid="1465">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -83,7 +83,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="BossCervello" uid="1447">
+                <instance type="BossCervello" uid="1466">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -105,7 +105,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="BossGambaSx" uid="1448">
+                <instance type="BossGambaSx" uid="1467">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -127,7 +127,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="BossCappello" uid="1449">
+                <instance type="BossCappello" uid="1468">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -149,7 +149,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="BossOcchioDx" uid="1450">
+                <instance type="BossOcchioDx" uid="1469">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -171,7 +171,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="BossGambaSx2" uid="1451">
+                <instance type="BossGambaSx2" uid="1470">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -193,7 +193,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite16" uid="1452">
+                <instance type="Sprite16" uid="1471">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -215,7 +215,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="BossOcchioSx" uid="1453">
+                <instance type="BossOcchioSx" uid="1472">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -237,7 +237,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="BossBraccioDx" uid="1454">
+                <instance type="BossBraccioDx" uid="1473">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -259,7 +259,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="BossBraccioDx2" uid="1455">
+                <instance type="BossBraccioDx2" uid="1474">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -281,7 +281,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite16" uid="1456">
+                <instance type="Sprite16" uid="1475">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -303,7 +303,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Bullet_1_Player" uid="1457">
+                <instance type="Bullet_1_Player" uid="1476">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -321,7 +321,6 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
-                        <behavior-instance type="DestroyOutsideLayout" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -338,7 +337,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Bullet_S_Player" uid="1458">
+                <instance type="Bullet_S_Player" uid="1477">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -372,7 +371,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Player_arm" uid="1459">
+                <instance type="Player_arm" uid="1478">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -403,7 +402,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Player_Box" uid="1460">
+                <instance type="Player_Box" uid="1479">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -433,7 +432,6 @@
                         <First_Phase_Triggered>false</First_Phase_Triggered>
                         <Bridge_Destroyed>false</Bridge_Destroyed>
                         <Level_2_Phases>0</Level_2_Phases>
-                        <Is_Dead>false</Is_Dead>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -468,7 +466,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Camera" uid="1461">
+                <instance type="Camera" uid="1480">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -498,7 +496,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="SolidObjects" uid="1462">
+                <instance type="SolidObjects" uid="1481">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -547,7 +545,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="BossBusto" uid="1463">
+                <instance type="BossBusto" uid="1482">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -569,7 +567,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="BossBraccioSx" uid="1464">
+                <instance type="BossBraccioSx" uid="1483">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1534,7 +1532,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite8" uid="1465">
+                <instance type="Sprite8" uid="1484">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1556,7 +1554,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite8" uid="1466">
+                <instance type="Sprite8" uid="1485">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1578,7 +1576,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite8" uid="1467">
+                <instance type="Sprite8" uid="1486">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1600,7 +1598,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite8" uid="1468">
+                <instance type="Sprite8" uid="1487">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1622,7 +1620,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite8" uid="1469">
+                <instance type="Sprite8" uid="1617">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1644,7 +1642,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite8" uid="1470">
+                <instance type="Sprite8" uid="1618">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1666,7 +1664,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite8" uid="1471">
+                <instance type="Sprite8" uid="1619">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1688,7 +1686,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite8" uid="1472">
+                <instance type="Sprite8" uid="1620">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -2072,7 +2070,7 @@
                         <opacity>0.5</opacity>
                     </world>
                 </instance>
-                <instance type="Player_Frame" uid="1473">
+                <instance type="Player_Frame" uid="1621">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -2165,7 +2163,6 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
-                        <behavior-instance type="DestroyOutsideLayout" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>

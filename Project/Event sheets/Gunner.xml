@@ -3,27 +3,15 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Gunner</name>
     <events>
+        <variable constant="0" name="UIDGunner" sid="9909483575375046" static="0" type="number">0</variable>
         <variable constant="0" name="enemyRange" sid="376835598564444" static="0" type="number">50</variable>
         <event-group description="" sid="6536710278078746" title="Start Setup">
             <sub-events>
                 <event-block sid="5946792038180888">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="5038448824040323" type="System" />
-                        <condition id="-11" name="For Each" sid="6974337511310184" type="System">
-                            <param id="0" name="Object">Gunner</param>
-                        </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" sid="7351026692219539" type="AngleHelper2" />
-                        <action id="0" name="Spawn another object" sid="2355832058454214" type="Gunner">
-                            <param id="0" name="Object">AngleHelper2</param>
-                            <param id="1" name="Layer">10</param>
-                            <param id="2" name="Image point">1</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="4574838431621849" type="AngleHelper2">
-                            <param id="0" name="Instance variable">parent</param>
-                            <param id="1" name="Value">Gunner.UID</param>
-                        </action>
                         <action id="-9" name="Destroy" sid="2577719407223943" type="GunnerBullet" />
                     </actions>
                 </event-block>
@@ -33,16 +21,7 @@
                             <param id="0" name="Interval (seconds)">dt</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-22" name="Set angle toward position" sid="9157191631050252" type="AngleHelper2">
-                            <param id="0" name="X">Player_Box.X</param>
-                            <param id="1" name="Y">Player_Box.Y - 20</param>
-                        </action>
-                        <action id="-4" name="Set position to another object" sid="3732510266883921" type="AngleHelper2">
-                            <param id="0" name="Object">Gunner</param>
-                            <param id="1" name="Image point (optional)">1</param>
-                        </action>
-                    </actions>
+                    <actions />
                 </event-block>
             </sub-events>
         </event-group>
@@ -92,7 +71,6 @@
         </event-group>
         <event-group description="" sid="933845398846658" title="A.I. Part">
             <sub-events>
-                <comment>Movement part</comment>
                 <comment>Shooting Part</comment>
                 <event-block sid="6894769440441822">
                     <conditions>
@@ -100,18 +78,13 @@
                             <param id="0" name="Object">Player_Box</param>
                         </condition>
                         <condition id="-6" name="Every X seconds" sid="8301004518799558" type="System">
-                            <param id="0" name="Interval (seconds)">random(1,2)</param>
+                            <param id="0" name="Interval (seconds)">1.5</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="1519795031472552" type="Gunner">
+                            <param id="0" name="Instance variable">isShooting</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Spawn another object" sid="7542294643358075" type="AngleHelper2">
-                            <param id="0" name="Object">GunnerBullet</param>
-                            <param id="1" name="Layer">10</param>
-                            <param id="2" name="Image point">0</param>
-                        </action>
-                        <action id="-8" name="Set angle" sid="691935902020507" type="GunnerBullet">
-                            <param id="0" name="Angle">AngleHelper2.Angle</param>
-                        </action>
                         <action id="-10" name="Set value" sid="2044047405393127" type="Gunner">
                             <param id="0" name="Instance variable">firetimer</param>
                             <param id="1" name="Value">Self.firerate</param>
@@ -119,6 +92,15 @@
                         <action id="-10" name="Set value" sid="6126349450422213" type="Gunner">
                             <param id="0" name="Instance variable">firetimer</param>
                             <param id="1" name="Value">max(0, Gunner.firetimer - dt)</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="8481056939813902" type="Gunner">
+                            <param id="0" name="Object">GunnerBullet</param>
+                            <param id="1" name="Layer">10</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action id="-22" name="Set angle toward position" sid="9760019864001496" type="GunnerBullet">
+                            <param id="0" name="X">Player_Box.X</param>
+                            <param id="1" name="Y">Player_Box.Y- 20</param>
                         </action>
                     </actions>
                 </event-block>
@@ -184,6 +166,16 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="9372965658700455">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="441920387780234" type="Gunner">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
                 <comment>Animation </comment>
                 <event-block sid="7705296856881437">
                     <conditions>
@@ -237,8 +229,10 @@
                             <param id="0" name="Animation">&quot;No_Arms_Idle&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action id="-9" name="Destroy" sid="2852315608729598" type="AngleHelper2" />
-                        <action id="-9" name="Destroy" sid="3494891165892123" type="GunnerArm2" />
+                        <action id="-13" name="Set boolean" sid="9113737819074448" type="Gunner">
+                            <param id="0" name="Instance variable">isShooting</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="2003689304229427">
@@ -293,8 +287,10 @@
                             <param id="0" name="Animation">&quot;No_Arms_Walk&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action id="-9" name="Destroy" sid="7864404265680645" type="AngleHelper2" />
-                        <action id="-9" name="Destroy" sid="6342665022570801" type="GunnerArm2" />
+                        <action id="-13" name="Set boolean" sid="7427444970351338" type="Gunner">
+                            <param id="0" name="Instance variable">isShooting</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="3941129284412686">
@@ -312,6 +308,14 @@
                         </action>
                         <action behavior="Platform" id="1" name="Set max speed" sid="7309327262547284" type="Gunner">
                             <param id="0" name="Max Speed">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="8171131919705555" type="Gunner">
+                            <param id="0" name="Instance variable">isMoving</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="7409398361621054" type="Gunner">
+                            <param id="0" name="Instance variable">isShooting</param>
+                            <param id="1" name="Value">0</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -386,5 +390,6 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" sid="4364842979435057" title="Spawn System" />
     </events>
 </c2eventsheet>
