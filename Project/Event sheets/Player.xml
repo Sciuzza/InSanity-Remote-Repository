@@ -825,7 +825,7 @@
                     </conditions>
                     <actions>
                         <action behavior="Timer" id="0" name="Start timer" sid="5265732955670155" type="Player_Box">
-                            <param id="0" name="Duration">2</param>
+                            <param id="0" name="Duration">1</param>
                             <param id="1" name="Type">0</param>
                             <param id="2" name="Tag">&quot;Reloading&quot;</param>
                         </action>
@@ -848,7 +848,7 @@
                     </conditions>
                     <actions>
                         <action behavior="Timer" id="0" name="Start timer" sid="2589600141053151" type="Player_Box">
-                            <param id="0" name="Duration">2</param>
+                            <param id="0" name="Duration">1</param>
                             <param id="1" name="Type">0</param>
                             <param id="2" name="Tag">&quot;Reloading&quot;</param>
                         </action>

@@ -27433,7 +27433,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Libreria2" uid="339">
+                <instance type="Libreria2" uid="349">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -27455,7 +27455,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Cavaliere" uid="349">
+                <instance type="Cavaliere" uid="351">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -30311,8 +30311,8 @@
                         <x>-126</x>
                         <y>2214</y>
                         <z>0</z>
-                        <width>16</width>
-                        <height>37</height>
+                        <width>40</width>
+                        <height>40</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>1</hotspotY>
@@ -30411,10 +30411,10 @@
                         <x>-71</x>
                         <y>2647</y>
                         <z>0</z>
-                        <width>5</width>
+                        <width>9</width>
                         <height>4</height>
                         <depth>0</depth>
-                        <hotspotX>0.800000012</hotspotX>
+                        <hotspotX>0</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
