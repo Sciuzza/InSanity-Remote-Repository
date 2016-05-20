@@ -4,8 +4,8 @@
     <sid>1202606892839822</sid>
     <event-sheet>Cutscene Start Sheet</event-sheet>
     <size>
-        <width>400</width>
-        <height>300</height>
+        <width>480</width>
+        <height>360</height>
     </size>
     <margins>
         <horizontal>500</horizontal>
@@ -29,7 +29,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="EndLevelBG" uid="1688">
+                <instance type="EndLevelBG" uid="1693">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -39,11 +39,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>200</x>
-                        <y>150</y>
+                        <x>240</x>
+                        <y>180</y>
                         <z>0</z>
-                        <width>400</width>
-                        <height>300</height>
+                        <width>480</width>
+                        <height>360</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -70,7 +70,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="IntroText7" uid="1689">
+                <instance type="IntroText7" uid="1694">
                     <properties>
                         <text>Tutto iniziò quando la mia amata mi chiamò ...</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -96,8 +96,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>69.5</x>
-                        <y>113.039405823</y>
+                        <x>52.5</x>
+                        <y>145.260177612</y>
                         <z>0</z>
                         <width>261</width>
                         <height>73.921188354</height>
@@ -108,7 +108,7 @@
                         <opacity>0</opacity>
                     </world>
                 </instance>
-                <instance type="cristalloRosso" uid="1690">
+                <instance type="cristalloRosso" uid="1695">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -129,8 +129,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>311.378723145</x>
-                        <y>136.308059692</y>
+                        <x>364.813232422</x>
+                        <y>183.592163086</y>
                         <z>0</z>
                         <width>34.968643188</width>
                         <height>83.674964905</height>
@@ -141,7 +141,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="dash" uid="1691">
+                <instance type="dash" uid="1696">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -162,8 +162,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>309</x>
-                        <y>133</y>
+                        <x>362.434509277</x>
+                        <y>180.284118652</y>
                         <z>0</z>
                         <width>40</width>
                         <height>40</height>
@@ -174,7 +174,7 @@
                         <opacity>0.600000024</opacity>
                     </world>
                 </instance>
-                <instance type="IntroText1" uid="1692">
+                <instance type="IntroText1" uid="1697">
                     <properties>
                         <text>Sono mesi che mi torturano ...</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -200,8 +200,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>37</x>
-                        <y>14</y>
+                        <x>68.25</x>
+                        <y>37.592163086</y>
                         <z>0</z>
                         <width>206</width>
                         <height>30</height>
@@ -212,7 +212,7 @@
                         <opacity>0</opacity>
                     </world>
                 </instance>
-                <instance type="IntroText2" uid="1693">
+                <instance type="IntroText2" uid="1698">
                     <properties>
                         <text>... cosa avrei dovuto fare?!</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -238,8 +238,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>39</x>
-                        <y>55</y>
+                        <x>70.25</x>
+                        <y>78.592163086</y>
                         <z>0</z>
                         <width>200</width>
                         <height>30</height>
@@ -250,7 +250,7 @@
                         <opacity>0</opacity>
                     </world>
                 </instance>
-                <instance type="IntroText3" uid="1694">
+                <instance type="IntroText3" uid="1699">
                     <properties>
                         <text>Ho perso tutto ciò che avevo …</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -276,8 +276,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>24</x>
-                        <y>97</y>
+                        <x>55.25</x>
+                        <y>124.22077179</y>
                         <z>0</z>
                         <width>233</width>
                         <height>30</height>
@@ -288,7 +288,7 @@
                         <opacity>0</opacity>
                     </world>
                 </instance>
-                <instance type="IntroText4" uid="1695">
+                <instance type="IntroText4" uid="1700">
                     <properties>
                         <text>... e nessuno vuole ascoltarmi ...</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -314,8 +314,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>7</x>
-                        <y>136</y>
+                        <x>39.25</x>
+                        <y>163.220779419</y>
                         <z>0</z>
                         <width>261</width>
                         <height>30</height>
@@ -326,7 +326,7 @@
                         <opacity>0</opacity>
                     </world>
                 </instance>
-                <instance type="IntroText5" uid="1696">
+                <instance type="IntroText5" uid="1701">
                     <properties>
                         <text>Forse tu ...</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -352,8 +352,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>15</x>
-                        <y>179</y>
+                        <x>46.25</x>
+                        <y>206.220779419</y>
                         <z>0</z>
                         <width>261</width>
                         <height>30</height>
@@ -364,7 +364,7 @@
                         <opacity>0</opacity>
                     </world>
                 </instance>
-                <instance type="IntroText6" uid="1697">
+                <instance type="IntroText6" uid="1702">
                     <properties>
                         <text>... tu capirai ...</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -390,8 +390,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>69.5</x>
-                        <y>222</y>
+                        <x>109.5</x>
+                        <y>249.220779419</y>
                         <z>0</z>
                         <width>261</width>
                         <height>38</height>
@@ -402,7 +402,7 @@
                         <opacity>0</opacity>
                     </world>
                 </instance>
-                <instance type="ContinueText" uid="1698">
+                <instance type="ContinueText" uid="1703">
                     <properties>
                         <text>Premi Barra Spaziatrice per continuare</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -418,7 +418,7 @@
                         <behavior-instance type="Fade">
                             <properties>
                                 <active-at-start>No</active-at-start>
-                                <fade-in-time>2</fade-in-time>
+                                <fade-in-time>1</fade-in-time>
                                 <wait-time>0</wait-time>
                                 <fade-out-time>0</fade-out-time>
                                 <destroy>After fade out</destroy>
@@ -428,8 +428,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>90.763122559</x>
-                        <y>269.801879883</y>
+                        <x>130.763122559</x>
+                        <y>297.022644043</y>
                         <z>0</z>
                         <width>218.473770142</width>
                         <height>30.513168335</height>

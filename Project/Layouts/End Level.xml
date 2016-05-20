@@ -4,8 +4,8 @@
     <sid>7367044278067602</sid>
     <event-sheet>End Level Sheet</event-sheet>
     <size>
-        <width>400</width>
-        <height>300</height>
+        <width>480</width>
+        <height>360</height>
     </size>
     <margins>
         <horizontal>500</horizontal>
@@ -29,7 +29,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="EndLevelBG" uid="1619">
+                <instance type="EndLevelBG" uid="1620">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -39,11 +39,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>200</x>
-                        <y>150</y>
+                        <x>240</x>
+                        <y>180</y>
                         <z>0</z>
-                        <width>400</width>
-                        <height>300</height>
+                        <width>480</width>
+                        <height>360</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -70,7 +70,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="exit_unsel" uid="1620">
+                <instance type="exit_unsel" uid="1621">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -80,8 +80,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>200.298828125</x>
-                        <y>254.608001709</y>
+                        <x>241.73840332</x>
+                        <y>276.608001709</y>
                         <z>0</z>
                         <width>184.679779053</width>
                         <height>22.711429596</height>
@@ -92,7 +92,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="restart_unsel" uid="1621">
+                <instance type="restart_unsel" uid="1643">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -102,8 +102,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>199.999984741</x>
-                        <y>217.981002808</y>
+                        <x>241.439544678</x>
+                        <y>239.981002808</y>
                         <z>0</z>
                         <width>136.302154541</width>
                         <height>22.717025757</height>
@@ -114,7 +114,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text2" uid="1643">
+                <instance type="Text2" uid="1668">
                     <properties>
                         <text>Tempo Trascorso</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -129,8 +129,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>16.629999161</x>
-                        <y>83.435997009</y>
+                        <x>58.069564819</x>
+                        <y>94.435997009</y>
                         <z>0</z>
                         <width>125.782859802</width>
                         <height>30</height>
@@ -141,7 +141,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text2" uid="1664">
+                <instance type="Text2" uid="1669">
                     <properties>
                         <text>Nemici Uccisi</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -156,8 +156,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>137.108581543</x>
-                        <y>83.435783386</y>
+                        <x>178.548156738</x>
+                        <y>94.435783386</y>
                         <z>0</z>
                         <width>125.782859802</width>
                         <height>30</height>
@@ -168,7 +168,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text2" uid="1665">
+                <instance type="Text2" uid="1675">
                     <properties>
                         <text>Ricordi Raccolti</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -183,8 +183,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>254.708007813</x>
-                        <y>83.435997009</y>
+                        <x>296.147583008</x>
+                        <y>94.435997009</y>
                         <z>0</z>
                         <width>125.782859802</width>
                         <height>30</height>
@@ -195,7 +195,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TimeText" uid="1666">
+                <instance type="TimeText" uid="1676">
                     <properties>
                         <text>00:00</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -210,8 +210,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>38.290267944</x>
-                        <y>113.122711182</y>
+                        <x>79.72983551</x>
+                        <y>124.122711182</y>
                         <z>0</z>
                         <width>82.52520752</width>
                         <height>30</height>
@@ -222,7 +222,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="EnemiesText" uid="1667">
+                <instance type="EnemiesText" uid="1677">
                     <properties>
                         <text>0</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -237,8 +237,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>158.73739624</x>
-                        <y>113.123001099</y>
+                        <x>200.176971436</x>
+                        <y>124.123001099</y>
                         <z>0</z>
                         <width>82.52520752</width>
                         <height>30</height>
@@ -249,7 +249,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="EnemiesText2" uid="1668">
+                <instance type="EnemiesText2" uid="1678">
                     <properties>
                         <text>0/3</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -264,8 +264,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>277.114990234</x>
-                        <y>113.123001099</y>
+                        <x>318.55456543</x>
+                        <y>124.123001099</y>
                         <z>0</z>
                         <width>82.52520752</width>
                         <height>30</height>
@@ -276,7 +276,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="restart_sel" uid="1669">
+                <instance type="restart_sel" uid="1679">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -286,8 +286,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>200</x>
-                        <y>217.981323242</y>
+                        <x>241.439575195</x>
+                        <y>239.981323242</y>
                         <z>0</z>
                         <width>136.302154541</width>
                         <height>22.717025757</height>
@@ -298,7 +298,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="continue_unsel" uid="1675">
+                <instance type="continue_unsel" uid="1680">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -308,8 +308,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>200.324356079</x>
-                        <y>181.687438965</y>
+                        <x>241.763916016</x>
+                        <y>203.687438965</y>
                         <z>0</z>
                         <width>75.898880005</width>
                         <height>22.70479393</height>
@@ -320,7 +320,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="continue_sel" uid="1676">
+                <instance type="continue_sel" uid="1681">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -330,8 +330,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>198.203582764</x>
-                        <y>182.534912109</y>
+                        <x>239.643157959</x>
+                        <y>204.534912109</y>
                         <z>0</z>
                         <width>75.898880005</width>
                         <height>22.70479393</height>
@@ -342,7 +342,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="exit_sel" uid="1677">
+                <instance type="exit_sel" uid="1682">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -352,8 +352,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>200.298828125</x>
-                        <y>254.608459473</y>
+                        <x>241.73840332</x>
+                        <y>276.608459473</y>
                         <z>0</z>
                         <width>184.679779053</width>
                         <height>22.711429596</height>
@@ -364,7 +364,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="endlevel_title" uid="1678">
+                <instance type="endlevel_title" uid="1683">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -374,7 +374,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>200.141891479</x>
+                        <x>241.581451416</x>
                         <y>45.369407654</y>
                         <z>0</z>
                         <width>229.007781982</width>

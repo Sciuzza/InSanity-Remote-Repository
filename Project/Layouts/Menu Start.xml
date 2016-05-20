@@ -4,8 +4,8 @@
     <sid>2295821255017317</sid>
     <event-sheet>Menu Start Sheet</event-sheet>
     <size>
-        <width>400</width>
-        <height>300</height>
+        <width>480</width>
+        <height>360</height>
     </size>
     <margins>
         <horizontal>500</horizontal>
@@ -39,11 +39,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-399.195648193</x>
-                        <y>149.895812988</y>
+                        <x>-481.721405029</x>
+                        <y>180.025588989</y>
                         <z>0</z>
-                        <width>1600.129516602</width>
-                        <height>300.024291992</height>
+                        <width>1924.089355469</width>
+                        <height>360.76675415</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -80,8 +80,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>200.296005249</x>
-                        <y>123.649002075</y>
+                        <x>240.296005249</x>
+                        <y>147.649002075</y>
                         <z>0</z>
                         <width>106.085983276</width>
                         <height>23.113704681</height>
@@ -102,8 +102,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>200</x>
-                        <y>219.761993408</y>
+                        <x>240</x>
+                        <y>243.761993408</y>
                         <z>0</z>
                         <width>61.569999695</width>
                         <height>22.61700058</height>
@@ -124,8 +124,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>200</x>
-                        <y>173.31199646</y>
+                        <x>240</x>
+                        <y>197.31199646</y>
                         <z>0</z>
                         <width>135.23600769</width>
                         <height>22.539335251</height>
@@ -146,8 +146,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>200.296005249</x>
-                        <y>123.649002075</y>
+                        <x>240.29598999</x>
+                        <y>147.649002075</y>
                         <z>0</z>
                         <width>106.086204529</width>
                         <height>23.114110947</height>
@@ -168,8 +168,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>200</x>
-                        <y>173.31199646</y>
+                        <x>240</x>
+                        <y>197.31199646</y>
                         <z>0</z>
                         <width>135.235992432</width>
                         <height>22.538999557</height>
@@ -190,7 +190,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>200.22277832</x>
+                        <x>240.22277832</x>
                         <y>54.44519043</y>
                         <z>0</z>
                         <width>145.693634033</width>
@@ -212,8 +212,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>200</x>
-                        <y>219.761993408</y>
+                        <x>240</x>
+                        <y>243.761993408</y>
                         <z>0</z>
                         <width>61.569709778</width>
                         <height>22.617444992</height>

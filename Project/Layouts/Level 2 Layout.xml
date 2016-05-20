@@ -27433,7 +27433,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Libreria2" uid="339">
+                <instance type="Libreria2" uid="349">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -27455,7 +27455,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Cavaliere" uid="349">
+                <instance type="Cavaliere" uid="351">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
