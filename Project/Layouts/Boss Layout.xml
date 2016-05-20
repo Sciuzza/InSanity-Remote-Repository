@@ -411,6 +411,8 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
+                        <Life>3</Life>
+                        <Checkpoint>0</Checkpoint>
                         <Dash>false</Dash>
                         <Dash_Speed>1300</Dash_Speed>
                         <Dash_Time>0.1</Dash_Time>
@@ -421,19 +423,17 @@
                         <Weapon_Max_Loader>4</Weapon_Max_Loader>
                         <Reloading>false</Reloading>
                         <Stun_Ability>false</Stun_Ability>
-                        <Life>3</Life>
-                        <Checkpoint>0</Checkpoint>
                         <Jump_Is_On>true</Jump_Is_On>
                         <Dash_Is_On>true</Dash_Is_On>
                         <Side_Movement_Is_On>true</Side_Movement_Is_On>
                         <Weapon_Is_On>true</Weapon_Is_On>
                         <Mouse_Look_Is_On>true</Mouse_Look_Is_On>
                         <Stun_Is_On>true</Stun_Is_On>
-                        <Level_1_Phases>0</Level_1_Phases>
                         <First_Phase_Triggered>false</First_Phase_Triggered>
                         <Bridge_Destroyed>false</Bridge_Destroyed>
-                        <Level_2_Phases>0</Level_2_Phases>
                         <Is_Dead>false</Is_Dead>
+                        <Level_1_Phases>0</Level_1_Phases>
+                        <Level_2_Phases>-1</Level_2_Phases>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">

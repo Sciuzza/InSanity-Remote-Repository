@@ -3,17 +3,19 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Level 2</name>
     <events>
-        <include>Charger</include>
         <include>Player</include>
-        <include>Gunner</include>
-        <include>Bat</include>
         <event-group description="" sid="1446204873969873" title="Starting Setup Level 2">
             <sub-events>
                 <event-block sid="2578436640526765">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="9020802935763986" type="System" />
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="-10" name="Set value" sid="4168916374519021" type="Player_Box">
+                            <param id="0" name="Instance variable">Level_2_Phases</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
                     <sub-events>
                         <event-block sid="9890456511206512">
                             <conditions>
@@ -64,27 +66,45 @@
                                     <param id="0" name="Name">&quot;Player Stop&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
-                                <action id="-3" name="Set position" sid="7066386173027625" type="Camera">
-                                    <param id="0" name="X">lerp(Self.X,1660,0.02)</param>
-                                    <param id="1" name="Y">lerp(Self.Y,2206,0.02)</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="1815096721343271">
-                            <conditions>
-                                <condition id="-1" name="Compare X" sid="1700214387476983" type="Camera">
-                                    <param id="0" name="Comparison">3</param>
-                                    <param id="1" name="X co-ordinate">1660</param>
-                                </condition>
-                                <condition id="-2" name="Compare Y" sid="3517563028810585" type="Camera">
-                                    <param id="0" name="Comparison">3</param>
-                                    <param id="1" name="Y co-ordinate">2206</param>
-                                </condition>
-                            </conditions>
-                            <actions>
                                 <action id="-10" name="Set value" sid="906659163528177" type="Player_Box">
                                     <param id="0" name="Instance variable">Level_2_Phases</param>
                                     <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="6467188182631199">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="8761365316982022" type="Player_Box">
+                            <param id="0" name="Instance variable">Level_2_Phases</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="7066386173027625" type="Camera">
+                            <param id="0" name="X">lerp(Self.X,1660,0.06)</param>
+                            <param id="1" name="Y">lerp(Self.Y,2206,0.06)</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="6760232226138128">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="8227492927403728" type="Camera">
+                                    <param id="0" name="Comparison">3</param>
+                                    <param id="1" name="X co-ordinate">1660</param>
+                                </condition>
+                                <condition id="-2" name="Compare Y" sid="91058769925798" type="Camera">
+                                    <param id="0" name="Comparison">3</param>
+                                    <param id="1" name="Y co-ordinate">2206</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="8823259659416074" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="5181405505705527" type="Player_Box">
+                                    <param id="0" name="Instance variable">Level_2_Phases</param>
+                                    <param id="1" name="Value">2</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -95,7 +115,7 @@
                         <condition id="-7" name="Compare instance variable" sid="7000661646590556" type="Player_Box">
                             <param id="0" name="Instance variable">Level_2_Phases</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
+                            <param id="2" name="Value">2</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -111,6 +131,7 @@
                                     <param id="0" name="Comparison">5</param>
                                     <param id="1" name="Y co-ordinate">2207</param>
                                 </condition>
+                                <condition id="-4" name="Trigger once while true" sid="7588718516684251" type="System" />
                             </conditions>
                             <actions>
                                 <action id="-10" name="Set value" sid="3834331391716643" type="Player_Box">
@@ -142,6 +163,7 @@
                                     <param id="0" name="Comparison">5</param>
                                     <param id="1" name="X co-ordinate">1794</param>
                                 </condition>
+                                <condition id="-4" name="Trigger once while true" sid="8266267778429775" type="System" />
                             </conditions>
                             <actions>
                                 <action id="-10" name="Set value" sid="2595196468932315" type="Player_Box">
@@ -186,24 +208,16 @@
                         </event-block>
                         <event-block sid="652870891150836">
                             <conditions>
-                                <condition id="-1" name="Compare X" sid="7438780853861994" type="Camera">
-                                    <param id="0" name="Comparison">3</param>
-                                    <param id="1" name="X co-ordinate">1660</param>
-                                </condition>
-                                <condition id="-2" name="Compare Y" sid="2801177962634882" type="Camera">
-                                    <param id="0" name="Comparison">3</param>
-                                    <param id="1" name="Y co-ordinate">2206</param>
-                                </condition>
-                                <condition id="-8" name="Compare two values" sid="7415290899801983" type="System">
-                                    <param id="0" name="First value">Camera.X</param>
+                                <condition id="-8" name="Compare two values" sid="4097960828280392" type="System">
+                                    <param id="0" name="First value">abs(Camera.X - Player_Box.X)</param>
                                     <param id="1" name="Comparison">3</param>
-                                    <param id="2" name="Second value">0</param>
+                                    <param id="2" name="Second value">50</param>
                                 </condition>
                             </conditions>
                             <actions>
                                 <action id="-10" name="Set value" sid="6949172172716657" type="Player_Box">
                                     <param id="0" name="Instance variable">Level_2_Phases</param>
-                                    <param id="1" name="Value">1</param>
+                                    <param id="1" name="Value">5</param>
                                 </action>
                             </actions>
                         </event-block>

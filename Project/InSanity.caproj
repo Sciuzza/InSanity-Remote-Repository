@@ -1583,6 +1583,8 @@
             <object-type name="Player_Box" sid="8534937278847791">
                 <plugin id="Sprite" />
                 <instance-variables>
+                    <instance-variable name="Life" sid="3845622154724521" type="number" />
+                    <instance-variable name="Checkpoint" sid="294932483512246" type="number" />
                     <instance-variable name="Dash" sid="6826631774586031" type="boolean" />
                     <instance-variable name="Dash_Speed" sid="2456396320476892" type="number" />
                     <instance-variable name="Dash_Time" sid="8688270445844714" type="number" />
@@ -1593,19 +1595,17 @@
                     <instance-variable name="Weapon_Max_Loader" sid="6165655732176725" type="number" />
                     <instance-variable name="Reloading" sid="998972045539483" type="boolean" />
                     <instance-variable name="Stun_Ability" sid="1945475441277138" type="boolean" />
-                    <instance-variable name="Life" sid="3845622154724521" type="number" />
-                    <instance-variable name="Checkpoint" sid="294932483512246" type="number" />
                     <instance-variable name="Jump_Is_On" sid="1795983416350465" type="boolean" />
                     <instance-variable name="Dash_Is_On" sid="1879918981139579" type="boolean" />
                     <instance-variable name="Side_Movement_Is_On" sid="3035546929993088" type="boolean" />
                     <instance-variable name="Weapon_Is_On" sid="848793439590951" type="boolean" />
                     <instance-variable name="Mouse_Look_Is_On" sid="8848278697414034" type="boolean" />
                     <instance-variable name="Stun_Is_On" sid="5933630748220251" type="boolean" />
-                    <instance-variable name="Level_1_Phases" sid="3744297378801938" type="number" />
                     <instance-variable name="First_Phase_Triggered" sid="9708494785123097" type="boolean" />
                     <instance-variable name="Bridge_Destroyed" sid="7716916467687827" type="boolean" />
-                    <instance-variable name="Level_2_Phases" sid="521681513767556" type="number" />
                     <instance-variable name="Is_Dead" sid="5701586237341312" type="boolean" />
+                    <instance-variable name="Level_1_Phases" sid="3744297378801938" type="number" />
+                    <instance-variable name="Level_2_Phases" sid="521681513767556" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Platform" sid="2921180046897222">
@@ -3748,7 +3748,7 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4906372601520275" speed="5">
-                        <frame duration="1" hotspotX="0.538462" hotspotY="1.35714" original-source="C:\Users\dbga_08\Downloads\caricamenti_seconda_parte-2016-05-18\caricamenti seconda parte\Leva - alta.png">
+                        <frame duration="1" hotspotX="0.538462" hotspotY="0.5" original-source="C:\Users\dbga_08\Downloads\caricamenti_seconda_parte-2016-05-18\caricamenti seconda parte\Leva - alta.png">
                             <collision-poly>
                                 <point x="0.0769231" y="0.0714286" />
                                 <point x="0.461538" y="0.428571" />
@@ -3762,7 +3762,7 @@
                         </frame>
                     </animation>
                     <animation framecount="1" loop="0" name="Flipped" pingpong="0" repeatcount="1" repeatto="0" sid="1599205622865351" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="-0.384615" original-source="C:\Users\dbga_08\Downloads\caricamenti_seconda_parte-2016-05-18\caricamenti seconda parte\Leva - bassa.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.538462" original-source="C:\Users\dbga_08\Downloads\caricamenti_seconda_parte-2016-05-18\caricamenti seconda parte\Leva - bassa.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -5638,7 +5638,31 @@
             </animation-folder>
         </object-type>
     </object-folder>
-    <families />
+    <families>
+        <family name="Hud" plugin-id="Sprite" sid="6636688502215522">
+            <members>
+                <member>Barra_Vita_Piena_Alta</member>
+                <member>Barra_Vita_Piena_Bassa</member>
+                <member>Barra_Vita_Piena_Centro</member>
+                <member>Barra_Vita_Vuota_Alta</member>
+                <member>Barra_Vita_Vuota_Bassa</member>
+                <member>Barra_Vita_Vuota_Centro</member>
+                <member>Hud_Corpo</member>
+                <member>Pallottola</member>
+                <member>Pallottola2</member>
+                <member>Pallottola3</member>
+                <member>Pallottola4</member>
+                <member>Pallottola5</member>
+                <member>Pallottola6</member>
+                <member>Stamin_Piena</member>
+                <member>Stamin_Piena2</member>
+                <member>Stamin_Piena3</member>
+                <member>Stamina_Vuota</member>
+                <member>Stamina_Vuota2</member>
+                <member>Stamina_Vuota3</member>
+            </members>
+        </family>
+    </families>
     <layout-folder>
         <layout>Level 1 Layout.xml</layout>
         <layout>Intro Layout.xml</layout>
@@ -5669,9 +5693,9 @@
         <event-sheet>Cutscene Start Sheet.xml</event-sheet>
     </event-folder>
     <global-instances>
-        <global-instance type="Keyboard" uid="1699" />
-        <global-instance type="Mouse" uid="1700" />
-        <global-instance type="Audio" uid="1701">
+        <global-instance type="Keyboard" uid="1704" />
+        <global-instance type="Mouse" uid="1705" />
+        <global-instance type="Audio" uid="1706">
             <properties>
                 <timescale-audio>Off</timescale-audio>
                 <saveload>All</saveload>
@@ -5685,7 +5709,7 @@
                 <roll-off-factor>1</roll-off-factor>
             </properties>
         </global-instance>
-        <global-instance type="Function" uid="1702" />
+        <global-instance type="Function" uid="1707" />
     </global-instances>
     <sounds-folder>
         <sound-folder name="PlaceHolder Sounds">

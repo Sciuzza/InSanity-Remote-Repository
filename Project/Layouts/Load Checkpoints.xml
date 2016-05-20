@@ -449,7 +449,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="checkpoint7_sel" uid="1663">
+                <instance type="checkpoint7_sel" uid="1618">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -471,7 +471,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="loadcheck_title2" uid="1618">
+                <instance type="loadcheck_title2" uid="1619">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>

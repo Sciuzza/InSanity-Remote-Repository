@@ -14,6 +14,10 @@
                             <param id="0" name="Variable">FR_IND</param>
                             <param id="1" name="Value">1*dt</param>
                         </action>
+                        <action id="-4" name="Set position to another object" sid="2515986171099892" type="Player_Frame">
+                            <param id="0" name="Object">Player_Box</param>
+                            <param id="1" name="Image point (optional)">0</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="1755169578109478">
@@ -40,19 +44,6 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="2464216364253991">
-                    <conditions>
-                        <condition id="-6" name="Every X seconds" sid="5903393410181678" type="System">
-                            <param id="0" name="Interval (seconds)">dt</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-4" name="Set position to another object" sid="2515986171099892" type="Player_Frame">
-                            <param id="0" name="Object">Player_Box</param>
-                            <param id="1" name="Image point (optional)">0</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <event-block sid="5486795335092933">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="1659333244872277" type="System" />
@@ -63,14 +54,6 @@
                             <param id="1" name="Y">Player_Box.ImagePointY(1)</param>
                         </action>
                         <action behavior="Pin" id="0" name="Pin to object" sid="6778656464220162" type="Player_arm">
-                            <param id="0" name="Pin to">Player_Box</param>
-                            <param id="1" name="Mode">1</param>
-                        </action>
-                        <action disabled="1" id="-3" name="Set position" sid="2848212624485829" type="Camera">
-                            <param id="0" name="X">Player_Box.X</param>
-                            <param id="1" name="Y">Player_Box.Y - 80</param>
-                        </action>
-                        <action behavior="Pin" disabled="1" id="0" name="Pin to object" sid="9616826306647698" type="Camera">
                             <param id="0" name="Pin to">Player_Box</param>
                             <param id="1" name="Mode">1</param>
                         </action>
@@ -940,6 +923,68 @@
         </event-group>
         <event-group description="" sid="8219006173856015" title="Interaction Effects on Player">
             <sub-events>
+                <event-block sid="694397079560418">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="9929478032118848" type="Player_Box">
+                            <param id="0" name="Instance variable">Is_Dead</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="7432741907014232" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="7383750960059743">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="3362612758076436" type="System">
+                                    <param id="0" name="First value">LayoutName</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;Intro Layout&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Fade" id="4" name="Set fade-out time" sid="1623977372427907" type="Tutorial">
+                                    <param id="0" name="Fade-out time">0.3</param>
+                                </action>
+                                <action behavior="Fade" id="4" name="Set fade-out time" sid="67255914343326" type="BackGround_Hud_Text">
+                                    <param id="0" name="Fade-out time">0.3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1859534747559627">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="1405503451936639" type="System">
+                                    <param id="0" name="First value">LayoutName</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;Level 1 Layout&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Fade" id="4" name="Set fade-out time" sid="5525736292890891" type="Tutorial">
+                                    <param id="0" name="Fade-out time">2</param>
+                                </action>
+                                <action behavior="Fade" id="4" name="Set fade-out time" sid="7716414772562491" type="BackGround_Hud_Text">
+                                    <param id="0" name="Fade-out time">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8718652434294353">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="5317820226922077" type="System">
+                                    <param id="0" name="First value">LayoutName</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;Level 2 Layout&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Fade" id="4" name="Set fade-out time" sid="5310878712367814" type="Tutorial">
+                                    <param id="0" name="Fade-out time">2</param>
+                                </action>
+                                <action behavior="Fade" id="4" name="Set fade-out time" sid="595229533589674" type="BackGround_Hud_Text">
+                                    <param id="0" name="Fade-out time">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
                 <event-block sid="2012969064881611">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="5406356219381521" type="Bat">
@@ -1078,6 +1123,85 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-block sid="2620475990191421">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="1051720603754069" type="Player_Box">
+                            <param id="0" name="Instance variable">Is_Dead</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="2240890890233717">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="5846110305661263" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-34" name="Set layer background color" sid="5688102703196222" type="System">
+                                    <param id="0" name="Layer">&quot;Hud&quot;</param>
+                                    <param id="1" name="Color">rgb(0, 0, 0)</param>
+                                </action>
+                                <action id="-18" name="Set layer opacity" sid="2256009746823186" type="System">
+                                    <param id="0" name="Layer">&quot;Hud&quot;</param>
+                                    <param id="1" name="Opacity">0</param>
+                                </action>
+                                <action id="-35" name="Set layer transparent" sid="7304589223888426" type="System">
+                                    <param id="0" name="Layer">&quot;Hud&quot;</param>
+                                    <param id="1" name="Mode">0</param>
+                                </action>
+                                <action behavior="Fade" id="4" name="Set fade-out time" sid="6583015786978958" type="Tutorial">
+                                    <param id="0" name="Fade-out time">1</param>
+                                </action>
+                                <action behavior="Fade" id="4" name="Set fade-out time" sid="5828423607281383" type="BackGround_Hud_Text">
+                                    <param id="0" name="Fade-out time">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4926002033211197">
+                            <conditions>
+                                <condition id="-17" name="Compare opacity" sid="5650470751380219" type="System">
+                                    <param id="0" name="Layer">&quot;Hud&quot;</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Opacity">100</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-18" name="Set layer opacity" sid="2112452716073367" type="System">
+                                    <param id="0" name="Layer">&quot;Hud&quot;</param>
+                                    <param id="1" name="Opacity">LayerOpacity(&quot;Hud&quot;) + 50*dt</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="6221622540366054">
+                                    <conditions>
+                                        <condition id="-17" name="Compare opacity" sid="7306694920752988" type="System">
+                                            <param id="0" name="Layer">&quot;Hud&quot;</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Opacity">100</param>
+                                        </condition>
+                                        <condition id="-4" name="Trigger once while true" sid="6824199962612342" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set time scale" sid="8255859764093287" type="System">
+                                            <param id="0" name="Time scale">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="3969062079701964" type="Tutorial">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="166302572267704" type="BackGround_Hud_Text">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="8131764748505084" type="Tutorial">
+                                            <param id="0" name="Text">&quot;Non Ricordo fosse andata così...&quot;</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="3863523301513397" type="Hud">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
                 <event-block sid="811886561878283">
                     <conditions>
                         <condition id="0" name="On key pressed" sid="8856308701220828" type="Keyboard">
@@ -1127,207 +1251,10 @@
                         </action>
                         <action behavior="Fade" id="1" name="Start fade" sid="161916905991411" type="Tutorial" />
                         <action behavior="Fade" id="1" name="Start fade" sid="6175050005363344" type="BackGround_Hud_Text" />
-                        <action id="-15" name="Set visible" sid="5123759692229155" type="Hud_Corpo">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="5097847903661365" type="Barra_Vita_Piena_Alta">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="3117521210723881" type="Barra_Vita_Piena_Centro">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="1467806203211448" type="Barra_Vita_Piena_Bassa">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="2041799570413129" type="Barra_Vita_Vuota_Alta">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="839981363060029" type="Barra_Vita_Vuota_Centro">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="8190295688705337" type="Barra_Vita_Vuota_Bassa">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="705608292961934" type="Pallottola">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="2677944493532476" type="Pallottola2">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="7422737003523082" type="Pallottola3">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="5949125938521233" type="Pallottola4">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="8086751324275619" type="Pallottola5">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="4638053282190455" type="Pallottola6">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="2129212148189826" type="Stamin_Piena">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="5459461357902176" type="Stamin_Piena2">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="2268045785524532" type="Stamin_Piena3">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="4643022870718185" type="Stamina_Vuota">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="2826861311439649" type="Stamina_Vuota2">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="2736358076642032" type="Stamina_Vuota3">
+                        <action id="-15" name="Set visible" sid="1723174438307214" type="Hud">
                             <param id="0" name="Visibility">1</param>
                         </action>
                     </actions>
-                </event-block>
-                <event-block sid="694397079560418">
-                    <conditions>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="9929478032118848" type="Player_Box">
-                            <param id="0" name="Instance variable">Is_Dead</param>
-                        </condition>
-                        <condition id="-4" name="Trigger once while true" sid="7432741907014232" type="System" />
-                    </conditions>
-                    <actions>
-                        <action behavior="Fade" id="4" name="Set fade-out time" sid="6951026360693281" type="Tutorial">
-                            <param id="0" name="Fade-out time">1</param>
-                        </action>
-                        <action behavior="Fade" id="4" name="Set fade-out time" sid="8922907406806694" type="BackGround_Hud_Text">
-                            <param id="0" name="Fade-out time">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="2620475990191421">
-                    <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" sid="1051720603754069" type="Player_Box">
-                            <param id="0" name="Instance variable">Is_Dead</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="2240890890233717">
-                            <conditions>
-                                <condition id="-4" name="Trigger once while true" sid="5846110305661263" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="-34" name="Set layer background color" sid="5688102703196222" type="System">
-                                    <param id="0" name="Layer">&quot;Hud&quot;</param>
-                                    <param id="1" name="Color">rgb(0, 0, 0)</param>
-                                </action>
-                                <action id="-18" name="Set layer opacity" sid="2256009746823186" type="System">
-                                    <param id="0" name="Layer">&quot;Hud&quot;</param>
-                                    <param id="1" name="Opacity">0</param>
-                                </action>
-                                <action id="-35" name="Set layer transparent" sid="7304589223888426" type="System">
-                                    <param id="0" name="Layer">&quot;Hud&quot;</param>
-                                    <param id="1" name="Mode">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="4926002033211197">
-                            <conditions>
-                                <condition id="-17" name="Compare opacity" sid="5650470751380219" type="System">
-                                    <param id="0" name="Layer">&quot;Hud&quot;</param>
-                                    <param id="1" name="Comparison">3</param>
-                                    <param id="2" name="Opacity">100</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-18" name="Set layer opacity" sid="2112452716073367" type="System">
-                                    <param id="0" name="Layer">&quot;Hud&quot;</param>
-                                    <param id="1" name="Opacity">LayerOpacity(&quot;Hud&quot;) + 50*dt</param>
-                                </action>
-                            </actions>
-                            <sub-events>
-                                <event-block sid="6221622540366054">
-                                    <conditions>
-                                        <condition id="-17" name="Compare opacity" sid="7306694920752988" type="System">
-                                            <param id="0" name="Layer">&quot;Hud&quot;</param>
-                                            <param id="1" name="Comparison">5</param>
-                                            <param id="2" name="Opacity">100</param>
-                                        </condition>
-                                        <condition id="-4" name="Trigger once while true" sid="6824199962612342" type="System" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="-13" name="Set time scale" sid="8255859764093287" type="System">
-                                            <param id="0" name="Time scale">0</param>
-                                        </action>
-                                        <action id="-15" name="Set visible" sid="3969062079701964" type="Tutorial">
-                                            <param id="0" name="Visibility">1</param>
-                                        </action>
-                                        <action id="-15" name="Set visible" sid="166302572267704" type="BackGround_Hud_Text">
-                                            <param id="0" name="Visibility">1</param>
-                                        </action>
-                                        <action id="0" name="Set text" sid="8131764748505084" type="Tutorial">
-                                            <param id="0" name="Text">&quot;Non Ricordo fosse andata così...&quot;</param>
-                                        </action>
-                                        <action id="-15" name="Set visible" sid="9735394026477956" type="Hud_Corpo">
-                                            <param id="0" name="Visibility">0</param>
-                                        </action>
-                                        <action id="-15" name="Set visible" sid="4047739280402387" type="Barra_Vita_Piena_Alta">
-                                            <param id="0" name="Visibility">0</param>
-                                        </action>
-                                        <action id="-15" name="Set visible" sid="165761184911329" type="Barra_Vita_Piena_Centro">
-                                            <param id="0" name="Visibility">0</param>
-                                        </action>
-                                        <action id="-15" name="Set visible" sid="2680825479110512" type="Barra_Vita_Piena_Bassa">
-                                            <param id="0" name="Visibility">0</param>
-                                        </action>
-                                        <action id="-15" name="Set visible" sid="5402906288566315" type="Barra_Vita_Vuota_Alta">
-                                            <param id="0" name="Visibility">0</param>
-                                        </action>
-                                        <action id="-15" name="Set visible" sid="2451355576825269" type="Barra_Vita_Vuota_Centro">
-                                            <param id="0" name="Visibility">0</param>
-                                        </action>
-                                        <action id="-15" name="Set visible" sid="5805436243089234" type="Barra_Vita_Vuota_Bassa">
-                                            <param id="0" name="Visibility">0</param>
-                                        </action>
-                                        <action id="-15" name="Set visible" sid="1254062542581653" type="Pallottola">
-                                            <param id="0" name="Visibility">0</param>
-                                        </action>
-                                        <action id="-15" name="Set visible" sid="1921828077848754" type="Pallottola2">
-                                            <param id="0" name="Visibility">0</param>
-                                        </action>
-                                        <action id="-15" name="Set visible" sid="369408499337947" type="Pallottola3">
-                                            <param id="0" name="Visibility">0</param>
-                                        </action>
-                                        <action id="-15" name="Set visible" sid="9826718061173389" type="Pallottola4">
-                                            <param id="0" name="Visibility">0</param>
-                                        </action>
-                                        <action id="-15" name="Set visible" sid="9787853517093024" type="Pallottola5">
-                                            <param id="0" name="Visibility">0</param>
-                                        </action>
-                                        <action id="-15" name="Set visible" sid="1650931898203067" type="Pallottola6">
-                                            <param id="0" name="Visibility">0</param>
-                                        </action>
-                                        <action id="-15" name="Set visible" sid="8900774114978918" type="Stamin_Piena">
-                                            <param id="0" name="Visibility">0</param>
-                                        </action>
-                                        <action id="-15" name="Set visible" sid="9515487243038542" type="Stamin_Piena2">
-                                            <param id="0" name="Visibility">0</param>
-                                        </action>
-                                        <action id="-15" name="Set visible" sid="7114056184169996" type="Stamin_Piena3">
-                                            <param id="0" name="Visibility">0</param>
-                                        </action>
-                                        <action id="-15" name="Set visible" sid="874152653298664" type="Stamina_Vuota">
-                                            <param id="0" name="Visibility">0</param>
-                                        </action>
-                                        <action id="-15" name="Set visible" sid="8641230912315149" type="Stamina_Vuota2">
-                                            <param id="0" name="Visibility">0</param>
-                                        </action>
-                                        <action id="-15" name="Set visible" sid="1115692315849039" type="Stamina_Vuota3">
-                                            <param id="0" name="Visibility">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
