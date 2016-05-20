@@ -5,6 +5,21 @@
     <events>
         <event-group description="" sid="2374178828000635" title="General Starting Setup">
             <sub-events>
+                <event-block sid="5486795335092933">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="1659333244872277" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="9910082415026229" type="Player_arm">
+                            <param id="0" name="X">Player_Box.ImagePointX(1)</param>
+                            <param id="1" name="Y">Player_Box.ImagePointY(1)</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="6778656464220162" type="Player_arm">
+                            <param id="0" name="Pin to">Player_Box</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="1576274383478166">
                     <conditions>
                         <condition id="-1" name="Every tick" sid="7394473842820258" type="System" />
@@ -20,44 +35,101 @@
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block sid="1755169578109478">
+                        <event-block sid="2651245248705669">
                             <conditions>
-                                <condition id="7" inverted="1" name="Is mirrored" sid="1594855479962237" type="Player_Frame" />
+                                <condition id="-8" name="Is boolean instance variable set" sid="3668005717863708" type="Player_Box">
+                                    <param id="0" name="Instance variable">Camera_On_Player</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="1755169578109478">
+                                    <conditions>
+                                        <condition id="7" inverted="1" name="Is mirrored" sid="1594855479962237" type="Player_Frame" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="5179257005674975" type="Camera">
+                                            <param id="0" name="X">lerp(Self.X,Player_Box.X + 30,0.03)</param>
+                                            <param id="1" name="Y">lerp(Self.Y,Player_Box.Y - 80,0.03)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="7745897832976138">
+                                    <conditions>
+                                        <condition id="7" name="Is mirrored" sid="7189922042243847" type="Player_Frame" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="9586309763945552" type="Camera">
+                                            <param id="0" name="X">lerp(Self.X,Player_Box.X - 30,0.03)</param>
+                                            <param id="1" name="Y">lerp(Self.Y,Player_Box.Y - 80,0.03)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block disabled="1" sid="694397079560418">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="9929478032118848" type="Player_Box">
+                            <param id="0" name="Instance variable">Is_Dead</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="7432741907014232" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block disabled="1" sid="7383750960059743">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="3362612758076436" type="System">
+                                    <param id="0" name="First value">LayoutName</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;Intro Layout&quot;</param>
+                                </condition>
                             </conditions>
                             <actions>
-                                <action id="-3" name="Set position" sid="5179257005674975" type="Camera">
-                                    <param id="0" name="X">lerp(Self.X,Player_Box.X + 30,0.03)</param>
-                                    <param id="1" name="Y">lerp(Self.Y,Player_Box.Y - 80,0.03)</param>
+                                <action behavior="Fade" id="4" name="Set fade-out time" sid="1623977372427907" type="Tutorial">
+                                    <param id="0" name="Fade-out time">0.3</param>
+                                </action>
+                                <action behavior="Fade" id="4" name="Set fade-out time" sid="67255914343326" type="BackGround_Hud_Text">
+                                    <param id="0" name="Fade-out time">0.3</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="7745897832976138">
+                        <event-block disabled="1" sid="1859534747559627">
                             <conditions>
-                                <condition id="7" name="Is mirrored" sid="7189922042243847" type="Player_Frame" />
+                                <condition id="-8" name="Compare two values" sid="1405503451936639" type="System">
+                                    <param id="0" name="First value">LayoutName</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;Level 1 Layout&quot;</param>
+                                </condition>
                             </conditions>
                             <actions>
-                                <action id="-3" name="Set position" sid="9586309763945552" type="Camera">
-                                    <param id="0" name="X">lerp(Self.X,Player_Box.X - 30,0.03)</param>
-                                    <param id="1" name="Y">lerp(Self.Y,Player_Box.Y - 80,0.03)</param>
+                                <action behavior="Fade" id="4" name="Set fade-out time" sid="5525736292890891" type="Tutorial">
+                                    <param id="0" name="Fade-out time">2</param>
+                                </action>
+                                <action behavior="Fade" id="4" name="Set fade-out time" sid="7716414772562491" type="BackGround_Hud_Text">
+                                    <param id="0" name="Fade-out time">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="8718652434294353">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="5317820226922077" type="System">
+                                    <param id="0" name="First value">LayoutName</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;Level 2 Layout&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Fade" id="4" name="Set fade-out time" sid="5310878712367814" type="Tutorial">
+                                    <param id="0" name="Fade-out time">2</param>
+                                </action>
+                                <action behavior="Fade" id="4" name="Set fade-out time" sid="595229533589674" type="BackGround_Hud_Text">
+                                    <param id="0" name="Fade-out time">2</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
-                </event-block>
-                <event-block sid="5486795335092933">
-                    <conditions>
-                        <condition id="-2" name="On start of layout" sid="1659333244872277" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="-3" name="Set position" sid="9910082415026229" type="Player_arm">
-                            <param id="0" name="X">Player_Box.ImagePointX(1)</param>
-                            <param id="1" name="Y">Player_Box.ImagePointY(1)</param>
-                        </action>
-                        <action behavior="Pin" id="0" name="Pin to object" sid="6778656464220162" type="Player_arm">
-                            <param id="0" name="Pin to">Player_Box</param>
-                            <param id="1" name="Mode">1</param>
-                        </action>
-                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
@@ -448,19 +520,6 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="6928633700001263">
-                    <conditions>
-                        <condition id="4" name="On finished" sid="7613989907679355" type="Player_Frame">
-                            <param id="0" name="Animation">&quot;Dying&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="9174841331682116" type="Player_Frame">
-                            <param id="0" name="Animation">&quot;Dead&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <event-block sid="4256699117502673">
                     <conditions>
                         <condition id="-8" name="Is boolean instance variable set" sid="5327189801373386" type="Player_Box">
@@ -539,6 +598,82 @@
                     <actions>
                         <action id="4" name="Set animation" sid="3640173652236117" type="Player_Frame">
                             <param id="0" name="Animation">&quot;Dead&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9784051759959952">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="3305341741705452" type="Player_arm">
+                            <param id="0" name="Instance variable">Cooldown</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="3871854423908123" type="Player_Box">
+                            <param id="0" name="Instance variable">Stun_Ability</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="5012957322822554" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="7801942888086769" type="Player_arm">
+                            <param id="0" name="Animation">&quot;ShootNormal&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4598689062622797">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="4742648055300596" type="Player_arm">
+                            <param id="0" name="Instance variable">Cooldown</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">-0.5</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="4520676755479207" type="Player_Box">
+                            <param id="0" name="Instance variable">Stun_Ability</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="7413504299952541" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="3826660914573822" type="Player_arm">
+                            <param id="0" name="Animation">&quot;DefaultNormal&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6833464208661109">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="2660438059786493" type="Player_arm">
+                            <param id="0" name="Instance variable">Cooldown</param>
+                            <param id="1" name="Comparison">5</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="5920480525609839" type="Player_Box">
+                            <param id="0" name="Instance variable">Stun_Ability</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="43190955675515" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="4297395715014463" type="Player_arm">
+                            <param id="0" name="Animation">&quot;ShootPsi&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8902589100663139">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="734078381025562" type="Player_arm">
+                            <param id="0" name="Instance variable">Cooldown</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">-0.5</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="2396995707461311" type="Player_Box">
+                            <param id="0" name="Instance variable">Stun_Ability</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="7503263818210824" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="2559763212063081" type="Player_arm">
+                            <param id="0" name="Animation">&quot;DefaultPsi&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
@@ -642,7 +777,13 @@
                         <condition id="-7" name="Compare instance variable" sid="552707534944657" type="Player_Box">
                             <param id="0" name="Instance variable">Dash_Charges</param>
                             <param id="1" name="Comparison">2</param>
-                            <param id="2" name="Value">2</param>
+                            <param id="2" name="Value">Player_Box.Dash_Max_Charges</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="5549107052414674" type="Player_Box">
+                            <param id="0" name="Instance variable">Is_Dead</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="1581729094813248" type="Player_Box">
+                            <param id="0" name="Instance variable">Is_Paused</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -808,7 +949,7 @@
                     </conditions>
                     <actions>
                         <action behavior="Timer" id="0" name="Start timer" sid="5265732955670155" type="Player_Box">
-                            <param id="0" name="Duration">2</param>
+                            <param id="0" name="Duration">Player_Box.Reloading_Time</param>
                             <param id="1" name="Type">0</param>
                             <param id="2" name="Tag">&quot;Reloading&quot;</param>
                         </action>
@@ -831,7 +972,7 @@
                     </conditions>
                     <actions>
                         <action behavior="Timer" id="0" name="Start timer" sid="2589600141053151" type="Player_Box">
-                            <param id="0" name="Duration">2</param>
+                            <param id="0" name="Duration">Player_Box.Reloading_Time</param>
                             <param id="1" name="Type">0</param>
                             <param id="2" name="Tag">&quot;Reloading&quot;</param>
                         </action>
@@ -855,6 +996,40 @@
                         <action id="-13" name="Set boolean" sid="2444833305710603" type="Player_Box">
                             <param id="0" name="Instance variable">Reloading</param>
                             <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="90106157785116">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="462023374394722" type="Player_Box">
+                            <param id="0" name="Instance variable">Reloading</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="8250706713834789" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="6449551130581803" type="Reloading">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="5845369275725211" type="Reloading">
+                            <param id="0" name="Text">&quot;Reloading...&quot;</param>
+                        </action>
+                        <action behavior="Flash" id="0" name="Flash" sid="8914414044295513" type="Reloading">
+                            <param id="0" name="&apos;On&apos; time">0.2</param>
+                            <param id="1" name="&apos;Off&apos; time">0.2</param>
+                            <param id="2" name="Duration">Player_Box.Reloading_Time - 0.01</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6626777720011465">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="8610485286938956" type="Player_Box">
+                            <param id="0" name="Instance variable">Reloading</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="5727925694812431" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="6437983857074775" type="Reloading">
+                            <param id="0" name="Visibility">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -923,68 +1098,6 @@
         </event-group>
         <event-group description="" sid="8219006173856015" title="Interaction Effects on Player">
             <sub-events>
-                <event-block sid="694397079560418">
-                    <conditions>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="9929478032118848" type="Player_Box">
-                            <param id="0" name="Instance variable">Is_Dead</param>
-                        </condition>
-                        <condition id="-4" name="Trigger once while true" sid="7432741907014232" type="System" />
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="7383750960059743">
-                            <conditions>
-                                <condition id="-8" name="Compare two values" sid="3362612758076436" type="System">
-                                    <param id="0" name="First value">LayoutName</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">&quot;Intro Layout&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Fade" id="4" name="Set fade-out time" sid="1623977372427907" type="Tutorial">
-                                    <param id="0" name="Fade-out time">0.3</param>
-                                </action>
-                                <action behavior="Fade" id="4" name="Set fade-out time" sid="67255914343326" type="BackGround_Hud_Text">
-                                    <param id="0" name="Fade-out time">0.3</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="1859534747559627">
-                            <conditions>
-                                <condition id="-8" name="Compare two values" sid="1405503451936639" type="System">
-                                    <param id="0" name="First value">LayoutName</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">&quot;Level 1 Layout&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Fade" id="4" name="Set fade-out time" sid="5525736292890891" type="Tutorial">
-                                    <param id="0" name="Fade-out time">2</param>
-                                </action>
-                                <action behavior="Fade" id="4" name="Set fade-out time" sid="7716414772562491" type="BackGround_Hud_Text">
-                                    <param id="0" name="Fade-out time">2</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="8718652434294353">
-                            <conditions>
-                                <condition id="-8" name="Compare two values" sid="5317820226922077" type="System">
-                                    <param id="0" name="First value">LayoutName</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">&quot;Level 2 Layout&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Fade" id="4" name="Set fade-out time" sid="5310878712367814" type="Tutorial">
-                                    <param id="0" name="Fade-out time">2</param>
-                                </action>
-                                <action behavior="Fade" id="4" name="Set fade-out time" sid="595229533589674" type="BackGround_Hud_Text">
-                                    <param id="0" name="Fade-out time">2</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
                 <event-block sid="2012969064881611">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="5406356219381521" type="Bat">
@@ -1024,289 +1137,109 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="847422302875697">
-                    <conditions>
-                        <condition id="4" name="On finished" sid="9645833042706791" type="Player_Frame">
-                            <param id="0" name="Animation">&quot;Dying&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-13" name="Set boolean" sid="1918900505285518" type="Player_Box">
-                            <param id="0" name="Instance variable">Is_Dead</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action behavior="ScrollTo" id="1" name="Set enabled" sid="4092958078836575" type="Camera">
-                            <param id="0" name="State">0</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block sid="5475296757625984">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="4163083271595153" type="Player_Box">
-                                    <param id="0" name="Instance variable">Checkpoint</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Destroy" sid="8939835986931185" type="ponteBlocco" />
-                                <action id="-9" name="Destroy" sid="8746962245135526" type="PonteBlocco_Destr_Obj" />
-                                <action id="-9" name="Destroy" sid="8313868994428711" type="ponteBlocco2" />
-                                <action id="-9" name="Destroy" sid="3390033473643687" type="PonteBlocco_Destr_Obj2" />
-                                <action id="-9" name="Destroy" sid="7532389099200429" type="ponteBlocco3" />
-                                <action id="-9" name="Destroy" sid="6310543535336768" type="PonteBlocco_Destr_Obj3" />
-                                <action id="-9" name="Destroy" sid="9812858227628601" type="ponteBlocco4" />
-                                <action id="-9" name="Destroy" sid="1182946002389689" type="PonteBlocco_Destr_Obj4" />
-                                <action id="-13" name="Set boolean" sid="6982624348464399" type="Player_Box">
-                                    <param id="0" name="Instance variable">Bridge_Destroyed</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="2352825085310025" type="Player_Box">
-                                    <param id="0" name="Instance variable">Level_1_Phases</param>
-                                    <param id="1" name="Value">5</param>
-                                </action>
-                                <action behavior="Timer" id="1" name="Stop timer" sid="1646914043609147" type="Player_Box">
-                                    <param id="0" name="Tag">&quot;Bridge Going Down&quot;</param>
-                                </action>
-                                <action behavior="Timer" id="1" name="Stop timer" sid="4629815323778287" type="Player_Box">
-                                    <param id="0" name="Tag">&quot;Bridges Going Down&quot;</param>
-                                </action>
-                                <action id="-3" name="Create object" sid="1450656618791052" type="System">
-                                    <param id="0" name="Object to create">ponteBlocco</param>
-                                    <param id="1" name="Layer">&quot;Floor Elements&quot;</param>
-                                    <param id="2" name="X">3578</param>
-                                    <param id="3" name="Y">637</param>
-                                </action>
-                                <action id="-3" name="Create object" sid="4316301597899985" type="System">
-                                    <param id="0" name="Object to create">PonteBlocco_Destr_Obj</param>
-                                    <param id="1" name="Layer">&quot;Solid&quot;</param>
-                                    <param id="2" name="X">3578</param>
-                                    <param id="3" name="Y">600</param>
-                                </action>
-                                <action id="-3" name="Create object" sid="1415613128095663" type="System">
-                                    <param id="0" name="Object to create">ponteBlocco2</param>
-                                    <param id="1" name="Layer">&quot;Floor Elements&quot;</param>
-                                    <param id="2" name="X">3950</param>
-                                    <param id="3" name="Y">635.744</param>
-                                </action>
-                                <action id="-3" name="Create object" sid="8674688082275394" type="System">
-                                    <param id="0" name="Object to create">PonteBlocco_Destr_Obj2</param>
-                                    <param id="1" name="Layer">&quot;Solid&quot;</param>
-                                    <param id="2" name="X">3960</param>
-                                    <param id="3" name="Y">627.131</param>
-                                </action>
-                                <action id="-3" name="Create object" sid="5473117184589619" type="System">
-                                    <param id="0" name="Object to create">ponteBlocco3</param>
-                                    <param id="1" name="Layer">&quot;Floor Elements&quot;</param>
-                                    <param id="2" name="X">4120</param>
-                                    <param id="3" name="Y">635.744</param>
-                                </action>
-                                <action id="-3" name="Create object" sid="9799274665005687" type="System">
-                                    <param id="0" name="Object to create">PonteBlocco_Destr_Obj3</param>
-                                    <param id="1" name="Layer">&quot;Solid&quot;</param>
-                                    <param id="2" name="X">4130</param>
-                                    <param id="3" name="Y">620.979</param>
-                                </action>
-                                <action id="-3" name="Create object" sid="8242672816905739" type="System">
-                                    <param id="0" name="Object to create">ponteBlocco4</param>
-                                    <param id="1" name="Layer">&quot;Floor Elements&quot;</param>
-                                    <param id="2" name="X">4315</param>
-                                    <param id="3" name="Y">720</param>
-                                </action>
-                                <action id="-3" name="Create object" sid="742346067912341" type="System">
-                                    <param id="0" name="Object to create">PonteBlocco_Destr_Obj4</param>
-                                    <param id="1" name="Layer">&quot;Solid&quot;</param>
-                                    <param id="2" name="X">4325</param>
-                                    <param id="3" name="Y">620.836</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="2620475990191421">
-                    <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" sid="1051720603754069" type="Player_Box">
-                            <param id="0" name="Instance variable">Is_Dead</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="2240890890233717">
-                            <conditions>
-                                <condition id="-4" name="Trigger once while true" sid="5846110305661263" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="-34" name="Set layer background color" sid="5688102703196222" type="System">
-                                    <param id="0" name="Layer">&quot;Hud&quot;</param>
-                                    <param id="1" name="Color">rgb(0, 0, 0)</param>
-                                </action>
-                                <action id="-18" name="Set layer opacity" sid="2256009746823186" type="System">
-                                    <param id="0" name="Layer">&quot;Hud&quot;</param>
-                                    <param id="1" name="Opacity">0</param>
-                                </action>
-                                <action id="-35" name="Set layer transparent" sid="7304589223888426" type="System">
-                                    <param id="0" name="Layer">&quot;Hud&quot;</param>
-                                    <param id="1" name="Mode">0</param>
-                                </action>
-                                <action behavior="Fade" id="4" name="Set fade-out time" sid="6583015786978958" type="Tutorial">
-                                    <param id="0" name="Fade-out time">1</param>
-                                </action>
-                                <action behavior="Fade" id="4" name="Set fade-out time" sid="5828423607281383" type="BackGround_Hud_Text">
-                                    <param id="0" name="Fade-out time">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="4926002033211197">
-                            <conditions>
-                                <condition id="-17" name="Compare opacity" sid="5650470751380219" type="System">
-                                    <param id="0" name="Layer">&quot;Hud&quot;</param>
-                                    <param id="1" name="Comparison">3</param>
-                                    <param id="2" name="Opacity">100</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-18" name="Set layer opacity" sid="2112452716073367" type="System">
-                                    <param id="0" name="Layer">&quot;Hud&quot;</param>
-                                    <param id="1" name="Opacity">LayerOpacity(&quot;Hud&quot;) + 50*dt</param>
-                                </action>
-                            </actions>
-                            <sub-events>
-                                <event-block sid="6221622540366054">
-                                    <conditions>
-                                        <condition id="-17" name="Compare opacity" sid="7306694920752988" type="System">
-                                            <param id="0" name="Layer">&quot;Hud&quot;</param>
-                                            <param id="1" name="Comparison">5</param>
-                                            <param id="2" name="Opacity">100</param>
-                                        </condition>
-                                        <condition id="-4" name="Trigger once while true" sid="6824199962612342" type="System" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="-13" name="Set time scale" sid="8255859764093287" type="System">
-                                            <param id="0" name="Time scale">0</param>
-                                        </action>
-                                        <action id="-15" name="Set visible" sid="3969062079701964" type="Tutorial">
-                                            <param id="0" name="Visibility">1</param>
-                                        </action>
-                                        <action id="-15" name="Set visible" sid="166302572267704" type="BackGround_Hud_Text">
-                                            <param id="0" name="Visibility">1</param>
-                                        </action>
-                                        <action id="0" name="Set text" sid="8131764748505084" type="Tutorial">
-                                            <param id="0" name="Text">&quot;Non Ricordo fosse andata così...&quot;</param>
-                                        </action>
-                                        <action id="-15" name="Set visible" sid="3863523301513397" type="Hud">
-                                            <param id="0" name="Visibility">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="811886561878283">
-                    <conditions>
-                        <condition id="0" name="On key pressed" sid="8856308701220828" type="Keyboard">
-                            <param id="0" name="Key">32 (Barra Spaziatrice)</param>
-                        </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="7500583618522144" type="Player_Box">
-                            <param id="0" name="Instance variable">Is_Dead</param>
-                        </condition>
-                        <condition id="-17" name="Compare opacity" sid="4997150309762953" type="System">
-                            <param id="0" name="Layer">&quot;Hud&quot;</param>
-                            <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Opacity">100</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="ScrollTo" id="1" name="Set enabled" sid="253602110208358" type="Camera">
-                            <param id="0" name="State">1</param>
-                        </action>
-                        <action id="-13" name="Set boolean" sid="7681866164375075" type="Player_Box">
-                            <param id="0" name="Instance variable">Is_Dead</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="0" name="Call function" sid="9478600158476952" type="Function">
-                            <param id="0" name="Name">&quot;Player Respawn&quot;</param>
-                            <param id="1" name="Parameter {n}">Player_Box.Checkpoint</param>
-                        </action>
-                        <action id="-13" name="Set time scale" sid="9021394877451269" type="System">
-                            <param id="0" name="Time scale">1</param>
-                        </action>
-                        <action id="-34" name="Set layer background color" sid="5844488086013261" type="System">
-                            <param id="0" name="Layer">&quot;Hud&quot;</param>
-                            <param id="1" name="Color">rgb(255, 255, 255)</param>
-                        </action>
-                        <action id="-18" name="Set layer opacity" sid="5528354521511392" type="System">
-                            <param id="0" name="Layer">&quot;Hud&quot;</param>
-                            <param id="1" name="Opacity">100</param>
-                        </action>
-                        <action id="-35" name="Set layer transparent" sid="3037414987154743" type="System">
-                            <param id="0" name="Layer">&quot;Hud&quot;</param>
-                            <param id="1" name="Mode">1</param>
-                        </action>
-                        <action behavior="Fade" id="4" name="Set fade-out time" sid="1489629629604908" type="Tutorial">
-                            <param id="0" name="Fade-out time">1</param>
-                        </action>
-                        <action behavior="Fade" id="4" name="Set fade-out time" sid="896432015546707" type="BackGround_Hud_Text">
-                            <param id="0" name="Fade-out time">1</param>
-                        </action>
-                        <action behavior="Fade" id="1" name="Start fade" sid="161916905991411" type="Tutorial" />
-                        <action behavior="Fade" id="1" name="Start fade" sid="6175050005363344" type="BackGround_Hud_Text" />
-                        <action id="-15" name="Set visible" sid="1723174438307214" type="Hud">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                    </actions>
-                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="6807124942313139" title="Interaction on General Passive Objects">
             <sub-events>
-                <event-block sid="9265089024496362">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="9769605696172302" type="Bullet_1_Player">
-                            <param id="0" name="Object">SolidObjects</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" sid="3245633609759788" type="Bullet_1_Player" />
-                    </actions>
-                </event-block>
-                <event-block sid="9525065771833378">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="1691063139194602" type="Bullet_S_Player">
-                            <param id="0" name="Object">SolidObjects</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" sid="4577278886057416" type="Bullet_S_Player" />
-                    </actions>
-                </event-block>
-                <event-block sid="9721736914024902">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="1092430809085201" type="Player_Box">
-                            <param id="0" name="Object">CheckPoint</param>
-                        </condition>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="7754065646473125" type="CheckPoint">
-                            <param id="0" name="Instance variable">Is_Taken</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-13" name="Set boolean" sid="6695047291232153" type="CheckPoint">
-                            <param id="0" name="Instance variable">Is_Taken</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="-11" name="Add to" sid="6200049069175031" type="Player_Box">
-                            <param id="0" name="Instance variable">Checkpoint</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="5" name="Set frame" sid="3913864182258917" type="CheckPoint">
-                            <param id="0" name="Frame number">1</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="8349509397680858" type="Player_Box">
-                            <param id="0" name="Instance variable">Life</param>
-                            <param id="1" name="Value">3</param>
-                        </action>
-                    </actions>
-                </event-block>
+                <event-group description="" sid="8742763424680842" title="Records">
+                    <sub-events>
+                        <event-block sid="6932941546702595">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="2165269251116379" type="Player_Frame">
+                                    <param id="0" name="Object">Record_2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Fade" id="1" name="Start fade" sid="1906218669673501" type="Record_2" />
+                                <action id="11" name="Set collisions enabled" sid="6803979448284448" type="Record_2">
+                                    <param id="0" name="Collisions">0</param>
+                                </action>
+                                <action id="-13" name="Set time scale" sid="4586135989416036" type="System">
+                                    <param id="0" name="Time scale">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="3034569174456443" type="Tutorial">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="3" name="Set font size" sid="5725940265502947" type="Tutorial">
+                                    <param id="0" name="Size (pt)">6</param>
+                                </action>
+                                <action id="0" name="Set text" sid="2267348571304849" type="Tutorial">
+                                    <param id="0" name="Text">&quot;Vuoi tu YYY prendere il qui presente come tuo legittimo sposo?&quot;&amp;newline&amp;&quot;YYY:Si lo voglio&quot;&amp;newline&amp;&quot;I proiettili massimi del caricatore aumentano! Il vigore aumenta!&quot;</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="1500793705928745" type="BackGround_Hud_Text">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-11" name="Add to" sid="2126125163062448" type="Player_Box">
+                                    <param id="0" name="Instance variable">Weapon_Max_Loader</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-11" name="Add to" sid="3590289722583112" type="Player_Box">
+                                    <param id="0" name="Instance variable">Dash_Max_Charges</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action behavior="Fade" id="4" name="Set fade-out time" sid="419003143224496" type="Tutorial">
+                                    <param id="0" name="Fade-out time">5</param>
+                                </action>
+                                <action behavior="Fade" id="4" name="Set fade-out time" sid="9098538405922132" type="BackGround_Hud_Text">
+                                    <param id="0" name="Fade-out time">5</param>
+                                </action>
+                                <action behavior="Fade" id="1" name="Start fade" sid="5652331581618344" type="Tutorial" />
+                                <action behavior="Fade" id="1" name="Start fade" sid="370223634038243" type="BackGround_Hud_Text" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="7590584065741249" title="General">
+                    <sub-events>
+                        <event-block sid="9265089024496362">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="9769605696172302" type="Bullet_1_Player">
+                                    <param id="0" name="Object">SolidObjects</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="3245633609759788" type="Bullet_1_Player" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="9525065771833378">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="1691063139194602" type="Bullet_S_Player">
+                                    <param id="0" name="Object">SolidObjects</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="4577278886057416" type="Bullet_S_Player" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="9721736914024902">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="1092430809085201" type="Player_Box">
+                                    <param id="0" name="Object">CheckPoint</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="7754065646473125" type="CheckPoint">
+                                    <param id="0" name="Instance variable">Is_Taken</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="6695047291232153" type="CheckPoint">
+                                    <param id="0" name="Instance variable">Is_Taken</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-11" name="Add to" sid="6200049069175031" type="Player_Box">
+                                    <param id="0" name="Instance variable">Checkpoint</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="5" name="Set frame" sid="3913864182258917" type="CheckPoint">
+                                    <param id="0" name="Frame number">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="8349509397680858" type="Player_Box">
+                                    <param id="0" name="Instance variable">Life</param>
+                                    <param id="1" name="Value">3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
                 <event-group description="" sid="7374267314962865" title="Dash through Special Objects">
                     <sub-events>
                         <comment>Dash Through Obstacle 16 width object</comment>
@@ -1614,19 +1547,6 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="5484348901766847">
-                            <conditions>
-                                <condition id="4" name="On finished" sid="3507634443774209" type="Player_Frame">
-                                    <param id="0" name="Animation">&quot;Dying&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Call function" sid="3387984134772837" type="Function">
-                                    <param id="0" name="Name">&quot;Hud Life&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
-                                </action>
-                            </actions>
-                        </event-block>
                         <event-block sid="2688937417085522">
                             <conditions>
                                 <condition id="0" name="On collision with another object" sid="1458163985009093" type="Player_Box">
@@ -1653,6 +1573,240 @@
                             <actions>
                                 <action id="0" name="Call function" sid="3232085326456546" type="Function">
                                     <param id="0" name="Name">&quot;Hud Life&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="9625177932314886" title="Death And Pause System">
+            <sub-events>
+                <comment>Death Triggering</comment>
+                <event-block sid="847422302875697">
+                    <conditions>
+                        <condition id="4" name="On finished" sid="5294518949223438" type="Player_Frame">
+                            <param id="0" name="Animation">&quot;Dying&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="1918900505285518" type="Player_Box">
+                            <param id="0" name="Instance variable">Is_Dead</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="1544763927628737" type="Function">
+                            <param id="0" name="Name">&quot;Player Stop&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <comment>Pause Triggering</comment>
+                <event-block sid="1223030850005248">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="5388686102155609" type="System">
+                            <param id="0" name="First value">timescale</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="7607686256448842" type="Player_Box">
+                            <param id="0" name="Instance variable">Is_Dead</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="9291088455803435" type="Player_Box">
+                            <param id="0" name="Instance variable">Is_Paused</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="7926176692238384" type="Function">
+                            <param id="0" name="Name">&quot;Player Stop&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-group description="" sid="8206242554942708" title="Death System">
+                    <sub-events>
+                        <event-block sid="2620475990191421">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="1051720603754069" type="Player_Box">
+                                    <param id="0" name="Instance variable">Is_Dead</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="2240890890233717">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="5846110305661263" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-34" name="Set layer background color" sid="5688102703196222" type="System">
+                                            <param id="0" name="Layer">&quot;Hud&quot;</param>
+                                            <param id="1" name="Color">rgb(0, 0, 0)</param>
+                                        </action>
+                                        <action id="-18" name="Set layer opacity" sid="2256009746823186" type="System">
+                                            <param id="0" name="Layer">&quot;Hud&quot;</param>
+                                            <param id="1" name="Opacity">0</param>
+                                        </action>
+                                        <action id="-35" name="Set layer transparent" sid="7304589223888426" type="System">
+                                            <param id="0" name="Layer">&quot;Hud&quot;</param>
+                                            <param id="1" name="Mode">0</param>
+                                        </action>
+                                        <action behavior="Fade" id="4" name="Set fade-out time" sid="6583015786978958" type="Tutorial">
+                                            <param id="0" name="Fade-out time">0.5</param>
+                                        </action>
+                                        <action behavior="Fade" id="4" name="Set fade-out time" sid="5828423607281383" type="BackGround_Hud_Text">
+                                            <param id="0" name="Fade-out time">0.5</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="3863523301513397" type="Hud">
+                                            <param id="0" name="Visibility">0</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="6608669484523525" type="Tutorial">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="868404282013438" type="BackGround_Hud_Text">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-16" name="Set opacity" sid="2759353667301123" type="Tutorial">
+                                            <param id="0" name="Opacity">0</param>
+                                        </action>
+                                        <action id="-16" name="Set opacity" sid="1074955894054719" type="BackGround_Hud_Text">
+                                            <param id="0" name="Opacity">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="4926002033211197">
+                                    <conditions>
+                                        <condition id="-17" name="Compare opacity" sid="5650470751380219" type="System">
+                                            <param id="0" name="Layer">&quot;Hud&quot;</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Opacity">100</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-18" name="Set layer opacity" sid="2112452716073367" type="System">
+                                            <param id="0" name="Layer">&quot;Hud&quot;</param>
+                                            <param id="1" name="Opacity">LayerOpacity(&quot;Hud&quot;) + 50*dt</param>
+                                        </action>
+                                        <action id="-16" name="Set opacity" sid="8735299028567827" type="Tutorial">
+                                            <param id="0" name="Opacity">LayerOpacity(&quot;Hud&quot;) + 50*dt</param>
+                                        </action>
+                                        <action id="-16" name="Set opacity" sid="6469440419342545" type="BackGround_Hud_Text">
+                                            <param id="0" name="Opacity">LayerOpacity(&quot;Hud&quot;) + 50*dt</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="5767385579081056">
+                                            <conditions>
+                                                <condition id="-4" name="Trigger once while true" sid="5675312813832646" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Anchor" id="0" name="Set enabled" sid="6086962339453787" type="Tutorial">
+                                                    <param id="0" name="State">0</param>
+                                                </action>
+                                                <action id="4" name="Set font color" sid="8327394965654057" type="Tutorial">
+                                                    <param id="0" name="Color">rgb(255, 0, 0)</param>
+                                                </action>
+                                                <action id="-3" name="Set position" sid="467081949059524" type="Tutorial">
+                                                    <param id="0" name="X">Self.X</param>
+                                                    <param id="1" name="Y">Self.Y + 100</param>
+                                                </action>
+                                                <action id="-3" name="Set position" sid="9420520952767737" type="BackGround_Hud_Text">
+                                                    <param id="0" name="X">Self.X</param>
+                                                    <param id="1" name="Y">Self.Y + 100</param>
+                                                </action>
+                                                <action id="0" name="Set text" sid="8131764748505084" type="Tutorial">
+                                                    <param id="0" name="Text">&quot;Non Ricordo fosse andata così...&quot;&amp;newline&amp;&quot;Premi F per continuare dall&apos;ultimo checkpoint&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="6221622540366054">
+                                            <conditions>
+                                                <condition id="-17" name="Compare opacity" sid="7306694920752988" type="System">
+                                                    <param id="0" name="Layer">&quot;Hud&quot;</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Opacity">100</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="811886561878283">
+                                                    <conditions>
+                                                        <condition id="0" name="On key pressed" sid="8856308701220828" type="Keyboard">
+                                                            <param id="0" name="Key">70 (F)</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-13" name="Set boolean" sid="7681866164375075" type="Player_Box">
+                                                            <param id="0" name="Instance variable">Is_Dead</param>
+                                                            <param id="1" name="Value">0</param>
+                                                        </action>
+                                                        <action id="-34" name="Set layer background color" sid="5844488086013261" type="System">
+                                                            <param id="0" name="Layer">&quot;Hud&quot;</param>
+                                                            <param id="1" name="Color">rgb(255, 255, 255)</param>
+                                                        </action>
+                                                        <action id="-18" name="Set layer opacity" sid="5528354521511392" type="System">
+                                                            <param id="0" name="Layer">&quot;Hud&quot;</param>
+                                                            <param id="1" name="Opacity">100</param>
+                                                        </action>
+                                                        <action id="-35" name="Set layer transparent" sid="3037414987154743" type="System">
+                                                            <param id="0" name="Layer">&quot;Hud&quot;</param>
+                                                            <param id="1" name="Mode">1</param>
+                                                        </action>
+                                                        <action id="0" name="Call function" sid="9478600158476952" type="Function">
+                                                            <param id="0" name="Name">&quot;Player Respawn&quot;</param>
+                                                            <param id="1" name="Parameter {n}">Player_Box.Checkpoint</param>
+                                                        </action>
+                                                        <action behavior="Fade" id="1" name="Start fade" sid="161916905991411" type="Tutorial" />
+                                                        <action behavior="Fade" id="1" name="Start fade" sid="6175050005363344" type="BackGround_Hud_Text" />
+                                                        <action id="-15" name="Set visible" sid="1723174438307214" type="Hud">
+                                                            <param id="0" name="Visibility">1</param>
+                                                        </action>
+                                                        <action id="0" name="Call function" sid="8542739557996012" type="Function">
+                                                            <param id="0" name="Name">&quot;Player Free&quot;</param>
+                                                            <param id="1" name="Parameter {n}"></param>
+                                                        </action>
+                                                        <action id="-3" name="Set position" sid="57915494724042" type="Tutorial">
+                                                            <param id="0" name="X">Self.X</param>
+                                                            <param id="1" name="Y">Self.Y - 100</param>
+                                                        </action>
+                                                        <action id="-3" name="Set position" sid="4729326231183876" type="BackGround_Hud_Text">
+                                                            <param id="0" name="X">Self.X</param>
+                                                            <param id="1" name="Y">Self.Y - 100</param>
+                                                        </action>
+                                                        <action behavior="Anchor" id="0" name="Set enabled" sid="2772676352703882" type="Tutorial">
+                                                            <param id="0" name="State">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="6657780273518214" title="Pause System">
+                    <sub-events>
+                        <event-block sid="8132128282703803">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="9851115149582087" type="Keyboard">
+                                    <param id="0" name="Key">70 (F)</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="9557617732362697" type="Player_Box">
+                                    <param id="0" name="Instance variable">Is_Paused</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="759934550832748" type="Player_Box">
+                                    <param id="0" name="Instance variable">Is_Paused</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-13" name="Set time scale" sid="2233703196489333" type="System">
+                                    <param id="0" name="Time scale">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="1802605740139892" type="Function">
+                                    <param id="0" name="Name">&quot;Player Free&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
@@ -1803,7 +1957,139 @@
                                     <param id="0" name="Instance variable">Life</param>
                                     <param id="1" name="Value">3</param>
                                 </action>
+                                <action id="-9" name="Destroy" sid="8939835986931185" type="ponteBlocco" />
+                                <action id="-9" name="Destroy" sid="8746962245135526" type="PonteBlocco_Destr_Obj" />
+                                <action id="-9" name="Destroy" sid="8313868994428711" type="ponteBlocco2" />
+                                <action id="-9" name="Destroy" sid="3390033473643687" type="PonteBlocco_Destr_Obj2" />
+                                <action id="-9" name="Destroy" sid="7532389099200429" type="ponteBlocco3" />
+                                <action id="-9" name="Destroy" sid="6310543535336768" type="PonteBlocco_Destr_Obj3" />
+                                <action id="-9" name="Destroy" sid="9812858227628601" type="ponteBlocco4" />
+                                <action id="-9" name="Destroy" sid="1182946002389689" type="PonteBlocco_Destr_Obj4" />
+                                <action id="-10" name="Set value" sid="2352825085310025" type="Player_Box">
+                                    <param id="0" name="Instance variable">Level_1_Phases</param>
+                                    <param id="1" name="Value">5</param>
+                                </action>
+                                <action behavior="Timer" id="1" name="Stop timer" sid="1646914043609147" type="Player_Box">
+                                    <param id="0" name="Tag">&quot;Bridge Going Down&quot;</param>
+                                </action>
+                                <action behavior="Timer" id="1" name="Stop timer" sid="4629815323778287" type="Player_Box">
+                                    <param id="0" name="Tag">&quot;Bridges Going Down&quot;</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="1450656618791052" type="System">
+                                    <param id="0" name="Object to create">ponteBlocco</param>
+                                    <param id="1" name="Layer">&quot;Floor Elements&quot;</param>
+                                    <param id="2" name="X">3578</param>
+                                    <param id="3" name="Y">637</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="4316301597899985" type="System">
+                                    <param id="0" name="Object to create">PonteBlocco_Destr_Obj</param>
+                                    <param id="1" name="Layer">&quot;Solid&quot;</param>
+                                    <param id="2" name="X">3578</param>
+                                    <param id="3" name="Y">600</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="1415613128095663" type="System">
+                                    <param id="0" name="Object to create">ponteBlocco2</param>
+                                    <param id="1" name="Layer">&quot;Floor Elements&quot;</param>
+                                    <param id="2" name="X">3950</param>
+                                    <param id="3" name="Y">635.744</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="8674688082275394" type="System">
+                                    <param id="0" name="Object to create">PonteBlocco_Destr_Obj2</param>
+                                    <param id="1" name="Layer">&quot;Solid&quot;</param>
+                                    <param id="2" name="X">3960</param>
+                                    <param id="3" name="Y">627.131</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="5473117184589619" type="System">
+                                    <param id="0" name="Object to create">ponteBlocco3</param>
+                                    <param id="1" name="Layer">&quot;Floor Elements&quot;</param>
+                                    <param id="2" name="X">4120</param>
+                                    <param id="3" name="Y">635.744</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="9799274665005687" type="System">
+                                    <param id="0" name="Object to create">PonteBlocco_Destr_Obj3</param>
+                                    <param id="1" name="Layer">&quot;Solid&quot;</param>
+                                    <param id="2" name="X">4130</param>
+                                    <param id="3" name="Y">620.979</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="8242672816905739" type="System">
+                                    <param id="0" name="Object to create">ponteBlocco4</param>
+                                    <param id="1" name="Layer">&quot;Floor Elements&quot;</param>
+                                    <param id="2" name="X">4315</param>
+                                    <param id="3" name="Y">720</param>
+                                </action>
+                                <action id="-3" name="Create object" sid="742346067912341" type="System">
+                                    <param id="0" name="Object to create">PonteBlocco_Destr_Obj4</param>
+                                    <param id="1" name="Layer">&quot;Solid&quot;</param>
+                                    <param id="2" name="X">4325</param>
+                                    <param id="3" name="Y">620.836</param>
+                                </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="8701273200884944">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="6938541572802902" type="lampione4">
+                                            <param id="0" name="Unique ID">265</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="8804941169012216" type="lampione4">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="193008827628485" type="lampione4">
+                                            <param id="0" name="X">lampione4.Pos_X</param>
+                                            <param id="1" name="Y">lampione4.Pos_Y</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="3246087734056019">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="7232384575835386" type="lampione5">
+                                            <param id="0" name="Unique ID">105</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="8933602107591245" type="lampione5">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="2236697797540472" type="lampione5">
+                                            <param id="0" name="X">lampione5.Pos_X</param>
+                                            <param id="1" name="Y">lampione5.Pos_Y</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="4310591284614567">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="4662467141436068" type="lampione5">
+                                            <param id="0" name="Unique ID">267</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="7370830197121778" type="lampione5">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="1287359012199247" type="lampione5">
+                                            <param id="0" name="X">lampione5.Pos_X</param>
+                                            <param id="1" name="Y">lampione5.Pos_Y</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="5308917777019311">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="9120663508985494" type="lampione2">
+                                            <param id="0" name="Unique ID">106</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-15" name="Set visible" sid="992184256411783" type="lampione2">
+                                            <param id="0" name="Visibility">1</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="4928764711935704" type="lampione2">
+                                            <param id="0" name="X">lampione2.Pos_X</param>
+                                            <param id="1" name="Y">lampione2.Pos_Y</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="9269076694589411">
                             <conditions>

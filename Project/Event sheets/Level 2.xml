@@ -84,8 +84,8 @@
                     </conditions>
                     <actions>
                         <action id="-3" name="Set position" sid="7066386173027625" type="Camera">
-                            <param id="0" name="X">lerp(Self.X,1660,0.06)</param>
-                            <param id="1" name="Y">lerp(Self.Y,2206,0.06)</param>
+                            <param id="0" name="X">lerp(Self.X,1660,0.03)</param>
+                            <param id="1" name="Y">lerp(Self.Y,2206,0.03)</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -93,11 +93,11 @@
                             <conditions>
                                 <condition id="-1" name="Compare X" sid="8227492927403728" type="Camera">
                                     <param id="0" name="Comparison">3</param>
-                                    <param id="1" name="X co-ordinate">1660</param>
+                                    <param id="1" name="X co-ordinate">1661</param>
                                 </condition>
                                 <condition id="-2" name="Compare Y" sid="91058769925798" type="Camera">
                                     <param id="0" name="Comparison">3</param>
-                                    <param id="1" name="Y co-ordinate">2206</param>
+                                    <param id="1" name="Y co-ordinate">2207</param>
                                 </condition>
                                 <condition id="-4" name="Trigger once while true" sid="8823259659416074" type="System" />
                             </conditions>
@@ -121,7 +121,7 @@
                     <actions>
                         <action id="-3" name="Set position" sid="4212203219055333" type="BotolaSeparaLivello">
                             <param id="0" name="X">Self.X</param>
-                            <param id="1" name="Y">Self.Y + 20*dt</param>
+                            <param id="1" name="Y">Self.Y + 5*dt</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -174,9 +174,9 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="2397099309164845">
+                <event-block sid="443523667164209">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="4406024392692705" type="Player_Box">
+                        <condition id="-7" name="Compare instance variable" sid="8977801441645521" type="Player_Box">
                             <param id="0" name="Instance variable">Level_2_Phases</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">4</param>
@@ -184,40 +184,63 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="2276248076828023">
+                        <event-block sid="916875876769524">
                             <conditions>
-                                <condition id="7" inverted="1" name="Is mirrored" sid="1937549501307974" type="Player_Frame" />
+                                <condition id="7" inverted="1" name="Is mirrored" sid="4073139735548012" type="Player_Frame" />
                             </conditions>
                             <actions>
-                                <action id="-3" name="Set position" sid="2802504429040237" type="Camera">
+                                <action id="-3" name="Set position" sid="2114182650084377" type="Camera">
                                     <param id="0" name="X">lerp(Self.X,Player_Box.X + 30,0.03)</param>
                                     <param id="1" name="Y">lerp(Self.Y,Player_Box.Y - 80,0.03)</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="9774947647350792">
+                        <event-block sid="3676273066013005">
                             <conditions>
-                                <condition id="7" name="Is mirrored" sid="5997916699175203" type="Player_Frame" />
+                                <condition id="7" name="Is mirrored" sid="8203446704155689" type="Player_Frame" />
                             </conditions>
                             <actions>
-                                <action id="-3" name="Set position" sid="1949333338263381" type="Camera">
+                                <action id="-3" name="Set position" sid="7147720131366787" type="Camera">
                                     <param id="0" name="X">lerp(Self.X,Player_Box.X - 30,0.03)</param>
                                     <param id="1" name="Y">lerp(Self.Y,Player_Box.Y - 80,0.03)</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="652870891150836">
+                        <event-block sid="616919210177124">
                             <conditions>
-                                <condition id="-8" name="Compare two values" sid="4097960828280392" type="System">
+                                <condition id="-8" name="Compare two values" sid="4223095062140748" type="System">
                                     <param id="0" name="First value">abs(Camera.X - Player_Box.X)</param>
                                     <param id="1" name="Comparison">3</param>
                                     <param id="2" name="Second value">50</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-10" name="Set value" sid="6949172172716657" type="Player_Box">
+                                <action id="-10" name="Set value" sid="2512903881542236" type="Player_Box">
                                     <param id="0" name="Instance variable">Level_2_Phases</param>
                                     <param id="1" name="Value">5</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="2397099309164845">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="4406024392692705" type="Player_Box">
+                            <param id="0" name="Instance variable">Level_2_Phases</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">5</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="1060111180699526">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="7999687472884661" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="8251525823048004" type="Function">
+                                    <param id="0" name="Name">&quot;Player Free&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
                         </event-block>

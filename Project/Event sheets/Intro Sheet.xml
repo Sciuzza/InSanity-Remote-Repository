@@ -52,6 +52,9 @@
                         <action id="-16" name="Set opacity" sid="8759226513446083" type="Tutorial">
                             <param id="0" name="Opacity">100</param>
                         </action>
+                        <action behavior="Fade" id="4" name="Set fade-out time" sid="6806250522304696" type="Tutorial">
+                            <param id="0" name="Fade-out time">0.3</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="6089736344648547">
@@ -65,13 +68,15 @@
                         <action id="-16" name="Set opacity" sid="3039161942865017" type="BackGround_Hud_Text">
                             <param id="0" name="Opacity">100</param>
                         </action>
+                        <action behavior="Fade" id="4" name="Set fade-out time" sid="4612067782295697" type="BackGround_Hud_Text">
+                            <param id="0" name="Fade-out time">0.3</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="4466431984269211" title="Tutorial">
             <sub-events>
-                <comment>First Tutorial Off</comment>
                 <event-block sid="3654035169875921">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="6086974888938161" type="Tutorial">
@@ -102,42 +107,56 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <comment>Second Tutorial and Jump Enabled</comment>
-                <event-block sid="7730727282793657">
+                <event-block sid="6521967165709477">
                     <conditions>
-                        <condition id="-8" name="Compare two values" sid="7134951783011349" type="System">
-                            <param id="0" name="First value">Player_Box.ImagePointX(0)</param>
-                            <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Second value">300</param>
+                        <condition id="-7" name="Compare instance variable" sid="532505758738433" type="Tutorial">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
                         </condition>
-                        <condition id="-4" name="Trigger once while true" sid="2768611717871596" type="System" />
                     </conditions>
-                    <actions>
-                        <action id="3" name="Set font size" sid="6325002793711139" type="Tutorial">
-                            <param id="0" name="Size (pt)">8</param>
-                        </action>
-                        <action id="0" name="Set text" sid="3788905888334063" type="Tutorial">
-                            <param id="0" name="Text">&quot;Usa il tasto W per saltare le macerie&quot;</param>
-                        </action>
-                        <action id="-13" name="Set boolean" sid="1379905508359347" type="Player_Box">
-                            <param id="0" name="Instance variable">Jump_Is_On</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="2389619023513097" type="Tutorial">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="9774276374069064" type="BackGround_Hud_Text">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="7730727282793657">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="7134951783011349" type="System">
+                                    <param id="0" name="First value">Player_Box.ImagePointX(0)</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">300</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="2768611717871596" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="3" name="Set font size" sid="6325002793711139" type="Tutorial">
+                                    <param id="0" name="Size (pt)">8</param>
+                                </action>
+                                <action id="0" name="Set text" sid="3788905888334063" type="Tutorial">
+                                    <param id="0" name="Text">&quot;Usa il tasto W per saltare le macerie&quot;</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="1379905508359347" type="Player_Box">
+                                    <param id="0" name="Instance variable">Jump_Is_On</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="2389619023513097" type="Tutorial">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="9774276374069064" type="BackGround_Hud_Text">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="2179213568063241" type="Tutorial">
+                                    <param id="0" name="Instance variable">State</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
-                <comment>Second Tutorial Off</comment>
                 <event-block sid="7468003070829821">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="2649023493176895" type="Tutorial">
                             <param id="0" name="Instance variable">State</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
+                            <param id="2" name="Value">2</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -153,48 +172,62 @@
                                 <action behavior="Fade" id="1" name="Start fade" sid="5894728371115915" type="BackGround_Hud_Text" />
                                 <action id="-10" name="Set value" sid="320477862612003" type="Tutorial">
                                     <param id="0" name="Instance variable">State</param>
-                                    <param id="1" name="Value">2</param>
+                                    <param id="1" name="Value">3</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
-                <comment>Third Tutorial and Dash Enabled</comment>
-                <event-block sid="8193297896884573">
+                <event-block sid="9167809549589448">
                     <conditions>
-                        <condition id="-8" name="Compare two values" sid="6734172108163342" type="System">
-                            <param id="0" name="First value">Player_Box.ImagePointX(0)</param>
-                            <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Second value">600</param>
-                        </condition>
-                        <condition id="-4" name="Trigger once while true" sid="92725267180648" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="3" name="Set font size" sid="6384541405213606" type="Tutorial">
-                            <param id="0" name="Size (pt)">4</param>
-                        </action>
-                        <action id="0" name="Set text" sid="6280439533075851" type="Tutorial">
-                            <param id="0" name="Text">&quot;Mentre salti il burrone, premi il tasto Barra Spaziatrice e compi una scatto nella direzione verso cui ti stai muovendo; questo scatto consuma 1 stamina (barra verde in alto a sinistra) e non puoi eseguirlo se la barra è vuota &quot;</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="3403451487014013" type="Tutorial">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="578347123913858" type="BackGround_Hud_Text">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-13" name="Set boolean" sid="2087399612704273" type="Player_Box">
-                            <param id="0" name="Instance variable">Dash_Is_On</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <comment>Third Tutorial Off</comment>
-                <event-block sid="3157980044121201">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="3591293435801042" type="Tutorial">
+                        <condition id="-7" name="Compare instance variable" sid="7812752695688359" type="Tutorial">
                             <param id="0" name="Instance variable">State</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">2</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="6402933590600283">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="1055017592514648" type="System">
+                                    <param id="0" name="First value">Player_Box.ImagePointX(0)</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Second value">600</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="5492056565720266" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="3" name="Set font size" sid="5540956189972606" type="Tutorial">
+                                    <param id="0" name="Size (pt)">4</param>
+                                </action>
+                                <action id="0" name="Set text" sid="523590477473015" type="Tutorial">
+                                    <param id="0" name="Text">&quot;Mentre salti il burrone, premi il tasto Barra Spaziatrice e compi una scatto nella direzione verso cui ti stai muovendo; questo scatto consuma 1 stamina (barra verde in alto a sinistra) e non puoi eseguirlo se la barra è vuota &quot;</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="5713617018259059" type="Tutorial">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="103196976797318" type="BackGround_Hud_Text">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="3036012326495033" type="Player_Box">
+                                    <param id="0" name="Instance variable">Dash_Is_On</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="3430031324410803" type="Tutorial">
+                                    <param id="0" name="Instance variable">State</param>
+                                    <param id="1" name="Value">4</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="6010114472724484">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="5930864857764986" type="Tutorial">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">4</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -213,316 +246,394 @@
                                 <action behavior="Fade" id="1" name="Start fade" sid="8896079925963615" type="BackGround_Hud_Text" />
                                 <action id="-10" name="Set value" sid="2891613193902414" type="Tutorial">
                                     <param id="0" name="Instance variable">State</param>
-                                    <param id="1" name="Value">3</param>
+                                    <param id="1" name="Value">5</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
-                <comment>Fourth Tutorial</comment>
-                <event-block sid="8095321358024051">
-                    <conditions>
-                        <condition id="1" name="Is overlapping another object" sid="3267357734327154" type="Player_Box">
-                            <param id="0" name="Object">Trigger_Bat_Intro</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="8031215530208991" type="Tutorial">
-                            <param id="0" name="Instance variable">State</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">3</param>
-                        </condition>
-                        <condition id="-4" name="Trigger once while true" sid="1874850701197684" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="-13" name="Set boolean" sid="8510213974331026" type="Player_Box">
-                            <param id="0" name="Instance variable">Jump_Is_On</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-13" name="Set boolean" sid="6174527816197637" type="Player_Box">
-                            <param id="0" name="Instance variable">Dash_Is_On</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-13" name="Set boolean" sid="4675724807974809" type="Player_Box">
-                            <param id="0" name="Instance variable">Side_Movement_Is_On</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-13" name="Set boolean" sid="5249574823924104" type="Player_Box">
-                            <param id="0" name="Instance variable">Mouse_Look_Is_On</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="8763189606095226" type="Bat_Testing">
-                            <param id="0" name="Instance variable">Target_ID</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action behavior="Bullet" id="5" name="Set enabled" sid="7841682942272437" type="Bat_Testing">
-                            <param id="0" name="State">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="8207212908638269">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="4506892518931288" type="Bat_Waypoint">
-                            <param id="0" name="Instance variable">ID</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">Bat_Testing.Target_ID</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="1602157932867223" type="Bat_Testing">
-                            <param id="0" name="Angle">angle(Bat_Testing.X,Bat_Testing.Y,Bat_Waypoint.X,Bat_Waypoint.Y)</param>
-                        </action>
-                    </actions>
+                <event-group description="" sid="3149129494691381" title="Bat Events">
                     <sub-events>
-                        <event-block sid="6892799528468506">
+                        <event-block sid="8207212908638269">
                             <conditions>
-                                <condition id="-8" name="Is boolean instance variable set" sid="5798358208542652" type="Bat_Testing">
-                                    <param id="0" name="Instance variable">Is_Facing_Player</param>
+                                <condition id="-7" name="Compare instance variable" sid="4506892518931288" type="Bat_Waypoint">
+                                    <param id="0" name="Instance variable">ID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">Bat_Testing.Target_ID</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-22" name="Set angle toward position" sid="1735771016434286" type="Bat_Testing">
-                                    <param id="0" name="X">Player_Box.ImagePointX(1)</param>
-                                    <param id="1" name="Y">Player_Box.ImagePointY(1)</param>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="1602157932867223" type="Bat_Testing">
+                                    <param id="0" name="Angle">angle(Bat_Testing.X,Bat_Testing.Y,Bat_Waypoint.X,Bat_Waypoint.Y)</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="6892799528468506">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="5798358208542652" type="Bat_Testing">
+                                            <param id="0" name="Instance variable">Is_Facing_Player</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-22" name="Set angle toward position" sid="1735771016434286" type="Bat_Testing">
+                                            <param id="0" name="X">Player_Box.ImagePointX(1)</param>
+                                            <param id="1" name="Y">Player_Box.ImagePointY(1)</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="9123130867727396">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="2905510167355279" type="Bat_Testing">
-                            <param id="0" name="Object">Bat_Waypoint</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="132407574816273" type="Bat_Waypoint">
-                            <param id="0" name="Instance variable">ID</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">Bat_Testing.Target_ID</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="2899084142228185">
+                        <event-block sid="8095321358024051">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="2864790141518692" type="Bat_Waypoint">
-                                    <param id="0" name="Instance variable">ID</param>
+                                <condition id="1" name="Is overlapping another object" sid="3267357734327154" type="Player_Box">
+                                    <param id="0" name="Object">Trigger_Bat_Intro</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="8031215530208991" type="Tutorial">
+                                    <param id="0" name="Instance variable">State</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
+                                    <param id="2" name="Value">5</param>
                                 </condition>
                             </conditions>
                             <actions />
                             <sub-events>
-                                <event-block sid="9051079349692127">
+                                <event-block sid="8840937644547549">
                                     <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="354906652602956" type="Tutorial">
-                                            <param id="0" name="Instance variable">State</param>
+                                        <condition id="-4" name="Trigger once while true" sid="1874850701197684" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="8510213974331026" type="Player_Box">
+                                            <param id="0" name="Instance variable">Jump_Is_On</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="6174527816197637" type="Player_Box">
+                                            <param id="0" name="Instance variable">Dash_Is_On</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="4675724807974809" type="Player_Box">
+                                            <param id="0" name="Instance variable">Side_Movement_Is_On</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="5249574823924104" type="Player_Box">
+                                            <param id="0" name="Instance variable">Mouse_Look_Is_On</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-10" name="Set value" sid="8763189606095226" type="Bat_Testing">
+                                            <param id="0" name="Instance variable">Target_ID</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action behavior="Bullet" id="5" name="Set enabled" sid="7841682942272437" type="Bat_Testing">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="8712784787991581">
+                                    <conditions>
+                                        <condition id="7" name="Is mirrored" sid="8127299799444202" type="Player_Frame" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="7" name="Set mirrored" sid="9016655300576461" type="Player_Frame">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="8" name="Set flipped" sid="1964671700665349" type="Player_arm">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action id="-8" name="Set angle" sid="3926299868919014" type="Player_arm">
+                                            <param id="0" name="Angle">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="9123130867727396">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="2905510167355279" type="Bat_Testing">
+                                    <param id="0" name="Object">Bat_Waypoint</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="132407574816273" type="Bat_Waypoint">
+                                    <param id="0" name="Instance variable">ID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">Bat_Testing.Target_ID</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="2899084142228185">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="2864790141518692" type="Bat_Waypoint">
+                                            <param id="0" name="Instance variable">ID</param>
                                             <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">3</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="9051079349692127">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="354906652602956" type="Tutorial">
+                                                    <param id="0" name="Instance variable">State</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">5</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="3966039387694975" type="Bat_Testing">
+                                                    <param id="0" name="Instance variable">Target_ID</param>
+                                                    <param id="1" name="Value">Bat_Waypoint.Next_ID_1</param>
+                                                </action>
+                                                <action behavior="Bullet" id="5" name="Set enabled" sid="5357594499388168" type="Bat_Testing">
+                                                    <param id="0" name="State">0</param>
+                                                </action>
+                                                <action id="3" name="Set font size" sid="9186903445865298" type="Tutorial">
+                                                    <param id="0" name="Size (pt)">6</param>
+                                                </action>
+                                                <action id="0" name="Set text" sid="6866930268302423" type="Tutorial">
+                                                    <param id="0" name="Text">&quot;Lo scatto serve anche ad evitare gli attacchi e, in alcuni casi, a superare i nemici stessi, Premi Spazio per Schivare l&apos;attacco nemico&quot;</param>
+                                                </action>
+                                                <action id="-15" name="Set visible" sid="4142561592025352" type="Tutorial">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                                <action id="-15" name="Set visible" sid="6629372536764201" type="BackGround_Hud_Text">
+                                                    <param id="0" name="Visibility">1</param>
+                                                </action>
+                                                <action id="-25" name="Move to bottom" sid="5228603527842279" type="BackGround_Hud_Text" />
+                                                <action id="-3" name="Set position" sid="4000335720294036" type="BackGround_Hud_Text">
+                                                    <param id="0" name="X">Tutorial.X + 80</param>
+                                                    <param id="1" name="Y">Tutorial.Y + 40</param>
+                                                </action>
+                                                <action id="-13" name="Set boolean" sid="8108318192035784" type="Player_Box">
+                                                    <param id="0" name="Instance variable">Dash_Is_On</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action id="-8" name="Set angle" sid="2810305659522137" type="Bat_Testing">
+                                                    <param id="0" name="Angle">180</param>
+                                                </action>
+                                                <action id="-13" name="Set boolean" sid="3950399577866033" type="Bat_Testing">
+                                                    <param id="0" name="Instance variable">Is_Facing_Player</param>
+                                                    <param id="1" name="Value">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="1042093942506612">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="4151014157662378" type="Bat_Waypoint">
+                                            <param id="0" name="Instance variable">ID</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-10" name="Set value" sid="3966039387694975" type="Bat_Testing">
-                                            <param id="0" name="Instance variable">Target_ID</param>
-                                            <param id="1" name="Value">Bat_Waypoint.Next_ID_1</param>
-                                        </action>
-                                        <action behavior="Bullet" id="5" name="Set enabled" sid="5357594499388168" type="Bat_Testing">
+                                        <action behavior="Bullet" id="5" name="Set enabled" sid="171865543352897" type="Bat_Testing">
                                             <param id="0" name="State">0</param>
                                         </action>
-                                        <action id="3" name="Set font size" sid="9186903445865298" type="Tutorial">
-                                            <param id="0" name="Size (pt)">6</param>
-                                        </action>
-                                        <action id="0" name="Set text" sid="6866930268302423" type="Tutorial">
-                                            <param id="0" name="Text">&quot;Lo scatto serve anche ad evitare gli attacchi e, in alcuni casi, a superare i nemici stessi, Premi Spazio per Schivare l&apos;attacco nemico&quot;</param>
-                                        </action>
-                                        <action id="-15" name="Set visible" sid="4142561592025352" type="Tutorial">
+                                        <action id="-15" name="Set visible" sid="6336585999410668" type="Tutorial">
                                             <param id="0" name="Visibility">1</param>
                                         </action>
-                                        <action id="-15" name="Set visible" sid="6629372536764201" type="BackGround_Hud_Text">
+                                        <action id="3" name="Set font size" sid="3513011359722867" type="Tutorial">
+                                            <param id="0" name="Size (pt)">4</param>
+                                        </action>
+                                        <action id="0" name="Set text" sid="3156342973276449" type="Tutorial">
+                                            <param id="0" name="Text">&quot;Ogni nemico ha un punto debole: il biter può essere ucciso solamente sparandogli nella parte posteriore del corpo. Premendo il tasto sinistro del mouse il personaggio sparerà nella direzione verso cui il mouse punta&quot;</param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="9068563989132671" type="BackGround_Hud_Text">
                                             <param id="0" name="Visibility">1</param>
                                         </action>
-                                        <action id="-25" name="Move to bottom" sid="5228603527842279" type="BackGround_Hud_Text" />
-                                        <action id="-3" name="Set position" sid="4000335720294036" type="BackGround_Hud_Text">
-                                            <param id="0" name="X">Tutorial.X + 80</param>
-                                            <param id="1" name="Y">Tutorial.Y + 40</param>
-                                        </action>
-                                        <action id="-13" name="Set boolean" sid="8108318192035784" type="Player_Box">
-                                            <param id="0" name="Instance variable">Dash_Is_On</param>
+                                        <action id="-13" name="Set boolean" sid="7856070152012083" type="Player_Box">
+                                            <param id="0" name="Instance variable">Mouse_Look_Is_On</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
-                                        <action id="-8" name="Set angle" sid="2810305659522137" type="Bat_Testing">
-                                            <param id="0" name="Angle">180</param>
+                                        <action id="-13" name="Set boolean" sid="3247299024329708" type="Player_Box">
+                                            <param id="0" name="Instance variable">Weapon_Is_On</param>
+                                            <param id="1" name="Value">1</param>
                                         </action>
-                                        <action id="-13" name="Set boolean" sid="3950399577866033" type="Bat_Testing">
-                                            <param id="0" name="Instance variable">Is_Facing_Player</param>
+                                        <action id="-13" name="Set boolean" sid="2520158775534465" type="Player_Box">
+                                            <param id="0" name="Instance variable">Dash_Is_On</param>
                                             <param id="1" name="Value">0</param>
                                         </action>
                                     </actions>
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="1042093942506612">
+                        <event-block sid="9241508523946336">
                             <conditions>
-                                <condition id="-22" name="Else" sid="4151014157662378" type="System" />
+                                <condition id="0" name="On key pressed" sid="3743231273798703" type="Keyboard">
+                                    <param id="0" name="Key">32 (Barra Spaziatrice)</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="8822078156520865" type="Bat_Testing">
+                                    <param id="0" name="Instance variable">Target_ID</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="1918374154973601" type="Tutorial">
+                                    <param id="0" name="Instance variable">State</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">5</param>
+                                </condition>
                             </conditions>
                             <actions>
-                                <action behavior="Bullet" id="5" name="Set enabled" sid="171865543352897" type="Bat_Testing">
-                                    <param id="0" name="State">0</param>
+                                <action id="-10" name="Set value" sid="4258555389072518" type="Tutorial">
+                                    <param id="0" name="Instance variable">State</param>
+                                    <param id="1" name="Value">6</param>
                                 </action>
-                                <action id="-15" name="Set visible" sid="6336585999410668" type="Tutorial">
-                                    <param id="0" name="Visibility">1</param>
+                                <action behavior="Bullet" id="5" name="Set enabled" sid="7556231481704933" type="Bat_Testing">
+                                    <param id="0" name="State">1</param>
                                 </action>
-                                <action id="3" name="Set font size" sid="3513011359722867" type="Tutorial">
-                                    <param id="0" name="Size (pt)">4</param>
+                                <action behavior="Fade" id="1" name="Start fade" sid="7298208585554811" type="Tutorial" />
+                                <action behavior="Fade" id="1" name="Start fade" sid="6597045421454763" type="BackGround_Hud_Text" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="99539245043708">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="7420049945408768" type="Bullet_1_Player">
+                                    <param id="0" name="Object">Bat_Testing</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="5776713610837929" type="Tutorial">
+                                    <param id="0" name="Instance variable">State</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">6</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Flash" id="0" name="Flash" sid="588909548872986" type="Bat_Testing">
+                                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                    <param id="2" name="Duration">1.0</param>
                                 </action>
-                                <action id="0" name="Set text" sid="3156342973276449" type="Tutorial">
-                                    <param id="0" name="Text">&quot;Ogni nemico ha un punto debole: il biter può essere ucciso solamente sparandogli nella parte posteriore del corpo. Premendo il tasto sinistro del mouse il personaggio sparerà nella direzione verso cui il mouse punta&quot;</param>
+                                <action behavior="Timer" id="0" name="Start timer" sid="5778277812841634" type="Bat_Testing">
+                                    <param id="0" name="Duration">1.0</param>
+                                    <param id="1" name="Type">0</param>
+                                    <param id="2" name="Tag">&quot;Death&quot;</param>
                                 </action>
-                                <action id="-15" name="Set visible" sid="9068563989132671" type="BackGround_Hud_Text">
-                                    <param id="0" name="Visibility">1</param>
-                                </action>
-                                <action id="-13" name="Set boolean" sid="7856070152012083" type="Player_Box">
-                                    <param id="0" name="Instance variable">Mouse_Look_Is_On</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="-13" name="Set boolean" sid="3247299024329708" type="Player_Box">
-                                    <param id="0" name="Instance variable">Weapon_Is_On</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="-13" name="Set boolean" sid="2520158775534465" type="Player_Box">
-                                    <param id="0" name="Instance variable">Dash_Is_On</param>
+                                <action id="-9" name="Destroy" sid="4063225383046188" type="Bullet_1_Player" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="7530365051216519">
+                            <conditions>
+                                <condition behavior="Timer" id="0" name="On timer" sid="8328678224753078" type="Bat_Testing">
+                                    <param id="0" name="Tag">&quot;Death&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="8474006981652453" type="Bat_Testing">
+                                    <param id="0" name="Instance variable">Life</param>
                                     <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="6204853606516359" type="Tutorial">
+                                    <param id="0" name="Instance variable">State</param>
+                                    <param id="1" name="Value">7</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3776698127055312">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="4964595450879417" type="Bat_Testing">
+                                    <param id="0" name="Instance variable">Life</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="3455401301111463" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="6577758666510715" type="Bat_Testing" />
+                                <action behavior="Fade" id="1" name="Start fade" sid="3646680167954984" type="Tutorial" />
+                                <action behavior="Fade" id="1" name="Start fade" sid="5737278016548955" type="BackGround_Hud_Text" />
+                                <action id="-13" name="Set boolean" sid="2363661180844818" type="Player_Box">
+                                    <param id="0" name="Instance variable">Dash_Is_On</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="3863147269511761" type="Player_Box">
+                                    <param id="0" name="Instance variable">Side_Movement_Is_On</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="8818425578372933" type="Player_Box">
+                                    <param id="0" name="Instance variable">Jump_Is_On</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-block any="1" sid="8509887082382536">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="7453314209085924" type="Tutorial">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">7</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="9233294081139895">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="1654206730754052" type="Record_1">
+                                    <param id="0" name="Comparison">3</param>
+                                    <param id="1" name="Y co-ordinate">218</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="381276938813552" type="Record_1">
+                                    <param id="0" name="X">Self.X</param>
+                                    <param id="1" name="Y">Self.Y + 10*dt</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2424904205936995">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="7751031155203357" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="11" name="Set collisions enabled" sid="5307105323788658" type="Record_1">
+                                    <param id="0" name="Collisions">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="2549875461531397" type="Record_1">
+                                    <param id="0" name="Visibility">1</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="9241508523946336">
+                <event-block sid="4752255113629345">
                     <conditions>
-                        <condition id="0" name="On key pressed" sid="3743231273798703" type="Keyboard">
-                            <param id="0" name="Key">32 (Barra Spaziatrice)</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="8822078156520865" type="Bat_Testing">
-                            <param id="0" name="Instance variable">Target_ID</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">2</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="1918374154973601" type="Tutorial">
-                            <param id="0" name="Instance variable">State</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">3</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-10" name="Set value" sid="4258555389072518" type="Tutorial">
-                            <param id="0" name="Instance variable">State</param>
-                            <param id="1" name="Value">4</param>
-                        </action>
-                        <action behavior="Bullet" id="5" name="Set enabled" sid="7556231481704933" type="Bat_Testing">
-                            <param id="0" name="State">1</param>
-                        </action>
-                        <action behavior="Fade" id="1" name="Start fade" sid="7298208585554811" type="Tutorial" />
-                        <action behavior="Fade" id="1" name="Start fade" sid="6597045421454763" type="BackGround_Hud_Text" />
-                    </actions>
-                </event-block>
-                <event-block sid="99539245043708">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="7420049945408768" type="Bullet_1_Player">
-                            <param id="0" name="Object">Bat_Testing</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="5776713610837929" type="Tutorial">
-                            <param id="0" name="Instance variable">State</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">4</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Flash" id="0" name="Flash" sid="588909548872986" type="Bat_Testing">
-                            <param id="0" name="&apos;On&apos; time">0.1</param>
-                            <param id="1" name="&apos;Off&apos; time">0.1</param>
-                            <param id="2" name="Duration">1.0</param>
-                        </action>
-                        <action behavior="Timer" id="0" name="Start timer" sid="5778277812841634" type="Bat_Testing">
-                            <param id="0" name="Duration">1.0</param>
-                            <param id="1" name="Type">0</param>
-                            <param id="2" name="Tag">&quot;Death&quot;</param>
-                        </action>
-                        <action id="-9" name="Destroy" sid="4063225383046188" type="Bullet_1_Player" />
-                    </actions>
-                </event-block>
-                <event-block sid="7530365051216519">
-                    <conditions>
-                        <condition behavior="Timer" id="0" name="On timer" sid="8328678224753078" type="Bat_Testing">
-                            <param id="0" name="Tag">&quot;Death&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-10" name="Set value" sid="8474006981652453" type="Bat_Testing">
-                            <param id="0" name="Instance variable">Life</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="3776698127055312">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="4964595450879417" type="Bat_Testing">
-                            <param id="0" name="Instance variable">Life</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" sid="6577758666510715" type="Bat_Testing" />
-                        <action behavior="Fade" id="1" name="Start fade" sid="3646680167954984" type="Tutorial" />
-                        <action behavior="Fade" id="1" name="Start fade" sid="5737278016548955" type="BackGround_Hud_Text" />
-                        <action id="-13" name="Set boolean" sid="2363661180844818" type="Player_Box">
-                            <param id="0" name="Instance variable">Dash_Is_On</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="-13" name="Set boolean" sid="3863147269511761" type="Player_Box">
-                            <param id="0" name="Instance variable">Side_Movement_Is_On</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="-13" name="Set boolean" sid="8818425578372933" type="Player_Box">
-                            <param id="0" name="Instance variable">Jump_Is_On</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <comment>Fifth Tutorial</comment>
-                <event-block sid="5918579828902626">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="7471273887865033" type="Player_Frame">
+                        <condition id="0" name="On collision with another object" sid="7320821272511262" type="Player_Frame">
                             <param id="0" name="Object">Record_1</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action behavior="Fade" id="1" name="Start fade" sid="6178449826069046" type="Record_1" />
-                        <action id="11" name="Set collisions enabled" sid="5214895521760003" type="Record_1">
+                        <action behavior="Fade" id="1" name="Start fade" sid="5989958355836812" type="Record_1" />
+                        <action id="11" name="Set collisions enabled" sid="1755228403454959" type="Record_1">
                             <param id="0" name="Collisions">0</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="3262190080860917" type="Tutorial">
-                            <param id="0" name="Visibility">1</param>
+                        <action id="-13" name="Set time scale" sid="1086121714094007" type="System">
+                            <param id="0" name="Time scale">0</param>
                         </action>
-                        <action id="3" name="Set font size" sid="152423767683479" type="Tutorial">
-                            <param id="0" name="Size (pt)">10</param>
-                        </action>
-                        <action id="0" name="Set text" sid="7486977039328032" type="Tutorial">
-                            <param id="0" name="Text">&quot;Raggiungimi il prima possibile... ho paura...&quot;</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="1158385193565389" type="BackGround_Hud_Text">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action behavior="Timer" id="0" name="Start timer" sid="7230548632663213" type="Tutorial">
+                        <action behavior="Timer" id="0" name="Start timer" sid="7418282017537588" type="Tutorial">
                             <param id="0" name="Duration">3</param>
                             <param id="1" name="Type">0</param>
                             <param id="2" name="Tag">&quot;Tutorial Records&quot;</param>
                         </action>
-                        <action id="-11" name="Add to" sid="9525924853662999" type="Player_Box">
+                        <action id="-15" name="Set visible" sid="7667853407675113" type="Tutorial">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="3" name="Set font size" sid="3866575529540751" type="Tutorial">
+                            <param id="0" name="Size (pt)">8</param>
+                        </action>
+                        <action id="0" name="Set text" sid="2843863059473041" type="Tutorial">
+                            <param id="0" name="Text">&quot;Aiutami... ho paura...&quot; &amp;newline&amp;&quot;I proiettili massimi del caricatore aumentano!&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="5246806824712554" type="BackGround_Hud_Text">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="9301063225492855" type="Player_Box">
                             <param id="0" name="Instance variable">Weapon_Max_Loader</param>
                             <param id="1" name="Value">1</param>
                         </action>
-                        <action id="-9" name="Set value" sid="359013009023597" type="System">
+                        <action id="-9" name="Set value" sid="941324204482073" type="System">
                             <param id="0" name="Variable">Weapon_Max_Loader_Temp</param>
                             <param id="1" name="Value">Player_Box.Weapon_Max_Loader</param>
                         </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="3224556311662594" type="Tutorial" />
+                        <action behavior="Fade" id="1" name="Start fade" sid="7469398723975501" type="BackGround_Hud_Text" />
                     </actions>
                 </event-block>
                 <event-block sid="7893503758570606">
@@ -533,15 +644,26 @@
                     </conditions>
                     <actions>
                         <action id="3" name="Set font size" sid="1711032078432363" type="Tutorial">
-                            <param id="0" name="Size (pt)">4</param>
+                            <param id="0" name="Size (pt)">5</param>
                         </action>
                         <action id="0" name="Set text" sid="499213096582054" type="Tutorial">
                             <param id="0" name="Text">&quot;L’oggetto raccolto è un ricordo. Essi permettono di potenziare il personaggio (in questo caso aumentando di 1 la capienza del caricatore) e conoscere la storia del personaggio. Il numero di ricordi ottenuti e totali dell’attuale livello sono visualizzabili in basso a sinistra&quot;</param>
                         </action>
-                        <action id="-10" name="Set value" sid="7458835902616309" type="Tutorial">
-                            <param id="0" name="Instance variable">State</param>
-                            <param id="1" name="Value">5</param>
+                        <action id="-15" name="Set visible" sid="7578726687198452" type="Tutorial">
+                            <param id="0" name="Visibility">1</param>
                         </action>
+                        <action id="-15" name="Set visible" sid="4380175783052527" type="BackGround_Hud_Text">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-13" name="Set time scale" sid="5053063552585578" type="System">
+                            <param id="0" name="Time scale">0</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="6141687489651694" type="Tutorial">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Value">8</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="9681598267113781" type="Tutorial" />
+                        <action behavior="Fade" id="1" name="Start fade" sid="2840715476638606" type="BackGround_Hud_Text" />
                     </actions>
                 </event-block>
                 <event-block sid="5350086136624077">
@@ -549,23 +671,36 @@
                         <condition id="0" name="On collision with another object" sid="4255209713457062" type="Bullet_1_Player">
                             <param id="0" name="Object">Padlock</param>
                         </condition>
-                        <condition id="-7" name="Compare instance variable" sid="3480566307584771" type="Tutorial">
-                            <param id="0" name="Instance variable">State</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">5</param>
-                        </condition>
                     </conditions>
-                    <actions>
-                        <action id="-12" name="Subtract from" sid="9370700027818306" type="Padlock">
-                            <param id="0" name="Instance variable">Life</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action behavior="Flash" id="0" name="Flash" sid="5517199380958228" type="Padlock">
-                            <param id="0" name="&apos;On&apos; time">0.1</param>
-                            <param id="1" name="&apos;Off&apos; time">0.1</param>
-                            <param id="2" name="Duration">0.5</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block any="1" sid="3012726667454919">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="3480566307584771" type="Tutorial">
+                                    <param id="0" name="Instance variable">State</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">7</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="8797199588136547" type="Tutorial">
+                                    <param id="0" name="Instance variable">State</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">8</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Subtract from" sid="9370700027818306" type="Padlock">
+                                    <param id="0" name="Instance variable">Life</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action behavior="Flash" id="0" name="Flash" sid="5517199380958228" type="Padlock">
+                                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                    <param id="2" name="Duration">0.5</param>
+                                </action>
+                                <action id="-9" name="Destroy" sid="4361875603131056" type="Bullet_1_Player" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="4369067212617884">
                     <conditions>
@@ -597,21 +732,33 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="2172279939755877" type="Padlock" />
-                        <action id="-10" name="Set value" sid="8750914309629846" type="Tutorial">
+                    </actions>
+                </event-block>
+                <event-block sid="5880121501107617">
+                    <conditions>
+                        <condition behavior="Fade" id="0" name="On fade-out finished" sid="4526036787978598" type="Tutorial" />
+                        <condition id="-7" name="Compare instance variable" sid="5368449977232114" type="Tutorial">
                             <param id="0" name="Instance variable">State</param>
-                            <param id="1" name="Value">6</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">8</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="4460781856758417" type="Tutorial">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Value">9</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="8881443140851668">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="4587847266113083" type="Tutorial">
-                            <param id="0" name="Instance variable">State</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">6</param>
-                        </condition>
                         <condition id="1" name="Is overlapping another object" sid="6026234655748919" type="Player_Frame">
                             <param id="0" name="Object">Door_Area</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="2511508580420748" type="Tutorial">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">9</param>
                         </condition>
                     </conditions>
                     <actions />
@@ -633,12 +780,14 @@
                                 </action>
                                 <action id="-10" name="Set value" sid="8155689178981451" type="Tutorial">
                                     <param id="0" name="Instance variable">State</param>
-                                    <param id="1" name="Value">7</param>
+                                    <param id="1" name="Value">10</param>
                                 </action>
                                 <action id="-35" name="Set layer transparent" sid="8172495052203317" type="System">
                                     <param id="0" name="Layer">&quot;Hud&quot;</param>
                                     <param id="1" name="Mode">0</param>
                                 </action>
+                                <action behavior="Fade" id="1" name="Start fade" sid="9459792774337543" type="Tutorial" />
+                                <action behavior="Fade" id="1" name="Start fade" sid="1630747346054648" type="BackGround_Hud_Text" />
                             </actions>
                         </event-block>
                         <event-block sid="405248194809329">
@@ -646,6 +795,12 @@
                                 <condition id="-4" name="Trigger once while true" sid="2604404345387346" type="System" />
                             </conditions>
                             <actions>
+                                <action id="-15" name="Set visible" sid="2001525091285373" type="Tutorial">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="4756679729307013" type="BackGround_Hud_Text">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
                                 <action id="0" name="Set text" sid="9275708566536627" type="Tutorial">
                                     <param id="0" name="Text">&quot;Premi Q per entrare&quot;</param>
                                 </action>
@@ -653,12 +808,33 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-block sid="275083665018962">
+                    <conditions>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="6867971387665746" type="Player_Frame">
+                            <param id="0" name="Object">Door_Area</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="2909348846420985" type="Tutorial">
+                            <param id="0" name="Instance variable">State</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">9</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="1785954448602179" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="6187291148238457" type="Tutorial">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="1260687470702922" type="BackGround_Hud_Text">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="7220173298512746">
                     <conditions>
                         <condition id="-7" name="Compare instance variable" sid="1265127938606824" type="Tutorial">
                             <param id="0" name="Instance variable">State</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">7</param>
+                            <param id="2" name="Value">10</param>
                         </condition>
                         <condition id="-17" name="Compare opacity" sid="2573247624314813" type="System">
                             <param id="0" name="Layer">&quot;Hud&quot;</param>

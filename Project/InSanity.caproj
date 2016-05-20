@@ -312,6 +312,10 @@
             </object-type>
             <object-type name="lampione2" sid="8743774424929647">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Pos_X" sid="3393438857183568" type="number" />
+                    <instance-variable name="Pos_Y" sid="2669804381529934" type="number" />
+                </instance-variables>
                 <behaviors>
                     <behavior-type name="Pin" sid="2529464702065177">
                         <behavior id="Pin" />
@@ -354,6 +358,10 @@
             </object-type>
             <object-type name="lampione4" sid="1709992109148265">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Pos_X" sid="3889856312933564" type="number" />
+                    <instance-variable name="Pos_Y" sid="7835069550292373" type="number" />
+                </instance-variables>
                 <behaviors>
                     <behavior-type name="Pin" sid="5314438645625285">
                         <behavior id="Pin" />
@@ -378,6 +386,10 @@
             </object-type>
             <object-type name="lampione5" sid="6870771220364909">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Pos_X" sid="7948091514934719" type="number" />
+                    <instance-variable name="Pos_Y" sid="5029828900527799" type="number" />
+                </instance-variables>
                 <behaviors>
                     <behavior-type name="Pin" sid="8743558979603817">
                         <behavior id="Pin" />
@@ -1590,9 +1602,11 @@
                     <instance-variable name="Dash_Time" sid="8688270445844714" type="number" />
                     <instance-variable name="Dash_Charges" sid="7268462837022067" type="number" />
                     <instance-variable name="Dash_Recharge_Time" sid="5105309756605938" type="number" />
+                    <instance-variable name="Dash_Max_Charges" sid="3039433377926298" type="number" />
                     <instance-variable name="Weapon_Level" sid="3044682161141949" type="number" />
                     <instance-variable name="Weapon_Loader" sid="9345546890308431" type="number" />
                     <instance-variable name="Weapon_Max_Loader" sid="6165655732176725" type="number" />
+                    <instance-variable name="Reloading_Time" sid="6213661769445811" type="number" />
                     <instance-variable name="Reloading" sid="998972045539483" type="boolean" />
                     <instance-variable name="Stun_Ability" sid="1945475441277138" type="boolean" />
                     <instance-variable name="Jump_Is_On" sid="1795983416350465" type="boolean" />
@@ -1604,8 +1618,10 @@
                     <instance-variable name="First_Phase_Triggered" sid="9708494785123097" type="boolean" />
                     <instance-variable name="Bridge_Destroyed" sid="7716916467687827" type="boolean" />
                     <instance-variable name="Is_Dead" sid="5701586237341312" type="boolean" />
+                    <instance-variable name="Is_Paused" sid="1792122627089268" type="boolean" />
                     <instance-variable name="Level_1_Phases" sid="3744297378801938" type="number" />
                     <instance-variable name="Level_2_Phases" sid="521681513767556" type="number" />
+                    <instance-variable name="Camera_On_Player" sid="2010312032397601" type="boolean" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Platform" sid="2921180046897222">
@@ -1831,7 +1847,7 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="2" loop="0" name="Dying" pingpong="0" repeatcount="1" repeatto="0" sid="2802707485113364" speed="5">
+                    <animation framecount="3" loop="0" name="Dying" pingpong="0" repeatcount="1" repeatto="0" sid="2802707485113364" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="1">
                             <collision-poly>
                                 <point x="0.0972222" y="0.0320513" />
@@ -1849,14 +1865,16 @@
                                 <point x="0.118421" y="0.943182" />
                             </collision-poly>
                         </frame>
-                    </animation>
-                    <animation framecount="1" loop="0" name="Dead" pingpong="0" repeatcount="1" repeatto="0" sid="2577602566485004" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.545455" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Player_Frame\Dead\000.png">
                             <collision-poly>
-                                <point x="0.0238095" y="0.272727" />
-                                <point x="0.97619" y="0.272727" />
-                                <point x="0.97619" y="0.909091" />
+                                <point x="0.166667" y="0.636364" />
+                                <point x="0.5" y="0.272727" />
+                                <point x="0.904762" y="0.363636" />
+                                <point x="0.952381" y="0.454545" />
+                                <point x="0.928571" y="0.727273" />
+                                <point x="0.5" y="0.909091" />
                                 <point x="0.0238095" y="0.909091" />
+                                <point x="0.333333" y="0.454545" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -2519,14 +2537,14 @@
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9486771418714518" speed="5">
                         <frame duration="1" hotspotX="0.272727" hotspotY="0.6" original-source="C:\Users\Sciuzza\Desktop\Project\Animations\orologioLancettaCortoGioiello\Default\000.png">
                             <collision-poly>
-                                <point x="0.227273" y="0.5" />
-                                <point x="0.5" y="0.3" />
+                                <point x="0.454546" y="0.396875" />
+                                <point x="0.65625" y="0.046875" />
                                 <point x="0.863636" y="0.3" />
-                                <point x="1" y="0.5" />
-                                <point x="0.863636" y="0.7" />
-                                <point x="0.5" y="0.9" />
-                                <point x="0.181818" y="0.6" />
-                                <point x="0.181818" y="0.5" />
+                                <point x="0.903409" y="0.559375" />
+                                <point x="0.796875" y="0.84375" />
+                                <point x="0.625" y="0.978125" />
+                                <point x="0.494318" y="0.678125" />
+                                <point x="0.447443" y="0.540625" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -2541,11 +2559,10 @@
                                 <point x="0.384615" y="0.131579" />
                                 <point x="0.461538" y="0.0526316" />
                                 <point x="0.692308" y="0.105263" />
-                                <point x="0.615385" y="0.5" />
-                                <point x="0.615385" y="0.868421" />
-                                <point x="0.461538" y="0.894737" />
-                                <point x="0.307692" y="0.894737" />
-                                <point x="0.384615" y="0.5" />
+                                <point x="0.8125" y="0.258224" />
+                                <point x="0.73077" y="0.370066" />
+                                <point x="0.432692" y="0.386513" />
+                                <point x="0.235577" y="0.271382" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -2607,9 +2624,9 @@
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="466719362150043" speed="5">
                         <frame duration="1" hotspotX="0.507937" hotspotY="0.5" original-source="C:\Users\Sciuzza\Desktop\HUD\Hud - Corpo.png">
-                            <image-point name="Vita_Bassa" x="1" y="1" />
-                            <image-point name="Vita_Centro" x="1" y="0.5" />
-                            <image-point name="Vita_Alta" x="1" y="0" />
+                            <image-point name="Vita_Bassa" x="0.888889" y="0.692308" />
+                            <image-point name="Vita_Centro" x="0.952381" y="0.461538" />
+                            <image-point name="Vita_Alta" x="0.888889" y="0.230769" />
                             <image-point name="Stamina_1" x="0.47619" y="0.653846" />
                             <image-point name="Stamina_2" x="0.634921" y="0.653846" />
                             <image-point name="Stamina_3" x="0.793651" y="0.653846" />
@@ -3054,6 +3071,14 @@
                         </frame>
                     </animation>
                 </animation-folder>
+            </object-type>
+            <object-type name="Reloading" sid="515474580661233">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="Flash" sid="1974217158435257">
+                        <behavior id="Flash" />
+                    </behavior-type>
+                </behaviors>
             </object-type>
         </object-folder>
         <object-folder name="Da Sistemare">
@@ -5555,7 +5580,7 @@
                         </collision-poly>
                     </frame>
                 </animation>
-                <animation framecount="3" loop="0" name="Open" pingpong="0" repeatcount="1" repeatto="0" sid="8626111484975647" speed="5">
+                <animation framecount="3" loop="0" name="Open" pingpong="0" repeatcount="1" repeatto="2" sid="8626111484975647" speed="5">
                     <frame duration="1" hotspotX="0.514286" hotspotY="0.5" original-source="C:\Users\dbga_08\Downloads\Elementi_livello-2016-05-19\Elementi livello\villa - porta 01.png" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_08\Downloads\Elementi_livello-2016-05-19\Elementi livello\villa - porta 02.png" />
                     <frame duration="1" hotspotX="0.571429" hotspotY="0.507246" original-source="C:\Users\dbga_08\Downloads\Elementi_livello-2016-05-19\Elementi livello\villa - porta 03.png" />

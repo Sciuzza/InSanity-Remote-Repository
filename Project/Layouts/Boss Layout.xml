@@ -418,9 +418,11 @@
                         <Dash_Time>0.1</Dash_Time>
                         <Dash_Charges>2</Dash_Charges>
                         <Dash_Recharge_Time>2</Dash_Recharge_Time>
+                        <Dash_Max_Charges>2</Dash_Max_Charges>
                         <Weapon_Level>0</Weapon_Level>
                         <Weapon_Loader>4</Weapon_Loader>
                         <Weapon_Max_Loader>4</Weapon_Max_Loader>
+                        <Reloading_Time>2</Reloading_Time>
                         <Reloading>false</Reloading>
                         <Stun_Ability>false</Stun_Ability>
                         <Jump_Is_On>true</Jump_Is_On>
@@ -432,8 +434,10 @@
                         <First_Phase_Triggered>false</First_Phase_Triggered>
                         <Bridge_Destroyed>false</Bridge_Destroyed>
                         <Is_Dead>false</Is_Dead>
+                        <Is_Paused>false</Is_Paused>
                         <Level_1_Phases>0</Level_1_Phases>
                         <Level_2_Phases>-1</Level_2_Phases>
+                        <Camera_On_Player>true</Camera_On_Player>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -470,10 +474,10 @@
                 </instance>
                 <instance type="Camera" uid="1461">
                     <properties>
-                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
+                        <collisions>Disabled</collisions>
                     </properties>
                     <behavior-instances>
                         <behavior-instance type="ScrollTo">
