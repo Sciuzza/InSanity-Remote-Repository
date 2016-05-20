@@ -26871,11 +26871,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>2594</x>
-                        <y>1346</y>
+                        <x>2710</x>
+                        <y>1192</y>
                         <z>0</z>
-                        <width>17.580789566</width>
-                        <height>42.068317413</height>
+                        <width>56</width>
+                        <height>134</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -26883,7 +26883,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="GabbiaGialla" uid="351">
+                <instance type="GabbiaVerde" uid="339">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -26896,11 +26896,11 @@
                         <x>2448</x>
                         <y>1082</y>
                         <z>0</z>
-                        <width>62.937747955</width>
-                        <height>160.555480957</height>
+                        <width>96</width>
+                        <height>213</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotY>0.50234741</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -26918,8 +26918,8 @@
                         <x>2619</x>
                         <y>1070</y>
                         <z>0</z>
-                        <width>45.005241394</width>
-                        <height>130.829193115</height>
+                        <width>96</width>
+                        <height>228</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -26937,14 +26937,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>2805</x>
-                        <y>1095</y>
+                        <x>2796</x>
+                        <y>1163</y>
                         <z>0</z>
-                        <width>59</width>
-                        <height>135</height>
+                        <width>95</width>
+                        <height>223</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.50526315</hotspotX>
+                        <hotspotY>0.502242148</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -26959,14 +26959,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>2579</x>
-                        <y>1352</y>
+                        <x>2622</x>
+                        <y>1318</y>
                         <z>0</z>
-                        <width>18.165901184</width>
-                        <height>18.165901184</height>
+                        <width>21</width>
+                        <height>43</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.523809552</hotspotX>
+                        <hotspotY>0.511627913</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -28331,6 +28331,72 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.50746268</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="PortaBossColonnaDietro" uid="1664">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2845</x>
+                        <y>2457</y>
+                        <z>0</z>
+                        <width>45</width>
+                        <height>167</height>
+                        <depth>0</depth>
+                        <hotspotX>0.51111114</hotspotX>
+                        <hotspotY>0.502994001</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="PortaBossPortone" uid="1666">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2867</x>
+                        <y>2476</y>
+                        <z>0</z>
+                        <width>63</width>
+                        <height>155</height>
+                        <depth>0</depth>
+                        <hotspotX>0.507936537</hotspotX>
+                        <hotspotY>0.503225803</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="PortaBossLucchetto" uid="1667">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2864</x>
+                        <y>2477</y>
+                        <z>0</z>
+                        <width>64</width>
+                        <height>78</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -30407,8 +30473,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>666</x>
-                        <y>2546</y>
+                        <x>2444</x>
+                        <y>1378</y>
                         <z>0</z>
                         <width>11.636363983</width>
                         <height>36</height>
@@ -30588,6 +30654,50 @@
                         <depth>0</depth>
                         <hotspotX>0.529411793</hotspotX>
                         <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="CristalloEnigmaFinale2" uid="1663">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2621</x>
+                        <y>1325</y>
+                        <z>0</z>
+                        <width>72.649848938</width>
+                        <height>105.217018127</height>
+                        <depth>0</depth>
+                        <hotspotX>0.503448248</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0.800000012</opacity>
+                    </world>
+                </instance>
+                <instance type="PortaBossColonnaFronte" uid="1665">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2914</x>
+                        <y>2465</y>
+                        <z>0</z>
+                        <width>100</width>
+                        <height>183</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.502732217</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
