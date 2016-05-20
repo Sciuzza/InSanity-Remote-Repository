@@ -29,7 +29,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="EndLevelBG" uid="1688">
+                <instance type="EndLevelBG" uid="1693">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -70,7 +70,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="IntroText7" uid="1689">
+                <instance type="IntroText7" uid="1694">
                     <properties>
                         <text>Tutto iniziò quando la mia amata mi chiamò ...</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -108,7 +108,7 @@
                         <opacity>0</opacity>
                     </world>
                 </instance>
-                <instance type="cristalloRosso" uid="1690">
+                <instance type="cristalloRosso" uid="1695">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -141,7 +141,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="dash" uid="1691">
+                <instance type="dash" uid="1696">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -174,7 +174,7 @@
                         <opacity>0.600000024</opacity>
                     </world>
                 </instance>
-                <instance type="IntroText1" uid="1692">
+                <instance type="IntroText1" uid="1697">
                     <properties>
                         <text>Sono mesi che mi torturano ...</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -212,7 +212,7 @@
                         <opacity>0</opacity>
                     </world>
                 </instance>
-                <instance type="IntroText2" uid="1693">
+                <instance type="IntroText2" uid="1698">
                     <properties>
                         <text>... cosa avrei dovuto fare?!</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -250,7 +250,7 @@
                         <opacity>0</opacity>
                     </world>
                 </instance>
-                <instance type="IntroText3" uid="1694">
+                <instance type="IntroText3" uid="1699">
                     <properties>
                         <text>Ho perso tutto ciò che avevo …</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -288,7 +288,7 @@
                         <opacity>0</opacity>
                     </world>
                 </instance>
-                <instance type="IntroText4" uid="1695">
+                <instance type="IntroText4" uid="1700">
                     <properties>
                         <text>... e nessuno vuole ascoltarmi ...</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -326,7 +326,7 @@
                         <opacity>0</opacity>
                     </world>
                 </instance>
-                <instance type="IntroText5" uid="1696">
+                <instance type="IntroText5" uid="1701">
                     <properties>
                         <text>Forse tu ...</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -364,7 +364,7 @@
                         <opacity>0</opacity>
                     </world>
                 </instance>
-                <instance type="IntroText6" uid="1697">
+                <instance type="IntroText6" uid="1702">
                     <properties>
                         <text>... tu capirai ...</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -402,7 +402,7 @@
                         <opacity>0</opacity>
                     </world>
                 </instance>
-                <instance type="ContinueText" uid="1698">
+                <instance type="ContinueText" uid="1703">
                     <properties>
                         <text>Premi Barra Spaziatrice per continuare</text>
                         <initial-visibility>Visible</initial-visibility>
