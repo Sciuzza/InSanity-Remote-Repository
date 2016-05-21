@@ -790,7 +790,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Bullet_1_Player" uid="3">
+                <instance type="Bullet_1_Player" uid="11">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1376,7 +1376,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Reloading" uid="1709">
+                <instance type="Reloading" uid="84">
                     <properties>
                         <text>ciuccia</text>
                         <initial-visibility>Visible</initial-visibility>

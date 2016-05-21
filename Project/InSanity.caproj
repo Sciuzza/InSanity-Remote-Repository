@@ -461,6 +461,9 @@
             </object-type>
             <object-type name="ponteBlocco" sid="2378339021331234">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Is_Destroying" sid="7908722968967722" type="boolean" />
+                </instance-variables>
                 <behaviors>
                     <behavior-type name="Sine" sid="3287905248614806">
                         <behavior id="Sin" />
@@ -500,6 +503,9 @@
             </object-type>
             <object-type name="ponteBlocco2" sid="4253820159358168">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Is_Destroying" sid="6777080687517697" type="boolean" />
+                </instance-variables>
                 <behaviors>
                     <behavior-type name="Sine" sid="1668719326838326">
                         <behavior id="Sin" />
@@ -542,6 +548,9 @@
             </object-type>
             <object-type name="ponteBlocco3" sid="5549862846425074">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Is_Destroying" sid="7431784838412277" type="boolean" />
+                </instance-variables>
                 <behaviors>
                     <behavior-type name="Sine" sid="3796943286619258">
                         <behavior id="Sin" />
@@ -877,6 +886,9 @@
             </object-type>
             <object-type name="ponteBlocco4" sid="7294078956027025">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Is_Destroying" sid="3838422960661054" type="boolean" />
+                </instance-variables>
                 <behaviors>
                     <behavior-type name="Sine" sid="4573191561738123">
                         <behavior id="Sin" />
@@ -2184,7 +2196,7 @@
                                 <point x="0.325" y="1" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.545455" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Player_Frame\Dead\000.png">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.55" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Player_Frame\Dead\000.png">
                             <collision-poly>
                                 <point x="0.166667" y="0.636364" />
                                 <point x="0.5" y="0.272727" />
@@ -3186,14 +3198,14 @@
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9486771418714518" speed="5">
                         <frame duration="1" hotspotX="0.555556" hotspotY="0.9" original-source="C:\Users\dbga_08\Downloads\Secondo caricamento\Orologio lancetta corta.png">
                             <collision-poly>
-                                <point x="0.454546" y="0.396875" />
-                                <point x="0.65625" y="0.046875" />
-                                <point x="0.863636" y="0.3" />
-                                <point x="0.903409" y="0.559375" />
-                                <point x="0.796875" y="0.84375" />
-                                <point x="0.625" y="0.978125" />
-                                <point x="0.494318" y="0.678125" />
-                                <point x="0.447443" y="0.540625" />
+                                <point x="0.162879" y="0.2875" />
+                                <point x="0.545139" y="0.09375" />
+                                <point x="0.808081" y="0.246875" />
+                                <point x="0.903409" y="0.3875" />
+                                <point x="0.699653" y="0.521875" />
+                                <point x="0.5625" y="0.584375" />
+                                <point x="0.390151" y="0.5375" />
+                                <point x="0.190499" y="0.446875" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -3205,12 +3217,12 @@
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8665109244647479" speed="5">
                         <frame duration="1" hotspotX="0.454545" hotspotY="1" original-source="C:\Users\dbga_08\Downloads\Secondo caricamento\Orologio lancetta lunga.png">
                             <collision-poly>
-                                <point x="0.384615" y="0.131579" />
-                                <point x="0.461538" y="0.0526316" />
-                                <point x="0.692308" y="0.105263" />
-                                <point x="0.8125" y="0.258224" />
-                                <point x="0.73077" y="0.370066" />
-                                <point x="0.432692" y="0.386513" />
+                                <point x="0.356206" y="0.194079" />
+                                <point x="0.484265" y="0.163208" />
+                                <point x="0.658217" y="0.211032" />
+                                <point x="0.795455" y="0.344762" />
+                                <point x="0.662588" y="0.567182" />
+                                <point x="0.23951" y="0.540359" />
                                 <point x="0.235577" y="0.271382" />
                             </collision-poly>
                         </frame>
@@ -4907,10 +4919,10 @@
                                 <point x="0.285714" y="0.875" />
                                 <point x="0" y="0.5" />
                             </collision-poly>
-                          </frame>
-                        </animation>
-                      </animation-folder>
-                    </object-type>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
             <object-type name="title2" sid="2928585757569993">
                 <plugin id="Sprite" />
                 <behaviors>
@@ -6319,10 +6331,10 @@
                             <point x="0.0170015" y="0.947115" />
                             <point x="0.0340031" y="0.5" />
                         </collision-poly>
-                      </frame>
-                    </animation>
-                  </animation-folder>
-                </object-type>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
         <object-type name="Finestra4" sid="9307417192683243">
             <plugin id="Sprite" />
             <animation-folder>
@@ -6337,10 +6349,10 @@
                             <point x="0" y="1" />
                             <point x="0" y="0.491228" />
                         </collision-poly>
-                      </frame>
-                    </animation>
-                  </animation-folder>
-                </object-type>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
         <object-type name="RocciaSottoARusciello" sid="4147137415165139">
             <plugin id="Sprite" />
             <animation-folder>
@@ -6356,10 +6368,10 @@
                             <point x="0.127907" y="0.819672" />
                             <point x="0.0755814" y="0.5" />
                         </collision-poly>
-                      </frame>
-                    </animation>
-                  </animation-folder>
-                </object-type>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
         <object-type name="Finestra5" sid="7014462054752869">
             <plugin id="Sprite" />
             <animation-folder>
@@ -6374,10 +6386,10 @@
                             <point x="0" y="1" />
                             <point x="0" y="0.491228" />
                         </collision-poly>
-                      </frame>
-                    </animation>
-                  </animation-folder>
-                </object-type>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
         <object-type name="Rusciello" sid="9584820432698419">
             <plugin id="Sprite" />
             <animation-folder>
@@ -6403,10 +6415,10 @@
                             <point x="0.016129" y="0.988889" />
                             <point x="0.306452" y="0.5" />
                         </collision-poly>
-                      </frame>
-                    </animation>
-                  </animation-folder>
-                </object-type>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
         <object-type name="Statua3" sid="6163669410693373">
             <plugin id="Sprite" />
             <animation-folder>
@@ -6705,10 +6717,10 @@
                             <point x="0" y="1" />
                             <point x="0.647059" y="0.486486" />
                         </collision-poly>
-                      </frame>
-                    </animation>
-                  </animation-folder>
-                </object-type>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
         <object-type name="CutsceneEnd1" sid="1156699360538939">
             <plugin id="Sprite" />
             <animation-folder>
@@ -6791,10 +6803,10 @@
                             <point x="0.0465116" y="0.961538" />
                             <point x="0" y="0.5" />
                         </collision-poly>
-                      </frame>
-                    </animation>
-                  </animation-folder>
-                </object-type>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
         <object-type name="CutsceneEndText" sid="4026307575964632">
             <plugin id="Text" />
         </object-type>
@@ -6886,10 +6898,10 @@
                             <point x="0.98913" y="0.0416667" />
                             <point x="0.0326087" y="0.875" />
                         </collision-poly>
-                      </frame>
-                    </animation>
-                  </animation-folder>
-                </object-type>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
         <object-type name="vetrata02Desaturata" sid="7855618611953885">
             <plugin id="Sprite" />
             <animation-folder>
@@ -6922,10 +6934,10 @@
                             <point x="0.0871212" y="0.798246" />
                             <point x="0.299242" y="0.5" />
                         </collision-poly>
-                      </frame>
-                    </animation>
-                  </animation-folder>
-                </object-type>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
         <object-type name="LevaBlocco4" sid="2163976025121472">
             <plugin id="Sprite" />
             <animation-folder>
@@ -7016,9 +7028,9 @@
         <event-sheet>Cutscene End Sheet.xml</event-sheet>
     </event-folder>
     <global-instances>
-        <global-instance type="Keyboard" uid="1704" />
-        <global-instance type="Mouse" uid="1705" />
-        <global-instance type="Audio" uid="1706">
+        <global-instance type="Keyboard" uid="2061" />
+        <global-instance type="Mouse" uid="2062" />
+        <global-instance type="Audio" uid="2063">
             <properties>
                 <timescale-audio>Off</timescale-audio>
                 <saveload>All</saveload>
@@ -7032,7 +7044,7 @@
                 <roll-off-factor>1</roll-off-factor>
             </properties>
         </global-instance>
-        <global-instance type="Function" uid="1707" />
+        <global-instance type="Function" uid="2064" />
     </global-instances>
     <sounds-folder>
         <sound-folder name="PlaceHolder Sounds">

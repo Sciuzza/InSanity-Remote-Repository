@@ -950,6 +950,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <Is_Destroying>false</Is_Destroying>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
                             <properties>
@@ -1097,6 +1100,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <Is_Destroying>false</Is_Destroying>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
                             <properties>
@@ -1134,6 +1140,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <Is_Destroying>false</Is_Destroying>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
                             <properties>
@@ -1171,6 +1180,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <Is_Destroying>false</Is_Destroying>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Sine">
                             <properties>
@@ -1362,6 +1374,10 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <Pos_X>0</Pos_X>
+                        <Pos_Y>0</Pos_Y>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
                     </behavior-instances>
@@ -1409,6 +1425,10 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <Pos_X>0</Pos_X>
+                        <Pos_Y>0</Pos_Y>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
                     </behavior-instances>
@@ -1434,6 +1454,10 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <Pos_X>0</Pos_X>
+                        <Pos_Y>0</Pos_Y>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Pin" />
                     </behavior-instances>
@@ -2319,37 +2343,37 @@
                     </world>
                 </instance>
                 <instance type="Record_2" uid="319">
-                  <properties>
-                    <initial-visibility>Visible</initial-visibility>
-                    <initial-animation>Default</initial-animation>
-                    <initial-frame>0</initial-frame>
-                    <collisions>Enabled</collisions>
-                  </properties>
-                  <behavior-instances>
-                    <behavior-instance type="Fade">
-                      <properties>
-                        <active-at-start>No</active-at-start>
-                        <fade-in-time>0</fade-in-time>
-                        <wait-time>0</wait-time>
-                        <fade-out-time>1</fade-out-time>
-                        <destroy>After fade out</destroy>
-                      </properties>
-                    </behavior-instance>
-                  </behavior-instances>
-                  <blend-mode>0</blend-mode>
-                  <effect-fallback>0</effect-fallback>
-                  <world>
-                    <x>1356</x>
-                    <y>460</y>
-                    <z>0</z>
-                    <width>8</width>
-                    <height>8</height>
-                    <depth>0</depth>
-                    <hotspotX>0.5</hotspotX>
-                    <hotspotY>0.5</hotspotY>
-                    <angle>0</angle>
-                    <opacity>1</opacity>
-                  </world>
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>No</active-at-start>
+                                <fade-in-time>0</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>1</fade-out-time>
+                                <destroy>After fade out</destroy>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1356</x>
+                        <y>460</y>
+                        <z>0</z>
+                        <width>8</width>
+                        <height>8</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
                 </instance>
                 <instance type="RocciaDopoRusciello" uid="1708">
                     <properties>
@@ -2358,23 +2382,23 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
-                  <blend-mode>0</blend-mode>
-                  <effect-fallback>0</effect-fallback>
-                  <world>
-                    <x>6025</x>
-                    <y>451</y>
-                    <z>0</z>
-                    <width>647</width>
-                    <height>208</height>
-                    <depth>0</depth>
-                    <hotspotX>0.500772774</hotspotX>
-                    <hotspotY>0.5</hotspotY>
-                    <angle>0</angle>
-                    <opacity>1</opacity>
-                  </world>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>6025</x>
+                        <y>451</y>
+                        <z>0</z>
+                        <width>647</width>
+                        <height>208</height>
+                        <depth>0</depth>
+                        <hotspotX>0.500772774</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
                 </instance>
-              </instances>
-          <effects />
+            </instances>
+            <effects />
         </layer>
         <layer name="Player" sid="6928988810140136">
             <initially-visible>1</initially-visible>
@@ -2502,8 +2526,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>190</x>
-                        <y>625</y>
+                        <x>98</x>
+                        <y>613</y>
                         <z>0</z>
                         <width>11.636363983</width>
                         <height>36</height>
@@ -2512,6 +2536,28 @@
                         <hotspotY>1</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Door_Area" uid="2065">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>68</x>
+                        <y>581</y>
+                        <z>0</z>
+                        <width>123.12902832</width>
+                        <height>71.709625244</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0</opacity>
                     </world>
                 </instance>
             </instances>
@@ -5449,7 +5495,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Reloading" uid="1710">
+                <instance type="Reloading" uid="3">
                     <properties>
                         <text></text>
                         <initial-visibility>Visible</initial-visibility>
