@@ -1943,7 +1943,7 @@
                             <image-point name="Weapon" x="0.9" y="0.5" />
                         </frame>
                     </animation>
-                    <animation framecount="2" loop="0" name="ShootNormal" pingpong="0" repeatcount="1" repeatto="0" sid="4343242735517642" speed="5">
+                    <animation framecount="2" loop="0" name="ShootNormal" pingpong="0" repeatcount="1" repeatto="0" sid="4343242735517642" speed="8">
                         <frame duration="1" hotspotX="0.0588235" hotspotY="0.714286" original-source="C:\Users\Sciuzza\Desktop\Project\Animations\Player_arm\ShootNormal\000.png">
                             <image-point name="Weapon" x="0.941176" y="0.428571" />
                         </frame>
@@ -1951,7 +1951,7 @@
                             <image-point name="Weapon" x="0.75" y="0.0769231" />
                         </frame>
                     </animation>
-                    <animation framecount="2" loop="0" name="ShootPsi" pingpong="0" repeatcount="1" repeatto="0" sid="3161609074068709" speed="5">
+                    <animation framecount="2" loop="0" name="ShootPsi" pingpong="0" repeatcount="1" repeatto="0" sid="3161609074068709" speed="8">
                         <frame duration="1" hotspotX="0.05" hotspotY="0.75" original-source="C:\Users\Sciuzza\Desktop\Project\Animations\Player_arm\ShootPsi\000.png">
                             <image-point name="Weapon" x="0.9" y="0.5" />
                         </frame>
@@ -1991,6 +1991,7 @@
                     <instance-variable name="Level_1_Phases" sid="3744297378801938" type="number" />
                     <instance-variable name="Level_2_Phases" sid="521681513767556" type="number" />
                     <instance-variable name="Camera_On_Player" sid="2010312032397601" type="boolean" />
+                    <instance-variable name="Res_Room_Visible" sid="6478554283794921" type="boolean" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Platform" sid="2921180046897222">
@@ -1999,7 +2000,7 @@
                     <behavior-type name="Timer" sid="3333989098584669">
                         <behavior id="Timer" />
                     </behavior-type>
-                    <behavior-type name="Persist" sid="7688392433004913">
+                    <behavior-type name="Persist" sid="1605973105090451">
                         <behavior id="Persist" />
                     </behavior-type>
                 </behaviors>
@@ -2579,6 +2580,9 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="Dialogue" sid="4798063033958215">
+                <plugin id="Text" />
+            </object-type>
         </object-folder>
         <object-folder name="Solid Objects">
             <object-type name="Border" sid="2996343322065376">
@@ -2816,6 +2820,9 @@
             </object-type>
             <object-type name="PiattaformaAttraversabile" sid="4242928662593286">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Is_Enabled" sid="682913673980802" type="boolean" />
+                </instance-variables>
                 <behaviors>
                     <behavior-type name="Jumpthru" sid="2323355837722024">
                         <behavior id="jumpthru" />
@@ -2902,23 +2909,6 @@
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
-            </object-type>
-            <object-type name="Tutorial" sid="4256727726716031">
-                <plugin id="Text" />
-                <instance-variables>
-                    <instance-variable name="State" sid="9012519349935521" type="number" />
-                </instance-variables>
-                <behaviors>
-                    <behavior-type name="Timer" sid="7562576131652811">
-                        <behavior id="Timer" />
-                    </behavior-type>
-                    <behavior-type name="Anchor" sid="8829204620663894">
-                        <behavior id="Anchor" />
-                    </behavior-type>
-                    <behavior-type name="Fade" sid="8883444610102222">
-                        <behavior id="Fade" />
-                    </behavior-type>
-                </behaviors>
             </object-type>
             <object-type name="Record_2" sid="2701529555939743">
                 <plugin id="Sprite" />
@@ -3240,22 +3230,6 @@
                     </behavior-type>
                 </behaviors>
             </object-type>
-            <object-type name="BackGround_Hud_Text" sid="5536351944566282">
-                <plugin id="Sprite" />
-                <behaviors>
-                    <behavior-type name="Fade" sid="4778028713831526">
-                        <behavior id="Fade" />
-                    </behavior-type>
-                    <behavior-type name="Pin" sid="8588812427958982">
-                        <behavior id="Pin" />
-                    </behavior-type>
-                </behaviors>
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4668770662005413" speed="5">
-                        <frame duration="1" hotspotX="0" hotspotY="0" />
-                    </animation>
-                </animation-folder>
-            </object-type>
         </object-folder>
         <object-folder name="Support Gaming Objects">
             <object-type name="Function" sid="5168276115033472">
@@ -3285,9 +3259,9 @@
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="466719362150043" speed="5">
                         <frame duration="1" hotspotX="0.507937" hotspotY="0.5" original-source="C:\Users\Sciuzza\Desktop\HUD\Hud - Corpo.png">
-                            <image-point name="Vita_Bassa" x="0.888889" y="0.692308" />
+                            <image-point name="Vita_Bassa" x="0.904762" y="0.807692" />
                             <image-point name="Vita_Centro" x="0.952381" y="0.461538" />
-                            <image-point name="Vita_Alta" x="0.888889" y="0.230769" />
+                            <image-point name="Vita_Alta" x="0.904762" y="0.230769" />
                             <image-point name="Stamina_1" x="0.47619" y="0.653846" />
                             <image-point name="Stamina_2" x="0.634921" y="0.653846" />
                             <image-point name="Stamina_3" x="0.793651" y="0.653846" />
@@ -3740,6 +3714,52 @@
                         <behavior id="Flash" />
                     </behavior-type>
                 </behaviors>
+            </object-type>
+            <object-type name="Tutorial" sid="4256727726716031">
+                <plugin id="Text" />
+                <instance-variables>
+                    <instance-variable name="State" sid="9012519349935521" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Timer" sid="7562576131652811">
+                        <behavior id="Timer" />
+                    </behavior-type>
+                    <behavior-type name="Anchor" sid="8829204620663894">
+                        <behavior id="Anchor" />
+                    </behavior-type>
+                    <behavior-type name="Fade" sid="8883444610102222">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="BackGround_Hud_Text" sid="5536351944566282">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="4778028713831526">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                    <behavior-type name="Pin" sid="8588812427958982">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4668770662005413" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Q_Button_Hud" sid="1797128460600019">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Anchor" sid="6633869966122072">
+                        <behavior id="Anchor" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6476868627468586" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
             </object-type>
         </object-folder>
         <object-folder name="Da Sistemare">
@@ -4618,7 +4638,7 @@
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="499791674803346" speed="5">
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="499791674803346" speed="5">
                         <frame duration="1" hotspotX="0.508475" hotspotY="0.503185" original-source="C:\Users\dbga_08\Downloads\caricamenti_seconda_parte-2016-05-18\caricamenti seconda parte\Muro distruttibile sotto arco.png">
                             <collision-poly>
                                 <point x="0.152542" y="0.0573248" />
@@ -4629,6 +4649,18 @@
                                 <point x="0.491525" y="0.961783" />
                                 <point x="0.186441" y="0.929936" />
                                 <point x="0" y="0.496815" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.515152" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\MuroDistruttibileSottoArcoPezzo\Default\000.png">
+                            <collision-poly>
+                                <point x="0.30303" y="0.113636" />
+                                <point x="0.484848" y="0.0568182" />
+                                <point x="0.939394" y="0.0227273" />
+                                <point x="0.969697" y="0.5" />
+                                <point x="0.939394" y="0.977273" />
+                                <point x="0.484848" y="0.965909" />
+                                <point x="0.424242" y="0.840909" />
+                                <point x="0.0606061" y="0.5" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -4701,6 +4733,11 @@
             </object-type>
             <object-type name="Ombra" sid="6878271723223322">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Flash" sid="4312386630733319">
+                        <behavior id="Flash" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9292522550404511" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="1" />
@@ -5208,6 +5245,11 @@
         </object-type>
         <object-type name="Statua" sid="2891776570481219">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="5356386625445479">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7690099570045501" speed="5">
                     <frame duration="1" hotspotX="0.510204" hotspotY="0.505618" original-source="C:\Users\dbga_08\Downloads\Level_2-2016-05-17\Level 2\Statua 01.png">
@@ -5227,13 +5269,18 @@
         </object-type>
         <object-type name="Statua2" sid="8389686118181724">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="4113961085471698">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3884064598868195" speed="5">
                     <frame duration="1" hotspotX="0.510204" hotspotY="0.5" original-source="C:\Users\dbga_08\Downloads\Level_2-2016-05-17\Level 2\Statua 02.png">
                         <collision-poly>
                             <point x="0.204082" y="0.142857" />
                             <point x="0.489796" y="0.128571" />
-                            <point x="0.673469" y="0.228571" />
+                            <point x="0.959183" y="0.0285714" />
                             <point x="0.938776" y="0.957143" />
                             <point x="0.489796" y="1" />
                             <point x="0.0612245" y="0.957143" />
@@ -6679,6 +6726,14 @@
         </object-type>
         <object-type name="ChiaveBoss" sid="2343968811301723">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="First_Move_Done" sid="6508371489220868" type="boolean" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Fade" sid="1625175816585438">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7704194105712796" speed="5">
                     <frame duration="1" hotspotX="0.52381" hotspotY="0.511628" original-source="C:\Users\dbga_21\AppData\Local\Temp\Rar$DRa0.622\Level 2\Caricamento quarta parte\Chiave boss.png">
@@ -6852,6 +6907,14 @@
         </object-type>
         <object-type name="Cavaliere5" sid="7782219429269425">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="First_Move_Done" sid="1819466918531886" type="boolean" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Solid" sid="290212001466298">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3364149513020333" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\Users\dbga_21\Downloads\Level_2-2016-05-20\Level 2\Cavaliere 02.png">
@@ -7016,7 +7079,6 @@
         <event-sheet>Intro Sheet.xml</event-sheet>
         <event-sheet>Gunner.xml</event-sheet>
         <event-sheet>Level 2.xml</event-sheet>
-        <event-sheet>Botola.xml</event-sheet>
         <event-sheet>Boss Sheet.xml</event-sheet>
         <event-sheet>Menu Start Sheet.xml</event-sheet>
         <event-sheet>Credits Sheet.xml</event-sheet>

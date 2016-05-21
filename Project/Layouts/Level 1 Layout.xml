@@ -2502,8 +2502,9 @@
                         <Is_Dead>false</Is_Dead>
                         <Is_Paused>false</Is_Paused>
                         <Level_1_Phases>0</Level_1_Phases>
-                        <Level_2_Phases>-1</Level_2_Phases>
+                        <Level_2_Phases>0</Level_2_Phases>
                         <Camera_On_Player>true</Camera_On_Player>
+                        <Res_Room_Visible>false</Res_Room_Visible>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
@@ -2526,8 +2527,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>98</x>
-                        <y>613</y>
+                        <x>77</x>
+                        <y>603</y>
                         <z>0</z>
                         <width>11.636363983</width>
                         <height>36</height>
@@ -2548,11 +2549,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>68</x>
-                        <y>581</y>
+                        <x>27.93548584</x>
+                        <y>576</y>
                         <z>0</z>
-                        <width>123.12902832</width>
-                        <height>71.709625244</height>
+                        <width>43</width>
+                        <height>72</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -2721,6 +2722,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <Is_Enabled>true</Is_Enabled>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Jumpthru">
                             <properties>
@@ -2750,6 +2754,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <Is_Enabled>true</Is_Enabled>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Jumpthru">
                             <properties>
@@ -2779,6 +2786,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <Is_Enabled>true</Is_Enabled>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Jumpthru">
                             <properties>
@@ -2808,6 +2818,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <Is_Enabled>true</Is_Enabled>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Jumpthru">
                             <properties>
@@ -2837,6 +2850,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <Is_Enabled>true</Is_Enabled>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Jumpthru">
                             <properties>
@@ -2866,6 +2882,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <Is_Enabled>true</Is_Enabled>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Jumpthru">
                             <properties>
@@ -2895,6 +2914,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <Is_Enabled>true</Is_Enabled>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Jumpthru">
                             <properties>
@@ -2924,6 +2946,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <Is_Enabled>true</Is_Enabled>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Jumpthru">
                             <properties>
@@ -2953,6 +2978,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <Is_Enabled>true</Is_Enabled>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Jumpthru">
                             <properties>
@@ -2982,6 +3010,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <Is_Enabled>true</Is_Enabled>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Jumpthru">
                             <properties>
@@ -3011,6 +3042,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <Is_Enabled>true</Is_Enabled>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Jumpthru">
                             <properties>
@@ -3040,6 +3074,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <Is_Enabled>true</Is_Enabled>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Jumpthru">
                             <properties>
@@ -5055,8 +5092,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-121</x>
-                        <y>784</y>
+                        <x>78</x>
+                        <y>542</y>
                         <z>0</z>
                         <width>8</width>
                         <height>8</height>

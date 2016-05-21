@@ -656,6 +656,7 @@
                         <Level_1_Phases>0</Level_1_Phases>
                         <Level_2_Phases>-1</Level_2_Phases>
                         <Camera_On_Player>true</Camera_On_Player>
+                        <Res_Room_Visible>false</Res_Room_Visible>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Platform">
