@@ -1909,11 +1909,7 @@
                             <param id="0" name="Opacity">60</param>
                         </action>
                         <action id="0" name="Set text" sid="8001969136822703" type="Records">
-                            <param id="0" name="Text">&quot;Innamorarsi&quot;&amp;newline&amp;&quot;è stato un salto nel vuoto&quot;&amp;newline&amp;&quot;Caricatore + 1&quot;&amp;newline&amp;&quot;Vigore +1&quot;</param>
-                        </action>
-                        <action id="-11" name="Add to" sid="535406411871542" type="Player_Box">
-                            <param id="0" name="Instance variable">Weapon_Max_Loader</param>
-                            <param id="1" name="Value">1</param>
+                            <param id="0" name="Text">&quot;Innamorarsi&quot;&amp;newline&amp;&quot;è stato un salto nel vuoto&quot;&amp;newline&amp;&quot;Vigore + 1&quot;</param>
                         </action>
                         <action id="-11" name="Add to" sid="3396607795385463" type="Player_Box">
                             <param id="0" name="Instance variable">Dash_Max_Charges</param>
@@ -1939,6 +1935,48 @@
                     <actions>
                         <action behavior="Fade" id="1" name="Start fade" sid="2332248532547557" type="Records" />
                         <action behavior="Fade" id="1" name="Start fade" sid="3384927401022466" type="BackGround_Record_Text" />
+                    </actions>
+                </event-block>
+                <event-block sid="5400644800367491">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="877691983889504" type="Player_Frame">
+                            <param id="0" name="Object">Record_3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Fade" id="1" name="Start fade" sid="107375708173572" type="Record_3" />
+                        <action id="11" name="Set collisions enabled" sid="5398166242541123" type="Record_3">
+                            <param id="0" name="Collisions">0</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="238523899722303" type="Records">
+                            <param id="0" name="Opacity">100</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="9769404760494831" type="BackGround_Record_Text">
+                            <param id="0" name="Opacity">60</param>
+                        </action>
+                        <action id="0" name="Set text" sid="9003796993947475" type="Records">
+                            <param id="0" name="Text">&quot;S.: Il tempo si ferma&quot;&amp;newline&amp;&quot;quando siamo io e te&quot;&amp;newline&amp;&quot;Velocita Ricarica onda d&apos;urto&quot;</param>
+                        </action>
+                        <action id="-12" name="Subtract from" sid="2480512135275299" type="Player_Box">
+                            <param id="0" name="Instance variable">Fire_Rate_Stun</param>
+                            <param id="1" name="Value">0.3</param>
+                        </action>
+                        <action behavior="Timer" id="0" name="Start timer" sid="7613060478184189" type="Player_Box">
+                            <param id="0" name="Duration">3</param>
+                            <param id="1" name="Type">0</param>
+                            <param id="2" name="Tag">&quot;Record 2 Text Fading&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5502140244534804">
+                    <conditions>
+                        <condition behavior="Timer" id="0" name="On timer" sid="1852887770755102" type="Player_Box">
+                            <param id="0" name="Tag">&quot;Record 2 Text Fading&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Fade" id="1" name="Start fade" sid="6945706770705945" type="Records" />
+                        <action behavior="Fade" id="1" name="Start fade" sid="65562733439317" type="BackGround_Record_Text" />
                     </actions>
                 </event-block>
             </sub-events>

@@ -2098,6 +2098,10 @@
                     <instance-variable name="Camera_On_Player" sid="2010312032397601" type="boolean" />
                     <instance-variable name="Res_Room_Visible" sid="6478554283794921" type="boolean" />
                     <instance-variable name="Returning" sid="3443924061330863" type="boolean" />
+                    <instance-variable name="Fire_Rate" sid="8839258093927271" type="number" />
+                    <instance-variable name="Cooldown" sid="3844534789226683" type="number" />
+                    <instance-variable name="Fire_Rate_Stun" sid="2428966554623724" type="number" />
+                    <instance-variable name="Cooldown_Stun" sid="3500894031194361" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Platform" sid="2921180046897222">
@@ -2378,9 +2382,6 @@
                         <frame duration="1" hotspotX="0.5" hotspotY="1" />
                     </animation>
                 </animation-folder>
-            </object-type>
-            <object-type name="Dialogue" sid="4798063033958215">
-                <plugin id="Text" />
             </object-type>
         </object-folder>
         <object-folder name="Solid Objects">
@@ -3058,6 +3059,78 @@
                                 <point x="0.932203" y="0.0192308" />
                                 <point x="0.932203" y="0.903846" />
                                 <point x="0.0508475" y="0.903846" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Record_4" sid="9993579414033473">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="3140737763167166">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2055721210809312" speed="5">
+                        <frame duration="1" hotspotX="0.508772" hotspotY="0.5" original-source="C:\Users\dbga_21\AppData\Local\Temp\Rar$DRa0.793\Level 2\Caricamento terza parte\Ricordo 01.png">
+                            <collision-poly>
+                                <point x="0.263158" y="0.3" />
+                                <point x="0.491228" y="0.04" />
+                                <point x="0.701754" y="0.34" />
+                                <point x="0.719298" y="0.5" />
+                                <point x="0.631579" y="0.58" />
+                                <point x="0.491228" y="0.86" />
+                                <point x="0.280702" y="0.68" />
+                                <point x="0.22807" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Record_5" sid="827284394568621">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="7242089087047289">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4763027783924426" speed="5">
+                        <frame duration="1" hotspotX="0.508772" hotspotY="0.5" original-source="C:\Users\dbga_21\AppData\Local\Temp\Rar$DRa0.793\Level 2\Caricamento terza parte\Ricordo 01.png">
+                            <collision-poly>
+                                <point x="0.263158" y="0.3" />
+                                <point x="0.491228" y="0.04" />
+                                <point x="0.701754" y="0.34" />
+                                <point x="0.719298" y="0.5" />
+                                <point x="0.631579" y="0.58" />
+                                <point x="0.491228" y="0.86" />
+                                <point x="0.280702" y="0.68" />
+                                <point x="0.22807" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Record_6" sid="6458870376692285">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="5455305343506459">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5684721464479512" speed="5">
+                        <frame duration="1" hotspotX="0.508772" hotspotY="0.5" original-source="C:\Users\dbga_21\AppData\Local\Temp\Rar$DRa0.793\Level 2\Caricamento terza parte\Ricordo 01.png">
+                            <collision-poly>
+                                <point x="0.263158" y="0.3" />
+                                <point x="0.491228" y="0.04" />
+                                <point x="0.701754" y="0.34" />
+                                <point x="0.719298" y="0.5" />
+                                <point x="0.631579" y="0.58" />
+                                <point x="0.491228" y="0.86" />
+                                <point x="0.280702" y="0.68" />
+                                <point x="0.22807" y="0.5" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -4737,6 +4810,27 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="Dialogue" sid="4798063033958215">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="591728500619699">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="BackGround_Dia_Text" sid="1472550448027873">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="2653825634324203">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5517864922476215" speed="5">
+                        <frame duration="1" hotspotX="0.501558" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-type name="testLvl" sid="8845961037402467">
             <plugin id="Sprite" />
@@ -6363,25 +6457,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Record_4" sid="9993579414033473">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2055721210809312" speed="5">
-                    <frame duration="1" hotspotX="0.508772" hotspotY="0.5" original-source="C:\Users\dbga_21\AppData\Local\Temp\Rar$DRa0.793\Level 2\Caricamento terza parte\Ricordo 01.png">
-                        <collision-poly>
-                            <point x="0.263158" y="0.3" />
-                            <point x="0.491228" y="0.04" />
-                            <point x="0.701754" y="0.34" />
-                            <point x="0.719298" y="0.5" />
-                            <point x="0.631579" y="0.58" />
-                            <point x="0.491228" y="0.86" />
-                            <point x="0.280702" y="0.68" />
-                            <point x="0.22807" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="Ricordo2" sid="7060854056770972">
             <plugin id="Sprite" />
             <animation-folder>
@@ -6406,44 +6481,6 @@
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="106773717174032" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_21\AppData\Local\Temp\Rar$DRa0.271\Level 2\Caricamento quarta parte\vetrata 04 desaturata.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Record_5" sid="827284394568621">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4763027783924426" speed="5">
-                    <frame duration="1" hotspotX="0.508772" hotspotY="0.5" original-source="C:\Users\dbga_21\AppData\Local\Temp\Rar$DRa0.793\Level 2\Caricamento terza parte\Ricordo 01.png">
-                        <collision-poly>
-                            <point x="0.263158" y="0.3" />
-                            <point x="0.491228" y="0.04" />
-                            <point x="0.701754" y="0.34" />
-                            <point x="0.719298" y="0.5" />
-                            <point x="0.631579" y="0.58" />
-                            <point x="0.491228" y="0.86" />
-                            <point x="0.280702" y="0.68" />
-                            <point x="0.22807" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Record_6" sid="6458870376692285">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5684721464479512" speed="5">
-                    <frame duration="1" hotspotX="0.508772" hotspotY="0.5" original-source="C:\Users\dbga_21\AppData\Local\Temp\Rar$DRa0.793\Level 2\Caricamento terza parte\Ricordo 01.png">
-                        <collision-poly>
-                            <point x="0.263158" y="0.3" />
-                            <point x="0.491228" y="0.04" />
-                            <point x="0.701754" y="0.34" />
-                            <point x="0.719298" y="0.5" />
-                            <point x="0.631579" y="0.58" />
-                            <point x="0.491228" y="0.86" />
-                            <point x="0.280702" y="0.68" />
-                            <point x="0.22807" y="0.5" />
-                        </collision-poly>
-                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -7246,6 +7283,23 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="CrossHair" sid="6252656820794828">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5593517755173992" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Program Files\Construct 2\hotspot.png">
+                        <collision-poly>
+                            <point x="0.3125" y="0.3125" />
+                            <point x="0.5" y="0.25" />
+                            <point x="0.6875" y="0.5" />
+                            <point x="0.625" y="0.625" />
+                            <point x="0.5" y="0.6875" />
+                            <point x="0.25" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Hud" plugin-id="Sprite" sid="6636688502215522">
@@ -7316,6 +7370,10 @@
                 <member>Q_Button_Hud</member>
                 <member>Record_1</member>
                 <member>Record_2</member>
+                <member>Record_3</member>
+                <member>Record_4</member>
+                <member>Record_5</member>
+                <member>Record_6</member>
                 <member>Statua</member>
                 <member>Statua2</member>
                 <member>Stun_Ability</member>

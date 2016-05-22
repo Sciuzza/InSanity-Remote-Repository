@@ -24,6 +24,23 @@
                             <param id="0" name="Variable">Layout</param>
                             <param id="1" name="Value">2</param>
                         </action>
+                        <action id="2" name="Stop" sid="4371467072230416" type="CheckPoint" />
+                        <action id="-3" name="Set position" sid="9928242828156045" type="Dialogue">
+                            <param id="0" name="X">Player_Box.X</param>
+                            <param id="1" name="Y">Player_Box.Y - 30</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="1100005709090961" type="Dialogue">
+                            <param id="0" name="Pin to">Player_Box</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="3803889510084312" type="BackGround_Dia_Text">
+                            <param id="0" name="X">Player_Box.X</param>
+                            <param id="1" name="Y">Player_Box.Y - 30</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="960327565267732" type="BackGround_Dia_Text">
+                            <param id="0" name="Pin to">Player_Box</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="9948386645817593">
@@ -426,6 +443,10 @@
                                             <param id="0" name="Instance variable">Level_2_Phases</param>
                                             <param id="1" name="Value">7</param>
                                         </action>
+                                        <action id="0" name="Call function" sid="5205007033567123" type="Function">
+                                            <param id="0" name="Name">&quot;Player Stop&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
                                     </actions>
                                 </event-block>
                             </sub-events>
@@ -560,6 +581,10 @@
                                 <action disabled="1" id="-10" name="Set value" sid="3984938259507268" type="Player_Box">
                                     <param id="0" name="Instance variable">Level_2_Phases</param>
                                     <param id="1" name="Value">9</param>
+                                </action>
+                                <action id="0" name="Call function" sid="7915380104675536" type="Function">
+                                    <param id="0" name="Name">&quot;Player Free&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
                                 <action id="-10" name="Set value" sid="7644026926371557" type="Player_Box">
                                     <param id="0" name="Instance variable">Level_2_Phases</param>
@@ -1149,7 +1174,7 @@
                                 <condition id="-4" name="Trigger once while true" sid="2405686971674968" type="System" />
                             </conditions>
                             <actions>
-                                <action id="0" name="Call function" sid="311605506769849" type="Function">
+                                <action disabled="1" id="0" name="Call function" sid="311605506769849" type="Function">
                                     <param id="0" name="Name">&quot;Dialogue&quot;</param>
                                     <param id="1" name="Parameter {n}">650{###}1600{###}&quot;L&apos;ho portata via a te...&quot;</param>
                                 </action>
@@ -1157,6 +1182,15 @@
                                     <param id="0" name="Duration">3</param>
                                     <param id="1" name="Type">0</param>
                                     <param id="2" name="Tag">&quot;Dialogue 1&quot;</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="8280680656772178" type="Dialogue">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="9568251529903933" type="BackGround_Dia_Text">
+                                    <param id="0" name="Opacity">60</param>
+                                </action>
+                                <action id="0" name="Set text" sid="5005969364247242" type="Dialogue">
+                                    <param id="0" name="Text">&quot;Ciao Culo&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1167,7 +1201,7 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Call function" sid="1348433276364181" type="Function">
+                                <action disabled="1" id="0" name="Call function" sid="1348433276364181" type="Function">
                                     <param id="0" name="Name">&quot;Dialogue&quot;</param>
                                     <param id="1" name="Parameter {n}">786{###}1600{###}&quot;...&quot;</param>
                                 </action>
@@ -1185,7 +1219,7 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Call function" sid="7780676432384582" type="Function">
+                                <action disabled="1" id="0" name="Call function" sid="7780676432384582" type="Function">
                                     <param id="0" name="Name">&quot;Dialogue&quot;</param>
                                     <param id="1" name="Parameter {n}">650{###}1600{###}&quot;...Prima che tu la portassi via da me.&quot;</param>
                                 </action>
@@ -1203,7 +1237,7 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Call function" sid="4889061693642137" type="Function">
+                                <action disabled="1" id="0" name="Call function" sid="4889061693642137" type="Function">
                                     <param id="0" name="Name">&quot;Dialogue&quot;</param>
                                     <param id="1" name="Parameter {n}">786{###}1600{###}&quot;!&quot;</param>
                                 </action>
@@ -1814,6 +1848,136 @@
                         </condition>
                     </conditions>
                     <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="9114239928779452" title="Phase Free Events Level 2">
+            <sub-events>
+                <event-block sid="8316135786073321">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="731160944915281" type="Player_Frame">
+                            <param id="0" name="Object">Record_4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Fade" id="1" name="Start fade" sid="9566283924677361" type="Record_4" />
+                        <action id="11" name="Set collisions enabled" sid="1518545507074884" type="Record_4">
+                            <param id="0" name="Collisions">0</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="5280491331550894" type="Records">
+                            <param id="0" name="Opacity">100</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="27893457161158" type="BackGround_Record_Text">
+                            <param id="0" name="Opacity">60</param>
+                        </action>
+                        <action id="0" name="Set text" sid="1552794724899642" type="Records">
+                            <param id="0" name="Text">&quot;P.: Mi farai uscire di senno!&quot;&amp;newline&amp;&quot;Mi manderai al manicomio&quot;&amp;newline&amp;&quot;Caricatore + 1&quot;</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="8060162836086701" type="Player_Box">
+                            <param id="0" name="Instance variable">Weapon_Max_Loader</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="Timer" id="0" name="Start timer" sid="9599919131212854" type="Player_Box">
+                            <param id="0" name="Duration">3</param>
+                            <param id="1" name="Type">0</param>
+                            <param id="2" name="Tag">&quot;Record 2 Text Fading&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1823550706236978">
+                    <conditions>
+                        <condition behavior="Timer" id="0" name="On timer" sid="7668157728898594" type="Player_Box">
+                            <param id="0" name="Tag">&quot;Record 2 Text Fading&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Fade" id="1" name="Start fade" sid="8165022506634241" type="Records" />
+                        <action behavior="Fade" id="1" name="Start fade" sid="2405533489346872" type="BackGround_Record_Text" />
+                    </actions>
+                </event-block>
+                <event-block sid="4412870218065854">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="5901254029615301" type="Player_Frame">
+                            <param id="0" name="Object">Record_5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Fade" id="1" name="Start fade" sid="5220306803368102" type="Record_5" />
+                        <action id="11" name="Set collisions enabled" sid="2229501826561605" type="Record_5">
+                            <param id="0" name="Collisions">0</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="8769511561719424" type="Records">
+                            <param id="0" name="Opacity">100</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="7164561257568889" type="BackGround_Record_Text">
+                            <param id="0" name="Opacity">60</param>
+                        </action>
+                        <action id="0" name="Set text" sid="8830394329009025" type="Records">
+                            <param id="0" name="Text">&quot;P.: Tu sarai sempre con me.&quot;&amp;newline&amp;&quot;Una catena ci lega&quot;&amp;newline&amp;&quot;Vigore +1&quot;</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="4599285455182999" type="Player_Box">
+                            <param id="0" name="Instance variable">Dash_Max_Charges</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="Timer" id="0" name="Start timer" sid="7596859804914627" type="Player_Box">
+                            <param id="0" name="Duration">3</param>
+                            <param id="1" name="Type">0</param>
+                            <param id="2" name="Tag">&quot;Record 2 Text Fading&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8275340973363845">
+                    <conditions>
+                        <condition behavior="Timer" id="0" name="On timer" sid="2809390716113227" type="Player_Box">
+                            <param id="0" name="Tag">&quot;Record 2 Text Fading&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Fade" id="1" name="Start fade" sid="5410016035502971" type="Records" />
+                        <action behavior="Fade" id="1" name="Start fade" sid="7530602447165246" type="BackGround_Record_Text" />
+                    </actions>
+                </event-block>
+                <event-block sid="3437299688178447">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="7100943235329633" type="Player_Frame">
+                            <param id="0" name="Object">Record_6</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Fade" id="1" name="Start fade" sid="3213867530191959" type="Record_6" />
+                        <action id="11" name="Set collisions enabled" sid="828224620327343" type="Record_6">
+                            <param id="0" name="Collisions">0</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="36620613207972" type="Records">
+                            <param id="0" name="Opacity">100</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="2076953333898433" type="BackGround_Record_Text">
+                            <param id="0" name="Opacity">60</param>
+                        </action>
+                        <action id="0" name="Set text" sid="1426395893511192" type="Records">
+                            <param id="0" name="Text">&quot;P.: Il tuo cuore&quot;&amp;newline&amp;&quot;appartiene solo a me!&quot;&amp;newline&amp;&quot;Onda d&apos;urto&quot;</param>
+                        </action>
+                        <action id="-12" name="Subtract from" sid="232142878371613" type="Player_Box">
+                            <param id="0" name="Instance variable">Fire_Rate_Stun</param>
+                            <param id="1" name="Value">0.3</param>
+                        </action>
+                        <action behavior="Timer" id="0" name="Start timer" sid="1742854308733704" type="Player_Box">
+                            <param id="0" name="Duration">3</param>
+                            <param id="1" name="Type">0</param>
+                            <param id="2" name="Tag">&quot;Record 2 Text Fading&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4591713323505155">
+                    <conditions>
+                        <condition behavior="Timer" id="0" name="On timer" sid="8493681214302998" type="Player_Box">
+                            <param id="0" name="Tag">&quot;Record 2 Text Fading&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Fade" id="1" name="Start fade" sid="1008499912053636" type="Records" />
+                        <action behavior="Fade" id="1" name="Start fade" sid="471132464223016" type="BackGround_Record_Text" />
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>

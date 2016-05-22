@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Intro Sheet</name>
     <events>
+        <variable constant="0" name="Cooldown_Stun_Temp" sid="5977449647422555" static="0" type="number">2</variable>
         <variable constant="0" name="Save_Level_3" sid="9991976084874517" static="0" type="number">0</variable>
         <variable constant="0" name="Save_Level_2" sid="788633608920814" static="0" type="number">0</variable>
         <variable constant="0" name="Intro_Level_Phase_Temp" sid="7838201732142827" static="0" type="number">0</variable>

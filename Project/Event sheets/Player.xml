@@ -56,6 +56,9 @@
                         <action id="-13" name="Set time scale" sid="826369873445399" type="System">
                             <param id="0" name="Time scale">1</param>
                         </action>
+                        <action id="1" name="Set cursor from sprite" sid="2727458718310474" type="Mouse">
+                            <param id="0" name="Sprite">CrossHair</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="2440992797471793">
@@ -649,7 +652,7 @@
                 </event-block>
                 <event-block sid="9784051759959952">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="3305341741705452" type="Player_arm">
+                        <condition id="-7" name="Compare instance variable" sid="3305341741705452" type="Player_Box">
                             <param id="0" name="Instance variable">Cooldown</param>
                             <param id="1" name="Comparison">5</param>
                             <param id="2" name="Value">0</param>
@@ -668,7 +671,7 @@
                 </event-block>
                 <event-block sid="4598689062622797">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="4742648055300596" type="Player_arm">
+                        <condition id="-7" name="Compare instance variable" sid="4742648055300596" type="Player_Box">
                             <param id="0" name="Instance variable">Cooldown</param>
                             <param id="1" name="Comparison">3</param>
                             <param id="2" name="Value">-0.5</param>
@@ -687,7 +690,7 @@
                 </event-block>
                 <event-block sid="6833464208661109">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="2660438059786493" type="Player_arm">
+                        <condition id="-7" name="Compare instance variable" sid="2660438059786493" type="Player_Box">
                             <param id="0" name="Instance variable">Cooldown</param>
                             <param id="1" name="Comparison">5</param>
                             <param id="2" name="Value">0</param>
@@ -706,7 +709,7 @@
                 </event-block>
                 <event-block sid="8902589100663139">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="734078381025562" type="Player_arm">
+                        <condition id="-7" name="Compare instance variable" sid="734078381025562" type="Player_Box">
                             <param id="0" name="Instance variable">Cooldown</param>
                             <param id="1" name="Comparison">3</param>
                             <param id="2" name="Value">-0.5</param>
@@ -893,7 +896,7 @@
                             <sub-events>
                                 <event-block sid="4515713748046414">
                                     <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="2349875990101666" type="Player_arm">
+                                        <condition id="-7" name="Compare instance variable" sid="2349875990101666" type="Player_Box">
                                             <param id="0" name="Instance variable">Cooldown</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">-1</param>
@@ -909,7 +912,7 @@
                                         <action behavior="Bullet" id="3" name="Set angle of motion" sid="8958986653415714" type="Bullet_1_Player">
                                             <param id="0" name="Angle">Player_arm.Angle</param>
                                         </action>
-                                        <action id="-10" name="Set value" sid="9594998783923453" type="Player_arm">
+                                        <action id="-10" name="Set value" sid="9594998783923453" type="Player_Box">
                                             <param id="0" name="Instance variable">Cooldown</param>
                                             <param id="1" name="Value">0</param>
                                         </action>
@@ -955,14 +958,14 @@
                             <sub-events>
                                 <event-block sid="3976409085855127">
                                     <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="9391225885327437" type="Player_arm">
+                                        <condition id="-7" name="Compare instance variable" sid="9391225885327437" type="Player_Box">
                                             <param id="0" name="Instance variable">Cooldown_Stun</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">-1</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-10" name="Set value" sid="4417652499738583" type="Player_arm">
+                                        <action id="-10" name="Set value" sid="4417652499738583" type="Player_Box">
                                             <param id="0" name="Instance variable">Cooldown_Stun</param>
                                             <param id="1" name="Value">0</param>
                                         </action>
@@ -1103,14 +1106,14 @@
                 <comment>Cooldowns System</comment>
                 <event-block sid="5247213099338823">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="8259808193139965" type="Player_arm">
+                        <condition id="-7" name="Compare instance variable" sid="8259808193139965" type="Player_Box">
                             <param id="0" name="Instance variable">Cooldown</param>
                             <param id="1" name="Comparison">5</param>
                             <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-11" name="Add to" sid="5592059803151332" type="Player_arm">
+                        <action id="-11" name="Add to" sid="5592059803151332" type="Player_Box">
                             <param id="0" name="Instance variable">Cooldown</param>
                             <param id="1" name="Value">dt</param>
                         </action>
@@ -1118,14 +1121,14 @@
                 </event-block>
                 <event-block sid="5745867931040279">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="3919651918135057" type="Player_arm">
+                        <condition id="-7" name="Compare instance variable" sid="3919651918135057" type="Player_Box">
                             <param id="0" name="Instance variable">Cooldown</param>
                             <param id="1" name="Comparison">5</param>
                             <param id="2" name="Value">Self.Fire_Rate</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-10" name="Set value" sid="4396622774072201" type="Player_arm">
+                        <action id="-10" name="Set value" sid="4396622774072201" type="Player_Box">
                             <param id="0" name="Instance variable">Cooldown</param>
                             <param id="1" name="Value">-1</param>
                         </action>
@@ -1133,14 +1136,14 @@
                 </event-block>
                 <event-block sid="1739382504617413">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="4742877448006515" type="Player_arm">
+                        <condition id="-7" name="Compare instance variable" sid="4742877448006515" type="Player_Box">
                             <param id="0" name="Instance variable">Cooldown_Stun</param>
                             <param id="1" name="Comparison">5</param>
                             <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-11" name="Add to" sid="1706119682440356" type="Player_arm">
+                        <action id="-11" name="Add to" sid="1706119682440356" type="Player_Box">
                             <param id="0" name="Instance variable">Cooldown_Stun</param>
                             <param id="1" name="Value">dt</param>
                         </action>
@@ -1148,14 +1151,14 @@
                 </event-block>
                 <event-block sid="6492063723076256">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="1666634982064412" type="Player_arm">
+                        <condition id="-7" name="Compare instance variable" sid="1666634982064412" type="Player_Box">
                             <param id="0" name="Instance variable">Cooldown_Stun</param>
                             <param id="1" name="Comparison">5</param>
                             <param id="2" name="Value">Self.Fire_Rate_Stun</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-10" name="Set value" sid="2278222579409305" type="Player_arm">
+                        <action id="-10" name="Set value" sid="2278222579409305" type="Player_Box">
                             <param id="0" name="Instance variable">Cooldown_Stun</param>
                             <param id="1" name="Value">-1</param>
                         </action>
@@ -1414,7 +1417,7 @@
                         </event-block>
                         <event-block sid="4281056819150052">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="4219011485400305" type="Player_arm">
+                                <condition id="-7" name="Compare instance variable" sid="4219011485400305" type="Player_Box">
                                     <param id="0" name="Instance variable">Cooldown</param>
                                     <param id="1" name="Comparison">5</param>
                                     <param id="2" name="Value">0</param>
@@ -2998,6 +3001,10 @@
                             <param id="0" name="Variable">Intro_Level_Phase_Temp</param>
                             <param id="1" name="Value">Player_Box.Intro_Phases</param>
                         </action>
+                        <action id="-9" name="Set value" sid="5667476041243909" type="System">
+                            <param id="0" name="Variable">Cooldown_Stun_Temp</param>
+                            <param id="1" name="Value">Player_Box.Cooldown_Stun</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block disabled="1" sid="9654624776699467">
@@ -3104,6 +3111,10 @@
                         <action id="-10" name="Set value" sid="459410495791315" type="Player_Box">
                             <param id="0" name="Instance variable">Intro_Phases</param>
                             <param id="1" name="Value">Intro_Level_Phase_Temp</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="4605461752422806" type="Player_Box">
+                            <param id="0" name="Instance variable">Cooldown_Stun</param>
+                            <param id="1" name="Value">Cooldown_Stun_Temp</param>
                         </action>
                     </actions>
                     <sub-events>

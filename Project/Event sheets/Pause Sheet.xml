@@ -44,7 +44,7 @@
                         <condition id="-14" name="Compare variable" sid="9305770143279659" type="System">
                             <param id="0" name="Variable">Layout</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
+                            <param id="2" name="Value">2</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -58,7 +58,7 @@
                         <condition id="-14" name="Compare variable" sid="4013267774318818" type="System">
                             <param id="0" name="Variable">Layout</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
+                            <param id="2" name="Value">3</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -112,7 +112,7 @@
                         <condition id="-14" name="Compare variable" sid="6244927342861158" type="System">
                             <param id="0" name="Variable">Layout</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
+                            <param id="2" name="Value">2</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -126,7 +126,7 @@
                         <condition id="-14" name="Compare variable" sid="1332031549630179" type="System">
                             <param id="0" name="Variable">Layout</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
+                            <param id="2" name="Value">3</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -185,7 +185,7 @@
                         <condition id="-14" name="Compare variable" sid="5418820501955118" type="System">
                             <param id="0" name="Variable">Layout</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
+                            <param id="2" name="Value">2</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -199,7 +199,7 @@
                         <condition id="-14" name="Compare variable" sid="6949391157700651" type="System">
                             <param id="0" name="Variable">Layout</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
+                            <param id="2" name="Value">3</param>
                         </condition>
                     </conditions>
                     <actions>
