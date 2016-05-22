@@ -322,6 +322,28 @@
                         <opacity>0.5</opacity>
                     </world>
                 </instance>
+                <instance type="PotenziamentoSparoHud" uid="357">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-114.464599609</x>
+                        <y>69.901672363</y>
+                        <z>0</z>
+                        <width>12</width>
+                        <height>12</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -363,13 +385,13 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1068</x>
-                        <y>155</y>
+                        <x>1061.939941406</x>
+                        <y>160.224197388</y>
                         <z>0</z>
-                        <width>8</width>
-                        <height>8</height>
+                        <width>45</width>
+                        <height>40</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
+                        <hotspotX>0.508771956</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
@@ -852,11 +874,11 @@
                         <x>123.160629272</x>
                         <y>-40.598754883</y>
                         <z>0</z>
-                        <width>5</width>
-                        <height>5</height>
+                        <width>40</width>
+                        <height>40</height>
                         <depth>0</depth>
-                        <hotspotX>0.600000024</hotspotX>
-                        <hotspotY>0.600000024</hotspotY>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

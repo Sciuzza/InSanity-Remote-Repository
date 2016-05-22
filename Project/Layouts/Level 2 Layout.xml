@@ -2976,7 +2976,6 @@
                         <IsMoving>0</IsMoving>
                     </instance-variables>
                     <behavior-instances>
-                        <behavior-instance type="Persist" />
                         <behavior-instance type="Solid">
                             <properties>
                                 <initial-state>Enabled</initial-state>
@@ -19828,16 +19827,13 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Ricordo5" uid="1840">
+                <instance type="Record_5" uid="1840">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Persist" />
-                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -19853,16 +19849,13 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Ricordo6" uid="1841">
+                <instance type="Record_6" uid="1841">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Persist" />
-                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -20650,7 +20643,6 @@
                         <IsMoving>0</IsMoving>
                     </instance-variables>
                     <behavior-instances>
-                        <behavior-instance type="Persist" />
                         <behavior-instance type="Solid">
                             <properties>
                                 <initial-state>Enabled</initial-state>
@@ -20881,7 +20873,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>181</x>
-                        <y>1698</y>
+                        <y>1707</y>
                         <z>0</z>
                         <width>67</width>
                         <height>29</height>
@@ -20913,7 +20905,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>181</x>
-                        <y>1705</y>
+                        <y>1714</y>
                         <z>0</z>
                         <width>62</width>
                         <height>17</height>
@@ -20938,7 +20930,6 @@
                         <IsMoving>0</IsMoving>
                     </instance-variables>
                     <behavior-instances>
-                        <behavior-instance type="Persist" />
                         <behavior-instance type="Solid">
                             <properties>
                                 <initial-state>Enabled</initial-state>
@@ -21055,7 +21046,7 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
-                    <behavior-instances>
+                   <behavior-instances>
                         <behavior-instance type="Persist" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
@@ -21102,9 +21093,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Persist" />
-                    </behavior-instances>
+                  <behavior-instances>
+                    <behavior-instance type="Persist" />
+                  </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -21149,9 +21140,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Persist" />
-                    </behavior-instances>
+                  <behavior-instances>
+                    <behavior-instance type="Persist" />
+                  </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -21409,7 +21400,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TraveOrizzontale2" uid="96">
+                <instance type="TraveOrizzontale2" uid="2072">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -21805,6 +21796,138 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="Finestra5" uid="2125">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2402</x>
+                        <y>1022</y>
+                        <z>0</z>
+                        <width>28</width>
+                        <height>57</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.508771956</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Finestra5" uid="2126">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2439</x>
+                        <y>1022</y>
+                        <z>0</z>
+                        <width>28</width>
+                        <height>57</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.508771956</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Finestra5" uid="2127">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2571</x>
+                        <y>1026</y>
+                        <z>0</z>
+                        <width>28</width>
+                        <height>57</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.508771956</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Finestra5" uid="2128">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2608</x>
+                        <y>1026</y>
+                        <z>0</z>
+                        <width>28</width>
+                        <height>57</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.508771956</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Finestra5" uid="2129">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2729</x>
+                        <y>1022</y>
+                        <z>0</z>
+                        <width>28</width>
+                        <height>57</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.508771956</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Finestra5" uid="2130">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2766</x>
+                        <y>1022</y>
+                        <z>0</z>
+                        <width>28</width>
+                        <height>57</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.508771956</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -21824,7 +21947,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Pavimento" uid="100">
+                <instance type="Pavimento" uid="96">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -21846,7 +21969,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Pavimento" uid="103">
+                <instance type="Pavimento" uid="100">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -21868,7 +21991,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Pavimento" uid="104">
+                <instance type="Pavimento" uid="103">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -21890,7 +22013,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Pavimento" uid="113">
+                <instance type="Pavimento" uid="104">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -21912,7 +22035,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Pavimento" uid="312">
+                <instance type="Pavimento" uid="113">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -21934,7 +22057,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Pavimento" uid="323">
+                <instance type="Pavimento" uid="312">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -21956,7 +22079,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Pavimento" uid="324">
+                <instance type="Pavimento" uid="323">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -21978,7 +22101,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Pavimento" uid="336">
+                <instance type="Pavimento" uid="324">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -22000,7 +22123,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Pavimento" uid="337">
+                <instance type="Pavimento" uid="336">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -22022,7 +22145,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Pavimento" uid="338">
+                <instance type="Pavimento" uid="337">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -30034,9 +30157,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Persist" />
-                    </behavior-instances>
+                  <behavior-instances>
+                    <behavior-instance type="Persist" />
+                  </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -30126,7 +30249,6 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
-                        <behavior-instance type="Persist" />
                         <behavior-instance type="Solid">
                             <properties>
                                 <initial-state>Enabled</initial-state>
@@ -30148,29 +30270,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="testLvl" uid="357">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1762</x>
-                        <y>2762</y>
-                        <z>0</z>
-                        <width>2393</width>
-                        <height>338</height>
-                        <depth>0</depth>
-                        <hotspotX>0.499791056</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Cavaliere" uid="340">
+                <instance type="Cavaliere" uid="338">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -30192,7 +30292,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Cavaliere2" uid="341">
+                <instance type="Cavaliere2" uid="340">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -30214,7 +30314,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Teschio" uid="342">
+                <instance type="Teschio" uid="341">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -30236,7 +30336,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="pedana" uid="343">
+                <instance type="pedana" uid="342">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -30258,7 +30358,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="pedana" uid="344">
+                <instance type="pedana" uid="343">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -30280,7 +30380,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="pedana" uid="345">
+                <instance type="pedana" uid="344">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -30302,7 +30402,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Quadro" uid="346">
+                <instance type="Quadro" uid="345">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -30324,7 +30424,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Finestra" uid="347">
+                <instance type="Finestra" uid="346">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -30346,7 +30446,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Finestra" uid="348">
+                <instance type="Finestra" uid="347">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -30368,7 +30468,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Finestra" uid="349">
+                <instance type="Finestra" uid="348">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -30390,7 +30490,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Finestra" uid="350">
+                <instance type="Finestra" uid="349">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -30412,7 +30512,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Finestra" uid="351">
+                <instance type="Finestra" uid="350">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -30434,7 +30534,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Finestra" uid="354">
+                <instance type="Finestra" uid="351">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -30456,7 +30556,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="pedana" uid="381">
+                <instance type="pedana" uid="354">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -30478,7 +30578,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="pedana" uid="409">
+                <instance type="pedana" uid="381">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -30500,7 +30600,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="pedana" uid="421">
+                <instance type="pedana" uid="409">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -30522,7 +30622,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Libreria" uid="454">
+                <instance type="Libreria" uid="421">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -30544,7 +30644,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Libreria2" uid="455">
+                <instance type="Libreria2" uid="454">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -30566,7 +30666,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Cavaliere" uid="519">
+                <instance type="Cavaliere" uid="455">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -30588,7 +30688,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Cavaliere2" uid="565">
+                <instance type="Cavaliere2" uid="519">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -31409,7 +31509,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="pedana" uid="566">
+                <instance type="pedana" uid="565">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -31431,7 +31531,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="pedana" uid="575">
+                <instance type="pedana" uid="566">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -31453,7 +31553,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="pedana" uid="576">
+                <instance type="pedana" uid="575">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -31527,7 +31627,6 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
-                        <behavior-instance type="Persist" />
                         <behavior-instance type="Solid">
                             <properties>
                                 <initial-state>Disabled</initial-state>
@@ -31557,7 +31656,6 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
-                        <behavior-instance type="Persist" />
                         <behavior-instance type="Solid">
                             <properties>
                                 <initial-state>Disabled</initial-state>
@@ -32005,7 +32103,6 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
-                        <behavior-instance type="Persist" />
                         <behavior-instance type="Solid">
                             <properties>
                                 <initial-state>Disabled</initial-state>
@@ -32035,7 +32132,6 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
-                        <behavior-instance type="Persist" />
                         <behavior-instance type="Solid">
                             <properties>
                                 <initial-state>Disabled</initial-state>
@@ -32197,7 +32293,6 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
-                        <behavior-instance type="Persist" />
                         <behavior-instance type="Solid">
                             <properties>
                                 <initial-state>Disabled</initial-state>
@@ -32219,16 +32314,13 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Ricordo4" uid="1794">
+                <instance type="Record_4" uid="1794">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Persist" />
-                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -32244,7 +32336,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Statua2" uid="577">
+                <instance type="Statua2" uid="576">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -32252,7 +32344,6 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
-                        <behavior-instance type="Persist" />
                         <behavior-instance type="Solid">
                             <properties>
                                 <initial-state>Disabled</initial-state>
@@ -32956,7 +33047,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Cavaliere5" uid="606">
+                <instance type="Cavaliere5" uid="577">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -33101,7 +33192,6 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
-                        <behavior-instance type="Persist" />
                         <behavior-instance type="Solid">
                             <properties>
                                 <initial-state>Disabled</initial-state>
@@ -33343,7 +33433,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="pedana" uid="607">
+                <instance type="pedana" uid="606">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -33882,7 +33972,6 @@
                         <First_Move_Done>false</First_Move_Done>
                     </instance-variables>
                     <behavior-instances>
-                        <behavior-instance type="Persist" />
                         <behavior-instance type="Fade">
                             <properties>
                                 <active-at-start>No</active-at-start>
@@ -33916,7 +34005,6 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
-                        <behavior-instance type="Persist" />
                         <behavior-instance type="Solid">
                             <properties>
                                 <initial-state>Disabled</initial-state>
@@ -34070,6 +34158,112 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="CheckPoint" uid="2132">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                  <behavior-instances>
+                    <behavior-instance type="Persist" />
+                  </behavior-instances>
+                    <instance-variables>
+                        <Is_Taken>false</Is_Taken>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1436</x>
+                        <y>2143</y>
+                        <z>0</z>
+                        <width>33.722854614</width>
+                        <height>31.314077377</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.512820542</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="CheckPoint" uid="2133">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                  <behavior-instances>
+                    <behavior-instance type="Persist" />
+                  </behavior-instances>
+                    <instance-variables>
+                        <Is_Taken>false</Is_Taken>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1056</x>
+                        <y>1760</y>
+                        <z>0</z>
+                        <width>33.722854614</width>
+                        <height>31.314077377</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.512820542</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="CheckPoint" uid="2134">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                  <behavior-instances>
+                    <behavior-instance type="Persist" />
+                  </behavior-instances>
+                    <instance-variables>
+                        <Is_Taken>false</Is_Taken>
+                    </instance-variables>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>2071</x>
+                        <y>1377</y>
+                        <z>0</z>
+                        <width>33.722854614</width>
+                        <height>31.314077377</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.512820542</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="PotenziamentoSparoHud" uid="2136">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-264</x>
+                        <y>1627</y>
+                        <z>0</z>
+                        <width>12</width>
+                        <height>12</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -34089,7 +34283,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="PedanaLibro3" uid="609">
+                <instance type="PedanaLibro3" uid="607">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -34099,8 +34293,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1637</x>
-                        <y>2467</y>
+                        <x>1626</x>
+                        <y>2460</y>
                         <z>0</z>
                         <width>67</width>
                         <height>29</height>
@@ -34111,7 +34305,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="PedanaLibro3" uid="617">
+                <instance type="PedanaLibro3" uid="609">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -34133,7 +34327,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="PedanaLibro3" uid="618">
+                <instance type="PedanaLibro3" uid="617">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -34155,7 +34349,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="PedanaLibro3" uid="619">
+                <instance type="PedanaLibro3" uid="618">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -34177,7 +34371,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="PedanaLibro3" uid="1248">
+                <instance type="PedanaLibro3" uid="619">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -34199,7 +34393,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="PedanaLibro3" uid="1249">
+                <instance type="PedanaLibro3" uid="1248">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -34221,7 +34415,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="PedanaLibro3" uid="1404">
+                <instance type="PedanaLibro3" uid="1249">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -34243,7 +34437,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="PedanaLibroMobile" uid="1419">
+                <instance type="PedanaLibroMobile" uid="1404">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -34265,7 +34459,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="PedanaLibroMobile" uid="1420">
+                <instance type="PedanaLibroMobile" uid="1419">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -34287,7 +34481,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Quadro2" uid="1421">
+                <instance type="Quadro2" uid="1420">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -34309,7 +34503,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Quadro3" uid="1422">
+                <instance type="Quadro3" uid="1421">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -34397,7 +34591,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="pedana" uid="1423">
+                <instance type="pedana" uid="1422">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -34419,7 +34613,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="PedanaLibroMobile" uid="1424">
+                <instance type="PedanaLibroMobile" uid="1423">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -34914,7 +35108,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>270</x>
-                        <y>1621</y>
+                        <y>1652</y>
                         <z>0</z>
                         <width>67</width>
                         <height>29</height>
@@ -34957,8 +35151,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>442</x>
-                        <y>1323</y>
+                        <x>444</x>
+                        <y>1352</y>
                         <z>0</z>
                         <width>81</width>
                         <height>19</height>
@@ -34969,7 +35163,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="pedana" uid="1425">
+                <instance type="pedana" uid="2073">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -34991,7 +35185,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="pedana" uid="1426">
+                <instance type="pedana" uid="2075">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -35013,7 +35207,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="pedana" uid="1427">
+                <instance type="pedana" uid="2077">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -35167,6 +35361,50 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="pedana" uid="1716">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>422</x>
+                        <y>1306</y>
+                        <z>0</z>
+                        <width>81</width>
+                        <height>19</height>
+                        <depth>0</depth>
+                        <hotspotX>0.506172836</hotspotX>
+                        <hotspotY>0.526315808</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="pedana" uid="2123">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>292</x>
+                        <y>1606</y>
+                        <z>0</z>
+                        <width>81</width>
+                        <height>19</height>
+                        <depth>0</depth>
+                        <hotspotX>0.506172836</hotspotX>
+                        <hotspotY>0.526315808</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -35186,7 +35424,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="SolidObjects" uid="1428">
+                <instance type="SolidObjects" uid="1424">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -35216,7 +35454,7 @@
                         <opacity>0.5</opacity>
                     </world>
                 </instance>
-                <instance type="SolidObjects" uid="1429">
+                <instance type="SolidObjects" uid="1425">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -35246,7 +35484,7 @@
                         <opacity>0.5</opacity>
                     </world>
                 </instance>
-                <instance type="SolidObjects" uid="1430">
+                <instance type="SolidObjects" uid="1426">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -35276,7 +35514,7 @@
                         <opacity>0.5</opacity>
                     </world>
                 </instance>
-                <instance type="SolidObjects" uid="1431">
+                <instance type="SolidObjects" uid="1427">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -35306,7 +35544,7 @@
                         <opacity>0.5</opacity>
                     </world>
                 </instance>
-                <instance type="SolidObjects" uid="1432">
+                <instance type="SolidObjects" uid="1428">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -35336,7 +35574,7 @@
                         <opacity>0.5</opacity>
                     </world>
                 </instance>
-                <instance type="SolidObjects" uid="1433">
+                <instance type="SolidObjects" uid="1429">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -35366,7 +35604,7 @@
                         <opacity>0.5</opacity>
                     </world>
                 </instance>
-                <instance type="SolidObjects" uid="1436">
+                <instance type="SolidObjects" uid="1430">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -35396,7 +35634,7 @@
                         <opacity>0.5</opacity>
                     </world>
                 </instance>
-                <instance type="SolidObjects" uid="1437">
+                <instance type="SolidObjects" uid="1431">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -35426,7 +35664,7 @@
                         <opacity>0.5</opacity>
                     </world>
                 </instance>
-                <instance type="SolidObjects" uid="1438">
+                <instance type="SolidObjects" uid="1432">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -35456,7 +35694,7 @@
                         <opacity>0.5</opacity>
                     </world>
                 </instance>
-                <instance type="SolidObjects" uid="1439">
+                <instance type="SolidObjects" uid="1433">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -35486,7 +35724,7 @@
                         <opacity>0.5</opacity>
                     </world>
                 </instance>
-                <instance type="SolidObjects" uid="1440">
+                <instance type="SolidObjects" uid="1436">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -35516,7 +35754,7 @@
                         <opacity>0.5</opacity>
                     </world>
                 </instance>
-                <instance type="SolidObjects" uid="1441">
+                <instance type="SolidObjects" uid="1437">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -35546,7 +35784,7 @@
                         <opacity>0.5</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite7" uid="1444">
+                <instance type="Sprite7" uid="1438">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -35568,7 +35806,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite7" uid="1445">
+                <instance type="Sprite7" uid="1439">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -35590,7 +35828,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite7" uid="1446">
+                <instance type="Sprite7" uid="1440">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -35612,7 +35850,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite7" uid="1447">
+                <instance type="Sprite7" uid="1441">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -35634,7 +35872,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite7" uid="1448">
+                <instance type="Sprite7" uid="1444">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -35656,7 +35894,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite7" uid="1449">
+                <instance type="Sprite7" uid="1445">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -35678,7 +35916,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite7" uid="1450">
+                <instance type="Sprite7" uid="1446">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -36200,8 +36438,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1637.5</x>
-                        <y>2470.5</y>
+                        <x>1626</x>
+                        <y>2464</y>
                         <z>0</z>
                         <width>62</width>
                         <height>17</height>
@@ -36564,7 +36802,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="PiattaformaAttraversabile" uid="1451">
+                <instance type="PiattaformaAttraversabile" uid="1447">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -36596,7 +36834,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="PiattaformaAttraversabile" uid="1452">
+                <instance type="PiattaformaAttraversabile" uid="1448">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -36628,7 +36866,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="PiattaformaAttraversabile" uid="1453">
+                <instance type="PiattaformaAttraversabile" uid="1449">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -36660,7 +36898,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="PiattaformaAttraversabile" uid="1454">
+                <instance type="PiattaformaAttraversabile" uid="1450">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -36692,7 +36930,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="PiattaformaAttraversabile" uid="1455">
+                <instance type="PiattaformaAttraversabile" uid="1451">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -36724,7 +36962,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="PiattaformaAttraversabile" uid="1456">
+                <instance type="PiattaformaAttraversabile" uid="1452">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -36820,7 +37058,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sprite7" uid="1457">
+                <instance type="Sprite7" uid="1453">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -37631,7 +37869,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>270</x>
-                        <y>1627</y>
+                        <y>1658</y>
                         <z>0</z>
                         <width>62</width>
                         <height>17</height>
@@ -38280,8 +38518,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>447</x>
-                        <y>1317</y>
+                        <x>449</x>
+                        <y>1346</y>
                         <z>0</z>
                         <width>55</width>
                         <height>8</height>
@@ -38324,7 +38562,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="PiattaformaAttraversabile" uid="1458">
+                <instance type="PiattaformaAttraversabile" uid="2074">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -38356,7 +38594,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="PiattaformaAttraversabile" uid="1459">
+                <instance type="PiattaformaAttraversabile" uid="2076">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -38772,6 +39010,70 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="PiattaformaAttraversabile" uid="2122">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Is_Enabled>true</Is_Enabled>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Jumpthru">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>427</x>
+                        <y>1300</y>
+                        <z>0</z>
+                        <width>55</width>
+                        <height>8</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="PiattaformaAttraversabile" uid="2124">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Is_Enabled>true</Is_Enabled>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Jumpthru">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>297</x>
+                        <y>1600</y>
+                        <z>0</z>
+                        <width>55</width>
+                        <height>8</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -38791,7 +39093,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Camera" uid="1460">
+                <instance type="Camera" uid="1454">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -38799,7 +39101,6 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
-                        <behavior-instance type="Persist" />
                         <behavior-instance type="ScrollTo">
                             <properties>
                                 <initial-state>Enabled</initial-state>
@@ -38810,7 +39111,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>720</x>
+                        <x>714</x>
                         <y>2464</y>
                         <z>0</z>
                         <width>8</width>
@@ -38822,16 +39123,16 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Player_Frame" uid="1461">
+                <instance type="Player_Frame" uid="1455">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Flash" />
-                    </behavior-instances>
+                  <behavior-instances>
+                    <behavior-instance type="Flash" />
+                  </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -38847,7 +39148,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Player_arm" uid="1462">
+                <instance type="Player_arm" uid="1456">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -38866,8 +39167,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-141</x>
-                        <y>2084</y>
+                        <x>-137</x>
+                        <y>2099</y>
                         <z>0</z>
                         <width>17</width>
                         <height>7</height>
@@ -38878,7 +39179,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Bullet_S_Player" uid="1463">
+                <instance type="Bullet_S_Player" uid="1457">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -38900,19 +39201,19 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-176</x>
-                        <y>2705</y>
+                        <x>-36</x>
+                        <y>2662</y>
                         <z>0</z>
-                        <width>5</width>
-                        <height>5</height>
+                        <width>40</width>
+                        <height>40</height>
                         <depth>0</depth>
-                        <hotspotX>0.600000024</hotspotX>
-                        <hotspotY>0.600000024</hotspotY>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Bullet_1_Player" uid="1464">
+                <instance type="Bullet_1_Player" uid="1458">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -38947,7 +39248,77 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Ombra" uid="1466">
+                <instance type="Player_Box" uid="1459">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Life>3</Life>
+                        <Checkpoint>0</Checkpoint>
+                        <Dash>false</Dash>
+                        <Dash_Speed>1300</Dash_Speed>
+                        <Dash_Time>0.1</Dash_Time>
+                        <Dash_Charges>2</Dash_Charges>
+                        <Dash_Recharge_Time>2</Dash_Recharge_Time>
+                        <Dash_Max_Charges>2</Dash_Max_Charges>
+                        <Weapon_Level>0</Weapon_Level>
+                        <Weapon_Loader>4</Weapon_Loader>
+                        <Weapon_Max_Loader>4</Weapon_Max_Loader>
+                        <Reloading_Time>2</Reloading_Time>
+                        <Reloading>false</Reloading>
+                        <Stun_Ability>true</Stun_Ability>
+                        <Jump_Is_On>true</Jump_Is_On>
+                        <Dash_Is_On>true</Dash_Is_On>
+                        <Side_Movement_Is_On>true</Side_Movement_Is_On>
+                        <Weapon_Is_On>true</Weapon_Is_On>
+                        <Mouse_Look_Is_On>true</Mouse_Look_Is_On>
+                        <Stun_Is_On>true</Stun_Is_On>
+                        <First_Phase_Triggered>false</First_Phase_Triggered>
+                        <Bridge_Destroyed>false</Bridge_Destroyed>
+                        <Is_Dead>false</Is_Dead>
+                        <Is_Paused>false</Is_Paused>
+                        <Level_1_Phases>0</Level_1_Phases>
+                        <Level_2_Phases>0</Level_2_Phases>
+                        <Camera_On_Player>true</Camera_On_Player>
+                        <Res_Room_Visible>false</Res_Room_Visible>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Platform">
+                            <properties>
+                                <max-speed>160</max-speed>
+                                <acceleration>15000</acceleration>
+                                <deceleration>1500</deceleration>
+                                <jump-strength>480</jump-strength>
+                                <gravity>1500</gravity>
+                                <max-fall-speed>1000</max-fall-speed>
+                                <double-jump>Enabled</double-jump>
+                                <jump-sustain>0</jump-sustain>
+                                <default-controls>No</default-controls>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Timer" />
+                        <behavior-instance type="Persist" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>669</x>
+                        <y>2547</y>
+                        <z>0</z>
+                        <width>11.636363983</width>
+                        <height>36</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Ombra" uid="1460">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -38955,7 +39326,6 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
-                        <behavior-instance type="Persist" />
                         <behavior-instance type="Flash" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
@@ -38993,78 +39363,6 @@
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>0.5</opacity>
-                    </world>
-                </instance>
-                <instance type="Player_Box" uid="1465">
-                    <properties>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Life>3</Life>
-                        <Checkpoint>0</Checkpoint>
-                        <Dash>false</Dash>
-                        <Dash_Speed>1300</Dash_Speed>
-                        <Dash_Time>0.1</Dash_Time>
-                        <Dash_Charges>0</Dash_Charges>
-                        <Dash_Recharge_Time>2</Dash_Recharge_Time>
-                        <Dash_Max_Charges>1</Dash_Max_Charges>
-                        <Weapon_Level>0</Weapon_Level>
-                        <Weapon_Loader>4</Weapon_Loader>
-                        <Weapon_Max_Loader>4</Weapon_Max_Loader>
-                        <Reloading_Time>0.5</Reloading_Time>
-                        <Reloading>false</Reloading>
-                        <Stun_Ability>false</Stun_Ability>
-                        <Jump_Is_On>true</Jump_Is_On>
-                        <Dash_Is_On>true</Dash_Is_On>
-                        <Side_Movement_Is_On>true</Side_Movement_Is_On>
-                        <Weapon_Is_On>true</Weapon_Is_On>
-                        <Mouse_Look_Is_On>true</Mouse_Look_Is_On>
-                        <Stun_Is_On>true</Stun_Is_On>
-                        <First_Phase_Triggered>false</First_Phase_Triggered>
-                        <Bridge_Destroyed>false</Bridge_Destroyed>
-                        <Is_Dead>false</Is_Dead>
-                        <Is_Paused>false</Is_Paused>
-                        <Intro_Phases>0</Intro_Phases>
-                        <Level_1_Phases>0</Level_1_Phases>
-                        <Level_2_Phases>0</Level_2_Phases>
-                        <Camera_On_Player>true</Camera_On_Player>
-                        <Res_Room_Visible>false</Res_Room_Visible>
-                        <Returning>false</Returning>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Persist" />
-                        <behavior-instance type="Platform">
-                            <properties>
-                                <max-speed>160</max-speed>
-                                <acceleration>15000</acceleration>
-                                <deceleration>1500</deceleration>
-                                <jump-strength>480</jump-strength>
-                                <gravity>1500</gravity>
-                                <max-fall-speed>1000</max-fall-speed>
-                                <double-jump>Disabled</double-jump>
-                                <jump-sustain>0</jump-sustain>
-                                <default-controls>No</default-controls>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Timer" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>715</x>
-                        <y>2540</y>
-                        <z>0</z>
-                        <width>11.636363983</width>
-                        <height>36</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>1</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
                     </world>
                 </instance>
             </instances>
@@ -39637,7 +39935,6 @@
                         <isMoving>true</isMoving>
                     </instance-variables>
                     <behavior-instances>
-                        <behavior-instance type="Persist" />
                         <behavior-instance type="Platform">
                             <properties>
                                 <max-speed>50</max-speed>
@@ -39675,9 +39972,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Persist" />
-                    </behavior-instances>
+                  <behavior-instances>
+                    <behavior-instance type="Persist" />
+                  </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -39766,6 +40063,17 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Anchor">
+                            <properties>
+                                <left-edge>Window left</left-edge>
+                                <top-edge>Window top</top-edge>
+                                <right-edge>None</right-edge>
+                                <bottom-edge>None</bottom-edge>
+                                <initial-state>Disabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -39794,16 +40102,25 @@
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
-                        <State>0</State>
+                        <State>-1</State>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Timer" />
+                        <behavior-instance type="Anchor">
+                            <properties>
+                                <left-edge>None</left-edge>
+                                <top-edge>Window top</top-edge>
+                                <right-edge>None</right-edge>
+                                <bottom-edge>None</bottom-edge>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
                         <behavior-instance type="Fade">
                             <properties>
                                 <active-at-start>No</active-at-start>
                                 <fade-in-time>0</fade-in-time>
                                 <wait-time>0</wait-time>
-                                <fade-out-time>0.3</fade-out-time>
+                                <fade-out-time>2</fade-out-time>
                                 <destroy>No</destroy>
                             </properties>
                         </behavior-instance>
@@ -39858,7 +40175,6 @@
                         <collisions>Disabled</collisions>
                     </properties>
                     <behavior-instances>
-                        <behavior-instance type="Persist" />
                         <behavior-instance type="Anchor">
                             <properties>
                                 <left-edge>Window left</left-edge>

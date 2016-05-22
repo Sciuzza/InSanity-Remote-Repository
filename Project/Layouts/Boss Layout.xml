@@ -28,40 +28,7 @@
             <use-render-cells>0</use-render-cells>
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
-            <instances>
-                <instance type="Tilemap" uid="1467">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <tile-width>64</tile-width>
-                        <tile-height>64</tile-height>
-                        <tile-x-offset>0</tile-x-offset>
-                        <tile-y-offset>0</tile-y-offset>
-                        <tile-x-spacing>0</tile-x-spacing>
-                        <tile-y-spacing>0</tile-y-spacing>
-                        <seamless-mode>On</seamless-mode>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>-54</x>
-                        <y>-666</y>
-                        <z>0</z>
-                        <width>1200</width>
-                        <height>1200</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <opacity>1</opacity>
-                    </world>
-                    <tilemap-data>
-                        <width>46</width>
-                        <height>40</height>
-                        <max-width>46</max-width>
-                        <max-height>40</max-height>
-                        <data>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,6,0,0,0,1,1,0,0,0,0,5,0,0,0,0,0,5,0,0,0,0,0,5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,7,1,1,1,1,1,1,1,1,1,6,1,1,1,1,1,6,1,1,1,1,1,6,2,2,2,2,2,2,2,2,2,2,2,1,2,1,2,2,2,7,2,2,2,1,1,2,2,2,2,7,2,2,2,2,2,7,2,2,2,2,2,7,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,5,3,3,3,1,1,3,3,3,3,5,3,3,3,3,0,5,3,3,3,3,0,5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,6,1,1,1,1,1,1,1,1,1,6,1,1,1,1,1,6,1,1,1,1,1,6,2,2,2,2,2,2,2,2,2,2,2,2,1,1,2,0,2,7,2,2,2,1,1,2,2,2,2,7,2,2,2,2,2,7,2,2,2,2,2,7,3,3,3,3,3,3,3,3,3,3,3,1,1,1,3,3,3,5,3,3,3,5,3,3,3,3,3,5,3,3,3,3,0,5,3,3,3,3,0,5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,6,1,1,1,6,1,1,1,1,1,6,1,1,1,1,1,6,1,1,1,1,1,6,2,2,2,2,2,2,2,2,2,2,2,1,1,1,1,2,2,7,2,2,2,7,2,2,2,2,2,7,2,2,2,2,2,7,2,2,2,2,2,7,3,3,3,3,3,3,3,3,3,3,3,1,3,3,1,3,3,7,3,3,3,5,3,3,3,3,3,5,3,3,3,3,0,5,3,3,3,3,0,5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,1,1,1,6,1,1,1,1,1,6,1,1,1,1,1,6,1,1,1,1,1,6,2,2,2,2,2,2,2,2,2,2,1,1,1,1,2,2,2,6,2,2,2,7,2,2,2,2,2,7,2,2,2,2,2,7,2,2,2,2,2,7,3,3,3,3,3,3,3,3,3,3,3,1,1,1,1,3,3,7,3,3,3,5,3,3,3,3,3,5,3,3,3,3,0,5,3,3,3,3,0,8,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,5,1,1,1,6,1,1,1,1,1,6,1,1,1,1,1,6,1,1,1,1,1,9,2,2,2,2,2,2,2,2,2,2,2,1,2,2,1,2,2,6,2,2,2,7,2,2,2,2,2,7,2,2,2,2,2,7,2,2,2,2,0,5,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,7,3,3,3,5,3,3,3,3,3,5,3,3,3,3,0,5,3,3,3,3,0,5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,7,1,1,1,6,1,1,1,1,1,6,1,1,1,1,1,6,1,1,1,1,1,6,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,7,2,2,2,2,2,7,2,2,2,2,2,7,2,2,2,2,2,7,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,5,3,3,3,3,3,5,3,3,3,3,0,5,3,3,3,3,0,5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,6,1,1,1,1,1,6,1,1,1,1,1,6,1,1,1,1,1,6,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,7,2,2,2,2,2,7,2,2,2,2,2,7,2,2,2,2,2,7,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,5,4,4,4,4,4,5,3,3,3,3,0,5,3,3,3,3,0,5,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,1,1,1,1,1,7,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,6,2,2,2,2,2,8,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,3,3,3,0,9,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,1,1,1,1,1,6,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,2,2,2,2,2,7,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,0,0,0,0,0,5,3,3,3,3,0,5,3,3,3,3,0,5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,6,1,1,1,1,1,6,1,1,1,1,1,6,1,1,1,1,1,6,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,7,2,2,2,2,2,7,2,2,2,2,2,7,2,2,2,2,2,7,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,5,3,3,3,3,3,5,3,3,3,3,0,5,3,3,3,3,0,5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,6,1,1,1,1,1,6,1,1,1,1,1,6,1,1,1,1,1,6,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,7,2,2,2,2,2,7,2,2,2,2,2,7,2,2,2,2,2,7,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,5,3,3,3,3,3,5,3,3,3,3,0,5,3,3,3,3,0,5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,6,1,1,1,1,1,6,1,1,1,1,1,6,1,1,1,1,1,6,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,7,2,2,2,2,2,7,2,2,2,2,2,7,2,2,2,2,2,7,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,5,3,3,3,3,3,5,3,3,3,3,0,5,3,3,3,3,0,5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,6,1,1,1,1,1,6,1,1,1,1,1,6,1,1,1,1,1,6,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,7,2,2,2,2,2,7,2,2,2,2,2,7,2,2,2,2,2,7,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,5,3,3,3,3,3,5,3,3,3,3,0,5,3,3,3,3,0,5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,6,1,1,1,1,1,6,1,1,1,1,1,6,1,1,1,1,1,7,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,7,2,2,2,2,2,7,2,2,2,2,2,7,2,2,2,2,2,8,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,5,3,3,3,3,3,5,3,3,3,3,0,5,3,3,3,3,0,9,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,6,1,1,1,1,1,6,1,1,1,1,1,6,1,1,1,1,1,6,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,7,2,2,2,2,2,7,2,2,2,2,2,7,2,2,2,2,2,7,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,4,4,4,4,5,4,4,4,4,4,6,4,4,4,4,1,6,4,4,4,4,0,5</data>
-                    </tilemap-data>
-                </instance>
-            </instances>
+            <instances />
             <effects />
         </layer>
         <layer name="Floor" sid="1365977637691416">
@@ -80,7 +47,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Pavimento" uid="2250">
+                <instance type="StanzaBoss" uid="1461">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -90,11 +57,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-902</x>
-                        <y>485</y>
+                        <x>250</x>
+                        <y>250</y>
                         <z>0</z>
-                        <width>134</width>
-                        <height>18</height>
+                        <width>500</width>
+                        <height>500</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -102,7 +69,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Pavimento" uid="2251">
+                <instance type="PotenziamentoSparoHud" uid="2137">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -112,671 +79,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-768</x>
-                        <y>485</y>
+                        <x>-186</x>
+                        <y>337</y>
                         <z>0</z>
-                        <width>134</width>
-                        <height>18</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Pavimento" uid="2252">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>-634</x>
-                        <y>485</y>
-                        <z>0</z>
-                        <width>134</width>
-                        <height>18</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Pavimento" uid="2253">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>-500</x>
-                        <y>485</y>
-                        <z>0</z>
-                        <width>134</width>
-                        <height>18</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Pavimento" uid="2254">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>-366</x>
-                        <y>485</y>
-                        <z>0</z>
-                        <width>134</width>
-                        <height>18</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Pavimento" uid="2255">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>-232</x>
-                        <y>485</y>
-                        <z>0</z>
-                        <width>134</width>
-                        <height>18</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Pavimento" uid="2256">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>-98</x>
-                        <y>485</y>
-                        <z>0</z>
-                        <width>134</width>
-                        <height>18</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Pavimento" uid="2257">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>36</x>
-                        <y>485</y>
-                        <z>0</z>
-                        <width>134</width>
-                        <height>18</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Pavimento" uid="2258">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>170</x>
-                        <y>485</y>
-                        <z>0</z>
-                        <width>134</width>
-                        <height>18</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Pavimento" uid="2259">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>304</x>
-                        <y>485</y>
-                        <z>0</z>
-                        <width>134</width>
-                        <height>18</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Pavimento" uid="2260">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>438</x>
-                        <y>485</y>
-                        <z>0</z>
-                        <width>134</width>
-                        <height>18</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Pavimento" uid="2261">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>572</x>
-                        <y>485</y>
-                        <z>0</z>
-                        <width>134</width>
-                        <height>18</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Pavimento" uid="2262">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>706</x>
-                        <y>485</y>
-                        <z>0</z>
-                        <width>134</width>
-                        <height>18</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Pavimento" uid="2263">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>840</x>
-                        <y>485</y>
-                        <z>0</z>
-                        <width>134</width>
-                        <height>18</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Pavimento" uid="2264">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>974</x>
-                        <y>485</y>
-                        <z>0</z>
-                        <width>134</width>
-                        <height>18</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Pavimento" uid="2265">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1108</x>
-                        <y>485</y>
-                        <z>0</z>
-                        <width>134</width>
-                        <height>18</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="SpessorePavimento" uid="2272">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>-902</x>
-                        <y>497</y>
-                        <z>0</z>
-                        <width>134</width>
-                        <height>6</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="SpessorePavimento" uid="2273">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>-768</x>
-                        <y>497</y>
-                        <z>0</z>
-                        <width>134</width>
-                        <height>6</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="SpessorePavimento" uid="2274">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>-634</x>
-                        <y>497</y>
-                        <z>0</z>
-                        <width>134</width>
-                        <height>6</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="SpessorePavimento" uid="2275">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>-500</x>
-                        <y>497</y>
-                        <z>0</z>
-                        <width>134</width>
-                        <height>6</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="SpessorePavimento" uid="2276">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>-366</x>
-                        <y>497</y>
-                        <z>0</z>
-                        <width>134</width>
-                        <height>6</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="SpessorePavimento" uid="2277">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>-232</x>
-                        <y>497</y>
-                        <z>0</z>
-                        <width>134</width>
-                        <height>6</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="SpessorePavimento" uid="2278">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>-98</x>
-                        <y>497</y>
-                        <z>0</z>
-                        <width>134</width>
-                        <height>6</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="SpessorePavimento" uid="2279">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>36</x>
-                        <y>497</y>
-                        <z>0</z>
-                        <width>134</width>
-                        <height>6</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="SpessorePavimento" uid="2280">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>170</x>
-                        <y>497</y>
-                        <z>0</z>
-                        <width>134</width>
-                        <height>6</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="SpessorePavimento" uid="2281">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>304</x>
-                        <y>497</y>
-                        <z>0</z>
-                        <width>134</width>
-                        <height>6</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="SpessorePavimento" uid="2282">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>438</x>
-                        <y>497</y>
-                        <z>0</z>
-                        <width>134</width>
-                        <height>6</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="SpessorePavimento" uid="2283">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>572</x>
-                        <y>497</y>
-                        <z>0</z>
-                        <width>134</width>
-                        <height>6</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="SpessorePavimento" uid="2284">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>706</x>
-                        <y>497</y>
-                        <z>0</z>
-                        <width>134</width>
-                        <height>6</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="SpessorePavimento" uid="2285">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>840</x>
-                        <y>497</y>
-                        <z>0</z>
-                        <width>134</width>
-                        <height>6</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="SpessorePavimento" uid="2286">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>974</x>
-                        <y>497</y>
-                        <z>0</z>
-                        <width>134</width>
-                        <height>6</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="SpessorePavimento" uid="2287">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1108</x>
-                        <y>497</y>
-                        <z>0</z>
-                        <width>134</width>
-                        <height>6</height>
+                        <width>12</width>
+                        <height>12</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -803,7 +110,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Braccio_dxsecondo_piano" uid="1468">
+                <instance type="Braccio_dxsecondo_piano" uid="1467">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -813,14 +120,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>350</x>
-                        <y>311</y>
+                        <x>353</x>
+                        <y>314</y>
                         <z>0</z>
                         <width>21</width>
                         <height>38</height>
                         <depth>0</depth>
-                        <hotspotX>0.619047642</hotspotX>
-                        <hotspotY>0.105263159</hotspotY>
+                        <hotspotX>0.761904776</hotspotX>
+                        <hotspotY>0.184210524</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -844,7 +151,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Corpo" uid="1469">
+                <instance type="Corpo" uid="1462">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -854,14 +161,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>376</x>
+                        <x>394</x>
                         <y>377</y>
                         <z>0</z>
                         <width>119</width>
                         <height>234</height>
                         <depth>0</depth>
-                        <hotspotX>0.50420171</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.655462205</hotspotX>
+                        <hotspotY>0.495726496</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -896,18 +203,18 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>322</x>
-                        <y>373</y>
+                        <y>371</y>
                         <z>0</z>
                         <width>39</width>
                         <height>37</height>
                         <depth>0</depth>
-                        <hotspotX>0.871794879</hotspotX>
-                        <hotspotY>0.216216221</hotspotY>
+                        <hotspotX>0.820512831</hotspotX>
+                        <hotspotY>0.162162155</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Cervello" uid="1470">
+                <instance type="Cervello" uid="1463">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -917,19 +224,19 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>362</x>
-                        <y>268</y>
+                        <x>363</x>
+                        <y>266</y>
                         <z>0</z>
                         <width>30</width>
                         <height>13</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.538461566</hotspotY>
+                        <hotspotX>0.533333361</hotspotX>
+                        <hotspotY>0.384615391</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Gamba_sx" uid="1472">
+                <instance type="Gamba_sx" uid="1464">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -939,19 +246,19 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>397</x>
-                        <y>438</y>
+                        <x>395</x>
+                        <y>443</y>
                         <z>0</z>
                         <width>25</width>
                         <height>61</height>
                         <depth>0</depth>
-                        <hotspotX>0.519999981</hotspotX>
+                        <hotspotX>0.439999998</hotspotX>
                         <hotspotY>0.508196712</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Gamba_dx" uid="1473">
+                <instance type="Gamba_dx" uid="1465">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -961,19 +268,19 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>359</x>
-                        <y>436</y>
+                        <x>354</x>
+                        <y>432</y>
                         <z>0</z>
                         <width>26</width>
                         <height>56</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.307692319</hotspotX>
+                        <hotspotY>0.410714298</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Avambraccio_sx" uid="1474">
+                <instance type="Avambraccio_sx" uid="1468">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -983,19 +290,19 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>423</x>
-                        <y>370</y>
+                        <x>425</x>
+                        <y>367</y>
                         <z>0</z>
                         <width>23</width>
                         <height>92</height>
                         <depth>0</depth>
-                        <hotspotX>0.565217376</hotspotX>
-                        <hotspotY>0.108695649</hotspotY>
+                        <hotspotX>0.652173936</hotspotX>
+                        <hotspotY>0.065217391</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Occhi" uid="1475">
+                <instance type="Occhi" uid="1470">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1017,7 +324,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Braccio_sx" uid="1476">
+                <instance type="Braccio_sx" uid="1466">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1027,19 +334,19 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>411</x>
-                        <y>309</y>
+                        <x>410</x>
+                        <y>307</y>
                         <z>0</z>
-                        <width>32</width>
-                        <height>69</height>
+                        <width>33</width>
+                        <height>71</height>
                         <depth>0</depth>
-                        <hotspotX>0.40625</hotspotX>
-                        <hotspotY>0.101449274</hotspotY>
+                        <hotspotX>0.393939406</hotspotX>
+                        <hotspotY>0.084507041</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Infezione_braccio" uid="1477">
+                <instance type="Infezione_braccio" uid="1472">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1049,19 +356,19 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>422</x>
-                        <y>345</y>
+                        <x>423</x>
+                        <y>341</y>
                         <z>0</z>
                         <width>29</width>
                         <height>40</height>
                         <depth>0</depth>
-                        <hotspotX>0.517241359</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.551724136</hotspotX>
+                        <hotspotY>0.400000006</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Avambraccio_dx" uid="1478">
+                <instance type="Avambraccio_dx" uid="1469">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1077,8 +384,8 @@
                         <width>36</width>
                         <height>52</height>
                         <depth>0</depth>
-                        <hotspotX>0.861111104</hotspotX>
-                        <hotspotY>0.096153848</hotspotY>
+                        <hotspotX>0.833333313</hotspotX>
+                        <hotspotY>0.173076928</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -1102,7 +409,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Bullet_1_Player" uid="1618">
+                <instance type="Bullet_1_Player" uid="1473">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1137,7 +444,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Bullet_S_Player" uid="1619">
+                <instance type="Bullet_S_Player" uid="1474">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1162,16 +469,16 @@
                         <x>-156</x>
                         <y>137</y>
                         <z>0</z>
-                        <width>5</width>
-                        <height>5</height>
+                        <width>40</width>
+                        <height>40</height>
                         <depth>0</depth>
-                        <hotspotX>0.600000024</hotspotX>
-                        <hotspotY>0.600000024</hotspotY>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Player_Box" uid="1620">
+                <instance type="Player_Box" uid="1476">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1203,15 +510,12 @@
                         <Bridge_Destroyed>false</Bridge_Destroyed>
                         <Is_Dead>false</Is_Dead>
                         <Is_Paused>false</Is_Paused>
-                        <Intro_Phases>0</Intro_Phases>
                         <Level_1_Phases>0</Level_1_Phases>
                         <Level_2_Phases>-1</Level_2_Phases>
                         <Camera_On_Player>true</Camera_On_Player>
                         <Res_Room_Visible>false</Res_Room_Visible>
-                        <Returning>false</Returning>
                     </instance-variables>
                     <behavior-instances>
-                        <behavior-instance type="Persist" />
                         <behavior-instance type="Platform">
                             <properties>
                                 <max-speed>160</max-speed>
@@ -1227,6 +531,7 @@
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="Timer" />
+                        <behavior-instance type="Persist" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -1243,7 +548,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Camera" uid="1621">
+                <instance type="Camera" uid="1477">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1251,7 +556,6 @@
                         <collisions>Disabled</collisions>
                     </properties>
                     <behavior-instances>
-                        <behavior-instance type="Persist" />
                         <behavior-instance type="ScrollTo">
                             <properties>
                                 <initial-state>Enabled</initial-state>
@@ -1274,16 +578,16 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Player_Frame" uid="1622">
+                <instance type="Player_Frame" uid="1618">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Flash" />
-                    </behavior-instances>
+                  <behavior-instances>
+                    <behavior-instance type="Flash" />
+                  </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -1299,7 +603,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Player_arm" uid="1623">
+                <instance type="Player_arm" uid="1475">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1379,7 +683,7 @@
                         <opacity>0.5</opacity>
                     </world>
                 </instance>
-                <instance type="SolidObjects" uid="1624">
+                <instance type="SolidObjects" uid="1478">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1397,8 +701,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>538</x>
-                        <y>533</y>
+                        <x>537</x>
+                        <y>543</y>
                         <z>0</z>
                         <width>1203</width>
                         <height>94</height>
