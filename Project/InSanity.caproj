@@ -17,6 +17,8 @@
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TextBox" version="1">Text box</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
         <plugin author="Scirra" id="Tilemap" version="1">Tilemap</plugin>
     </used-plugins>
     <used-behaviors>
@@ -312,6 +314,10 @@
             </object-type>
             <object-type name="lampione2" sid="8743774424929647">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Pos_X" sid="3393438857183568" type="number" />
+                    <instance-variable name="Pos_Y" sid="2669804381529934" type="number" />
+                </instance-variables>
                 <behaviors>
                     <behavior-type name="Pin" sid="2529464702065177">
                         <behavior id="Pin" />
@@ -354,6 +360,10 @@
             </object-type>
             <object-type name="lampione4" sid="1709992109148265">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Pos_X" sid="3889856312933564" type="number" />
+                    <instance-variable name="Pos_Y" sid="7835069550292373" type="number" />
+                </instance-variables>
                 <behaviors>
                     <behavior-type name="Pin" sid="5314438645625285">
                         <behavior id="Pin" />
@@ -378,6 +388,10 @@
             </object-type>
             <object-type name="lampione5" sid="6870771220364909">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Pos_X" sid="7948091514934719" type="number" />
+                    <instance-variable name="Pos_Y" sid="5029828900527799" type="number" />
+                </instance-variables>
                 <behaviors>
                     <behavior-type name="Pin" sid="8743558979603817">
                         <behavior id="Pin" />
@@ -447,6 +461,9 @@
             </object-type>
             <object-type name="ponteBlocco" sid="2378339021331234">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Is_Destroying" sid="7908722968967722" type="boolean" />
+                </instance-variables>
                 <behaviors>
                     <behavior-type name="Sine" sid="3287905248614806">
                         <behavior id="Sin" />
@@ -486,6 +503,9 @@
             </object-type>
             <object-type name="ponteBlocco2" sid="4253820159358168">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Is_Destroying" sid="6777080687517697" type="boolean" />
+                </instance-variables>
                 <behaviors>
                     <behavior-type name="Sine" sid="1668719326838326">
                         <behavior id="Sin" />
@@ -528,6 +548,9 @@
             </object-type>
             <object-type name="ponteBlocco3" sid="5549862846425074">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Is_Destroying" sid="7431784838412277" type="boolean" />
+                </instance-variables>
                 <behaviors>
                     <behavior-type name="Sine" sid="3796943286619258">
                         <behavior id="Sin" />
@@ -863,6 +886,9 @@
             </object-type>
             <object-type name="ponteBlocco4" sid="7294078956027025">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Is_Destroying" sid="3838422960661054" type="boolean" />
+                </instance-variables>
                 <behaviors>
                     <behavior-type name="Sine" sid="4573191561738123">
                         <behavior id="Sin" />
@@ -1917,7 +1943,7 @@
                             <image-point name="Weapon" x="0.9" y="0.5" />
                         </frame>
                     </animation>
-                    <animation framecount="2" loop="0" name="ShootNormal" pingpong="0" repeatcount="1" repeatto="0" sid="4343242735517642" speed="5">
+                    <animation framecount="2" loop="0" name="ShootNormal" pingpong="0" repeatcount="1" repeatto="0" sid="4343242735517642" speed="8">
                         <frame duration="1" hotspotX="0.0588235" hotspotY="0.714286" original-source="C:\Users\Sciuzza\Desktop\Project\Animations\Player_arm\ShootNormal\000.png">
                             <image-point name="Weapon" x="0.941176" y="0.428571" />
                         </frame>
@@ -1925,7 +1951,7 @@
                             <image-point name="Weapon" x="0.75" y="0.0769231" />
                         </frame>
                     </animation>
-                    <animation framecount="2" loop="0" name="ShootPsi" pingpong="0" repeatcount="1" repeatto="0" sid="3161609074068709" speed="5">
+                    <animation framecount="2" loop="0" name="ShootPsi" pingpong="0" repeatcount="1" repeatto="0" sid="3161609074068709" speed="8">
                         <frame duration="1" hotspotX="0.05" hotspotY="0.75" original-source="C:\Users\Sciuzza\Desktop\Project\Animations\Player_arm\ShootPsi\000.png">
                             <image-point name="Weapon" x="0.9" y="0.5" />
                         </frame>
@@ -1938,29 +1964,34 @@
             <object-type name="Player_Box" sid="8534937278847791">
                 <plugin id="Sprite" />
                 <instance-variables>
+                    <instance-variable name="Life" sid="3845622154724521" type="number" />
+                    <instance-variable name="Checkpoint" sid="294932483512246" type="number" />
                     <instance-variable name="Dash" sid="6826631774586031" type="boolean" />
                     <instance-variable name="Dash_Speed" sid="2456396320476892" type="number" />
                     <instance-variable name="Dash_Time" sid="8688270445844714" type="number" />
                     <instance-variable name="Dash_Charges" sid="7268462837022067" type="number" />
                     <instance-variable name="Dash_Recharge_Time" sid="5105309756605938" type="number" />
+                    <instance-variable name="Dash_Max_Charges" sid="3039433377926298" type="number" />
                     <instance-variable name="Weapon_Level" sid="3044682161141949" type="number" />
                     <instance-variable name="Weapon_Loader" sid="9345546890308431" type="number" />
                     <instance-variable name="Weapon_Max_Loader" sid="6165655732176725" type="number" />
+                    <instance-variable name="Reloading_Time" sid="6213661769445811" type="number" />
                     <instance-variable name="Reloading" sid="998972045539483" type="boolean" />
                     <instance-variable name="Stun_Ability" sid="1945475441277138" type="boolean" />
-                    <instance-variable name="Life" sid="3845622154724521" type="number" />
-                    <instance-variable name="Checkpoint" sid="294932483512246" type="number" />
                     <instance-variable name="Jump_Is_On" sid="1795983416350465" type="boolean" />
                     <instance-variable name="Dash_Is_On" sid="1879918981139579" type="boolean" />
                     <instance-variable name="Side_Movement_Is_On" sid="3035546929993088" type="boolean" />
                     <instance-variable name="Weapon_Is_On" sid="848793439590951" type="boolean" />
                     <instance-variable name="Mouse_Look_Is_On" sid="8848278697414034" type="boolean" />
                     <instance-variable name="Stun_Is_On" sid="5933630748220251" type="boolean" />
-                    <instance-variable name="Level_1_Phases" sid="3744297378801938" type="number" />
                     <instance-variable name="First_Phase_Triggered" sid="9708494785123097" type="boolean" />
                     <instance-variable name="Bridge_Destroyed" sid="7716916467687827" type="boolean" />
-                    <instance-variable name="Level_2_Phases" sid="521681513767556" type="number" />
                     <instance-variable name="Is_Dead" sid="5701586237341312" type="boolean" />
+                    <instance-variable name="Is_Paused" sid="1792122627089268" type="boolean" />
+                    <instance-variable name="Level_1_Phases" sid="3744297378801938" type="number" />
+                    <instance-variable name="Level_2_Phases" sid="521681513767556" type="number" />
+                    <instance-variable name="Camera_On_Player" sid="2010312032397601" type="boolean" />
+                    <instance-variable name="Res_Room_Visible" sid="6478554283794921" type="boolean" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Platform" sid="2921180046897222">
@@ -1969,7 +2000,7 @@
                     <behavior-type name="Timer" sid="3333989098584669">
                         <behavior id="Timer" />
                     </behavior-type>
-                    <behavior-type name="Persist" sid="7688392433004913">
+                    <behavior-type name="Persist" sid="1605973105090451">
                         <behavior id="Persist" />
                     </behavior-type>
                 </behaviors>
@@ -2149,7 +2180,7 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="2" loop="0" name="Dying" pingpong="0" repeatcount="1" repeatto="0" sid="2802707485113364" speed="3">
+                    <animation framecount="3" loop="0" name="Dying" pingpong="0" repeatcount="1" repeatto="0" sid="2802707485113364" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="1">
                             <collision-poly>
                                 <point x="0.375" y="0" />
@@ -2166,14 +2197,16 @@
                                 <point x="0.325" y="1" />
                             </collision-poly>
                         </frame>
-                    </animation>
-                    <animation framecount="1" loop="0" name="Dead" pingpong="0" repeatcount="1" repeatto="0" sid="2577602566485004" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="1">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.55" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Player_Frame\Dead\000.png">
                             <collision-poly>
-                                <point x="0" y="0.775" />
-                                <point x="1" y="0.775" />
-                                <point x="1" y="1" />
-                                <point x="0" y="1" />
+                                <point x="0.166667" y="0.636364" />
+                                <point x="0.5" y="0.272727" />
+                                <point x="0.904762" y="0.363636" />
+                                <point x="0.952381" y="0.454545" />
+                                <point x="0.928571" y="0.727273" />
+                                <point x="0.5" y="0.909091" />
+                                <point x="0.0238095" y="0.909091" />
+                                <point x="0.333333" y="0.454545" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -2204,6 +2237,351 @@
                         </frame>
                     </animation>
                 </animation-folder>
+            </object-type>
+            <object-type name="Player_Frame2" sid="2270932927010431">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="4737639882213463">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                    <behavior-type name="Bullet" sid="147381241120634">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="2" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="1626951168889912" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Sciuzza\Desktop\Animations\Player_Frame\Idle\000.png">
+                            <collision-poly>
+                                <point x="0.434413" y="0.0472973" />
+                                <point x="0.930556" y="0.0540541" />
+                                <point x="0.628082" y="0.431248" />
+                                <point x="0.692902" y="0.9591" />
+                                <point x="0.243056" y="0.978822" />
+                                <point x="0.215278" y="0.447135" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Sciuzza\Desktop\Animations\Player_Frame\Idle\001.png">
+                            <collision-poly>
+                                <point x="0.371913" y="0.0868056" />
+                                <point x="1" y="0" />
+                                <point x="0.589493" y="0.403378" />
+                                <point x="0.833333" y="0.966092" />
+                                <point x="0.173611" y="0.961462" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="4" loop="1" name="Walking" pingpong="0" repeatcount="1" repeatto="0" sid="6144002465148711" speed="12">
+                        <frame duration="1" hotspotX="0.535714" hotspotY="1" original-source="C:\Users\Sciuzza\Desktop\Project\Animations\Player_Frame\Walking\000.png">
+                            <collision-poly>
+                                <point x="0.667701" y="0.0461415" />
+                                <point x="0.934783" y="0.0822368" />
+                                <point x="0.771739" y="0.958393" />
+                                <point x="0.592391" y="0.588104" />
+                                <point x="0.15528" y="0.843617" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Sciuzza\Desktop\Project\Animations\Player_Frame\Walking\001.png">
+                            <collision-poly>
+                                <point x="0.64375" y="0.0166303" />
+                                <point x="0.9625" y="0.0173611" />
+                                <point x="0.853125" y="0.637153" />
+                                <point x="0.5875" y="0.982639" />
+                                <point x="0.0687499" y="0.710709" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.521739" hotspotY="1" original-source="C:\Users\Sciuzza\Desktop\Project\Animations\Player_Frame\Walking\002.png">
+                            <collision-poly>
+                                <point x="0.607392" y="0.0628465" />
+                                <point x="0.9" y="0.0592105" />
+                                <point x="0.6975" y="0.452389" />
+                                <point x="0.935" y="0.858725" />
+                                <point x="0.360653" y="0.978705" />
+                                <point x="0.321523" y="0.547092" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Sciuzza\Desktop\Project\Animations\Player_Frame\Walking\003.png">
+                            <collision-poly>
+                                <point x="0.581597" y="0.0460526" />
+                                <point x="0.854167" y="0.0493421" />
+                                <point x="0.662327" y="0.449146" />
+                                <point x="0.916667" y="0.961148" />
+                                <point x="0.208333" y="0.924787" />
+                                <point x="0.333333" y="0.431543" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="4" loop="1" name="WalkingBack" pingpong="0" repeatcount="1" repeatto="0" sid="199311490776193" speed="7">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Sciuzza\Desktop\Project\Animations\Player_Frame\WalkingBack\000.png">
+                            <collision-poly>
+                                <point x="0.59375" y="0.0559211" />
+                                <point x="0.925" y="0.0427632" />
+                                <point x="0.703124" y="0.524671" />
+                                <point x="0.8875" y="0.963816" />
+                                <point x="0.0562499" y="0.878289" />
+                                <point x="0.33125" y="0.457237" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.52381" hotspotY="1" original-source="C:\Users\Sciuzza\Desktop\Project\Animations\Player_Frame\WalkingBack\001.png">
+                            <collision-poly>
+                                <point x="0.571429" y="0.0460526" />
+                                <point x="0.875" y="0.0625" />
+                                <point x="0.642856" y="0.490132" />
+                                <point x="0.928572" y="0.861842" />
+                                <point x="0.172619" y="0.953947" />
+                                <point x="0.199406" y="0.518092" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.529412" hotspotY="1" original-source="C:\Users\Sciuzza\Desktop\Project\Animations\Player_Frame\WalkingBack\002.png">
+                            <collision-poly>
+                                <point x="0.360294" y="0.365132" />
+                                <point x="0.558823" y="0.0361842" />
+                                <point x="0.992647" y="0.0394737" />
+                                <point x="0.705882" y="0.776316" />
+                                <point x="0.345588" y="0.960526" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.473684" hotspotY="0.973684" original-source="C:\Users\Sciuzza\Desktop\Project\Animations\Player_Frame\WalkingBack\003.png">
+                            <collision-poly>
+                                <point x="0.592105" y="0.0361842" />
+                                <point x="0.914474" y="0.0592105" />
+                                <point x="0.888158" y="0.950658" />
+                                <point x="0.263158" y="0.792763" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="3" loop="0" name="Jumping" pingpong="0" repeatcount="1" repeatto="0" sid="8128852903963074" speed="10">
+                        <frame duration="1" hotspotX="0.526316" hotspotY="1" original-source="C:\Users\Sciuzza\Desktop\Project\Animations\Player_Frame\Jumping\000.png">
+                            <collision-poly>
+                                <point x="0.289473" y="0.476974" />
+                                <point x="0.513158" y="0.0608558" />
+                                <point x="0.947368" y="0.0789474" />
+                                <point x="0.648026" y="0.46875" />
+                                <point x="0.717105" y="0.957237" />
+                                <point x="0.36842" y="0.960526" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Sciuzza\Desktop\Project\Animations\Player_Frame\Jumping\001.png">
+                            <collision-poly>
+                                <point x="0.423611" y="0.0801282" />
+                                <point x="0.902778" y="0.0641026" />
+                                <point x="0.753472" y="0.358974" />
+                                <point x="0.9375" y="0.48718" />
+                                <point x="0.951389" y="0.894231" />
+                                <point x="0.5" y="0.961538" />
+                                <point x="0.239583" y="0.549679" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.526316" hotspotY="1" original-source="C:\Users\Sciuzza\Desktop\Project\Animations\Player_Frame\Jumping\002.png">
+                            <collision-poly>
+                                <point x="0.414474" y="0.0808824" />
+                                <point x="0.868421" y="0.0735294" />
+                                <point x="0.6875" y="0.422794" />
+                                <point x="0.940789" y="0.492647" />
+                                <point x="0.710526" y="0.977941" />
+                                <point x="0.203947" y="0.573529" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="4" loop="0" name="Falling" pingpong="0" repeatcount="1" repeatto="0" sid="4544165289844676" speed="5">
+                        <frame duration="1" hotspotX="0.526316" hotspotY="1" original-source="C:\Users\Sciuzza\Desktop\Project\Animations\Player_Frame\Falling\000.png">
+                            <collision-poly>
+                                <point x="0.552631" y="0.0352564" />
+                                <point x="0.868421" y="0.0673077" />
+                                <point x="0.802632" y="0.405449" />
+                                <point x="0.868421" y="0.525641" />
+                                <point x="0.87171" y="0.894231" />
+                                <point x="0.532895" y="0.967949" />
+                                <point x="0.194078" y="0.519231" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Sciuzza\Desktop\Project\Animations\Player_Frame\Falling\001.png">
+                            <collision-poly>
+                                <point x="0.585227" y="0.0544872" />
+                                <point x="0.948864" y="0.0512821" />
+                                <point x="0.846591" y="0.402244" />
+                                <point x="0.954545" y="0.528846" />
+                                <point x="0.911933" y="0.892629" />
+                                <point x="0.595171" y="0.954327" />
+                                <point x="0.318182" y="0.554487" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.52" hotspotY="1" original-source="C:\Users\Sciuzza\Desktop\Project\Animations\Player_Frame\Falling\002.png">
+                            <collision-poly>
+                                <point x="0.515" y="0.190625" />
+                                <point x="0.5975" y="0.0453125" />
+                                <point x="0.88" y="0.075" />
+                                <point x="0.9" y="0.278125" />
+                                <point x="0.91" y="0.65625" />
+                                <point x="0.82" y="0.895313" />
+                                <point x="0.585" y="0.934375" />
+                                <point x="0.3525" y="0.448437" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.52381" hotspotY="1" original-source="C:\Users\Sciuzza\Desktop\Project\Animations\Player_Frame\Falling\003.png">
+                            <collision-poly>
+                                <point x="0.52381" y="0.11875" />
+                                <point x="0.880952" y="0.040625" />
+                                <point x="0.934524" y="0.560938" />
+                                <point x="0.952381" y="0.9" />
+                                <point x="0.577381" y="0.940625" />
+                                <point x="0.422619" y="0.46875" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="2" loop="0" name="Hit" pingpong="0" repeatcount="1" repeatto="0" sid="7654179894936521" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Sciuzza\Desktop\Project\Animations\Player_Frame\Hit\000.png">
+                            <collision-poly>
+                                <point x="0.0902778" y="0.0480769" />
+                                <point x="0.611111" y="0.0384615" />
+                                <point x="0.902778" y="0.958333" />
+                                <point x="0.465278" y="0.959935" />
+                                <point x="0.0555556" y="0.637821" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Player_Frame\Hit\001.png">
+                            <collision-poly>
+                                <point x="0.0902778" y="0.0544871" />
+                                <point x="0.569444" y="0.0512821" />
+                                <point x="0.611111" y="0.333333" />
+                                <point x="0.611111" y="0.589744" />
+                                <point x="0.909722" y="0.967949" />
+                                <point x="0.208333" y="0.830128" />
+                                <point x="0.111111" y="0.461538" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="2" loop="0" name="Dying" pingpong="0" repeatcount="1" repeatto="0" sid="1794067883190707" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1">
+                            <collision-poly>
+                                <point x="0.0972222" y="0.0320513" />
+                                <point x="0.583333" y="0.0512821" />
+                                <point x="0.895833" y="0.958333" />
+                                <point x="0.468751" y="0.955128" />
+                                <point x="0.0625" y="0.663462" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.526316" hotspotY="1">
+                            <collision-poly>
+                                <point x="0.302632" y="0.0378788" />
+                                <point x="0.842105" y="0.0757576" />
+                                <point x="0.657895" y="0.954545" />
+                                <point x="0.118421" y="0.943182" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Dead" pingpong="0" repeatcount="1" repeatto="0" sid="4198620546191588" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1">
+                            <collision-poly>
+                                <point x="0.0238095" y="0.272727" />
+                                <point x="0.97619" y="0.272727" />
+                                <point x="0.97619" y="0.909091" />
+                                <point x="0.0238095" y="0.909091" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="3" loop="0" name="Dash" pingpong="0" repeatcount="1" repeatto="0" sid="8652203572609986" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Sciuzza\Desktop\Project\Animations\Player_Frame\Dash\000.png">
+                            <collision-poly>
+                                <point x="0.166667" y="0.384615" />
+                                <point x="0.333333" y="0.0512821" />
+                                <point x="0.701389" y="0.125" />
+                                <point x="0.722222" y="0.461538" />
+                                <point x="0.909722" y="0.951923" />
+                                <point x="0.201389" y="0.955128" />
+                                <point x="0.0555556" y="0.589744" />
+                                <point x="0.111111" y="0.461538" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.521739" hotspotY="1" original-source="C:\Users\Sciuzza\Desktop\Project\Animations\Player_Frame\Dash\001.png">
+                            <collision-poly>
+                                <point x="0.347826" y="0.384615" />
+                                <point x="0.478261" y="0.0512821" />
+                                <point x="0.728261" y="0.11859" />
+                                <point x="0.782609" y="0.461538" />
+                                <point x="0.913043" y="0.945513" />
+                                <point x="0.38587" y="0.958333" />
+                                <point x="0.0434783" y="0.717949" />
+                                <point x="0.26087" y="0.461538" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Sciuzza\Desktop\Project\Animations\Player_Frame\Dash\002.png">
+                            <collision-poly>
+                                <point x="0.453125" y="0.115385" />
+                                <point x="0.765625" y="0.102564" />
+                                <point x="0.791667" y="0.282051" />
+                                <point x="0.791667" y="0.461538" />
+                                <point x="0.916667" y="0.955128" />
+                                <point x="0.458333" y="0.955128" />
+                                <point x="0.0416667" y="0.74359" />
+                                <point x="0.291667" y="0.461538" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="2" loop="1" name="IdleBrother" pingpong="0" repeatcount="1" repeatto="0" sid="7686048345833806" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1">
+                            <collision-poly>
+                                <point x="0.434413" y="0.0472973" />
+                                <point x="0.930556" y="0.0540541" />
+                                <point x="0.628082" y="0.431248" />
+                                <point x="0.692902" y="0.9591" />
+                                <point x="0.243056" y="0.978822" />
+                                <point x="0.215278" y="0.447135" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1">
+                            <collision-poly>
+                                <point x="0.371913" y="0.0868056" />
+                                <point x="1" y="0" />
+                                <point x="0.589493" y="0.403378" />
+                                <point x="0.833333" y="0.966092" />
+                                <point x="0.173611" y="0.961462" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="4" loop="1" name="WalkingBrother" pingpong="0" repeatcount="1" repeatto="0" sid="3223611597597389" speed="12">
+                        <frame duration="1" hotspotX="0.535714" hotspotY="1">
+                            <collision-poly>
+                                <point x="0.667701" y="0.0461415" />
+                                <point x="0.934783" y="0.0822368" />
+                                <point x="0.771739" y="0.958393" />
+                                <point x="0.592391" y="0.588104" />
+                                <point x="0.15528" y="0.843617" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.521739" hotspotY="1">
+                            <collision-poly>
+                                <point x="0.607392" y="0.0628465" />
+                                <point x="0.9" y="0.0592105" />
+                                <point x="0.6975" y="0.452389" />
+                                <point x="0.935" y="0.858725" />
+                                <point x="0.360653" y="0.978705" />
+                                <point x="0.321523" y="0.547092" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1">
+                            <collision-poly>
+                                <point x="0.64375" y="0.0166303" />
+                                <point x="0.9625" y="0.0173611" />
+                                <point x="0.853125" y="0.637153" />
+                                <point x="0.5875" y="0.982639" />
+                                <point x="0.0687499" y="0.710709" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1">
+                            <collision-poly>
+                                <point x="0.581597" y="0.0460526" />
+                                <point x="0.854167" y="0.0493421" />
+                                <point x="0.662327" y="0.449146" />
+                                <point x="0.916667" y="0.961148" />
+                                <point x="0.208333" y="0.924787" />
+                                <point x="0.333333" y="0.431543" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Dialogue" sid="4798063033958215">
+                <plugin id="Text" />
             </object-type>
         </object-folder>
         <object-folder name="Solid Objects">
@@ -2442,6 +2820,9 @@
             </object-type>
             <object-type name="PiattaformaAttraversabile" sid="4242928662593286">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Is_Enabled" sid="682913673980802" type="boolean" />
+                </instance-variables>
                 <behaviors>
                     <behavior-type name="Jumpthru" sid="2323355837722024">
                         <behavior id="jumpthru" />
@@ -2528,23 +2909,6 @@
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
-            </object-type>
-            <object-type name="Tutorial" sid="4256727726716031">
-                <plugin id="Text" />
-                <instance-variables>
-                    <instance-variable name="State" sid="9012519349935521" type="number" />
-                </instance-variables>
-                <behaviors>
-                    <behavior-type name="Timer" sid="7562576131652811">
-                        <behavior id="Timer" />
-                    </behavior-type>
-                    <behavior-type name="Anchor" sid="8829204620663894">
-                        <behavior id="Anchor" />
-                    </behavior-type>
-                    <behavior-type name="Fade" sid="8883444610102222">
-                        <behavior id="Fade" />
-                    </behavior-type>
-                </behaviors>
             </object-type>
             <object-type name="Record_2" sid="2701529555939743">
                 <plugin id="Sprite" />
@@ -2824,14 +3188,14 @@
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9486771418714518" speed="5">
                         <frame duration="1" hotspotX="0.555556" hotspotY="0.9" original-source="C:\Users\dbga_08\Downloads\Secondo caricamento\Orologio lancetta corta.png">
                             <collision-poly>
-                                <point x="0.227273" y="0.5" />
-                                <point x="0.5" y="0.3" />
-                                <point x="0.863636" y="0.3" />
-                                <point x="1" y="0.5" />
-                                <point x="0.863636" y="0.7" />
-                                <point x="0.5" y="0.9" />
-                                <point x="0.181818" y="0.6" />
-                                <point x="0.181818" y="0.5" />
+                                <point x="0.162879" y="0.2875" />
+                                <point x="0.545139" y="0.09375" />
+                                <point x="0.808081" y="0.246875" />
+                                <point x="0.903409" y="0.3875" />
+                                <point x="0.699653" y="0.521875" />
+                                <point x="0.5625" y="0.584375" />
+                                <point x="0.390151" y="0.5375" />
+                                <point x="0.190499" y="0.446875" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -2843,14 +3207,13 @@
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8665109244647479" speed="5">
                         <frame duration="1" hotspotX="0.454545" hotspotY="1" original-source="C:\Users\dbga_08\Downloads\Secondo caricamento\Orologio lancetta lunga.png">
                             <collision-poly>
-                                <point x="0.384615" y="0.131579" />
-                                <point x="0.461538" y="0.0526316" />
-                                <point x="0.692308" y="0.105263" />
-                                <point x="0.615385" y="0.5" />
-                                <point x="0.615385" y="0.868421" />
-                                <point x="0.461538" y="0.894737" />
-                                <point x="0.307692" y="0.894737" />
-                                <point x="0.384615" y="0.5" />
+                                <point x="0.356206" y="0.194079" />
+                                <point x="0.484265" y="0.163208" />
+                                <point x="0.658217" y="0.211032" />
+                                <point x="0.795455" y="0.344762" />
+                                <point x="0.662588" y="0.567182" />
+                                <point x="0.23951" y="0.540359" />
+                                <point x="0.235577" y="0.271382" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -2866,22 +3229,6 @@
                         <behavior id="Anchor" />
                     </behavior-type>
                 </behaviors>
-            </object-type>
-            <object-type name="BackGround_Hud_Text" sid="5536351944566282">
-                <plugin id="Sprite" />
-                <behaviors>
-                    <behavior-type name="Fade" sid="4778028713831526">
-                        <behavior id="Fade" />
-                    </behavior-type>
-                    <behavior-type name="Pin" sid="8588812427958982">
-                        <behavior id="Pin" />
-                    </behavior-type>
-                </behaviors>
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4668770662005413" speed="5">
-                        <frame duration="1" hotspotX="0" hotspotY="0" />
-                    </animation>
-                </animation-folder>
             </object-type>
         </object-folder>
         <object-folder name="Support Gaming Objects">
@@ -2912,9 +3259,9 @@
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="466719362150043" speed="5">
                         <frame duration="1" hotspotX="0.507937" hotspotY="0.5" original-source="C:\Users\Sciuzza\Desktop\HUD\Hud - Corpo.png">
-                            <image-point name="Vita_Bassa" x="0.936508" y="0.846154" />
-                            <image-point name="Vita_Centro" x="0.984127" y="0.461538" />
-                            <image-point name="Vita_Alta" x="0.936508" y="0.192308" />
+                            <image-point name="Vita_Bassa" x="0.904762" y="0.807692" />
+                            <image-point name="Vita_Centro" x="0.952381" y="0.461538" />
+                            <image-point name="Vita_Alta" x="0.904762" y="0.230769" />
                             <image-point name="Stamina_1" x="0.47619" y="0.653846" />
                             <image-point name="Stamina_2" x="0.634921" y="0.653846" />
                             <image-point name="Stamina_3" x="0.793651" y="0.653846" />
@@ -3360,6 +3707,60 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="Reloading" sid="515474580661233">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="Flash" sid="1974217158435257">
+                        <behavior id="Flash" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="Tutorial" sid="4256727726716031">
+                <plugin id="Text" />
+                <instance-variables>
+                    <instance-variable name="State" sid="9012519349935521" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Timer" sid="7562576131652811">
+                        <behavior id="Timer" />
+                    </behavior-type>
+                    <behavior-type name="Anchor" sid="8829204620663894">
+                        <behavior id="Anchor" />
+                    </behavior-type>
+                    <behavior-type name="Fade" sid="8883444610102222">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="BackGround_Hud_Text" sid="5536351944566282">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="4778028713831526">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                    <behavior-type name="Pin" sid="8588812427958982">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4668770662005413" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Q_Button_Hud" sid="1797128460600019">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Anchor" sid="6633869966122072">
+                        <behavior id="Anchor" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6476868627468586" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Da Sistemare">
             <object-type name="ArcoBack" sid="7668118574722693">
@@ -3400,112 +3801,6 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="BossBraccioDx" sid="9074683258424728">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1230122438776899" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0">
-                            <collision-poly>
-                                <point x="0" y="0" />
-                                <point x="1" y="0" />
-                                <point x="0.924" y="0.5" />
-                                <point x="0.732" y="0.732" />
-                                <point x="0.568" y="1" />
-                                <point x="0.252" y="0.5" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="BossBraccioDx2" sid="2642027776621186">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8418612761415086" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                            <collision-poly>
-                                <point x="0" y="0" />
-                                <point x="1" y="0" />
-                                <point x="0.924" y="0.5" />
-                                <point x="0.732" y="0.732" />
-                                <point x="0.568" y="1" />
-                                <point x="0.252" y="0.5" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="BossBraccioSx" sid="6320569242223099">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9334598187353687" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="BossBusto" sid="3715924820655749">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1064011613176072" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="BossCappello" sid="6826248907593369">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9059333116730087" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="BossCervello" sid="3821190865925935">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6831305420592164" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="BossGambaSx" sid="9900771177979602">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8470341312023151" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="BossGambaSx2" sid="9874031504241924">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3476580624172709" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="BossOcchioDx" sid="848263077980756">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2905751805260456" speed="5">
-                        <frame duration="1" hotspotX="0.519608" hotspotY="0.509804" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="BossOcchioSx" sid="7460525340780356">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1445510449681654" speed="5">
-                        <frame duration="1" hotspotX="0.519608" hotspotY="0.509804" />
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="BossTesta" sid="8131140570334657">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="68630011538754" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                    </animation>
-                </animation-folder>
-            </object-type>
             <object-type name="BotolaSeparaLivello" sid="4232503121751346">
                 <plugin id="Sprite" />
                 <instance-variables>
@@ -3521,7 +3816,7 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7987109107696618" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_08\Downloads\caricamenti_seconda_parte-2016-05-18\caricamenti seconda parte\Botola separa livello.png">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_21\Downloads\Level_2-2016-05-20\Level 2\Caricamento quarta parte\Botola Tile.png">
                             <collision-poly>
                                 <point x="0" y="0" />
                                 <point x="1" y="0" />
@@ -3761,42 +4056,6 @@
                                 <point x="0.959064" y="0.184211" />
                                 <point x="0.964912" y="0.5" />
                                 <point x="0.935673" y="0.710526" />
-                                <point x="0.497076" y="0.763158" />
-                                <point x="0.0643275" y="0.710526" />
-                                <point x="0.0350877" y="0.5" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="checkpoint7_sel" sid="3422740574785628">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7804119784865502" speed="5">
-                        <frame duration="1" hotspotX="0.502924" hotspotY="0.5" original-source="C:\Users\dbga_67\Dropbox\DBGA\Platform Shooter 2D\checkpoint7_sel.png">
-                            <collision-poly>
-                                <point x="0.0526316" y="0.236842" />
-                                <point x="0.959064" y="0.184211" />
-                                <point x="0.947368" y="0.5" />
-                                <point x="0.929825" y="0.684211" />
-                                <point x="0.497076" y="0.763158" />
-                                <point x="0.0643275" y="0.710526" />
-                                <point x="0.0350877" y="0.5" />
-                            </collision-poly>
-                        </frame>
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="checkpoint7_unsel" sid="263249589690174">
-                <plugin id="Sprite" />
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="330196442815725" speed="5">
-                        <frame duration="1" hotspotX="0.502924" hotspotY="0.5" original-source="C:\Users\dbga_67\Dropbox\DBGA\Platform Shooter 2D\checkpoint7_unsel.png">
-                            <collision-poly>
-                                <point x="0.0526316" y="0.236842" />
-                                <point x="0.959064" y="0.184211" />
-                                <point x="0.947368" y="0.5" />
-                                <point x="0.929825" y="0.684211" />
                                 <point x="0.497076" y="0.763158" />
                                 <point x="0.0643275" y="0.710526" />
                                 <point x="0.0350877" y="0.5" />
@@ -4053,7 +4312,7 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4906372601520275" speed="5">
-                        <frame duration="1" hotspotX="0.538462" hotspotY="1.35714" original-source="C:\Users\dbga_08\Downloads\caricamenti_seconda_parte-2016-05-18\caricamenti seconda parte\Leva - alta.png">
+                        <frame duration="1" hotspotX="0.538462" hotspotY="1.28571" original-source="C:\Users\dbga_08\Downloads\caricamenti_seconda_parte-2016-05-18\caricamenti seconda parte\Leva - alta.png">
                             <collision-poly>
                                 <point x="0.0769231" y="0.0714286" />
                                 <point x="0.461538" y="0.428571" />
@@ -4267,8 +4526,13 @@
             </object-type>
             <object-type name="MuroDistruttibileArco" sid="8448803112979306">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="7607253950298072">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="499791674803346" speed="5">
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="499791674803346" speed="5">
                         <frame duration="1" hotspotX="0.508475" hotspotY="0.503185" original-source="C:\Users\dbga_08\Downloads\caricamenti_seconda_parte-2016-05-18\caricamenti seconda parte\Muro distruttibile sotto arco.png">
                             <collision-poly>
                                 <point x="0.152542" y="0.0573248" />
@@ -4279,6 +4543,18 @@
                                 <point x="0.491525" y="0.961783" />
                                 <point x="0.186441" y="0.929936" />
                                 <point x="0" y="0.496815" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.515152" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\MuroDistruttibileSottoArcoPezzo\Default\000.png">
+                            <collision-poly>
+                                <point x="0.30303" y="0.113636" />
+                                <point x="0.484848" y="0.0568182" />
+                                <point x="0.939394" y="0.0227273" />
+                                <point x="0.969697" y="0.5" />
+                                <point x="0.939394" y="0.977273" />
+                                <point x="0.484848" y="0.965909" />
+                                <point x="0.424242" y="0.840909" />
+                                <point x="0.0606061" y="0.5" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -4351,6 +4627,11 @@
             </object-type>
             <object-type name="Ombra" sid="6878271723223322">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Flash" sid="4312386630733319">
+                        <behavior id="Flash" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9292522550404511" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="1" />
@@ -4552,6 +4833,69 @@
                                 <point x="0.0206897" y="0.5" />
                             </collision-poly>
                         </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="LevaBlocco3" sid="6863757717898588">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3271523392963312" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_08\Downloads\caricamenti_seconda_parte-2016-05-18\caricamenti seconda parte\Leva - blocco.png">
+                            <collision-poly>
+                                <point x="0.285714" y="0.125" />
+                                <point x="0.5" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                                <point x="0.5" y="1" />
+                                <point x="0.285714" y="0.875" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="title2" sid="2928585757569993">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="3079460620135777">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6810357580756467" speed="5">
+                        <frame duration="1" hotspotX="0.501529" hotspotY="0.504505" original-source="C:\Users\dbga_67\Dropbox\DBGA\Platform Shooter 2D\title.png">
+                            <collision-poly>
+                                <point x="0.0764526" y="0.225225" />
+                                <point x="0.911315" y="0.261261" />
+                                <point x="0.981651" y="0.495495" />
+                                <point x="0.954128" y="0.864865" />
+                                <point x="0.498471" y="0.702703" />
+                                <point x="0.103976" y="0.693694" />
+                                <point x="0.0519878" y="0.495495" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="LevaAlta3" sid="7662248205832265">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9635963384057408" speed="5">
+                        <frame duration="1" hotspotX="0.538462" hotspotY="1.35714" original-source="C:\Users\dbga_08\Downloads\caricamenti_seconda_parte-2016-05-18\caricamenti seconda parte\Leva - alta.png">
+                            <collision-poly>
+                                <point x="0.0769231" y="0.0714286" />
+                                <point x="0.461538" y="0.428571" />
+                                <point x="0.538462" y="0.428571" />
+                                <point x="0.615385" y="0.5" />
+                                <point x="1" y="1" />
+                                <point x="0.461538" y="0.571429" />
+                                <point x="0.461538" y="0.571429" />
+                                <point x="0.384615" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                    <animation framecount="1" loop="0" name="Flipped" pingpong="0" repeatcount="1" repeatto="0" sid="1668859695221449" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="-0.384615" original-source="C:\Users\dbga_08\Downloads\caricamenti_seconda_parte-2016-05-18\caricamenti seconda parte\Leva - bassa.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -4793,33 +5137,13 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="vetrata" sid="8217892404993325">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1309912970628077" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_08\Downloads\Level_2-2016-05-17\vetrata 01.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="vetrata2" sid="5299778672873217">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1137893680781152" speed="5">
-                    <frame duration="1" hotspotX="0.503759" hotspotY="0.5" original-source="C:\Users\dbga_08\Downloads\Level_2-2016-05-17\vetrata 02.png">
-                        <collision-poly>
-                            <point x="0.037594" y="0.0260417" />
-                            <point x="0.496241" y="0" />
-                            <point x="1" y="0" />
-                            <point x="1" y="1" />
-                            <point x="0.496241" y="1" />
-                            <point x="0.037594" y="0.973958" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="Statua" sid="2891776570481219">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="5356386625445479">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7690099570045501" speed="5">
                     <frame duration="1" hotspotX="0.510204" hotspotY="0.505618" original-source="C:\Users\dbga_08\Downloads\Level_2-2016-05-17\Level 2\Statua 01.png">
@@ -4839,13 +5163,18 @@
         </object-type>
         <object-type name="Statua2" sid="8389686118181724">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="4113961085471698">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3884064598868195" speed="5">
                     <frame duration="1" hotspotX="0.510204" hotspotY="0.5" original-source="C:\Users\dbga_08\Downloads\Level_2-2016-05-17\Level 2\Statua 02.png">
                         <collision-poly>
                             <point x="0.204082" y="0.142857" />
                             <point x="0.489796" y="0.128571" />
-                            <point x="0.673469" y="0.228571" />
+                            <point x="0.959183" y="0.0285714" />
                             <point x="0.938776" y="0.957143" />
                             <point x="0.489796" y="1" />
                             <point x="0.0612245" y="0.957143" />
@@ -5700,7 +6029,7 @@
                 </behavior-type>
             </behaviors>
             <animation-folder>
-                <animation framecount="3" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3346641303558341" speed="5">
+                <animation framecount="1" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3346641303558341" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <collision-poly>
                             <point x="0.425" y="0.425" />
@@ -5711,30 +6040,6 @@
                             <point x="0.5" y="0.85" />
                             <point x="0.375" y="0.625" />
                             <point x="0.4" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.425" y="0.425" />
-                            <point x="0.5" y="0.1" />
-                            <point x="0.675" y="0.325" />
-                            <point x="0.675" y="0.5" />
-                            <point x="0.7" y="0.7" />
-                            <point x="0.5" y="0.85" />
-                            <point x="0.25" y="0.75" />
-                            <point x="0.375" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                        <collision-poly>
-                            <point x="0.425" y="0.425" />
-                            <point x="0.5" y="0.1" />
-                            <point x="0.675" y="0.325" />
-                            <point x="0.675" y="0.5" />
-                            <point x="0.7" y="0.7" />
-                            <point x="0.5" y="0.9" />
-                            <point x="0.225" y="0.775" />
-                            <point x="0.375" y="0.5" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -5860,7 +6165,7 @@
                         </collision-poly>
                     </frame>
                 </animation>
-                <animation framecount="3" loop="0" name="Open" pingpong="0" repeatcount="1" repeatto="0" sid="8626111484975647" speed="5">
+                <animation framecount="3" loop="0" name="Open" pingpong="0" repeatcount="1" repeatto="2" sid="8626111484975647" speed="5">
                     <frame duration="1" hotspotX="0.514286" hotspotY="0.5" original-source="C:\Users\dbga_08\Downloads\Elementi_livello-2016-05-19\Elementi livello\villa - porta 01.png" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_08\Downloads\Elementi_livello-2016-05-19\Elementi livello\villa - porta 02.png" />
                     <frame duration="1" hotspotX="0.571429" hotspotY="0.507246" original-source="C:\Users\dbga_08\Downloads\Elementi_livello-2016-05-19\Elementi livello\villa - porta 03.png" />
@@ -5869,6 +6174,11 @@
         </object-type>
         <object-type name="PortaBossColonnaDietro" sid="1576513101585289">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="2808772593060035">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="689386816807973" speed="5">
                     <frame duration="1" hotspotX="0.511111" hotspotY="0.502994" original-source="C:\Users\Drako-PC\Downloads\Caricamento_quarta_parte-2016-05-19\Caricamento quarta parte\Porta boss - colonna dietro.png">
@@ -5888,6 +6198,11 @@
         </object-type>
         <object-type name="PortaBossColonnaFronte" sid="3304305443328095">
             <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="223760693209684">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8012935156672444" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.502732" original-source="C:\Users\Drako-PC\Downloads\Caricamento_quarta_parte-2016-05-19\Caricamento quarta parte\Porta boss - colonna fronte.png">
@@ -5961,6 +6276,24 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Finestra4" sid="9307417192683243">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8368149242335619" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.508772" original-source="C:\Users\dbga_21\AppData\Local\Temp\Rar$DRa0.338\Level 2\Finestra 02.png">
+                        <collision-poly>
+                            <point x="0.142857" y="0.0701754" />
+                            <point x="0.5" y="0" />
+                            <point x="0.857143" y="0.0701754" />
+                            <point x="1" y="0.491228" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.491228" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
         <object-type name="RocciaSottoARusciello" sid="4147137415165139">
             <plugin id="Sprite" />
             <animation-folder>
@@ -5975,6 +6308,24 @@
                             <point x="0.5" y="0.893443" />
                             <point x="0.127907" y="0.819672" />
                             <point x="0.0755814" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Finestra5" sid="7014462054752869">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3065225059390261" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.508772" original-source="C:\Users\dbga_21\AppData\Local\Temp\Rar$DRa0.880\Level 2\Finestra 03.png">
+                        <collision-poly>
+                            <point x="0.142857" y="0.0701754" />
+                            <point x="0.5" y="0" />
+                            <point x="0.857143" y="0.0701754" />
+                            <point x="1" y="0.491228" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.491228" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -6009,6 +6360,491 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Statua3" sid="6163669410693373">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6243213269260028" speed="5">
+                    <frame duration="1" hotspotX="0.510204" hotspotY="0.505618" original-source="C:\Users\dbga_21\AppData\Local\Temp\Rar$DRa0.490\Level 2\Statua 01.png">
+                        <collision-poly>
+                            <point x="0.306122" y="0.168539" />
+                            <point x="0.489796" y="0" />
+                            <point x="0.693878" y="0.168539" />
+                            <point x="0.77551" y="0.494382" />
+                            <point x="0.938776" y="0.966292" />
+                            <point x="0.489796" y="1" />
+                            <point x="0.0612245" y="0.966292" />
+                            <point x="0.22449" y="0.494382" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MuroBase03PortaDesaturato" sid="310285526536224">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3069358335350402" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_21\AppData\Local\Temp\Rar$DRa0.976\Level 2\Caricamento quarta parte\Muro base 03 porta desaturato.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Teschio3" sid="6585898387947017">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6224036070215609" speed="5">
+                    <frame duration="1" hotspotX="0.509804" hotspotY="0.5" original-source="C:\Users\dbga_21\AppData\Local\Temp\Rar$DRa0.962\Level 2\caricamenti seconda parte\Teschio 01.png">
+                        <collision-poly>
+                            <point x="0.196078" y="0.166667" />
+                            <point x="0.490196" y="0.283333" />
+                            <point x="0.647059" y="0.3" />
+                            <point x="0.745098" y="0.5" />
+                            <point x="0.647059" y="0.7" />
+                            <point x="0.490196" y="0.716667" />
+                            <point x="0.431373" y="0.633333" />
+                            <point x="0.372549" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="candelabro" sid="86948002420142">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3427368182304749" speed="5">
+                    <frame duration="1" hotspotX="0.507463" hotspotY="0.508197" original-source="C:\Users\dbga_21\AppData\Local\Temp\Rar$DRa0.742\Level 2\caricamenti seconda parte\candelabro.png">
+                        <collision-poly>
+                            <point x="0.358209" y="0.393443" />
+                            <point x="0.492537" y="0.360656" />
+                            <point x="0.597015" y="0.442623" />
+                            <point x="0.61194" y="0.491803" />
+                            <point x="0.671642" y="0.639344" />
+                            <point x="0.492537" y="1" />
+                            <point x="0.313433" y="0.655738" />
+                            <point x="0.298507" y="0.491803" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Cavaliere3" sid="4543510784465358">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2108476426514751" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\Users\dbga_21\AppData\Local\Temp\Rar$DRa0.849\Level 2\Cavaliere 01.png">
+                        <collision-poly>
+                            <point x="0.2" y="0.0674157" />
+                            <point x="0.5" y="0.101124" />
+                            <point x="0.733333" y="0.0898876" />
+                            <point x="1" y="0.494382" />
+                            <point x="0.766667" y="0.921348" />
+                            <point x="0.5" y="0.797753" />
+                            <point x="0.2" y="0.932584" />
+                            <point x="0.0333333" y="0.494382" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Cavaliere4" sid="344121539077645">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="13137778251415" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\Users\dbga_21\AppData\Local\Temp\Rar$DRa0.201\Level 2\Cavaliere 02.png">
+                        <collision-poly>
+                            <point x="0.266667" y="0.0898876" />
+                            <point x="0.5" y="0.157303" />
+                            <point x="0.8" y="0.0674157" />
+                            <point x="0.966667" y="0.494382" />
+                            <point x="0.8" y="0.932584" />
+                            <point x="0.5" y="1" />
+                            <point x="0.233333" y="0.921348" />
+                            <point x="0" y="0.494382" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LevaBlocco2" sid="9870312825233812">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6048269048861242" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_21\AppData\Local\Temp\Rar$DRa0.821\Level 2\caricamenti seconda parte\Leva - blocco.png">
+                        <collision-poly>
+                            <point x="0.285714" y="0.125" />
+                            <point x="0.5" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0.5" y="1" />
+                            <point x="0.285714" y="0.875" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="vetrata03Desaturata" sid="4128300954382309">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6458019468171331" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_21\AppData\Local\Temp\Rar$DRa0.919\Level 2\Caricamento quarta parte\vetrata 03 desaturata.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Libreria3" sid="4723624650592686">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="522963692391617" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_21\AppData\Local\Temp\Rar$DRa0.820\Level 2\caricamenti seconda parte\Libreria 01.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.986486" y="0.00909091" />
+                            <point x="0.932432" y="0.5" />
+                            <point x="0.959459" y="0.972727" />
+                            <point x="0.5" y="0.990909" />
+                            <point x="0.0405405" y="0.972727" />
+                            <point x="0.0675676" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="candelabro2" sid="1292510135688391">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="748253370762276" speed="5">
+                    <frame duration="1" hotspotX="0.507463" hotspotY="0.508197" original-source="C:\Users\dbga_21\AppData\Local\Temp\Rar$DRa0.659\Level 2\caricamenti seconda parte\candelabro.png">
+                        <collision-poly>
+                            <point x="0.358209" y="0.393443" />
+                            <point x="0.492537" y="0.360656" />
+                            <point x="0.597015" y="0.442623" />
+                            <point x="0.61194" y="0.491803" />
+                            <point x="0.671642" y="0.639344" />
+                            <point x="0.492537" y="1" />
+                            <point x="0.313433" y="0.655738" />
+                            <point x="0.298507" y="0.491803" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MuroBase03PortaDesaturato2" sid="4454995521587799">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7876980145074476" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_21\AppData\Local\Temp\Rar$DRa0.664\Level 2\Caricamento quarta parte\Muro base 03 porta desaturato.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Ricordo4" sid="9993579414033473">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2055721210809312" speed="5">
+                    <frame duration="1" hotspotX="0.508772" hotspotY="0.5" original-source="C:\Users\dbga_21\AppData\Local\Temp\Rar$DRa0.793\Level 2\Caricamento terza parte\Ricordo 01.png">
+                        <collision-poly>
+                            <point x="0.263158" y="0.3" />
+                            <point x="0.491228" y="0.04" />
+                            <point x="0.701754" y="0.34" />
+                            <point x="0.719298" y="0.5" />
+                            <point x="0.631579" y="0.58" />
+                            <point x="0.491228" y="0.86" />
+                            <point x="0.280702" y="0.68" />
+                            <point x="0.22807" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Ricordo2" sid="7060854056770972">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7806763698668051" speed="5">
+                    <frame duration="1" hotspotX="0.508772" hotspotY="0.5" original-source="C:\Users\dbga_21\AppData\Local\Temp\Rar$DRa0.067\Level 2\Caricamento terza parte\Ricordo 02.png">
+                        <collision-poly>
+                            <point x="0.333333" y="0.38" />
+                            <point x="0.491228" y="0.4" />
+                            <point x="0.596491" y="0.46" />
+                            <point x="0.614035" y="0.5" />
+                            <point x="0.631579" y="0.58" />
+                            <point x="0.491228" y="0.82" />
+                            <point x="0.280702" y="0.68" />
+                            <point x="0.157895" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="vetrata04Desaturata" sid="779596879940739">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="106773717174032" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_21\AppData\Local\Temp\Rar$DRa0.271\Level 2\Caricamento quarta parte\vetrata 04 desaturata.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Ricordo5" sid="827284394568621">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4763027783924426" speed="5">
+                    <frame duration="1" hotspotX="0.508772" hotspotY="0.5" original-source="C:\Users\dbga_21\AppData\Local\Temp\Rar$DRa0.793\Level 2\Caricamento terza parte\Ricordo 01.png">
+                        <collision-poly>
+                            <point x="0.263158" y="0.3" />
+                            <point x="0.491228" y="0.04" />
+                            <point x="0.701754" y="0.34" />
+                            <point x="0.719298" y="0.5" />
+                            <point x="0.631579" y="0.58" />
+                            <point x="0.491228" y="0.86" />
+                            <point x="0.280702" y="0.68" />
+                            <point x="0.22807" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Ricordo6" sid="6458870376692285">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5684721464479512" speed="5">
+                    <frame duration="1" hotspotX="0.508772" hotspotY="0.5" original-source="C:\Users\dbga_21\AppData\Local\Temp\Rar$DRa0.793\Level 2\Caricamento terza parte\Ricordo 01.png">
+                        <collision-poly>
+                            <point x="0.263158" y="0.3" />
+                            <point x="0.491228" y="0.04" />
+                            <point x="0.701754" y="0.34" />
+                            <point x="0.719298" y="0.5" />
+                            <point x="0.631579" y="0.58" />
+                            <point x="0.491228" y="0.86" />
+                            <point x="0.280702" y="0.68" />
+                            <point x="0.22807" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ChiaveBoss" sid="2343968811301723">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="First_Move_Done" sid="6508371489220868" type="boolean" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Fade" sid="1625175816585438">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7704194105712796" speed="5">
+                    <frame duration="1" hotspotX="0.52381" hotspotY="0.511628" original-source="C:\Users\dbga_21\AppData\Local\Temp\Rar$DRa0.622\Level 2\Caricamento quarta parte\Chiave boss.png">
+                        <collision-poly>
+                            <point x="0.333333" y="0.162791" />
+                            <point x="0.47619" y="0" />
+                            <point x="0.666667" y="0.162791" />
+                            <point x="0.571429" y="0.488372" />
+                            <point x="0.571429" y="0.790698" />
+                            <point x="0.47619" y="1" />
+                            <point x="0.142857" y="0.930233" />
+                            <point x="0.380952" y="0.488372" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MuroBase03PortaDesaturato3" sid="2212636594904221">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4132537535674305" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_21\AppData\Local\Temp\Rar$DRa0.588\Level 2\Caricamento quarta parte\Muro base 03 porta desaturato.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BotolaAdattatorePavimento" sid="8825804796600875">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8100642638132634" speed="5">
+                    <frame duration="1" hotspotX="0.529412" hotspotY="0.513514" original-source="C:\Users\dbga_21\Downloads\Level_2-2016-05-20\Level 2\Caricamento quarta parte\Botola - adattatore pavimento.png">
+                        <collision-poly>
+                            <point x="0.647059" y="0.297297" />
+                            <point x="0.470588" y="0.810811" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0.647059" y="0.486486" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="CutsceneEnd1" sid="1156699360538939">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1857372891563314" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TiledBackground" sid="9492806152076203">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="CutsceneEndDialog" sid="1559080022887122">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7677370595949911" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="0.520833" y="0" />
+                            <point x="0.520833" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BotolaAdattatorePavimento2" sid="3369631260029851">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="334312435297033" speed="5">
+                    <frame duration="1" hotspotX="0.470588" hotspotY="0.513514" original-source="C:\Users\dbga_21\Downloads\Level_2-2016-05-20\Level 2\Caricamento quarta parte\Botola - adattatore pavimento.png">
+                        <collision-poly>
+                            <point x="0.352941" y="0.486486" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="0.529412" y="0.810811" />
+                            <point x="0.352941" y="0.297297" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MuroAlto01Desaturato" sid="6188725441334374">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1051308265691909" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_21\Downloads\Level_2-2016-05-20\Level 2\Caricamento quarta parte\Muro alto 01 desaturato.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="MuroAlto01Desaturato2" sid="947869188387916">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9138114617661029" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_21\Downloads\Level_2-2016-05-20\Level 2\Caricamento quarta parte\Muro alto 01 desaturato.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="vetrata01Desaturata" sid="127508133245398">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2173634271245345" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_21\Downloads\Level_2-2016-05-20\Level 2\Caricamento quarta parte\vetrata 01 desaturata.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Quadro5" sid="3814596890162446">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3588103885789471" speed="5">
+                    <frame duration="1" hotspotX="0.511628" hotspotY="0.5" original-source="C:\Users\dbga_21\Downloads\Level_2-2016-05-20\Level 2\Quadro 04.png">
+                        <collision-poly>
+                            <point x="0.0232558" y="0.0192308" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.5" />
+                            <point x="0.930233" y="0.942308" />
+                            <point x="0.488372" y="1" />
+                            <point x="0.0465116" y="0.961538" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="CutsceneEndText" sid="4026307575964632">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="CutsceneEnd2" sid="4957184637661029">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7609401628601244" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="CutsceneEnd3" sid="2525196586392207">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2063357814219758" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="dash2" sid="532976685533956">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Fade" sid="661395620603003">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9199005629073668" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.425" y="0.425" />
+                            <point x="0.5" y="0.1" />
+                            <point x="0.675" y="0.325" />
+                            <point x="0.675" y="0.5" />
+                            <point x="0.7" y="0.7" />
+                            <point x="0.5" y="0.85" />
+                            <point x="0.375" y="0.625" />
+                            <point x="0.4" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Cavaliere5" sid="7782219429269425">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="First_Move_Done" sid="1819466918531886" type="boolean" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Solid" sid="290212001466298">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3364149513020333" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.505618" original-source="C:\Users\dbga_21\Downloads\Level_2-2016-05-20\Level 2\Cavaliere 02.png">
+                        <collision-poly>
+                            <point x="0.266667" y="0.0898876" />
+                            <point x="0.5" y="0.157303" />
+                            <point x="0.8" y="0.0674157" />
+                            <point x="0.966667" y="0.494382" />
+                            <point x="0.8" y="0.932584" />
+                            <point x="0.5" y="1" />
+                            <point x="0.233333" y="0.921348" />
+                            <point x="0" y="0.494382" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="candelabro3" sid="1568463413771904">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1488564685529923" speed="5">
+                    <frame duration="1" hotspotX="0.507463" hotspotY="0.508197" original-source="C:\Users\dbga_21\Downloads\Level_2-2016-05-20\Level 2\caricamenti seconda parte\candelabro.png">
+                        <collision-poly>
+                            <point x="0.358209" y="0.393443" />
+                            <point x="0.492537" y="0.360656" />
+                            <point x="0.597015" y="0.442623" />
+                            <point x="0.61194" y="0.491803" />
+                            <point x="0.671642" y="0.639344" />
+                            <point x="0.492537" y="1" />
+                            <point x="0.313433" y="0.655738" />
+                            <point x="0.298507" y="0.491803" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
         <object-type name="funghi" sid="3958404340126588">
             <plugin id="Sprite" />
             <animation-folder>
@@ -6018,6 +6854,23 @@
                             <point x="0.163043" y="0.625" />
                             <point x="0.98913" y="0.0416667" />
                             <point x="0.0326087" y="0.875" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="vetrata02Desaturata" sid="7855618611953885">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7394382054220206" speed="5">
+                    <frame duration="1" hotspotX="0.503759" hotspotY="0.5" original-source="C:\Users\dbga_21\Downloads\Level_2-2016-05-20\Level 2\Caricamento quarta parte\vetrata 02 desaturata.png">
+                        <collision-poly>
+                            <point x="0.037594" y="0.0260417" />
+                            <point x="0.496241" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0.496241" y="1" />
+                            <point x="0.037594" y="0.973958" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -6042,8 +6895,182 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="LevaBlocco4" sid="2163976025121472">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5821383938454445" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\dbga_21\AppData\Local\Temp\Rar$DRa0.821\Level 2\caricamenti seconda parte\Leva - blocco.png">
+                        <collision-poly>
+                            <point x="0.285714" y="0.125" />
+                            <point x="0.5" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                            <point x="0.5" y="1" />
+                            <point x="0.285714" y="0.875" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="CutsceneEndCredits" sid="6972158713198828">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="CutsceneEndTextDestroy" sid="4299528857532119">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5077395492321458" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TextBox" sid="5067920910644799">
+            <plugin id="TextBox" />
+        </object-type>
+        <object-type name="Corpo" sid="3099393026032915">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6402848589246583" speed="5">
+                    <frame duration="1" hotspotX="0.504202" hotspotY="0.5" original-source="C:\Users\Drako-PC\Downloads\BB\Parti\Corpo.png">
+                        <image-point name="BraccioSx" x="0.798319" y="0.209402" />
+                        <image-point name="BraccioDx" x="0.268908" y="0.213675" />
+                        <image-point name="Cervello" x="0.386555" y="0.034188" />
+                        <image-point name="Occhi" x="0.310924" y="0.0897436" />
+                        <image-point name="GambaDx" x="0.361345" y="0.752137" />
+                        <image-point name="GambaSx" x="0.680672" y="0.760684" />
+                        <collision-poly>
+                            <point x="0.319328" y="0.32906" />
+                            <point x="0.647059" y="0.132479" />
+                            <point x="0.739496" y="0.495726" />
+                            <point x="0.714286" y="0.529915" />
+                            <point x="0.647059" y="0.991453" />
+                            <point x="0.260504" y="0.692308" />
+                            <point x="0.378151" y="0.495726" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Cervello" sid="1970572089111932">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="611591395603688" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.538462" original-source="C:\Users\Drako-PC\Downloads\BB\Parti\Cervello.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Gamba_sx" sid="3342571012450121">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9614244957947698" speed="5">
+                    <frame duration="1" hotspotX="0.52" hotspotY="0.508197" original-source="C:\Users\Drako-PC\Downloads\BB\Parti\Gamba_sx.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Gamba_dx" sid="4240060450022453">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8850524956977215" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Drako-PC\Downloads\BB\Parti\Gamba_dx.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Braccio_sx" sid="5771737753809835">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="796817545058323" speed="5">
+                    <frame duration="1" hotspotX="0.40625" hotspotY="0.101449" original-source="C:\Users\Drako-PC\Downloads\BB\Parti\Braccio_sx.png">
+                        <image-point name="Avanbraccio" x="0.78125" y="0.985507" />
+                        <image-point name="Infezione" x="0.75" y="0.623188" />
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Braccio_dxsecondo_piano" sid="8899719065883918">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7370294362819102" speed="5">
+                    <frame duration="1" hotspotX="0.619048" hotspotY="0.105263" original-source="C:\Users\Drako-PC\Downloads\BB\Parti\Braccio_dx-(secondo_piano).png">
+                        <image-point name="Avambraccio" x="0.47619" y="0.684211" />
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Avambraccio_sx" sid="6911989028408229">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5190319249572157" speed="5">
+                    <frame duration="1" hotspotX="0.565217" hotspotY="0.108696" original-source="C:\Users\Drako-PC\Downloads\BB\Parti\Avambraccio_sx.png">
+                        <collision-poly>
+                            <point x="0.217391" y="0.413043" />
+                            <point x="0.826087" y="0.173913" />
+                            <point x="0.73913" y="0.543478" />
+                            <point x="0.304348" y="0.173913" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Avambraccio_dx" sid="3462579345251317">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1461165833726935" speed="5">
+                    <frame duration="1" hotspotX="0.861111" hotspotY="0.0961538" original-source="C:\Users\Drako-PC\Downloads\BB\Parti\Avambraccio_dx.png">
+                        <image-point name="Mazza" x="0.166667" y="0.865385" />
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Occhi" sid="9804848088556343">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5287557842841911" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.545455" original-source="C:\Users\Drako-PC\Downloads\BB\Parti\Occhi.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Mano_dx" sid="4219104329146761">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8289054057570135" speed="5">
+                    <frame duration="1" hotspotX="0.871795" hotspotY="0.216216" original-source="C:\Users\Drako-PC\Downloads\BB\Parti\Mano_dx.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Infezione_braccio" sid="2990712196223606">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8846973002687112" speed="5">
+                    <frame duration="1" hotspotX="0.517241" hotspotY="0.5" original-source="C:\Users\Drako-PC\Downloads\BB\Parti\Infezione_braccio.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
-    <families />
+    <families>
+        <family name="Hud" plugin-id="Sprite" sid="6636688502215522">
+            <members>
+                <member>Barra_Vita_Piena_Alta</member>
+                <member>Barra_Vita_Piena_Bassa</member>
+                <member>Barra_Vita_Piena_Centro</member>
+                <member>Barra_Vita_Vuota_Alta</member>
+                <member>Barra_Vita_Vuota_Bassa</member>
+                <member>Barra_Vita_Vuota_Centro</member>
+                <member>Hud_Corpo</member>
+                <member>Pallottola</member>
+                <member>Pallottola2</member>
+                <member>Pallottola3</member>
+                <member>Pallottola4</member>
+                <member>Pallottola5</member>
+                <member>Pallottola6</member>
+                <member>Stamin_Piena</member>
+                <member>Stamin_Piena2</member>
+                <member>Stamin_Piena3</member>
+                <member>Stamina_Vuota</member>
+                <member>Stamina_Vuota2</member>
+                <member>Stamina_Vuota3</member>
+            </members>
+        </family>
+    </families>
     <layout-folder>
         <layout>Level 1 Layout.xml</layout>
         <layout>Intro Layout.xml</layout>
@@ -6055,6 +7082,7 @@
         <layout>End Level.xml</layout>
         <layout>Pause.xml</layout>
         <layout>Cutscene Start.xml</layout>
+        <layout>Cutscene End.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Level 1.xml</event-sheet>
@@ -6063,7 +7091,6 @@
         <event-sheet>Intro Sheet.xml</event-sheet>
         <event-sheet>Gunner.xml</event-sheet>
         <event-sheet>Level 2.xml</event-sheet>
-        <event-sheet>Botola.xml</event-sheet>
         <event-sheet>Boss Sheet.xml</event-sheet>
         <event-sheet>Menu Start Sheet.xml</event-sheet>
         <event-sheet>Credits Sheet.xml</event-sheet>
@@ -6072,11 +7099,12 @@
         <event-sheet>End Level Sheet.xml</event-sheet>
         <event-sheet>Pause Sheet.xml</event-sheet>
         <event-sheet>Cutscene Start Sheet.xml</event-sheet>
+        <event-sheet>Cutscene End Sheet.xml</event-sheet>
     </event-folder>
     <global-instances>
-        <global-instance type="Keyboard" uid="1704" />
-        <global-instance type="Mouse" uid="1705" />
-        <global-instance type="Audio" uid="1706">
+        <global-instance type="Keyboard" uid="2061" />
+        <global-instance type="Mouse" uid="2062" />
+        <global-instance type="Audio" uid="2063">
             <properties>
                 <timescale-audio>Off</timescale-audio>
                 <saveload>All</saveload>
@@ -6090,7 +7118,7 @@
                 <roll-off-factor>1</roll-off-factor>
             </properties>
         </global-instance>
-        <global-instance type="Function" uid="1707" />
+        <global-instance type="Function" uid="2064" />
     </global-instances>
     <sounds-folder>
         <sound-folder name="PlaceHolder Sounds">
