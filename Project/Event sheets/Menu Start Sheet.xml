@@ -3,191 +3,152 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Menu Start Sheet</name>
     <events>
-        <event-block sid="3601430021331483">
-            <conditions>
-                <condition id="0" name="On key pressed" sid="1512581234933399" type="Keyboard">
-                    <param id="0" name="Key">87 (W)</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="525699643355302">
-                    <conditions>
-                        <condition id="-9" name="Is visible" sid="5651375891504471" type="newgame_sel" />
-                    </conditions>
-                    <actions>
-                        <action id="-15" name="Set visible" sid="9981041867468328" type="credits_sel">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="5232949929318792" type="newgame_sel">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="4791543855299189">
-                    <conditions>
-                        <condition id="-22" name="Else" sid="2391426796879495" type="System" />
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="1188769599865446">
-                            <conditions>
-                                <condition id="-9" name="Is visible" sid="7670486168236237" type="loadcheck_sel" />
-                            </conditions>
-                            <actions>
-                                <action id="-15" name="Set visible" sid="4831867310994884" type="newgame_sel">
-                                    <param id="0" name="Visibility">1</param>
-                                </action>
-                                <action id="-15" name="Set visible" sid="8493136820463221" type="loadcheck_sel">
-                                    <param id="0" name="Visibility">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="2459596240340857">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="372615462995875" type="System" />
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="1346592241153776">
-                                    <conditions>
-                                        <condition id="-9" name="Is visible" sid="924197751262862" type="credits_sel" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="-15" name="Set visible" sid="2989395014894485" type="loadcheck_sel">
-                                            <param id="0" name="Visibility">1</param>
-                                        </action>
-                                        <action id="-15" name="Set visible" sid="8388251988421448" type="credits_sel">
-                                            <param id="0" name="Visibility">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="2911634525392475">
-            <conditions>
-                <condition id="0" name="On key pressed" sid="7681212457779216" type="Keyboard">
-                    <param id="0" name="Key">83 (S)</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="4796330241328891">
-                    <conditions>
-                        <condition id="-9" name="Is visible" sid="2470907079811607" type="newgame_sel" />
-                    </conditions>
-                    <actions>
-                        <action id="-15" name="Set visible" sid="7702725435641244" type="loadcheck_sel">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="1625909916543788" type="newgame_sel">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="117203701909">
-                    <conditions>
-                        <condition id="-22" name="Else" sid="3035346600756514" type="System" />
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="440727110379909">
-                            <conditions>
-                                <condition id="-9" name="Is visible" sid="4758571191032577" type="loadcheck_sel" />
-                            </conditions>
-                            <actions>
-                                <action id="-15" name="Set visible" sid="9734350713529141" type="credits_sel">
-                                    <param id="0" name="Visibility">1</param>
-                                </action>
-                                <action id="-15" name="Set visible" sid="6337200980444901" type="loadcheck_sel">
-                                    <param id="0" name="Visibility">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="2336559949082082">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="3528364356572727" type="System" />
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="9925886116179151">
-                                    <conditions>
-                                        <condition id="-9" name="Is visible" sid="5003695148800776" type="credits_sel" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="-15" name="Set visible" sid="39069549957455" type="newgame_sel">
-                                            <param id="0" name="Visibility">1</param>
-                                        </action>
-                                        <action id="-15" name="Set visible" sid="6148638394145068" type="credits_sel">
-                                            <param id="0" name="Visibility">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-            </sub-events>
-        </event-block>
         <event-block sid="242708909123386">
             <conditions>
-                <condition id="0" name="On key pressed" sid="2406070131438563" type="Keyboard">
-                    <param id="0" name="Key">32 (Barra Spaziatrice)</param>
+                <condition id="6" name="On object clicked" sid="2406070131438563" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">MenuPrincipaleRiquadroNuovaPartitaCrediti</param>
                 </condition>
             </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="103715805541841">
-                    <conditions>
-                        <condition id="-9" name="Is visible" sid="7936743781191673" type="newgame_sel" />
-                    </conditions>
-                    <actions>
-                        <action id="-2" name="Go to layout" sid="4483924693904588" type="System">
-                            <param id="0" name="Layout">Cutscene Start</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="3267737168116669">
-                    <conditions>
-                        <condition id="-22" name="Else" sid="107818856439546" type="System" />
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="769373495703949">
-                            <conditions>
-                                <condition id="-9" name="Is visible" sid="9599570154555813" type="loadcheck_sel" />
-                            </conditions>
-                            <actions>
-                                <action id="-2" name="Go to layout" sid="6925467456556214" type="System">
-                                    <param id="0" name="Layout">Load Checkpoints</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="8539829540224137">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="7013163864529787" type="System" />
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="3012825343413489">
-                                    <conditions>
-                                        <condition id="-9" name="Is visible" sid="702236445718015" type="credits_sel" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="-2" name="Go to layout" sid="9848163387371793" type="System">
-                                            <param id="0" name="Layout">Credits</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-            </sub-events>
+            <actions>
+                <action id="-2" name="Go to layout" sid="6748799798416593" type="System">
+                    <param id="0" name="Layout">Cutscene Start</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5863939981811179">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="5641626098728834" type="Mouse">
+                    <param id="0" name="Object">MenuPrincipaleRiquadroNuovaPartitaCrediti</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="5483377723652561" type="MenuPrincipaleRiquadroNuovaPartitaCrediti">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="8537078858039435" type="MenuPrincipaleRiquadroCheckpoint">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="3914174958644383" type="MenuPrincipaleRiquadroNuovaPartitaCrediti2">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9693338467564624">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="73782826798106" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">MenuPrincipaleRiquadroCheckpoint</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="4968480821074725" type="System">
+                    <param id="0" name="Layout">Load Checkpoints</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6281199017923232">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="8193612193347569" type="Mouse">
+                    <param id="0" name="Object">MenuPrincipaleRiquadroCheckpoint</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="909631397790837" type="MenuPrincipaleRiquadroCheckpoint">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="26571666080947" type="MenuPrincipaleRiquadroNuovaPartitaCrediti2">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="3077742675571639" type="MenuPrincipaleRiquadroNuovaPartitaCrediti">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="529569316946914">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="8374079703407294" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">MenuPrincipaleRiquadroNuovaPartitaCrediti2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="2145997225220562" type="System">
+                    <param id="0" name="Layout">Credits</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5840978723150303">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="7828684558763606" type="Mouse">
+                    <param id="0" name="Object">MenuPrincipaleRiquadroNuovaPartitaCrediti2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="2683316214211982" type="MenuPrincipaleRiquadroNuovaPartitaCrediti2">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="9721823550167198" type="MenuPrincipaleRiquadroCheckpoint">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1123737251068281">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="3140232922511754" type="Mouse">
+                    <param id="0" name="Object">MenuPrincipaleSfondo</param>
+                </condition>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="19952818791603" type="Mouse">
+                    <param id="0" name="Object">MenuPrincipaleRiquadroNuovaPartitaCrediti</param>
+                </condition>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="8391613685031523" type="Mouse">
+                    <param id="0" name="Object">MenuPrincipaleRiquadroCheckpoint</param>
+                </condition>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="6606517949183689" type="Mouse">
+                    <param id="0" name="Object">MenuPrincipaleRiquadroNuovaPartitaCrediti2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="4284948982066973" type="MenuPrincipaleRiquadroCheckpoint">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="4249429172386416" type="MenuPrincipaleRiquadroNuovaPartitaCrediti2">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="4188528425718195" type="MenuPrincipaleRiquadroNuovaPartitaCrediti">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5138750562983081">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="6517858369956013" type="System">
+                    <param id="0" name="Interval (seconds)">random(3,5)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="497729540361075" type="MenuPrincipaleOcchi">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Flash" id="0" name="Flash" sid="1632024778717917" type="MenuPrincipaleOcchi">
+                    <param id="0" name="&apos;On&apos; time">0.3</param>
+                    <param id="1" name="&apos;Off&apos; time">0.3</param>
+                    <param id="2" name="Duration">1.2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3385831933762333">
+            <conditions>
+                <condition behavior="Flash" id="1" name="On flash ended" sid="2275373650771886" type="MenuPrincipaleOcchi" />
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="6672627758019767" type="MenuPrincipaleOcchi">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>

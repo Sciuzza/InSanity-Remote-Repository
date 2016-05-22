@@ -29,21 +29,24 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Sfondo_Intro" uid="1622">
+                <instance type="MenuPrincipaleSfondo" uid="1622">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Flash" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-481.721405029</x>
-                        <y>180.025588989</y>
+                        <x>240</x>
+                        <y>180</y>
                         <z>0</z>
-                        <width>1924.089355469</width>
-                        <height>360.76675415</height>
+                        <width>480</width>
+                        <height>360</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -70,95 +73,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="newgame_unsel" uid="1623">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>240.296005249</x>
-                        <y>147.649002075</y>
-                        <z>0</z>
-                        <width>106.085983276</width>
-                        <height>23.113704681</height>
-                        <depth>0</depth>
-                        <hotspotX>0.502793312</hotspotX>
-                        <hotspotY>0.512820542</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="credits_unsel" uid="1624">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>240</x>
-                        <y>243.761993408</y>
-                        <z>0</z>
-                        <width>61.569999695</width>
-                        <height>22.61700058</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="loadcheck_unsel" uid="1625">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>240</x>
-                        <y>197.31199646</y>
-                        <z>0</z>
-                        <width>135.23600769</width>
-                        <height>22.539335251</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="newgame_sel" uid="1626">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>240.29598999</x>
-                        <y>147.649002075</y>
-                        <z>0</z>
-                        <width>106.086204529</width>
-                        <height>23.114110947</height>
-                        <depth>0</depth>
-                        <hotspotX>0.502793312</hotspotX>
-                        <hotspotY>0.512820542</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="loadcheck_sel" uid="1627">
+                <instance type="MenuPrincipaleRiquadroNuovaPartitaCrediti" uid="1623">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -168,11 +83,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>240</x>
-                        <y>197.31199646</y>
+                        <x>171.844848633</x>
+                        <y>158.198303223</y>
                         <z>0</z>
-                        <width>135.235992432</width>
-                        <height>22.538999557</height>
+                        <width>122.908935547</width>
+                        <height>18.62071228</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -180,29 +95,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="title" uid="1628">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>240.22277832</x>
-                        <y>54.44519043</y>
-                        <z>0</z>
-                        <width>145.693634033</width>
-                        <height>49.455638885</height>
-                        <depth>0</depth>
-                        <hotspotX>0.501529038</hotspotX>
-                        <hotspotY>0.504504502</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="credits_sel" uid="1629">
+                <instance type="MenuPrincipaleRiquadroNuovaPartitaCrediti2" uid="1625">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -212,11 +105,58 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>240</x>
-                        <y>243.761993408</y>
+                        <x>168.259338379</x>
+                        <y>224.636199951</y>
                         <z>0</z>
-                        <width>61.569709778</width>
-                        <height>22.617444992</height>
+                        <width>65.163337708</width>
+                        <height>18.621200562</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="MenuPrincipaleRiquadroCheckpoint" uid="1626">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>171.767974854</x>
+                        <y>192.348480225</y>
+                        <z>0</z>
+                        <width>160.948455811</width>
+                        <height>19.862640381</height>
+                        <depth>0</depth>
+                        <hotspotX>0.504347801</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="MenuPrincipaleOcchi" uid="1629">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Flash" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>382.548583984</x>
+                        <y>199.33555603</y>
+                        <z>0</z>
+                        <width>89.653778076</width>
+                        <height>69.13986969</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>

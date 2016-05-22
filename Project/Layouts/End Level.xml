@@ -29,7 +29,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="EndLevelBG" uid="1620">
+                <instance type="LivelloCompletoSfondo" uid="1634">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -70,136 +70,11 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="exit_unsel" uid="1621">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>241.73840332</x>
-                        <y>276.608001709</y>
-                        <z>0</z>
-                        <width>184.679779053</width>
-                        <height>22.711429596</height>
-                        <depth>0</depth>
-                        <hotspotX>0.501618147</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="restart_unsel" uid="1643">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>241.439544678</x>
-                        <y>239.981002808</y>
-                        <z>0</z>
-                        <width>136.302154541</width>
-                        <height>22.717025757</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Text2" uid="1668">
-                    <properties>
-                        <text>Tempo Trascorso</text>
-                        <initial-visibility>Visible</initial-visibility>
-                        <font>Papyrus,-13,400,0</font>
-                        <color>255,255,255</color>
-                        <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Center</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>58.069564819</x>
-                        <y>94.435997009</y>
-                        <z>0</z>
-                        <width>125.782859802</width>
-                        <height>30</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Text2" uid="1669">
-                    <properties>
-                        <text>Nemici Uccisi</text>
-                        <initial-visibility>Visible</initial-visibility>
-                        <font>Papyrus,-13,400,0</font>
-                        <color>255,255,255</color>
-                        <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Center</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>178.548156738</x>
-                        <y>94.435783386</y>
-                        <z>0</z>
-                        <width>125.782859802</width>
-                        <height>30</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Text2" uid="1675">
-                    <properties>
-                        <text>Ricordi Raccolti</text>
-                        <initial-visibility>Visible</initial-visibility>
-                        <font>Papyrus,-13,400,0</font>
-                        <color>255,255,255</color>
-                        <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Center</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>296.147583008</x>
-                        <y>94.435997009</y>
-                        <z>0</z>
-                        <width>125.782859802</width>
-                        <height>30</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="TimeText" uid="1676">
+                <instance type="TimeText" uid="1693">
                     <properties>
                         <text>00:00</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Papyrus,-12,400,0</font>
+                        <font>Papyrus,-21,400,0</font>
                         <color>255,255,255</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -210,11 +85,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>79.72983551</x>
-                        <y>124.122711182</y>
+                        <x>39.65271759</x>
+                        <y>134.509796143</y>
                         <z>0</z>
-                        <width>82.52520752</width>
-                        <height>30</height>
+                        <width>91.556518555</width>
+                        <height>40.725082397</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -222,11 +97,11 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="EnemiesText" uid="1677">
+                <instance type="EnemiesText" uid="1694">
                     <properties>
                         <text>0</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Papyrus,-12,400,0</font>
+                        <font>Papyrus,-21,400,0</font>
                         <color>255,255,255</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -237,11 +112,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>200.176971436</x>
-                        <y>124.123001099</y>
+                        <x>188.859191895</x>
+                        <y>130.510009766</y>
                         <z>0</z>
-                        <width>82.52520752</width>
-                        <height>30</height>
+                        <width>102.281616211</width>
+                        <height>44.111724854</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -249,11 +124,11 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="EnemiesText2" uid="1678">
+                <instance type="EnemiesText2" uid="1695">
                     <properties>
                         <text>0/3</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Papyrus,-12,400,0</font>
+                        <font>Papyrus,-21,400,0</font>
                         <color>255,255,255</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -264,11 +139,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>318.55456543</x>
-                        <y>124.123001099</y>
+                        <x>347.907012939</x>
+                        <y>132.510009766</y>
                         <z>0</z>
-                        <width>82.52520752</width>
-                        <height>30</height>
+                        <width>98.330688477</width>
+                        <height>42.982696533</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -276,7 +151,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="restart_sel" uid="1679">
+                <instance type="LivelloCompletoRicominciaLivello" uid="1635">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -286,11 +161,33 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>241.439575195</x>
-                        <y>239.981323242</y>
+                        <x>244.054595947</x>
+                        <y>219.837097168</y>
                         <z>0</z>
-                        <width>136.302154541</width>
-                        <height>22.717025757</height>
+                        <width>81.131866455</width>
+                        <height>18.564727783</height>
+                        <depth>0</depth>
+                        <hotspotX>0.504347801</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="LivelloCompletoRiquadroContinua" uid="1636">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>244.766113281</x>
+                        <y>261.043884277</y>
+                        <z>0</z>
+                        <width>162.252304077</width>
+                        <height>18.564300537</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -298,51 +195,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="continue_unsel" uid="1680">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>241.763916016</x>
-                        <y>203.687438965</y>
-                        <z>0</z>
-                        <width>75.898880005</width>
-                        <height>22.70479393</height>
-                        <depth>0</depth>
-                        <hotspotX>0.504273534</hotspotX>
-                        <hotspotY>0.514285743</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="continue_sel" uid="1681">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>239.643157959</x>
-                        <y>204.534912109</y>
-                        <z>0</z>
-                        <width>75.898880005</width>
-                        <height>22.70479393</height>
-                        <depth>0</depth>
-                        <hotspotX>0.504273534</hotspotX>
-                        <hotspotY>0.514285743</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="exit_sel" uid="1682">
+                <instance type="LivelloCompletoTornaAlMenu" uid="1637">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -352,36 +205,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>241.73840332</x>
-                        <y>276.608459473</y>
+                        <x>244.484191895</x>
+                        <y>305.072570801</y>
                         <z>0</z>
-                        <width>184.679779053</width>
-                        <height>22.711429596</height>
+                        <width>217.785736084</width>
+                        <height>19.693328857</height>
                         <depth>0</depth>
-                        <hotspotX>0.501618147</hotspotX>
+                        <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="endlevel_title" uid="1683">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>241.581451416</x>
-                        <y>45.369407654</y>
-                        <z>0</z>
-                        <width>229.007781982</width>
-                        <height>25.823680878</height>
-                        <depth>0</depth>
-                        <hotspotX>0.50061959</hotspotX>
-                        <hotspotY>0.505494535</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

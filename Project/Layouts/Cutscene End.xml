@@ -29,7 +29,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="CutsceneEnd1" uid="1711">
+                <instance type="CutsceneEnd1" uid="2034">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -70,7 +70,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="CutsceneEndDialog" uid="1712">
+                <instance type="CutsceneEndDialog" uid="2035">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -80,11 +80,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>240</x>
-                        <y>326.602844238</y>
+                        <x>123.808013916</x>
+                        <y>167.961334229</y>
                         <z>0</z>
-                        <width>480</width>
-                        <height>66.794342041</height>
+                        <width>182.29914856</width>
+                        <height>35.538200378</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -92,11 +92,11 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CutsceneEndText" uid="1713">
+                <instance type="CutsceneEndText" uid="2036">
                     <properties>
                         <text>Text</text>
                         <initial-visibility>Invisible</initial-visibility>
-                        <font>Papyrus,-13,400,0</font>
+                        <font>Papyrus,-12,700,0</font>
                         <color>0,0,0</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -107,10 +107,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>16.841827393</x>
-                        <y>311.790863037</y>
+                        <x>35.236557007</x>
+                        <y>156.183486938</y>
                         <z>0</z>
-                        <width>447.715789795</width>
+                        <width>175.275680542</width>
                         <height>30</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -119,7 +119,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CutsceneEnd2" uid="1714">
+                <instance type="CutsceneEnd2" uid="2037">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -141,7 +141,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CutsceneEnd3" uid="1715">
+                <instance type="CutsceneEnd3" uid="2038">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -163,40 +163,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="dash2" uid="1716">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Fade">
-                            <properties>
-                                <active-at-start>No</active-at-start>
-                                <fade-in-time>0</fade-in-time>
-                                <wait-time>0</wait-time>
-                                <fade-out-time>3</fade-out-time>
-                                <destroy>After fade out</destroy>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>320.788757324</x>
-                        <y>189.300170898</y>
-                        <z>0</z>
-                        <width>40</width>
-                        <height>40</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>1.570796371</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Player_Frame2" uid="1475">
+                <instance type="Player_Frame2" uid="2040">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -228,18 +195,18 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>-30.958023071</x>
-                        <y>202.362197876</y>
+                        <y>217.362197876</y>
                         <z>0</z>
-                        <width>16</width>
+                        <width>18</width>
                         <height>37</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>1</hotspotY>
                         <angle>0</angle>
-                        <opacity>0</opacity>
+                        <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CutsceneEndCredits" uid="1618">
+                <instance type="CutsceneEndCredits" uid="2041">
                     <properties>
                         <text>&lt; Designers &gt;</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -266,7 +233,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CutsceneEndCredits" uid="1717">
+                <instance type="CutsceneEndCredits" uid="2042">
                     <properties>
                         <text>Sergio Osimo</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -281,7 +248,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>113</x>
+                        <x>119.531188965</x>
                         <y>502.444396973</y>
                         <z>0</z>
                         <width>200.933074951</width>
@@ -293,7 +260,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CutsceneEndCredits" uid="1718">
+                <instance type="CutsceneEndCredits" uid="2043">
                     <properties>
                         <text>Thomas Palagi</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -308,8 +275,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-12</x>
-                        <y>526.234313965</y>
+                        <x>119.08821106</x>
+                        <y>530.432617188</y>
                         <z>0</z>
                         <width>200</width>
                         <height>30</height>
@@ -320,7 +287,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CutsceneEndCredits" uid="1719">
+                <instance type="CutsceneEndCredits" uid="2044">
                     <properties>
                         <text>Matteo Micucci</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -347,7 +314,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CutsceneEndCredits" uid="1720">
+                <instance type="CutsceneEndCredits" uid="2045">
                     <properties>
                         <text>Gonzalo Ponce de Leon</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -362,8 +329,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>116</x>
-                        <y>526.567016602</y>
+                        <x>-9.024101257</x>
+                        <y>529.832641602</y>
                         <z>0</z>
                         <width>200</width>
                         <height>30</height>
@@ -374,7 +341,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CutsceneEndCredits" uid="1721">
+                <instance type="CutsceneEndCredits" uid="2046">
                     <properties>
                         <text>Luca Previdi</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -401,7 +368,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CutsceneEndCredits" uid="1722">
+                <instance type="CutsceneEndCredits" uid="2047">
                     <properties>
                         <text>Matteo Bonetto</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -428,7 +395,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CutsceneEndCredits" uid="1723">
+                <instance type="CutsceneEndCredits" uid="2048">
                     <properties>
                         <text>Lorenzo Bresciani</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -455,7 +422,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CutsceneEndCredits" uid="1724">
+                <instance type="CutsceneEndCredits" uid="2049">
                     <properties>
                         <text>Cristiano Piromalli</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -482,7 +449,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CutsceneEndCredits" uid="1725">
+                <instance type="CutsceneEndCredits" uid="2050">
                     <properties>
                         <text>&lt; Artists &gt;</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -509,7 +476,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CutsceneEndCredits" uid="1726">
+                <instance type="CutsceneEndCredits" uid="2051">
                     <properties>
                         <text>&lt; Programmers &gt;</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -536,7 +503,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CutsceneEndCredits" uid="1727">
+                <instance type="CutsceneEndCredits" uid="2052">
                     <properties>
                         <text>&lt; Lead Designer &gt;</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -563,7 +530,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CutsceneEndCredits" uid="1728">
+                <instance type="CutsceneEndCredits" uid="2053">
                     <properties>
                         <text>Sergio Osimo</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -590,7 +557,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CutsceneEndCredits" uid="1729">
+                <instance type="CutsceneEndCredits" uid="2054">
                     <properties>
                         <text>&lt; Lead Programmer &gt;</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -617,7 +584,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CutsceneEndCredits" uid="1730">
+                <instance type="CutsceneEndCredits" uid="2055">
                     <properties>
                         <text>Cristiano Piromalli</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -644,7 +611,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CutsceneEndCredits" uid="1731">
+                <instance type="CutsceneEndCredits" uid="2056">
                     <properties>
                         <text>&lt; Lead Artist &gt;</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -671,7 +638,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CutsceneEndCredits" uid="1732">
+                <instance type="CutsceneEndCredits" uid="2057">
                     <properties>
                         <text>Matteo Bonetto</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -698,7 +665,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CutsceneEndCredits" uid="1733">
+                <instance type="CutsceneEndCredits" uid="2058">
                     <properties>
                         <text>&lt; Project Lead &gt;</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -725,7 +692,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CutsceneEndCredits" uid="1734">
+                <instance type="CutsceneEndCredits" uid="2059">
                     <properties>
                         <text>Matteo Micucci</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -752,7 +719,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="title2" uid="1735">
+                <instance type="title2" uid="2060">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -773,16 +740,147 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>240.265090942</x>
-                        <y>151.265136719</y>
+                        <x>240</x>
+                        <y>180</y>
                         <z>0</z>
-                        <width>173.378890991</width>
-                        <height>58.85338974</height>
+                        <width>230.995803833</width>
+                        <height>70.225669861</height>
                         <depth>0</depth>
-                        <hotspotX>0.501528978</hotspotX>
-                        <hotspotY>0.504504979</hotspotY>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
-                        <opacity>0</opacity>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="CutsceneEndOspedale" uid="2072">
+                    <properties>
+                        <text>Ospedale Psichiatrico - oggi -</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Papyrus,-16,400,0</font>
+                        <color>255,0,0</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>160.759643555</x>
+                        <y>32.67288208</y>
+                        <z>0</z>
+                        <width>158.480682373</width>
+                        <height>57.057487488</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="CutsceneEndDialog2" uid="2073">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>389.297149658</x>
+                        <y>170.602264404</y>
+                        <z>0</z>
+                        <width>-131.449996948</width>
+                        <height>-30.70592308</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="CutsceneEndText2" uid="2074">
+                    <properties>
+                        <text>Text</text>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <font>Papyrus,-12,700,0</font>
+                        <color>0,0,0</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Top-left</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>326.552398682</x>
+                        <y>158.34173584</y>
+                        <z>0</z>
+                        <width>127.225723267</width>
+                        <height>30</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Barella" uid="1624">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>304.769134521</x>
+                        <y>202.027633667</y>
+                        <z>0</z>
+                        <width>59.774692535</width>
+                        <height>29.27740097</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="dash2" uid="2039">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>No</active-at-start>
+                                <fade-in-time>0</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>3</fade-out-time>
+                                <destroy>After fade out</destroy>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>305.788757324</x>
+                        <y>189.300170898</y>
+                        <z>0</z>
+                        <width>40</width>
+                        <height>40</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>1.570796371</angle>
+                        <opacity>1</opacity>
                     </world>
                 </instance>
             </instances>
