@@ -1992,6 +1992,7 @@
                     <instance-variable name="Level_2_Phases" sid="521681513767556" type="number" />
                     <instance-variable name="Camera_On_Player" sid="2010312032397601" type="boolean" />
                     <instance-variable name="Res_Room_Visible" sid="6478554283794921" type="boolean" />
+                    <instance-variable name="Returning" sid="3443924061330863" type="boolean" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Platform" sid="2921180046897222">
@@ -1999,9 +2000,6 @@
                     </behavior-type>
                     <behavior-type name="Timer" sid="3333989098584669">
                         <behavior id="Timer" />
-                    </behavior-type>
-                    <behavior-type name="Persist" sid="1605973105090451">
-                        <behavior id="Persist" />
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
@@ -2579,9 +2577,6 @@
                         </frame>
                     </animation>
                 </animation-folder>
-            </object-type>
-            <object-type name="Dialogue" sid="4798063033958215">
-                <plugin id="Text" />
             </object-type>
         </object-folder>
         <object-folder name="Solid Objects">
@@ -3251,11 +3246,6 @@
         <object-folder name="Hud">
             <object-type name="Hud_Corpo" sid="5739941299528647">
                 <plugin id="Sprite" />
-                <behaviors>
-                    <behavior-type name="Anchor" sid="8162172685645692">
-                        <behavior id="Anchor" />
-                    </behavior-type>
-                </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="466719362150043" speed="5">
                         <frame duration="1" hotspotX="0.507937" hotspotY="0.5" original-source="C:\Users\Sciuzza\Desktop\HUD\Hud - Corpo.png">
@@ -3704,47 +3694,6 @@
                                 <point x="0" y="0.444444" />
                             </collision-poly>
                         </frame>
-                    </animation>
-                </animation-folder>
-            </object-type>
-            <object-type name="Reloading" sid="515474580661233">
-                <plugin id="Text" />
-                <behaviors>
-                    <behavior-type name="Flash" sid="1974217158435257">
-                        <behavior id="Flash" />
-                    </behavior-type>
-                </behaviors>
-            </object-type>
-            <object-type name="Tutorial" sid="4256727726716031">
-                <plugin id="Text" />
-                <instance-variables>
-                    <instance-variable name="State" sid="9012519349935521" type="number" />
-                </instance-variables>
-                <behaviors>
-                    <behavior-type name="Timer" sid="7562576131652811">
-                        <behavior id="Timer" />
-                    </behavior-type>
-                    <behavior-type name="Anchor" sid="8829204620663894">
-                        <behavior id="Anchor" />
-                    </behavior-type>
-                    <behavior-type name="Fade" sid="8883444610102222">
-                        <behavior id="Fade" />
-                    </behavior-type>
-                </behaviors>
-            </object-type>
-            <object-type name="BackGround_Hud_Text" sid="5536351944566282">
-                <plugin id="Sprite" />
-                <behaviors>
-                    <behavior-type name="Fade" sid="4778028713831526">
-                        <behavior id="Fade" />
-                    </behavior-type>
-                    <behavior-type name="Pin" sid="8588812427958982">
-                        <behavior id="Pin" />
-                    </behavior-type>
-                </behaviors>
-                <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4668770662005413" speed="5">
-                        <frame duration="1" hotspotX="0" hotspotY="0" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -5002,6 +4951,81 @@
                     </animation>
                     <animation framecount="1" loop="0" name="Flipped" pingpong="0" repeatcount="1" repeatto="0" sid="1668859695221449" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="-0.384615" original-source="C:\Users\dbga_08\Downloads\caricamenti_seconda_parte-2016-05-18\caricamenti seconda parte\Leva - bassa.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Testi">
+            <object-type name="Tutorial" sid="4256727726716031">
+                <plugin id="Text" />
+                <instance-variables>
+                    <instance-variable name="State" sid="9012519349935521" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Timer" sid="7562576131652811">
+                        <behavior id="Timer" />
+                    </behavior-type>
+                    <behavior-type name="Fade" sid="8883444610102222">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="Reloading" sid="515474580661233">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="Flash" sid="1974217158435257">
+                        <behavior id="Flash" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="Dialogue" sid="4798063033958215">
+                <plugin id="Text" />
+            </object-type>
+            <object-type name="GameOver" sid="7612297399840867">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="357199019342558">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="Records" sid="1327085949934638">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="1909078975256834">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+            </object-type>
+            <object-type name="BackGround_Tut_Text" sid="5536351944566282">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="4778028713831526">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                    <behavior-type name="Pin" sid="8588812427958982">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4668770662005413" speed="5">
+                        <frame duration="1" hotspotX="0.501558" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BackGround_Record_Text" sid="6886261543019079">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="3861646150403597">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                    <behavior-type name="Pin" sid="9495560108018808">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3747050902192782" speed="5">
+                        <frame duration="1" hotspotX="0.501558" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -7057,6 +7081,67 @@
                 <member>Stamina_Vuota2</member>
                 <member>Stamina_Vuota3</member>
             </members>
+        </family>
+        <family name="PersistentObjects" plugin-id="Sprite" sid="8160303001849134">
+            <members>
+                <member>Bat</member>
+                <member>Bat_Testing</member>
+                <member>BotolaSeparaLivello</member>
+                <member>Camera</member>
+                <member>Charger</member>
+                <member>ChargerArm</member>
+                <member>CheckPoint</member>
+                <member>ChiaveBoss</member>
+                <member>chiesaCampanaGrande</member>
+                <member>chiesaCampanaPiccola</member>
+                <member>chiesaCampanaPiccola2</member>
+                <member>chiesaCampanaPiccola3</member>
+                <member>chiesaCampanaPiccola4</member>
+                <member>ChiesaRosone</member>
+                <member>Destr_Obj_Explosion</member>
+                <member>Destr_Obj_Fragment_1</member>
+                <member>Destr_Obj_Fragment_2</member>
+                <member>Destr_Obj_Fragment_3</member>
+                <member>DestructibleObject</member>
+                <member>Eye</member>
+                <member>Gunner</member>
+                <member>lampione2</member>
+                <member>lampione4</member>
+                <member>lampione5</member>
+                <member>LevaAlta</member>
+                <member>MoglieMorta</member>
+                <member>MuroDistruttibileArco</member>
+                <member>Ombra</member>
+                <member>orologioLancettaCorto</member>
+                <member>orologioLancettaLunga</member>
+                <member>Padlock</member>
+                <member>Player_Box</member>
+                <member>ponteBlocco</member>
+                <member>ponteBlocco2</member>
+                <member>ponteBlocco3</member>
+                <member>ponteBlocco4</member>
+                <member>PonteBlocco_Destr_Obj</member>
+                <member>PonteBlocco_Destr_Obj2</member>
+                <member>PonteBlocco_Destr_Obj3</member>
+                <member>PonteBlocco_Destr_Obj4</member>
+                <member>Q_Button_Hud</member>
+                <member>Record_1</member>
+                <member>Record_2</member>
+                <member>Ricordo2</member>
+                <member>Ricordo4</member>
+                <member>Ricordo5</member>
+                <member>Ricordo6</member>
+                <member>Statua</member>
+                <member>Statua2</member>
+                <member>Stun_Ability</member>
+                <member>Trigger_Bat_Intro</member>
+                <member>villaPorta</member>
+            </members>
+            <behaviors>
+                <behavior-type name="Persist" sid="1284403675020831">
+                    <behavior id="Persist" />
+                </behavior-type>
+            </behaviors>
         </family>
     </families>
     <layout-folder>

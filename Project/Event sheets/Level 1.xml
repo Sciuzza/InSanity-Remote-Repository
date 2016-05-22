@@ -13,13 +13,13 @@
                         <condition id="-2" name="On start of layout" sid="4323823249592912" type="System" />
                     </conditions>
                     <actions>
-                        <action id="0" name="Call function" sid="1569424129929707" type="Function">
-                            <param id="0" name="Name">&quot;Player Free&quot;</param>
+                        <action id="0" name="Call function" sid="5804018926632902" type="Function">
+                            <param id="0" name="Name">&quot;Hud and Text Positioning&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
-                        <action id="-10" name="Set value" sid="5365195446300009" type="Player_Box">
-                            <param id="0" name="Instance variable">Weapon_Max_Loader</param>
-                            <param id="1" name="Value">Weapon_Max_Loader_Temp</param>
+                        <action id="0" name="Call function" sid="2799959558208097" type="Function">
+                            <param id="0" name="Name">&quot;Player Memory Load&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                         <action id="2" name="Stop" sid="6746251571539744" type="CheckPoint" />
                         <action id="1" name="Set size" sid="3506362689263001" type="MinutesContainer">
@@ -51,13 +51,9 @@
                             <param id="2" name="Z">0</param>
                             <param id="3" name="Value">45</param>
                         </action>
-                        <action id="-3" name="Set position" sid="4490091449067131" type="BackGround_Hud_Text">
-                            <param id="0" name="X">Tutorial.X</param>
-                            <param id="1" name="Y">Tutorial.Y - 5</param>
-                        </action>
-                        <action behavior="Pin" id="0" name="Pin to object" sid="641606615902229" type="BackGround_Hud_Text">
-                            <param id="0" name="Pin to">Tutorial</param>
-                            <param id="1" name="Mode">0</param>
+                        <action id="-9" name="Set value" sid="1734623839527706" type="System">
+                            <param id="0" name="Variable">Layout</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -130,38 +126,6 @@
                             </actions>
                         </event-block>
                     </sub-events>
-                </event-block>
-                <event-block sid="5540095216447123">
-                    <conditions>
-                        <condition behavior="Fade" id="0" name="On fade-out finished" sid="7846729452628102" type="Tutorial" />
-                    </conditions>
-                    <actions>
-                        <action id="-15" name="Set visible" sid="956565063525712" type="Tutorial">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-16" name="Set opacity" sid="3481956917409686" type="Tutorial">
-                            <param id="0" name="Opacity">100</param>
-                        </action>
-                        <action behavior="Fade" id="4" name="Set fade-out time" sid="4281910714683666" type="Tutorial">
-                            <param id="0" name="Fade-out time">2</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="3319112204633457">
-                    <conditions>
-                        <condition behavior="Fade" id="0" name="On fade-out finished" sid="2322530219595807" type="BackGround_Hud_Text" />
-                    </conditions>
-                    <actions>
-                        <action id="-15" name="Set visible" sid="2570789520292567" type="BackGround_Hud_Text">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-16" name="Set opacity" sid="2361082156572161" type="BackGround_Hud_Text">
-                            <param id="0" name="Opacity">100</param>
-                        </action>
-                        <action behavior="Fade" id="4" name="Set fade-out time" sid="7526833690964219" type="BackGround_Hud_Text">
-                            <param id="0" name="Fade-out time">2</param>
-                        </action>
-                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
@@ -700,14 +664,14 @@
                                 <condition id="-4" name="Trigger once while true" sid="1222000988734326" type="System" />
                             </conditions>
                             <actions>
-                                <action id="-15" name="Set visible" sid="7470581917003681" type="Tutorial">
-                                    <param id="0" name="Visibility">1</param>
+                                <action id="-16" name="Set opacity" sid="7470581917003681" type="Tutorial">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="7859828927865659" type="BackGround_Tut_Text">
+                                    <param id="0" name="Opacity">60</param>
                                 </action>
                                 <action id="0" name="Set text" sid="4894101714365009" type="Tutorial">
                                     <param id="0" name="Text">&quot;Hai risolto l&apos;indovinello, prendi l&apos;upgrade&quot;</param>
-                                </action>
-                                <action id="-15" name="Set visible" sid="7859828927865659" type="BackGround_Hud_Text">
-                                    <param id="0" name="Visibility">1</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="420893203119314" type="Stun_Ability">
                                     <param id="0" name="X">1994</param>
@@ -715,18 +679,6 @@
                                 </action>
                                 <action id="-15" name="Set visible" sid="7307844457448459" type="Stun_Ability">
                                     <param id="0" name="Visibility">1</param>
-                                </action>
-                                <action behavior="Timer" disabled="1" id="0" name="Start timer" sid="4259990922473802" type="Player_Box">
-                                    <param id="0" name="Duration">1.0</param>
-                                    <param id="1" name="Type">0</param>
-                                    <param id="2" name="Tag">&quot;Camera Delay to Move&quot;</param>
-                                </action>
-                                <action disabled="1" id="0" name="Call function" sid="5573774545098937" type="Function">
-                                    <param id="0" name="Name">&quot;Player Stop&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
-                                </action>
-                                <action behavior="ScrollTo" disabled="1" id="1" name="Set enabled" sid="5463242397573367" type="Camera">
-                                    <param id="0" name="State">0</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -738,12 +690,6 @@
                             </conditions>
                             <actions>
                                 <action behavior="Fade" id="1" name="Start fade" sid="2443202530746069" type="Stun_Ability" />
-                                <action id="-15" name="Set visible" sid="7233824455024831" type="Tutorial">
-                                    <param id="0" name="Visibility">1</param>
-                                </action>
-                                <action id="3" name="Set font size" sid="4185869914637623" type="Tutorial">
-                                    <param id="0" name="Size (pt)">10</param>
-                                </action>
                                 <action id="0" name="Set text" sid="9896326938922334" type="Tutorial">
                                     <param id="0" name="Text">&quot;Usa il testo destro del mouse per utilizzare l’onda d’urto: con questo miglioramento dell’arma puoi distruggere muri o colonne e rendere vulnerabili i nemici&quot;</param>
                                 </action>
@@ -766,7 +712,7 @@
                             </conditions>
                             <actions>
                                 <action behavior="Fade" id="1" name="Start fade" sid="349597224636237" type="Tutorial" />
-                                <action behavior="Fade" id="1" name="Start fade" sid="7509483541446183" type="BackGround_Hud_Text" />
+                                <action behavior="Fade" id="1" name="Start fade" sid="7509483541446183" type="BackGround_Tut_Text" />
                             </actions>
                         </event-block>
                         <event-block sid="3640800232879648">
@@ -1415,18 +1361,31 @@
                             <param id="0" name="Animation">&quot;Default&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="4180422852498316" type="Tutorial">
-                            <param id="0" name="Visibility">1</param>
+                        <action id="-16" name="Set opacity" sid="4180422852498316" type="Tutorial">
+                            <param id="0" name="Opacity">100</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="7626783874666032" type="BackGround_Tut_Text">
+                            <param id="0" name="Opacity">60</param>
                         </action>
                         <action id="0" name="Set text" sid="4299031838322237" type="Tutorial">
-                            <param id="0" name="Text">&quot;L&apos;occhio mi dice che sono le 4:30 di mattina&quot;</param>
+                            <param id="0" name="Text">&quot;L&apos;occhio mi dice che sono le 1:30 di mattina&quot;</param>
                         </action>
+                        <action behavior="Timer" id="0" name="Start timer" sid="9387053727863914" type="Player_Box">
+                            <param id="0" name="Duration">3</param>
+                            <param id="1" name="Type">0</param>
+                            <param id="2" name="Tag">&quot;Time Text Fading&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="8524668658349215">
+                    <conditions>
+                        <condition behavior="Timer" id="0" name="On timer" sid="1229673658364577" type="Player_Box">
+                            <param id="0" name="Tag">&quot;Time Text Fading&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
                         <action behavior="Fade" id="1" name="Start fade" sid="3810063848126708" type="Tutorial" />
-                        <action id="-15" name="Set visible" sid="7626783874666032" type="BackGround_Hud_Text">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-25" name="Move to bottom" sid="894912434169505" type="BackGround_Hud_Text" />
-                        <action behavior="Fade" id="1" name="Start fade" sid="7075961746993772" type="BackGround_Hud_Text" />
+                        <action behavior="Fade" id="1" name="Start fade" sid="7075961746993772" type="BackGround_Tut_Text" />
                     </actions>
                 </event-block>
                 <event-block sid="7115290670223422">
@@ -1632,100 +1591,306 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="1443394482019171">
+                <event-block sid="8908585260353181">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="3850831196118359" type="Player_Box">
+                        <condition id="-7" name="Compare instance variable" sid="9378324151588599" type="Player_Box">
                             <param id="0" name="Instance variable">Level_1_Phases</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">11</param>
                         </condition>
-                        <condition id="1" name="Is overlapping another object" sid="3406552792181186" type="Player_Frame">
-                            <param id="0" name="Object">Door_Area</param>
+                        <condition id="-14" name="Pick by unique ID" sid="1656489865003265" type="Door_Area">
+                            <param id="0" name="Unique ID">1518</param>
                         </condition>
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="1901884241453269">
+                        <event-block sid="1154420697695759">
                             <conditions>
-                                <condition id="0" name="On key pressed" sid="1222409152912614" type="Keyboard">
+                                <condition id="1" name="Is overlapping another object" sid="4406306726948205" type="Player_Frame">
+                                    <param id="0" name="Object">Door_Area</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="9424574700178567" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="1157030133068783" type="Tutorial">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="4685398182940621" type="BackGround_Tut_Text">
+                                    <param id="0" name="Opacity">60</param>
+                                </action>
+                                <action id="0" name="Set text" sid="6685808670707124" type="Tutorial">
+                                    <param id="0" name="Text">&quot;Premi Q per entrare&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5172859601860369">
+                            <conditions>
+                                <condition id="1" inverted="1" name="Is overlapping another object" sid="665252643124966" type="Player_Frame">
+                                    <param id="0" name="Object">Door_Area</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="3168604535061429" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="9342154007828" type="Tutorial">
+                                    <param id="0" name="Opacity">0</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="5686086170353899" type="BackGround_Tut_Text">
+                                    <param id="0" name="Opacity">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="793206868490448">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="6298831513685663" type="Keyboard">
                                     <param id="0" name="Key">81 (Q)</param>
+                                </condition>
+                                <condition id="1" name="Is overlapping another object" sid="6925981304766862" type="Player_Frame">
+                                    <param id="0" name="Object">Door_Area</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-34" name="Set layer background color" sid="9415755706921261" type="System">
+                                <action id="-34" name="Set layer background color" sid="7994572490472253" type="System">
                                     <param id="0" name="Layer">&quot;Hud&quot;</param>
                                     <param id="1" name="Color">rgb(0, 0, 0)</param>
                                 </action>
-                                <action id="-18" name="Set layer opacity" sid="7942930258318802" type="System">
+                                <action id="-18" name="Set layer opacity" sid="330005974097211" type="System">
                                     <param id="0" name="Layer">&quot;Hud&quot;</param>
                                     <param id="1" name="Opacity">0</param>
                                 </action>
-                                <action id="-35" name="Set layer transparent" sid="4481624228842639" type="System">
+                                <action id="-35" name="Set layer transparent" sid="2419068155731916" type="System">
                                     <param id="0" name="Layer">&quot;Hud&quot;</param>
                                     <param id="1" name="Mode">0</param>
                                 </action>
-                                <action id="-10" name="Set value" sid="8329206127045694" type="Player_Box">
+                                <action id="-10" name="Set value" sid="8122058387414363" type="Player_Box">
                                     <param id="0" name="Instance variable">Level_1_Phases</param>
                                     <param id="1" name="Value">12</param>
                                 </action>
-                                <action behavior="Fade" id="1" name="Start fade" sid="3886748948573932" type="Tutorial" />
-                                <action behavior="Fade" id="1" name="Start fade" sid="8891171642113667" type="BackGround_Hud_Text" />
-                            </actions>
-                        </event-block>
-                        <event-block sid="9902039908336479">
-                            <conditions>
-                                <condition id="-4" name="Trigger once while true" sid="6153161628961622" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="-15" name="Set visible" sid="4411414824666192" type="Tutorial">
-                                    <param id="0" name="Visibility">1</param>
+                                <action behavior="Fade" id="1" name="Start fade" sid="1669545293196104" type="Tutorial" />
+                                <action behavior="Fade" id="1" name="Start fade" sid="757640079249954" type="BackGround_Tut_Text" />
+                                <action id="-15" name="Set visible" sid="7274034434139569" type="Hud">
+                                    <param id="0" name="Visibility">0</param>
                                 </action>
-                                <action id="0" name="Set text" sid="2149898451406866" type="Tutorial">
-                                    <param id="0" name="Text">&quot;Premi Q per entrare&quot;</param>
+                                <action id="0" name="Call function" sid="4300595937780169" type="Function">
+                                    <param id="0" name="Name">&quot;Player Memory Save&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
-                                <action id="-15" name="Set visible" sid="3716511304891074" type="BackGround_Hud_Text">
-                                    <param id="0" name="Visibility">1</param>
+                                <action id="-15" name="Set visible" sid="8450207505841491" type="Reloading">
+                                    <param id="0" name="Visibility">0</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="4626137330520194">
+                <event-block sid="635099718187289">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="1433709316198887" type="Player_Box">
+                        <condition id="-7" name="Compare instance variable" sid="9589288120832552" type="Player_Box">
                             <param id="0" name="Instance variable">Level_1_Phases</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">12</param>
                         </condition>
-                        <condition id="-17" name="Compare opacity" sid="3323150852064062" type="System">
+                        <condition id="-17" name="Compare opacity" sid="4382767131166657" type="System">
                             <param id="0" name="Layer">&quot;Hud&quot;</param>
                             <param id="1" name="Comparison">3</param>
                             <param id="2" name="Opacity">100</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-18" name="Set layer opacity" sid="3253672105061821" type="System">
+                        <action id="-18" name="Set layer opacity" sid="3609221883197819" type="System">
                             <param id="0" name="Layer">&quot;Hud&quot;</param>
                             <param id="1" name="Opacity">LayerOpacity(&quot;Hud&quot;) + 100*dt</param>
                         </action>
                     </actions>
                     <sub-events>
-                        <event-block sid="9217216961744571">
+                        <event-block sid="5779718054951254">
                             <conditions>
-                                <condition id="-17" name="Compare opacity" sid="7386898048062011" type="System">
+                                <condition id="-17" name="Compare opacity" sid="3188750808682595" type="System">
                                     <param id="0" name="Layer">&quot;Hud&quot;</param>
                                     <param id="1" name="Comparison">5</param>
                                     <param id="2" name="Opacity">100</param>
                                 </condition>
-                                <condition id="-4" name="Trigger once while true" sid="8581171631014502" type="System" />
+                                <condition id="-4" name="Trigger once while true" sid="5384140588845359" type="System" />
                             </conditions>
                             <actions>
-                                <action id="-2" name="Go to layout" sid="3359482404250361" type="System">
+                                <action id="-2" name="Go to layout" sid="3436720424580441" type="System">
                                     <param id="0" name="Layout">Level 2 Layout</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="5974911862638792" title="Phase Free Events">
+            <sub-events>
+                <event-block disabled="1" sid="4739511670954491">
+                    <conditions>
+                        <condition id="-14" name="Pick by unique ID" sid="9417223101429393" type="Door_Area">
+                            <param id="0" name="Unique ID">2065</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block disabled="1" sid="3474144973515561">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="2106686548784906" type="Player_Frame">
+                                    <param id="0" name="Object">Door_Area</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="509483705887232" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="1103960301667545" type="Tutorial">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="1714843484450704" type="BackGround_Tut_Text">
+                                    <param id="0" name="Opacity">60</param>
+                                </action>
+                                <action id="0" name="Set text" sid="4803455526884565" type="Tutorial">
+                                    <param id="0" name="Text">&quot;Premi Q per entrare&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="8921238142583615">
+                            <conditions>
+                                <condition id="1" inverted="1" name="Is overlapping another object" sid="3186312848654798" type="Player_Frame">
+                                    <param id="0" name="Object">Door_Area</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="3371551720244125" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="9313575764097327" type="Tutorial">
+                                    <param id="0" name="Opacity">0</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="8064496403221342" type="BackGround_Tut_Text">
+                                    <param id="0" name="Opacity">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="3999460760265066">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="7148163340011331" type="Keyboard">
+                                    <param id="0" name="Key">81 (Q)</param>
+                                </condition>
+                                <condition id="1" name="Is overlapping another object" sid="591772595219448" type="Player_Frame">
+                                    <param id="0" name="Object">Door_Area</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-34" name="Set layer background color" sid="4785380756706199" type="System">
+                                    <param id="0" name="Layer">&quot;Hud&quot;</param>
+                                    <param id="1" name="Color">rgb(0, 0, 0)</param>
+                                </action>
+                                <action id="-18" name="Set layer opacity" sid="1314393592630589" type="System">
+                                    <param id="0" name="Layer">&quot;Hud&quot;</param>
+                                    <param id="1" name="Opacity">0</param>
+                                </action>
+                                <action id="-35" name="Set layer transparent" sid="7939938813525046" type="System">
+                                    <param id="0" name="Layer">&quot;Hud&quot;</param>
+                                    <param id="1" name="Mode">0</param>
+                                </action>
+                                <action behavior="Fade" id="1" name="Start fade" sid="6970393567130888" type="Tutorial" />
+                                <action behavior="Fade" id="1" name="Start fade" sid="5703712476827963" type="BackGround_Tut_Text" />
+                                <action id="-15" name="Set visible" sid="1009750365290834" type="Hud">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="4112078482205444" type="Function">
+                                    <param id="0" name="Name">&quot;Player Memory Save&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="2386972744245618" type="Reloading">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="136916974525681" type="Player_Box">
+                                    <param id="0" name="Instance variable">Returning</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="3210484957350636">
+                            <conditions>
+                                <condition id="-17" name="Compare opacity" sid="1677129969484592" type="System">
+                                    <param id="0" name="Layer">&quot;Hud&quot;</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Opacity">100</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="4038734337114855" type="Player_Box">
+                                    <param id="0" name="Instance variable">Returning</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-18" name="Set layer opacity" sid="3555528649525007" type="System">
+                                    <param id="0" name="Layer">&quot;Hud&quot;</param>
+                                    <param id="1" name="Opacity">LayerOpacity(&quot;Hud&quot;) + 100*dt</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block disabled="1" sid="6863966494038256">
+                                    <conditions>
+                                        <condition id="-17" name="Compare opacity" sid="2194672092960038" type="System">
+                                            <param id="0" name="Layer">&quot;Hud&quot;</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Opacity">100</param>
+                                        </condition>
+                                        <condition id="-4" name="Trigger once while true" sid="6408795586457809" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Go to layout" sid="5661840566894631" type="System">
+                                            <param id="0" name="Layout">Intro Layout</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="2250246149231136">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="5650944227592617" type="Player_Frame">
+                            <param id="0" name="Object">Record_2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Fade" id="1" name="Start fade" sid="1915232095841015" type="Record_2" />
+                        <action id="11" name="Set collisions enabled" sid="3251358632107005" type="Record_2">
+                            <param id="0" name="Collisions">0</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="5449248693492922" type="Records">
+                            <param id="0" name="Opacity">100</param>
+                        </action>
+                        <action id="-16" name="Set opacity" sid="785869184169589" type="BackGround_Record_Text">
+                            <param id="0" name="Opacity">60</param>
+                        </action>
+                        <action id="0" name="Set text" sid="8001969136822703" type="Records">
+                            <param id="0" name="Text">&quot;Innamorarsi&quot;&amp;newline&amp;&quot;è stato un salto nel vuoto&quot;&amp;newline&amp;&quot;Caricatore + 1&quot;&amp;newline&amp;&quot;Vigore +1&quot;</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="535406411871542" type="Player_Box">
+                            <param id="0" name="Instance variable">Weapon_Max_Loader</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="3396607795385463" type="Player_Box">
+                            <param id="0" name="Instance variable">Dash_Max_Charges</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="4957181433724863" type="Function">
+                            <param id="0" name="Name">&quot;Hud Stamina&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action behavior="Timer" id="0" name="Start timer" sid="4086666629927975" type="Player_Box">
+                            <param id="0" name="Duration">3</param>
+                            <param id="1" name="Type">0</param>
+                            <param id="2" name="Tag">&quot;Record 2 Text Fading&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3302632060075446">
+                    <conditions>
+                        <condition behavior="Timer" id="0" name="On timer" sid="5064510547536979" type="Player_Box">
+                            <param id="0" name="Tag">&quot;Record 2 Text Fading&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Fade" id="1" name="Start fade" sid="2332248532547557" type="Records" />
+                        <action behavior="Fade" id="1" name="Start fade" sid="3384927401022466" type="BackGround_Record_Text" />
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>

@@ -145,11 +145,65 @@
                     <conditions>
                         <condition id="-9" name="Is visible" sid="6337644964523608" type="continue_sel" />
                     </conditions>
-                    <actions>
-                        <action id="-2" name="Go to layout" sid="7208283780827364" type="System">
-                            <param id="0" name="Layout">Level 2 Layout</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="5306240395663391">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="304801240150802" type="System">
+                                    <param id="0" name="Variable">Layout</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="7208283780827364" type="System">
+                                    <param id="0" name="Layout">Intro Layout</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4389090441747916">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="3026142871825756" type="System">
+                                    <param id="0" name="Variable">Layout</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="3902219115702984" type="System">
+                                    <param id="0" name="Layout">Level 1 Layout</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3215781596276234">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="3252082410274011" type="System">
+                                    <param id="0" name="Variable">Layout</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="9337521062267704" type="System">
+                                    <param id="0" name="Layout">Level 2 Layout</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4347109670825102">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="1381993228130507" type="System">
+                                    <param id="0" name="Variable">Layout</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="4937602222098286" type="System">
+                                    <param id="0" name="Layout">Boss Layout</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="2211993907375225">
                     <conditions>
@@ -162,10 +216,69 @@
                                 <condition id="-9" name="Is visible" sid="6934449093168466" type="restart_sel" />
                             </conditions>
                             <actions>
-                                <action id="-2" name="Go to layout" sid="4614034233117999" type="System">
-                                    <param id="0" name="Layout">Level 1 Layout</param>
+                                <action id="-9" name="Set value" sid="7035721482374542" type="System">
+                                    <param id="0" name="Variable">Restarting_Level</param>
+                                    <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="9103414274244962">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="4693103392198046" type="System">
+                                            <param id="0" name="Variable">Layout</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Go to layout" sid="7138531047514548" type="System">
+                                            <param id="0" name="Layout">Intro Layout</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="4602590859174893">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="5660048782745895" type="System">
+                                            <param id="0" name="Variable">Layout</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Go to layout" sid="8034910097473595" type="System">
+                                            <param id="0" name="Layout">Level 1 Layout</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="3647130173845898">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="5752338660114343" type="System">
+                                            <param id="0" name="Variable">Layout</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Go to layout" sid="5470719141229788" type="System">
+                                            <param id="0" name="Layout">Level 2 Layout</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="7027284485090297">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="4861744377249469" type="System">
+                                            <param id="0" name="Variable">Layout</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">3</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Go to layout" sid="4450492246028885" type="System">
+                                            <param id="0" name="Layout">Boss Layout</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="5592590126305181">
                             <conditions>
@@ -195,11 +308,65 @@
                     <param id="0" name="Key">27 (Esc)</param>
                 </condition>
             </conditions>
-            <actions>
-                <action id="-2" name="Go to layout" sid="3503539638657324" type="System">
-                    <param id="0" name="Layout">Level 1 Layout</param>
-                </action>
-            </actions>
+            <actions />
+            <sub-events>
+                <event-block sid="3206310584580764">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="7030622022570384" type="System">
+                            <param id="0" name="Variable">Layout</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="6874600876379389" type="System">
+                            <param id="0" name="Layout">Intro Layout</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2468932369134246">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="206482874624416" type="System">
+                            <param id="0" name="Variable">Layout</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="4007650123754343" type="System">
+                            <param id="0" name="Layout">Level 1 Layout</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="4070924270622635">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="7459227667454992" type="System">
+                            <param id="0" name="Variable">Layout</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="6747826797754156" type="System">
+                            <param id="0" name="Layout">Level 2 Layout</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="9320283506038694">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="6639319734506138" type="System">
+                            <param id="0" name="Variable">Layout</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="6642525069221828" type="System">
+                            <param id="0" name="Layout">Boss Layout</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>

@@ -11,11 +11,19 @@
                         <condition id="-2" name="On start of layout" sid="9020802935763986" type="System" />
                     </conditions>
                     <actions>
-                        <action disabled="1" id="-10" name="Set value" sid="4168916374519021" type="Player_Box">
-                            <param id="0" name="Instance variable">Level_2_Phases</param>
-                            <param id="1" name="Value">0</param>
+                        <action id="0" name="Call function" sid="8505584150029271" type="Function">
+                            <param id="0" name="Name">&quot;Hud and Text Positioning&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="3618403371524651" type="Function">
+                            <param id="0" name="Name">&quot;Player Memory Load&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                         <action id="2" name="Stop" sid="2499622492543257" type="MuroDistruttibileArco" />
+                        <action id="-9" name="Set value" sid="9742007437866873" type="System">
+                            <param id="0" name="Variable">Layout</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="7791996504521836">
@@ -1158,7 +1166,7 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-15" name="Set visible" sid="7155110258173457" type="BackGround_Hud_Text">
+                                <action id="-15" name="Set visible" sid="7155110258173457" type="BackGround_Tut_Text">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
                                 <action id="-15" name="Set visible" sid="4110294556448677" type="Dialogue">
@@ -1625,6 +1633,13 @@
                                         <action id="-10" name="Set value" sid="8951287590987765" type="Player_Box">
                                             <param id="0" name="Instance variable">Level_2_Phases</param>
                                             <param id="1" name="Value">30</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="6542229631422046" type="Function">
+                                            <param id="0" name="Name">&quot;Player Memory Save&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
+                                        <action id="-15" name="Set visible" sid="1994362025363434" type="Reloading">
+                                            <param id="0" name="Visibility">0</param>
                                         </action>
                                     </actions>
                                 </event-block>

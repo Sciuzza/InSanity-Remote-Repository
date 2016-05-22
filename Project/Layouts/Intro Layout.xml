@@ -349,6 +349,7 @@
                         <collisions>Disabled</collisions>
                     </properties>
                     <behavior-instances>
+                        <behavior-instance type="Persist" />
                         <behavior-instance type="Fade">
                             <properties>
                                 <active-at-start>No</active-at-start>
@@ -448,6 +449,7 @@
                         <Life>1</Life>
                     </instance-variables>
                     <behavior-instances>
+                        <behavior-instance type="Persist" />
                         <behavior-instance type="Flash" />
                         <behavior-instance type="Timer" />
                     </behavior-instances>
@@ -479,6 +481,7 @@
                         <Life>1</Life>
                     </instance-variables>
                     <behavior-instances>
+                        <behavior-instance type="Persist" />
                         <behavior-instance type="Bullet">
                             <properties>
                                 <speed>200</speed>
@@ -582,6 +585,7 @@
                         <Next_ID_Right>1</Next_ID_Right>
                     </instance-variables>
                     <behavior-instances>
+                        <behavior-instance type="Persist" />
                         <behavior-instance type="Pin" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
@@ -634,13 +638,13 @@
                         <Dash>false</Dash>
                         <Dash_Speed>1300</Dash_Speed>
                         <Dash_Time>0.1</Dash_Time>
-                        <Dash_Charges>2</Dash_Charges>
+                        <Dash_Charges>0</Dash_Charges>
                         <Dash_Recharge_Time>2</Dash_Recharge_Time>
-                        <Dash_Max_Charges>2</Dash_Max_Charges>
+                        <Dash_Max_Charges>1</Dash_Max_Charges>
                         <Weapon_Level>0</Weapon_Level>
                         <Weapon_Loader>4</Weapon_Loader>
                         <Weapon_Max_Loader>4</Weapon_Max_Loader>
-                        <Reloading_Time>2</Reloading_Time>
+                        <Reloading_Time>0.5</Reloading_Time>
                         <Reloading>false</Reloading>
                         <Stun_Ability>false</Stun_Ability>
                         <Jump_Is_On>true</Jump_Is_On>
@@ -654,11 +658,13 @@
                         <Is_Dead>false</Is_Dead>
                         <Is_Paused>false</Is_Paused>
                         <Level_1_Phases>0</Level_1_Phases>
-                        <Level_2_Phases>-1</Level_2_Phases>
+                        <Level_2_Phases>0</Level_2_Phases>
                         <Camera_On_Player>true</Camera_On_Player>
                         <Res_Room_Visible>false</Res_Room_Visible>
+                        <Returning>false</Returning>
                     </instance-variables>
                     <behavior-instances>
+                        <behavior-instance type="Persist" />
                         <behavior-instance type="Platform">
                             <properties>
                                 <max-speed>160</max-speed>
@@ -674,7 +680,6 @@
                             </properties>
                         </behavior-instance>
                         <behavior-instance type="Timer" />
-                        <behavior-instance type="Persist" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -699,6 +704,7 @@
                         <collisions>Disabled</collisions>
                     </properties>
                     <behavior-instances>
+                        <behavior-instance type="Persist" />
                         <behavior-instance type="ScrollTo">
                             <properties>
                                 <initial-state>Enabled</initial-state>
@@ -742,13 +748,13 @@
             <instances>
                 <instance type="Tutorial" uid="298">
                     <properties>
-                        <text>Text</text>
+                        <text></text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Courier,-13,400,0</font>
+                        <font>Courier,-7,400,0</font>
                         <color>255,255,255</color>
                         <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Center</hotspot>
                         <wrapping>Word</wrapping>
                         <line-height>0</line-height>
                     </properties>
@@ -757,15 +763,6 @@
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Timer" />
-                        <behavior-instance type="Anchor">
-                            <properties>
-                                <left-edge>None</left-edge>
-                                <top-edge>Window top</top-edge>
-                                <right-edge>None</right-edge>
-                                <bottom-edge>None</bottom-edge>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
                         <behavior-instance type="Fade">
                             <properties>
                                 <active-at-start>No</active-at-start>
@@ -779,16 +776,16 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>160</x>
-                        <y>5</y>
+                        <x>197.156570435</x>
+                        <y>-125.02784729</y>
                         <z>0</z>
                         <width>160</width>
                         <height>80</height>
                         <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
-                        <opacity>1</opacity>
+                        <opacity>0</opacity>
                     </world>
                 </instance>
                 <instance type="Bullet_1_Player" uid="11">
@@ -860,9 +857,9 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="BackGround_Hud_Text" uid="82">
+                <instance type="BackGround_Tut_Text" uid="82">
                     <properties>
-                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
@@ -882,16 +879,16 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-135.715545654</x>
-                        <y>349.544830322</y>
+                        <x>-134</x>
+                        <y>-133</y>
                         <z>0</z>
                         <width>160</width>
                         <height>80</height>
                         <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
+                        <hotspotX>0.501557648</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
-                        <opacity>0.800000012</opacity>
+                        <opacity>0</opacity>
                     </world>
                 </instance>
                 <instance type="Hud_Corpo" uid="1490">
@@ -901,22 +898,11 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Anchor">
-                            <properties>
-                                <left-edge>Window left</left-edge>
-                                <top-edge>Window top</top-edge>
-                                <right-edge>None</right-edge>
-                                <bottom-edge>None</bottom-edge>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>40</x>
-                        <y>27</y>
+                        <x>-9.222686768</x>
+                        <y>-135.262969971</y>
                         <z>0</z>
                         <width>63</width>
                         <height>26</height>
@@ -1395,8 +1381,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>10</x>
-                        <y>43</y>
+                        <x>34.287979126</x>
+                        <y>-145.720748901</y>
                         <z>0</z>
                         <width>70</width>
                         <height>26</height>
@@ -1405,6 +1391,116 @@
                         <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="GameOver" uid="2072">
+                    <properties>
+                        <text>Non ricordo fosse andata così...</text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Courier,-16,400,0</font>
+                        <color>255,0,0</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Center</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>No</active-at-start>
+                                <fade-in-time>0</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>0.3</fade-out-time>
+                                <destroy>No</destroy>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-166.082550049</x>
+                        <y>-172.683380127</y>
+                        <z>0</z>
+                        <width>175</width>
+                        <height>127</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0</opacity>
+                    </world>
+                </instance>
+                <instance type="Records" uid="2073">
+                    <properties>
+                        <text></text>
+                        <initial-visibility>Visible</initial-visibility>
+                        <font>Courier,-5,400,0</font>
+                        <color>255,255,255</color>
+                        <horizontal-alignment>Center</horizontal-alignment>
+                        <vertical-alignment>Center</vertical-alignment>
+                        <hotspot>Center</hotspot>
+                        <wrapping>Word</wrapping>
+                        <line-height>0</line-height>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>No</active-at-start>
+                                <fade-in-time>0</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>0.3</fade-out-time>
+                                <destroy>No</destroy>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-209.407943726</x>
+                        <y>-72.190994263</y>
+                        <z>0</z>
+                        <width>100</width>
+                        <height>50</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0</opacity>
+                    </world>
+                </instance>
+                <instance type="BackGround_Record_Text" uid="2074">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>No</active-at-start>
+                                <fade-in-time>0</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>0.3</fade-out-time>
+                                <destroy>No</destroy>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-280</x>
+                        <y>44</y>
+                        <z>0</z>
+                        <width>100</width>
+                        <height>50</height>
+                        <depth>0</depth>
+                        <hotspotX>0.501558006</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0</opacity>
                     </world>
                 </instance>
             </instances>
