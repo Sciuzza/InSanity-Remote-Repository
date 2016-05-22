@@ -7246,6 +7246,14 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Ballconata" sid="5738968381496841">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9426636644591477" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501484" original-source="C:\Users\Drako-PC\Downloads\Ballconata.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Hud" plugin-id="Sprite" sid="6636688502215522">
@@ -7384,7 +7392,26 @@
             <file name="Metal_Gong-Dianakc-109711828.ogg" />
         </sound-folder>
     </sounds-folder>
-    <music-folder />
+    <music-folder>
+        <file name="bossfase2-2.m4a" />
+        <file name="bossfase2-2.ogg" />
+        <file name="cutsceneend-1.m4a" />
+        <file name="cutsceneend-1.ogg" />
+        <file name="cutscenestart-1.m4a" />
+        <file name="cutscenestart-1.ogg" />
+        <file name="dialoghi-1.m4a" />
+        <file name="dialoghi-1.ogg" />
+        <file name="gameover-1.m4a" />
+        <file name="gameover-1.ogg" />
+        <file name="livello1-1.m4a" />
+        <file name="livello1-1.ogg" />
+        <file name="livello1-2.m4a" />
+        <file name="livello1-2.ogg" />
+        <file name="livello2-2.m4a" />
+        <file name="livello2-2.ogg" />
+        <file name="menu-2.m4a" />
+        <file name="menu-2.ogg" />
+    </music-folder>
     <files-folder>
         <file-folder name="Icons">
             <file name="icon-16.png" />
