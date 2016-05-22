@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Pause Sheet</name>
     <events>
+        <include>Player</include>
         <event-block sid="8390851471690165">
             <conditions>
                 <condition id="0" name="On key pressed" sid="1838905921931039" type="Keyboard">

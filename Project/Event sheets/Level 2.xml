@@ -25,6 +25,61 @@
                             <param id="1" name="Value">2</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="9948386645817593">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="6895456255495159" type="System">
+                                    <param id="0" name="Variable">Restarting_Level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="1902167743497403" type="Player_Box">
+                                    <param id="0" name="X">700</param>
+                                    <param id="1" name="Y">2534</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8784950565874043">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="248588530021143" type="System">
+                                    <param id="0" name="Variable">Restarting_Level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="5167118036741493" type="Player_Box">
+                                    <param id="0" name="X">Player_pos_x_temp</param>
+                                    <param id="1" name="Y">Player_pos_y_temp</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8630276506858116">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="7788406810059272" type="System">
+                                    <param id="0" name="Variable">Save_Level_2</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="3065414572418843" type="Function">
+                                    <param id="0" name="Name">&quot;Player Memory Save&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-9" name="Set value" sid="6502517354483539" type="System">
+                                    <param id="0" name="Variable">Save_Level_2</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="914068886930254" type="Player_Box">
+                                    <param id="0" name="X">700</param>
+                                    <param id="1" name="Y">2534</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="7791996504521836">
                     <conditions>

@@ -29,7 +29,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="EndLevelBG" uid="1687">
+                <instance type="EndLevelBG" uid="1693">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -70,7 +70,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="exit_unsel" uid="1688">
+                <instance type="exit_unsel" uid="1694">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -92,7 +92,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="restart_unsel" uid="1689">
+                <instance type="restart_unsel" uid="1695">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -114,7 +114,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text2" uid="1690">
+                <instance type="Text2" uid="1696">
                     <properties>
                         <text>Tempo Trascorso</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -141,7 +141,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text2" uid="1691">
+                <instance type="Text2" uid="1697">
                     <properties>
                         <text>Nemici Uccisi</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -168,7 +168,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Text2" uid="1692">
+                <instance type="Text2" uid="1698">
                     <properties>
                         <text>Ricordi Raccolti</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -195,7 +195,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TimeText" uid="1693">
+                <instance type="TimeText" uid="1699">
                     <properties>
                         <text>00:00</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -222,7 +222,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="EnemiesText" uid="1694">
+                <instance type="EnemiesText" uid="1700">
                     <properties>
                         <text>0</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -249,7 +249,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="EnemiesText2" uid="1695">
+                <instance type="EnemiesText2" uid="1701">
                     <properties>
                         <text>0/3</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -276,7 +276,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="restart_sel" uid="1696">
+                <instance type="restart_sel" uid="1702">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -298,7 +298,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="continue_unsel" uid="1697">
+                <instance type="continue_unsel" uid="1703">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -320,7 +320,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="continue_sel" uid="1698">
+                <instance type="continue_sel" uid="1704">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -342,7 +342,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="exit_sel" uid="1699">
+                <instance type="exit_sel" uid="1705">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -364,7 +364,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="endlevel_title" uid="1700">
+                <instance type="endlevel_title" uid="1706">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>

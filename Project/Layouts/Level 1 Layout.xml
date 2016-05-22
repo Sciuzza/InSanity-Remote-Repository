@@ -1693,7 +1693,7 @@
                         <width>92</width>
                         <height>24</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
+                        <hotspotX>0.510869563</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
@@ -1715,7 +1715,7 @@
                         <width>92</width>
                         <height>24</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
+                        <hotspotX>0.510869563</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>-0.167771369</angle>
                         <opacity>1</opacity>
@@ -1737,7 +1737,7 @@
                         <width>80.725875854</width>
                         <height>21.058923721</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
+                        <hotspotX>0.510869563</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
@@ -2479,6 +2479,9 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Flash" />
+                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
@@ -2525,6 +2528,28 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="Door_Area" uid="2065">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>27.93548584</x>
+                        <y>576</y>
+                        <z>0</z>
+                        <width>43</width>
+                        <height>72</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0</opacity>
+                    </world>
+                </instance>
                 <instance type="Player_Box" uid="25">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
@@ -2557,6 +2582,7 @@
                         <Bridge_Destroyed>false</Bridge_Destroyed>
                         <Is_Dead>false</Is_Dead>
                         <Is_Paused>false</Is_Paused>
+                        <Intro_Phases>0</Intro_Phases>
                         <Level_1_Phases>0</Level_1_Phases>
                         <Level_2_Phases>0</Level_2_Phases>
                         <Camera_On_Player>true</Camera_On_Player>
@@ -2584,8 +2610,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>77</x>
-                        <y>603</y>
+                        <x>60</x>
+                        <y>619</y>
                         <z>0</z>
                         <width>11.636363983</width>
                         <height>36</height>
@@ -2594,28 +2620,6 @@
                         <hotspotY>1</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Door_Area" uid="2065">
-                    <properties>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>27.93548584</x>
-                        <y>576</y>
-                        <z>0</z>
-                        <width>43</width>
-                        <height>72</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>0</opacity>
                     </world>
                 </instance>
             </instances>
@@ -5158,8 +5162,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>78</x>
-                        <y>542</y>
+                        <x>58</x>
+                        <y>567</y>
                         <z>0</z>
                         <width>8</width>
                         <height>8</height>
@@ -5327,7 +5331,7 @@
                         <line-height>0</line-height>
                     </properties>
                     <instance-variables>
-                        <State>-1</State>
+                        <State>0</State>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Timer" />
@@ -5648,7 +5652,7 @@
                 </instance>
                 <instance type="GameOver" uid="2076">
                     <properties>
-                        <text>Non ricordo fosse andata così...</text>
+                        <text>Non ricordo fosse andata così... Premi Q per tornare all&apos;ultimo checkpoint</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Courier,-16,400,0</font>
                         <color>255,0,0</color>
@@ -5712,7 +5716,7 @@
                         <width>100</width>
                         <height>50</height>
                         <depth>0</depth>
-                        <hotspotX>0.501558006</hotspotX>
+                        <hotspotX>0.501557648</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>0</opacity>

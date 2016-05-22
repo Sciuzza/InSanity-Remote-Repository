@@ -1561,8 +1561,33 @@
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9477892630799824" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <animation framecount="3" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="9477892630799824" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Biter\Idle\000.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Biter\Idle\001.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Biter\Idle\002.png" />
+                    </animation>
+                    <animation framecount="2" loop="0" name="Glide" pingpong="0" repeatcount="1" repeatto="0" sid="6237625859615909" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Biter\Glide\000.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Biter\Glide\001.png" />
+                    </animation>
+                    <animation framecount="2" loop="0" name="Glide_Teeth" pingpong="0" repeatcount="1" repeatto="0" sid="4022382626958666" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Biter\Glide_Teeth\000.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Biter\Glide_Teeth\001.png" />
+                    </animation>
+                    <animation framecount="3" loop="1" name="Ide_RedEye" pingpong="0" repeatcount="1" repeatto="0" sid="3769815346288681" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Biter\Idle_RedEye\000.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Biter\Idle_RedEye\001.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Biter\Idle_RedEye\002.png" />
+                    </animation>
+                    <animation framecount="3" loop="1" name="Idle_RedEye_Teeth" pingpong="0" repeatcount="1" repeatto="0" sid="6989947534641222" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Biter\Idle_RedEye_Teeth\000.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Biter\Idle_RedEye_Teeth\001.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Biter\Idle_RedEye_Teeth\002.png" />
+                    </animation>
+                    <animation framecount="3" loop="1" name="Idle_Teeth" pingpong="0" repeatcount="1" repeatto="0" sid="5956944151513423" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Biter\Idle_Teeth\000.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Biter\Idle_Teeth\001.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Biter\Idle_Teeth\002.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1961,7 +1986,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="Player_Box" sid="8534937278847791">
+            <object-type global="1" name="Player_Box" sid="8534937278847791">
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable name="Life" sid="3845622154724521" type="number" />
@@ -1988,6 +2013,7 @@
                     <instance-variable name="Bridge_Destroyed" sid="7716916467687827" type="boolean" />
                     <instance-variable name="Is_Dead" sid="5701586237341312" type="boolean" />
                     <instance-variable name="Is_Paused" sid="1792122627089268" type="boolean" />
+                    <instance-variable name="Intro_Phases" sid="2919288332513902" type="number" />
                     <instance-variable name="Level_1_Phases" sid="3744297378801938" type="number" />
                     <instance-variable name="Level_2_Phases" sid="521681513767556" type="number" />
                     <instance-variable name="Camera_On_Player" sid="2010312032397601" type="boolean" />
@@ -2013,6 +2039,11 @@
             </object-type>
             <object-type name="Player_Frame" sid="9135498748240823">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Flash" sid="133288865210166">
+                        <behavior id="Flash" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
                     <animation framecount="2" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="3019279558857857" speed="2">
                         <frame duration="1" hotspotX="0.5" hotspotY="1">
@@ -2593,7 +2624,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="SolidObjects" sid="2245287717022135">
+            <object-type global="1" name="SolidObjects" sid="2245287717022135">
                 <plugin id="Sprite" />
                 <behaviors>
                     <behavior-type name="Solid" sid="9331363195371243">
@@ -2813,7 +2844,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="PiattaformaAttraversabile" sid="4242928662593286">
+            <object-type global="1" name="PiattaformaAttraversabile" sid="4242928662593286">
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable name="Is_Enabled" sid="682913673980802" type="boolean" />
@@ -6854,7 +6885,7 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6243213269260028" speed="5">
-                    <frame duration="1" hotspotX="0.510204" hotspotY="0.505618" original-source="C:\Users\dbga_21\AppData\Local\Temp\Rar$DRa0.490\Level 2\Statua 01.png">
+                    <frame duration="1" hotspotX="0.51087" hotspotY="0.5" original-source="C:\Users\dbga_21\AppData\Local\Temp\Rar$DRa0.490\Level 2\Statua 01.png">
                         <collision-poly>
                             <point x="0.306122" y="0.168539" />
                             <point x="0.489796" y="0" />
@@ -7181,9 +7212,9 @@
         <event-sheet>Cutscene End Sheet.xml</event-sheet>
     </event-folder>
     <global-instances>
-        <global-instance type="Keyboard" uid="2061" />
-        <global-instance type="Mouse" uid="2062" />
-        <global-instance type="Audio" uid="2063">
+        <global-instance type="Keyboard" uid="2112" />
+        <global-instance type="Mouse" uid="2113" />
+        <global-instance type="Audio" uid="2114">
             <properties>
                 <timescale-audio>Off</timescale-audio>
                 <saveload>All</saveload>
@@ -7197,7 +7228,7 @@
                 <roll-off-factor>1</roll-off-factor>
             </properties>
         </global-instance>
-        <global-instance type="Function" uid="2064" />
+        <global-instance type="Function" uid="2115" />
     </global-instances>
     <sounds-folder>
         <sound-folder name="PlaceHolder Sounds">

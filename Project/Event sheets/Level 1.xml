@@ -17,10 +17,6 @@
                             <param id="0" name="Name">&quot;Hud and Text Positioning&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
-                        <action id="0" name="Call function" sid="2799959558208097" type="Function">
-                            <param id="0" name="Name">&quot;Player Memory Load&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
                         <action id="2" name="Stop" sid="6746251571539744" type="CheckPoint" />
                         <action id="1" name="Set size" sid="3506362689263001" type="MinutesContainer">
                             <param id="0" name="Width">4</param>
@@ -57,6 +53,59 @@
                         </action>
                     </actions>
                     <sub-events>
+                        <event-block sid="5746811443294065">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="6284875334321609" type="System">
+                                    <param id="0" name="Variable">Restarting_Level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="4844897353831172" type="Player_Box">
+                                    <param id="0" name="X">58</param>
+                                    <param id="1" name="Y">567</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6274433266165746">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="1062797114298038" type="System">
+                                    <param id="0" name="Variable">Restarting_Level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="5918065864641531" type="Player_Box">
+                                    <param id="0" name="X">Player_pos_x_temp</param>
+                                    <param id="1" name="Y">Player_pos_y_temp</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2448837892943711">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="5130682565131695" type="System">
+                                    <param id="0" name="Variable">Save_Level_1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="2799959558208097" type="Function">
+                                    <param id="0" name="Name">&quot;Player Memory Save&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-9" name="Set value" sid="1025349485865894" type="System">
+                                    <param id="0" name="Variable">Save_Level_1</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="9020418484237589" type="Player_Box">
+                                    <param id="0" name="X">58</param>
+                                    <param id="1" name="Y">567</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="1144040906186277">
                             <conditions>
                                 <condition id="-14" name="Pick by unique ID" sid="5923836166192857" type="lampione4">
