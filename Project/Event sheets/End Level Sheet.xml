@@ -3,191 +3,128 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>End Level Sheet</name>
     <events>
-        <event-block sid="9967055731721813">
+        <event-block sid="9197332478577504">
             <conditions>
-                <condition id="0" name="On key pressed" sid="3215262111225554" type="Keyboard">
-                    <param id="0" name="Key">87 (W)</param>
+                <condition id="6" name="On object clicked" sid="1779817693825895" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">LivelloCompletoRiquadroContinua</param>
                 </condition>
             </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="8411512071055226">
-                    <conditions>
-                        <condition id="-9" name="Is visible" sid="315648060918196" type="continue_sel" />
-                    </conditions>
-                    <actions>
-                        <action id="-15" name="Set visible" sid="1077477774460589" type="exit_sel">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="7973196215177621" type="continue_sel">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="116111507466419">
-                    <conditions>
-                        <condition id="-22" name="Else" sid="6250967626692463" type="System" />
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="2106900387073105">
-                            <conditions>
-                                <condition id="-9" name="Is visible" sid="2012906607114793" type="restart_sel" />
-                            </conditions>
-                            <actions>
-                                <action id="-15" name="Set visible" sid="8527214786027826" type="continue_sel">
-                                    <param id="0" name="Visibility">1</param>
-                                </action>
-                                <action id="-15" name="Set visible" sid="1981550929520856" type="restart_sel">
-                                    <param id="0" name="Visibility">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="250623103268369">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="8301593758398327" type="System" />
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="4828973430045139">
-                                    <conditions>
-                                        <condition id="-9" name="Is visible" sid="4843193963906675" type="exit_sel" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="-15" name="Set visible" sid="686995265346909" type="restart_sel">
-                                            <param id="0" name="Visibility">1</param>
-                                        </action>
-                                        <action id="-15" name="Set visible" sid="7246161713564474" type="exit_sel">
-                                            <param id="0" name="Visibility">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-            </sub-events>
+            <actions>
+                <action id="-2" name="Go to layout" sid="9798334908290007" type="System">
+                    <param id="0" name="Layout">Level 2 Layout</param>
+                </action>
+            </actions>
         </event-block>
-        <event-block sid="9353755225232636">
+        <event-block sid="2891160631712764">
             <conditions>
-                <condition id="0" name="On key pressed" sid="9414851819820606" type="Keyboard">
-                    <param id="0" name="Key">83 (S)</param>
+                <condition id="7" name="Cursor is over object" sid="1068959460439217" type="Mouse">
+                    <param id="0" name="Object">LivelloCompletoRiquadroContinua</param>
                 </condition>
             </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="3424617023007524">
-                    <conditions>
-                        <condition id="-9" name="Is visible" sid="4161218517507482" type="continue_sel" />
-                    </conditions>
-                    <actions>
-                        <action id="-15" name="Set visible" sid="3883934331742765" type="restart_sel">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="1635495487188201" type="continue_sel">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="7057303324808568">
-                    <conditions>
-                        <condition id="-22" name="Else" sid="2839721284081094" type="System" />
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="5284646154831064">
-                            <conditions>
-                                <condition id="-9" name="Is visible" sid="1529879034928873" type="restart_sel" />
-                            </conditions>
-                            <actions>
-                                <action id="-15" name="Set visible" sid="1721908411290157" type="exit_sel">
-                                    <param id="0" name="Visibility">1</param>
-                                </action>
-                                <action id="-15" name="Set visible" sid="3121168296768379" type="restart_sel">
-                                    <param id="0" name="Visibility">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="3300856529245202">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="6442804856941562" type="System" />
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="3082127139103302">
-                                    <conditions>
-                                        <condition id="-9" name="Is visible" sid="3159773605885791" type="exit_sel" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="-15" name="Set visible" sid="150558463120209" type="continue_sel">
-                                            <param id="0" name="Visibility">1</param>
-                                        </action>
-                                        <action id="-15" name="Set visible" sid="2720126246624181" type="exit_sel">
-                                            <param id="0" name="Visibility">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-            </sub-events>
+            <actions>
+                <action id="-15" name="Set visible" sid="468536571870477" type="LivelloCompletoRiquadroContinua">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="4413587112506922" type="LivelloCompletoRicominciaLivello">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="4602379604713403" type="LivelloCompletoTornaAlMenu">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
         </event-block>
-        <event-block sid="2304625733945292">
+        <event-block sid="6041399909121758">
             <conditions>
-                <condition id="0" name="On key pressed" sid="2954015591478141" type="Keyboard">
-                    <param id="0" name="Key">32 (Barra Spaziatrice)</param>
+                <condition id="6" name="On object clicked" sid="5856533184965933" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">LivelloCompletoRicominciaLivello</param>
                 </condition>
             </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="7232205857537159">
-                    <conditions>
-                        <condition id="-9" name="Is visible" sid="6141007670179862" type="continue_sel" />
-                    </conditions>
-                    <actions>
-                        <action id="-2" name="Go to layout" sid="1540959959808867" type="System">
-                            <param id="0" name="Layout">Level 2 Layout</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="2681243189371719">
-                    <conditions>
-                        <condition id="-22" name="Else" sid="4016361184965465" type="System" />
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="2802493256071483">
-                            <conditions>
-                                <condition id="-9" name="Is visible" sid="8950228628372932" type="restart_sel" />
-                            </conditions>
-                            <actions>
-                                <action id="-2" name="Go to layout" sid="2990125998220985" type="System">
-                                    <param id="0" name="Layout">Level 1 Layout</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="9437790123256311">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="7215597145616909" type="System" />
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="8415297819804663">
-                                    <conditions>
-                                        <condition id="-9" name="Is visible" sid="1465282450568823" type="exit_sel" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="-2" name="Go to layout" sid="7519346689883715" type="System">
-                                            <param id="0" name="Layout">Menu Start</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-            </sub-events>
+            <actions>
+                <action id="-2" name="Go to layout" sid="4619873444990792" type="System">
+                    <param id="0" name="Layout">Level 1 Layout</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8975765292214224">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="5550716993564924" type="Mouse">
+                    <param id="0" name="Object">LivelloCompletoRicominciaLivello</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="3403721849599155" type="LivelloCompletoRiquadroContinua">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="2382995955148605" type="LivelloCompletoRicominciaLivello">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="2453242416501835" type="LivelloCompletoTornaAlMenu">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8328066811302707">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="2315010494757436" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">LivelloCompletoTornaAlMenu</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-2" name="Go to layout" sid="8555427694568379" type="System">
+                    <param id="0" name="Layout">Menu Start</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="97098862348826">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="8022247422273113" type="Mouse">
+                    <param id="0" name="Object">LivelloCompletoTornaAlMenu</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="6773241228057986" type="LivelloCompletoRiquadroContinua">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="7325815162238578" type="LivelloCompletoRicominciaLivello">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="7149083680308715" type="LivelloCompletoTornaAlMenu">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5396820840799226">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="3657666975830564" type="Mouse">
+                    <param id="0" name="Object">LivelloCompletoSfondo</param>
+                </condition>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="2589942658050353" type="Mouse">
+                    <param id="0" name="Object">LivelloCompletoRiquadroContinua</param>
+                </condition>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="9822762759507148" type="Mouse">
+                    <param id="0" name="Object">LivelloCompletoRicominciaLivello</param>
+                </condition>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="1962899403247956" type="Mouse">
+                    <param id="0" name="Object">LivelloCompletoTornaAlMenu</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="3911893766766437" type="PausaRiquadroContinuaRicomincia">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="3041312539510297" type="PausaRiquadroContinuaRicomincia2">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="6983684449520836" type="PausaRiquadroTornaAlMenu">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>

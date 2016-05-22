@@ -3,745 +3,264 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Load Checkpoints Sheet</name>
     <events>
-        <event-block sid="2989078451911969">
+        <event-block any="1" sid="7802645466656595">
             <conditions>
-                <condition id="0" name="On key pressed" sid="6661721541870615" type="Keyboard">
-                    <param id="0" name="Key">68 (D)</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="7214976854130362">
-                    <conditions>
-                        <condition id="-9" name="Is visible" sid="4823626780374298" type="level1_sel" />
-                    </conditions>
-                    <actions>
-                        <action id="-15" name="Set visible" sid="8996964423740811" type="level2_sel">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="7110865356432528" type="level1_sel">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="6358963022249205">
-                    <conditions>
-                        <condition id="-22" name="Else" sid="455577139101883" type="System" />
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="9964945595860789">
-                            <conditions>
-                                <condition id="-9" name="Is visible" sid="1070315939907752" type="checkpoint1_sel" />
-                            </conditions>
-                            <actions>
-                                <action id="-15" name="Set visible" sid="4492818643332228" type="checkpoint4_sel">
-                                    <param id="0" name="Visibility">1</param>
-                                </action>
-                                <action id="-15" name="Set visible" sid="2150125290061165" type="checkpoint1_sel">
-                                    <param id="0" name="Visibility">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="5117615626677866">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="8853198495340374" type="System" />
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="1313777656227748">
-                                    <conditions>
-                                        <condition id="-9" name="Is visible" sid="9607458198081131" type="checkpoint2_sel" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="-15" name="Set visible" sid="413982951212383" type="checkpoint5_sel">
-                                            <param id="0" name="Visibility">1</param>
-                                        </action>
-                                        <action id="-15" name="Set visible" sid="4588643060372706" type="checkpoint2_sel">
-                                            <param id="0" name="Visibility">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="6636919310214909">
-                                    <conditions>
-                                        <condition id="-22" name="Else" sid="4237547703955213" type="System" />
-                                    </conditions>
-                                    <actions />
-                                    <sub-events>
-                                        <event-block sid="3030055397337481">
-                                            <conditions>
-                                                <condition id="-9" name="Is visible" sid="1081723442362422" type="checkpoint3_sel" />
-                                            </conditions>
-                                            <actions>
-                                                <action id="-15" name="Set visible" sid="3528025277474834" type="checkpoint6_sel">
-                                                    <param id="0" name="Visibility">1</param>
-                                                </action>
-                                                <action id="-15" name="Set visible" sid="1214793078576607" type="checkpoint3_sel">
-                                                    <param id="0" name="Visibility">0</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="1876340972478253">
-                                            <conditions>
-                                                <condition id="-22" name="Else" sid="6211040411390524" type="System" />
-                                            </conditions>
-                                            <actions />
-                                            <sub-events>
-                                                <event-block sid="4699864086984859">
-                                                    <conditions>
-                                                        <condition id="-9" name="Is visible" sid="9516389696579897" type="level2_sel" />
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="-15" name="Set visible" sid="4268068784454701" type="level3_sel">
-                                                            <param id="0" name="Visibility">1</param>
-                                                        </action>
-                                                        <action id="-15" name="Set visible" sid="6575024187487894" type="level2_sel">
-                                                            <param id="0" name="Visibility">0</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                                <event-block sid="755361843924415">
-                                                    <conditions>
-                                                        <condition id="-22" name="Else" sid="4261392626511191" type="System" />
-                                                    </conditions>
-                                                    <actions />
-                                                    <sub-events>
-                                                        <event-block sid="9691023474413847">
-                                                            <conditions>
-                                                                <condition id="-9" name="Is visible" sid="4694661819785215" type="checkpoint4_sel" />
-                                                            </conditions>
-                                                            <actions>
-                                                                <action id="-15" name="Set visible" sid="3302104165423165" type="checkpoint1_sel">
-                                                                    <param id="0" name="Visibility">1</param>
-                                                                </action>
-                                                                <action id="-15" name="Set visible" sid="1196306105080005" type="checkpoint4_sel">
-                                                                    <param id="0" name="Visibility">0</param>
-                                                                </action>
-                                                            </actions>
-                                                        </event-block>
-                                                        <event-block sid="9318173880470122">
-                                                            <conditions>
-                                                                <condition id="-22" name="Else" sid="8155494316964751" type="System" />
-                                                            </conditions>
-                                                            <actions />
-                                                            <sub-events>
-                                                                <event-block sid="6133499919454624">
-                                                                    <conditions>
-                                                                        <condition id="-9" name="Is visible" sid="2091288207141598" type="checkpoint5_sel" />
-                                                                    </conditions>
-                                                                    <actions>
-                                                                        <action id="-15" name="Set visible" sid="396923625085785" type="checkpoint2_sel">
-                                                                            <param id="0" name="Visibility">1</param>
-                                                                        </action>
-                                                                        <action id="-15" name="Set visible" sid="6152699108944038" type="checkpoint5_sel">
-                                                                            <param id="0" name="Visibility">0</param>
-                                                                        </action>
-                                                                    </actions>
-                                                                </event-block>
-                                                                <event-block sid="297578200643384">
-                                                                    <conditions>
-                                                                        <condition id="-22" name="Else" sid="1798566645357778" type="System" />
-                                                                    </conditions>
-                                                                    <actions />
-                                                                    <sub-events>
-                                                                        <event-block sid="6517795281398762">
-                                                                            <conditions>
-                                                                                <condition id="-9" name="Is visible" sid="7504051740253901" type="checkpoint6_sel" />
-                                                                            </conditions>
-                                                                            <actions>
-                                                                                <action id="-15" name="Set visible" sid="9944615965441947" type="checkpoint3_sel">
-                                                                                    <param id="0" name="Visibility">1</param>
-                                                                                </action>
-                                                                                <action id="-15" name="Set visible" sid="2313689866617503" type="checkpoint6_sel">
-                                                                                    <param id="0" name="Visibility">0</param>
-                                                                                </action>
-                                                                            </actions>
-                                                                        </event-block>
-                                                                        <event-block sid="4349201577117307">
-                                                                            <conditions>
-                                                                                <condition id="-22" name="Else" sid="8418996078191175" type="System" />
-                                                                            </conditions>
-                                                                            <actions />
-                                                                            <sub-events>
-                                                                                <event-block sid="8360044144256342">
-                                                                                    <conditions>
-                                                                                        <condition id="-9" name="Is visible" sid="4787896464806499" type="level3_sel" />
-                                                                                    </conditions>
-                                                                                    <actions>
-                                                                                        <action id="-15" name="Set visible" sid="4470297120142227" type="level1_sel">
-                                                                                            <param id="0" name="Visibility">1</param>
-                                                                                        </action>
-                                                                                        <action id="-15" name="Set visible" sid="8663652451102816" type="level3_sel">
-                                                                                            <param id="0" name="Visibility">0</param>
-                                                                                        </action>
-                                                                                    </actions>
-                                                                                </event-block>
-                                                                            </sub-events>
-                                                                        </event-block>
-                                                                    </sub-events>
-                                                                </event-block>
-                                                            </sub-events>
-                                                        </event-block>
-                                                    </sub-events>
-                                                </event-block>
-                                            </sub-events>
-                                        </event-block>
-                                    </sub-events>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="7551979106790802">
-            <conditions>
-                <condition id="0" name="On key pressed" sid="3461078259316425" type="Keyboard">
-                    <param id="0" name="Key">65 (A)</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="7789941264740295">
-                    <conditions>
-                        <condition id="-9" name="Is visible" sid="3431455852624165" type="level1_sel" />
-                    </conditions>
-                    <actions>
-                        <action id="-15" name="Set visible" sid="1481413215607844" type="level3_sel">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="6109791417479551" type="level1_sel">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="1913979095157557">
-                    <conditions>
-                        <condition id="-22" name="Else" sid="1212134404627132" type="System" />
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="592987434407397">
-                            <conditions>
-                                <condition id="-9" name="Is visible" sid="3225146817890897" type="checkpoint1_sel" />
-                            </conditions>
-                            <actions>
-                                <action id="-15" name="Set visible" sid="5749852667414098" type="checkpoint4_sel">
-                                    <param id="0" name="Visibility">1</param>
-                                </action>
-                                <action id="-15" name="Set visible" sid="389516777202147" type="checkpoint1_sel">
-                                    <param id="0" name="Visibility">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="4318948416393423">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="8032053786307414" type="System" />
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="3384218022048309">
-                                    <conditions>
-                                        <condition id="-9" name="Is visible" sid="4496972337992728" type="checkpoint2_sel" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="-15" name="Set visible" sid="3433711067426384" type="checkpoint5_sel">
-                                            <param id="0" name="Visibility">1</param>
-                                        </action>
-                                        <action id="-15" name="Set visible" sid="9336321337618093" type="checkpoint2_sel">
-                                            <param id="0" name="Visibility">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="3009755983057908">
-                                    <conditions>
-                                        <condition id="-22" name="Else" sid="3520856495224296" type="System" />
-                                    </conditions>
-                                    <actions />
-                                    <sub-events>
-                                        <event-block sid="4461971003401597">
-                                            <conditions>
-                                                <condition id="-9" name="Is visible" sid="2716807095120402" type="checkpoint3_sel" />
-                                            </conditions>
-                                            <actions>
-                                                <action id="-15" name="Set visible" sid="774612884945523" type="checkpoint6_sel">
-                                                    <param id="0" name="Visibility">1</param>
-                                                </action>
-                                                <action id="-15" name="Set visible" sid="1238282106542167" type="checkpoint3_sel">
-                                                    <param id="0" name="Visibility">0</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="3210154047251352">
-                                            <conditions>
-                                                <condition id="-22" name="Else" sid="9371042067072005" type="System" />
-                                            </conditions>
-                                            <actions />
-                                            <sub-events>
-                                                <event-block sid="7457224014718835">
-                                                    <conditions>
-                                                        <condition id="-9" name="Is visible" sid="9696341146510754" type="level2_sel" />
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="-15" name="Set visible" sid="3674740695351718" type="level1_sel">
-                                                            <param id="0" name="Visibility">1</param>
-                                                        </action>
-                                                        <action id="-15" name="Set visible" sid="6069478213519196" type="level2_sel">
-                                                            <param id="0" name="Visibility">0</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                                <event-block sid="3167397094290251">
-                                                    <conditions>
-                                                        <condition id="-22" name="Else" sid="4737195889164317" type="System" />
-                                                    </conditions>
-                                                    <actions />
-                                                    <sub-events>
-                                                        <event-block sid="2259025430870854">
-                                                            <conditions>
-                                                                <condition id="-9" name="Is visible" sid="2017459993871264" type="checkpoint4_sel" />
-                                                            </conditions>
-                                                            <actions>
-                                                                <action id="-15" name="Set visible" sid="9034078663841603" type="checkpoint1_sel">
-                                                                    <param id="0" name="Visibility">1</param>
-                                                                </action>
-                                                                <action id="-15" name="Set visible" sid="5304849788945772" type="checkpoint4_sel">
-                                                                    <param id="0" name="Visibility">0</param>
-                                                                </action>
-                                                            </actions>
-                                                        </event-block>
-                                                        <event-block sid="6566712798980682">
-                                                            <conditions>
-                                                                <condition id="-22" name="Else" sid="8393036181373037" type="System" />
-                                                            </conditions>
-                                                            <actions />
-                                                            <sub-events>
-                                                                <event-block sid="7074517120094441">
-                                                                    <conditions>
-                                                                        <condition id="-9" name="Is visible" sid="655574752892705" type="checkpoint5_sel" />
-                                                                    </conditions>
-                                                                    <actions>
-                                                                        <action id="-15" name="Set visible" sid="746150397637682" type="checkpoint2_sel">
-                                                                            <param id="0" name="Visibility">1</param>
-                                                                        </action>
-                                                                        <action id="-15" name="Set visible" sid="2148483919887015" type="checkpoint5_sel">
-                                                                            <param id="0" name="Visibility">0</param>
-                                                                        </action>
-                                                                    </actions>
-                                                                </event-block>
-                                                                <event-block sid="2825447492785825">
-                                                                    <conditions>
-                                                                        <condition id="-22" name="Else" sid="2153635853181025" type="System" />
-                                                                    </conditions>
-                                                                    <actions />
-                                                                    <sub-events>
-                                                                        <event-block sid="6535185924137476">
-                                                                            <conditions>
-                                                                                <condition id="-9" name="Is visible" sid="6078096622252236" type="checkpoint6_sel" />
-                                                                            </conditions>
-                                                                            <actions>
-                                                                                <action id="-15" name="Set visible" sid="9022742240378916" type="checkpoint3_sel">
-                                                                                    <param id="0" name="Visibility">1</param>
-                                                                                </action>
-                                                                                <action id="-15" name="Set visible" sid="2256324675554757" type="checkpoint6_sel">
-                                                                                    <param id="0" name="Visibility">0</param>
-                                                                                </action>
-                                                                            </actions>
-                                                                        </event-block>
-                                                                        <event-block sid="4920531762058682">
-                                                                            <conditions>
-                                                                                <condition id="-22" name="Else" sid="4667602428300932" type="System" />
-                                                                            </conditions>
-                                                                            <actions />
-                                                                            <sub-events>
-                                                                                <event-block sid="7747238517008212">
-                                                                                    <conditions>
-                                                                                        <condition id="-9" name="Is visible" sid="8783452096882529" type="level3_sel" />
-                                                                                    </conditions>
-                                                                                    <actions>
-                                                                                        <action id="-15" name="Set visible" sid="9494121234540918" type="level2_sel">
-                                                                                            <param id="0" name="Visibility">1</param>
-                                                                                        </action>
-                                                                                        <action id="-15" name="Set visible" sid="4332009986389329" type="level3_sel">
-                                                                                            <param id="0" name="Visibility">0</param>
-                                                                                        </action>
-                                                                                    </actions>
-                                                                                </event-block>
-                                                                            </sub-events>
-                                                                        </event-block>
-                                                                    </sub-events>
-                                                                </event-block>
-                                                            </sub-events>
-                                                        </event-block>
-                                                    </sub-events>
-                                                </event-block>
-                                            </sub-events>
-                                        </event-block>
-                                    </sub-events>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="7396319054220849">
-            <conditions>
-                <condition id="0" name="On key pressed" sid="311892031893309" type="Keyboard">
-                    <param id="0" name="Key">87 (W)</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="4488722347257484">
-                    <conditions>
-                        <condition id="-9" name="Is visible" sid="8069858069134045" type="checkpoint1_sel" />
-                    </conditions>
-                    <actions>
-                        <action id="-15" name="Set visible" sid="834886736432999" type="level1_sel">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="4730477658204299" type="checkpoint1_sel">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="5411783661608284">
-                    <conditions>
-                        <condition id="-22" name="Else" sid="1818177735462148" type="System" />
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="7478853707959114">
-                            <conditions>
-                                <condition id="-9" name="Is visible" sid="6857976520773517" type="checkpoint2_sel" />
-                            </conditions>
-                            <actions>
-                                <action id="-15" name="Set visible" sid="9505876849857596" type="checkpoint1_sel">
-                                    <param id="0" name="Visibility">1</param>
-                                </action>
-                                <action id="-15" name="Set visible" sid="988962067917885" type="checkpoint2_sel">
-                                    <param id="0" name="Visibility">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="3760683457744279">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="9321228974345719" type="System" />
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="6860116980552539">
-                                    <conditions>
-                                        <condition id="-9" name="Is visible" sid="2130159284762836" type="checkpoint3_sel" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="-15" name="Set visible" sid="5745715798497644" type="checkpoint2_sel">
-                                            <param id="0" name="Visibility">1</param>
-                                        </action>
-                                        <action id="-15" name="Set visible" sid="9974268991253281" type="checkpoint3_sel">
-                                            <param id="0" name="Visibility">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="2638202311314314">
-                                    <conditions>
-                                        <condition id="-22" name="Else" sid="8433740743912171" type="System" />
-                                    </conditions>
-                                    <actions />
-                                    <sub-events>
-                                        <event-block sid="1487372306057045">
-                                            <conditions>
-                                                <condition id="-9" name="Is visible" sid="3835206899069977" type="checkpoint4_sel" />
-                                            </conditions>
-                                            <actions>
-                                                <action id="-15" name="Set visible" sid="3422116041447582" type="level2_sel">
-                                                    <param id="0" name="Visibility">1</param>
-                                                </action>
-                                                <action id="-15" name="Set visible" sid="3527754360851075" type="checkpoint4_sel">
-                                                    <param id="0" name="Visibility">0</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="8690265962544415">
-                                            <conditions>
-                                                <condition id="-22" name="Else" sid="3625632738832786" type="System" />
-                                            </conditions>
-                                            <actions />
-                                            <sub-events>
-                                                <event-block sid="7811505240114631">
-                                                    <conditions>
-                                                        <condition id="-9" name="Is visible" sid="1107820520502585" type="checkpoint5_sel" />
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="-15" name="Set visible" sid="4456031876707154" type="checkpoint4_sel">
-                                                            <param id="0" name="Visibility">1</param>
-                                                        </action>
-                                                        <action id="-15" name="Set visible" sid="5066245002836431" type="checkpoint5_sel">
-                                                            <param id="0" name="Visibility">0</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                                <event-block sid="2892091621955988">
-                                                    <conditions>
-                                                        <condition id="-22" name="Else" sid="3810698931093419" type="System" />
-                                                    </conditions>
-                                                    <actions />
-                                                    <sub-events>
-                                                        <event-block sid="6808790930294625">
-                                                            <conditions>
-                                                                <condition id="-9" name="Is visible" sid="7083625233122846" type="checkpoint6_sel" />
-                                                            </conditions>
-                                                            <actions>
-                                                                <action id="-15" name="Set visible" sid="4886123724245727" type="checkpoint5_sel">
-                                                                    <param id="0" name="Visibility">1</param>
-                                                                </action>
-                                                                <action id="-15" name="Set visible" sid="6747717893188105" type="checkpoint6_sel">
-                                                                    <param id="0" name="Visibility">0</param>
-                                                                </action>
-                                                            </actions>
-                                                        </event-block>
-                                                        <event-block sid="2093563009541868">
-                                                            <conditions>
-                                                                <condition id="-22" name="Else" sid="5454579966798086" type="System" />
-                                                            </conditions>
-                                                            <actions />
-                                                            <sub-events>
-                                                                <event-block sid="2546844072549965">
-                                                                    <conditions>
-                                                                        <condition id="-9" name="Is visible" sid="1968643517837518" type="level1_sel" />
-                                                                    </conditions>
-                                                                    <actions>
-                                                                        <action id="-15" name="Set visible" sid="1471555154713399" type="checkpoint3_sel">
-                                                                            <param id="0" name="Visibility">1</param>
-                                                                        </action>
-                                                                        <action id="-15" name="Set visible" sid="4702674695779601" type="level1_sel">
-                                                                            <param id="0" name="Visibility">0</param>
-                                                                        </action>
-                                                                    </actions>
-                                                                </event-block>
-                                                                <event-block sid="2039974685968612">
-                                                                    <conditions>
-                                                                        <condition id="-22" name="Else" sid="8580096163915966" type="System" />
-                                                                    </conditions>
-                                                                    <actions />
-                                                                    <sub-events>
-                                                                        <event-block sid="5668578312045611">
-                                                                            <conditions>
-                                                                                <condition id="-9" name="Is visible" sid="4736042936232672" type="level2_sel" />
-                                                                            </conditions>
-                                                                            <actions>
-                                                                                <action id="-15" name="Set visible" sid="6765735580810429" type="checkpoint6_sel">
-                                                                                    <param id="0" name="Visibility">1</param>
-                                                                                </action>
-                                                                                <action id="-15" name="Set visible" sid="7857314571094428" type="level2_sel">
-                                                                                    <param id="0" name="Visibility">0</param>
-                                                                                </action>
-                                                                            </actions>
-                                                                        </event-block>
-                                                                    </sub-events>
-                                                                </event-block>
-                                                            </sub-events>
-                                                        </event-block>
-                                                    </sub-events>
-                                                </event-block>
-                                            </sub-events>
-                                        </event-block>
-                                    </sub-events>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="3032318434684788">
-            <conditions>
-                <condition id="0" name="On key pressed" sid="2665351887166964" type="Keyboard">
-                    <param id="0" name="Key">83 (S)</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="7758556525513165">
-                    <conditions>
-                        <condition id="-9" name="Is visible" sid="1375068331448753" type="checkpoint1_sel" />
-                    </conditions>
-                    <actions>
-                        <action id="-15" name="Set visible" sid="9068684492048046" type="checkpoint2_sel">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="5660733860506818" type="checkpoint1_sel">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="4433824661069674">
-                    <conditions>
-                        <condition id="-22" name="Else" sid="7824349490228474" type="System" />
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="1847438126866999">
-                            <conditions>
-                                <condition id="-9" name="Is visible" sid="5467501999873589" type="checkpoint2_sel" />
-                            </conditions>
-                            <actions>
-                                <action id="-15" name="Set visible" sid="9608842869488586" type="checkpoint3_sel">
-                                    <param id="0" name="Visibility">1</param>
-                                </action>
-                                <action id="-15" name="Set visible" sid="6994843764287798" type="checkpoint2_sel">
-                                    <param id="0" name="Visibility">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="8700673681213564">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="9950697214103302" type="System" />
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="2927712580584755">
-                                    <conditions>
-                                        <condition id="-9" name="Is visible" sid="7220157981295331" type="checkpoint3_sel" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="-15" name="Set visible" sid="4452890855032277" type="level1_sel">
-                                            <param id="0" name="Visibility">1</param>
-                                        </action>
-                                        <action id="-15" name="Set visible" sid="8049623357000047" type="checkpoint3_sel">
-                                            <param id="0" name="Visibility">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="5747325531138161">
-                                    <conditions>
-                                        <condition id="-22" name="Else" sid="2738045318534368" type="System" />
-                                    </conditions>
-                                    <actions />
-                                    <sub-events>
-                                        <event-block sid="3026473135543954">
-                                            <conditions>
-                                                <condition id="-9" name="Is visible" sid="1183033301142673" type="checkpoint4_sel" />
-                                            </conditions>
-                                            <actions>
-                                                <action id="-15" name="Set visible" sid="5190236753637605" type="checkpoint5_sel">
-                                                    <param id="0" name="Visibility">1</param>
-                                                </action>
-                                                <action id="-15" name="Set visible" sid="6418858919785315" type="checkpoint4_sel">
-                                                    <param id="0" name="Visibility">0</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="9254888721992186">
-                                            <conditions>
-                                                <condition id="-22" name="Else" sid="7326263013382701" type="System" />
-                                            </conditions>
-                                            <actions />
-                                            <sub-events>
-                                                <event-block sid="4228171219042616">
-                                                    <conditions>
-                                                        <condition id="-9" name="Is visible" sid="4742020370220358" type="checkpoint5_sel" />
-                                                    </conditions>
-                                                    <actions>
-                                                        <action id="-15" name="Set visible" sid="3822069002126976" type="checkpoint6_sel">
-                                                            <param id="0" name="Visibility">1</param>
-                                                        </action>
-                                                        <action id="-15" name="Set visible" sid="2944243042870842" type="checkpoint5_sel">
-                                                            <param id="0" name="Visibility">0</param>
-                                                        </action>
-                                                    </actions>
-                                                </event-block>
-                                                <event-block sid="5859729693453999">
-                                                    <conditions>
-                                                        <condition id="-22" name="Else" sid="6955142346688258" type="System" />
-                                                    </conditions>
-                                                    <actions />
-                                                    <sub-events>
-                                                        <event-block sid="9248313851024858">
-                                                            <conditions>
-                                                                <condition id="-9" name="Is visible" sid="8446599811022885" type="checkpoint6_sel" />
-                                                            </conditions>
-                                                            <actions>
-                                                                <action id="-15" name="Set visible" sid="725915190005854" type="level2_sel">
-                                                                    <param id="0" name="Visibility">1</param>
-                                                                </action>
-                                                                <action id="-15" name="Set visible" sid="4110589238029488" type="checkpoint6_sel">
-                                                                    <param id="0" name="Visibility">0</param>
-                                                                </action>
-                                                            </actions>
-                                                        </event-block>
-                                                        <event-block sid="1976074501949536">
-                                                            <conditions>
-                                                                <condition id="-22" name="Else" sid="2147206910259599" type="System" />
-                                                            </conditions>
-                                                            <actions />
-                                                            <sub-events>
-                                                                <event-block sid="1379654358043925">
-                                                                    <conditions>
-                                                                        <condition id="-9" name="Is visible" sid="1337210131319367" type="level1_sel" />
-                                                                    </conditions>
-                                                                    <actions>
-                                                                        <action id="-15" name="Set visible" sid="7875754136211649" type="checkpoint1_sel">
-                                                                            <param id="0" name="Visibility">1</param>
-                                                                        </action>
-                                                                        <action id="-15" name="Set visible" sid="9120441339647164" type="level1_sel">
-                                                                            <param id="0" name="Visibility">0</param>
-                                                                        </action>
-                                                                    </actions>
-                                                                </event-block>
-                                                                <event-block sid="3598607634648933">
-                                                                    <conditions>
-                                                                        <condition id="-22" name="Else" sid="602452734999318" type="System" />
-                                                                    </conditions>
-                                                                    <actions />
-                                                                    <sub-events>
-                                                                        <event-block sid="3821488876911098">
-                                                                            <conditions>
-                                                                                <condition id="-9" name="Is visible" sid="3550748686554304" type="level2_sel" />
-                                                                            </conditions>
-                                                                            <actions>
-                                                                                <action id="-15" name="Set visible" sid="3523422602794461" type="checkpoint4_sel">
-                                                                                    <param id="0" name="Visibility">1</param>
-                                                                                </action>
-                                                                                <action id="-15" name="Set visible" sid="9671621101645958" type="level2_sel">
-                                                                                    <param id="0" name="Visibility">0</param>
-                                                                                </action>
-                                                                            </actions>
-                                                                        </event-block>
-                                                                    </sub-events>
-                                                                </event-block>
-                                                            </sub-events>
-                                                        </event-block>
-                                                    </sub-events>
-                                                </event-block>
-                                            </sub-events>
-                                        </event-block>
-                                    </sub-events>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="6205597740402652">
-            <conditions>
-                <condition id="0" name="On key pressed" sid="2011338002216288" type="Keyboard">
-                    <param id="0" name="Key">32 (Barra Spaziatrice)</param>
-                </condition>
-            </conditions>
-            <actions />
-        </event-block>
-        <event-block sid="3323602927061433">
-            <conditions>
-                <condition id="0" name="On key pressed" sid="1263299303121798" type="Keyboard">
+                <condition id="0" name="On key pressed" sid="199399705292898" type="Keyboard">
                     <param id="0" name="Key">27 (Esc)</param>
+                </condition>
+                <condition id="6" name="On object clicked" sid="3873078625119095" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Back</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="-2" name="Go to layout" sid="2386601191525611" type="System">
+                <action id="-2" name="Go to layout" sid="310200969769682" type="System">
                     <param id="0" name="Layout">Menu Start</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3083968181321678">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="5688611466181422" type="Mouse">
+                    <param id="0" name="Object">Pallino</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="4255458227363657" type="Pallino">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4881414627746296">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="7717750892823496" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">Pallino</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="8075291862518223">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="7393868037481309" type="Pallino">
+                            <param id="0" name="Instance variable">checkpoint</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="5671505845793395" type="System">
+                            <param id="0" name="Layout">Level 1 Layout</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="2000053315223512">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="2702914313498156" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="5335677243582255">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="9052913893007137" type="Pallino">
+                                    <param id="0" name="Instance variable">checkpoint</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="7440786197513464" type="System">
+                                    <param id="0" name="Layout">Level 1 Layout</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5382837200310711">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="1633205992328936" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="9822259253390194">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="3068787389557555" type="Pallino">
+                                            <param id="0" name="Instance variable">checkpoint</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-2" name="Go to layout" sid="9413752447242223" type="System">
+                                            <param id="0" name="Layout">Level 1 Layout</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="819109726447418">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="304353189942783" type="System" />
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="9510706175855278">
+                                            <conditions>
+                                                <condition id="-7" name="Compare instance variable" sid="4934338329097628" type="Pallino">
+                                                    <param id="0" name="Instance variable">checkpoint</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">3</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-2" name="Go to layout" sid="4927168711854083" type="System">
+                                                    <param id="0" name="Layout">Level 1 Layout</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="5513110672217777">
+                                            <conditions>
+                                                <condition id="-22" name="Else" sid="3453321788625215" type="System" />
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="7587635312654864">
+                                                    <conditions>
+                                                        <condition id="-7" name="Compare instance variable" sid="3069051458526169" type="Pallino">
+                                                            <param id="0" name="Instance variable">checkpoint</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Value">4</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-2" name="Go to layout" sid="7909102011427089" type="System">
+                                                            <param id="0" name="Layout">Level 2 Layout</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="4634161943334272">
+                                                    <conditions>
+                                                        <condition id="-22" name="Else" sid="4740693804054861" type="System" />
+                                                    </conditions>
+                                                    <actions />
+                                                    <sub-events>
+                                                        <event-block sid="3020684009895816">
+                                                            <conditions>
+                                                                <condition id="-7" name="Compare instance variable" sid="6741255645566301" type="Pallino">
+                                                                    <param id="0" name="Instance variable">checkpoint</param>
+                                                                    <param id="1" name="Comparison">0</param>
+                                                                    <param id="2" name="Value">5</param>
+                                                                </condition>
+                                                            </conditions>
+                                                            <actions>
+                                                                <action id="-2" name="Go to layout" sid="4811736875921355" type="System">
+                                                                    <param id="0" name="Layout">Level 2 Layout</param>
+                                                                </action>
+                                                            </actions>
+                                                        </event-block>
+                                                        <event-block sid="4423535314507004">
+                                                            <conditions>
+                                                                <condition id="-22" name="Else" sid="9519916428630926" type="System" />
+                                                            </conditions>
+                                                            <actions />
+                                                            <sub-events>
+                                                                <event-block sid="7876580143476825">
+                                                                    <conditions>
+                                                                        <condition id="-7" name="Compare instance variable" sid="131885451492837" type="Pallino">
+                                                                            <param id="0" name="Instance variable">checkpoint</param>
+                                                                            <param id="1" name="Comparison">0</param>
+                                                                            <param id="2" name="Value">6</param>
+                                                                        </condition>
+                                                                    </conditions>
+                                                                    <actions>
+                                                                        <action id="-2" name="Go to layout" sid="2536675536429157" type="System">
+                                                                            <param id="0" name="Layout">Level 2 Layout</param>
+                                                                        </action>
+                                                                    </actions>
+                                                                </event-block>
+                                                                <event-block sid="4499982109065724">
+                                                                    <conditions>
+                                                                        <condition id="-22" name="Else" sid="7621448952253904" type="System" />
+                                                                    </conditions>
+                                                                    <actions />
+                                                                    <sub-events>
+                                                                        <event-block sid="5316677424946725">
+                                                                            <conditions>
+                                                                                <condition id="-7" name="Compare instance variable" sid="3784071356949474" type="Pallino">
+                                                                                    <param id="0" name="Instance variable">checkpoint</param>
+                                                                                    <param id="1" name="Comparison">0</param>
+                                                                                    <param id="2" name="Value">7</param>
+                                                                                </condition>
+                                                                            </conditions>
+                                                                            <actions>
+                                                                                <action id="-2" name="Go to layout" sid="5455456075337192" type="System">
+                                                                                    <param id="0" name="Layout">Level 2 Layout</param>
+                                                                                </action>
+                                                                            </actions>
+                                                                        </event-block>
+                                                                        <event-block sid="5013948342680556">
+                                                                            <conditions>
+                                                                                <condition id="-22" name="Else" sid="4063504710029813" type="System" />
+                                                                            </conditions>
+                                                                            <actions />
+                                                                            <sub-events>
+                                                                                <event-block sid="7019109404423737">
+                                                                                    <conditions>
+                                                                                        <condition id="-7" name="Compare instance variable" sid="4813000823227667" type="Pallino">
+                                                                                            <param id="0" name="Instance variable">checkpoint</param>
+                                                                                            <param id="1" name="Comparison">0</param>
+                                                                                            <param id="2" name="Value">8</param>
+                                                                                        </condition>
+                                                                                    </conditions>
+                                                                                    <actions>
+                                                                                        <action id="-2" name="Go to layout" sid="2130599175370019" type="System">
+                                                                                            <param id="0" name="Layout">Boss Layout</param>
+                                                                                        </action>
+                                                                                    </actions>
+                                                                                </event-block>
+                                                                            </sub-events>
+                                                                        </event-block>
+                                                                    </sub-events>
+                                                                </event-block>
+                                                            </sub-events>
+                                                        </event-block>
+                                                    </sub-events>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="9779185870535544">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="6527057841992088" type="Mouse">
+                    <param id="0" name="Object">EndLevelBG</param>
+                </condition>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="807568005765282" type="Mouse">
+                    <param id="0" name="Object">Pallino</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="569729392824167" type="Pallino">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="633444186271272">
+            <conditions>
+                <condition id="7" name="Cursor is over object" sid="7631100530433426" type="Mouse">
+                    <param id="0" name="Object">Checkpoint2</param>
+                </condition>
+                <condition id="7" inverted="1" name="Cursor is over object" sid="2907177837815291" type="Mouse">
+                    <param id="0" name="Object">Pallino</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="1746553963693038" type="Pallino">
+                    <param id="0" name="Visibility">0</param>
                 </action>
             </actions>
         </event-block>
