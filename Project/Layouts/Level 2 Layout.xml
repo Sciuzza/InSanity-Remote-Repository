@@ -21955,6 +21955,28 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="Ballconata" uid="1689">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1666</x>
+                        <y>1233</y>
+                        <z>0</z>
+                        <width>1020</width>
+                        <height>337</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.501483679</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -34518,8 +34540,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1632</x>
-                        <y>1302</y>
+                        <x>1637</x>
+                        <y>1319</y>
                         <z>0</z>
                         <width>70</width>
                         <height>29</height>
@@ -38409,8 +38431,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1635</x>
-                        <y>1307</y>
+                        <x>1640</x>
+                        <y>1324</y>
                         <z>0</z>
                         <width>62</width>
                         <height>17</height>
