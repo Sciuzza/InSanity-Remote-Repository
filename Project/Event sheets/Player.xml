@@ -926,29 +926,29 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="6975143899787424">
+                <event-block sid="6321538796942816">
                     <conditions>
-                        <condition id="2" name="Mouse button is down" sid="6972980529279924" type="Mouse">
+                        <condition id="2" name="Mouse button is down" sid="1496182432016554" type="Mouse">
                             <param id="0" name="Mouse button">2</param>
                         </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="3219316923445066" type="Player_Box">
+                        <condition id="-8" name="Is boolean instance variable set" sid="4082139608468029" type="Player_Box">
                             <param id="0" name="Instance variable">Stun_Ability</param>
                         </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="8208191465584513" type="Player_Box">
+                        <condition id="-8" name="Is boolean instance variable set" sid="8506223974990866" type="Player_Box">
                             <param id="0" name="Instance variable">Weapon_Is_On</param>
                         </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="11347104203684" type="Player_Box">
+                        <condition id="-8" name="Is boolean instance variable set" sid="8393295926184631" type="Player_Box">
                             <param id="0" name="Instance variable">Stun_Is_On</param>
                         </condition>
-                        <condition id="2" inverted="1" name="Is playing" sid="9452138545686775" type="Player_Frame">
+                        <condition id="2" inverted="1" name="Is playing" sid="9154017200012255" type="Player_Frame">
                             <param id="0" name="Animation">&quot;Dying&quot;</param>
                         </condition>
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="5240343779061478">
+                        <event-block sid="1815334025150121">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="1010645854563397" type="Player_Box">
+                                <condition id="-7" name="Compare instance variable" sid="2949249772964943" type="Player_Box">
                                     <param id="0" name="Instance variable">Weapon_Level</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">0</param>
@@ -956,55 +956,66 @@
                             </conditions>
                             <actions />
                             <sub-events>
-                                <event-block sid="3976409085855127">
+                                <event-block sid="7300736265916292">
                                     <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="9391225885327437" type="Player_Box">
+                                        <condition id="-7" name="Compare instance variable" sid="473656521739523" type="Player_Box">
                                             <param id="0" name="Instance variable">Cooldown_Stun</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">-1</param>
                                         </condition>
+                                        <condition id="-4" name="Trigger once while true" sid="3162540346380204" type="System" />
                                     </conditions>
                                     <actions>
-                                        <action id="-10" name="Set value" sid="4417652499738583" type="Player_Box">
+                                        <action id="-10" name="Set value" sid="3081029467885605" type="Player_Box">
                                             <param id="0" name="Instance variable">Cooldown_Stun</param>
                                             <param id="1" name="Value">0</param>
                                         </action>
-                                        <action behavior="Timer" id="0" name="Start timer" sid="7627492042056812" type="Player_Box">
+                                        <action behavior="Timer" id="0" name="Start timer" sid="3096029598058757" type="Player_Box">
                                             <param id="0" name="Duration">0.3</param>
                                             <param id="1" name="Type">0</param>
                                             <param id="2" name="Tag">&quot;Stun Charging&quot;</param>
                                         </action>
                                     </actions>
                                 </event-block>
-                                <event-block sid="4491480240890391">
-                                    <conditions>
-                                        <condition id="-4" name="Trigger once while true" sid="2545771239443726" type="System" />
-                                    </conditions>
-                                    <actions />
-                                </event-block>
                             </sub-events>
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="9682713774569263">
+                <event-block sid="6548138433881909">
                     <conditions>
-                        <condition behavior="Timer" id="0" name="On timer" sid="2135026520346658" type="Player_Box">
+                        <condition behavior="Timer" id="0" name="On timer" sid="6948072047091822" type="Player_Box">
                             <param id="0" name="Tag">&quot;Stun Charging&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-3" name="Create object" sid="5815514889288922" type="System">
+                        <action id="-3" name="Create object" sid="6913133210977106" type="System">
                             <param id="0" name="Object to create">Bullet_S_Player</param>
                             <param id="1" name="Layer">&quot;Player&quot;</param>
                             <param id="2" name="X">Player_arm.ImagePointX(1)</param>
                             <param id="3" name="Y">Player_arm.ImagePointY(1)</param>
                         </action>
-                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="2257942088926028" type="Bullet_S_Player">
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="1086765477981899" type="Bullet_S_Player">
                             <param id="0" name="Angle">Player_arm.Angle</param>
                         </action>
-                        <action behavior="Bullet" id="6" name="Set distance travelled" sid="3413464790944121" type="Bullet_S_Player">
-                            <param id="0" name="Distance">50</param>
+                        <action id="4" name="Set animation" sid="623146053025074" type="Bullet_S_Player">
+                            <param id="0" name="Animation">&quot;Bullet&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
+                        <action behavior="Bullet" id="6" name="Set distance travelled" sid="9660385908262175" type="Bullet_S_Player">
+                            <param id="0" name="Distance">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1852819231724564">
+                    <conditions>
+                        <condition behavior="Bullet" id="1" name="Compare distance travelled" sid="4573130733945718" type="Bullet_S_Player">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Distance">100</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="8255734863460641" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="5231927735380433" type="Bullet_S_Player" />
                     </actions>
                 </event-block>
                 <comment>Reload System</comment>
@@ -1323,6 +1334,62 @@
         </event-group>
         <event-group description="" sid="9962853270690088" title="Hud Linking System">
             <sub-events>
+                <event-group description="" sid="6461910918711146" title="Shockwave Hud System">
+                    <sub-events>
+                        <event-block sid="242072169188652">
+                            <conditions>
+                                <condition id="-2" name="On start of layout" sid="3280574561349691" type="System" />
+                                <condition id="-8" name="Is boolean instance variable set" sid="1055090055338504" type="Player_Box">
+                                    <param id="0" name="Instance variable">Stun_Ability</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="5554534366524845" type="Function">
+                                    <param id="0" name="Name">&quot;Hud Shockwave&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3896996191718549">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="1650279511527923" type="Player_Box">
+                                    <param id="0" name="Instance variable">Cooldown_Stun</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="3303183442237503" type="Player_Box">
+                                    <param id="0" name="Instance variable">Stun_Ability</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="1461710593693118" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="2731030790562288" type="Function">
+                                    <param id="0" name="Name">&quot;Hud Shockwave&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1675309490868702">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="2931384170192521" type="Player_Box">
+                                    <param id="0" name="Instance variable">Cooldown_Stun</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">-1</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="6172654872008308" type="Player_Box">
+                                    <param id="0" name="Instance variable">Stun_Ability</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="3007762776100884" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="6060268389166258" type="Function">
+                                    <param id="0" name="Name">&quot;Hud Shockwave&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
                 <event-group description="" sid="4793969069808939" title="Stamina Hud System">
                     <sub-events>
                         <event-block sid="4817458332046503">
@@ -2603,6 +2670,35 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-block sid="4789076685196101">
+                    <conditions>
+                        <condition id="0" name="On function" sid="9357003771015893" type="Function">
+                            <param id="0" name="Name">&quot;Hud Shockwave&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="5618608581176778" type="PotenziamentoSparoHud" />
+                    </actions>
+                    <sub-events>
+                        <event-block sid="2150127718454472">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="5057275518061648" type="Player_Box">
+                                    <param id="0" name="Instance variable">Cooldown_Stun</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">-1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="8276518145320052" type="System">
+                                    <param id="0" name="Object to create">PotenziamentoSparoHud</param>
+                                    <param id="1" name="Layer">&quot;Hud&quot;</param>
+                                    <param id="2" name="X">Hud_Corpo.ImagePointX(13)</param>
+                                    <param id="3" name="Y">Hud_Corpo.ImagePointY(13)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
                 <event-block sid="7495176524857477">
                     <conditions>
                         <condition id="0" name="On function" sid="4656949860047346" type="Function">
@@ -2878,7 +2974,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-7" name="Set size" sid="5574775464639483" type="BackGround_Tut_Text">
+                        <action id="-7" name="Set size" sid="5574775464639483" type="BackGround_Dia_Text">
                             <param id="0" name="Width">103</param>
                             <param id="1" name="Height">59</param>
                         </action>
@@ -2886,20 +2982,20 @@
                             <param id="0" name="X">Function.Param(0)</param>
                             <param id="1" name="Y">Function.Param(1)</param>
                         </action>
-                        <action id="-3" name="Set position" sid="5970446630534936" type="BackGround_Tut_Text">
+                        <action id="-3" name="Set position" sid="5970446630534936" type="BackGround_Dia_Text">
                             <param id="0" name="X">Function.Param(0)</param>
                             <param id="1" name="Y">Function.Param(1)</param>
                         </action>
-                        <action id="-24" name="Move to top" sid="1132107480315179" type="Dialogue" />
-                        <action id="-25" name="Move to bottom" sid="1184971706417405" type="BackGround_Tut_Text" />
+                        <action disabled="1" id="-24" name="Move to top" sid="1132107480315179" type="Dialogue" />
+                        <action id="-25" name="Move to bottom" sid="1184971706417405" type="BackGround_Dia_Text" />
                         <action id="0" name="Set text" sid="6173812404103034" type="Dialogue">
                             <param id="0" name="Text">Function.Param(2)</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="2838583627319213" type="Dialogue">
-                            <param id="0" name="Visibility">1</param>
+                        <action id="-16" name="Set opacity" sid="2838583627319213" type="Dialogue">
+                            <param id="0" name="Opacity">100</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="9296697360976073" type="BackGround_Tut_Text">
-                            <param id="0" name="Visibility">1</param>
+                        <action id="-16" name="Set opacity" sid="9296697360976073" type="BackGround_Dia_Text">
+                            <param id="0" name="Opacity">60</param>
                         </action>
                     </actions>
                 </event-block>
@@ -3182,5 +3278,187 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" sid="4264007511611137" title="Temp">
+            <sub-events>
+                <event-block disabled="1" sid="2705836153629923">
+                    <conditions>
+                        <condition id="2" name="Mouse button is down" sid="1487542368937407" type="Mouse">
+                            <param id="0" name="Mouse button">2</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="3563563429075408" type="Player_Box">
+                            <param id="0" name="Instance variable">Stun_Ability</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="8911530196367891" type="Player_Box">
+                            <param id="0" name="Instance variable">Weapon_Is_On</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="2857787096832467" type="Player_Box">
+                            <param id="0" name="Instance variable">Stun_Is_On</param>
+                        </condition>
+                        <condition id="2" inverted="1" name="Is playing" sid="7723244639281888" type="Player_Frame">
+                            <param id="0" name="Animation">&quot;Dying&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block disabled="1" sid="2989152987537189">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="1607016450062802" type="Player_Box">
+                                    <param id="0" name="Instance variable">Weapon_Level</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block disabled="1" sid="4510267353649355">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="527365302170527" type="Player_Box">
+                                            <param id="0" name="Instance variable">Cooldown_Stun</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">-1</param>
+                                        </condition>
+                                        <condition id="-4" name="Trigger once while true" sid="8926533059905847" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="7598395417687732" type="Player_Box">
+                                            <param id="0" name="Instance variable">Cooldown_Stun</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action behavior="Timer" id="0" name="Start timer" sid="9248499680822647" type="Player_Box">
+                                            <param id="0" name="Duration">0.3</param>
+                                            <param id="1" name="Type">0</param>
+                                            <param id="2" name="Tag">&quot;Stun Charging&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block disabled="1" sid="6373739257906436">
+                    <conditions>
+                        <condition behavior="Timer" id="0" name="On timer" sid="3624060740213463" type="Player_Box">
+                            <param id="0" name="Tag">&quot;Stun Charging&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="4531599935192134" type="System">
+                            <param id="0" name="Object to create">Bullet_S_Player</param>
+                            <param id="1" name="Layer">&quot;Player&quot;</param>
+                            <param id="2" name="X">Player_arm.ImagePointX(1)</param>
+                            <param id="3" name="Y">Player_arm.ImagePointY(1)</param>
+                        </action>
+                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="8506433335564744" type="Bullet_S_Player">
+                            <param id="0" name="Angle">Player_arm.Angle</param>
+                        </action>
+                        <action behavior="Bullet" id="6" name="Set distance travelled" sid="9141088154517914" type="Bullet_S_Player">
+                            <param id="0" name="Distance">50</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="2001687797875193" type="Bullet_S_Player">
+                            <param id="0" name="Animation">&quot;Bullet&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="7753290152989539">
+                    <conditions>
+                        <condition id="3" name="On button released" sid="6434892215940582" type="Mouse">
+                            <param id="0" name="Mouse button">2</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block disabled="1" sid="673454712746855">
+            <conditions>
+                <condition id="2" name="Mouse button is down" sid="6713331898606807" type="Mouse">
+                    <param id="0" name="Mouse button">2</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="486046552034733" type="Player_Box">
+                    <param id="0" name="Instance variable">Stun_Ability</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="3771661987811033" type="Player_Box">
+                    <param id="0" name="Instance variable">Weapon_Is_On</param>
+                </condition>
+                <condition id="-8" name="Is boolean instance variable set" sid="4128534442546601" type="Player_Box">
+                    <param id="0" name="Instance variable">Stun_Is_On</param>
+                </condition>
+                <condition id="2" inverted="1" name="Is playing" sid="4558434531831036" type="Player_Frame">
+                    <param id="0" name="Animation">&quot;Dying&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block disabled="1" sid="9561723000840983">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="2737721352504303" type="Player_Box">
+                            <param id="0" name="Instance variable">Weapon_Level</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block disabled="1" sid="900971329656206">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="9606831445740396" type="Player_Box">
+                                    <param id="0" name="Instance variable">Cooldown_Stun</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">-1</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="5017011827150402" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Create object" sid="7210752118431093" type="System">
+                                    <param id="0" name="Object to create">Bullet_S_Player</param>
+                                    <param id="1" name="Layer">&quot;Player&quot;</param>
+                                    <param id="2" name="X">Player_arm.ImagePointX(1)</param>
+                                    <param id="3" name="Y">Player_arm.ImagePointY(1)</param>
+                                </action>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="5487533513461033" type="Bullet_S_Player">
+                                    <param id="0" name="Angle">Player_arm.Angle</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="2745614370225948" type="Bullet_S_Player">
+                                    <param id="0" name="Animation">&quot;Wave&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action behavior="Bullet" id="5" name="Set enabled" sid="3509325102026463" type="Bullet_S_Player">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="4741798782369611" type="Bullet_S_Player">
+                                    <param id="0" name="Pin to">Player_arm</param>
+                                    <param id="1" name="Mode">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block disabled="1" sid="7584082831794288">
+            <conditions>
+                <condition id="3" name="On button released" sid="9725345814899042" type="Mouse">
+                    <param id="0" name="Mouse button">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Set value" sid="3370124538359088" type="Player_Box">
+                    <param id="0" name="Instance variable">Cooldown_Stun</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action behavior="Pin" id="1" name="Unpin" sid="9397540771881737" type="Bullet_S_Player" />
+                <action behavior="Bullet" id="5" name="Set enabled" sid="1324538430376937" type="Bullet_S_Player">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="Bullet" id="6" name="Set distance travelled" sid="7094807846278801" type="Bullet_S_Player">
+                    <param id="0" name="Distance">50</param>
+                </action>
+                <action id="4" name="Set animation" sid="3874194178435754" type="Bullet_S_Player">
+                    <param id="0" name="Animation">&quot;Bullet&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

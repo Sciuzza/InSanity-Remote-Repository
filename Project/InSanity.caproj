@@ -32,6 +32,7 @@
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
+        <behavior author="Scirra" id="Turret" version="1">Turret</behavior>
         <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
         <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
@@ -1937,6 +1938,9 @@
                     <behavior-type name="Bullet" sid="8404592046043866">
                         <behavior id="Bullet" />
                     </behavior-type>
+                    <behavior-type name="Pin" sid="7639979558068851">
+                        <behavior id="Pin" />
+                    </behavior-type>
                 </behaviors>
                 <animation-folder>
                     <animation framecount="2" loop="1" name="Wave" pingpong="0" repeatcount="1" repeatto="0" sid="7746226562710699" speed="15">
@@ -1957,7 +1961,7 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="4" loop="0" name="Bullet" pingpong="0" repeatcount="1" repeatto="0" sid="3075366016728646" speed="15">
+                    <animation framecount="4" loop="0" name="Bullet" pingpong="0" repeatcount="1" repeatto="0" sid="3075366016728646" speed="20">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <collision-poly>
                                 <point x="1" y="1" />
@@ -2095,6 +2099,7 @@
                     <instance-variable name="Intro_Phases" sid="2919288332513902" type="number" />
                     <instance-variable name="Level_1_Phases" sid="3744297378801938" type="number" />
                     <instance-variable name="Level_2_Phases" sid="521681513767556" type="number" />
+                    <instance-variable name="Level_3_Phases" sid="3931666311662281" type="number" />
                     <instance-variable name="Camera_On_Player" sid="2010312032397601" type="boolean" />
                     <instance-variable name="Res_Room_Visible" sid="6478554283794921" type="boolean" />
                     <instance-variable name="Returning" sid="3443924061330863" type="boolean" />
@@ -2350,7 +2355,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="Player_Frame2" sid="2270932927010431">
+            <object-type name="Brother" sid="2270932927010431">
                 <plugin id="Sprite" />
                 <behaviors>
                     <behavior-type name="Fade" sid="4737639882213463">
@@ -2379,6 +2384,36 @@
                         <frame duration="1" hotspotX="0.521739" hotspotY="1" />
                         <frame duration="1" hotspotX="0.5" hotspotY="1" />
                         <frame duration="1" hotspotX="0.52" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Brother2" sid="1204278255543692">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="2" loop="1" name="IdleBrother" pingpong="0" repeatcount="1" repeatto="0" sid="261155438006715" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    </animation>
+                    <animation framecount="4" loop="1" name="WalkingBrother" pingpong="0" repeatcount="1" repeatto="0" sid="1032450769486292" speed="12">
+                        <frame duration="1" hotspotX="0.521739" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.52" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                    </animation>
+                    <animation framecount="3" loop="0" name="Dying" pingpong="0" repeatcount="1" repeatto="0" sid="1201548011589814" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1">
+                            <collision-poly>
+                                <point x="0.111111" y="0.358974" />
+                                <point x="0.333333" y="0.0512821" />
+                                <point x="0.611111" y="0.333333" />
+                                <point x="0.611111" y="0.589744" />
+                                <point x="0.333333" y="0.897436" />
+                                <point x="0.0555556" y="0.589744" />
+                                <point x="0.111111" y="0.461538" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.526316" hotspotY="1" />
                         <frame duration="1" hotspotX="0.5" hotspotY="1" />
                     </animation>
                 </animation-folder>
@@ -2474,6 +2509,38 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9194373511496332" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type global="1" name="SolidObjects2" sid="3145841972314565">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="3563005382307209">
+                        <behavior id="solid" />
+                    </behavior-type>
+                    <behavior-type name="Pin" sid="6728223693465416">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5845585504105215" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type global="1" name="SolidObjects3" sid="2928785677163241">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="2972507646792591">
+                        <behavior id="solid" />
+                    </behavior-type>
+                    <behavior-type name="Pin" sid="1576465111978898">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4507503966746795" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
@@ -3172,6 +3239,7 @@
                             <image-point name="Bullet_4" x="0.349206" y="0.269231" />
                             <image-point name="Bullet_5" x="0.428571" y="0.269231" />
                             <image-point name="Bullet_6" x="0.507937" y="0.269231" />
+                            <image-point name="Shockwave" x="0.238095" y="0.730769" />
                             <collision-poly>
                                 <point x="0.0793651" y="0.192308" />
                                 <point x="0.492063" y="0.192308" />
@@ -3618,6 +3686,25 @@
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6476868627468586" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="PotenziamentoSparoHud" sid="414475470236477">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9516197399342858" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Drako-PC\Downloads\Potenziamento sparo -  Hud.png">
+                            <collision-poly>
+                                <point x="0.166667" y="0.166667" />
+                                <point x="0.5" y="0" />
+                                <point x="0.833333" y="0.166667" />
+                                <point x="1" y="0.5" />
+                                <point x="0.833333" y="0.833333" />
+                                <point x="0.5" y="1" />
+                                <point x="0.166667" y="0.833333" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -4828,6 +4915,320 @@
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5517864922476215" speed="5">
                         <frame duration="1" hotspotX="0.501558" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="Boss">
+            <object-type name="Avambraccio_dx" sid="3462579345251317">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Jumpthru" sid="1337643222961561">
+                        <behavior id="jumpthru" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1461165833726935" speed="5">
+                        <frame duration="1" hotspotX="0.173077" hotspotY="0.166667" original-source="C:\Users\Drako-PC\Downloads\verde-2016-05-22\verde\avambraccio_dx.png">
+                            <image-point name="Mazza" x="0.903846" y="0.861111" />
+                            <collision-poly>
+                                <point x="0.257212" y="0.607639" />
+                                <point x="0" y="0.253472" />
+                                <point x="0.168269" y="0.0434027" />
+                                <point x="0.507211" y="0.09375" />
+                                <point x="0.992788" y="0.777778" />
+                                <point x="0.81851" y="0.967014" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Avambraccio_sx" sid="6911989028408229">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Angle_Registered" sid="103566609758784" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Flash" sid="1938367615571737">
+                        <behavior id="Flash" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5190319249572157" speed="5">
+                        <frame duration="1" hotspotX="0.0652174" hotspotY="0.347826" original-source="C:\Users\Drako-PC\Downloads\verde-2016-05-22\verde\avambraccio_sx.png">
+                            <collision-poly>
+                                <point x="0.0217391" y="0.0869565" />
+                                <point x="0.5" y="0.217391" />
+                                <point x="0.826087" y="0.695652" />
+                                <point x="0.673913" y="0.478261" />
+                                <point x="0.98913" y="0.956522" />
+                                <point x="0.5" y="0.782609" />
+                                <point x="0.0978261" y="0.608696" />
+                                <point x="0.0978261" y="0.478261" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Braccio_dxsecondo_piano" sid="8899719065883918">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7370294362819102" speed="5">
+                        <frame duration="1" hotspotX="0.761905" hotspotY="0.184211" original-source="C:\Users\Drako-PC\Downloads\verde-2016-05-22\verde\braccio_dx.png">
+                            <image-point name="Avambraccio" x="0.428571" y="0.789474" />
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Braccio_sx" sid="5771737753809835">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Turret" sid="2311928432428572">
+                        <behavior id="Turret" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="796817545058323" speed="5">
+                        <frame duration="1" hotspotX="0.084507" hotspotY="0.606061" original-source="C:\Users\Drako-PC\Downloads\verde-2016-05-22\verde\braccio_sx.png">
+                            <image-point name="Avanbraccio" x="0.929577" y="0.151515" />
+                            <image-point name="Infezione" x="0.56338" y="0.212121" />
+                            <collision-poly>
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Cervello" sid="1970572089111932">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Life" sid="5065365731485389" type="number" />
+                    <instance-variable name="Vulnerable" sid="5000711804802037" type="boolean" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="611591395603688" speed="5">
+                        <frame duration="1" hotspotX="0.533333" hotspotY="0.384615" original-source="C:\Users\Drako-PC\Downloads\verde-2016-05-22\verde\cervello.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Gamba_dx" sid="4240060450022453">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8850524956977215" speed="5">
+                        <frame duration="1" hotspotX="0.307692" hotspotY="0.410714" original-source="C:\Users\Drako-PC\Downloads\verde-2016-05-22\verde\ga,ba_dx.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Gamba_sx" sid="3342571012450121">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9614244957947698" speed="5">
+                        <frame duration="1" hotspotX="0.44" hotspotY="0.508197" original-source="C:\Users\Drako-PC\Downloads\verde-2016-05-22\verde\gamba_sx.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Infezione_braccio" sid="2990712196223606">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Life" sid="6419352029328843" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Flash" sid="2197487325227014">
+                        <behavior id="Flash" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8846973002687112" speed="5">
+                        <frame duration="1" hotspotX="0.4" hotspotY="0.448276" original-source="C:\Users\Drako-PC\Downloads\verde-2016-05-22\verde\carne.png">
+                            <collision-poly>
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Occhi" sid="9804848088556343">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5287557842841911" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.545455" original-source="C:\Users\Drako-PC\Downloads\BB\Parti\Occhi.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Corpo" sid="3099393026032915">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Phase_1_Attacking" sid="31170534310953" type="boolean" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="2" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="6402848589246583" speed="2">
+                        <frame duration="1" hotspotX="0.504202" hotspotY="0.5" original-source="C:\Users\Drako-PC\Downloads\verde-2016-05-22\verde\body.png">
+                            <image-point name="BraccioSx" x="0.789916" y="0.196581" />
+                            <image-point name="BraccioDx" x="0.310924" y="0.226496" />
+                            <image-point name="Cervello" x="0.394958" y="0.0213675" />
+                            <image-point name="Occhi" x="0.268908" y="0.0940171" />
+                            <image-point name="GambaDx" x="0.319328" y="0.730769" />
+                            <image-point name="GambaSx" x="0.663866" y="0.777778" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="BraccioSx" x="0.951219" y="0.193966" />
+                            <image-point name="BraccioDx" x="0.243902" y="0.232759" />
+                            <image-point name="Cervello" x="0.390244" y="0.0215517" />
+                            <image-point name="Occhi" x="0.207317" y="0.0948276" />
+                            <image-point name="GambaDx" x="0.243902" y="0.732759" />
+                            <image-point name="GambaSx" x="0.743902" y="0.780172" />
+                        </frame>
+                    </animation>
+                    <animation framecount="5" loop="0" name="Attack1" pingpong="0" repeatcount="1" repeatto="0" sid="5074209738631526" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="BraccioSx" x="0.951219" y="0.193966" />
+                            <image-point name="BraccioDx" x="0.243902" y="0.232759" />
+                            <image-point name="Cervello" x="0.390244" y="0.0215517" />
+                            <image-point name="Occhi" x="0.207317" y="0.0948276" />
+                            <image-point name="GambaDx" x="0.243902" y="0.732759" />
+                            <image-point name="GambaSx" x="0.743902" y="0.780172" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.505263" hotspotY="0.502203">
+                            <image-point name="BraccioSx" x="0.778947" y="0.185022" />
+                            <image-point name="BraccioDx" x="0.168421" y="0.23348" />
+                            <image-point name="Cervello" x="0.252632" y="0.0264317" />
+                            <image-point name="Occhi" x="0.0947368" y="0.101322" />
+                            <image-point name="GambaDx" x="0.221053" y="0.748899" />
+                            <image-point name="GambaSx" x="0.768421" y="0.784141" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.502347">
+                            <image-point name="BraccioSx" x="0.744898" y="0.187793" />
+                            <image-point name="BraccioDx" x="0.173469" y="0.248826" />
+                            <image-point name="Cervello" x="0.22449" y="0.028169" />
+                            <image-point name="Occhi" x="0.0816327" y="0.107981" />
+                            <image-point name="GambaDx" x="0.214286" y="0.71831" />
+                            <image-point name="GambaSx" x="0.734694" y="0.774648" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.502591">
+                            <image-point name="BraccioSx" x="0.640351" y="0.196891" />
+                            <image-point name="BraccioDx" x="0.149123" y="0.279793" />
+                            <image-point name="Cervello" x="0.184211" y="0.0310881" />
+                            <image-point name="Occhi" x="0.0701754" y="0.124352" />
+                            <image-point name="GambaDx" x="0.201754" y="0.699482" />
+                            <image-point name="GambaSx" x="0.640351" y="0.782383" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.504274" hotspotY="0.503268">
+                            <image-point name="BraccioSx" x="0.641026" y="0.24183" />
+                            <image-point name="BraccioDx" x="0.162393" y="0.346405" />
+                            <image-point name="Cervello" x="0.188034" y="0.0392157" />
+                            <image-point name="Occhi" x="0.0854701" y="0.156863" />
+                            <image-point name="GambaDx" x="0.162393" y="0.633987" />
+                            <image-point name="GambaSx" x="0.615385" y="0.895425" />
+                        </frame>
+                    </animation>
+                    <animation framecount="5" loop="0" name="EndAttack1" pingpong="0" repeatcount="1" repeatto="0" sid="1516575684863043" speed="5">
+                        <frame duration="1" hotspotX="0.504274" hotspotY="0.503268">
+                            <image-point name="BraccioSx" x="0.641026" y="0.24183" />
+                            <image-point name="BraccioDx" x="0.162393" y="0.346405" />
+                            <image-point name="Cervello" x="0.188034" y="0.0392157" />
+                            <image-point name="Occhi" x="0.0854701" y="0.156863" />
+                            <image-point name="GambaDx" x="0.162393" y="0.633987" />
+                            <image-point name="GambaSx" x="0.615385" y="0.895425" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.502591">
+                            <image-point name="BraccioSx" x="0.640351" y="0.196891" />
+                            <image-point name="BraccioDx" x="0.149123" y="0.279793" />
+                            <image-point name="Cervello" x="0.184211" y="0.0310881" />
+                            <image-point name="Occhi" x="0.0701754" y="0.124352" />
+                            <image-point name="GambaDx" x="0.201754" y="0.699482" />
+                            <image-point name="GambaSx" x="0.640351" y="0.782383" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.502347">
+                            <image-point name="BraccioSx" x="0.744898" y="0.187793" />
+                            <image-point name="BraccioDx" x="0.173469" y="0.248826" />
+                            <image-point name="Cervello" x="0.22449" y="0.028169" />
+                            <image-point name="Occhi" x="0.0816327" y="0.107981" />
+                            <image-point name="GambaDx" x="0.214286" y="0.71831" />
+                            <image-point name="GambaSx" x="0.734694" y="0.774648" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.505263" hotspotY="0.502203">
+                            <image-point name="BraccioSx" x="0.778947" y="0.185022" />
+                            <image-point name="BraccioDx" x="0.168421" y="0.23348" />
+                            <image-point name="Cervello" x="0.252632" y="0.0264317" />
+                            <image-point name="Occhi" x="0.0947368" y="0.101322" />
+                            <image-point name="GambaDx" x="0.221053" y="0.748899" />
+                            <image-point name="GambaSx" x="0.768421" y="0.784141" />
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="BraccioSx" x="0.951219" y="0.193966" />
+                            <image-point name="BraccioDx" x="0.243902" y="0.232759" />
+                            <image-point name="Cervello" x="0.390244" y="0.0215517" />
+                            <image-point name="Occhi" x="0.207317" y="0.0948276" />
+                            <image-point name="GambaDx" x="0.243902" y="0.732759" />
+                            <image-point name="GambaSx" x="0.743902" y="0.780172" />
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Avambraccio_sx2" sid="7879107892807249">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Bullet" sid="7652952256960929">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5327525115400588" speed="5">
+                        <frame duration="1" hotspotX="0.652174" hotspotY="0.0652174" original-source="C:\Users\Drako-PC\Downloads\verde-2016-05-22\verde\avambraccio_sx.png">
+                            <collision-poly>
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="0.287334" />
+                                <point x="0" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Mano_dx" sid="4219104329146761">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Is_Stopped" sid="9607449710761184" type="boolean" />
+                    <instance-variable name="Angle_Registered" sid="4668652733887532" type="number" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Flash" sid="4301341352108513">
+                        <behavior id="Flash" />
+                    </behavior-type>
+                    <behavior-type name="Jumpthru" sid="1230302083101182">
+                        <behavior id="jumpthru" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8289054057570135" speed="5">
+                        <frame duration="1" hotspotX="0.297297" hotspotY="0.25641" original-source="C:\Users\Drako-PC\Downloads\verde-2016-05-22\verde\mano_dx.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Boss_Shockwave" sid="230590301425708">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Bullet" sid="6639452567065692">
+                        <behavior id="Bullet" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9537683297294815" speed="5">
+                        <frame duration="1" hotspotX="0.482759" hotspotY="0.485714">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.516129" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -7046,216 +7447,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Corpo" sid="3099393026032915">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="2" loop="0" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="6402848589246583" speed="5">
-                    <frame duration="1" hotspotX="0.655462" hotspotY="0.495726" original-source="C:\Users\Drako-PC\Downloads\verde-2016-05-22\verde\body.png">
-                        <image-point name="BraccioSx" x="0.789916" y="0.196581" />
-                        <image-point name="BraccioDx" x="0.310924" y="0.226496" />
-                        <image-point name="Cervello" x="0.394958" y="0.0213675" />
-                        <image-point name="Occhi" x="0.268908" y="0.0940171" />
-                        <image-point name="GambaDx" x="0.319328" y="0.730769" />
-                        <image-point name="GambaSx" x="0.663866" y="0.777778" />
-                        <collision-poly>
-                            <point x="0.282678" y="0.320403" />
-                            <point x="0.943648" y="0.118782" />
-                            <point x="1" y="0.491343" />
-                            <point x="1" y="0.526409" />
-                            <point x="0.943648" y="0.999781" />
-                            <point x="0.164042" y="0.692965" />
-                            <point x="0.401313" y="0.491343" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.548781" hotspotY="0.508621">
-                        <image-point name="BraccioSx" x="0.951219" y="0.193966" />
-                        <image-point name="BraccioDx" x="0.243902" y="0.232759" />
-                        <image-point name="Cervello" x="0.390244" y="0.0215517" />
-                        <image-point name="Occhi" x="0.207317" y="0.0948276" />
-                        <image-point name="GambaDx" x="0.243902" y="0.732759" />
-                        <image-point name="GambaSx" x="0.743902" y="0.780172" />
-                    </frame>
-                </animation>
-                <animation framecount="5" loop="0" name="Attack1" pingpong="0" repeatcount="1" repeatto="0" sid="5074209738631526" speed="5">
-                    <frame duration="1" hotspotX="0.548781" hotspotY="0.508621">
-                        <image-point name="BraccioSx" x="0.951219" y="0.193966" />
-                        <image-point name="BraccioDx" x="0.243902" y="0.232759" />
-                        <image-point name="Cervello" x="0.390244" y="0.0215517" />
-                        <image-point name="Occhi" x="0.207317" y="0.0948276" />
-                        <image-point name="GambaDx" x="0.243902" y="0.732759" />
-                        <image-point name="GambaSx" x="0.743902" y="0.780172" />
-                    </frame>
-                    <frame duration="1" hotspotX="0.547368" hotspotY="0.506608">
-                        <image-point name="BraccioSx" x="0.778947" y="0.185022" />
-                        <image-point name="BraccioDx" x="0.168421" y="0.23348" />
-                        <image-point name="Cervello" x="0.252632" y="0.0264317" />
-                        <image-point name="Occhi" x="0.0947368" y="0.101322" />
-                        <image-point name="GambaDx" x="0.221053" y="0.748899" />
-                        <image-point name="GambaSx" x="0.768421" y="0.784141" />
-                    </frame>
-                    <frame duration="1" hotspotX="0.55102" hotspotY="0.507042">
-                        <image-point name="BraccioSx" x="0.744898" y="0.187793" />
-                        <image-point name="BraccioDx" x="0.173469" y="0.248826" />
-                        <image-point name="Cervello" x="0.22449" y="0.028169" />
-                        <image-point name="Occhi" x="0.0816327" y="0.107981" />
-                        <image-point name="GambaDx" x="0.214286" y="0.71831" />
-                        <image-point name="GambaSx" x="0.734694" y="0.774648" />
-                    </frame>
-                    <frame duration="1" hotspotX="0.552632" hotspotY="0.507772">
-                        <image-point name="BraccioSx" x="0.640351" y="0.196891" />
-                        <image-point name="BraccioDx" x="0.149123" y="0.279793" />
-                        <image-point name="Cervello" x="0.184211" y="0.0310881" />
-                        <image-point name="Occhi" x="0.0701754" y="0.124352" />
-                        <image-point name="GambaDx" x="0.201754" y="0.699482" />
-                        <image-point name="GambaSx" x="0.640351" y="0.782383" />
-                    </frame>
-                    <frame duration="1" hotspotX="0.547009" hotspotY="0.509804">
-                        <image-point name="BraccioSx" x="0.641026" y="0.24183" />
-                        <image-point name="BraccioDx" x="0.162393" y="0.346405" />
-                        <image-point name="Cervello" x="0.188034" y="0.0392157" />
-                        <image-point name="Occhi" x="0.0854701" y="0.156863" />
-                        <image-point name="GambaDx" x="0.162393" y="0.633987" />
-                        <image-point name="GambaSx" x="0.615385" y="0.895425" />
-                    </frame>
-                </animation>
-                <animation framecount="5" loop="0" name="EndAttack1" pingpong="0" repeatcount="1" repeatto="0" sid="1516575684863043" speed="5">
-                    <frame duration="1" hotspotX="0.547009" hotspotY="0.509804">
-                        <image-point name="BraccioSx" x="0.641026" y="0.24183" />
-                        <image-point name="BraccioDx" x="0.162393" y="0.346405" />
-                        <image-point name="Cervello" x="0.188034" y="0.0392157" />
-                        <image-point name="Occhi" x="0.0854701" y="0.156863" />
-                        <image-point name="GambaDx" x="0.162393" y="0.633987" />
-                        <image-point name="GambaSx" x="0.615385" y="0.895425" />
-                    </frame>
-                    <frame duration="1" hotspotX="0.552632" hotspotY="0.507772">
-                        <image-point name="BraccioSx" x="0.640351" y="0.196891" />
-                        <image-point name="BraccioDx" x="0.149123" y="0.279793" />
-                        <image-point name="Cervello" x="0.184211" y="0.0310881" />
-                        <image-point name="Occhi" x="0.0701754" y="0.124352" />
-                        <image-point name="GambaDx" x="0.201754" y="0.699482" />
-                        <image-point name="GambaSx" x="0.640351" y="0.782383" />
-                    </frame>
-                    <frame duration="1" hotspotX="0.55102" hotspotY="0.507042">
-                        <image-point name="BraccioSx" x="0.744898" y="0.187793" />
-                        <image-point name="BraccioDx" x="0.173469" y="0.248826" />
-                        <image-point name="Cervello" x="0.22449" y="0.028169" />
-                        <image-point name="Occhi" x="0.0816327" y="0.107981" />
-                        <image-point name="GambaDx" x="0.214286" y="0.71831" />
-                        <image-point name="GambaSx" x="0.734694" y="0.774648" />
-                    </frame>
-                    <frame duration="1" hotspotX="0.547368" hotspotY="0.506608">
-                        <image-point name="BraccioSx" x="0.778947" y="0.185022" />
-                        <image-point name="BraccioDx" x="0.168421" y="0.23348" />
-                        <image-point name="Cervello" x="0.252632" y="0.0264317" />
-                        <image-point name="Occhi" x="0.0947368" y="0.101322" />
-                        <image-point name="GambaDx" x="0.221053" y="0.748899" />
-                        <image-point name="GambaSx" x="0.768421" y="0.784141" />
-                    </frame>
-                    <frame duration="1" hotspotX="0.548781" hotspotY="0.508621">
-                        <image-point name="BraccioSx" x="0.951219" y="0.193966" />
-                        <image-point name="BraccioDx" x="0.243902" y="0.232759" />
-                        <image-point name="Cervello" x="0.390244" y="0.0215517" />
-                        <image-point name="Occhi" x="0.207317" y="0.0948276" />
-                        <image-point name="GambaDx" x="0.243902" y="0.732759" />
-                        <image-point name="GambaSx" x="0.743902" y="0.780172" />
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Cervello" sid="1970572089111932">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="611591395603688" speed="5">
-                    <frame duration="1" hotspotX="0.533333" hotspotY="0.384615" original-source="C:\Users\Drako-PC\Downloads\verde-2016-05-22\verde\cervello.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Gamba_sx" sid="3342571012450121">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9614244957947698" speed="5">
-                    <frame duration="1" hotspotX="0.44" hotspotY="0.508197" original-source="C:\Users\Drako-PC\Downloads\verde-2016-05-22\verde\gamba_sx.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Gamba_dx" sid="4240060450022453">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8850524956977215" speed="5">
-                    <frame duration="1" hotspotX="0.307692" hotspotY="0.410714" original-source="C:\Users\Drako-PC\Downloads\verde-2016-05-22\verde\ga,ba_dx.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Braccio_sx" sid="5771737753809835">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="796817545058323" speed="5">
-                    <frame duration="1" hotspotX="0.393939" hotspotY="0.084507" original-source="C:\Users\Drako-PC\Downloads\verde-2016-05-22\verde\braccio_sx.png">
-                        <image-point name="Avanbraccio" x="0.848485" y="0.929577" />
-                        <image-point name="Infezione" x="0.787879" y="0.56338" />
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Braccio_dxsecondo_piano" sid="8899719065883918">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7370294362819102" speed="5">
-                    <frame duration="1" hotspotX="0.761905" hotspotY="0.184211" original-source="C:\Users\Drako-PC\Downloads\verde-2016-05-22\verde\braccio_dx.png">
-                        <image-point name="Avambraccio" x="0.428571" y="0.789474" />
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Avambraccio_sx" sid="6911989028408229">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5190319249572157" speed="5">
-                    <frame duration="1" hotspotX="0.652174" hotspotY="0.0652174" original-source="C:\Users\Drako-PC\Downloads\verde-2016-05-22\verde\avambraccio_sx.png">
-                        <collision-poly>
-                            <point x="0" y="0" />
-                            <point x="1" y="0" />
-                            <point x="1" y="0.287334" />
-                            <point x="0" y="0" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Avambraccio_dx" sid="3462579345251317">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1461165833726935" speed="5">
-                    <frame duration="1" hotspotX="0.833333" hotspotY="0.173077" original-source="C:\Users\Drako-PC\Downloads\verde-2016-05-22\verde\avambraccio_dx.png">
-                        <image-point name="Mazza" x="0.138889" y="0.903846" />
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Occhi" sid="9804848088556343">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5287557842841911" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.545455" original-source="C:\Users\Drako-PC\Downloads\BB\Parti\Occhi.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Mano_dx" sid="4219104329146761">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8289054057570135" speed="5">
-                    <frame duration="1" hotspotX="0.820513" hotspotY="0.162162" original-source="C:\Users\Drako-PC\Downloads\verde-2016-05-22\verde\mano_dx.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Infezione_braccio" sid="2990712196223606">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8846973002687112" speed="5">
-                    <frame duration="1" hotspotX="0.551724" hotspotY="0.4" original-source="C:\Users\Drako-PC\Downloads\verde-2016-05-22\verde\carne.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="StanzaBoss" sid="6773842698264196">
             <plugin id="Sprite" />
             <animation-folder>
@@ -7264,42 +7455,23 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="PotenziamentoSparoHud" sid="414475470236477">
+        <object-type name="CrossHair" sid="6252656820794828">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9516197399342858" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Drako-PC\Downloads\Potenziamento sparo -  Hud.png">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5593517755173992" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Program Files\Construct 2\hotspot.png">
                         <collision-poly>
-                            <point x="0.166667" y="0.166667" />
-                            <point x="0.5" y="0" />
-                            <point x="0.833333" y="0.166667" />
-                            <point x="1" y="0.5" />
-                            <point x="0.833333" y="0.833333" />
-                            <point x="0.5" y="1" />
-                            <point x="0.166667" y="0.833333" />
-                            <point x="0" y="0.5" />
+                            <point x="0.3125" y="0.3125" />
+                            <point x="0.5" y="0.25" />
+                            <point x="0.6875" y="0.5" />
+                            <point x="0.625" y="0.625" />
+                            <point x="0.5" y="0.6875" />
+                            <point x="0.25" y="0.5" />
                         </collision-poly>
                     </frame>
                 </animation>
             </animation-folder>
         </object-type>
-<object-type name="CrossHair" sid="6252656820794828">
-  <plugin id="Sprite" />
-  <animation-folder>
-    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5593517755173992" speed="5">
-      <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Program Files\Construct 2\hotspot.png">
-        <collision-poly>
-          <point x="0.3125" y="0.3125" />
-          <point x="0.5" y="0.25" />
-          <point x="0.6875" y="0.5" />
-          <point x="0.625" y="0.625" />
-          <point x="0.5" y="0.6875" />
-          <point x="0.25" y="0.5" />
-        </collision-poly>
-      </frame>
-    </animation>
-  </animation-folder>
-</object-type>
         <object-type name="Ballconata" sid="5738968381496841">
             <plugin id="Sprite" />
             <animation-folder>
@@ -7394,6 +7566,20 @@
                 </behavior-type>
             </behaviors>
         </family>
+        <family name="Boss" plugin-id="Sprite" sid="6527775020189714">
+            <members>
+                <member>Avambraccio_dx</member>
+                <member>Avambraccio_sx</member>
+                <member>Avambraccio_sx2</member>
+                <member>Braccio_dxsecondo_piano</member>
+                <member>Braccio_sx</member>
+                <member>Cervello</member>
+                <member>Corpo</member>
+                <member>Infezione_braccio</member>
+                <member>Mano_dx</member>
+                <member>Occhi</member>
+            </members>
+        </family>
     </families>
     <layout-folder>
         <layout>Level 1 Layout.xml</layout>
@@ -7426,9 +7612,9 @@
         <event-sheet>Cutscene End Sheet.xml</event-sheet>
     </event-folder>
     <global-instances>
-        <global-instance type="Keyboard" uid="1685" />
-        <global-instance type="Mouse" uid="1686" />
-        <global-instance type="Audio" uid="1687">
+        <global-instance type="Keyboard" uid="1686" />
+        <global-instance type="Mouse" uid="1687" />
+        <global-instance type="Audio" uid="1688">
             <properties>
                 <timescale-audio>Off</timescale-audio>
                 <saveload>All</saveload>
@@ -7442,7 +7628,7 @@
                 <roll-off-factor>1</roll-off-factor>
             </properties>
         </global-instance>
-        <global-instance type="Function" uid="1688" />
+        <global-instance type="Function" uid="1696" />
     </global-instances>
     <sounds-folder>
         <sound-folder name="PlaceHolder Sounds">

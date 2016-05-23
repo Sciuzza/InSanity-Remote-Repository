@@ -51,6 +51,14 @@
                             <param id="0" name="Variable">Layout</param>
                             <param id="1" name="Value">1</param>
                         </action>
+                        <action id="-9" name="Set value" sid="710717364596414" type="System">
+                            <param id="0" name="Variable">Player_pos_x_temp</param>
+                            <param id="1" name="Value">Player_Box.X</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="4688402628801459" type="System">
+                            <param id="0" name="Variable">Player_pos_y_temp</param>
+                            <param id="1" name="Value">Player_Box.Y</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="5746811443294065">

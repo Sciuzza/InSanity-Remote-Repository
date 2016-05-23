@@ -39269,6 +39269,7 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Pin" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -39341,7 +39342,7 @@
                         <Weapon_Max_Loader>4</Weapon_Max_Loader>
                         <Reloading_Time>0.5</Reloading_Time>
                         <Reloading>false</Reloading>
-                        <Stun_Ability>false</Stun_Ability>
+                        <Stun_Ability>true</Stun_Ability>
                         <Jump_Is_On>true</Jump_Is_On>
                         <Dash_Is_On>true</Dash_Is_On>
                         <Side_Movement_Is_On>true</Side_Movement_Is_On>
@@ -39355,6 +39356,7 @@
                         <Intro_Phases>0</Intro_Phases>
                         <Level_1_Phases>0</Level_1_Phases>
                         <Level_2_Phases>0</Level_2_Phases>
+                        <Level_3_Phases>4</Level_3_Phases>
                         <Camera_On_Player>true</Camera_On_Player>
                         <Res_Room_Visible>false</Res_Room_Visible>
                         <Returning>false</Returning>
@@ -39373,7 +39375,7 @@
                                 <jump-strength>480</jump-strength>
                                 <gravity>1500</gravity>
                                 <max-fall-speed>1000</max-fall-speed>
-                                <double-jump>Enabled</double-jump>
+                                <double-jump>Disabled</double-jump>
                                 <jump-sustain>0</jump-sustain>
                                 <default-controls>No</default-controls>
                                 <initial-state>Enabled</initial-state>
@@ -40264,7 +40266,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="BackGround_Dia_Text" uid="1689">
+                <instance type="BackGround_Dia_Text" uid="1468">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -40283,7 +40285,7 @@
                         <width>102</width>
                         <height>71</height>
                         <depth>0</depth>
-                        <hotspotX>0.501558006</hotspotX>
+                        <hotspotX>0.501557648</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>0</opacity>

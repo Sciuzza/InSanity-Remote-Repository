@@ -41,6 +41,14 @@
                             <param id="0" name="Pin to">Player_Box</param>
                             <param id="1" name="Mode">1</param>
                         </action>
+                        <action id="-9" name="Set value" sid="1274803992897428" type="System">
+                            <param id="0" name="Variable">Player_pos_x_temp</param>
+                            <param id="1" name="Value">Player_Box.X</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="7779115314332379" type="System">
+                            <param id="0" name="Variable">Player_pos_y_temp</param>
+                            <param id="1" name="Value">Player_Box.Y</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="9948386645817593">

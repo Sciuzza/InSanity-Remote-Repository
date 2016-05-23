@@ -29,7 +29,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="PausaSfondo" uid="1676">
+                <instance type="PausaSfondo" uid="1677">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -97,7 +97,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="PausaRiquadroContinuaRicomincia" uid="1677">
+                <instance type="PausaRiquadroContinuaRicomincia" uid="1678">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -119,7 +119,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="PausaRiquadroTornaAlMenu" uid="1678">
+                <instance type="PausaRiquadroTornaAlMenu" uid="1680">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -141,7 +141,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="PausaRiquadroContinuaRicomincia2" uid="1680">
+                <instance type="PausaRiquadroContinuaRicomincia2" uid="1681">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
