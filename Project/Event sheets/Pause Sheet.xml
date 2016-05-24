@@ -9,7 +9,14 @@
                     <param id="0" name="Key">27 (Esc)</param>
                 </condition>
             </conditions>
-            <actions />
+            <actions>
+                <action id="0" name="Play" sid="551498921667658" type="Audio">
+                    <param id="0" name="Audio file">Gun_shot</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-15</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
             <sub-events>
                 <event-block sid="3882017344237532">
                     <conditions>
@@ -77,7 +84,14 @@
                     <param id="2" name="Object clicked">PausaRiquadroContinuaRicomincia</param>
                 </condition>
             </conditions>
-            <actions />
+            <actions>
+                <action id="0" name="Play" sid="1683867353571198" type="Audio">
+                    <param id="0" name="Audio file">Gun_shot</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-15</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
             <sub-events>
                 <event-block sid="3829902050909655">
                     <conditions>
@@ -149,6 +163,12 @@
                 <action id="-9" name="Set value" sid="4733265762977816" type="System">
                     <param id="0" name="Variable">Restarting_Level</param>
                     <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Play" sid="1462507676659563" type="Audio">
+                    <param id="0" name="Audio file">Gun_shot</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-15</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
             </actions>
             <sub-events>
@@ -222,6 +242,12 @@
                 <action id="-2" name="Go to layout" sid="1430168688529525" type="System">
                     <param id="0" name="Layout">Menu Start</param>
                 </action>
+                <action id="0" name="Play" sid="831144571108349" type="Audio">
+                    <param id="0" name="Audio file">Gun_shot</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-15</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="6743152321319467">
@@ -229,6 +255,7 @@
                 <condition id="7" name="Cursor is over object" sid="3597268987955214" type="Mouse">
                     <param id="0" name="Object">PausaRiquadroContinuaRicomincia2</param>
                 </condition>
+                <condition id="-4" name="Trigger once while true" sid="9487371595503757" type="System" />
             </conditions>
             <actions>
                 <action id="-15" name="Set visible" sid="7212944101444994" type="PausaRiquadroContinuaRicomincia">
@@ -240,6 +267,12 @@
                 <action id="-15" name="Set visible" sid="4488861476436585" type="PausaRiquadroTornaAlMenu">
                     <param id="0" name="Visibility">0</param>
                 </action>
+                <action id="0" name="Play" sid="5561684023914713" type="Audio">
+                    <param id="0" name="Audio file">cristallo colpito</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-15</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="5593653652445508">
@@ -247,6 +280,7 @@
                 <condition id="7" name="Cursor is over object" sid="6546007383364261" type="Mouse">
                     <param id="0" name="Object">PausaRiquadroContinuaRicomincia</param>
                 </condition>
+                <condition id="-4" name="Trigger once while true" sid="6061190660790421" type="System" />
             </conditions>
             <actions>
                 <action id="-15" name="Set visible" sid="6310176793037381" type="PausaRiquadroContinuaRicomincia">
@@ -258,6 +292,12 @@
                 <action id="-15" name="Set visible" sid="4408319777678158" type="PausaRiquadroTornaAlMenu">
                     <param id="0" name="Visibility">0</param>
                 </action>
+                <action id="0" name="Play" sid="729107178031974" type="Audio">
+                    <param id="0" name="Audio file">cristallo colpito</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-15</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="7848267154643363">
@@ -265,6 +305,7 @@
                 <condition id="7" name="Cursor is over object" sid="368815551028228" type="Mouse">
                     <param id="0" name="Object">PausaRiquadroTornaAlMenu</param>
                 </condition>
+                <condition id="-4" name="Trigger once while true" sid="531916618928376" type="System" />
             </conditions>
             <actions>
                 <action id="-15" name="Set visible" sid="6712059997750077" type="PausaRiquadroContinuaRicomincia">
@@ -275,6 +316,12 @@
                 </action>
                 <action id="-15" name="Set visible" sid="343756870526644" type="PausaRiquadroTornaAlMenu">
                     <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="0" name="Play" sid="318861618381312" type="Audio">
+                    <param id="0" name="Audio file">cristallo colpito</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-15</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
             </actions>
         </event-block>

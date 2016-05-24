@@ -29,7 +29,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="CutsceneEnd1" uid="2034">
+                <instance type="CutsceneEnd1" uid="2041">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -70,7 +70,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="CutsceneEndDialog" uid="2035">
+                <instance type="CutsceneEndDialog" uid="2042">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -92,7 +92,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CutsceneEndText" uid="2036">
+                <instance type="CutsceneEndText" uid="2043">
                     <properties>
                         <text>Text</text>
                         <initial-visibility>Invisible</initial-visibility>
@@ -119,7 +119,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CutsceneEnd2" uid="2037">
+                <instance type="CutsceneEnd2" uid="2044">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -141,7 +141,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CutsceneEnd3" uid="2038">
+                <instance type="CutsceneEnd3" uid="2045">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -163,7 +163,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Brother" uid="2040">
+                <instance type="Brother" uid="2046">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -206,7 +206,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CutsceneEndCredits" uid="2041">
+                <instance type="CutsceneEndCredits" uid="2047">
                     <properties>
                         <text>&lt; Designers &gt;</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -233,7 +233,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CutsceneEndCredits" uid="2042">
+                <instance type="CutsceneEndCredits" uid="2048">
                     <properties>
                         <text>Sergio Osimo</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -260,7 +260,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CutsceneEndCredits" uid="2043">
+                <instance type="CutsceneEndCredits" uid="2049">
                     <properties>
                         <text>Thomas Palagi</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -287,7 +287,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CutsceneEndCredits" uid="2044">
+                <instance type="CutsceneEndCredits" uid="2050">
                     <properties>
                         <text>Matteo Micucci</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -314,7 +314,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CutsceneEndCredits" uid="2045">
+                <instance type="CutsceneEndCredits" uid="2051">
                     <properties>
                         <text>Gonzalo Ponce de Leon</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -341,7 +341,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CutsceneEndCredits" uid="2046">
+                <instance type="CutsceneEndCredits" uid="2052">
                     <properties>
                         <text>Luca Previdi</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -368,7 +368,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CutsceneEndCredits" uid="2047">
+                <instance type="CutsceneEndCredits" uid="2053">
                     <properties>
                         <text>Matteo Bonetto</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -395,7 +395,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CutsceneEndCredits" uid="2048">
+                <instance type="CutsceneEndCredits" uid="2054">
                     <properties>
                         <text>Lorenzo Bresciani</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -422,7 +422,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CutsceneEndCredits" uid="2049">
+                <instance type="CutsceneEndCredits" uid="2055">
                     <properties>
                         <text>Cristiano Piromalli</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -449,7 +449,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CutsceneEndCredits" uid="2050">
+                <instance type="CutsceneEndCredits" uid="2056">
                     <properties>
                         <text>&lt; Artists &gt;</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -476,7 +476,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CutsceneEndCredits" uid="2051">
+                <instance type="CutsceneEndCredits" uid="2057">
                     <properties>
                         <text>&lt; Programmers &gt;</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -503,7 +503,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CutsceneEndCredits" uid="2052">
+                <instance type="CutsceneEndCredits" uid="2058">
                     <properties>
                         <text>&lt; Lead Designer &gt;</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -530,7 +530,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CutsceneEndCredits" uid="2053">
+                <instance type="CutsceneEndCredits" uid="2059">
                     <properties>
                         <text>Sergio Osimo</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -557,7 +557,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CutsceneEndCredits" uid="2054">
+                <instance type="CutsceneEndCredits" uid="2060">
                     <properties>
                         <text>&lt; Lead Programmer &gt;</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -584,7 +584,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CutsceneEndCredits" uid="2055">
+                <instance type="CutsceneEndCredits" uid="2137">
                     <properties>
                         <text>Cristiano Piromalli</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -611,7 +611,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CutsceneEndCredits" uid="2056">
+                <instance type="CutsceneEndCredits" uid="2235">
                     <properties>
                         <text>&lt; Lead Artist &gt;</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -638,7 +638,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CutsceneEndCredits" uid="2057">
+                <instance type="CutsceneEndCredits" uid="2236">
                     <properties>
                         <text>Matteo Bonetto</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -665,7 +665,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CutsceneEndCredits" uid="2058">
+                <instance type="CutsceneEndCredits" uid="2237">
                     <properties>
                         <text>&lt; Project Lead &gt;</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -692,7 +692,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CutsceneEndCredits" uid="2059">
+                <instance type="CutsceneEndCredits" uid="2238">
                     <properties>
                         <text>Matteo Micucci</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -719,7 +719,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="title2" uid="2060">
+                <instance type="title2" uid="2239">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -752,7 +752,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CutsceneEndOspedale" uid="1682">
+                <instance type="CutsceneEndOspedale" uid="2240">
                     <properties>
                         <text>Ospedale Psichiatrico - oggi -</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -779,7 +779,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CutsceneEndDialog2" uid="1683">
+                <instance type="CutsceneEndDialog2" uid="2241">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -801,7 +801,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CutsceneEndText2" uid="1684">
+                <instance type="CutsceneEndText2" uid="2242">
                     <properties>
                         <text>Text</text>
                         <initial-visibility>Invisible</initial-visibility>
@@ -828,7 +828,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Barella" uid="1685">
+                <instance type="Barella" uid="2243">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -850,7 +850,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="dash2" uid="2039">
+                <instance type="dash2" uid="2244">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>

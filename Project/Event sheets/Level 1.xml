@@ -13,6 +13,13 @@
                         <condition id="-2" name="On start of layout" sid="4323823249592912" type="System" />
                     </conditions>
                     <actions>
+                        <action id="33" name="Stop all" sid="7949893203948575" type="Audio" />
+                        <action id="0" name="Play" sid="7476158103569079" type="Audio">
+                            <param id="0" name="Audio file">livello1-1</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">-20</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
                         <action id="0" name="Call function" sid="5804018926632902" type="Function">
                             <param id="0" name="Name">&quot;Hud and Text Positioning&quot;</param>
                             <param id="1" name="Parameter {n}"></param>

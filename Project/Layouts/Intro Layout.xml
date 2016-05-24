@@ -388,8 +388,8 @@
                         <x>1061.939941406</x>
                         <y>160.224197388</y>
                         <z>0</z>
-                        <width>45</width>
-                        <height>40</height>
+                        <width>31</width>
+                        <height>30</height>
                         <depth>0</depth>
                         <hotspotX>0.508771956</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -397,7 +397,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Death" uid="80">
+                <instance type="Death" uid="81">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -433,7 +433,7 @@
             <zoom-rate>1</zoom-rate>
             <opacity>1</opacity>
             <force-own-texture>0</force-own-texture>
-            <global>1</global>
+            <global>0</global>
             <use-render-cells>0</use-render-cells>
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
@@ -789,7 +789,7 @@
                         <opacity>0</opacity>
                     </world>
                 </instance>
-                <instance type="Bullet_1_Player" uid="81">
+                <instance type="Bullet_1_Player" uid="82">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -823,7 +823,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Bullet_S_Player" uid="82">
+                <instance type="Bullet_S_Player" uid="84">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -858,7 +858,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="BackGround_Tut_Text" uid="84">
+                <instance type="BackGround_Tut_Text" uid="85">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1364,7 +1364,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Reloading" uid="85">
+                <instance type="Reloading" uid="86">
                     <properties>
                         <text></text>
                         <initial-visibility>Visible</initial-visibility>
@@ -1528,7 +1528,7 @@
                 </instance>
                 <instance type="Camera" uid="311">
                     <properties>
-                        <initial-visibility>Visible</initial-visibility>
+                        <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Disabled</collisions>

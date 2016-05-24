@@ -9,6 +9,13 @@
                 <condition id="-2" name="On start of layout" sid="1139981326222756" type="System" />
             </conditions>
             <actions>
+                <action id="33" name="Stop all" sid="3715274402498933" type="Audio" />
+                <action id="0" name="Play" sid="9868856237144086" type="Audio">
+                    <param id="0" name="Audio file">cutsceneend-1</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-15</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
                 <action id="-16" name="Set opacity" sid="5501799973451447" type="title2">
                     <param id="0" name="Opacity">0</param>
                 </action>
@@ -165,6 +172,7 @@
                 <action id="-2" name="Go to layout" sid="821532139369916" type="System">
                     <param id="0" name="Layout">Menu Start</param>
                 </action>
+                <action id="33" name="Stop all" sid="7625931423535508" type="Audio" />
             </actions>
         </event-block>
         <event-block sid="4629226297267835">
@@ -192,6 +200,7 @@
                 <action id="-2" name="Go to layout" sid="3379159833623777" type="System">
                     <param id="0" name="Layout">Menu Start</param>
                 </action>
+                <action id="33" name="Stop all" sid="1245338039834875" type="Audio" />
             </actions>
         </event-block>
         <event-block sid="6246586764886489">

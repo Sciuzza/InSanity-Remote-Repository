@@ -4385,18 +4385,23 @@
             </object-type>
             <object-type name="GabbiaBlu" sid="139157658027587">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="8558740947996519">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8472369705149283" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Drako-PC\Downloads\Caricamento_quarta_parte-2016-05-19\Caricamento quarta parte\Cristallo azzurro.png">
                             <collision-poly>
-                                <point x="0.177083" y="0.0745614" />
-                                <point x="0.5" y="0.0833333" />
-                                <point x="0.645833" y="0.149123" />
-                                <point x="0.927083" y="0.5" />
-                                <point x="0.791667" y="0.912281" />
+                                <point x="0.0833333" y="0.0745614" />
+                                <point x="0.40625" y="0.0131579" />
+                                <point x="0.90625" y="0.245614" />
+                                <point x="0.9375" y="0.754385" />
+                                <point x="0.770833" y="0.925439" />
                                 <point x="0.5" y="0.986842" />
-                                <point x="0.25" y="0.894737" />
-                                <point x="0.0416667" y="0.5" />
+                                <point x="0.135417" y="0.824562" />
+                                <point x="0.09375" y="0.495614" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -4404,17 +4409,22 @@
             </object-type>
             <object-type name="GabbiaVerde" sid="5700652689978519">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="4207371566261261">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4983264132302067" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.502347" original-source="C:\Users\Drako-PC\Downloads\Caricamento_quarta_parte-2016-05-19\Caricamento quarta parte\Cristallo verde.png">
                             <collision-poly>
-                                <point x="0.09375" y="0.0422535" />
-                                <point x="0.5" y="0.0328638" />
-                                <point x="0.729167" y="0.122066" />
-                                <point x="0.9375" y="0.497653" />
+                                <point x="0.0729167" y="0.0375587" />
+                                <point x="0.447917" y="0" />
+                                <point x="0.927084" y="0.206573" />
+                                <point x="0.979167" y="0.746479" />
                                 <point x="0.791667" y="0.906103" />
                                 <point x="0.5" y="0.985915" />
-                                <point x="0.260417" y="0.882629" />
+                                <point x="0.125" y="0.812207" />
                                 <point x="0.0416667" y="0.497653" />
                             </collision-poly>
                         </frame>
@@ -4423,17 +4433,22 @@
             </object-type>
             <object-type name="GabbiaRossa" sid="1208364969093964">
                 <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Solid" sid="1877852182479528">
+                        <behavior id="solid" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1083303519809708" speed="5">
                         <frame duration="1" hotspotX="0.505263" hotspotY="0.502242" original-source="C:\Users\Drako-PC\Downloads\Caricamento_quarta_parte-2016-05-19\Caricamento quarta parte\Cristallo rosso.png">
                             <collision-poly>
-                                <point x="0.326316" y="0.139013" />
-                                <point x="0.494737" y="0.0403587" />
-                                <point x="0.821053" y="0.0762332" />
-                                <point x="0.968421" y="0.497758" />
-                                <point x="0.726316" y="0.883408" />
-                                <point x="0.494737" y="0.986547" />
-                                <point x="0.210526" y="0.910314" />
+                                <point x="0.0736843" y="0.260089" />
+                                <point x="0.484211" y="0.00896857" />
+                                <point x="0.8" y="0.0134529" />
+                                <point x="0.968421" y="0.210763" />
+                                <point x="0.968421" y="0.825112" />
+                                <point x="0.410526" y="1" />
+                                <point x="0.0736839" y="0.757848" />
                                 <point x="0.0736842" y="0.497758" />
                             </collision-poly>
                         </frame>
@@ -4932,13 +4947,13 @@
                     <animation framecount="1" loop="0" name="Rosso" pingpong="0" repeatcount="1" repeatto="0" sid="2582722174897129" speed="5">
                         <frame duration="1" hotspotX="0.503448" hotspotY="0.5" original-source="C:\Users\Drako-PC\Downloads\Caricamento_quarta_parte-2016-05-19\Caricamento quarta parte\Cristallo chiave roso.png">
                             <collision-poly>
-                                <point x="0.324138" y="0.22381" />
-                                <point x="0.496552" y="0.00952381" />
-                                <point x="0.744828" y="0.17619" />
-                                <point x="0.951724" y="0.5" />
-                                <point x="0.875862" y="0.914286" />
-                                <point x="0.496552" y="1" />
-                                <point x="0.158621" y="0.890476" />
+                                <point x="0.0896551" y="0.414286" />
+                                <point x="0.248276" y="0.461905" />
+                                <point x="0.468966" y="0" />
+                                <point x="0.82069" y="0.214286" />
+                                <point x="1" y="0.742857" />
+                                <point x="0.6" y="1" />
+                                <point x="0.0206899" y="0.842857" />
                                 <point x="0.0206897" y="0.5" />
                             </collision-poly>
                         </frame>
@@ -6075,8 +6090,8 @@
                     <frame duration="1" hotspotX="0.293578" hotspotY="0.884615" original-source="C:\Users\Drako-PC\Downloads\Morte\charger animazione morte 10.png" />
                     <frame duration="1" hotspotX="0.302752" hotspotY="0.884615" original-source="C:\Users\Drako-PC\Downloads\Morte\charger animazione morte 11.png" />
                     <frame duration="1" hotspotX="0.279279" hotspotY="0.884615" original-source="C:\Users\Drako-PC\Downloads\Morte\charger animazione morte 12.png" />
-                    <frame duration="1" hotspotX="0.381356" hotspotY="0.980769" original-source="C:\Users\Drako-PC\Downloads\Morte\charger animazione morte 13.png" />
-                    <frame duration="1" hotspotX="0.380165" hotspotY="0.980769" original-source="C:\Users\Drako-PC\Downloads\Morte\charger animazione morte 14.png" />
+                    <frame duration="1" hotspotX="0.262712" hotspotY="0.884615" original-source="C:\Users\Drako-PC\Downloads\Morte\charger animazione morte 13.png" />
+                    <frame duration="1" hotspotX="0.272727" hotspotY="0.865385" original-source="C:\Users\Drako-PC\Downloads\Morte\charger animazione morte 14.png" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -6603,18 +6618,7 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="689386816807973" speed="5">
-                    <frame duration="1" hotspotX="0.511111" hotspotY="0.502994" original-source="C:\Users\Drako-PC\Downloads\Caricamento_quarta_parte-2016-05-19\Caricamento quarta parte\Porta boss - colonna dietro.png">
-                        <collision-poly>
-                            <point x="0.355556" y="0.0958084" />
-                            <point x="0.488889" y="0.0538922" />
-                            <point x="0.955556" y="0.011976" />
-                            <point x="0.666667" y="0.497006" />
-                            <point x="0.733333" y="0.928144" />
-                            <point x="0.488889" y="1" />
-                            <point x="0.0444444" y="0.988024" />
-                            <point x="0.0888889" y="0.497006" />
-                        </collision-poly>
-                    </frame>
+                    <frame duration="1" hotspotX="0.511111" hotspotY="0.502994" original-source="C:\Users\Drako-PC\Downloads\Caricamento_quarta_parte-2016-05-19\Caricamento quarta parte\Porta boss - colonna dietro.png" />
                 </animation>
             </animation-folder>
         </object-type>

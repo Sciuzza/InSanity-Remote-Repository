@@ -11,6 +11,13 @@
                         <condition id="-2" name="On start of layout" sid="6745864096524137" type="System" />
                     </conditions>
                     <actions>
+                        <action id="33" name="Stop all" sid="9212239885488975" type="Audio" />
+                        <action id="0" name="Play" sid="4130234668446523" type="Audio">
+                            <param id="0" name="Audio file">MusicaBoss</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">-20</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
                         <action id="0" name="Call function" sid="4520933887365951" type="Function">
                             <param id="0" name="Name">&quot;Hud and Text Positioning&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
