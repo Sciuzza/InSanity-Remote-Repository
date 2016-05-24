@@ -58,8 +58,12 @@
                             </conditions>
                             <actions>
                                 <action id="-3" name="Set position" sid="6396660710925684" type="Player_Box">
-                                    <param id="0" name="X">103</param>
-                                    <param id="1" name="Y">232</param>
+                                    <param id="0" name="X">98</param>
+                                    <param id="1" name="Y">234</param>
+                                </action>
+                                <action id="0" name="Call function" sid="312601137302786" type="Function">
+                                    <param id="0" name="Name">&quot;Player Memory Load&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
                         </event-block>
@@ -96,8 +100,8 @@
                                     <param id="1" name="Value">1</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="7105331491325801" type="Player_Box">
-                                    <param id="0" name="X">103</param>
-                                    <param id="1" name="Y">232</param>
+                                    <param id="0" name="X">98</param>
+                                    <param id="1" name="Y">234</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -768,7 +772,7 @@
                             <param id="1" name="Value">Player_Box.Weapon_Max_Loader</param>
                         </action>
                         <action behavior="Timer" id="0" name="Start timer" sid="4733728081884664" type="Player_Box">
-                            <param id="0" name="Duration">2</param>
+                            <param id="0" name="Duration">5</param>
                             <param id="1" name="Type">0</param>
                             <param id="2" name="Tag">&quot;Record 1 Text Fading&quot;</param>
                         </action>

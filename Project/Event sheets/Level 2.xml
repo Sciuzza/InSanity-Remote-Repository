@@ -15,29 +15,25 @@
                             <param id="0" name="Name">&quot;Hud and Text Positioning&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
-                        <action id="0" name="Call function" sid="3618403371524651" type="Function">
-                            <param id="0" name="Name">&quot;Player Memory Load&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
                         <action id="2" name="Stop" sid="2499622492543257" type="MuroDistruttibileArco" />
                         <action id="-9" name="Set value" sid="9742007437866873" type="System">
                             <param id="0" name="Variable">Layout</param>
                             <param id="1" name="Value">2</param>
                         </action>
                         <action id="2" name="Stop" sid="4371467072230416" type="CheckPoint" />
-                        <action id="-3" name="Set position" sid="9928242828156045" type="Dialogue">
+                        <action disabled="1" id="-3" name="Set position" sid="9928242828156045" type="Dialogue">
                             <param id="0" name="X">Player_Box.X</param>
                             <param id="1" name="Y">Player_Box.Y - 30</param>
                         </action>
-                        <action behavior="Pin" id="0" name="Pin to object" sid="1100005709090961" type="Dialogue">
+                        <action behavior="Pin" disabled="1" id="0" name="Pin to object" sid="1100005709090961" type="Dialogue">
                             <param id="0" name="Pin to">Player_Box</param>
                             <param id="1" name="Mode">1</param>
                         </action>
-                        <action id="-3" name="Set position" sid="3803889510084312" type="BackGround_Dia_Text">
+                        <action disabled="1" id="-3" name="Set position" sid="3803889510084312" type="BackGround_Dia_Text">
                             <param id="0" name="X">Player_Box.X</param>
                             <param id="1" name="Y">Player_Box.Y - 30</param>
                         </action>
-                        <action behavior="Pin" id="0" name="Pin to object" sid="960327565267732" type="BackGround_Dia_Text">
+                        <action behavior="Pin" disabled="1" id="0" name="Pin to object" sid="960327565267732" type="BackGround_Dia_Text">
                             <param id="0" name="Pin to">Player_Box</param>
                             <param id="1" name="Mode">1</param>
                         </action>
@@ -61,8 +57,12 @@
                             </conditions>
                             <actions>
                                 <action id="-3" name="Set position" sid="1902167743497403" type="Player_Box">
-                                    <param id="0" name="X">700</param>
-                                    <param id="1" name="Y">2534</param>
+                                    <param id="0" name="X">690</param>
+                                    <param id="1" name="Y">2546</param>
+                                </action>
+                                <action id="0" name="Call function" sid="3618403371524651" type="Function">
+                                    <param id="0" name="Name">&quot;Player Memory Load&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
                         </event-block>
@@ -98,9 +98,9 @@
                                     <param id="0" name="Variable">Save_Level_2</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                                <action id="-3" name="Set position" sid="914068886930254" type="Player_Box">
-                                    <param id="0" name="X">700</param>
-                                    <param id="1" name="Y">2534</param>
+                                <action id="-3" name="Set position" sid="2464123652912332" type="Player_Box">
+                                    <param id="0" name="X">690</param>
+                                    <param id="1" name="Y">2546</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1186,19 +1186,19 @@
                                     <param id="0" name="Name">&quot;Dialogue&quot;</param>
                                     <param id="1" name="Parameter {n}">650{###}1600{###}&quot;L&apos;ho portata via a te...&quot;</param>
                                 </action>
+                                <action id="0" name="Set text" sid="5005969364247242" type="Tutorial">
+                                    <param id="0" name="Text">&quot;Ombra: L&apos;ho portata via a te...&quot;</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="8280680656772178" type="Tutorial">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="9568251529903933" type="BackGround_Tut_Text">
+                                    <param id="0" name="Opacity">60</param>
+                                </action>
                                 <action behavior="Timer" id="0" name="Start timer" sid="4381353226959494" type="Player_Box">
                                     <param id="0" name="Duration">3</param>
                                     <param id="1" name="Type">0</param>
                                     <param id="2" name="Tag">&quot;Dialogue 1&quot;</param>
-                                </action>
-                                <action id="-16" name="Set opacity" sid="8280680656772178" type="Dialogue">
-                                    <param id="0" name="Opacity">100</param>
-                                </action>
-                                <action id="-16" name="Set opacity" sid="9568251529903933" type="BackGround_Dia_Text">
-                                    <param id="0" name="Opacity">60</param>
-                                </action>
-                                <action id="0" name="Set text" sid="5005969364247242" type="Dialogue">
-                                    <param id="0" name="Text">&quot;Ciao Culo&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1212,6 +1212,9 @@
                                 <action disabled="1" id="0" name="Call function" sid="1348433276364181" type="Function">
                                     <param id="0" name="Name">&quot;Dialogue&quot;</param>
                                     <param id="1" name="Parameter {n}">786{###}1600{###}&quot;...&quot;</param>
+                                </action>
+                                <action id="0" name="Set text" sid="8190456222701447" type="Tutorial">
+                                    <param id="0" name="Text">&quot;P.:...&quot;</param>
                                 </action>
                                 <action behavior="Timer" id="0" name="Start timer" sid="891280114521931" type="Player_Box">
                                     <param id="0" name="Duration">3</param>
@@ -1231,6 +1234,9 @@
                                     <param id="0" name="Name">&quot;Dialogue&quot;</param>
                                     <param id="1" name="Parameter {n}">650{###}1600{###}&quot;...Prima che tu la portassi via da me.&quot;</param>
                                 </action>
+                                <action id="0" name="Set text" sid="9570315244648132" type="Tutorial">
+                                    <param id="0" name="Text">&quot;Ombra: ...Prima che tu la portassi via da me.&quot;</param>
+                                </action>
                                 <action behavior="Timer" id="0" name="Start timer" sid="9159020974814712" type="Player_Box">
                                     <param id="0" name="Duration">3</param>
                                     <param id="1" name="Type">0</param>
@@ -1249,6 +1255,9 @@
                                     <param id="0" name="Name">&quot;Dialogue&quot;</param>
                                     <param id="1" name="Parameter {n}">786{###}1600{###}&quot;!&quot;</param>
                                 </action>
+                                <action id="0" name="Set text" sid="8256200712352704" type="Tutorial">
+                                    <param id="0" name="Text">&quot;P.: !&quot;</param>
+                                </action>
                                 <action behavior="Timer" id="0" name="Start timer" sid="7268973197333598" type="Player_Box">
                                     <param id="0" name="Duration">3</param>
                                     <param id="1" name="Type">0</param>
@@ -1263,12 +1272,8 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-15" name="Set visible" sid="7155110258173457" type="BackGround_Tut_Text">
-                                    <param id="0" name="Visibility">0</param>
-                                </action>
-                                <action id="-15" name="Set visible" sid="4110294556448677" type="Dialogue">
-                                    <param id="0" name="Visibility">0</param>
-                                </action>
+                                <action behavior="Fade" id="1" name="Start fade" sid="4110294556448677" type="Tutorial" />
+                                <action behavior="Fade" id="1" name="Start fade" sid="7155110258173457" type="BackGround_Tut_Text" />
                                 <action id="0" name="Call function" sid="290675040287589" type="Function">
                                     <param id="0" name="Name">&quot;Player Free&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
@@ -1886,7 +1891,7 @@
                             <param id="1" name="Value">1</param>
                         </action>
                         <action behavior="Timer" id="0" name="Start timer" sid="9599919131212854" type="Player_Box">
-                            <param id="0" name="Duration">3</param>
+                            <param id="0" name="Duration">5</param>
                             <param id="1" name="Type">0</param>
                             <param id="2" name="Tag">&quot;Record 2 Text Fading&quot;</param>
                         </action>
@@ -1928,7 +1933,7 @@
                             <param id="1" name="Value">1</param>
                         </action>
                         <action behavior="Timer" id="0" name="Start timer" sid="7596859804914627" type="Player_Box">
-                            <param id="0" name="Duration">3</param>
+                            <param id="0" name="Duration">5</param>
                             <param id="1" name="Type">0</param>
                             <param id="2" name="Tag">&quot;Record 2 Text Fading&quot;</param>
                         </action>
@@ -1970,7 +1975,7 @@
                             <param id="1" name="Value">0.3</param>
                         </action>
                         <action behavior="Timer" id="0" name="Start timer" sid="1742854308733704" type="Player_Box">
-                            <param id="0" name="Duration">3</param>
+                            <param id="0" name="Duration">5</param>
                             <param id="1" name="Type">0</param>
                             <param id="2" name="Tag">&quot;Record 2 Text Fading&quot;</param>
                         </action>

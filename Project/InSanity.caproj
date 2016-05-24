@@ -1915,9 +1915,6 @@
                     <behavior-type name="Bullet" sid="5324309418235322">
                         <behavior id="Bullet" />
                     </behavior-type>
-                    <behavior-type name="DestroyOutsideLayout" sid="6574668715343045">
-                        <behavior id="destroy" />
-                    </behavior-type>
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8931452151050704" speed="5">
@@ -1961,37 +1958,42 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="4" loop="0" name="Bullet" pingpong="0" repeatcount="1" repeatto="0" sid="3075366016728646" speed="20">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                    <animation framecount="4" loop="0" name="Bullet" pingpong="0" repeatcount="1" repeatto="0" sid="3075366016728646" speed="30">
+                        <frame duration="1" hotspotX="0" hotspotY="0.714286">
                             <collision-poly>
-                                <point x="1" y="1" />
-                                <point x="0" y="1" />
-                                <point x="0" y="0" />
-                                <point x="1" y="0" />
+                                <point x="0.25" y="0.142857" />
+                                <point x="0.75" y="0.142857" />
+                                <point x="0.75" y="0.857143" />
+                                <point x="0.25" y="0.857143" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.541667">
                             <collision-poly>
-                                <point x="1" y="1" />
-                                <point x="0" y="1" />
-                                <point x="0" y="0" />
-                                <point x="1" y="0" />
+                                <point x="0.15625" y="0.497396" />
+                                <point x="0.5" y="0.0416667" />
+                                <point x="0.875" y="0.0833333" />
+                                <point x="0.75" y="0.5" />
+                                <point x="0.703125" y="0.742187" />
+                                <point x="0.621094" y="0.950521" />
+                                <point x="0.0859375" y="0.872396" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <frame duration="1" hotspotX="0.35" hotspotY="0.535714">
                             <collision-poly>
-                                <point x="1" y="1" />
-                                <point x="0" y="1" />
-                                <point x="0" y="0" />
-                                <point x="1" y="0" />
+                                <point x="0.871875" y="0.919643" />
+                                <point x="0.18125" y="0.888393" />
+                                <point x="0.08125" y="0.0803571" />
+                                <point x="0.878125" y="0.0892857" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <frame duration="1" hotspotX="0.387097" hotspotY="0.483871">
                             <collision-poly>
-                                <point x="1" y="1" />
-                                <point x="0" y="1" />
-                                <point x="0" y="0" />
-                                <point x="1" y="0" />
+                                <point x="0.868952" y="0.665323" />
+                                <point x="0.25" y="0.935484" />
+                                <point x="0.0806451" y="0.141129" />
+                                <point x="0.511089" y="0.0362903" />
+                                <point x="0.858871" y="0.131048" />
+                                <point x="0.954637" y="0.357863" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -2100,6 +2102,7 @@
                     <instance-variable name="Level_1_Phases" sid="3744297378801938" type="number" />
                     <instance-variable name="Level_2_Phases" sid="521681513767556" type="number" />
                     <instance-variable name="Level_3_Phases" sid="3931666311662281" type="number" />
+                    <instance-variable name="Phase_6_Uber" sid="5693009923146386" type="boolean" />
                     <instance-variable name="Camera_On_Player" sid="2010312032397601" type="boolean" />
                     <instance-variable name="Res_Room_Visible" sid="6478554283794921" type="boolean" />
                     <instance-variable name="Returning" sid="3443924061330863" type="boolean" />
@@ -2353,6 +2356,36 @@
                             </collision-poly>
                         </frame>
                     </animation>
+                    <animation framecount="3" loop="0" name="Dying_2" pingpong="0" repeatcount="1" repeatto="0" sid="500103971769238" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1">
+                            <collision-poly>
+                                <point x="0.375" y="0" />
+                                <point x="0.7" y="0" />
+                                <point x="0.7" y="1" />
+                                <point x="0.375" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="1">
+                            <collision-poly>
+                                <point x="0.325" y="0.225" />
+                                <point x="0.7" y="0.225" />
+                                <point x="0.7" y="1" />
+                                <point x="0.325" y="1" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.55">
+                            <collision-poly>
+                                <point x="0.166667" y="0.636364" />
+                                <point x="0.5" y="0.272727" />
+                                <point x="0.904762" y="0.363636" />
+                                <point x="0.952381" y="0.454545" />
+                                <point x="0.928571" y="0.727273" />
+                                <point x="0.5" y="0.909091" />
+                                <point x="0.0238095" y="0.909091" />
+                                <point x="0.333333" y="0.454545" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
                 </animation-folder>
             </object-type>
             <object-type name="Brother" sid="2270932927010431">
@@ -2541,7 +2574,7 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4507503966746795" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -4922,9 +4955,12 @@
         <object-folder name="Boss">
             <object-type name="Avambraccio_dx" sid="3462579345251317">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Setting_Away" sid="7289175683064842" type="boolean" />
+                </instance-variables>
                 <behaviors>
-                    <behavior-type name="Jumpthru" sid="1337643222961561">
-                        <behavior id="jumpthru" />
+                    <behavior-type name="Solid" sid="1839017792602106">
+                        <behavior id="solid" />
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
@@ -4936,8 +4972,9 @@
                                 <point x="0" y="0.253472" />
                                 <point x="0.168269" y="0.0434027" />
                                 <point x="0.507211" y="0.09375" />
-                                <point x="0.992788" y="0.777778" />
-                                <point x="0.81851" y="0.967014" />
+                                <point x="1" y="0.746528" />
+                                <point x="1" y="1" />
+                                <point x="0.813703" y="1" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -5006,8 +5043,12 @@
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable name="Life" sid="5065365731485389" type="number" />
-                    <instance-variable name="Vulnerable" sid="5000711804802037" type="boolean" />
                 </instance-variables>
+                <behaviors>
+                    <behavior-type name="Platform" sid="5163755294227749">
+                        <behavior id="Platform" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="611591395603688" speed="5">
                         <frame duration="1" hotspotX="0.533333" hotspotY="0.384615" original-source="C:\Users\Drako-PC\Downloads\verde-2016-05-22\verde\cervello.png" />
@@ -5044,10 +5085,10 @@
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8846973002687112" speed="5">
                         <frame duration="1" hotspotX="0.4" hotspotY="0.448276" original-source="C:\Users\Drako-PC\Downloads\verde-2016-05-22\verde\carne.png">
                             <collision-poly>
-                                <point x="0" y="1" />
-                                <point x="0" y="0" />
-                                <point x="1" y="0" />
-                                <point x="1" y="1" />
+                                <point x="0.33125" y="0.711207" />
+                                <point x="0.30625" y="0.271552" />
+                                <point x="0.64375" y="0.275862" />
+                                <point x="0.665625" y="0.728448" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -5055,6 +5096,9 @@
             </object-type>
             <object-type name="Occhi" sid="9804848088556343">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Angle_Registered" sid="2392275032053233" type="number" />
+                </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5287557842841911" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.545455" original-source="C:\Users\Drako-PC\Downloads\BB\Parti\Occhi.png" />
@@ -5065,16 +5109,26 @@
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable name="Phase_1_Attacking" sid="31170534310953" type="boolean" />
+                    <instance-variable name="Phase_2_Attacking" sid="9330558375633403" type="boolean" />
                 </instance-variables>
                 <animation-folder>
                     <animation framecount="2" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="6402848589246583" speed="2">
-                        <frame duration="1" hotspotX="0.504202" hotspotY="0.5" original-source="C:\Users\Drako-PC\Downloads\verde-2016-05-22\verde\body.png">
+                        <frame duration="1" hotspotX="0.504202" hotspotY="0.495726" original-source="C:\Users\Drako-PC\Downloads\verde-2016-05-22\verde\body.png">
                             <image-point name="BraccioSx" x="0.789916" y="0.196581" />
                             <image-point name="BraccioDx" x="0.310924" y="0.226496" />
                             <image-point name="Cervello" x="0.394958" y="0.0213675" />
                             <image-point name="Occhi" x="0.268908" y="0.0940171" />
                             <image-point name="GambaDx" x="0.319328" y="0.730769" />
                             <image-point name="GambaSx" x="0.663866" y="0.777778" />
+                            <collision-poly>
+                                <point x="0.411765" y="0.307692" />
+                                <point x="0.546219" y="0.294872" />
+                                <point x="0.731092" y="0.5" />
+                                <point x="0.756303" y="0.876068" />
+                                <point x="0.495798" y="0.555556" />
+                                <point x="0.319328" y="0.837607" />
+                                <point x="0.369748" y="0.5" />
+                            </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <image-point name="BraccioSx" x="0.951219" y="0.193966" />
@@ -5083,9 +5137,17 @@
                             <image-point name="Occhi" x="0.207317" y="0.0948276" />
                             <image-point name="GambaDx" x="0.243902" y="0.732759" />
                             <image-point name="GambaSx" x="0.743902" y="0.780172" />
+                            <collision-poly>
+                                <point x="0.414634" y="0.340517" />
+                                <point x="0.634146" y="0.340517" />
+                                <point x="0.890244" y="0.5" />
+                                <point x="0.963415" y="0.987069" />
+                                <point x="0.5" y="0.633621" />
+                                <point x="0.121951" y="0.956897" />
+                            </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="5" loop="0" name="Attack1" pingpong="0" repeatcount="1" repeatto="0" sid="5074209738631526" speed="5">
+                    <animation framecount="5" loop="0" name="Attack1" pingpong="0" repeatcount="1" repeatto="0" sid="5074209738631526" speed="1">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                             <image-point name="BraccioSx" x="0.951219" y="0.193966" />
                             <image-point name="BraccioDx" x="0.243902" y="0.232759" />
@@ -5094,7 +5156,7 @@
                             <image-point name="GambaDx" x="0.243902" y="0.732759" />
                             <image-point name="GambaSx" x="0.743902" y="0.780172" />
                         </frame>
-                        <frame duration="1" hotspotX="0.505263" hotspotY="0.502203">
+                        <frame duration="1" hotspotX="0.505263" hotspotY="0.511013">
                             <image-point name="BraccioSx" x="0.778947" y="0.185022" />
                             <image-point name="BraccioDx" x="0.168421" y="0.23348" />
                             <image-point name="Cervello" x="0.252632" y="0.0264317" />
@@ -5102,7 +5164,7 @@
                             <image-point name="GambaDx" x="0.221053" y="0.748899" />
                             <image-point name="GambaSx" x="0.768421" y="0.784141" />
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.502347">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.544601">
                             <image-point name="BraccioSx" x="0.744898" y="0.187793" />
                             <image-point name="BraccioDx" x="0.173469" y="0.248826" />
                             <image-point name="Cervello" x="0.22449" y="0.028169" />
@@ -5110,7 +5172,7 @@
                             <image-point name="GambaDx" x="0.214286" y="0.71831" />
                             <image-point name="GambaSx" x="0.734694" y="0.774648" />
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.502591">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.601036">
                             <image-point name="BraccioSx" x="0.640351" y="0.196891" />
                             <image-point name="BraccioDx" x="0.149123" y="0.279793" />
                             <image-point name="Cervello" x="0.184211" y="0.0310881" />
@@ -5118,7 +5180,7 @@
                             <image-point name="GambaDx" x="0.201754" y="0.699482" />
                             <image-point name="GambaSx" x="0.640351" y="0.782383" />
                         </frame>
-                        <frame duration="1" hotspotX="0.504274" hotspotY="0.503268">
+                        <frame duration="1" hotspotX="0.504274" hotspotY="0.75817">
                             <image-point name="BraccioSx" x="0.641026" y="0.24183" />
                             <image-point name="BraccioDx" x="0.162393" y="0.346405" />
                             <image-point name="Cervello" x="0.188034" y="0.0392157" />
@@ -5217,6 +5279,9 @@
                     <behavior-type name="Bullet" sid="6639452567065692">
                         <behavior id="Bullet" />
                     </behavior-type>
+                    <behavior-type name="DestroyOutsideLayout" sid="3745058306242382">
+                        <behavior id="destroy" />
+                    </behavior-type>
                 </behaviors>
                 <animation-folder>
                     <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9537683297294815" speed="5">
@@ -5228,7 +5293,37 @@
                                 <point x="1" y="0" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.516129" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.483871" hotspotY="0.5">
+                            <collision-poly>
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0" y="0" />
+                                <point x="1" y="0" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Hat" sid="8772441826520252">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Is_Hit" sid="9889806660522986" type="boolean" />
+                    <instance-variable name="Is_intheAir" sid="7455880879968173" type="boolean" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3256275917076415" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.611111" original-source="C:\Users\Sciuzza\Downloads\Hat.png">
+                            <collision-poly>
+                                <point x="0.285714" y="0.194444" />
+                                <point x="0.5" y="0.0555556" />
+                                <point x="0.714286" y="0.194444" />
+                                <point x="0.914286" y="0.611111" />
+                                <point x="0.614286" y="0.833333" />
+                                <point x="0.5" y="0.833333" />
+                                <point x="0.342857" y="0.916667" />
+                                <point x="0.0428571" y="0.611111" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -7497,6 +7592,7 @@
                 <member>Pallottola4</member>
                 <member>Pallottola5</member>
                 <member>Pallottola6</member>
+                <member>PotenziamentoSparoHud</member>
                 <member>Stamin_Piena</member>
                 <member>Stamin_Piena2</member>
                 <member>Stamin_Piena3</member>
@@ -7575,6 +7671,7 @@
                 <member>Braccio_sx</member>
                 <member>Cervello</member>
                 <member>Corpo</member>
+                <member>Hat</member>
                 <member>Infezione_braccio</member>
                 <member>Mano_dx</member>
                 <member>Occhi</member>

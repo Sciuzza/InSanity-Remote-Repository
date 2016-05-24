@@ -71,8 +71,12 @@
                             </conditions>
                             <actions>
                                 <action id="-3" name="Set position" sid="4844897353831172" type="Player_Box">
-                                    <param id="0" name="X">58</param>
-                                    <param id="1" name="Y">567</param>
+                                    <param id="0" name="X">66</param>
+                                    <param id="1" name="Y">624</param>
+                                </action>
+                                <action id="0" name="Call function" sid="1529646722463106" type="Function">
+                                    <param id="0" name="Name">&quot;Player Memory Load&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
                         </event-block>
@@ -109,8 +113,8 @@
                                     <param id="1" name="Value">1</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="9020418484237589" type="Player_Box">
-                                    <param id="0" name="X">58</param>
-                                    <param id="1" name="Y">567</param>
+                                    <param id="0" name="X">66</param>
+                                    <param id="1" name="Y">624</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -989,7 +993,7 @@
                             </conditions>
                             <actions>
                                 <action behavior="Timer" id="0" name="Start timer" sid="5845396456506054" type="Player_Box">
-                                    <param id="0" name="Duration">5</param>
+                                    <param id="0" name="Duration">3.5</param>
                                     <param id="1" name="Type">0</param>
                                     <param id="2" name="Tag">&quot;Bridge Going Down&quot;</param>
                                 </action>
@@ -1298,110 +1302,7 @@
                             <param id="0" name="Instance variable">Hit</param>
                             <param id="1" name="Value">0</param>
                         </action>
-                        <action disabled="1" id="-10" name="Set value" sid="6204726382452189" type="Eye">
-                            <param id="0" name="Instance variable">Hours</param>
-                            <param id="1" name="Value">floor(random(0,25))</param>
-                        </action>
-                        <action disabled="1" id="-10" name="Set value" sid="6077354966872908" type="Eye">
-                            <param id="0" name="Instance variable">Minutes</param>
-                            <param id="1" name="Value">floor(random(0,4))</param>
-                        </action>
-                        <action disabled="1" id="0" name="Set text" sid="6260784861585804" type="StunCode">
-                            <param id="0" name="Text">Eye.Hours &amp; &quot;:&quot; &amp; MinutesContainer.At(Eye.Minutes)</param>
-                        </action>
                     </actions>
-                    <sub-events>
-                        <event-block disabled="1" sid="7462497895387493">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="20978137092242" type="Eye">
-                                    <param id="0" name="Instance variable">Hours</param>
-                                    <param id="1" name="Comparison">1</param>
-                                    <param id="2" name="Value">15</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Set value" sid="7368793964528574" type="System">
-                                    <param id="0" name="Variable">Hours_to_degrees</param>
-                                    <param id="1" name="Value">((eye.Hours  -9)*30) + 180 </param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block disabled="1" sid="6723462242541237">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="6467366177470729" type="Eye">
-                                    <param id="0" name="Instance variable">Hours</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">15</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Set value" sid="9120604698069678" type="System">
-                                    <param id="0" name="Variable">Hours_to_degrees</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block disabled="1" sid="9886386557960754">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="7245539461990461" type="Eye">
-                                    <param id="0" name="Instance variable">Minutes</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Set value" sid="2552716120567036" type="System">
-                                    <param id="0" name="Variable">Minutes_to_degrees</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block disabled="1" sid="8598430321872502">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="6690515834317434" type="Eye">
-                                    <param id="0" name="Instance variable">Minutes</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Set value" sid="854630463757664" type="System">
-                                    <param id="0" name="Variable">Minutes_to_degrees</param>
-                                    <param id="1" name="Value">90</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block disabled="1" sid="1372388784072123">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="6493000414776817" type="Eye">
-                                    <param id="0" name="Instance variable">Minutes</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">2</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Set value" sid="1732857217274217" type="System">
-                                    <param id="0" name="Variable">Minutes_to_degrees</param>
-                                    <param id="1" name="Value">180</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block disabled="1" sid="2311910147279842">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="9687495177751235" type="Eye">
-                                    <param id="0" name="Instance variable">Minutes</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">3</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Set value" sid="3052232673734687" type="System">
-                                    <param id="0" name="Variable">Minutes_to_degrees</param>
-                                    <param id="1" name="Value">270</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
                 </event-block>
                 <event-block sid="8067167555361844">
                     <conditions>
@@ -1572,13 +1473,13 @@
                                     <param id="0" name="Name">&quot;Player Stop&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
-                                <action id="-10" name="Set value" sid="7307254413377276" type="Player_Box">
-                                    <param id="0" name="Instance variable">Level_1_Phases</param>
-                                    <param id="1" name="Value">10</param>
-                                </action>
                                 <action id="-13" name="Set boolean" sid="5111517567206824" type="Player_Box">
                                     <param id="0" name="Instance variable">Camera_On_Player</param>
                                     <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="7307254413377276" type="Player_Box">
+                                    <param id="0" name="Instance variable">Level_1_Phases</param>
+                                    <param id="1" name="Value">10</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1726,10 +1627,6 @@
                                 <action behavior="Fade" id="1" name="Start fade" sid="757640079249954" type="BackGround_Tut_Text" />
                                 <action id="-15" name="Set visible" sid="7274034434139569" type="Hud">
                                     <param id="0" name="Visibility">0</param>
-                                </action>
-                                <action id="0" name="Call function" sid="4300595937780169" type="Function">
-                                    <param id="0" name="Name">&quot;Player Memory Save&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
                                 <action id="-15" name="Set visible" sid="8450207505841491" type="Reloading">
                                     <param id="0" name="Visibility">0</param>
@@ -1928,7 +1825,7 @@
                             <param id="1" name="Parameter {n}"></param>
                         </action>
                         <action behavior="Timer" id="0" name="Start timer" sid="4086666629927975" type="Player_Box">
-                            <param id="0" name="Duration">3</param>
+                            <param id="0" name="Duration">5</param>
                             <param id="1" name="Type">0</param>
                             <param id="2" name="Tag">&quot;Record 2 Text Fading&quot;</param>
                         </action>
@@ -1970,7 +1867,7 @@
                             <param id="1" name="Value">0.3</param>
                         </action>
                         <action behavior="Timer" id="0" name="Start timer" sid="7613060478184189" type="Player_Box">
-                            <param id="0" name="Duration">3</param>
+                            <param id="0" name="Duration">5</param>
                             <param id="1" name="Type">0</param>
                             <param id="2" name="Tag">&quot;Record 2 Text Fading&quot;</param>
                         </action>

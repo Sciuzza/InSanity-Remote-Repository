@@ -2069,6 +2069,34 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="CheckPoint" uid="2062">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <instance-variables>
+                        <Is_Taken>false</Is_Taken>
+                    </instance-variables>
+                    <behavior-instances>
+                        <behavior-instance type="Persist" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1483</x>
+                        <y>666</y>
+                        <z>0</z>
+                        <width>42</width>
+                        <height>39</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.512820542</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -2650,6 +2678,28 @@
                         <opacity>0</opacity>
                     </world>
                 </instance>
+                <instance type="Door_Area" uid="2">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>27.93548584</x>
+                        <y>576</y>
+                        <z>0</z>
+                        <width>43</width>
+                        <height>72</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>0</opacity>
+                    </world>
+                </instance>
                 <instance type="Player_Box" uid="25">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
@@ -2671,7 +2721,7 @@
                         <Weapon_Max_Loader>4</Weapon_Max_Loader>
                         <Reloading_Time>0.5</Reloading_Time>
                         <Reloading>false</Reloading>
-                        <Stun_Ability>true</Stun_Ability>
+                        <Stun_Ability>false</Stun_Ability>
                         <Jump_Is_On>true</Jump_Is_On>
                         <Dash_Is_On>true</Dash_Is_On>
                         <Side_Movement_Is_On>true</Side_Movement_Is_On>
@@ -2685,7 +2735,8 @@
                         <Intro_Phases>0</Intro_Phases>
                         <Level_1_Phases>0</Level_1_Phases>
                         <Level_2_Phases>0</Level_2_Phases>
-                        <Level_3_Phases>4</Level_3_Phases>
+                        <Level_3_Phases>0</Level_3_Phases>
+                        <Phase_6_Uber>false</Phase_6_Uber>
                         <Camera_On_Player>true</Camera_On_Player>
                         <Res_Room_Visible>false</Res_Room_Visible>
                         <Returning>false</Returning>
@@ -2715,8 +2766,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>129</x>
-                        <y>615</y>
+                        <x>66</x>
+                        <y>624</y>
                         <z>0</z>
                         <width>11.636363983</width>
                         <height>36</height>
@@ -2725,28 +2776,6 @@
                         <hotspotY>1</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Door_Area" uid="2">
-                    <properties>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>27.93548584</x>
-                        <y>576</y>
-                        <z>0</z>
-                        <width>43</width>
-                        <height>72</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>0</opacity>
                     </world>
                 </instance>
             </instances>
@@ -5521,8 +5550,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>127</x>
-                        <y>552</y>
+                        <x>90</x>
+                        <y>549</y>
                         <z>0</z>
                         <width>8</width>
                         <height>8</height>
@@ -6013,7 +6042,7 @@
                     <properties>
                         <text>Non ricordo fosse andata così... Premi Q per tornare all&apos;ultimo checkpoint</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Courier,-16,400,0</font>
+                        <font>Papyrus,-16,400,0</font>
                         <color>255,0,0</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -6035,10 +6064,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>580</x>
+                        <x>618</x>
                         <y>-272</y>
                         <z>0</z>
-                        <width>175</width>
+                        <width>255</width>
                         <height>127</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>

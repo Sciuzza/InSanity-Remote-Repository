@@ -381,351 +381,408 @@
         </event-group>
         <event-group description="" sid="472934543903872" title="Animation System">
             <sub-events>
-                <event-block sid="2498759683467663">
-                    <conditions>
-                        <condition behavior="Platform" id="0" name="Is moving" sid="707603224963742" type="Player_Box" />
-                        <condition behavior="Platform" id="2" name="Is on floor" sid="7045900952068755" type="Player_Box" />
-                        <condition id="-6" name="Every X seconds" sid="9962009521160648" type="System">
-                            <param id="0" name="Interval (seconds)">dt</param>
-                        </condition>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="4846792082386155" type="Player_Box">
-                            <param id="0" name="Instance variable">Dash</param>
-                        </condition>
-                    </conditions>
-                    <actions />
+                <event-group description="" sid="7387354307682374" title="Weapon Animation">
                     <sub-events>
-                        <event-block sid="7041815246831684">
+                        <event-block sid="5824851888484904">
                             <conditions>
-                                <condition id="2" name="Key is down" sid="8960934504571971" type="Keyboard">
-                                    <param id="0" name="Key">68 (D)</param>
-                                </condition>
-                                <condition id="7" inverted="1" name="Is mirrored" sid="8363988830054761" type="Player_Frame" />
+                                <condition id="-18" name="On created" sid="1773913391042362" type="Bullet_1_Player" />
                             </conditions>
                             <actions>
-                                <action id="4" name="Set animation" sid="6589620956619595" type="Player_Frame">
-                                    <param id="0" name="Animation">&quot;Walking&quot;</param>
+                                <action id="4" name="Set animation" sid="2941605925690546" type="Bullet_1_Player">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="612171916958107">
+                        <event-block sid="9784051759959952">
                             <conditions>
-                                <condition id="2" name="Key is down" sid="4575157440798713" type="Keyboard">
-                                    <param id="0" name="Key">65 (A)</param>
+                                <condition id="-7" name="Compare instance variable" sid="3305341741705452" type="Player_Box">
+                                    <param id="0" name="Instance variable">Cooldown</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">0</param>
                                 </condition>
-                                <condition id="7" name="Is mirrored" sid="1729615058582785" type="Player_Frame" />
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="3871854423908123" type="Player_Box">
+                                    <param id="0" name="Instance variable">Stun_Ability</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="5012957322822554" type="System" />
                             </conditions>
                             <actions>
-                                <action id="4" name="Set animation" sid="5466014839656535" type="Player_Frame">
-                                    <param id="0" name="Animation">&quot;Walking&quot;</param>
+                                <action id="4" name="Set animation" sid="7801942888086769" type="Player_arm">
+                                    <param id="0" name="Animation">&quot;ShootNormal&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="1104304493114176">
+                        <event-block sid="4598689062622797">
                             <conditions>
-                                <condition id="2" name="Key is down" sid="6263479475825961" type="Keyboard">
-                                    <param id="0" name="Key">68 (D)</param>
+                                <condition id="-7" name="Compare instance variable" sid="4742648055300596" type="Player_Box">
+                                    <param id="0" name="Instance variable">Cooldown</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">-0.5</param>
                                 </condition>
-                                <condition id="7" name="Is mirrored" sid="8999418436879173" type="Player_Frame" />
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="4520676755479207" type="Player_Box">
+                                    <param id="0" name="Instance variable">Stun_Ability</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="7413504299952541" type="System" />
                             </conditions>
                             <actions>
-                                <action id="4" name="Set animation" sid="1049465675097281" type="Player_Frame">
-                                    <param id="0" name="Animation">&quot;WalkingBack&quot;</param>
+                                <action id="4" name="Set animation" sid="3826660914573822" type="Player_arm">
+                                    <param id="0" name="Animation">&quot;DefaultNormal&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="5709850252178752">
+                        <event-block sid="6833464208661109">
                             <conditions>
-                                <condition id="2" name="Key is down" sid="1872032900140473" type="Keyboard">
-                                    <param id="0" name="Key">65 (A)</param>
+                                <condition id="-7" name="Compare instance variable" sid="2660438059786493" type="Player_Box">
+                                    <param id="0" name="Instance variable">Cooldown</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Value">0</param>
                                 </condition>
-                                <condition id="7" inverted="1" name="Is mirrored" sid="5878987336463455" type="Player_Frame" />
+                                <condition id="-8" name="Is boolean instance variable set" sid="5920480525609839" type="Player_Box">
+                                    <param id="0" name="Instance variable">Stun_Ability</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="43190955675515" type="System" />
                             </conditions>
                             <actions>
-                                <action id="4" name="Set animation" sid="5318301772484174" type="Player_Frame">
-                                    <param id="0" name="Animation">&quot;WalkingBack&quot;</param>
+                                <action id="4" name="Set animation" sid="4297395715014463" type="Player_arm">
+                                    <param id="0" name="Animation">&quot;ShootPsi&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8902589100663139">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="734078381025562" type="Player_Box">
+                                    <param id="0" name="Instance variable">Cooldown</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">-0.5</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="2396995707461311" type="Player_Box">
+                                    <param id="0" name="Instance variable">Stun_Ability</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="7503263818210824" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="2559763212063081" type="Player_arm">
+                                    <param id="0" name="Animation">&quot;DefaultPsi&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
-                </event-block>
-                <event-block sid="3369438209422849">
-                    <conditions>
-                        <condition behavior="Platform" id="7" name="On stopped" sid="7126262430710693" type="Player_Box" />
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="7728989063488316" type="Player_Frame">
-                            <param id="0" name="Animation">&quot;Idle&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="4698229573226753">
-                    <conditions>
-                        <condition behavior="Platform" id="5" name="On jump" sid="6605819026694777" type="Player_Box" />
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="318586545615696" type="Player_Frame">
-                            <param id="0" name="Animation">&quot;Jumping&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="573759240633501">
-                    <conditions>
-                        <condition behavior="Platform" id="6" name="On fall" sid="8701099532334252" type="Player_Box" />
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="8663158298325014" type="Player_Frame">
-                            <param id="0" name="Animation">&quot;Falling&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="4491270990527305">
-                    <conditions>
-                        <condition behavior="Platform" id="9" name="On landed" sid="9015026583006328" type="Player_Box" />
-                    </conditions>
-                    <actions />
+                </event-group>
+                <event-group description="" sid="4419876120441879" title="Movement Animation">
                     <sub-events>
-                        <event-block sid="507437352306771">
+                        <event-block sid="2498759683467663">
                             <conditions>
-                                <condition behavior="Platform" id="0" name="Is moving" sid="3702537273911" type="Player_Box" />
+                                <condition behavior="Platform" id="0" name="Is moving" sid="707603224963742" type="Player_Box" />
+                                <condition behavior="Platform" id="2" name="Is on floor" sid="7045900952068755" type="Player_Box" />
+                                <condition id="-6" name="Every X seconds" sid="9962009521160648" type="System">
+                                    <param id="0" name="Interval (seconds)">dt</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="4846792082386155" type="Player_Box">
+                                    <param id="0" name="Instance variable">Dash</param>
+                                </condition>
                             </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="8451005335525775" type="Player_Frame">
-                                    <param id="0" name="Animation">&quot;Walking&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="7041815246831684">
+                                    <conditions>
+                                        <condition id="2" name="Key is down" sid="8960934504571971" type="Keyboard">
+                                            <param id="0" name="Key">68 (D)</param>
+                                        </condition>
+                                        <condition id="7" inverted="1" name="Is mirrored" sid="8363988830054761" type="Player_Frame" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="6589620956619595" type="Player_Frame">
+                                            <param id="0" name="Animation">&quot;Walking&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="612171916958107">
+                                    <conditions>
+                                        <condition id="2" name="Key is down" sid="4575157440798713" type="Keyboard">
+                                            <param id="0" name="Key">65 (A)</param>
+                                        </condition>
+                                        <condition id="7" name="Is mirrored" sid="1729615058582785" type="Player_Frame" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="5466014839656535" type="Player_Frame">
+                                            <param id="0" name="Animation">&quot;Walking&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="1104304493114176">
+                                    <conditions>
+                                        <condition id="2" name="Key is down" sid="6263479475825961" type="Keyboard">
+                                            <param id="0" name="Key">68 (D)</param>
+                                        </condition>
+                                        <condition id="7" name="Is mirrored" sid="8999418436879173" type="Player_Frame" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="1049465675097281" type="Player_Frame">
+                                            <param id="0" name="Animation">&quot;WalkingBack&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="5709850252178752">
+                                    <conditions>
+                                        <condition id="2" name="Key is down" sid="1872032900140473" type="Keyboard">
+                                            <param id="0" name="Key">65 (A)</param>
+                                        </condition>
+                                        <condition id="7" inverted="1" name="Is mirrored" sid="5878987336463455" type="Player_Frame" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="5318301772484174" type="Player_Frame">
+                                            <param id="0" name="Animation">&quot;WalkingBack&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
-                        <event-block sid="5201941063212143">
+                        <event-block sid="3369438209422849">
                             <conditions>
-                                <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="7128933490683739" type="Player_Box" />
+                                <condition behavior="Platform" id="7" name="On stopped" sid="7126262430710693" type="Player_Box" />
+                                <condition id="2" inverted="1" name="Is playing" sid="5869031484702825" type="Player_Frame">
+                                    <param id="0" name="Animation">&quot;Dying_2&quot;</param>
+                                </condition>
                             </conditions>
                             <actions>
-                                <action id="4" name="Set animation" sid="905719224234571" type="Player_Frame">
+                                <action id="4" name="Set animation" sid="7728989063488316" type="Player_Frame">
                                     <param id="0" name="Animation">&quot;Idle&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="4698229573226753">
+                            <conditions>
+                                <condition behavior="Platform" id="5" name="On jump" sid="6605819026694777" type="Player_Box" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="318586545615696" type="Player_Frame">
+                                    <param id="0" name="Animation">&quot;Jumping&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="573759240633501">
+                            <conditions>
+                                <condition behavior="Platform" id="6" name="On fall" sid="8701099532334252" type="Player_Box" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="8663158298325014" type="Player_Frame">
+                                    <param id="0" name="Animation">&quot;Falling&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4256699117502673">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="5327189801373386" type="Player_Box">
+                                    <param id="0" name="Instance variable">Dash</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="750248828048401" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="7121278673141146" type="Player_Frame">
+                                    <param id="0" name="Animation">&quot;Dash&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4491270990527305">
+                            <conditions>
+                                <condition behavior="Platform" id="9" name="On landed" sid="9015026583006328" type="Player_Box" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="507437352306771">
+                                    <conditions>
+                                        <condition behavior="Platform" id="0" name="Is moving" sid="3702537273911" type="Player_Box" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="8451005335525775" type="Player_Frame">
+                                            <param id="0" name="Animation">&quot;Walking&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="5201941063212143">
+                                    <conditions>
+                                        <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="7128933490683739" type="Player_Box" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="905719224234571" type="Player_Frame">
+                                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
                     </sub-events>
-                </event-block>
-                <event-block sid="8501161426342484">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="5042923902190254" type="Bat">
-                            <param id="0" name="Object">Player_Frame</param>
-                        </condition>
-                        <condition behavior="Flash" id="0" inverted="1" name="Is flashing" sid="6305118600718205" type="Player_Frame" />
-                        <condition id="2" inverted="1" name="Is playing" sid="9788621042142222" type="Player_Frame">
-                            <param id="0" name="Animation">&quot;Dying&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Flash" id="0" name="Flash" sid="8918059456662151" type="Player_Frame">
-                            <param id="0" name="&apos;On&apos; time">0.1</param>
-                            <param id="1" name="&apos;Off&apos; time">0.1</param>
-                            <param id="2" name="Duration">1.0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="2205715275502933">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="6701416529603105" type="GunnerBullet">
-                            <param id="0" name="Object">Player_Frame</param>
-                        </condition>
-                        <condition behavior="Flash" id="0" inverted="1" name="Is flashing" sid="6047915876173488" type="Player_Frame" />
-                        <condition id="2" inverted="1" name="Is playing" sid="9745689435388986" type="Player_Frame">
-                            <param id="0" name="Animation">&quot;Dying&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Flash" id="0" name="Flash" sid="9278574373253878" type="Player_Frame">
-                            <param id="0" name="&apos;On&apos; time">0.1</param>
-                            <param id="1" name="&apos;Off&apos; time">0.1</param>
-                            <param id="2" name="Duration">1.0</param>
-                        </action>
-                        <action id="-9" name="Destroy" sid="7679250472132092" type="GunnerBullet" />
-                    </actions>
-                </event-block>
-                <event-block sid="7134722704926311">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="9695475913329328" type="Player_Box">
-                            <param id="0" name="Instance variable">Life</param>
-                            <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                        <condition id="-4" name="Trigger once while true" sid="7786655537261009" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="5631826144076539" type="Player_Frame">
-                            <param id="0" name="Animation">&quot;Dying&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="4256699117502673">
-                    <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" sid="5327189801373386" type="Player_Box">
-                            <param id="0" name="Instance variable">Dash</param>
-                        </condition>
-                        <condition id="-4" name="Trigger once while true" sid="750248828048401" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="7121278673141146" type="Player_Frame">
-                            <param id="0" name="Animation">&quot;Dash&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="5824851888484904">
-                    <conditions>
-                        <condition id="-18" name="On created" sid="1773913391042362" type="Bullet_1_Player" />
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="2941605925690546" type="Bullet_1_Player">
-                            <param id="0" name="Animation">&quot;Default&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="6786048163379708">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="1260082178508563" type="Bat">
-                            <param id="0" name="Object">Player_Frame</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="1731329656662895" type="Player_Frame">
-                            <param id="0" name="Animation">&quot;Hit&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="5940283560768445">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="8962151361478888" type="GunnerBullet">
-                            <param id="0" name="Object">Player_Frame</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="6876739936310323" type="Player_Frame">
-                            <param id="0" name="Animation">&quot;Hit&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block any="1" sid="2838035921892383">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="2715556077393357" type="Player_Box">
-                            <param id="0" name="Object">Death</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="2710739051634761" type="Player_Box">
-                            <param id="0" name="Instance variable">Life</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="1080339070587323" type="Player_Frame">
-                            <param id="0" name="Animation">&quot;Dying&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="2358804934668">
-                    <conditions>
-                        <condition id="4" name="On finished" sid="5760780096663513" type="Player_Frame">
-                            <param id="0" name="Animation">&quot;Dying&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="3640173652236117" type="Player_Frame">
-                            <param id="0" name="Animation">&quot;Dead&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="9784051759959952">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="3305341741705452" type="Player_Box">
-                            <param id="0" name="Instance variable">Cooldown</param>
-                            <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="3871854423908123" type="Player_Box">
-                            <param id="0" name="Instance variable">Stun_Ability</param>
-                        </condition>
-                        <condition id="-4" name="Trigger once while true" sid="5012957322822554" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="7801942888086769" type="Player_arm">
-                            <param id="0" name="Animation">&quot;ShootNormal&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="4598689062622797">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="4742648055300596" type="Player_Box">
-                            <param id="0" name="Instance variable">Cooldown</param>
-                            <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Value">-0.5</param>
-                        </condition>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="4520676755479207" type="Player_Box">
-                            <param id="0" name="Instance variable">Stun_Ability</param>
-                        </condition>
-                        <condition id="-4" name="Trigger once while true" sid="7413504299952541" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="3826660914573822" type="Player_arm">
-                            <param id="0" name="Animation">&quot;DefaultNormal&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="6833464208661109">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="2660438059786493" type="Player_Box">
-                            <param id="0" name="Instance variable">Cooldown</param>
-                            <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="5920480525609839" type="Player_Box">
-                            <param id="0" name="Instance variable">Stun_Ability</param>
-                        </condition>
-                        <condition id="-4" name="Trigger once while true" sid="43190955675515" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="4297395715014463" type="Player_arm">
-                            <param id="0" name="Animation">&quot;ShootPsi&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="8902589100663139">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="734078381025562" type="Player_Box">
-                            <param id="0" name="Instance variable">Cooldown</param>
-                            <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Value">-0.5</param>
-                        </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="2396995707461311" type="Player_Box">
-                            <param id="0" name="Instance variable">Stun_Ability</param>
-                        </condition>
-                        <condition id="-4" name="Trigger once while true" sid="7503263818210824" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="2559763212063081" type="Player_arm">
-                            <param id="0" name="Animation">&quot;DefaultPsi&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
+                </event-group>
+                <event-group description="" sid="728046116088685" title="Animation Flashing Triggers">
+                    <sub-events>
+                        <event-block sid="2662380188988417">
+                            <conditions>
+                                <condition behavior="Flash" id="0" inverted="1" name="Is flashing" sid="5621802329019654" type="Player_Frame" />
+                                <condition id="2" inverted="1" name="Is playing" sid="5853183643672253" type="Player_Frame">
+                                    <param id="0" name="Animation">&quot;Dying&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="1159803885227963">
+                                    <conditions>
+                                        <condition id="0" name="On collision with another object" sid="5042923902190254" type="Bat">
+                                            <param id="0" name="Object">Player_Frame</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Flash" id="0" name="Flash" sid="8918059456662151" type="Player_Frame">
+                                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                            <param id="2" name="Duration">1.0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="4926481835157127">
+                                    <conditions>
+                                        <condition id="0" name="On collision with another object" sid="6701416529603105" type="GunnerBullet">
+                                            <param id="0" name="Object">Player_Frame</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Flash" id="0" name="Flash" sid="9278574373253878" type="Player_Frame">
+                                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                            <param id="2" name="Duration">1.0</param>
+                                        </action>
+                                        <action id="-9" name="Destroy" sid="7679250472132092" type="GunnerBullet" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="9990283331384384">
+                                    <conditions>
+                                        <condition id="0" name="On collision with another object" sid="7768089972270835" type="Boss_Shockwave">
+                                            <param id="0" name="Object">Player_Frame</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Flash" id="0" name="Flash" sid="3966231354660074" type="Player_Frame">
+                                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                            <param id="2" name="Duration">1.0</param>
+                                        </action>
+                                        <action id="-9" name="Destroy" sid="2898777437196758" type="Boss_Shockwave" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="4485408356315743">
+                                    <conditions>
+                                        <condition id="0" name="On collision with another object" sid="251251287296767" type="Avambraccio_sx">
+                                            <param id="0" name="Object">Player_Frame</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Flash" id="0" name="Flash" sid="9230842368660257" type="Player_Frame">
+                                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                            <param id="2" name="Duration">1.0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="7994702740015897">
+                                    <conditions>
+                                        <condition id="0" name="On collision with another object" sid="3458991192655116" type="Mano_dx">
+                                            <param id="0" name="Object">Player_Frame</param>
+                                        </condition>
+                                        <condition behavior="Jumpthru" id="0" inverted="1" name="Is enabled" sid="7566510992088852" type="Mano_dx" />
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Flash" id="0" name="Flash" sid="5652133302599702" type="Player_Frame">
+                                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                            <param id="2" name="Duration">1.0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="5139800397811501">
+                                    <conditions>
+                                        <condition id="0" name="On collision with another object" sid="3406677964698755" type="Charger">
+                                            <param id="0" name="Object">Player_Frame</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Flash" id="0" name="Flash" sid="9895769044025613" type="Player_Frame">
+                                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                            <param id="2" name="Duration">1.0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="6046071214020311" title="Life Reducing Triggers">
+                    <sub-events>
+                        <event-block sid="2012969064881611">
+                            <conditions>
+                                <condition behavior="Flash" id="1" name="On flash ended" sid="5406356219381521" type="Player_Frame" />
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Subtract from" sid="1885626262781614" type="Player_Box">
+                                    <param id="0" name="Instance variable">Life</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7134722704926311">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="9695475913329328" type="Player_Box">
+                                    <param id="0" name="Instance variable">Life</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="7786655537261009" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="5631826144076539" type="Player_Frame">
+                                    <param id="0" name="Animation">&quot;Dying&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="9295062953152066" type="Player_arm">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block any="1" sid="2838035921892383">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="2715556077393357" type="Player_Box">
+                                    <param id="0" name="Object">Death</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="1979457048462182" type="Player_Box">
+                                    <param id="0" name="Instance variable">Life</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="1080339070587323" type="Player_Frame">
+                                    <param id="0" name="Animation">&quot;Dying&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="7003011416847362" type="Player_arm">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
             </sub-events>
         </event-group>
         <event-group description="" sid="2445809030387704" title="Defensive System">
@@ -920,11 +977,26 @@
                                             <param id="0" name="Instance variable">Weapon_Loader</param>
                                             <param id="1" name="Value">1</param>
                                         </action>
+                                        <action behavior="Bullet" id="6" name="Set distance travelled" sid="2427509969147107" type="Bullet_1_Player">
+                                            <param id="0" name="Distance">0</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                             </sub-events>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="5329670731759642">
+                    <conditions>
+                        <condition behavior="Bullet" id="1" name="Compare distance travelled" sid="5647196697913071" type="Bullet_1_Player">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Distance">300</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="470856197854723" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="7230777497652201" type="Bullet_1_Player" />
+                    </actions>
                 </event-block>
                 <event-block sid="6321538796942816">
                     <conditions>
@@ -1092,21 +1164,18 @@
                             <param id="0" name="Visibility">1</param>
                         </action>
                         <action id="0" name="Set text" sid="5845369275725211" type="Reloading">
-                            <param id="0" name="Text">&quot;Reloading...&quot;</param>
+                            <param id="0" name="Text">&quot;Ricarica...&quot;</param>
                         </action>
                         <action behavior="Flash" id="0" name="Flash" sid="8914414044295513" type="Reloading">
-                            <param id="0" name="&apos;On&apos; time">0.2</param>
-                            <param id="1" name="&apos;Off&apos; time">0.2</param>
-                            <param id="2" name="Duration">Player_Box.Reloading_Time - 0.01</param>
+                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                            <param id="2" name="Duration">Player_Box.Reloading_Time </param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="6626777720011465">
+                <event-block sid="9769585256747783">
                     <conditions>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="8610485286938956" type="Player_Box">
-                            <param id="0" name="Instance variable">Reloading</param>
-                        </condition>
-                        <condition id="-4" name="Trigger once while true" sid="5727925694812431" type="System" />
+                        <condition behavior="Flash" id="1" name="On flash ended" sid="4344090266964423" type="Reloading" />
                     </conditions>
                     <actions>
                         <action id="-15" name="Set visible" sid="6437983857074775" type="Reloading">
@@ -1172,35 +1241,6 @@
                         <action id="-10" name="Set value" sid="2278222579409305" type="Player_Box">
                             <param id="0" name="Instance variable">Cooldown_Stun</param>
                             <param id="1" name="Value">-1</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-group>
-        <event-group description="" sid="8219006173856015" title="Interaction Effects on Player">
-            <sub-events>
-                <event-block sid="2012969064881611">
-                    <conditions>
-                        <condition behavior="Flash" id="0" name="Is flashing" sid="5406356219381521" type="Player_Frame" />
-                        <condition id="-4" name="Trigger once while true" sid="2809738607067305" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="-12" name="Subtract from" sid="1885626262781614" type="Player_Box">
-                            <param id="0" name="Instance variable">Life</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="4452760467926802">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="114209334228256" type="Player_Box">
-                            <param id="0" name="Object">Death</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-10" name="Set value" sid="5756254576846489" type="Player_Box">
-                            <param id="0" name="Instance variable">Life</param>
-                            <param id="1" name="Value">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1502,7 +1542,10 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-9" name="Destroy" sid="7849461373278388" type="Pallottola" />
+                                        <action id="0" name="Call function" sid="6019711642359723" type="Function">
+                                            <param id="0" name="Name">&quot;Hud Bullets&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="6764066239030429">
@@ -1514,7 +1557,10 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-9" name="Destroy" sid="5978210774980179" type="Pallottola2" />
+                                        <action id="0" name="Call function" sid="2358839238311319" type="Function">
+                                            <param id="0" name="Name">&quot;Hud Bullets&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="3493127733517353">
@@ -1526,7 +1572,10 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-9" name="Destroy" sid="9557501166338278" type="Pallottola3" />
+                                        <action id="0" name="Call function" sid="7040742110366211" type="Function">
+                                            <param id="0" name="Name">&quot;Hud Bullets&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="2236911830614519">
@@ -1538,7 +1587,10 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-9" name="Destroy" sid="7434912950361237" type="Pallottola4" />
+                                        <action id="0" name="Call function" sid="739841397536035" type="Function">
+                                            <param id="0" name="Name">&quot;Hud Bullets&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="6057748470653286">
@@ -1550,7 +1602,10 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-9" name="Destroy" sid="4163081429920055" type="Pallottola5" />
+                                        <action id="0" name="Call function" sid="9500857662706502" type="Function">
+                                            <param id="0" name="Name">&quot;Hud Bullets&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="3373527574328338">
@@ -1562,7 +1617,10 @@
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action id="-9" name="Destroy" sid="5162803173746866" type="Pallottola6" />
+                                        <action id="0" name="Call function" sid="476221469451601" type="Function">
+                                            <param id="0" name="Name">&quot;Hud Bullets&quot;</param>
+                                            <param id="1" name="Parameter {n}"></param>
+                                        </action>
                                     </actions>
                                 </event-block>
                             </sub-events>
@@ -1929,7 +1987,11 @@
                             <param id="0" name="Name">&quot;Player Respawn&quot;</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="-15" name="Set visible" sid="6088567785893054" type="Player_arm">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
                     <sub-events>
                         <event-block sid="3731949381289935">
                             <conditions>
@@ -3280,29 +3342,29 @@
         </event-group>
         <event-group description="" sid="4264007511611137" title="Temp">
             <sub-events>
-                <event-block disabled="1" sid="2705836153629923">
+                <event-block disabled="1" sid="673454712746855">
                     <conditions>
-                        <condition id="2" name="Mouse button is down" sid="1487542368937407" type="Mouse">
+                        <condition id="2" name="Mouse button is down" sid="6713331898606807" type="Mouse">
                             <param id="0" name="Mouse button">2</param>
                         </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="3563563429075408" type="Player_Box">
+                        <condition id="-8" name="Is boolean instance variable set" sid="486046552034733" type="Player_Box">
                             <param id="0" name="Instance variable">Stun_Ability</param>
                         </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="8911530196367891" type="Player_Box">
+                        <condition id="-8" name="Is boolean instance variable set" sid="3771661987811033" type="Player_Box">
                             <param id="0" name="Instance variable">Weapon_Is_On</param>
                         </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="2857787096832467" type="Player_Box">
+                        <condition id="-8" name="Is boolean instance variable set" sid="4128534442546601" type="Player_Box">
                             <param id="0" name="Instance variable">Stun_Is_On</param>
                         </condition>
-                        <condition id="2" inverted="1" name="Is playing" sid="7723244639281888" type="Player_Frame">
+                        <condition id="2" inverted="1" name="Is playing" sid="4558434531831036" type="Player_Frame">
                             <param id="0" name="Animation">&quot;Dying&quot;</param>
                         </condition>
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block disabled="1" sid="2989152987537189">
+                        <event-block disabled="1" sid="9561723000840983">
                             <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="1607016450062802" type="Player_Box">
+                                <condition id="-7" name="Compare instance variable" sid="2737721352504303" type="Player_Box">
                                     <param id="0" name="Instance variable">Weapon_Level</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">0</param>
@@ -3310,24 +3372,35 @@
                             </conditions>
                             <actions />
                             <sub-events>
-                                <event-block disabled="1" sid="4510267353649355">
+                                <event-block disabled="1" sid="900971329656206">
                                     <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="527365302170527" type="Player_Box">
+                                        <condition id="-7" name="Compare instance variable" sid="9606831445740396" type="Player_Box">
                                             <param id="0" name="Instance variable">Cooldown_Stun</param>
                                             <param id="1" name="Comparison">0</param>
                                             <param id="2" name="Value">-1</param>
                                         </condition>
-                                        <condition id="-4" name="Trigger once while true" sid="8926533059905847" type="System" />
+                                        <condition id="-4" name="Trigger once while true" sid="5017011827150402" type="System" />
                                     </conditions>
                                     <actions>
-                                        <action id="-10" name="Set value" sid="7598395417687732" type="Player_Box">
-                                            <param id="0" name="Instance variable">Cooldown_Stun</param>
-                                            <param id="1" name="Value">0</param>
+                                        <action id="-3" name="Create object" sid="7210752118431093" type="System">
+                                            <param id="0" name="Object to create">Bullet_S_Player</param>
+                                            <param id="1" name="Layer">&quot;Player&quot;</param>
+                                            <param id="2" name="X">Player_arm.ImagePointX(1)</param>
+                                            <param id="3" name="Y">Player_arm.ImagePointY(1)</param>
                                         </action>
-                                        <action behavior="Timer" id="0" name="Start timer" sid="9248499680822647" type="Player_Box">
-                                            <param id="0" name="Duration">0.3</param>
-                                            <param id="1" name="Type">0</param>
-                                            <param id="2" name="Tag">&quot;Stun Charging&quot;</param>
+                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="5487533513461033" type="Bullet_S_Player">
+                                            <param id="0" name="Angle">Player_arm.Angle</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="2745614370225948" type="Bullet_S_Player">
+                                            <param id="0" name="Animation">&quot;Wave&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                        <action behavior="Bullet" id="5" name="Set enabled" sid="3509325102026463" type="Bullet_S_Player">
+                                            <param id="0" name="State">0</param>
+                                        </action>
+                                        <action behavior="Pin" id="0" name="Pin to object" sid="4741798782369611" type="Bullet_S_Player">
+                                            <param id="0" name="Pin to">Player_arm</param>
+                                            <param id="1" name="Mode">0</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -3335,130 +3408,31 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block disabled="1" sid="6373739257906436">
+                <event-block disabled="1" sid="7584082831794288">
                     <conditions>
-                        <condition behavior="Timer" id="0" name="On timer" sid="3624060740213463" type="Player_Box">
-                            <param id="0" name="Tag">&quot;Stun Charging&quot;</param>
+                        <condition id="3" name="On button released" sid="9725345814899042" type="Mouse">
+                            <param id="0" name="Mouse button">2</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-3" name="Create object" sid="4531599935192134" type="System">
-                            <param id="0" name="Object to create">Bullet_S_Player</param>
-                            <param id="1" name="Layer">&quot;Player&quot;</param>
-                            <param id="2" name="X">Player_arm.ImagePointX(1)</param>
-                            <param id="3" name="Y">Player_arm.ImagePointY(1)</param>
+                        <action id="-10" name="Set value" sid="3370124538359088" type="Player_Box">
+                            <param id="0" name="Instance variable">Cooldown_Stun</param>
+                            <param id="1" name="Value">0</param>
                         </action>
-                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="8506433335564744" type="Bullet_S_Player">
-                            <param id="0" name="Angle">Player_arm.Angle</param>
+                        <action behavior="Pin" id="1" name="Unpin" sid="9397540771881737" type="Bullet_S_Player" />
+                        <action behavior="Bullet" id="5" name="Set enabled" sid="1324538430376937" type="Bullet_S_Player">
+                            <param id="0" name="State">1</param>
                         </action>
-                        <action behavior="Bullet" id="6" name="Set distance travelled" sid="9141088154517914" type="Bullet_S_Player">
+                        <action behavior="Bullet" id="6" name="Set distance travelled" sid="7094807846278801" type="Bullet_S_Player">
                             <param id="0" name="Distance">50</param>
                         </action>
-                        <action id="4" name="Set animation" sid="2001687797875193" type="Bullet_S_Player">
+                        <action id="4" name="Set animation" sid="3874194178435754" type="Bullet_S_Player">
                             <param id="0" name="Animation">&quot;Bullet&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block disabled="1" sid="7753290152989539">
-                    <conditions>
-                        <condition id="3" name="On button released" sid="6434892215940582" type="Mouse">
-                            <param id="0" name="Mouse button">2</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                </event-block>
             </sub-events>
         </event-group>
-        <event-block disabled="1" sid="673454712746855">
-            <conditions>
-                <condition id="2" name="Mouse button is down" sid="6713331898606807" type="Mouse">
-                    <param id="0" name="Mouse button">2</param>
-                </condition>
-                <condition id="-8" name="Is boolean instance variable set" sid="486046552034733" type="Player_Box">
-                    <param id="0" name="Instance variable">Stun_Ability</param>
-                </condition>
-                <condition id="-8" name="Is boolean instance variable set" sid="3771661987811033" type="Player_Box">
-                    <param id="0" name="Instance variable">Weapon_Is_On</param>
-                </condition>
-                <condition id="-8" name="Is boolean instance variable set" sid="4128534442546601" type="Player_Box">
-                    <param id="0" name="Instance variable">Stun_Is_On</param>
-                </condition>
-                <condition id="2" inverted="1" name="Is playing" sid="4558434531831036" type="Player_Frame">
-                    <param id="0" name="Animation">&quot;Dying&quot;</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block disabled="1" sid="9561723000840983">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="2737721352504303" type="Player_Box">
-                            <param id="0" name="Instance variable">Weapon_Level</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block disabled="1" sid="900971329656206">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="9606831445740396" type="Player_Box">
-                                    <param id="0" name="Instance variable">Cooldown_Stun</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">-1</param>
-                                </condition>
-                                <condition id="-4" name="Trigger once while true" sid="5017011827150402" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="-3" name="Create object" sid="7210752118431093" type="System">
-                                    <param id="0" name="Object to create">Bullet_S_Player</param>
-                                    <param id="1" name="Layer">&quot;Player&quot;</param>
-                                    <param id="2" name="X">Player_arm.ImagePointX(1)</param>
-                                    <param id="3" name="Y">Player_arm.ImagePointY(1)</param>
-                                </action>
-                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="5487533513461033" type="Bullet_S_Player">
-                                    <param id="0" name="Angle">Player_arm.Angle</param>
-                                </action>
-                                <action id="4" name="Set animation" sid="2745614370225948" type="Bullet_S_Player">
-                                    <param id="0" name="Animation">&quot;Wave&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                                <action behavior="Bullet" id="5" name="Set enabled" sid="3509325102026463" type="Bullet_S_Player">
-                                    <param id="0" name="State">0</param>
-                                </action>
-                                <action behavior="Pin" id="0" name="Pin to object" sid="4741798782369611" type="Bullet_S_Player">
-                                    <param id="0" name="Pin to">Player_arm</param>
-                                    <param id="1" name="Mode">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <event-block disabled="1" sid="7584082831794288">
-            <conditions>
-                <condition id="3" name="On button released" sid="9725345814899042" type="Mouse">
-                    <param id="0" name="Mouse button">2</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-10" name="Set value" sid="3370124538359088" type="Player_Box">
-                    <param id="0" name="Instance variable">Cooldown_Stun</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-                <action behavior="Pin" id="1" name="Unpin" sid="9397540771881737" type="Bullet_S_Player" />
-                <action behavior="Bullet" id="5" name="Set enabled" sid="1324538430376937" type="Bullet_S_Player">
-                    <param id="0" name="State">1</param>
-                </action>
-                <action behavior="Bullet" id="6" name="Set distance travelled" sid="7094807846278801" type="Bullet_S_Player">
-                    <param id="0" name="Distance">50</param>
-                </action>
-                <action id="4" name="Set animation" sid="3874194178435754" type="Bullet_S_Player">
-                    <param id="0" name="Animation">&quot;Bullet&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-            </actions>
-        </event-block>
     </events>
 </c2eventsheet>

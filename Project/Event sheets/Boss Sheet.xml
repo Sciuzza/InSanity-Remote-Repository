@@ -39,6 +39,10 @@
                         <action id="-8" name="Set angle" sid="202727648869677" type="Mano_dx">
                             <param id="0" name="Angle">Avambraccio_dx.Angle</param>
                         </action>
+                        <action id="-9" name="Set value" sid="6821559152250379" type="System">
+                            <param id="0" name="Variable">Layout</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="3682927651736846">
@@ -51,8 +55,12 @@
                             </conditions>
                             <actions>
                                 <action id="-3" name="Set position" sid="7008481274811285" type="Player_Box">
-                                    <param id="0" name="X">45</param>
-                                    <param id="1" name="Y">482</param>
+                                    <param id="0" name="X">43</param>
+                                    <param id="1" name="Y">494</param>
+                                </action>
+                                <action id="0" name="Call function" sid="8342973588078788" type="Function">
+                                    <param id="0" name="Name">&quot;Player Memory Load&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
                         </event-block>
@@ -94,8 +102,8 @@
                                     <param id="1" name="Value">1</param>
                                 </action>
                                 <action id="-3" name="Set position" sid="9602612754822365" type="Player_Box">
-                                    <param id="0" name="X">45</param>
-                                    <param id="1" name="Y">482</param>
+                                    <param id="0" name="X">43</param>
+                                    <param id="1" name="Y">494</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -298,6 +306,10 @@
                                 <action id="-15" name="Set visible" sid="1393514827373954" type="Brother2">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
+                                <action id="0" name="Call function" sid="8527724524924588" type="Function">
+                                    <param id="0" name="Name">&quot;Player Free&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
@@ -356,6 +368,9 @@
                             <conditions>
                                 <condition id="-6" name="Every X seconds" sid="1570808716506063" type="System">
                                     <param id="0" name="Interval (seconds)">random(2,5)</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="7809922110700371" type="Corpo">
+                                    <param id="0" name="Instance variable">Phase_1_Attacking</param>
                                 </condition>
                                 <condition id="-7" name="Compare instance variable" sid="4980070087370426" type="Infezione_braccio">
                                     <param id="0" name="Instance variable">Life</param>
@@ -541,12 +556,39 @@
                                     <conditions>
                                         <condition id="-4" name="Trigger once while true" sid="5385054439713152" type="System" />
                                     </conditions>
-                                    <actions>
-                                        <action id="-10" name="Set value" sid="4793368727530993" type="Mano_dx">
-                                            <param id="0" name="Instance variable">Angle_Registered</param>
-                                            <param id="1" name="Value">angle(Player_Box.X,Player_Box.Y - 20, Mano_dx.X,Mano_dx.Y) + 180</param>
-                                        </action>
-                                    </actions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="7164837917941816">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="4423923836794666" type="System">
+                                                    <param id="0" name="First value">angle(Player_Box.X,Player_Box.Y - 20, Mano_dx.X,Mano_dx.Y) + 180</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Second value">161</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="4793368727530993" type="Mano_dx">
+                                                    <param id="0" name="Instance variable">Angle_Registered</param>
+                                                    <param id="1" name="Value">angle(Player_Box.X,Player_Box.Y - 20, Mano_dx.X,Mano_dx.Y) + 180</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="4383936857932692">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="4353923912969824" type="System">
+                                                    <param id="0" name="First value">angle(Player_Box.X,Player_Box.Y - 20, Mano_dx.X,Mano_dx.Y) + 180</param>
+                                                    <param id="1" name="Comparison">5</param>
+                                                    <param id="2" name="Second value">161</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="440517987257154" type="Mano_dx">
+                                                    <param id="0" name="Instance variable">Angle_Registered</param>
+                                                    <param id="1" name="Value">161</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                                 <event-block sid="7301399801757742">
                                     <conditions>
@@ -581,6 +623,12 @@
                                             <param id="0" name="X">Self.X</param>
                                             <param id="1" name="Y">Self.Y</param>
                                         </action>
+                                        <action behavior="Solid" id="0" name="Set enabled" sid="5546798181675969" type="Avambraccio_dx">
+                                            <param id="0" name="State">1</param>
+                                        </action>
+                                        <action behavior="Jumpthru" id="0" name="Set enabled" sid="1076234866151581" type="Mano_dx">
+                                            <param id="0" name="State">1</param>
+                                        </action>
                                     </actions>
                                     <sub-events>
                                         <event-block sid="2744487091080926">
@@ -589,20 +637,7 @@
                                                     <param id="0" name="Count">2</param>
                                                 </condition>
                                             </conditions>
-                                            <actions>
-                                                <action id="-3" name="Create object" sid="1622128139186968" type="System">
-                                                    <param id="0" name="Object to create">Boss_Shockwave</param>
-                                                    <param id="1" name="Layer">&quot;boss&quot;</param>
-                                                    <param id="2" name="X">Mano_dx.X</param>
-                                                    <param id="3" name="Y">Mano_dx.Y</param>
-                                                </action>
-                                                <action behavior="Bullet" id="6" name="Set distance travelled" sid="2017682274227184" type="Boss_Shockwave">
-                                                    <param id="0" name="Distance">100</param>
-                                                </action>
-                                                <action behavior="Bullet" id="5" name="Set enabled" sid="7506805138968082" type="Boss_Shockwave">
-                                                    <param id="0" name="State">1</param>
-                                                </action>
-                                            </actions>
+                                            <actions />
                                             <sub-events>
                                                 <event-block sid="3070363317283271">
                                                     <conditions>
@@ -613,8 +648,20 @@
                                                         </condition>
                                                     </conditions>
                                                     <actions>
+                                                        <action id="-3" name="Create object" sid="1622128139186968" type="System">
+                                                            <param id="0" name="Object to create">Boss_Shockwave</param>
+                                                            <param id="1" name="Layer">&quot;boss&quot;</param>
+                                                            <param id="2" name="X">Mano_dx.X + 5</param>
+                                                            <param id="3" name="Y">Mano_dx.Y</param>
+                                                        </action>
                                                         <action behavior="Bullet" id="3" name="Set angle of motion" sid="7160249626625749" type="Boss_Shockwave">
                                                             <param id="0" name="Angle">0</param>
+                                                        </action>
+                                                        <action disabled="1" id="-8" name="Set angle" sid="5390548967259135" type="Boss_Shockwave">
+                                                            <param id="0" name="Angle">0</param>
+                                                        </action>
+                                                        <action behavior="Bullet" id="5" name="Set enabled" sid="7506805138968082" type="Boss_Shockwave">
+                                                            <param id="0" name="State">1</param>
                                                         </action>
                                                     </actions>
                                                 </event-block>
@@ -627,8 +674,20 @@
                                                         </condition>
                                                     </conditions>
                                                     <actions>
+                                                        <action id="-3" name="Create object" sid="7579355832770031" type="System">
+                                                            <param id="0" name="Object to create">Boss_Shockwave</param>
+                                                            <param id="1" name="Layer">&quot;boss&quot;</param>
+                                                            <param id="2" name="X">Mano_dx.X - 25</param>
+                                                            <param id="3" name="Y">Mano_dx.Y</param>
+                                                        </action>
                                                         <action behavior="Bullet" id="3" name="Set angle of motion" sid="149100387648952" type="Boss_Shockwave">
                                                             <param id="0" name="Angle">180</param>
+                                                        </action>
+                                                        <action disabled="1" id="-8" name="Set angle" sid="7705416189709639" type="Boss_Shockwave">
+                                                            <param id="0" name="Angle">180</param>
+                                                        </action>
+                                                        <action behavior="Bullet" id="5" name="Set enabled" sid="7388104851368078" type="Boss_Shockwave">
+                                                            <param id="0" name="State">1</param>
                                                         </action>
                                                     </actions>
                                                 </event-block>
@@ -653,7 +712,70 @@
                                     <param id="0" name="Instance variable">Is_Stopped</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
+                                <action id="-9" name="Destroy" sid="5011697384118075" type="Mano_dx" />
+                                <action id="-3" name="Create object" sid="5304941969459631" type="System">
+                                    <param id="0" name="Object to create">Mano_dx</param>
+                                    <param id="1" name="Layer">&quot;Boss&quot;</param>
+                                    <param id="2" name="X">Avambraccio_dx.ImagePointX(1)</param>
+                                    <param id="3" name="Y">Avambraccio_dx.ImagePointY(1)</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="8666386293324868" type="Mano_dx">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                                <action behavior="Solid" id="0" name="Set enabled" sid="2195935043921834" type="Avambraccio_dx">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action behavior="Jumpthru" id="0" name="Set enabled" sid="9365285582183081" type="Mano_dx">
+                                    <param id="0" name="State">0</param>
+                                </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="8569322502558165">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="5530619897942441" type="System">
+                                            <param id="0" name="First value">Player_Box.X</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Second value">305</param>
+                                        </condition>
+                                        <condition id="-8" name="Compare two values" sid="9124858384979271" type="System">
+                                            <param id="0" name="First value">Player_Box.Y</param>
+                                            <param id="1" name="Comparison">3</param>
+                                            <param id="2" name="Second value">380</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="6216985305958899" type="Avambraccio_dx">
+                                            <param id="0" name="Instance variable">Setting_Away</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="1268102954420945">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="8079766060177351" type="Avambraccio_dx">
+                                    <param id="0" name="Instance variable">Setting_Away</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="4677157710370945">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="6997956960736964" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="9351431407297033" type="Player_Box">
+                                            <param id="0" name="X">270</param>
+                                            <param id="1" name="Y">400</param>
+                                        </action>
+                                        <action id="-13" name="Set boolean" sid="3934649263584122" type="Avambraccio_dx">
+                                            <param id="0" name="Instance variable">Setting_Away</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                         <event-block sid="3566380194733202">
                             <conditions>
@@ -685,17 +807,478 @@
                                 <action id="-9" name="Destroy" sid="6127245944109536" type="Bullet_1_Player" />
                             </actions>
                         </event-block>
-                        <event-block sid="5660356847213709">
+                        <event-block sid="7426108376346161">
                             <conditions>
-                                <condition id="0" name="On collision with another object" sid="9531618848925934" type="Bullet_S_Player">
-                                    <param id="0" name="Object">Cervello</param>
+                                <condition id="-7" name="Compare instance variable" sid="4138132168482653" type="Cervello">
+                                    <param id="0" name="Instance variable">Life</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">9</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="204864190458586" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="1588917211306672" type="Player_Box">
+                                    <param id="0" name="Instance variable">Phase_6_Uber</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8353988248355169">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="3169661024228411" type="Cervello">
+                                    <param id="0" name="Instance variable">Life</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="8832553497468159" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="6010332696313244" type="Corpo">
+                                    <param id="0" name="Instance variable">Phase_2_Attacking</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="9963773938486019" type="Corpo">
+                                    <param id="0" name="Instance variable">Phase_1_Attacking</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="2233740485508991" type="Hat">
+                                    <param id="0" name="Angle">0</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="9888160546648184" type="Corpo">
+                                    <param id="0" name="X">Self.X</param>
+                                    <param id="1" name="Y">Self.Y + 45</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="6672270256436228" type="Hat">
+                                    <param id="0" name="Instance variable">Is_Hit</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="3988320030006612" type="Hat">
+                                    <param id="0" name="Instance variable">Is_intheAir</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="4804405818360444" type="Mano_dx">
+                                    <param id="0" name="Instance variable">Is_Stopped</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="1105148538367256" type="Player_Box">
+                                    <param id="0" name="Instance variable">Level_3_Phases</param>
+                                    <param id="1" name="Value">7</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="738991031735745">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="3163069920930071" type="Player_Box">
+                                    <param id="0" name="Instance variable">Phase_6_Uber</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="942219640624682">
+                                    <conditions>
+                                        <condition id="-6" name="Every X seconds" sid="4833446708963769" type="System">
+                                            <param id="0" name="Interval (seconds)">random(2,5)</param>
+                                        </condition>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="3022793733032028" type="Corpo">
+                                            <param id="0" name="Instance variable">Phase_2_Attacking</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-13" name="Set boolean" sid="4775709176684147" type="Corpo">
+                                            <param id="0" name="Instance variable">Phase_2_Attacking</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="8942687374786507">
+                                    <conditions>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="2607070798161321" type="Corpo">
+                                            <param id="0" name="Instance variable">Phase_2_Attacking</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Set value" sid="7352745589348127" type="Occhi">
+                                            <param id="0" name="Instance variable">Angle_Registered</param>
+                                            <param id="1" name="Value">angle(Player_Box.X,Player_Box.Y - 20, Occhi.X,Occhi.Y) + 180</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="8926570597151281">
+                                            <conditions>
+                                                <condition id="-12" name="Repeat" sid="9380766026649747" type="System">
+                                                    <param id="0" name="Count">2</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="8188017704239441">
+                                                    <conditions>
+                                                        <condition id="-8" name="Compare two values" sid="5158738523850386" type="System">
+                                                            <param id="0" name="First value">loopindex</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Second value">0</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-3" name="Create object" sid="5859898868877625" type="System">
+                                                            <param id="0" name="Object to create">Boss_Shockwave</param>
+                                                            <param id="1" name="Layer">&quot;boss&quot;</param>
+                                                            <param id="2" name="X">Occhi.X -10</param>
+                                                            <param id="3" name="Y">Occhi.Y + 4</param>
+                                                        </action>
+                                                        <action id="9" name="Set scale" sid="9866554191850187" type="Boss_Shockwave">
+                                                            <param id="0" name="Scale">0.2</param>
+                                                        </action>
+                                                        <action behavior="Bullet" id="0" name="Set speed" sid="6067289019188024" type="Boss_Shockwave">
+                                                            <param id="0" name="Speed">300</param>
+                                                        </action>
+                                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="4033459233180444" type="Boss_Shockwave">
+                                                            <param id="0" name="Angle">Occhi.Angle_Registered</param>
+                                                        </action>
+                                                        <action behavior="Bullet" id="5" name="Set enabled" sid="3427170183776526" type="Boss_Shockwave">
+                                                            <param id="0" name="State">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="9238456727013136">
+                                                    <conditions>
+                                                        <condition id="-8" name="Compare two values" sid="7834792293335412" type="System">
+                                                            <param id="0" name="First value">loopindex</param>
+                                                            <param id="1" name="Comparison">0</param>
+                                                            <param id="2" name="Second value">1</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-3" name="Create object" sid="6615771857468271" type="System">
+                                                            <param id="0" name="Object to create">Boss_Shockwave</param>
+                                                            <param id="1" name="Layer">&quot;boss&quot;</param>
+                                                            <param id="2" name="X">Occhi.X + 10</param>
+                                                            <param id="3" name="Y">Occhi.Y + 4</param>
+                                                        </action>
+                                                        <action id="9" name="Set scale" sid="7254644424207502" type="Boss_Shockwave">
+                                                            <param id="0" name="Scale">0.2</param>
+                                                        </action>
+                                                        <action behavior="Bullet" id="0" name="Set speed" sid="6899449491192909" type="Boss_Shockwave">
+                                                            <param id="0" name="Speed">300</param>
+                                                        </action>
+                                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="6017373112629983" type="Boss_Shockwave">
+                                                            <param id="0" name="Angle">Occhi.Angle_Registered</param>
+                                                        </action>
+                                                        <action behavior="Bullet" id="5" name="Set enabled" sid="9616118223763375" type="Boss_Shockwave">
+                                                            <param id="0" name="State">1</param>
+                                                        </action>
+                                                        <action id="-13" name="Set boolean" sid="6724376129188824" type="Corpo">
+                                                            <param id="0" name="Instance variable">Phase_2_Attacking</param>
+                                                            <param id="1" name="Value">0</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="81071387049655" title="Dying Phase">
+            <sub-events>
+                <event-block sid="4101824724934134">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="6804449447122991" type="Player_Box">
+                            <param id="0" name="Instance variable">Level_3_Phases</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">7</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="3287467271607748">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="5946014852326067" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="2483721061661256" type="Corpo">
+                                    <param id="0" name="Animation">&quot;Attack1&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="750809178174636">
+                            <conditions>
+                                <condition id="4" name="On finished" sid="9819506143334146" type="Corpo">
+                                    <param id="0" name="Animation">&quot;Attack1&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Destroy" sid="3082045316485612" type="Bullet_S_Player" />
-                                <action id="-13" name="Set boolean" sid="2227342833438091" type="Cervello">
-                                    <param id="0" name="Instance variable">Vulnerable</param>
-                                    <param id="1" name="Value">1</param>
+                                <action id="-10" name="Set value" sid="1367369210058157" type="Player_Box">
+                                    <param id="0" name="Instance variable">Level_3_Phases</param>
+                                    <param id="1" name="Value">8</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="6853501877500982">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="2508451158964624" type="Player_Box">
+                            <param id="0" name="Instance variable">Level_3_Phases</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">8</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="2012898714717529">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="7513421561578512" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="2071175766581765" type="Hat" />
+                                <action behavior="Platform" id="11" name="Set enabled" sid="1204316562093841" type="Cervello">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="599427956315838" type="Function">
+                                    <param id="0" name="Name">&quot;Player Stop&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-3" name="Set position" sid="7453284723046702" type="Player_Box">
+                                    <param id="0" name="X">200</param>
+                                    <param id="1" name="Y">485</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7332718103985798">
+                            <conditions>
+                                <condition id="1" inverted="1" name="Is overlapping another object" sid="7504977898010841" type="Mano_dx">
+                                    <param id="0" name="Object">SolidObjects</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="3573659678212735" type="Mano_dx">
+                                    <param id="0" name="X">Self.X</param>
+                                    <param id="1" name="Y">Self.Y + 10*dt</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1856407358129172">
+                            <conditions>
+                                <condition id="1" inverted="1" name="Is overlapping another object" sid="8122518904016281" type="Avambraccio_dx">
+                                    <param id="0" name="Object">SolidObjects</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="4140302178014826" type="Avambraccio_dx">
+                                    <param id="0" name="X">Self.X</param>
+                                    <param id="1" name="Y">Self.Y + 10*dt</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8457958222581688">
+                            <conditions>
+                                <condition id="1" inverted="1" name="Is overlapping another object" sid="9205741427022418" type="Braccio_sx">
+                                    <param id="0" name="Object">SolidObjects</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="636969345895327" type="Braccio_sx">
+                                    <param id="0" name="X">Self.X</param>
+                                    <param id="1" name="Y">Self.Y + 10*dt</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1753146340368877">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="6130909249579157" type="Cervello">
+                                    <param id="0" name="Comparison">5</param>
+                                    <param id="1" name="X co-ordinate">200</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="6997862850044507" type="Cervello">
+                                    <param id="0" name="Control">0</param>
+                                </action>
+                                <action id="-19" name="Rotate counter-clockwise" sid="8190114412273738" type="Cervello">
+                                    <param id="0" name="Degrees">50*dt</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8607120045386989">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="1706085569379049" type="Cervello">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="X co-ordinate">200.5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="11" name="Set enabled" sid="7708472735809633" type="Cervello">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="6603212958942184" type="Player_Box">
+                                    <param id="0" name="Instance variable">Level_3_Phases</param>
+                                    <param id="1" name="Value">9</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="1112820557474562">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="7627236180842375" type="Player_Box">
+                            <param id="0" name="Instance variable">Level_3_Phases</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">9</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="1899327410439993">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="2758249911448349" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="2402201109230923" type="Boss" />
+                                <action id="-15" name="Set visible" sid="5278457980151318" type="Brother2">
+                                    <param id="0" name="Visibility">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6827287259893036">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="1895871786903974" type="Player_Box">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="X co-ordinate">325</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="1" name="Set max speed" sid="4953619234371562" type="Player_Box">
+                                    <param id="0" name="Max Speed">30</param>
+                                </action>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="2118676696122825" type="Player_Box">
+                                    <param id="0" name="Control">1</param>
+                                </action>
+                                <action id="4" name="Set animation" sid="8680489520375007" type="Player_Frame">
+                                    <param id="0" name="Animation">&quot;Walking&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="500523475163219">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="2267204274702914" type="Player_Box">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="X co-ordinate">324</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="3078660198645282" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="7761638600219169" type="Player_Box">
+                                    <param id="0" name="Instance variable">Level_3_Phases</param>
+                                    <param id="1" name="Value">10</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="9067285175099379">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="3713923848208263" type="Player_Box">
+                            <param id="0" name="Instance variable">Level_3_Phases</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">10</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="9616394947093739">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="7901067918172248" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="7410767651812047" type="Player_Frame">
+                                    <param id="0" name="Animation">&quot;Dying_2&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4467189064886738">
+                            <conditions>
+                                <condition id="4" name="On finished" sid="7562513986588885" type="Player_Frame">
+                                    <param id="0" name="Animation">&quot;Dying_2&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Timer" id="0" name="Start timer" sid="4883440143750249" type="Player_Box">
+                                    <param id="0" name="Duration">3</param>
+                                    <param id="1" name="Type">0</param>
+                                    <param id="2" name="Tag">&quot;Going to Final Cutscene&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="6558764679799824">
+                            <conditions>
+                                <condition behavior="Timer" id="0" name="On timer" sid="9447281884986821" type="Player_Box">
+                                    <param id="0" name="Tag">&quot;Going to Final Cutscene&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="4802441943039839" type="Player_Box">
+                                    <param id="0" name="Instance variable">Level_3_Phases</param>
+                                    <param id="1" name="Value">11</param>
+                                </action>
+                                <action id="-34" name="Set layer background color" sid="4710706227825403" type="System">
+                                    <param id="0" name="Layer">&quot;Hud&quot;</param>
+                                    <param id="1" name="Color">rgb(0, 0, 0)</param>
+                                </action>
+                                <action id="-18" name="Set layer opacity" sid="1267105152990293" type="System">
+                                    <param id="0" name="Layer">&quot;Hud&quot;</param>
+                                    <param id="1" name="Opacity">0</param>
+                                </action>
+                                <action id="-35" name="Set layer transparent" sid="2324812875003446" type="System">
+                                    <param id="0" name="Layer">&quot;Hud&quot;</param>
+                                    <param id="1" name="Mode">0</param>
+                                </action>
+                                <action id="-15" name="Set visible" sid="8015923246948037" type="Hud">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="2758565693485128">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="1861973091935547" type="Player_Box">
+                            <param id="0" name="Instance variable">Level_3_Phases</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">11</param>
+                        </condition>
+                        <condition id="-17" name="Compare opacity" sid="220369246406114" type="System">
+                            <param id="0" name="Layer">&quot;Hud&quot;</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Opacity">100</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-18" name="Set layer opacity" sid="733570913088992" type="System">
+                            <param id="0" name="Layer">&quot;Hud&quot;</param>
+                            <param id="1" name="Opacity">LayerOpacity(&quot;Hud&quot;) + 100*dt</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="6658865686178382">
+                            <conditions>
+                                <condition id="-17" name="Compare opacity" sid="6201761197483682" type="System">
+                                    <param id="0" name="Layer">&quot;Hud&quot;</param>
+                                    <param id="1" name="Comparison">5</param>
+                                    <param id="2" name="Opacity">100</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="9008460136431398" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-2" name="Go to layout" sid="3672707440853313" type="System">
+                                    <param id="0" name="Layout">Cutscene End</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -705,106 +1288,322 @@
         </event-group>
         <event-group description="" sid="7043126641246402" title="Boss Linking">
             <sub-events>
-                <event-block sid="253885538688033">
+                <event-block sid="1352360242033963">
                     <conditions>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="9673688663270286" type="Corpo">
-                            <param id="0" name="Instance variable">Phase_1_Attacking</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="3034221226182761" type="Player_Box">
+                        <condition id="-7" name="Compare instance variable" sid="6780259444094081" type="Player_Box">
                             <param id="0" name="Instance variable">Level_3_Phases</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">5</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Value">8</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="253885538688033">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="9673688663270286" type="Corpo">
+                                    <param id="0" name="Instance variable">Phase_1_Attacking</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="4633426775221968">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="3034221226182761" type="Player_Box">
+                                            <param id="0" name="Instance variable">Level_3_Phases</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">5</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="2522497708160194" type="Braccio_sx">
+                                            <param id="0" name="X">Corpo.ImagePointX(1)</param>
+                                            <param id="1" name="Y">corpo.ImagePointY(1)</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="1072577860118946" type="Avambraccio_dx">
+                                            <param id="0" name="X">Braccio_dxsecondo_piano.ImagePointX(1)</param>
+                                            <param id="1" name="Y">Braccio_dxsecondo_piano.ImagePointY(1)</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="5382042501619774" type="Braccio_dxsecondo_piano">
+                                            <param id="0" name="X">Corpo.ImagePointX(2)</param>
+                                            <param id="1" name="Y">Corpo.ImagePointY(2)</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="1910020886730525" type="Gamba_dx">
+                                            <param id="0" name="X">Corpo.ImagePointX(5)</param>
+                                            <param id="1" name="Y">Corpo.ImagePointY(5)</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="4046485709176575" type="Gamba_sx">
+                                            <param id="0" name="X">Corpo.ImagePointX(6)</param>
+                                            <param id="1" name="Y">Corpo.ImagePointY(6)</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="5536589522980013" type="Infezione_braccio">
+                                            <param id="0" name="X">Braccio_sx.ImagePointX(2)</param>
+                                            <param id="1" name="Y">Braccio_sx.ImagePointY(2)</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="4628071886411552" type="Cervello">
+                                            <param id="0" name="X">Corpo.ImagePointX(3)</param>
+                                            <param id="1" name="Y">Corpo.ImagePointY(3)</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="5297515307060449" type="Mano_dx">
+                                            <param id="0" name="X">Avambraccio_dx.ImagePointX(1)</param>
+                                            <param id="1" name="Y">Avambraccio_dx.ImagePointY(1)</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="1815274032599156" type="Occhi">
+                                            <param id="0" name="X">Corpo.ImagePointX(4) + 4</param>
+                                            <param id="1" name="Y">Corpo.ImagePointY(4)</param>
+                                        </action>
+                                        <action id="-8" name="Set angle" sid="3033735106660991" type="Infezione_braccio">
+                                            <param id="0" name="Angle">Braccio_sx.Angle</param>
+                                        </action>
+                                        <action id="-8" name="Set angle" sid="1985871976509709" type="Mano_dx">
+                                            <param id="0" name="Angle">Avambraccio_dx.Angle</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="2163675393188727">
+                                            <conditions>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="2251946346467319" type="Hat">
+                                                    <param id="0" name="Instance variable">Is_Hit</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Set position" sid="567233470323497" type="Hat">
+                                                    <param id="0" name="X">Cervello.X</param>
+                                                    <param id="1" name="Y">Cervello.Y</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="6728193005245615">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="2114003118507331" type="Player_Box">
+                                            <param id="0" name="Instance variable">Level_3_Phases</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">6</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="7963079479526111" type="Avambraccio_dx">
+                                            <param id="0" name="X">Braccio_dxsecondo_piano.ImagePointX(1)</param>
+                                            <param id="1" name="Y">Braccio_dxsecondo_piano.ImagePointY(1)</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="7372186981903142" type="Braccio_sx">
+                                            <param id="0" name="X">Corpo.ImagePointX(1)</param>
+                                            <param id="1" name="Y">corpo.ImagePointY(1)</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="5043337092064337" type="Braccio_dxsecondo_piano">
+                                            <param id="0" name="X">Corpo.ImagePointX(2)</param>
+                                            <param id="1" name="Y">Corpo.ImagePointY(2)</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="386747049888711" type="Gamba_dx">
+                                            <param id="0" name="X">Corpo.ImagePointX(5)</param>
+                                            <param id="1" name="Y">Corpo.ImagePointY(5)</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="141856798894858" type="Gamba_sx">
+                                            <param id="0" name="X">Corpo.ImagePointX(6)</param>
+                                            <param id="1" name="Y">Corpo.ImagePointY(6)</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="2304966434106601" type="Occhi">
+                                            <param id="0" name="X">Corpo.ImagePointX(4) + 4</param>
+                                            <param id="1" name="Y">Corpo.ImagePointY(4)</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="9727984351036419" type="Cervello">
+                                            <param id="0" name="X">Corpo.ImagePointX(3)</param>
+                                            <param id="1" name="Y">Corpo.ImagePointY(3)</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="8401086012584806">
+                                            <conditions>
+                                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="3532538018156794" type="Hat">
+                                                    <param id="0" name="Instance variable">Is_Hit</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-3" name="Set position" sid="9049143355132116" type="Hat">
+                                                    <param id="0" name="X">Cervello.X</param>
+                                                    <param id="1" name="Y">Cervello.Y</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="8844919810230831">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="3095402404239762" type="Corpo">
+                                    <param id="0" name="Instance variable">Phase_1_Attacking</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="5738343869284836" type="Mano_dx">
+                                    <param id="0" name="X">Avambraccio_dx.ImagePointX(1)</param>
+                                    <param id="1" name="Y">Avambraccio_dx.ImagePointY(1)</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="1596260131376352" type="Avambraccio_sx">
+                                    <param id="0" name="X">Braccio_sx.ImagePointX(1)</param>
+                                    <param id="1" name="Y">Braccio_sx.ImagePointY(1)</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="6086712489895023" type="Braccio_sx">
+                                    <param id="0" name="X">Corpo.ImagePointX(1)</param>
+                                    <param id="1" name="Y">corpo.ImagePointY(1)</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="4633426555197427" type="Avambraccio_dx">
+                                    <param id="0" name="X">Braccio_dxsecondo_piano.ImagePointX(1)</param>
+                                    <param id="1" name="Y">Braccio_dxsecondo_piano.ImagePointY(1)</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="3483533923125501" type="Braccio_dxsecondo_piano">
+                                    <param id="0" name="X">Corpo.ImagePointX(2)</param>
+                                    <param id="1" name="Y">Corpo.ImagePointY(2)</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="1046839964635733" type="Gamba_dx">
+                                    <param id="0" name="X">Corpo.ImagePointX(5)</param>
+                                    <param id="1" name="Y">Corpo.ImagePointY(5)</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="3383346375646233" type="Gamba_sx">
+                                    <param id="0" name="X">Corpo.ImagePointX(6)</param>
+                                    <param id="1" name="Y">Corpo.ImagePointY(6)</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="7392612644104337" type="Occhi">
+                                    <param id="0" name="X">Corpo.ImagePointX(4) + 4</param>
+                                    <param id="1" name="Y">Corpo.ImagePointY(4)</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="4042904566141377" type="Infezione_braccio">
+                                    <param id="0" name="X">Braccio_sx.ImagePointX(2)</param>
+                                    <param id="1" name="Y">Braccio_sx.ImagePointY(2)</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="2700268341553138" type="Cervello">
+                                    <param id="0" name="X">Corpo.ImagePointX(3)</param>
+                                    <param id="1" name="Y">Corpo.ImagePointY(3)</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="9904356457568064" type="Infezione_braccio">
+                                    <param id="0" name="Angle">Braccio_sx.Angle</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="1894624026754303" type="Mano_dx">
+                                    <param id="0" name="Angle">Avambraccio_dx.Angle</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="2133469306226267" type="Avambraccio_sx">
+                                    <param id="0" name="Angle">Braccio_sx.Angle</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="653157250568356">
+                                    <conditions>
+                                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="8277074723549027" type="Hat">
+                                            <param id="0" name="Instance variable">Is_Hit</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="178205434569355" type="Hat">
+                                            <param id="0" name="X">Cervello.X</param>
+                                            <param id="1" name="Y">Cervello.Y</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="7566836967795986" title="Free Phases Event">
+            <sub-events>
+                <event-block sid="4015475141836286">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="1209747684585747" type="Bullet_S_Player">
+                            <param id="0" name="Object">Hat</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-3" name="Set position" sid="7901429791703853" type="Avambraccio_sx">
-                            <param id="0" name="X">Braccio_sx.ImagePointX(1)</param>
-                            <param id="1" name="Y">Braccio_sx.ImagePointY(1)</param>
+                        <action id="-13" name="Set boolean" sid="2015989521403127" type="Hat">
+                            <param id="0" name="Instance variable">Is_Hit</param>
+                            <param id="1" name="Value">1</param>
                         </action>
-                        <action id="-8" name="Set angle" sid="7011595042229425" type="Avambraccio_sx">
-                            <param id="0" name="Angle">Braccio_sx.Angle</param>
+                        <action id="-9" name="Destroy" sid="8143827161931619" type="Bullet_S_Player" />
+                        <action behavior="Timer" id="0" name="Start timer" sid="3628849237471619" type="Player_Box">
+                            <param id="0" name="Duration">8</param>
+                            <param id="1" name="Type">0</param>
+                            <param id="2" name="Tag">&quot;Brain Vulnerable&quot;</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="6518794402668505">
+                <event-block sid="9186267273128348">
                     <conditions>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="6916723209325438" type="Corpo">
-                            <param id="0" name="Instance variable">Phase_1_Attacking</param>
+                        <condition id="-8" name="Is boolean instance variable set" sid="6790581190973488" type="Hat">
+                            <param id="0" name="Instance variable">Is_Hit</param>
                         </condition>
-                        <condition id="-7" name="Compare instance variable" sid="2114003118507331" type="Player_Box">
-                            <param id="0" name="Instance variable">Level_3_Phases</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">6</param>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="4513286702257527" type="Hat">
+                            <param id="0" name="Instance variable">Is_intheAir</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-3" name="Set position" sid="5473126374299992" type="Mano_dx">
-                            <param id="0" name="X">Avambraccio_dx.ImagePointX(1)</param>
-                            <param id="1" name="Y">Avambraccio_dx.ImagePointY(1)</param>
+                        <action id="-3" name="Set position" sid="8727644314351133" type="Hat">
+                            <param id="0" name="X">Self.X</param>
+                            <param id="1" name="Y">Self.Y - 60*dt</param>
                         </action>
-                        <action id="-8" name="Set angle" sid="4445614780181554" type="Mano_dx">
-                            <param id="0" name="Angle">Avambraccio_dx.Angle</param>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="3904426061501565">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="6359850130624924" type="Hat">
+                                    <param id="0" name="Comparison">3</param>
+                                    <param id="1" name="Y co-ordinate">200</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="6337764413527184" type="Hat">
+                                    <param id="0" name="Instance variable">Is_intheAir</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="9588704670815836">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="3076482826570328" type="Hat">
+                            <param id="0" name="Instance variable">Is_intheAir</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-18" name="Rotate clockwise" sid="9437434041328834" type="Hat">
+                            <param id="0" name="Degrees">30*dt</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="8844919810230831">
+                <event-block sid="6915529077882416">
                     <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="4019467626494552" type="Player_Box">
-                            <param id="0" name="Instance variable">Level_3_Phases</param>
-                            <param id="1" name="Comparison">5</param>
-                            <param id="2" name="Value">4</param>
+                        <condition behavior="Timer" id="0" name="On timer" sid="1477524174640602" type="Player_Box">
+                            <param id="0" name="Tag">&quot;Brain Vulnerable&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-3" name="Set position" sid="5738343869284836" type="Mano_dx">
-                            <param id="0" name="X">Avambraccio_dx.ImagePointX(1)</param>
-                            <param id="1" name="Y">Avambraccio_dx.ImagePointY(1)</param>
+                        <action id="-13" name="Set boolean" sid="594833060983488" type="Hat">
+                            <param id="0" name="Instance variable">Is_Hit</param>
+                            <param id="1" name="Value">0</param>
                         </action>
-                        <action id="-8" name="Set angle" sid="1894624026754303" type="Mano_dx">
-                            <param id="0" name="Angle">Avambraccio_dx.Angle</param>
+                        <action id="-13" name="Set boolean" sid="8785531955805109" type="Hat">
+                            <param id="0" name="Instance variable">Is_intheAir</param>
+                            <param id="1" name="Value">0</param>
                         </action>
-                        <action id="-3" name="Set position" sid="1596260131376352" type="Avambraccio_sx">
-                            <param id="0" name="X">Braccio_sx.ImagePointX(1)</param>
-                            <param id="1" name="Y">Braccio_sx.ImagePointY(1)</param>
+                        <action id="-8" name="Set angle" sid="8291644601376654" type="Hat">
+                            <param id="0" name="Angle">0</param>
                         </action>
-                        <action id="-8" name="Set angle" sid="2133469306226267" type="Avambraccio_sx">
-                            <param id="0" name="Angle">Braccio_sx.Angle</param>
+                    </actions>
+                </event-block>
+                <event-block sid="8863272884172948">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="1063424287990158" type="Bullet_1_Player">
+                            <param id="0" name="Object">Cervello</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-12" name="Subtract from" sid="1160992310581742" type="Cervello">
+                            <param id="0" name="Instance variable">Life</param>
+                            <param id="1" name="Value">1</param>
                         </action>
-                        <action id="-3" name="Set position" sid="6086712489895023" type="Braccio_sx">
-                            <param id="0" name="X">Corpo.ImagePointX(1)</param>
-                            <param id="1" name="Y">corpo.ImagePointY(1)</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="4633426555197427" type="Avambraccio_dx">
-                            <param id="0" name="X">Braccio_dxsecondo_piano.ImagePointX(1)</param>
-                            <param id="1" name="Y">Braccio_dxsecondo_piano.ImagePointY(1)</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="3483533923125501" type="Braccio_dxsecondo_piano">
-                            <param id="0" name="X">Corpo.ImagePointX(2)</param>
-                            <param id="1" name="Y">Corpo.ImagePointY(2)</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="1046839964635733" type="Gamba_dx">
-                            <param id="0" name="X">Corpo.ImagePointX(5)</param>
-                            <param id="1" name="Y">Corpo.ImagePointY(5)</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="3383346375646233" type="Gamba_sx">
-                            <param id="0" name="X">Corpo.ImagePointX(6)</param>
-                            <param id="1" name="Y">Corpo.ImagePointY(6)</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="7392612644104337" type="Occhi">
-                            <param id="0" name="X">Corpo.ImagePointX(4) + 4</param>
-                            <param id="1" name="Y">Corpo.ImagePointY(4)</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="4042904566141377" type="Infezione_braccio">
-                            <param id="0" name="X">Braccio_sx.ImagePointX(2)</param>
-                            <param id="1" name="Y">Braccio_sx.ImagePointY(2)</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="2700268341553138" type="Cervello">
-                            <param id="0" name="X">Corpo.ImagePointX(3)</param>
-                            <param id="1" name="Y">Corpo.ImagePointY(3)</param>
-                        </action>
-                        <action id="-8" name="Set angle" sid="9904356457568064" type="Infezione_braccio">
-                            <param id="0" name="Angle">Braccio_sx.Angle</param>
-                        </action>
+                        <action id="-9" name="Destroy" sid="961860439220653" type="Bullet_1_Player" />
                     </actions>
                 </event-block>
             </sub-events>
