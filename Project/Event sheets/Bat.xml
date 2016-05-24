@@ -5,7 +5,7 @@
     <events>
         <event-group description="" sid="7518720208083559" title="Bat Damage">
             <sub-events>
-                <event-block sid="445241576665382">
+                <event-block disabled="1" sid="445241576665382">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="2858345405913288" type="Biter">
                             <param id="0" name="Object">Player_Box</param>

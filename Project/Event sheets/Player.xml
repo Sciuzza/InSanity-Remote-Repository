@@ -635,12 +635,15 @@
                                 <condition id="2" inverted="1" name="Is playing" sid="5853183643672253" type="Player_Frame">
                                     <param id="0" name="Animation">&quot;Dying&quot;</param>
                                 </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="1747068034706356" type="Player_Box">
+                                    <param id="0" name="Instance variable">Dash</param>
+                                </condition>
                             </conditions>
                             <actions />
                             <sub-events>
                                 <event-block sid="1159803885227963">
                                     <conditions>
-                                        <condition id="0" name="On collision with another object" sid="5042923902190254" type="Bat">
+                                        <condition id="0" name="On collision with another object" sid="5042923902190254" type="Biter">
                                             <param id="0" name="Object">Player_Frame</param>
                                         </condition>
                                     </conditions>
@@ -665,6 +668,25 @@
                                             <param id="2" name="Duration">1.0</param>
                                         </action>
                                         <action id="-9" name="Destroy" sid="7679250472132092" type="GunnerBullet" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="8358159829332526">
+                                    <conditions>
+                                        <condition id="0" name="On collision with another object" sid="1914965304523171" type="Player_Box">
+                                            <param id="0" name="Object">Gunner</param>
+                                        </condition>
+                                        <condition id="-7" name="Compare instance variable" sid="9452032247688507" type="Gunner">
+                                            <param id="0" name="Instance variable">Health</param>
+                                            <param id="1" name="Comparison">4</param>
+                                            <param id="2" name="Value">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Flash" id="0" name="Flash" sid="6213579961358523" type="Player_Frame">
+                                            <param id="0" name="&apos;On&apos; time">0.1</param>
+                                            <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                            <param id="2" name="Duration">1.0</param>
+                                        </action>
                                     </actions>
                                 </event-block>
                                 <event-block sid="9990283331384384">
@@ -1651,27 +1673,12 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="7667619080995293">
+                        <event-block sid="4555408132482951">
                             <conditions>
-                                <condition id="0" name="On collision with another object" sid="3660925021601931" type="Bat">
-                                    <param id="0" name="Object">Player_Frame</param>
-                                </condition>
+                                <condition behavior="Flash" id="1" name="On flash ended" sid="3329343093636056" type="Player_Frame" />
                             </conditions>
                             <actions>
-                                <action id="0" name="Call function" sid="991534402809256" type="Function">
-                                    <param id="0" name="Name">&quot;Hud Life&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="3343761710141409">
-                            <conditions>
-                                <condition id="0" name="On collision with another object" sid="3662484762901291" type="GunnerBullet">
-                                    <param id="0" name="Object">Player_Frame</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Call function" sid="9804168672908902" type="Function">
+                                <action id="0" name="Call function" sid="4971977559578619" type="Function">
                                     <param id="0" name="Name">&quot;Hud Life&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
@@ -2048,7 +2055,7 @@
                                 <condition id="1" name="Compare parameter" sid="8263490474674385" type="Function">
                                     <param id="0" name="Index">0</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
+                                    <param id="2" name="Value">2</param>
                                 </condition>
                                 <condition id="-14" name="Pick by unique ID" sid="2375827419966489" type="CheckPoint">
                                     <param id="0" name="Unique ID">260</param>
@@ -2202,7 +2209,7 @@
                                 <condition id="1" name="Compare parameter" sid="3099365278177844" type="Function">
                                     <param id="0" name="Index">0</param>
                                     <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">2</param>
+                                    <param id="2" name="Value">3</param>
                                 </condition>
                                 <condition id="-14" name="Pick by unique ID" sid="8764116958606661" type="CheckPoint">
                                     <param id="0" name="Unique ID">299</param>
@@ -2214,6 +2221,28 @@
                                     <param id="1" name="Y">CheckPoint.Y</param>
                                 </action>
                                 <action id="-10" name="Set value" sid="24973076352491" type="Player_Box">
+                                    <param id="0" name="Instance variable">Life</param>
+                                    <param id="1" name="Value">3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1887762521839125">
+                            <conditions>
+                                <condition id="1" name="Compare parameter" sid="5198489073167255" type="Function">
+                                    <param id="0" name="Index">0</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="-14" name="Pick by unique ID" sid="1470888823116356" type="CheckPoint">
+                                    <param id="0" name="Unique ID">2062</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="9902344515317644" type="Player_Box">
+                                    <param id="0" name="X">CheckPoint.X</param>
+                                    <param id="1" name="Y">CheckPoint.Y</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="4695243772870354" type="Player_Box">
                                     <param id="0" name="Instance variable">Life</param>
                                     <param id="1" name="Value">3</param>
                                 </action>

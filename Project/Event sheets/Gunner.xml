@@ -282,7 +282,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="7623824566276349">
+                <event-block disabled="1" sid="7623824566276349">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="336013405389577" type="GunnerBullet">
                             <param id="0" name="Object">Player_Box</param>
@@ -299,7 +299,7 @@
                         <action id="-9" name="Destroy" sid="701071719348313" type="GunnerBullet" />
                     </actions>
                 </event-block>
-                <event-block sid="235902930631623">
+                <event-block disabled="1" sid="235902930631623">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="1839306304513619" type="Player_Box">
                             <param id="0" name="Object">Gunner</param>

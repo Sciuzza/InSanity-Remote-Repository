@@ -7791,9 +7791,9 @@
         <event-sheet>Cutscene End Sheet.xml</event-sheet>
     </event-folder>
     <global-instances>
-        <global-instance type="Keyboard" uid="1686" />
-        <global-instance type="Mouse" uid="1687" />
-        <global-instance type="Audio" uid="1688">
+        <global-instance type="Keyboard" uid="2245" />
+        <global-instance type="Mouse" uid="2246" />
+        <global-instance type="Audio" uid="2247">
             <properties>
                 <timescale-audio>Off</timescale-audio>
                 <saveload>All</saveload>
@@ -7807,7 +7807,7 @@
                 <roll-off-factor>1</roll-off-factor>
             </properties>
         </global-instance>
-        <global-instance type="Function" uid="1696" />
+        <global-instance type="Function" uid="2248" />
     </global-instances>
     <sounds-folder>
         <sound-folder name="PlaceHolder Sounds">
