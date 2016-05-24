@@ -3,350 +3,6 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Bat</name>
     <events>
-        <event-group description="" sid="9650923057159053" title="Bat Movement">
-            <sub-events>
-                <event-block sid="5580558842532704">
-                    <conditions>
-                        <condition id="-2" name="On start of layout" sid="6352368464670603" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" sid="3139314661325952" type="Biter" />
-                    </actions>
-                </event-block>
-                <event-block sid="1765729256951184">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="731126628715008" type="Player_Box">
-                            <param id="0" name="Object">BatTrap</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Spawn another object" sid="9713901219042384" type="WayPoint1">
-                            <param id="0" name="Object">Biter</param>
-                            <param id="1" name="Layer">10</param>
-                            <param id="2" name="Image point">0</param>
-                        </action>
-                        <action id="-9" name="Destroy" sid="7576684411129526" type="BatTrap" />
-                        <action id="-3" name="Set position" sid="8700287966853999" type="Wall1">
-                            <param id="0" name="X">WayPoint1.X - 20</param>
-                            <param id="1" name="Y">600</param>
-                        </action>
-                        <action id="-3" name="Set position" sid="7848797510899476" type="Wall2">
-                            <param id="0" name="X">WayPoint8.X +20</param>
-                            <param id="1" name="Y">600</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <comment>Clockwise Movement</comment>
-                <event-block sid="7767149250320453">
-                    <conditions>
-                        <condition id="-6" name="Every X seconds" sid="839102602562924" type="System">
-                            <param id="0" name="Interval (seconds)">dt</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-4" name="Set position to another object" sid="2214922719875912" type="BiterBack">
-                            <param id="0" name="Object">Biter</param>
-                            <param id="1" name="Image point (optional)">1</param>
-                        </action>
-                        <action id="-8" name="Set angle" sid="5048315422582704" type="BiterBack">
-                            <param id="0" name="Angle">Biter.Angle</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block sid="4144518581825198">
-                            <conditions>
-                                <condition id="0" name="On collision with another object" sid="1508556723999576" type="Biter">
-                                    <param id="0" name="Object">WayPoint1</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Set value" sid="8364279149735442" type="Biter">
-                                    <param id="0" name="Instance variable">ID_Check</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action behavior="Bullet" id="5" name="Set enabled" sid="3342472828586391" type="Biter">
-                                    <param id="0" name="State">0</param>
-                                </action>
-                                <action id="-22" name="Set angle toward position" sid="8066211431399505" type="Biter">
-                                    <param id="0" name="X">WayPoint2.X</param>
-                                    <param id="1" name="Y">WayPoint2.Y</param>
-                                </action>
-                                <action id="-16" name="Wait" sid="5607737468654024" type="System">
-                                    <param id="0" name="Seconds">2</param>
-                                </action>
-                                <action behavior="Bullet" id="5" name="Set enabled" sid="4636478433065781" type="Biter">
-                                    <param id="0" name="State">1</param>
-                                </action>
-                                <action id="7" name="Set mirrored" sid="4874538894886958" type="Biter">
-                                    <param id="0" name="State">0</param>
-                                </action>
-                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="2887154398434186" type="Biter">
-                                    <param id="0" name="Angle">angle(Biter.X,Biter.Y,WayPoint2.X,WayPoint2.Y)</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="9344079692188987" type="Biter">
-                                    <param id="0" name="Instance variable">ShootCheck</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="511746953691496">
-                            <conditions>
-                                <condition id="0" name="On collision with another object" sid="7422344400744983" type="Biter">
-                                    <param id="0" name="Object">WayPoint2</param>
-                                </condition>
-                                <condition id="-7" name="Compare instance variable" sid="5103516250146934" type="Biter">
-                                    <param id="0" name="Instance variable">ID_Check</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="7417477479133259" type="Biter">
-                                    <param id="0" name="Angle">angle(Biter.X,Biter.Y,WayPoint3.X,WayPoint3.Y)</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="7686858334441093" type="Biter">
-                                    <param id="0" name="Instance variable">ShootCheck</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="4064342722123063">
-                            <conditions>
-                                <condition id="0" name="On collision with another object" sid="1410976714451891" type="Biter">
-                                    <param id="0" name="Object">WayPoint3</param>
-                                </condition>
-                                <condition id="-7" name="Compare instance variable" sid="1751244242687545" type="Biter">
-                                    <param id="0" name="Instance variable">ID_Check</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="8157644888144059" type="Biter">
-                                    <param id="0" name="Angle">angle(Biter.X,Biter.Y,WayPoint4.X,WayPoint4.Y)</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="1842262483694577">
-                            <conditions>
-                                <condition id="0" name="On collision with another object" sid="8945078474700734" type="Biter">
-                                    <param id="0" name="Object">WayPoint4</param>
-                                </condition>
-                                <condition id="-7" name="Compare instance variable" sid="9896136149241457" type="Biter">
-                                    <param id="0" name="Instance variable">ID_Check</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="9036949675376873" type="Biter">
-                                    <param id="0" name="Angle">angle(Biter.X,Biter.Y,WayPoint5.X,WayPoint5.Y)</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="4127221571333544">
-                            <conditions>
-                                <condition id="0" name="On collision with another object" sid="2512824700872169" type="Biter">
-                                    <param id="0" name="Object">WayPoint5</param>
-                                </condition>
-                                <condition id="-7" name="Compare instance variable" sid="561699621808216" type="Biter">
-                                    <param id="0" name="Instance variable">ID_Check</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="8706578172716457" type="Biter">
-                                    <param id="0" name="Angle">angle(Biter.X,Biter.Y,WayPoint6.X,WayPoint6.Y)</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="4164515375299714">
-                            <conditions>
-                                <condition id="0" name="On collision with another object" sid="5016135114708516" type="Biter">
-                                    <param id="0" name="Object">WayPoint6</param>
-                                </condition>
-                                <condition id="-7" name="Compare instance variable" sid="7853980473630928" type="Biter">
-                                    <param id="0" name="Instance variable">ID_Check</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="3300523179327188" type="Biter">
-                                    <param id="0" name="Angle">angle(Biter.X,Biter.Y,WayPoint7.X,WayPoint7.Y)</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="511312226346023">
-                            <conditions>
-                                <condition id="0" name="On collision with another object" sid="5823098394043347" type="Biter">
-                                    <param id="0" name="Object">WayPoint7</param>
-                                </condition>
-                                <condition id="-7" name="Compare instance variable" sid="7502025724672298" type="Biter">
-                                    <param id="0" name="Instance variable">ID_Check</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="7418455875712514" type="Biter">
-                                    <param id="0" name="Angle">angle(Biter.X,Biter.Y,WayPoint8.X,WayPoint8.Y)</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="267893714516381" type="Biter">
-                                    <param id="0" name="Instance variable">ShootCheck</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="7552577818058747">
-                            <conditions>
-                                <condition id="0" name="On collision with another object" sid="8605166726277747" type="Biter">
-                                    <param id="0" name="Object">WayPoint8</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="3443473425033426" type="Biter">
-                                    <param id="0" name="Angle">angle(Biter.X,Biter.Y,WayPoint7.X,WayPoint7.Y)</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="7462822017938021" type="Biter">
-                                    <param id="0" name="Instance variable">ID_Check</param>
-                                    <param id="1" name="Value">2</param>
-                                </action>
-                                <action behavior="Bullet" id="5" name="Set enabled" sid="9252486467776873" type="Biter">
-                                    <param id="0" name="State">0</param>
-                                </action>
-                                <action id="-22" name="Set angle toward position" sid="3058129589447963" type="Biter">
-                                    <param id="0" name="X">WayPoint7.X</param>
-                                    <param id="1" name="Y">WayPoint7.Y</param>
-                                </action>
-                                <action id="-16" name="Wait" sid="1630181445423165" type="System">
-                                    <param id="0" name="Seconds">2</param>
-                                </action>
-                                <action behavior="Bullet" id="5" name="Set enabled" sid="9708138400378998" type="Biter">
-                                    <param id="0" name="State">1</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="7951434891152049" type="Biter">
-                                    <param id="0" name="Instance variable">ShootCheck</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <comment>Counter-clockwise movement</comment>
-                        <event-block sid="9838062709025927">
-                            <conditions>
-                                <condition id="0" name="On collision with another object" sid="5194842639373681" type="Biter">
-                                    <param id="0" name="Object">WayPoint7</param>
-                                </condition>
-                                <condition id="-7" name="Compare instance variable" sid="2643318633594376" type="Biter">
-                                    <param id="0" name="Instance variable">ID_Check</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">2</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="1798735333628792" type="Biter">
-                                    <param id="0" name="Angle">angle(Biter.X,Biter.Y,WayPoint6.X,WayPoint6.Y)</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="914413571516795" type="Biter">
-                                    <param id="0" name="Instance variable">ShootCheck</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="603923929157375">
-                            <conditions>
-                                <condition id="0" name="On collision with another object" sid="2686304142816861" type="Biter">
-                                    <param id="0" name="Object">WayPoint6</param>
-                                </condition>
-                                <condition id="-7" name="Compare instance variable" sid="4891889471266372" type="Biter">
-                                    <param id="0" name="Instance variable">ID_Check</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">2</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="8339354220738878" type="Biter">
-                                    <param id="0" name="Angle">angle(Biter.X,Biter.Y,WayPoint5.X,WayPoint5.Y)</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="3967291117341494">
-                            <conditions>
-                                <condition id="0" name="On collision with another object" sid="342063260103764" type="Biter">
-                                    <param id="0" name="Object">WayPoint5</param>
-                                </condition>
-                                <condition id="-7" name="Compare instance variable" sid="7099239845096297" type="Biter">
-                                    <param id="0" name="Instance variable">ID_Check</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">2</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="6383686874338134" type="Biter">
-                                    <param id="0" name="Angle">angle(Biter.X,Biter.Y,WayPoint4.X,WayPoint4.Y)</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="5175260171088228">
-                            <conditions>
-                                <condition id="0" name="On collision with another object" sid="9709323148759401" type="Biter">
-                                    <param id="0" name="Object">WayPoint4</param>
-                                </condition>
-                                <condition id="-7" name="Compare instance variable" sid="2817176518128503" type="Biter">
-                                    <param id="0" name="Instance variable">ID_Check</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">2</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="326027770433724" type="Biter">
-                                    <param id="0" name="Angle">angle(Biter.X,Biter.Y,WayPoint3.X,WayPoint3.Y)</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="2472197933947656">
-                            <conditions>
-                                <condition id="0" name="On collision with another object" sid="2717817810252889" type="Biter">
-                                    <param id="0" name="Object">WayPoint3</param>
-                                </condition>
-                                <condition id="-7" name="Compare instance variable" sid="228876230967864" type="Biter">
-                                    <param id="0" name="Instance variable">ID_Check</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">2</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="396677460190483" type="Biter">
-                                    <param id="0" name="Angle">angle(Biter.X,Biter.Y,WayPoint2.X,WayPoint2.Y)</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="9730015698451166">
-                            <conditions>
-                                <condition id="0" name="On collision with another object" sid="3442283824378061" type="Biter">
-                                    <param id="0" name="Object">WayPoint2</param>
-                                </condition>
-                                <condition id="-7" name="Compare instance variable" sid="1269473950489824" type="Biter">
-                                    <param id="0" name="Instance variable">ID_Check</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">2</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="9492326350399019" type="Biter">
-                                    <param id="0" name="Angle">angle(Biter.X,Biter.Y,WayPoint1.X,WayPoint1.Y)</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="5868058306333212" type="Biter">
-                                    <param id="0" name="Instance variable">ShootCheck</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-            </sub-events>
-        </event-group>
         <event-group description="" sid="7518720208083559" title="Bat Damage">
             <sub-events>
                 <event-block sid="445241576665382">
@@ -369,6 +25,11 @@
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="358031409516726" type="Bullet_1_Player">
                             <param id="0" name="Object">BiterBack</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="8057591298106572" type="Biter">
+                            <param id="0" name="Instance variable">ShootCheck</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -399,46 +60,1064 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="6660313343086146" type="Biter" />
-                        <action id="-9" name="Destroy" sid="3499053320114408" type="WayPoint1" />
-                        <action id="-9" name="Destroy" sid="517799805237675" type="WayPoint2" />
-                        <action id="-9" name="Destroy" sid="2886644919058491" type="WayPoint3" />
-                        <action id="-9" name="Destroy" sid="2316265057310538" type="WayPoint4" />
-                        <action id="-9" name="Destroy" sid="2536146069421833" type="WayPoint5" />
-                        <action id="-9" name="Destroy" sid="8322646233484183" type="WayPoint6" />
-                        <action id="-9" name="Destroy" sid="9493556359035219" type="WayPoint7" />
-                        <action id="-9" name="Destroy" sid="8558653755742688" type="WayPoint8" />
+                        <action id="-9" name="Destroy" sid="3499053320114408" type="WayPoint1_1" />
+                        <action id="-9" name="Destroy" sid="517799805237675" type="WayPoint1_2" />
+                        <action id="-9" name="Destroy" sid="2886644919058491" type="WayPoint1_3" />
+                        <action id="-9" name="Destroy" sid="2316265057310538" type="WayPoint1_4" />
+                        <action id="-9" name="Destroy" sid="2536146069421833" type="WayPoint1_5" />
+                        <action id="-9" name="Destroy" sid="8322646233484183" type="WayPoint1_6" />
+                        <action id="-9" name="Destroy" sid="9493556359035219" type="WayPoint1_7" />
+                        <action id="-9" name="Destroy" sid="8558653755742688" type="WayPoint1_8" />
                         <action id="-9" name="Destroy" sid="3895640401271151" type="BiterBack" />
-                        <action id="-9" name="Destroy" sid="4869091410869618" type="Wall1" />
-                        <action id="-9" name="Destroy" sid="6710251526759923" type="Wall2" />
+                        <action disabled="1" id="-9" name="Destroy" sid="4869091410869618" type="Wall1" />
+                        <action disabled="1" id="-9" name="Destroy" sid="6710251526759923" type="Wall2" />
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="6511049368073275">
-            <conditions>
-                <condition id="-1" name="Compare X" sid="6729243930603894" type="Wall2">
-                    <param id="0" name="Comparison">4</param>
-                    <param id="1" name="X co-ordinate">Player_Box.X</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Solid" id="0" name="Set enabled" sid="7761564053618615" type="Wall2">
-                    <param id="0" name="State">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="5699507413144687">
-            <conditions>
-                <condition id="-1" name="Compare X" sid="7957620280042989" type="Player_Box">
-                    <param id="0" name="Comparison">4</param>
-                    <param id="1" name="X co-ordinate">Wall2.X + 10</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action behavior="Solid" id="0" name="Set enabled" sid="6910250187026482" type="Wall2">
-                    <param id="0" name="State">1</param>
-                </action>
-            </actions>
-        </event-block>
+        <event-group description="" sid="9650923057159053" title="Bat Movement 1">
+            <sub-events>
+                <event-block sid="5580558842532704">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="6352368464670603" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="3139314661325952" type="Biter" />
+                        <action id="-9" name="Destroy" sid="4139261542110683" type="BiterBack" />
+                    </actions>
+                </event-block>
+                <event-block sid="1765729256951184">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="731126628715008" type="Player_Box">
+                            <param id="0" name="Object">BatTrap1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="9713901219042384" type="WayPoint1_1">
+                            <param id="0" name="Object">Biter</param>
+                            <param id="1" name="Layer">7</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="6253899282430794" type="Biter">
+                            <param id="0" name="Object">BiterBack</param>
+                            <param id="1" name="Layer">7</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="7576684411129526" type="BatTrap1" />
+                    </actions>
+                </event-block>
+                <comment>Clockwise Movement</comment>
+                <event-block sid="7767149250320453">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="839102602562924" type="System">
+                            <param id="0" name="Interval (seconds)">dt</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="2214922719875912" type="BiterBack">
+                            <param id="0" name="Object">Biter</param>
+                            <param id="1" name="Image point (optional)">1</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="5048315422582704" type="BiterBack">
+                            <param id="0" name="Angle">Biter.Angle</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="4144518581825198">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="1508556723999576" type="Biter">
+                                    <param id="0" name="Object">WayPoint1_1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="8364279149735442" type="Biter">
+                                    <param id="0" name="Instance variable">ID_Check</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action behavior="Bullet" id="5" name="Set enabled" sid="3342472828586391" type="Biter">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="-22" name="Set angle toward position" sid="8066211431399505" type="Biter">
+                                    <param id="0" name="X">WayPoint1_2.X</param>
+                                    <param id="1" name="Y">WayPoint1_2.Y</param>
+                                </action>
+                                <action id="8" name="Set flipped" sid="5524207808093442" type="Biter">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="7" name="Set mirrored" sid="4874538894886958" type="Biter">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="5607737468654024" type="System">
+                                    <param id="0" name="Seconds">2</param>
+                                </action>
+                                <action behavior="Bullet" id="5" name="Set enabled" sid="4636478433065781" type="Biter">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="2887154398434186" type="Biter">
+                                    <param id="0" name="Angle">angle(Biter.X,Biter.Y,WayPoint1_2.X,WayPoint1_2.Y)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="9344079692188987" type="Biter">
+                                    <param id="0" name="Instance variable">ShootCheck</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="511746953691496">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="7422344400744983" type="Biter">
+                                    <param id="0" name="Object">WayPoint1_2</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="5103516250146934" type="Biter">
+                                    <param id="0" name="Instance variable">ID_Check</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="7417477479133259" type="Biter">
+                                    <param id="0" name="Angle">angle(Biter.X,Biter.Y,WayPoint1_3.X,WayPoint1_3.Y)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="7686858334441093" type="Biter">
+                                    <param id="0" name="Instance variable">ShootCheck</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4064342722123063">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="1410976714451891" type="Biter">
+                                    <param id="0" name="Object">WayPoint1_3</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="1751244242687545" type="Biter">
+                                    <param id="0" name="Instance variable">ID_Check</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="8157644888144059" type="Biter">
+                                    <param id="0" name="Angle">angle(Biter.X,Biter.Y,WayPoint1_4.X,WayPoint1_4.Y)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1842262483694577">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="8945078474700734" type="Biter">
+                                    <param id="0" name="Object">WayPoint1_4</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="9896136149241457" type="Biter">
+                                    <param id="0" name="Instance variable">ID_Check</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="9036949675376873" type="Biter">
+                                    <param id="0" name="Angle">angle(Biter.X,Biter.Y,WayPoint1_5.X,WayPoint1_5.Y)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4127221571333544">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="2512824700872169" type="Biter">
+                                    <param id="0" name="Object">WayPoint1_5</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="561699621808216" type="Biter">
+                                    <param id="0" name="Instance variable">ID_Check</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="8706578172716457" type="Biter">
+                                    <param id="0" name="Angle">angle(Biter.X,Biter.Y,WayPoint1_6.X,WayPoint1_6.Y)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4164515375299714">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="5016135114708516" type="Biter">
+                                    <param id="0" name="Object">WayPoint1_6</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="7853980473630928" type="Biter">
+                                    <param id="0" name="Instance variable">ID_Check</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="3300523179327188" type="Biter">
+                                    <param id="0" name="Angle">angle(Biter.X,Biter.Y,WayPoint1_7.X,WayPoint1_7.Y)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="511312226346023">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="5823098394043347" type="Biter">
+                                    <param id="0" name="Object">WayPoint1_7</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="7502025724672298" type="Biter">
+                                    <param id="0" name="Instance variable">ID_Check</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="7418455875712514" type="Biter">
+                                    <param id="0" name="Angle">angle(Biter.X,Biter.Y,WayPoint1_8.X,WayPoint1_8.Y)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="267893714516381" type="Biter">
+                                    <param id="0" name="Instance variable">ShootCheck</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7552577818058747">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="8605166726277747" type="Biter">
+                                    <param id="0" name="Object">WayPoint1_8</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="3443473425033426" type="Biter">
+                                    <param id="0" name="Angle">angle(Biter.X,Biter.Y,WayPoint1_7.X,WayPoint1_7.Y)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="7462822017938021" type="Biter">
+                                    <param id="0" name="Instance variable">ID_Check</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                                <action behavior="Bullet" id="5" name="Set enabled" sid="9252486467776873" type="Biter">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="-22" name="Set angle toward position" sid="3058129589447963" type="Biter">
+                                    <param id="0" name="X">WayPoint1_7.X</param>
+                                    <param id="1" name="Y">WayPoint1_7.Y</param>
+                                </action>
+                                <action id="8" name="Set flipped" sid="4870519105128192" type="Biter">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="1630181445423165" type="System">
+                                    <param id="0" name="Seconds">2</param>
+                                </action>
+                                <action behavior="Bullet" id="5" name="Set enabled" sid="9708138400378998" type="Biter">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="7951434891152049" type="Biter">
+                                    <param id="0" name="Instance variable">ShootCheck</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Counter-clockwise movement</comment>
+                        <event-block sid="9838062709025927">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="5194842639373681" type="Biter">
+                                    <param id="0" name="Object">WayPoint1_7</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="2643318633594376" type="Biter">
+                                    <param id="0" name="Instance variable">ID_Check</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="1798735333628792" type="Biter">
+                                    <param id="0" name="Angle">angle(Biter.X,Biter.Y,WayPoint1_6.X,WayPoint1_6.Y)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="914413571516795" type="Biter">
+                                    <param id="0" name="Instance variable">ShootCheck</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="603923929157375">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="2686304142816861" type="Biter">
+                                    <param id="0" name="Object">WayPoint1_6</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="4891889471266372" type="Biter">
+                                    <param id="0" name="Instance variable">ID_Check</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="8339354220738878" type="Biter">
+                                    <param id="0" name="Angle">angle(Biter.X,Biter.Y,WayPoint1_5.X,WayPoint1_5.Y)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3967291117341494">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="342063260103764" type="Biter">
+                                    <param id="0" name="Object">WayPoint1_5</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="7099239845096297" type="Biter">
+                                    <param id="0" name="Instance variable">ID_Check</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="6383686874338134" type="Biter">
+                                    <param id="0" name="Angle">angle(Biter.X,Biter.Y,WayPoint1_4.X,WayPoint1_4.Y)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5175260171088228">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="9709323148759401" type="Biter">
+                                    <param id="0" name="Object">WayPoint1_4</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="2817176518128503" type="Biter">
+                                    <param id="0" name="Instance variable">ID_Check</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="326027770433724" type="Biter">
+                                    <param id="0" name="Angle">angle(Biter.X,Biter.Y,WayPoint1_3.X,WayPoint1_3.Y)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2472197933947656">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="2717817810252889" type="Biter">
+                                    <param id="0" name="Object">WayPoint1_3</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="228876230967864" type="Biter">
+                                    <param id="0" name="Instance variable">ID_Check</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="396677460190483" type="Biter">
+                                    <param id="0" name="Angle">angle(Biter.X,Biter.Y,WayPoint1_2.X,WayPoint1_2.Y)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9730015698451166">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="3442283824378061" type="Biter">
+                                    <param id="0" name="Object">WayPoint1_2</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="1269473950489824" type="Biter">
+                                    <param id="0" name="Instance variable">ID_Check</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="9492326350399019" type="Biter">
+                                    <param id="0" name="Angle">angle(Biter.X,Biter.Y,WayPoint1_1.X,WayPoint1_1.Y)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="5868058306333212" type="Biter">
+                                    <param id="0" name="Instance variable">ShootCheck</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="4860500093248819" title="Bat Movement 2">
+            <sub-events>
+                <event-block sid="5580558842532704">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="6352368464670603" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="3139314661325952" type="Biter" />
+                        <action id="-9" name="Destroy" sid="4139261542110683" type="BiterBack" />
+                    </actions>
+                </event-block>
+                <event-block sid="1765729256951184">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="731126628715008" type="Player_Box">
+                            <param id="0" name="Object">BatTrap2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="9713901219042384" type="WayPoint2_1">
+                            <param id="0" name="Object">Biter</param>
+                            <param id="1" name="Layer">7</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="6253899282430794" type="Biter">
+                            <param id="0" name="Object">BiterBack</param>
+                            <param id="1" name="Layer">7</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="7576684411129526" type="BatTrap2" />
+                    </actions>
+                </event-block>
+                <comment>Clockwise Movement</comment>
+                <event-block sid="7767149250320453">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="839102602562924" type="System">
+                            <param id="0" name="Interval (seconds)">dt</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="2214922719875912" type="BiterBack">
+                            <param id="0" name="Object">Biter</param>
+                            <param id="1" name="Image point (optional)">1</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="5048315422582704" type="BiterBack">
+                            <param id="0" name="Angle">Biter.Angle</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="4144518581825198">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="1508556723999576" type="Biter">
+                                    <param id="0" name="Object">WayPoint2_1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="8364279149735442" type="Biter">
+                                    <param id="0" name="Instance variable">ID_Check</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action behavior="Bullet" id="5" name="Set enabled" sid="3342472828586391" type="Biter">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="-22" name="Set angle toward position" sid="8066211431399505" type="Biter">
+                                    <param id="0" name="X">WayPoint2_2.X</param>
+                                    <param id="1" name="Y">WayPoint2_2.Y</param>
+                                </action>
+                                <action id="8" name="Set flipped" sid="5524207808093442" type="Biter">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="7" name="Set mirrored" sid="4874538894886958" type="Biter">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="5607737468654024" type="System">
+                                    <param id="0" name="Seconds">2</param>
+                                </action>
+                                <action behavior="Bullet" id="5" name="Set enabled" sid="4636478433065781" type="Biter">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="2887154398434186" type="Biter">
+                                    <param id="0" name="Angle">angle(Biter.X,Biter.Y,WayPoint2_2.X,WayPoint2_2.Y)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="9344079692188987" type="Biter">
+                                    <param id="0" name="Instance variable">ShootCheck</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="511746953691496">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="7422344400744983" type="Biter">
+                                    <param id="0" name="Object">WayPoint2_2</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="5103516250146934" type="Biter">
+                                    <param id="0" name="Instance variable">ID_Check</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="7417477479133259" type="Biter">
+                                    <param id="0" name="Angle">angle(Biter.X,Biter.Y,WayPoint2_3.X,WayPoint2_3.Y)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="7686858334441093" type="Biter">
+                                    <param id="0" name="Instance variable">ShootCheck</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4064342722123063">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="1410976714451891" type="Biter">
+                                    <param id="0" name="Object">WayPoint2_3</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="1751244242687545" type="Biter">
+                                    <param id="0" name="Instance variable">ID_Check</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="8157644888144059" type="Biter">
+                                    <param id="0" name="Angle">angle(Biter.X,Biter.Y,WayPoint2_4.X,WayPoint2_4.Y)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1842262483694577">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="8945078474700734" type="Biter">
+                                    <param id="0" name="Object">WayPoint2_4</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="9896136149241457" type="Biter">
+                                    <param id="0" name="Instance variable">ID_Check</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="9036949675376873" type="Biter">
+                                    <param id="0" name="Angle">angle(Biter.X,Biter.Y,WayPoint2_5.X,WayPoint2_5.Y)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4127221571333544">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="2512824700872169" type="Biter">
+                                    <param id="0" name="Object">WayPoint2_5</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="561699621808216" type="Biter">
+                                    <param id="0" name="Instance variable">ID_Check</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="8706578172716457" type="Biter">
+                                    <param id="0" name="Angle">angle(Biter.X,Biter.Y,WayPoint2_6.X,WayPoint2_6.Y)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4164515375299714">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="5016135114708516" type="Biter">
+                                    <param id="0" name="Object">WayPoint2_6</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="7853980473630928" type="Biter">
+                                    <param id="0" name="Instance variable">ID_Check</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="3300523179327188" type="Biter">
+                                    <param id="0" name="Angle">angle(Biter.X,Biter.Y,WayPoint2_7.X,WayPoint2_7.Y)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="511312226346023">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="5823098394043347" type="Biter">
+                                    <param id="0" name="Object">WayPoint2_7</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="7502025724672298" type="Biter">
+                                    <param id="0" name="Instance variable">ID_Check</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="7418455875712514" type="Biter">
+                                    <param id="0" name="Angle">angle(Biter.X,Biter.Y,WayPoint2_8.X,WayPoint2_8.Y)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="267893714516381" type="Biter">
+                                    <param id="0" name="Instance variable">ShootCheck</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7552577818058747">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="8605166726277747" type="Biter">
+                                    <param id="0" name="Object">WayPoint2_8</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="3443473425033426" type="Biter">
+                                    <param id="0" name="Angle">angle(Biter.X,Biter.Y,WayPoint2_7.X,WayPoint2_7.Y)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="7462822017938021" type="Biter">
+                                    <param id="0" name="Instance variable">ID_Check</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                                <action behavior="Bullet" id="5" name="Set enabled" sid="9252486467776873" type="Biter">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="-22" name="Set angle toward position" sid="3058129589447963" type="Biter">
+                                    <param id="0" name="X">WayPoint2_7.X</param>
+                                    <param id="1" name="Y">WayPoint2_7.Y</param>
+                                </action>
+                                <action id="8" name="Set flipped" sid="4870519105128192" type="Biter">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="1630181445423165" type="System">
+                                    <param id="0" name="Seconds">2</param>
+                                </action>
+                                <action behavior="Bullet" id="5" name="Set enabled" sid="9708138400378998" type="Biter">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="7951434891152049" type="Biter">
+                                    <param id="0" name="Instance variable">ShootCheck</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Counter-clockwise movement</comment>
+                        <event-block sid="9838062709025927">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="5194842639373681" type="Biter">
+                                    <param id="0" name="Object">WayPoint2_7</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="2643318633594376" type="Biter">
+                                    <param id="0" name="Instance variable">ID_Check</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="1798735333628792" type="Biter">
+                                    <param id="0" name="Angle">angle(Biter.X,Biter.Y,WayPoint2_6.X,WayPoint2_6.Y)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="914413571516795" type="Biter">
+                                    <param id="0" name="Instance variable">ShootCheck</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="603923929157375">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="2686304142816861" type="Biter">
+                                    <param id="0" name="Object">WayPoint2_6</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="4891889471266372" type="Biter">
+                                    <param id="0" name="Instance variable">ID_Check</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="8339354220738878" type="Biter">
+                                    <param id="0" name="Angle">angle(Biter.X,Biter.Y,WayPoint2_5.X,WayPoint2_5.Y)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3967291117341494">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="342063260103764" type="Biter">
+                                    <param id="0" name="Object">WayPoint2_5</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="7099239845096297" type="Biter">
+                                    <param id="0" name="Instance variable">ID_Check</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="6383686874338134" type="Biter">
+                                    <param id="0" name="Angle">angle(Biter.X,Biter.Y,WayPoint2_4.X,WayPoint2_4.Y)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5175260171088228">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="9709323148759401" type="Biter">
+                                    <param id="0" name="Object">WayPoint2_4</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="2817176518128503" type="Biter">
+                                    <param id="0" name="Instance variable">ID_Check</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="326027770433724" type="Biter">
+                                    <param id="0" name="Angle">angle(Biter.X,Biter.Y,WayPoint2_3.X,WayPoint2_3.Y)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2472197933947656">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="2717817810252889" type="Biter">
+                                    <param id="0" name="Object">WayPoint2_3</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="228876230967864" type="Biter">
+                                    <param id="0" name="Instance variable">ID_Check</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="396677460190483" type="Biter">
+                                    <param id="0" name="Angle">angle(Biter.X,Biter.Y,WayPoint2_2.X,WayPoint2_2.Y)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9730015698451166">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="3442283824378061" type="Biter">
+                                    <param id="0" name="Object">WayPoint2_2</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="1269473950489824" type="Biter">
+                                    <param id="0" name="Instance variable">ID_Check</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="9492326350399019" type="Biter">
+                                    <param id="0" name="Angle">angle(Biter.X,Biter.Y,WayPoint2_1.X,WayPoint2_1.Y)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="5868058306333212" type="Biter">
+                                    <param id="0" name="Instance variable">ShootCheck</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="4022594737192412" title="Bat Movement 3">
+            <sub-events>
+                <event-block sid="5580558842532704">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="6352368464670603" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="3139314661325952" type="Biter" />
+                        <action id="-9" name="Destroy" sid="4139261542110683" type="BiterBack" />
+                    </actions>
+                </event-block>
+                <event-block sid="1765729256951184">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="731126628715008" type="Player_Box">
+                            <param id="0" name="Object">BatTrap3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="9713901219042384" type="WayPoint3_1">
+                            <param id="0" name="Object">Biter</param>
+                            <param id="1" name="Layer">7</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="6253899282430794" type="Biter">
+                            <param id="0" name="Object">BiterBack</param>
+                            <param id="1" name="Layer">7</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="7576684411129526" type="BatTrap3" />
+                    </actions>
+                </event-block>
+                <comment>Clockwise Movement</comment>
+                <event-block sid="7767149250320453">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="839102602562924" type="System">
+                            <param id="0" name="Interval (seconds)">dt</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-4" name="Set position to another object" sid="2214922719875912" type="BiterBack">
+                            <param id="0" name="Object">Biter</param>
+                            <param id="1" name="Image point (optional)">1</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="5048315422582704" type="BiterBack">
+                            <param id="0" name="Angle">Biter.Angle</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="4144518581825198">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="1508556723999576" type="Biter">
+                                    <param id="0" name="Object">WayPoint3_1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="8364279149735442" type="Biter">
+                                    <param id="0" name="Instance variable">ID_Check</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action behavior="Bullet" id="5" name="Set enabled" sid="3342472828586391" type="Biter">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="-22" name="Set angle toward position" sid="8066211431399505" type="Biter">
+                                    <param id="0" name="X">WayPoint3_2.X</param>
+                                    <param id="1" name="Y">WayPoint3_2.Y</param>
+                                </action>
+                                <action id="8" name="Set flipped" sid="5524207808093442" type="Biter">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="7" name="Set mirrored" sid="4874538894886958" type="Biter">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="5607737468654024" type="System">
+                                    <param id="0" name="Seconds">2</param>
+                                </action>
+                                <action behavior="Bullet" id="5" name="Set enabled" sid="4636478433065781" type="Biter">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="2887154398434186" type="Biter">
+                                    <param id="0" name="Angle">angle(Biter.X,Biter.Y,WayPoint3_2.X,WayPoint3_2.Y)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="9344079692188987" type="Biter">
+                                    <param id="0" name="Instance variable">ShootCheck</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="511746953691496">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="7422344400744983" type="Biter">
+                                    <param id="0" name="Object">WayPoint3_2</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="5103516250146934" type="Biter">
+                                    <param id="0" name="Instance variable">ID_Check</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="7417477479133259" type="Biter">
+                                    <param id="0" name="Angle">angle(Biter.X,Biter.Y,WayPoint3_3.X,WayPoint3_3.Y)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="7686858334441093" type="Biter">
+                                    <param id="0" name="Instance variable">ShootCheck</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4064342722123063">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="1410976714451891" type="Biter">
+                                    <param id="0" name="Object">WayPoint3_3</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="1751244242687545" type="Biter">
+                                    <param id="0" name="Instance variable">ID_Check</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="8157644888144059" type="Biter">
+                                    <param id="0" name="Angle">angle(Biter.X,Biter.Y,WayPoint3_4.X,WayPoint3_4.Y)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1842262483694577">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="8945078474700734" type="Biter">
+                                    <param id="0" name="Object">WayPoint3_4</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="9896136149241457" type="Biter">
+                                    <param id="0" name="Instance variable">ID_Check</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="9036949675376873" type="Biter">
+                                    <param id="0" name="Angle">angle(Biter.X,Biter.Y,WayPoint3_5.X,WayPoint3_5.Y)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4127221571333544">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="2512824700872169" type="Biter">
+                                    <param id="0" name="Object">WayPoint3_5</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="561699621808216" type="Biter">
+                                    <param id="0" name="Instance variable">ID_Check</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="8706578172716457" type="Biter">
+                                    <param id="0" name="Angle">angle(Biter.X,Biter.Y,WayPoint3_6.X,WayPoint3_6.Y)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="4164515375299714">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="5016135114708516" type="Biter">
+                                    <param id="0" name="Object">WayPoint3_6</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="7853980473630928" type="Biter">
+                                    <param id="0" name="Instance variable">ID_Check</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="3300523179327188" type="Biter">
+                                    <param id="0" name="Angle">angle(Biter.X,Biter.Y,WayPoint3_7.X,WayPoint3_7.Y)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="511312226346023">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="5823098394043347" type="Biter">
+                                    <param id="0" name="Object">WayPoint3_7</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="7502025724672298" type="Biter">
+                                    <param id="0" name="Instance variable">ID_Check</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="7418455875712514" type="Biter">
+                                    <param id="0" name="Angle">angle(Biter.X,Biter.Y,WayPoint3_8.X,WayPoint3_8.Y)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="267893714516381" type="Biter">
+                                    <param id="0" name="Instance variable">ShootCheck</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="7552577818058747">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="8605166726277747" type="Biter">
+                                    <param id="0" name="Object">WayPoint3_8</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="3443473425033426" type="Biter">
+                                    <param id="0" name="Angle">angle(Biter.X,Biter.Y,WayPoint3_7.X,WayPoint3_7.Y)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="7462822017938021" type="Biter">
+                                    <param id="0" name="Instance variable">ID_Check</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                                <action behavior="Bullet" id="5" name="Set enabled" sid="9252486467776873" type="Biter">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action id="-22" name="Set angle toward position" sid="3058129589447963" type="Biter">
+                                    <param id="0" name="X">WayPoint3_7.X</param>
+                                    <param id="1" name="Y">WayPoint3_7.Y</param>
+                                </action>
+                                <action id="8" name="Set flipped" sid="4870519105128192" type="Biter">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="1630181445423165" type="System">
+                                    <param id="0" name="Seconds">2</param>
+                                </action>
+                                <action behavior="Bullet" id="5" name="Set enabled" sid="9708138400378998" type="Biter">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="7951434891152049" type="Biter">
+                                    <param id="0" name="Instance variable">ShootCheck</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <comment>Counter-clockwise movement</comment>
+                        <event-block sid="9838062709025927">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="5194842639373681" type="Biter">
+                                    <param id="0" name="Object">WayPoint3_7</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="2643318633594376" type="Biter">
+                                    <param id="0" name="Instance variable">ID_Check</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="1798735333628792" type="Biter">
+                                    <param id="0" name="Angle">angle(Biter.X,Biter.Y,WayPoint3_6.X,WayPoint3_6.Y)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="914413571516795" type="Biter">
+                                    <param id="0" name="Instance variable">ShootCheck</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="603923929157375">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="2686304142816861" type="Biter">
+                                    <param id="0" name="Object">WayPoint3_6</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="4891889471266372" type="Biter">
+                                    <param id="0" name="Instance variable">ID_Check</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="8339354220738878" type="Biter">
+                                    <param id="0" name="Angle">angle(Biter.X,Biter.Y,WayPoint3_5.X,WayPoint3_5.Y)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3967291117341494">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="342063260103764" type="Biter">
+                                    <param id="0" name="Object">WayPoint3_5</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="7099239845096297" type="Biter">
+                                    <param id="0" name="Instance variable">ID_Check</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="6383686874338134" type="Biter">
+                                    <param id="0" name="Angle">angle(Biter.X,Biter.Y,WayPoint3_4.X,WayPoint3_4.Y)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="5175260171088228">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="9709323148759401" type="Biter">
+                                    <param id="0" name="Object">WayPoint3_4</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="2817176518128503" type="Biter">
+                                    <param id="0" name="Instance variable">ID_Check</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="326027770433724" type="Biter">
+                                    <param id="0" name="Angle">angle(Biter.X,Biter.Y,WayPoint3_3.X,WayPoint3_3.Y)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2472197933947656">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="2717817810252889" type="Biter">
+                                    <param id="0" name="Object">WayPoint3_3</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="228876230967864" type="Biter">
+                                    <param id="0" name="Instance variable">ID_Check</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="396677460190483" type="Biter">
+                                    <param id="0" name="Angle">angle(Biter.X,Biter.Y,WayPoint3_2.X,WayPoint3_2.Y)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9730015698451166">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="3442283824378061" type="Biter">
+                                    <param id="0" name="Object">WayPoint3_2</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="1269473950489824" type="Biter">
+                                    <param id="0" name="Instance variable">ID_Check</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="3" name="Set angle of motion" sid="9492326350399019" type="Biter">
+                                    <param id="0" name="Angle">angle(Biter.X,Biter.Y,WayPoint3_1.X,WayPoint3_1.Y)</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="5868058306333212" type="Biter">
+                                    <param id="0" name="Instance variable">ShootCheck</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

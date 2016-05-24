@@ -633,7 +633,7 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1498163046600756" speed="5">
-                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\dbga_21\Downloads\Elementi_livello-2016-05-12\Elementi livello\sfondo.png" />
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Drako-PC\Downloads\Sfondo 02.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1047,6 +1047,8 @@
                     <instance-variable name="range" sid="116899821237139" type="number" />
                     <instance-variable name="isMoving" sid="1150906801476774" type="boolean" />
                     <instance-variable name="Direction" sid="7200697598412878" type="number" />
+                    <instance-variable name="isShooting" sid="9909378618216158" type="boolean" />
+                    <instance-variable name="IsGoingToMove" sid="3864818625120308" type="boolean" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Platform" sid="1618933463262937">
@@ -1057,9 +1059,9 @@
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
-                    <animation framecount="2" loop="0" name="2Arms_Idle" pingpong="0" repeatcount="1" repeatto="0" sid="1090741839800835" speed="5">
+                    <animation framecount="2" loop="1" name="2Arms_Idle" pingpong="0" repeatcount="1" repeatto="0" sid="1090741839800835" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\2Arms_Idle\000.png">
-                            <image-point name="Arm" x="0.5" y="0.5" />
+                            <image-point name="Arm" x="0.8" y="0.475" />
                             <collision-poly>
                                 <point x="0.275" y="0" />
                                 <point x="0.65" y="0" />
@@ -1068,7 +1070,7 @@
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\2Arms_Idle\001.png">
-                            <image-point name="Arm" x="0.5" y="0.5" />
+                            <image-point name="Arm" x="0.8" y="0.475" />
                             <collision-poly>
                                 <point x="0.275" y="0" />
                                 <point x="0.65" y="0" />
@@ -1077,9 +1079,8 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="2" loop="0" name="No_Arms_Idle" pingpong="0" repeatcount="1" repeatto="0" sid="6523740985293865" speed="5">
+                    <animation framecount="2" loop="1" name="No_Arms_Idle" pingpong="0" repeatcount="1" repeatto="0" sid="6523740985293865" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\dbga_23\Documents\Repository Database\InSanity Local\Project\Animations\Gunner\NoArms_Idle\000.png">
-                            <image-point name="Arm" x="0.5" y="0.5" />
                             <collision-poly>
                                 <point x="0.325" y="0" />
                                 <point x="0.625" y="0" />
@@ -1088,7 +1089,6 @@
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\dbga_23\Documents\Repository Database\InSanity Local\Project\Animations\Gunner\NoArms_Idle\001.png">
-                            <image-point name="Arm" x="0.5" y="0.5" />
                             <collision-poly>
                                 <point x="0.325" y="0" />
                                 <point x="0.625" y="0" />
@@ -1097,9 +1097,9 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="5" loop="0" name="2_Arms_Walk" pingpong="0" repeatcount="1" repeatto="0" sid="9819221054279116" speed="5">
+                    <animation framecount="5" loop="1" name="2_Arms_Walk" pingpong="0" repeatcount="1" repeatto="0" sid="9819221054279116" speed="12">
                         <frame duration="1" hotspotX="0.5" hotspotY="1">
-                            <image-point name="Arm" x="0.5" y="0.5" />
+                            <image-point name="Arm" x="0.8" y="0.475" />
                             <collision-poly>
                                 <point x="0.275" y="0" />
                                 <point x="0.65" y="0" />
@@ -1108,7 +1108,7 @@
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="1">
-                            <image-point name="Arm" x="0.5" y="0.5" />
+                            <image-point name="Arm" x="0.8" y="0.475" />
                             <collision-poly>
                                 <point x="0.275" y="0" />
                                 <point x="0.65" y="0" />
@@ -1117,7 +1117,7 @@
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="1">
-                            <image-point name="Arm" x="0.5" y="0.5" />
+                            <image-point name="Arm" x="0.8" y="0.475" />
                             <collision-poly>
                                 <point x="0.275" y="0" />
                                 <point x="0.65" y="0" />
@@ -1126,7 +1126,7 @@
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="1">
-                            <image-point name="Arm" x="0.5" y="0.5" />
+                            <image-point name="Arm" x="0.8" y="0.475" />
                             <collision-poly>
                                 <point x="0.275" y="0" />
                                 <point x="0.65" y="0" />
@@ -1135,7 +1135,7 @@
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="1">
-                            <image-point name="Arm" x="0.5" y="0.5" />
+                            <image-point name="Arm" x="0.8" y="0.475" />
                             <collision-poly>
                                 <point x="0.275" y="0" />
                                 <point x="0.65" y="0" />
@@ -1144,9 +1144,8 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="5" loop="0" name="No_Arms_Walk" pingpong="0" repeatcount="1" repeatto="0" sid="2535715770522335" speed="5">
+                    <animation framecount="5" loop="1" name="No_Arms_Walk" pingpong="0" repeatcount="1" repeatto="0" sid="2535715770522335" speed="12">
                         <frame duration="1" hotspotX="0.5" hotspotY="1">
-                            <image-point name="Arm" x="0.5" y="0.5" />
                             <collision-poly>
                                 <point x="0.3" y="0" />
                                 <point x="0.625" y="0" />
@@ -1155,7 +1154,6 @@
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="1">
-                            <image-point name="Arm" x="0.5" y="0.5" />
                             <collision-poly>
                                 <point x="0.3" y="0" />
                                 <point x="0.625" y="0" />
@@ -1164,7 +1162,6 @@
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="1">
-                            <image-point name="Arm" x="0.5" y="0.5" />
                             <collision-poly>
                                 <point x="0.3" y="0" />
                                 <point x="0.625" y="0" />
@@ -1173,7 +1170,6 @@
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="1">
-                            <image-point name="Arm" x="0.5" y="0.5" />
                             <collision-poly>
                                 <point x="0.3" y="0" />
                                 <point x="0.625" y="0" />
@@ -1182,7 +1178,6 @@
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="1">
-                            <image-point name="Arm" x="0.5" y="0.5" />
                             <collision-poly>
                                 <point x="0.3" y="0" />
                                 <point x="0.625" y="0" />
@@ -1191,9 +1186,8 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="6" loop="0" name="Death" pingpong="0" repeatcount="1" repeatto="0" sid="1010745617952286" speed="5">
+                    <animation framecount="6" loop="0" name="Death" pingpong="0" repeatcount="1" repeatto="0" sid="1010745617952286" speed="7">
                         <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\Death\000.png">
-                            <image-point name="Arm" x="0.5" y="0.5" />
                             <collision-poly>
                                 <point x="0.275" y="0" />
                                 <point x="0.625" y="0" />
@@ -1202,7 +1196,6 @@
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\Death\001.png">
-                            <image-point name="Arm" x="0.5" y="0.5" />
                             <collision-poly>
                                 <point x="0.275" y="0" />
                                 <point x="0.625" y="0" />
@@ -1211,7 +1204,6 @@
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\Death\002.png">
-                            <image-point name="Arm" x="0.5" y="0.5" />
                             <collision-poly>
                                 <point x="0.275" y="0" />
                                 <point x="0.625" y="0" />
@@ -1220,7 +1212,6 @@
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\Death\003.png">
-                            <image-point name="Arm" x="0.5" y="0.5" />
                             <collision-poly>
                                 <point x="0.275" y="0" />
                                 <point x="0.625" y="0" />
@@ -1229,7 +1220,6 @@
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\Death\004.png">
-                            <image-point name="Arm" x="0.5" y="0.5" />
                             <collision-poly>
                                 <point x="0.35" y="0.475" />
                                 <point x="0.7" y="0.475" />
@@ -1238,7 +1228,6 @@
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\Death\005.png">
-                            <image-point name="Arm" x="0.5" y="0.5" />
                             <collision-poly>
                                 <point x="0.225" y="0.825" />
                                 <point x="1" y="0.825" />
@@ -1247,9 +1236,9 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="4" loop="0" name="2Arms_Shoot" pingpong="0" repeatcount="1" repeatto="0" sid="4510332829741255" speed="5">
+                    <animation framecount="4" loop="0" name="2Arms_Shoot" pingpong="0" repeatcount="1" repeatto="0" sid="4510332829741255" speed="10">
                         <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\2Arms_Shoot\000.png">
-                            <image-point name="Arm" x="0.5" y="0.5" />
+                            <image-point name="Arm" x="0.8" y="0.475" />
                             <collision-poly>
                                 <point x="0.3" y="0" />
                                 <point x="0.625" y="0" />
@@ -1258,7 +1247,7 @@
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\2Arms_Shoot\001.png">
-                            <image-point name="Arm" x="0.5" y="0.5" />
+                            <image-point name="Arm" x="0.8" y="0.475" />
                             <collision-poly>
                                 <point x="0.3" y="0" />
                                 <point x="0.625" y="0" />
@@ -1267,7 +1256,7 @@
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\2Arms_Shoot\002.png">
-                            <image-point name="Arm" x="0.5" y="0.5" />
+                            <image-point name="Arm" x="0.8" y="0.475" />
                             <collision-poly>
                                 <point x="0.3" y="0" />
                                 <point x="0.625" y="0" />
@@ -1276,7 +1265,7 @@
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\2Arms_Shoot\003.png">
-                            <image-point name="Arm" x="0.5" y="0.5" />
+                            <image-point name="Arm" x="0.8" y="0.475" />
                             <collision-poly>
                                 <point x="0.3" y="0" />
                                 <point x="0.625" y="0" />
@@ -1285,9 +1274,8 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="2" loop="0" name="2Arms_Hit" pingpong="0" repeatcount="1" repeatto="0" sid="2649951405281953" speed="5">
+                    <animation framecount="2" loop="1" name="2Arms_Hit" pingpong="0" repeatcount="1" repeatto="0" sid="2649951405281953" speed="10">
                         <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\2Arms_Hit\000.png">
-                            <image-point name="Arm" x="0.5" y="0.5" />
                             <collision-poly>
                                 <point x="0.275" y="0" />
                                 <point x="0.65" y="0" />
@@ -1296,7 +1284,6 @@
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\2Arms_Hit\001.png">
-                            <image-point name="Arm" x="0.5" y="0.5" />
                             <collision-poly>
                                 <point x="0.275" y="0" />
                                 <point x="0.65" y="0" />
@@ -1305,9 +1292,9 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="5" loop="0" name="1Arm_Walk" pingpong="0" repeatcount="1" repeatto="0" sid="1911614271971235" speed="5">
+                    <animation framecount="5" loop="1" name="1Arm_Walk" pingpong="0" repeatcount="1" repeatto="0" sid="1911614271971235" speed="12">
                         <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\1Arm_Walk\000.png">
-                            <image-point name="Arm" x="0.5" y="0.5" />
+                            <image-point name="Arm" x="0.8" y="0.475" />
                             <collision-poly>
                                 <point x="0.325" y="0.00625" />
                                 <point x="0.675" y="0" />
@@ -1316,7 +1303,7 @@
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\1Arm_Walk\001.png">
-                            <image-point name="Arm" x="0.5" y="0.5" />
+                            <image-point name="Arm" x="0.8" y="0.475" />
                             <collision-poly>
                                 <point x="0.325" y="0.00625" />
                                 <point x="0.675" y="0" />
@@ -1325,7 +1312,7 @@
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\1Arm_Walk\002.png">
-                            <image-point name="Arm" x="0.5" y="0.5" />
+                            <image-point name="Arm" x="0.8" y="0.475" />
                             <collision-poly>
                                 <point x="0.325" y="0.00625" />
                                 <point x="0.675" y="0" />
@@ -1334,7 +1321,7 @@
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\1Arm_Walk\003.png">
-                            <image-point name="Arm" x="0.5" y="0.5" />
+                            <image-point name="Arm" x="0.8" y="0.475" />
                             <collision-poly>
                                 <point x="0.325" y="0.00625" />
                                 <point x="0.675" y="0" />
@@ -1343,7 +1330,7 @@
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\1Arm_Walk\004.png">
-                            <image-point name="Arm" x="0.5" y="0.5" />
+                            <image-point name="Arm" x="0.8" y="0.475" />
                             <collision-poly>
                                 <point x="0.325" y="0.00625" />
                                 <point x="0.675" y="0" />
@@ -1352,9 +1339,9 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="4" loop="0" name="1Arm_Shoot" pingpong="0" repeatcount="1" repeatto="0" sid="5291076271356702" speed="5">
+                    <animation framecount="4" loop="0" name="1Arm_Shoot" pingpong="0" repeatcount="1" repeatto="0" sid="5291076271356702" speed="10">
                         <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\1Arm_Shoot\000.png">
-                            <image-point name="Arm" x="0.5" y="0.5" />
+                            <image-point name="Arm" x="0.8" y="0.475" />
                             <collision-poly>
                                 <point x="0.3" y="0" />
                                 <point x="0.65" y="0" />
@@ -1363,7 +1350,7 @@
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\1Arm_Shoot\001.png">
-                            <image-point name="Arm" x="0.5" y="0.5" />
+                            <image-point name="Arm" x="0.8" y="0.475" />
                             <collision-poly>
                                 <point x="0.3" y="0" />
                                 <point x="0.65" y="0" />
@@ -1372,7 +1359,7 @@
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\1Arm_Shoot\002.png">
-                            <image-point name="Arm" x="0.5" y="0.5" />
+                            <image-point name="Arm" x="0.8" y="0.475" />
                             <collision-poly>
                                 <point x="0.3" y="0" />
                                 <point x="0.65" y="0" />
@@ -1381,7 +1368,7 @@
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\1Arm_Shoot\003.png">
-                            <image-point name="Arm" x="0.5" y="0.5" />
+                            <image-point name="Arm" x="0.8" y="0.475" />
                             <collision-poly>
                                 <point x="0.3" y="0" />
                                 <point x="0.65" y="0" />
@@ -1390,9 +1377,9 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="2" loop="0" name="1Arm_Idle" pingpong="0" repeatcount="1" repeatto="0" sid="1982551008371102" speed="5">
+                    <animation framecount="2" loop="1" name="1Arm_Idle" pingpong="0" repeatcount="1" repeatto="0" sid="1982551008371102" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\1Arm_Idle\000.png">
-                            <image-point name="Arm" x="0.5" y="0.5" />
+                            <image-point name="Arm" x="0.8" y="0.475" />
                             <collision-poly>
                                 <point x="0.325" y="0" />
                                 <point x="0.65" y="0" />
@@ -1401,7 +1388,7 @@
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\1Arm_Idle\001.png">
-                            <image-point name="Arm" x="0.5" y="0.5" />
+                            <image-point name="Arm" x="0.8" y="0.475" />
                             <collision-poly>
                                 <point x="0.325" y="0" />
                                 <point x="0.65" y="0" />
@@ -1410,9 +1397,8 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="2" loop="0" name="1Arm_Hit" pingpong="0" repeatcount="1" repeatto="0" sid="8024249168071725" speed="5">
+                    <animation framecount="2" loop="1" name="1Arm_Hit" pingpong="0" repeatcount="1" repeatto="0" sid="8024249168071725" speed="10">
                         <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\1Arm_Hit\000.png">
-                            <image-point name="Arm" x="0.5" y="0.5" />
                             <collision-poly>
                                 <point x="0.3" y="0" />
                                 <point x="0.61875" y="0.025" />
@@ -1421,7 +1407,6 @@
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Gunner\1Arm_Hit\001.png">
-                            <image-point name="Arm" x="0.5" y="0.5" />
                             <collision-poly>
                                 <point x="0.3" y="0" />
                                 <point x="0.61875" y="0.025" />
@@ -1457,21 +1442,17 @@
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
-                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9608160429950309" speed="5">
-                        <frame duration="1" hotspotX="0.6" hotspotY="0.5" original-source="C:\Users\Sciuzza\Desktop\Project\Animations\Gunner_bullet\Default\000.png">
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9608160429950309" speed="5">
+                        <frame duration="1" hotspotX="0.636364" hotspotY="0.5" original-source="C:\Users\Drako-PC\Documents\Senzanome.png">
                             <collision-poly>
-                                <point x="0.2" y="0.25" />
-                                <point x="0.8" y="0.25" />
-                                <point x="0.8" y="0.75" />
-                                <point x="0.2" y="0.75" />
-                            </collision-poly>
-                        </frame>
-                        <frame duration="1" hotspotX="0.6" hotspotY="0.5" original-source="C:\Users\Sciuzza\Desktop\Project\Animations\Gunner_bullet\Default\001.png">
-                            <collision-poly>
-                                <point x="0.2" y="0.25" />
-                                <point x="0.8" y="0.25" />
-                                <point x="0.8" y="0.75" />
-                                <point x="0.2" y="0.75" />
+                                <point x="0" y="0.375" />
+                                <point x="0.545455" y="0" />
+                                <point x="0.818182" y="0" />
+                                <point x="1" y="0.25" />
+                                <point x="1" y="0.75" />
+                                <point x="0.818182" y="1" />
+                                <point x="0.545455" y="1" />
+                                <point x="0" y="0.625" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -1645,7 +1626,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="WayPoint1" sid="3627281712086456">
+            <object-type name="WayPoint1_1" sid="3627281712086456">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5243129675165223" speed="5">
@@ -1653,7 +1634,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="WayPoint2" sid="7510734875790572">
+            <object-type name="WayPoint1_2" sid="7510734875790572">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9446374597816795" speed="5">
@@ -1661,7 +1642,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="WayPoint3" sid="4515395221080161">
+            <object-type name="WayPoint1_3" sid="4515395221080161">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1698704133412627" speed="5">
@@ -1669,7 +1650,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="WayPoint4" sid="4743524929407931">
+            <object-type name="WayPoint1_4" sid="4743524929407931">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5288351619346837" speed="5">
@@ -1677,7 +1658,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="WayPoint5" sid="8009993601217379">
+            <object-type name="WayPoint1_5" sid="8009993601217379">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="739587031538547" speed="5">
@@ -1685,7 +1666,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="WayPoint8" sid="3867638613925649">
+            <object-type name="WayPoint1_8" sid="3867638613925649">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2820205902856839" speed="5">
@@ -1693,7 +1674,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="BatTrap" sid="6353498434003229">
+            <object-type name="BatTrap1" sid="6353498434003229">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9098667897715318" speed="5">
@@ -1717,6 +1698,7 @@
                 <animation-folder>
                     <animation framecount="3" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="1440251929555632" speed="15">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Back" x="0.975" y="0.55" />
                             <collision-poly>
                                 <point x="0.125" y="0.275" />
                                 <point x="0.95" y="0.275" />
@@ -1725,6 +1707,7 @@
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Back" x="0.975" y="0.55" />
                             <collision-poly>
                                 <point x="0.25" y="0.25" />
                                 <point x="0.95" y="0.25" />
@@ -1733,6 +1716,7 @@
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Back" x="0.975" y="0.55" />
                             <collision-poly>
                                 <point x="0.075" y="0.3" />
                                 <point x="1" y="0.3" />
@@ -1743,6 +1727,7 @@
                     </animation>
                     <animation framecount="3" loop="0" name="Idle_Teeth" pingpong="0" repeatcount="1" repeatto="0" sid="8210778111691952" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Back" x="0.975" y="0.55" />
                             <collision-poly>
                                 <point x="0.125" y="0.3" />
                                 <point x="1" y="0.3" />
@@ -1751,6 +1736,7 @@
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Back" x="0.975" y="0.55" />
                             <collision-poly>
                                 <point x="0.225" y="0.275" />
                                 <point x="0.95" y="0.275" />
@@ -1759,6 +1745,7 @@
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Back" x="0.975" y="0.55" />
                             <collision-poly>
                                 <point x="0.075" y="0.25" />
                                 <point x="1" y="0.25" />
@@ -1769,6 +1756,7 @@
                     </animation>
                     <animation framecount="3" loop="0" name="Idle_RedEye" pingpong="0" repeatcount="1" repeatto="0" sid="336920806356673" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Back" x="0.975" y="0.55" />
                             <collision-poly>
                                 <point x="0.125" y="0.3" />
                                 <point x="1" y="0.3" />
@@ -1777,6 +1765,7 @@
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Back" x="0.975" y="0.55" />
                             <collision-poly>
                                 <point x="0.225" y="0.275" />
                                 <point x="0.95" y="0.275" />
@@ -1785,6 +1774,7 @@
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Back" x="0.975" y="0.55" />
                             <collision-poly>
                                 <point x="0.075" y="0.25" />
                                 <point x="1" y="0.25" />
@@ -1795,6 +1785,7 @@
                     </animation>
                     <animation framecount="3" loop="0" name="Idle_RedEye_Teeth" pingpong="0" repeatcount="1" repeatto="0" sid="6719570641632711" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Back" x="0.975" y="0.55" />
                             <collision-poly>
                                 <point x="0.125" y="0.3" />
                                 <point x="1" y="0.3" />
@@ -1803,6 +1794,7 @@
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Back" x="0.975" y="0.55" />
                             <collision-poly>
                                 <point x="0.225" y="0.275" />
                                 <point x="0.95" y="0.275" />
@@ -1811,6 +1803,7 @@
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Back" x="0.975" y="0.55" />
                             <collision-poly>
                                 <point x="0.075" y="0.25" />
                                 <point x="1" y="0.25" />
@@ -1821,6 +1814,7 @@
                     </animation>
                     <animation framecount="2" loop="0" name="Glide" pingpong="0" repeatcount="1" repeatto="0" sid="4868396130019581" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Back" x="0.975" y="0.55" />
                             <collision-poly>
                                 <point x="0.38125" y="0.3" />
                                 <point x="1" y="0.3" />
@@ -1829,6 +1823,7 @@
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Back" x="0.975" y="0.55" />
                             <collision-poly>
                                 <point x="0.38125" y="0.3" />
                                 <point x="1" y="0.3" />
@@ -1839,6 +1834,7 @@
                     </animation>
                     <animation framecount="2" loop="0" name="Glide_Teeth" pingpong="0" repeatcount="1" repeatto="0" sid="3970203100003701" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Back" x="0.975" y="0.55" />
                             <collision-poly>
                                 <point x="0.38125" y="0.3" />
                                 <point x="1" y="0.3" />
@@ -1847,6 +1843,7 @@
                             </collision-poly>
                         </frame>
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                            <image-point name="Back" x="0.975" y="0.55" />
                             <collision-poly>
                                 <point x="0.38125" y="0.3" />
                                 <point x="1" y="0.3" />
@@ -1891,7 +1888,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="WayPoint6" sid="6823457270212904">
+            <object-type name="WayPoint1_6" sid="6823457270212904">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1423375194877625" speed="5">
@@ -1899,10 +1896,154 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type name="WayPoint7" sid="3431566386195852">
+            <object-type name="WayPoint1_7" sid="3431566386195852">
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3963412403777801" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="WayPoint2_1" sid="2254881417785723">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6473730975077405" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BatTrap2" sid="6347897219680025">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7257815744034157" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="WayPoint2_2" sid="50605812965272">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9968085383901456" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="WayPoint2_3" sid="386203537486417">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="655541533802033" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="WayPoint2_4" sid="6184404310893273">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7346175289148239" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="WayPoint2_5" sid="8610941480403213">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2320263626587455" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="WayPoint2_6" sid="3584940879046143">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="5502103413264702" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="WayPoint2_7" sid="4195739554624784">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="470841675501014" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="WayPoint2_8" sid="9262325746018037">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1517260505367089" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="WayPoint3_1" sid="638698458106481">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4724110378787352" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="WayPoint3_2" sid="8029692780481604">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3018450589456033" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="WayPoint3_3" sid="6473640815632886">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6654945415769437" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="WayPoint3_4" sid="7861478786581652">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4136661724037395" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="WayPoint3_5" sid="1801529328987116">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3925254694860967" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="WayPoint3_6" sid="2641993132063567">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8374906916957274" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="WayPoint3_7" sid="8981585705104783">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7438121427881036" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="WayPoint3_8" sid="9622570683453192">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4554860673364972" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="BatTrap3" sid="3210961406836067">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6487109489100543" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
@@ -2300,7 +2441,7 @@
                             </collision-poly>
                         </frame>
                     </animation>
-                    <animation framecount="3" loop="0" name="Dying" pingpong="0" repeatcount="1" repeatto="0" sid="2802707485113364" speed="5">
+                    <animation framecount="3" loop="0" name="Dying" pingpong="0" repeatcount="1" repeatto="0" sid="2802707485113364" speed="2">
                         <frame duration="1" hotspotX="0.5" hotspotY="1">
                             <collision-poly>
                                 <point x="0.375" y="0" />
@@ -2317,7 +2458,7 @@
                                 <point x="0.325" y="1" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.55" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Player_Frame\Dead\000.png">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Sciuzza\Documents\GitRepo\InSanity Local\Project\Animations\Player_Frame\Dead\000.png">
                             <collision-poly>
                                 <point x="0.166667" y="0.636364" />
                                 <point x="0.5" y="0.272727" />
@@ -2813,7 +2954,18 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7261126194399867" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Drako-PC\Downloads\Potenziamento sparo - ingame.png">
+                            <collision-poly>
+                                <point x="0.730769" y="0.730769" />
+                                <point x="0.961538" y="0.653846" />
+                                <point x="1" y="0.692308" />
+                                <point x="1" y="0.807692" />
+                                <point x="1" y="1" />
+                                <point x="0.961538" y="1" />
+                                <point x="0.615385" y="1" />
+                                <point x="0.692308" y="0.807692" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -4292,21 +4444,24 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4906372601520275" speed="5">
-                        <frame duration="1" hotspotX="0.538462" hotspotY="1.28571" original-source="C:\Users\dbga_08\Downloads\caricamenti_seconda_parte-2016-05-18\caricamenti seconda parte\Leva - alta.png">
+                        <frame duration="1" hotspotX="0.538462" hotspotY="1.35714" original-source="C:\Users\dbga_08\Downloads\caricamenti_seconda_parte-2016-05-18\caricamenti seconda parte\Leva - alta.png">
                             <collision-poly>
-                                <point x="0.0769231" y="0.0714286" />
-                                <point x="0.461538" y="0.428571" />
-                                <point x="0.538462" y="0.428571" />
-                                <point x="0.615385" y="0.5" />
+                                <point x="0" y="0" />
+                                <point x="0.663462" y="0.241071" />
                                 <point x="1" y="1" />
-                                <point x="0.461538" y="0.571429" />
-                                <point x="0.461538" y="0.571429" />
-                                <point x="0.384615" y="0.5" />
+                                <point x="0.278846" y="0.642857" />
                             </collision-poly>
                         </frame>
                     </animation>
                     <animation framecount="1" loop="0" name="Flipped" pingpong="0" repeatcount="1" repeatto="0" sid="1599205622865351" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.538462" original-source="C:\Users\dbga_08\Downloads\caricamenti_seconda_parte-2016-05-18\caricamenti seconda parte\Leva - bassa.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="-0.384615" original-source="C:\Users\dbga_08\Downloads\caricamenti_seconda_parte-2016-05-18\caricamenti seconda parte\Leva - bassa.png">
+                            <collision-poly>
+                                <point x="0.303571" y="0.355769" />
+                                <point x="1" y="0" />
+                                <point x="0.607143" y="0.778846" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -4500,7 +4655,16 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="921027836969582" speed="5">
-                        <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\dbga_08\Downloads\Slut.png">
+                            <collision-poly>
+                                <point x="0.78125" y="0.166667" />
+                                <point x="0.46875" y="0.166667" />
+                                <point x="0.09375" y="0.333333" />
+                                <point x="0.96875" y="0.666667" />
+                                <point x="0.46875" y="0.833333" />
+                                <point x="0.03125" y="0.5" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -4603,10 +4767,14 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9292522550404511" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
-                    </animation>
-                    <animation framecount="1" loop="0" name="Fratello" pingpong="0" repeatcount="1" repeatto="0" sid="3563011192331067" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="1" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\dbga_08\Downloads\GIFs\Idle.gif">
+                            <collision-poly>
+                                <point x="0.425" y="0.125" />
+                                <point x="0.7" y="0.125" />
+                                <point x="0.7" y="1" />
+                                <point x="0.425" y="1" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -5696,384 +5864,219 @@
                 </behavior-type>
             </behaviors>
             <animation-folder>
-                <animation framecount="1" loop="1" name="Idle_whole" pingpong="0" repeatcount="1" repeatto="0" sid="9978377953893325" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\dbga_27\Downloads\Charger-2016-05-19\Charger\GIFs\Idle_whole.gif">
-                        <image-point name="Head" x="0.741667" y="0.416667" />
-                        <image-point name="Arm" x="0.9" y="0.483333" />
+                <animation framecount="6" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="9978377953893325" speed="15">
+                    <frame duration="1" hotspotX="0.39" hotspotY="0.987654" original-source="C:\Users\dbga_08\Downloads\Charger_versione_2-2016-05-23\Charger versione 2\fermo\charger animazione fermo 1.png">
+                        <image-point name="Head" x="0.28" y="0.148148" />
                         <collision-poly>
-                            <point x="0.441667" y="0.441667" />
-                            <point x="0.5" y="0.341667" />
-                            <point x="0.633333" y="0.483333" />
-                            <point x="0.841667" y="0.475" />
-                            <point x="0.9" y="0.975" />
-                            <point x="0.625" y="0.975" />
-                            <point x="0.458333" y="0.758333" />
-                            <point x="0.416667" y="0.566667" />
+                            <point x="0.345" y="0.722222" />
+                            <point x="0.392499" y="0.302469" />
+                            <point x="0.395" y="0.0123457" />
+                            <point x="0.539999" y="0.0123457" />
+                            <point x="0.660002" y="0.342593" />
+                            <point x="0.660002" y="0.67284" />
+                            <point x="0.990001" y="0.743827" />
+                            <point x="0.76" y="0.987654" />
+                            <point x="0.31" y="0.987654" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.39" hotspotY="0.987654" original-source="C:\Users\dbga_08\Downloads\Charger_versione_2-2016-05-23\Charger versione 2\fermo\charger animazione fermo 2.png">
+                        <image-point name="Head" x="0.28" y="0.148148" />
+                        <collision-poly>
+                            <point x="0.345" y="0.722222" />
+                            <point x="0.392499" y="0.302469" />
+                            <point x="0.395" y="0.0123457" />
+                            <point x="0.539999" y="0.0123457" />
+                            <point x="0.660002" y="0.342593" />
+                            <point x="0.660002" y="0.67284" />
+                            <point x="0.990001" y="0.743827" />
+                            <point x="0.76" y="0.987654" />
+                            <point x="0.31" y="0.987654" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.386139" hotspotY="0.987654" original-source="C:\Users\dbga_08\Downloads\Charger_versione_2-2016-05-23\Charger versione 2\fermo\charger animazione fermo 3.png">
+                        <image-point name="Head" x="0.287129" y="0.148148" />
+                        <collision-poly>
+                            <point x="0.345" y="0.722222" />
+                            <point x="0.392499" y="0.302469" />
+                            <point x="0.395" y="0.0123457" />
+                            <point x="0.539999" y="0.0123457" />
+                            <point x="0.660002" y="0.342593" />
+                            <point x="0.660002" y="0.67284" />
+                            <point x="0.990001" y="0.743827" />
+                            <point x="0.76" y="0.987654" />
+                            <point x="0.31" y="0.987654" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.386139" hotspotY="0.987654">
+                        <image-point name="Head" x="0.277228" y="0.148148" />
+                        <collision-poly>
+                            <point x="0.345" y="0.722222" />
+                            <point x="0.392499" y="0.302469" />
+                            <point x="0.395" y="0.0123457" />
+                            <point x="0.539999" y="0.0123457" />
+                            <point x="0.660002" y="0.342593" />
+                            <point x="0.660002" y="0.67284" />
+                            <point x="0.990001" y="0.743827" />
+                            <point x="0.76" y="0.987654" />
+                            <point x="0.31" y="0.987654" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.39" hotspotY="0.987654">
+                        <image-point name="Head" x="0.28" y="0.148148" />
+                        <collision-poly>
+                            <point x="0.345" y="0.722222" />
+                            <point x="0.392499" y="0.302469" />
+                            <point x="0.395" y="0.0123457" />
+                            <point x="0.539999" y="0.0123457" />
+                            <point x="0.660002" y="0.342593" />
+                            <point x="0.660002" y="0.67284" />
+                            <point x="0.990001" y="0.743827" />
+                            <point x="0.76" y="0.987654" />
+                            <point x="0.31" y="0.987654" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.39" hotspotY="0.987654">
+                        <image-point name="Head" x="0.28" y="0.148148" />
+                        <collision-poly>
+                            <point x="0.345" y="0.722222" />
+                            <point x="0.392499" y="0.302469" />
+                            <point x="0.395" y="0.0123457" />
+                            <point x="0.539999" y="0.0123457" />
+                            <point x="0.660002" y="0.342593" />
+                            <point x="0.660002" y="0.67284" />
+                            <point x="0.990001" y="0.743827" />
+                            <point x="0.76" y="0.987654" />
+                            <point x="0.31" y="0.987654" />
                         </collision-poly>
                     </frame>
                 </animation>
-                <animation framecount="3" loop="1" name="Idle_eye" pingpong="0" repeatcount="1" repeatto="0" sid="2182668735976869" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="1">
-                        <image-point name="Head" x="0.741667" y="0.416667" />
+                <animation framecount="10" loop="1" name="Walk" pingpong="0" repeatcount="1" repeatto="0" sid="4109005500826705" speed="5">
+                    <frame duration="1" hotspotX="0.41" hotspotY="0.987952" original-source="C:\Users\dbga_08\Downloads\Charger_versione_2-2016-05-23\Charger versione 2\corsa\charger animazione corsa 1.png">
+                        <image-point name="Head" x="0.29" y="0.144578" />
                         <collision-poly>
-                            <point x="0.441667" y="0.441667" />
-                            <point x="0.5" y="0.341667" />
-                            <point x="0.633333" y="0.483333" />
-                            <point x="0.841667" y="0.475" />
-                            <point x="0.9" y="0.975" />
-                            <point x="0.625" y="0.975" />
-                            <point x="0.458333" y="0.758333" />
-                            <point x="0.416667" y="0.566667" />
+                            <point x="0.44" y="0" />
+                            <point x="0.59" y="0.0361446" />
+                            <point x="0.71" y="0.545181" />
+                            <point x="1" y="0.753012" />
+                            <point x="0.83" y="1" />
+                            <point x="0.38" y="1" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="1">
-                        <image-point name="Head" x="0.741667" y="0.416667" />
+                    <frame duration="1" hotspotX="0.405941" hotspotY="1.025" original-source="C:\Users\dbga_08\Downloads\Charger_versione_2-2016-05-23\Charger versione 2\corsa\charger animazione corsa 2.png">
+                        <image-point name="Head" x="0.287129" y="0.15" />
                         <collision-poly>
-                            <point x="0.441667" y="0.441667" />
-                            <point x="0.5" y="0.341667" />
-                            <point x="0.633333" y="0.483333" />
-                            <point x="0.841667" y="0.475" />
-                            <point x="0.9" y="0.975" />
-                            <point x="0.625" y="0.975" />
-                            <point x="0.458333" y="0.758333" />
-                            <point x="0.416667" y="0.566667" />
+                            <point x="0.44" y="0" />
+                            <point x="0.59" y="0.0361446" />
+                            <point x="0.71" y="0.545181" />
+                            <point x="1" y="0.753012" />
+                            <point x="0.83" y="1" />
+                            <point x="0.38" y="1" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="1">
-                        <image-point name="Head" x="0.741667" y="0.416667" />
+                    <frame duration="1" hotspotX="0.401961" hotspotY="0.987805" original-source="C:\Users\dbga_08\Downloads\Charger_versione_2-2016-05-23\Charger versione 2\corsa\charger animazione corsa 3.png">
+                        <image-point name="Head" x="0.284314" y="0.134146" />
                         <collision-poly>
-                            <point x="0.441667" y="0.441667" />
-                            <point x="0.5" y="0.341667" />
-                            <point x="0.633333" y="0.483333" />
-                            <point x="0.841667" y="0.475" />
-                            <point x="0.9" y="0.975" />
-                            <point x="0.625" y="0.975" />
-                            <point x="0.458333" y="0.758333" />
-                            <point x="0.416667" y="0.566667" />
+                            <point x="0.44" y="0" />
+                            <point x="0.59" y="0.0361446" />
+                            <point x="0.71" y="0.545181" />
+                            <point x="1" y="0.753012" />
+                            <point x="0.83" y="1" />
+                            <point x="0.38" y="1" />
                         </collision-poly>
                     </frame>
-                </animation>
-                <animation framecount="3" loop="1" name="Idle_no_eye" pingpong="0" repeatcount="1" repeatto="0" sid="1756088611200339" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="1">
-                        <image-point name="Head" x="0.741667" y="0.416667" />
+                    <frame duration="1" hotspotX="0.41" hotspotY="0.987654" original-source="C:\Users\dbga_08\Downloads\Charger_versione_2-2016-05-23\Charger versione 2\corsa\charger animazione corsa 4.png">
+                        <image-point name="Head" x="0.29" y="0.123457" />
                         <collision-poly>
-                            <point x="0.441667" y="0.441667" />
-                            <point x="0.5" y="0.341667" />
-                            <point x="0.633333" y="0.483333" />
-                            <point x="0.841667" y="0.475" />
-                            <point x="0.9" y="0.975" />
-                            <point x="0.625" y="0.975" />
-                            <point x="0.458333" y="0.758333" />
-                            <point x="0.416667" y="0.566667" />
+                            <point x="0.44" y="0" />
+                            <point x="0.59" y="0.0361446" />
+                            <point x="0.71" y="0.545181" />
+                            <point x="1" y="0.753012" />
+                            <point x="0.83" y="1" />
+                            <point x="0.38" y="1" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="1">
-                        <image-point name="Head" x="0.741667" y="0.416667" />
+                    <frame duration="1" hotspotX="0.42" hotspotY="1" original-source="C:\Users\dbga_08\Downloads\Charger_versione_2-2016-05-23\Charger versione 2\corsa\charger animazione corsa 5.png">
+                        <image-point name="Head" x="0.3" y="0.125" />
                         <collision-poly>
-                            <point x="0.441667" y="0.441667" />
-                            <point x="0.5" y="0.341667" />
-                            <point x="0.633333" y="0.483333" />
-                            <point x="0.841667" y="0.475" />
-                            <point x="0.9" y="0.975" />
-                            <point x="0.625" y="0.975" />
-                            <point x="0.458333" y="0.758333" />
-                            <point x="0.416667" y="0.566667" />
+                            <point x="0.44" y="0" />
+                            <point x="0.59" y="0.0361446" />
+                            <point x="0.71" y="0.545181" />
+                            <point x="1" y="0.753012" />
+                            <point x="0.83" y="1" />
+                            <point x="0.38" y="1" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="1">
-                        <image-point name="Head" x="0.741667" y="0.416667" />
+                    <frame duration="1" hotspotX="0.42" hotspotY="0.987805" original-source="C:\Users\dbga_08\Downloads\Charger_versione_2-2016-05-23\Charger versione 2\corsa\charger animazione corsa 6.png">
+                        <image-point name="Head" x="0.3" y="0.134146" />
                         <collision-poly>
-                            <point x="0.441667" y="0.441667" />
-                            <point x="0.5" y="0.341667" />
-                            <point x="0.633333" y="0.483333" />
-                            <point x="0.841667" y="0.475" />
-                            <point x="0.9" y="0.975" />
-                            <point x="0.625" y="0.975" />
-                            <point x="0.458333" y="0.758333" />
-                            <point x="0.416667" y="0.566667" />
+                            <point x="0.44" y="0" />
+                            <point x="0.59" y="0.0361446" />
+                            <point x="0.71" y="0.545181" />
+                            <point x="1" y="0.753012" />
+                            <point x="0.83" y="1" />
+                            <point x="0.38" y="1" />
                         </collision-poly>
                     </frame>
-                </animation>
-                <animation framecount="6" loop="1" name="Walk_whole" pingpong="0" repeatcount="1" repeatto="0" sid="9333379144903805" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="1">
-                        <image-point name="Head" x="0.741667" y="0.416667" />
+                    <frame duration="1" hotspotX="0.41" hotspotY="1.0125" original-source="C:\Users\dbga_08\Downloads\Charger_versione_2-2016-05-23\Charger versione 2\corsa\charger animazione corsa 7.png">
+                        <image-point name="Head" x="0.29" y="0.1375" />
                         <collision-poly>
-                            <point x="0.441667" y="0.441667" />
-                            <point x="0.5" y="0.341667" />
-                            <point x="0.633333" y="0.483333" />
-                            <point x="0.841667" y="0.475" />
-                            <point x="0.9" y="0.975" />
-                            <point x="0.625" y="0.975" />
-                            <point x="0.458333" y="0.758333" />
-                            <point x="0.416667" y="0.566667" />
+                            <point x="0.44" y="0" />
+                            <point x="0.59" y="0.0361446" />
+                            <point x="0.71" y="0.545181" />
+                            <point x="1" y="0.753012" />
+                            <point x="0.83" y="1" />
+                            <point x="0.38" y="1" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="1">
-                        <image-point name="Head" x="0.741667" y="0.416667" />
+                    <frame duration="1" hotspotX="0.405941" hotspotY="0.987654" original-source="C:\Users\dbga_08\Downloads\Charger_versione_2-2016-05-23\Charger versione 2\corsa\charger animazione corsa 8.png">
+                        <image-point name="Head" x="0.287129" y="0.123457" />
                         <collision-poly>
-                            <point x="0.441667" y="0.441667" />
-                            <point x="0.5" y="0.341667" />
-                            <point x="0.633333" y="0.483333" />
-                            <point x="0.841667" y="0.475" />
-                            <point x="0.9" y="0.975" />
-                            <point x="0.625" y="0.975" />
-                            <point x="0.458333" y="0.758333" />
-                            <point x="0.416667" y="0.566667" />
+                            <point x="0.44" y="0" />
+                            <point x="0.59" y="0.0361446" />
+                            <point x="0.71" y="0.545181" />
+                            <point x="1" y="0.753012" />
+                            <point x="0.83" y="1" />
+                            <point x="0.38" y="1" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="1">
-                        <image-point name="Head" x="0.741667" y="0.416667" />
+                    <frame duration="1" hotspotX="0.41" hotspotY="0.9875" original-source="C:\Users\dbga_08\Downloads\Charger_versione_2-2016-05-23\Charger versione 2\corsa\charger animazione corsa 9.png">
+                        <image-point name="Head" x="0.29" y="0.1125" />
                         <collision-poly>
-                            <point x="0.441667" y="0.441667" />
-                            <point x="0.5" y="0.341667" />
-                            <point x="0.633333" y="0.483333" />
-                            <point x="0.841667" y="0.475" />
-                            <point x="0.9" y="0.975" />
-                            <point x="0.625" y="0.975" />
-                            <point x="0.458333" y="0.758333" />
-                            <point x="0.416667" y="0.566667" />
+                            <point x="0.44" y="0" />
+                            <point x="0.59" y="0.0361446" />
+                            <point x="0.71" y="0.545181" />
+                            <point x="1" y="0.753012" />
+                            <point x="0.83" y="1" />
+                            <point x="0.38" y="1" />
                         </collision-poly>
                     </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="1">
-                        <image-point name="Head" x="0.741667" y="0.416667" />
+                    <frame duration="1" hotspotX="0.41" hotspotY="0.987805" original-source="C:\Users\dbga_08\Downloads\Charger_versione_2-2016-05-23\Charger versione 2\corsa\charger animazione corsa 10.png">
+                        <image-point name="Head" x="0.29" y="0.134146" />
                         <collision-poly>
-                            <point x="0.441667" y="0.441667" />
-                            <point x="0.5" y="0.341667" />
-                            <point x="0.633333" y="0.483333" />
-                            <point x="0.841667" y="0.475" />
-                            <point x="0.9" y="0.975" />
-                            <point x="0.625" y="0.975" />
-                            <point x="0.458333" y="0.758333" />
-                            <point x="0.416667" y="0.566667" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="1">
-                        <image-point name="Head" x="0.741667" y="0.416667" />
-                        <collision-poly>
-                            <point x="0.441667" y="0.441667" />
-                            <point x="0.5" y="0.341667" />
-                            <point x="0.633333" y="0.483333" />
-                            <point x="0.841667" y="0.475" />
-                            <point x="0.9" y="0.975" />
-                            <point x="0.625" y="0.975" />
-                            <point x="0.458333" y="0.758333" />
-                            <point x="0.416667" y="0.566667" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="1">
-                        <image-point name="Head" x="0.741667" y="0.416667" />
-                        <collision-poly>
-                            <point x="0.441667" y="0.441667" />
-                            <point x="0.5" y="0.341667" />
-                            <point x="0.633333" y="0.483333" />
-                            <point x="0.841667" y="0.475" />
-                            <point x="0.9" y="0.975" />
-                            <point x="0.625" y="0.975" />
-                            <point x="0.458333" y="0.758333" />
-                            <point x="0.416667" y="0.566667" />
+                            <point x="0.44" y="0" />
+                            <point x="0.59" y="0.0361446" />
+                            <point x="0.71" y="0.545181" />
+                            <point x="1" y="0.753012" />
+                            <point x="0.83" y="1" />
+                            <point x="0.38" y="1" />
                         </collision-poly>
                     </frame>
                 </animation>
-                <animation framecount="6" loop="1" name="Walk_no_helmet" pingpong="0" repeatcount="1" repeatto="0" sid="4109005500826705" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="1">
-                        <image-point name="Head" x="0.741667" y="0.416667" />
-                        <collision-poly>
-                            <point x="0.441667" y="0.441667" />
-                            <point x="0.5" y="0.341667" />
-                            <point x="0.633333" y="0.483333" />
-                            <point x="0.841667" y="0.475" />
-                            <point x="0.9" y="0.975" />
-                            <point x="0.625" y="0.975" />
-                            <point x="0.458333" y="0.758333" />
-                            <point x="0.416667" y="0.566667" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="1">
-                        <image-point name="Head" x="0.741667" y="0.416667" />
-                        <collision-poly>
-                            <point x="0.441667" y="0.441667" />
-                            <point x="0.5" y="0.341667" />
-                            <point x="0.633333" y="0.483333" />
-                            <point x="0.841667" y="0.475" />
-                            <point x="0.9" y="0.975" />
-                            <point x="0.625" y="0.975" />
-                            <point x="0.458333" y="0.758333" />
-                            <point x="0.416667" y="0.566667" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="1">
-                        <image-point name="Head" x="0.741667" y="0.416667" />
-                        <collision-poly>
-                            <point x="0.441667" y="0.441667" />
-                            <point x="0.5" y="0.341667" />
-                            <point x="0.633333" y="0.483333" />
-                            <point x="0.841667" y="0.475" />
-                            <point x="0.9" y="0.975" />
-                            <point x="0.625" y="0.975" />
-                            <point x="0.458333" y="0.758333" />
-                            <point x="0.416667" y="0.566667" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="1">
-                        <image-point name="Head" x="0.741667" y="0.416667" />
-                        <collision-poly>
-                            <point x="0.441667" y="0.441667" />
-                            <point x="0.5" y="0.341667" />
-                            <point x="0.633333" y="0.483333" />
-                            <point x="0.841667" y="0.475" />
-                            <point x="0.9" y="0.975" />
-                            <point x="0.625" y="0.975" />
-                            <point x="0.458333" y="0.758333" />
-                            <point x="0.416667" y="0.566667" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="1">
-                        <image-point name="Head" x="0.741667" y="0.416667" />
-                        <collision-poly>
-                            <point x="0.441667" y="0.441667" />
-                            <point x="0.5" y="0.341667" />
-                            <point x="0.633333" y="0.483333" />
-                            <point x="0.841667" y="0.475" />
-                            <point x="0.9" y="0.975" />
-                            <point x="0.625" y="0.975" />
-                            <point x="0.458333" y="0.758333" />
-                            <point x="0.416667" y="0.566667" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="1">
-                        <image-point name="Head" x="0.741667" y="0.416667" />
-                        <collision-poly>
-                            <point x="0.441667" y="0.441667" />
-                            <point x="0.5" y="0.341667" />
-                            <point x="0.633333" y="0.483333" />
-                            <point x="0.841667" y="0.475" />
-                            <point x="0.9" y="0.975" />
-                            <point x="0.625" y="0.975" />
-                            <point x="0.458333" y="0.758333" />
-                            <point x="0.416667" y="0.566667" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-                <animation framecount="6" loop="1" name="Walk_no_eye" pingpong="0" repeatcount="1" repeatto="0" sid="2358470424546153" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="1">
-                        <image-point name="Head" x="0.741667" y="0.416667" />
-                        <collision-poly>
-                            <point x="0.441667" y="0.441667" />
-                            <point x="0.5" y="0.341667" />
-                            <point x="0.633333" y="0.483333" />
-                            <point x="0.841667" y="0.475" />
-                            <point x="0.9" y="0.975" />
-                            <point x="0.625" y="0.975" />
-                            <point x="0.458333" y="0.758333" />
-                            <point x="0.416667" y="0.566667" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="1">
-                        <image-point name="Head" x="0.741667" y="0.416667" />
-                        <collision-poly>
-                            <point x="0.441667" y="0.441667" />
-                            <point x="0.5" y="0.341667" />
-                            <point x="0.633333" y="0.483333" />
-                            <point x="0.841667" y="0.475" />
-                            <point x="0.9" y="0.975" />
-                            <point x="0.625" y="0.975" />
-                            <point x="0.458333" y="0.758333" />
-                            <point x="0.416667" y="0.566667" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="1">
-                        <image-point name="Head" x="0.741667" y="0.416667" />
-                        <collision-poly>
-                            <point x="0.441667" y="0.441667" />
-                            <point x="0.5" y="0.341667" />
-                            <point x="0.633333" y="0.483333" />
-                            <point x="0.841667" y="0.475" />
-                            <point x="0.9" y="0.975" />
-                            <point x="0.625" y="0.975" />
-                            <point x="0.458333" y="0.758333" />
-                            <point x="0.416667" y="0.566667" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="1">
-                        <image-point name="Head" x="0.741667" y="0.416667" />
-                        <collision-poly>
-                            <point x="0.441667" y="0.441667" />
-                            <point x="0.5" y="0.341667" />
-                            <point x="0.633333" y="0.483333" />
-                            <point x="0.841667" y="0.475" />
-                            <point x="0.9" y="0.975" />
-                            <point x="0.625" y="0.975" />
-                            <point x="0.458333" y="0.758333" />
-                            <point x="0.416667" y="0.566667" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="1">
-                        <image-point name="Head" x="0.741667" y="0.416667" />
-                        <collision-poly>
-                            <point x="0.441667" y="0.441667" />
-                            <point x="0.5" y="0.341667" />
-                            <point x="0.633333" y="0.483333" />
-                            <point x="0.841667" y="0.475" />
-                            <point x="0.9" y="0.975" />
-                            <point x="0.625" y="0.975" />
-                            <point x="0.458333" y="0.758333" />
-                            <point x="0.416667" y="0.566667" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="1">
-                        <image-point name="Head" x="0.741667" y="0.416667" />
-                        <collision-poly>
-                            <point x="0.441667" y="0.441667" />
-                            <point x="0.5" y="0.341667" />
-                            <point x="0.633333" y="0.483333" />
-                            <point x="0.841667" y="0.475" />
-                            <point x="0.9" y="0.975" />
-                            <point x="0.625" y="0.975" />
-                            <point x="0.458333" y="0.758333" />
-                            <point x="0.416667" y="0.566667" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-                <animation framecount="3" loop="0" name="Death" pingpong="0" repeatcount="1" repeatto="0" sid="3269435814195612" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="1">
-                        <image-point name="Head" x="0.741667" y="0.416667" />
-                        <collision-poly>
-                            <point x="0.441667" y="0.441667" />
-                            <point x="0.5" y="0.341667" />
-                            <point x="0.633333" y="0.483333" />
-                            <point x="0.841667" y="0.475" />
-                            <point x="0.9" y="0.975" />
-                            <point x="0.625" y="0.975" />
-                            <point x="0.458333" y="0.758333" />
-                            <point x="0.416667" y="0.566667" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="1">
-                        <image-point name="Head" x="0.741667" y="0.416667" />
-                        <collision-poly>
-                            <point x="0.441667" y="0.441667" />
-                            <point x="0.5" y="0.341667" />
-                            <point x="0.633333" y="0.483333" />
-                            <point x="0.841667" y="0.475" />
-                            <point x="0.9" y="0.975" />
-                            <point x="0.625" y="0.975" />
-                            <point x="0.458333" y="0.758333" />
-                            <point x="0.416667" y="0.566667" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="1">
-                        <image-point name="Head" x="0.741667" y="0.416667" />
-                        <collision-poly>
-                            <point x="0.441667" y="0.441667" />
-                            <point x="0.5" y="0.341667" />
-                            <point x="0.633333" y="0.483333" />
-                            <point x="0.841667" y="0.475" />
-                            <point x="0.9" y="0.975" />
-                            <point x="0.625" y="0.975" />
-                            <point x="0.458333" y="0.758333" />
-                            <point x="0.416667" y="0.566667" />
-                        </collision-poly>
-                    </frame>
+                <animation framecount="14" loop="0" name="Death" pingpong="0" repeatcount="1" repeatto="0" sid="7551177764683095" speed="17">
+                    <frame duration="1" hotspotX="0.4" hotspotY="0.987654" original-source="C:\Users\Drako-PC\Downloads\Morte\charger animazione morte 1.png" />
+                    <frame duration="1" hotspotX="0.39604" hotspotY="0.988506" original-source="C:\Users\Drako-PC\Downloads\Morte\charger animazione morte 2.png" />
+                    <frame duration="1" hotspotX="0.37963" hotspotY="0.98913" original-source="C:\Users\Drako-PC\Downloads\Morte\charger animazione morte 3.png" />
+                    <frame duration="1" hotspotX="0.366071" hotspotY="0.978495" original-source="C:\Users\Drako-PC\Downloads\Morte\charger animazione morte 4.png" />
+                    <frame duration="1" hotspotX="0.359649" hotspotY="0.968085" original-source="C:\Users\Drako-PC\Downloads\Morte\charger animazione morte 5.png" />
+                    <frame duration="1" hotspotX="0.356522" hotspotY="0.968085" original-source="C:\Users\Drako-PC\Downloads\Morte\charger animazione morte 6.png" />
+                    <frame duration="1" hotspotX="0.359649" hotspotY="0.968085" original-source="C:\Users\Drako-PC\Downloads\Morte\charger animazione morte 7.png" />
+                    <frame duration="1" hotspotX="0.377193" hotspotY="0.913043" original-source="C:\Users\Drako-PC\Downloads\Morte\charger animazione morte 8.png" />
+                    <frame duration="1" hotspotX="0.31" hotspotY="0.876923" original-source="C:\Users\Drako-PC\Downloads\Morte\charger animazione morte 9.png" />
+                    <frame duration="1" hotspotX="0.293578" hotspotY="0.884615" original-source="C:\Users\Drako-PC\Downloads\Morte\charger animazione morte 10.png" />
+                    <frame duration="1" hotspotX="0.302752" hotspotY="0.884615" original-source="C:\Users\Drako-PC\Downloads\Morte\charger animazione morte 11.png" />
+                    <frame duration="1" hotspotX="0.279279" hotspotY="0.884615" original-source="C:\Users\Drako-PC\Downloads\Morte\charger animazione morte 12.png" />
+                    <frame duration="1" hotspotX="0.381356" hotspotY="0.980769" original-source="C:\Users\Drako-PC\Downloads\Morte\charger animazione morte 13.png" />
+                    <frame duration="1" hotspotX="0.380165" hotspotY="0.980769" original-source="C:\Users\Drako-PC\Downloads\Morte\charger animazione morte 14.png" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -7575,6 +7578,85 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="ChargerTrap2" sid="9244383668620532">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="390785497296499" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ChargerSpawn2" sid="6023398771221515">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="1510269816231968" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ChargerTrap3" sid="3441797141260591">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8417721498827646" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ChargerSpawn3" sid="1807458864244128">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="665680941661991" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="CaminoAcceso" sid="3376141156453622">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="9149751342661808" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Drako-PC\Downloads\Camino_acceso-2016-05-23\Camino acceso\Camino acceso.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="fiamma" sid="6677266835282799">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="5" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8244464647210877" speed="10">
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Drako-PC\Downloads\Camino_acceso-2016-05-23\Camino acceso\fiamma 1.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Drako-PC\Downloads\Camino_acceso-2016-05-23\Camino acceso\fiamma 2.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Drako-PC\Downloads\Camino_acceso-2016-05-23\Camino acceso\fiamma 3.png" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="C:\Users\Drako-PC\Downloads\Camino_acceso-2016-05-23\Camino acceso\fiamma 4.png" />
+                    <frame duration="1" hotspotX="0.52381" hotspotY="1" original-source="C:\Users\Drako-PC\Downloads\Camino_acceso-2016-05-23\Camino acceso\fiamma 5.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="camino" sid="5827885281620004">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="630113238256785" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.504762" original-source="C:\Users\Drako-PC\Downloads\camino 02.png">
+                        <collision-poly>
+                            <point x="0.109375" y="0.0666667" />
+                            <point x="0.5" y="0" />
+                            <point x="0.90625" y="0.0571429" />
+                            <point x="0.90625" y="0.495238" />
+                            <point x="0.96875" y="0.980952" />
+                            <point x="0.5" y="1" />
+                            <point x="0.015625" y="0.990476" />
+                            <point x="0.078125" y="0.495238" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="QUadro6" sid="709220402566608">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="815529914861438" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Drako-PC\Downloads\QUadro 5.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Hud" plugin-id="Sprite" sid="6636688502215522">
@@ -7732,10 +7814,64 @@
             <file name="Metal_Gong-Dianakc-109711828.m4a" />
             <file name="Metal_Gong-Dianakc-109711828.ogg" />
         </sound-folder>
+        <file name="Apertura_cancello.m4a" />
+        <file name="Apertura_cancello.ogg" />
+        <file name="Campana1.m4a" />
+        <file name="Campana1.ogg" />
+        <file name="Campana2.m4a" />
+        <file name="Campana2.ogg" />
+        <file name="Campana3.m4a" />
+        <file name="Campana3.ogg" />
+        <file name="Ricarica.m4a" />
+        <file name="Ricarica.ogg" />
+        <file name="Scatto_v1.m4a" />
+        <file name="Scatto_v1.ogg" />
+        <file name="Walk_Back_LV1.m4a" />
+        <file name="Walk_Back_LV1.ogg" />
+        <file name="Walk_Back_LV2+Boss.m4a" />
+        <file name="Walk_Back_LV2+Boss.ogg" />
+        <file name="Walk_Front_LV1.m4a" />
+        <file name="Walk_Front_LV1.ogg" />
+        <file name="Walk_Front_LV2+Boss.m4a" />
+        <file name="Walk_Front_LV2+Boss.ogg" />
+        <file name="acquisizione_ricordo_o_power_up_converted.m4a" />
+        <file name="acquisizione_ricordo_o_power_up_converted.ogg" />
+        <file name="acquisizione ricordo o power up.m4a" />
+        <file name="acquisizione ricordo o power up.ogg" />
+        <file name="biter morde.m4a" />
+        <file name="biter morde.ogg" />
+        <file name="botola che si apre.m4a" />
+        <file name="botola che si apre.ogg" />
+        <file name="colpo charger.m4a" />
+        <file name="colpo charger.ogg" />
+        <file name="colpo_charger.m4a" />
+        <file name="colpo_charger.ogg" />
+        <file name="cristallo colpito.m4a" />
+        <file name="cristallo colpito.ogg" />
+        <file name="metal crush.m4a" />
+        <file name="metal crush.ogg" />
+        <file name="momento particolare 2.m4a" />
+        <file name="momento particolare 2.ogg" />
+        <file name="muro che crolla.m4a" />
+        <file name="muro che crolla.ogg" />
+        <file name="onda d&apos;urto.m4a" />
+        <file name="onda d&apos;urto.ogg" />
+        <file name="porta che si apre.m4a" />
+        <file name="porta che si apre.ogg" />
+        <file name="cristallo_che_si_rompe.m4a" />
+        <file name="cristallo_che_si_rompe.ogg" />
+        <file name="Gun_shot.m4a" />
+        <file name="Gun_shot.ogg" />
+        <file name="Campana4.m4a" />
+        <file name="Campana4.ogg" />
+        <file name="Campanone.m4a" />
+        <file name="Campanone.ogg" />
+        <file name="Verso_boss.m4a" />
+        <file name="Verso_boss.ogg" />
+        <file name="verso del boss.m4a" />
+        <file name="verso del boss.ogg" />
     </sounds-folder>
     <music-folder>
-        <file name="bossfase2-2.m4a" />
-        <file name="bossfase2-2.ogg" />
         <file name="cutsceneend-1.m4a" />
         <file name="cutsceneend-1.ogg" />
         <file name="cutscenestart-1.m4a" />
@@ -7752,6 +7888,10 @@
         <file name="livello2-2.ogg" />
         <file name="menu-2.m4a" />
         <file name="menu-2.ogg" />
+        <file name="Musica_Dialoghi.m4a" />
+        <file name="Musica_Dialoghi.ogg" />
+        <file name="MusicaBoss.m4a" />
+        <file name="MusicaBoss.ogg" />
     </music-folder>
     <files-folder>
         <file-folder name="Icons">
