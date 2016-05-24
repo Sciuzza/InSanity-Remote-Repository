@@ -698,6 +698,10 @@
                                 <action id="-15" name="Set visible" sid="739309628035978" type="Reloading">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
+                                <action id="0" name="Call function" sid="1296755136184419" type="Function">
+                                    <param id="0" name="Name">&quot;Player Memory Save&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>

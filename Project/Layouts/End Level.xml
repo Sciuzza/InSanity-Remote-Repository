@@ -29,7 +29,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="LivelloCompletoSfondo" uid="1637">
+                <instance type="LivelloCompletoSfondo" uid="1693">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -70,7 +70,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="TimeText" uid="1693">
+                <instance type="TimeText" uid="1694">
                     <properties>
                         <text>00:00</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -97,7 +97,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="EnemiesText" uid="1694">
+                <instance type="EnemiesText" uid="1695">
                     <properties>
                         <text>0</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -124,7 +124,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="EnemiesText2" uid="1695">
+                <instance type="EnemiesText2" uid="1696">
                     <properties>
                         <text>0/3</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -151,7 +151,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="LivelloCompletoRicominciaLivello" uid="1669">
+                <instance type="LivelloCompletoRicominciaLivello" uid="2022">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -173,7 +173,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="LivelloCompletoRiquadroContinua" uid="1675">
+                <instance type="LivelloCompletoRiquadroContinua" uid="2023">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -195,7 +195,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="LivelloCompletoTornaAlMenu" uid="1676">
+                <instance type="LivelloCompletoTornaAlMenu" uid="2024">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>

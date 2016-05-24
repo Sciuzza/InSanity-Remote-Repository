@@ -59,6 +59,17 @@
                             <param id="0" name="Variable">Player_pos_y_temp</param>
                             <param id="1" name="Value">Player_Box.Y</param>
                         </action>
+                        <action id="-9" name="Destroy" sid="7350306490229499" type="Camera" />
+                        <action id="-3" name="Create object" sid="6398102666946997" type="System">
+                            <param id="0" name="Object to create">Camera</param>
+                            <param id="1" name="Layer">&quot;Overlay&quot;</param>
+                            <param id="2" name="X">Player_Box.X</param>
+                            <param id="3" name="Y">Player_Box.Y</param>
+                        </action>
+                        <action id="0" name="Call function" sid="1529646722463106" type="Function">
+                            <param id="0" name="Name">&quot;Player Memory Load&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="5746811443294065">
@@ -73,10 +84,6 @@
                                 <action id="-3" name="Set position" sid="4844897353831172" type="Player_Box">
                                     <param id="0" name="X">66</param>
                                     <param id="1" name="Y">624</param>
-                                </action>
-                                <action id="0" name="Call function" sid="1529646722463106" type="Function">
-                                    <param id="0" name="Name">&quot;Player Memory Load&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
                         </event-block>
@@ -104,10 +111,6 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Call function" sid="2799959558208097" type="Function">
-                                    <param id="0" name="Name">&quot;Player Memory Save&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
-                                </action>
                                 <action id="-9" name="Set value" sid="1025349485865894" type="System">
                                     <param id="0" name="Variable">Save_Level_1</param>
                                     <param id="1" name="Value">1</param>
@@ -702,6 +705,22 @@
                     </conditions>
                     <actions />
                     <sub-events>
+                        <event-block sid="5493830779567357">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="1958227739637448" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Set opacity" sid="7470581917003681" type="Tutorial">
+                                    <param id="0" name="Opacity">100</param>
+                                </action>
+                                <action id="-16" name="Set opacity" sid="7859828927865659" type="BackGround_Tut_Text">
+                                    <param id="0" name="Opacity">60</param>
+                                </action>
+                                <action id="0" name="Set text" sid="4894101714365009" type="Tutorial">
+                                    <param id="0" name="Text">&quot;Il rosone si sta aprendo...&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="5595770034478865">
                             <conditions>
                                 <condition id="-1" name="Compare X" sid="8213331045284423" type="ChiesaRosone">
@@ -725,15 +744,6 @@
                                 <condition id="-4" name="Trigger once while true" sid="1222000988734326" type="System" />
                             </conditions>
                             <actions>
-                                <action id="-16" name="Set opacity" sid="7470581917003681" type="Tutorial">
-                                    <param id="0" name="Opacity">100</param>
-                                </action>
-                                <action id="-16" name="Set opacity" sid="7859828927865659" type="BackGround_Tut_Text">
-                                    <param id="0" name="Opacity">60</param>
-                                </action>
-                                <action id="0" name="Set text" sid="4894101714365009" type="Tutorial">
-                                    <param id="0" name="Text">&quot;Hai risolto l&apos;indovinello, prendi l&apos;upgrade&quot;</param>
-                                </action>
                                 <action id="-3" name="Set position" sid="420893203119314" type="Stun_Ability">
                                     <param id="0" name="X">1994</param>
                                     <param id="1" name="Y">280</param>
@@ -752,28 +762,12 @@
                             <actions>
                                 <action behavior="Fade" id="1" name="Start fade" sid="2443202530746069" type="Stun_Ability" />
                                 <action id="0" name="Set text" sid="9896326938922334" type="Tutorial">
-                                    <param id="0" name="Text">&quot;Usa il testo destro del mouse per utilizzare l’onda d’urto: con questo miglioramento dell’arma puoi distruggere muri o colonne e rendere vulnerabili i nemici&quot;</param>
-                                </action>
-                                <action behavior="Timer" id="0" name="Start timer" sid="4698056121543125" type="Tutorial">
-                                    <param id="0" name="Duration">2</param>
-                                    <param id="1" name="Type">0</param>
-                                    <param id="2" name="Tag">&quot;Tutorial Stun&quot;</param>
+                                    <param id="0" name="Text">&quot;Usa il testo destro del mouse per utilizzare l’onda d’urto: con questo miglioramento dell’arma puoi distruggere muri o stordire nemici&quot;</param>
                                 </action>
                                 <action id="-13" name="Set boolean" sid="5362176513568175" type="Player_Box">
                                     <param id="0" name="Instance variable">Stun_Ability</param>
                                     <param id="1" name="Value">1</param>
                                 </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="3108247908980675">
-                            <conditions>
-                                <condition behavior="Timer" id="0" name="On timer" sid="8567670733204274" type="Tutorial">
-                                    <param id="0" name="Tag">&quot;Tutorial Stun&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Fade" id="1" name="Start fade" sid="349597224636237" type="Tutorial" />
-                                <action behavior="Fade" id="1" name="Start fade" sid="7509483541446183" type="BackGround_Tut_Text" />
                             </actions>
                         </event-block>
                         <event-block sid="3640800232879648">
@@ -788,6 +782,8 @@
                                     <param id="1" name="&apos;Off&apos; time">0.1</param>
                                     <param id="2" name="Duration">1.0</param>
                                 </action>
+                                <action behavior="Fade" id="1" name="Start fade" sid="349597224636237" type="Tutorial" />
+                                <action behavior="Fade" id="1" name="Start fade" sid="7509483541446183" type="BackGround_Tut_Text" />
                                 <action behavior="Timer" id="0" name="Start timer" sid="4282116663806826" type="Player_Box">
                                     <param id="0" name="Duration">1.0</param>
                                     <param id="1" name="Type">0</param>
@@ -956,7 +952,7 @@
                                 <condition id="-8" name="Compare two values" sid="8479536946737249" type="System">
                                     <param id="0" name="First value">Player_Box.X</param>
                                     <param id="1" name="Comparison">3</param>
-                                    <param id="2" name="Second value">4600</param>
+                                    <param id="2" name="Second value">4500</param>
                                 </condition>
                                 <condition id="-6" name="Every X seconds" sid="4653815871850854" type="System">
                                     <param id="0" name="Interval (seconds)">dt</param>
@@ -1326,7 +1322,7 @@
                             <param id="0" name="Opacity">60</param>
                         </action>
                         <action id="0" name="Set text" sid="4299031838322237" type="Tutorial">
-                            <param id="0" name="Text">&quot;L&apos;occhio mi dice che sono le 1:30 di mattina&quot;</param>
+                            <param id="0" name="Text">&quot;E&apos; l&apos;1:30&quot;</param>
                         </action>
                         <action behavior="Timer" id="0" name="Start timer" sid="9387053727863914" type="Player_Box">
                             <param id="0" name="Duration">3</param>
@@ -1469,81 +1465,13 @@
                                 <condition id="-4" name="Trigger once while true" sid="8788337375389075" type="System" />
                             </conditions>
                             <actions>
-                                <action id="0" name="Call function" sid="1391566513810529" type="Function">
-                                    <param id="0" name="Name">&quot;Player Stop&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
-                                </action>
-                                <action id="-13" name="Set boolean" sid="5111517567206824" type="Player_Box">
-                                    <param id="0" name="Instance variable">Camera_On_Player</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="7307254413377276" type="Player_Box">
-                                    <param id="0" name="Instance variable">Level_1_Phases</param>
-                                    <param id="1" name="Value">10</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="2068802040185604">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="5652888787208208" type="Player_Box">
-                            <param id="0" name="Instance variable">Level_1_Phases</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">10</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="4917307235301612">
-                            <conditions>
-                                <condition id="-8" name="Compare two values" sid="7239391978677515" type="System">
-                                    <param id="0" name="First value">Camera.X</param>
-                                    <param id="1" name="Comparison">3</param>
-                                    <param id="2" name="Second value">villaPorta.X</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-3" name="Set position" sid="6338519783701012" type="Camera">
-                                    <param id="0" name="X">lerp(Camera.X,villaPorta.X,0.02)</param>
-                                    <param id="1" name="Y">lerp(Camera.Y,villaPorta.Y,0.02)</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="8388384358141347">
-                            <conditions>
-                                <condition id="-8" name="Compare two values" sid="2665206464338917" type="System">
-                                    <param id="0" name="First value">Camera.X</param>
-                                    <param id="1" name="Comparison">5</param>
-                                    <param id="2" name="Second value">villaPorta.X - 2</param>
-                                </condition>
-                                <condition id="-4" name="Trigger once while true" sid="6792278568306557" type="System" />
-                            </conditions>
-                            <actions>
                                 <action id="4" name="Set animation" sid="4863449351939591" type="villaPorta">
                                     <param id="0" name="Animation">&quot;Open&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="8939397985925522">
-                            <conditions>
-                                <condition id="4" name="On finished" sid="5030523933892922" type="villaPorta">
-                                    <param id="0" name="Animation">&quot;Open&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-13" name="Set boolean" sid="3278521309225812" type="Player_Box">
-                                    <param id="0" name="Instance variable">Camera_On_Player</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="2007099569374776" type="Player_Box">
+                                <action id="-10" name="Set value" sid="7307254413377276" type="Player_Box">
                                     <param id="0" name="Instance variable">Level_1_Phases</param>
                                     <param id="1" name="Value">11</param>
-                                </action>
-                                <action id="0" name="Call function" sid="7561258663503422" type="Function">
-                                    <param id="0" name="Name">&quot;Player Free&quot;</param>
-                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1630,6 +1558,10 @@
                                 </action>
                                 <action id="-15" name="Set visible" sid="8450207505841491" type="Reloading">
                                     <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="0" name="Call function" sid="9225152944120673" type="Function">
+                                    <param id="0" name="Name">&quot;Player Memory Save&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
                         </event-block>

@@ -2212,7 +2212,7 @@
                     </animation>
                 </animation-folder>
             </object-type>
-            <object-type global="1" name="Player_Box" sid="8534937278847791">
+            <object-type name="Player_Box" sid="8534937278847791">
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable name="Life" sid="3845622154724521" type="number" />
@@ -2251,6 +2251,7 @@
                     <instance-variable name="Cooldown" sid="3844534789226683" type="number" />
                     <instance-variable name="Fire_Rate_Stun" sid="2428966554623724" type="number" />
                     <instance-variable name="Cooldown_Stun" sid="3500894031194361" type="number" />
+                    <instance-variable name="Has_Key" sid="1332432403310208" type="boolean" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Platform" sid="2921180046897222">
@@ -5281,37 +5282,37 @@
                 </instance-variables>
                 <animation-folder>
                     <animation framecount="2" loop="1" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="6402848589246583" speed="2">
-                        <frame duration="1" hotspotX="0.504202" hotspotY="0.495726" original-source="C:\Users\Drako-PC\Downloads\verde-2016-05-22\verde\body.png">
-                            <image-point name="BraccioSx" x="0.789916" y="0.196581" />
-                            <image-point name="BraccioDx" x="0.310924" y="0.226496" />
-                            <image-point name="Cervello" x="0.394958" y="0.0213675" />
-                            <image-point name="Occhi" x="0.268908" y="0.0940171" />
-                            <image-point name="GambaDx" x="0.319328" y="0.730769" />
-                            <image-point name="GambaSx" x="0.663866" y="0.777778" />
+                        <frame duration="1" hotspotX="0.741176" hotspotY="0.491453" original-source="C:\Users\Sciuzza\Desktop\1.png">
+                            <image-point name="BraccioSx" x="0.882353" y="0.17094" />
+                            <image-point name="BraccioDx" x="0.2" y="0.213675" />
+                            <image-point name="Cervello" x="0.317647" y="0.0384615" />
+                            <image-point name="Occhi" x="0.270588" y="0.0854701" />
+                            <image-point name="GambaDx" x="0.305882" y="0.722222" />
+                            <image-point name="GambaSx" x="0.717647" y="0.739316" />
                             <collision-poly>
-                                <point x="0.411765" y="0.307692" />
-                                <point x="0.546219" y="0.294872" />
-                                <point x="0.731092" y="0.5" />
-                                <point x="0.756303" y="0.876068" />
-                                <point x="0.495798" y="0.555556" />
-                                <point x="0.319328" y="0.837607" />
-                                <point x="0.369748" y="0.5" />
+                                <point x="0.480278" y="0.298488" />
+                                <point x="0.859912" y="0.285339" />
+                                <point x="1" y="0.495726" />
+                                <point x="1" y="0.881437" />
+                                <point x="0.717547" y="0.552707" />
+                                <point x="0.219279" y="0.84199" />
+                                <point x="0.361641" y="0.495726" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5">
-                            <image-point name="BraccioSx" x="0.951219" y="0.193966" />
-                            <image-point name="BraccioDx" x="0.243902" y="0.232759" />
-                            <image-point name="Cervello" x="0.390244" y="0.0215517" />
-                            <image-point name="Occhi" x="0.207317" y="0.0948276" />
-                            <image-point name="GambaDx" x="0.243902" y="0.732759" />
-                            <image-point name="GambaSx" x="0.743902" y="0.780172" />
+                        <frame duration="1" hotspotX="0.756098" hotspotY="0.491379" original-source="C:\Users\Sciuzza\Desktop\2.png">
+                            <image-point name="BraccioSx" x="0.865854" y="0.172414" />
+                            <image-point name="BraccioDx" x="0.195122" y="0.206897" />
+                            <image-point name="Cervello" x="0.292683" y="0.0344828" />
+                            <image-point name="Occhi" x="0.256098" y="0.0948276" />
+                            <image-point name="GambaDx" x="0.243902" y="0.711207" />
+                            <image-point name="GambaSx" x="0.695122" y="0.719828" />
                             <collision-poly>
-                                <point x="0.414634" y="0.340517" />
-                                <point x="0.634146" y="0.340517" />
-                                <point x="0.890244" y="0.5" />
-                                <point x="0.963415" y="0.987069" />
-                                <point x="0.5" y="0.633621" />
-                                <point x="0.121951" y="0.956897" />
+                                <point x="0.506246" y="0.326397" />
+                                <point x="1" y="0.326397" />
+                                <point x="1" y="0.491379" />
+                                <point x="1" y="0.995244" />
+                                <point x="0.756098" y="0.629608" />
+                                <point x="0" y="0.964031" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -7688,7 +7689,6 @@
                 <member>Bat</member>
                 <member>Bat_Testing</member>
                 <member>BotolaSeparaLivello</member>
-                <member>Camera</member>
                 <member>Charger</member>
                 <member>ChargerArm</member>
                 <member>CheckPoint</member>
@@ -7716,7 +7716,6 @@
                 <member>orologioLancettaCorto</member>
                 <member>orologioLancettaLunga</member>
                 <member>Padlock</member>
-                <member>Player_Box</member>
                 <member>ponteBlocco</member>
                 <member>ponteBlocco2</member>
                 <member>ponteBlocco3</member>
@@ -7757,6 +7756,13 @@
                 <member>Infezione_braccio</member>
                 <member>Mano_dx</member>
                 <member>Occhi</member>
+            </members>
+        </family>
+        <family name="Enemies" plugin-id="Sprite" sid="1629158660012753">
+            <members>
+                <member>Biter</member>
+                <member>Charger</member>
+                <member>Gunner</member>
             </members>
         </family>
     </families>

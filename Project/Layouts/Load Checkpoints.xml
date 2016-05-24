@@ -29,7 +29,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="EndLevelBG" uid="1638">
+                <instance type="EndLevelBG" uid="1676">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -51,7 +51,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Checkpoint2" uid="1635">
+                <instance type="Checkpoint2" uid="1677">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -73,7 +73,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Back" uid="1636">
+                <instance type="Back" uid="1678">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -95,7 +95,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Pallino" uid="1639">
+                <instance type="Pallino" uid="1679">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -120,7 +120,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Pallino" uid="1640">
+                <instance type="Pallino" uid="1680">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -145,7 +145,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Pallino" uid="1641">
+                <instance type="Pallino" uid="1681">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -170,7 +170,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Pallino" uid="1643">
+                <instance type="Pallino" uid="1682">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -195,7 +195,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Pallino" uid="1644">
+                <instance type="Pallino" uid="1683">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -220,7 +220,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Pallino" uid="1645">
+                <instance type="Pallino" uid="1684">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -245,7 +245,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Pallino" uid="1646">
+                <instance type="Pallino" uid="1685">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -270,7 +270,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Pallino" uid="1647">
+                <instance type="Pallino" uid="1686">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -295,7 +295,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Pallino" uid="1668">
+                <instance type="Pallino" uid="1687">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -339,7 +339,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Text" uid="1679">
+                <instance type="Text" uid="1688">
                     <properties>
                         <text>Premi Esc per tornare al menù principale</text>
                         <initial-visibility>Visible</initial-visibility>

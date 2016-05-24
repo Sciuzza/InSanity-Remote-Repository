@@ -29,7 +29,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="MenuPrincipaleSfondo" uid="1627">
+                <instance type="MenuPrincipaleSfondo" uid="1642">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -73,7 +73,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="MenuPrincipaleRiquadroNuovaPartitaCrediti" uid="1628">
+                <instance type="MenuPrincipaleRiquadroNuovaPartitaCrediti" uid="1643">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -95,7 +95,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="MenuPrincipaleRiquadroNuovaPartitaCrediti2" uid="1629">
+                <instance type="MenuPrincipaleRiquadroNuovaPartitaCrediti2" uid="1644">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -117,7 +117,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="MenuPrincipaleRiquadroCheckpoint" uid="1630">
+                <instance type="MenuPrincipaleRiquadroCheckpoint" uid="1645">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -139,7 +139,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="MenuPrincipaleOcchi" uid="1631">
+                <instance type="MenuPrincipaleOcchi" uid="1646">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>

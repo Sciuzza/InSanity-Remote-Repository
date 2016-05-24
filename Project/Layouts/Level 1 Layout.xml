@@ -2697,7 +2697,7 @@
                         <Weapon_Level>0</Weapon_Level>
                         <Weapon_Loader>4</Weapon_Loader>
                         <Weapon_Max_Loader>4</Weapon_Max_Loader>
-                        <Reloading_Time>0.5</Reloading_Time>
+                        <Reloading_Time>2</Reloading_Time>
                         <Reloading>false</Reloading>
                         <Stun_Ability>false</Stun_Ability>
                         <Jump_Is_On>true</Jump_Is_On>
@@ -2722,9 +2722,9 @@
                         <Cooldown>-1</Cooldown>
                         <Fire_Rate_Stun>2</Fire_Rate_Stun>
                         <Cooldown_Stun>-1</Cooldown_Stun>
+                        <Has_Key>false</Has_Key>
                     </instance-variables>
                     <behavior-instances>
-                        <behavior-instance type="Persist" />
                         <behavior-instance type="Platform">
                             <properties>
                                 <max-speed>160</max-speed>
@@ -3291,7 +3291,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="WayPoint1_3" uid="2062">
+                <instance type="WayPoint1_3" uid="3">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -4575,7 +4575,7 @@
                         <opacity>0.5</opacity>
                     </world>
                 </instance>
-                <instance type="SolidObjects" uid="3">
+                <instance type="SolidObjects" uid="6">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -4605,7 +4605,7 @@
                         <opacity>0.5</opacity>
                     </world>
                 </instance>
-                <instance type="SolidObjects" uid="6">
+                <instance type="SolidObjects" uid="7">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -4635,7 +4635,7 @@
                         <opacity>0.5</opacity>
                     </world>
                 </instance>
-                <instance type="SolidObjects" uid="7">
+                <instance type="SolidObjects" uid="11">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -6684,37 +6684,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Camera" uid="306">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Disabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Persist" />
-                        <behavior-instance type="ScrollTo">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Pin" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>90</x>
-                        <y>549</y>
-                        <z>0</z>
-                        <width>8</width>
-                        <height>8</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="Door_Area" uid="1518">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
@@ -6874,6 +6843,36 @@
                         <height>76</height>
                         <depth>0</depth>
                         <hotspotX>0.519999981</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Camera" uid="306">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="ScrollTo">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>185</x>
+                        <y>571</y>
+                        <z>0</z>
+                        <width>8</width>
+                        <height>8</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
@@ -7243,7 +7242,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Reloading" uid="11">
+                <instance type="Reloading" uid="80">
                     <properties>
                         <text></text>
                         <initial-visibility>Visible</initial-visibility>
