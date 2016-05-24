@@ -752,7 +752,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CutsceneEndOspedale" uid="1681">
+                <instance type="CutsceneEndOspedale" uid="1682">
                     <properties>
                         <text>Ospedale Psichiatrico - oggi -</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -779,7 +779,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CutsceneEndDialog2" uid="1682">
+                <instance type="CutsceneEndDialog2" uid="1683">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -801,7 +801,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CutsceneEndText2" uid="1683">
+                <instance type="CutsceneEndText2" uid="1684">
                     <properties>
                         <text>Text</text>
                         <initial-visibility>Invisible</initial-visibility>
@@ -828,7 +828,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Barella" uid="1684">
+                <instance type="Barella" uid="1685">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>

@@ -29,7 +29,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="LivelloCompletoSfondo" uid="1636">
+                <instance type="LivelloCompletoSfondo" uid="1637">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -151,7 +151,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="LivelloCompletoRicominciaLivello" uid="1637">
+                <instance type="LivelloCompletoRicominciaLivello" uid="1669">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -173,7 +173,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="LivelloCompletoRiquadroContinua" uid="1669">
+                <instance type="LivelloCompletoRiquadroContinua" uid="1675">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -195,7 +195,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="LivelloCompletoTornaAlMenu" uid="1675">
+                <instance type="LivelloCompletoTornaAlMenu" uid="1676">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>

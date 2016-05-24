@@ -9,39 +9,9 @@
                 <event-block sid="5946792038180888">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="5038448824040323" type="System" />
-                        <condition id="-11" name="For Each" sid="6974337511310184" type="System">
-                            <param id="0" name="Object">Gunner</param>
-                        </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" sid="7351026692219539" type="AngleHelper2" />
-                        <action id="0" name="Spawn another object" sid="2355832058454214" type="Gunner">
-                            <param id="0" name="Object">AngleHelper2</param>
-                            <param id="1" name="Layer">10</param>
-                            <param id="2" name="Image point">1</param>
-                        </action>
-                        <action id="-10" name="Set value" sid="4574838431621849" type="AngleHelper2">
-                            <param id="0" name="Instance variable">parent</param>
-                            <param id="1" name="Value">Gunner.UID</param>
-                        </action>
                         <action id="-9" name="Destroy" sid="2577719407223943" type="GunnerBullet" />
-                    </actions>
-                </event-block>
-                <event-block sid="2495700424541065">
-                    <conditions>
-                        <condition id="-6" name="Every X seconds" sid="9937520032612982" type="System">
-                            <param id="0" name="Interval (seconds)">dt</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-22" name="Set angle toward position" sid="9157191631050252" type="AngleHelper2">
-                            <param id="0" name="X">Player_Box.X</param>
-                            <param id="1" name="Y">Player_Box.Y - 20</param>
-                        </action>
-                        <action id="-4" name="Set position to another object" sid="3732510266883921" type="AngleHelper2">
-                            <param id="0" name="Object">Gunner</param>
-                            <param id="1" name="Image point (optional)">1</param>
-                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -61,7 +31,13 @@
                             <conditions>
                                 <condition id="-1" name="Compare X" sid="9848579790135003" type="Gunner">
                                     <param id="0" name="Comparison">4</param>
-                                    <param id="1" name="X co-ordinate">Player_Box.X</param>
+                                    <param id="1" name="X co-ordinate">Player_Box.X +5</param>
+                                </condition>
+                                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="8378231151709667" type="Gunner">
+                                    <param id="0" name="Object">Player_Box</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="3866167692471376" type="Gunner">
+                                    <param id="0" name="Instance variable">IsGoingToMove</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -73,16 +49,93 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="3092242518976968">
+                        <event-block sid="4445982015576221">
                             <conditions>
-                                <condition id="-22" name="Else" sid="5503143773479439" type="System" />
+                                <condition id="-1" name="Compare X" sid="1837498366206866" type="Gunner">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="X co-ordinate">Player_Box.X + 5</param>
+                                </condition>
+                                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="1834322007993196" type="Gunner">
+                                    <param id="0" name="Object">Player_Box</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="1484813901286766" type="Gunner">
+                                    <param id="0" name="Instance variable">IsGoingToMove</param>
+                                </condition>
                             </conditions>
                             <actions>
-                                <action id="7" name="Set mirrored" sid="348231264184311" type="Gunner">
+                                <action id="-13" name="Set boolean" sid="8083810320170303" type="Gunner">
+                                    <param id="0" name="Instance variable">isMoving</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="7" name="Set mirrored" sid="2538159148666094" type="Gunner">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="3311059699653577" type="Gunner">
+                                    <param id="0" name="Control">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3726406758548057">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="1702231489015312" type="Gunner">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="X co-ordinate">Player_Box.X - 5</param>
+                                </condition>
+                                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="9658030998808487" type="Gunner">
+                                    <param id="0" name="Object">Player_Box</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="2598182447081941" type="Gunner">
+                                    <param id="0" name="Instance variable">IsGoingToMove</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="7" name="Set mirrored" sid="7459905454044181" type="Gunner">
                                     <param id="0" name="State">1</param>
                                 </action>
                                 <action behavior="Platform" id="7" name="Simulate control" sid="6042641815165493" type="Gunner">
                                     <param id="0" name="Control">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="8340282489652876">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="127792077625695" type="Gunner">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="X co-ordinate">Player_Box.X - 5</param>
+                                </condition>
+                                <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="5914686665737801" type="Gunner">
+                                    <param id="0" name="Object">Player_Box</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="1390314775559922" type="Gunner">
+                                    <param id="0" name="Instance variable">IsGoingToMove</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="2321847098875598" type="Gunner">
+                                    <param id="0" name="Instance variable">isMoving</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="7" name="Set mirrored" sid="4740723539783385" type="Gunner">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="4457500607449047" type="Gunner">
+                                    <param id="0" name="Control">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3092242518976968">
+                            <conditions>
+                                <condition behavior="LineOfSight" id="0" inverted="1" name="Has LOS to object" sid="5503143773479439" type="Gunner">
+                                    <param id="0" name="Object">Player_Box</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="5057765122454719" type="Gunner">
+                                    <param id="0" name="Instance variable">IsGoingToMove</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="348231264184311" type="Gunner">
+                                    <param id="0" name="Instance variable">isMoving</param>
+                                    <param id="1" name="Value">0</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -92,26 +145,44 @@
         </event-group>
         <event-group description="" sid="933845398846658" title="A.I. Part">
             <sub-events>
-                <comment>Movement part</comment>
                 <comment>Shooting Part</comment>
+                <event-block sid="2099176484535">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="2693877074664224" type="Gunner">
+                            <param id="0" name="Instance variable">isMoving</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="1" name="Set max speed" sid="1837152312134058" type="Gunner">
+                            <param id="0" name="Max Speed">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3158843581229316">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="960892117691744" type="Gunner">
+                            <param id="0" name="Instance variable">isMoving</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="1" name="Set max speed" sid="8610062787237184" type="Gunner">
+                            <param id="0" name="Max Speed">30</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="6894769440441822">
                     <conditions>
                         <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="7496941230884595" type="Gunner">
                             <param id="0" name="Object">Player_Box</param>
                         </condition>
                         <condition id="-6" name="Every X seconds" sid="8301004518799558" type="System">
-                            <param id="0" name="Interval (seconds)">random(1,2)</param>
+                            <param id="0" name="Interval (seconds)">1.5</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="112416869134165" type="Gunner">
+                            <param id="0" name="Instance variable">isShooting</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Spawn another object" sid="7542294643358075" type="AngleHelper2">
-                            <param id="0" name="Object">GunnerBullet</param>
-                            <param id="1" name="Layer">10</param>
-                            <param id="2" name="Image point">0</param>
-                        </action>
-                        <action id="-8" name="Set angle" sid="691935902020507" type="GunnerBullet">
-                            <param id="0" name="Angle">AngleHelper2.Angle</param>
-                        </action>
                         <action id="-10" name="Set value" sid="2044047405393127" type="Gunner">
                             <param id="0" name="Instance variable">firetimer</param>
                             <param id="1" name="Value">Self.firerate</param>
@@ -119,6 +190,15 @@
                         <action id="-10" name="Set value" sid="6126349450422213" type="Gunner">
                             <param id="0" name="Instance variable">firetimer</param>
                             <param id="1" name="Value">max(0, Gunner.firetimer - dt)</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="7542294643358075" type="Gunner">
+                            <param id="0" name="Object">GunnerBullet</param>
+                            <param id="1" name="Layer">7</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action id="-22" name="Set angle toward position" sid="691935902020507" type="GunnerBullet">
+                            <param id="0" name="X">Player_Box.X</param>
+                            <param id="1" name="Y">Player_Box.Y - 20</param>
                         </action>
                     </actions>
                 </event-block>
@@ -128,6 +208,9 @@
                         <condition id="0" name="On collision with another object" sid="7524953159065752" type="Bullet_1_Player">
                             <param id="0" name="Object">Gunner</param>
                         </condition>
+                        <condition id="2" inverted="1" name="Is playing" sid="291430970191407" type="Gunner">
+                            <param id="0" name="Animation">&quot;Death&quot;</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="-12" name="Subtract from" sid="1664022427957204" type="Gunner">
@@ -135,6 +218,68 @@
                             <param id="1" name="Value">1</param>
                         </action>
                         <action id="-9" name="Destroy" sid="2794076708482514" type="Bullet_1_Player" />
+                    </actions>
+                </event-block>
+                <event-block sid="7416077138834902">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="5309703091264877" type="Bullet_S_Player">
+                            <param id="0" name="Object">Gunner</param>
+                        </condition>
+                        <condition disabled="1" id="2" name="Is playing" sid="9025719205435559" type="Bullet_S_Player">
+                            <param id="0" name="Animation">&quot;Bullet&quot;</param>
+                        </condition>
+                        <condition id="-8" name="Is boolean instance variable set" sid="5129017307410988" type="Gunner">
+                            <param id="0" name="Instance variable">isMoving</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="9488257743468992" type="Bullet_S_Player" />
+                        <action id="-13" name="Set boolean" sid="1713315352743262" type="Gunner">
+                            <param id="0" name="Instance variable">isMoving</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="4307460455718579" type="Gunner">
+                            <param id="0" name="Instance variable">isShooting</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="3827528881452804" type="System">
+                            <param id="0" name="Seconds">1.5</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="8460205008431342" type="Gunner">
+                            <param id="0" name="Instance variable">isMoving</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="5551819496155104" type="Gunner">
+                            <param id="0" name="Instance variable">isShooting</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6861363580751061">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="722463778865045" type="Bullet_S_Player">
+                            <param id="0" name="Object">Gunner</param>
+                        </condition>
+                        <condition disabled="1" id="2" name="Is playing" sid="1742164885843059" type="Bullet_S_Player">
+                            <param id="0" name="Animation">&quot;Bullet&quot;</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="6652041506309869" type="Gunner">
+                            <param id="0" name="Instance variable">isMoving</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="9164262771748684" type="Bullet_S_Player" />
+                        <action id="-13" name="Set boolean" sid="7379360748744507" type="Gunner">
+                            <param id="0" name="Instance variable">isShooting</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="7456091626838599" type="System">
+                            <param id="0" name="Seconds">1.5</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="4930787452008782" type="Gunner">
+                            <param id="0" name="Instance variable">isShooting</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="7623824566276349">
@@ -161,6 +306,11 @@
                         </condition>
                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="6584412240684633" type="Player_Box">
                             <param id="0" name="Instance variable">Dash</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="9899939694793138" type="Gunner">
+                            <param id="0" name="Instance variable">Health</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -237,8 +387,10 @@
                             <param id="0" name="Animation">&quot;No_Arms_Idle&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action id="-9" name="Destroy" sid="2852315608729598" type="AngleHelper2" />
-                        <action id="-9" name="Destroy" sid="3494891165892123" type="GunnerArm2" />
+                        <action id="-13" name="Set boolean" sid="485860400161415" type="Gunner">
+                            <param id="0" name="Instance variable">isShooting</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="2003689304229427">
@@ -293,8 +445,10 @@
                             <param id="0" name="Animation">&quot;No_Arms_Walk&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action id="-9" name="Destroy" sid="7864404265680645" type="AngleHelper2" />
-                        <action id="-9" name="Destroy" sid="6342665022570801" type="GunnerArm2" />
+                        <action id="-13" name="Set boolean" sid="1529113576109467" type="Gunner">
+                            <param id="0" name="Instance variable">isShooting</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="3941129284412686">
@@ -313,6 +467,14 @@
                         <action behavior="Platform" id="1" name="Set max speed" sid="7309327262547284" type="Gunner">
                             <param id="0" name="Max Speed">0</param>
                         </action>
+                        <action id="-13" name="Set boolean" sid="6272288099843335" type="Gunner">
+                            <param id="0" name="Instance variable">isMoving</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="5854333571673376" type="Gunner">
+                            <param id="0" name="Instance variable">isShooting</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
                     </actions>
                     <sub-events>
                         <event-block sid="6330879829882946">
@@ -326,63 +488,6 @@
                             </actions>
                         </event-block>
                     </sub-events>
-                </event-block>
-            </sub-events>
-        </event-group>
-        <event-group description="" sid="6187886231517741" title="Gunner movement">
-            <sub-events>
-                <event-block sid="3897465775269957">
-                    <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" sid="9431569677980481" type="Gunner">
-                            <param id="0" name="Instance variable">isMoving</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-10" name="Set value" sid="6325321772486533" type="Gunner">
-                            <param id="0" name="Instance variable">Direction</param>
-                            <param id="1" name="Value">random(1,3)</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="1370107739210156">
-                    <conditions>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="4668589738867996" type="Gunner">
-                            <param id="0" name="Instance variable">isMoving</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Platform" id="1" name="Set max speed" sid="10411001963966" type="Gunner">
-                            <param id="0" name="Max Speed">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="8104319169974964">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="3545383897999174" type="Gunner">
-                            <param id="0" name="Instance variable">Direction</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Platform" id="7" name="Simulate control" sid="6645748973129189" type="Gunner">
-                            <param id="0" name="Control">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="6928092096241343">
-                    <conditions>
-                        <condition id="-7" name="Compare instance variable" sid="3781301315353625" type="Gunner">
-                            <param id="0" name="Instance variable">Direction</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">2</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Platform" id="7" name="Simulate control" sid="2075023991221271" type="Gunner">
-                            <param id="0" name="Control">1</param>
-                        </action>
-                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
