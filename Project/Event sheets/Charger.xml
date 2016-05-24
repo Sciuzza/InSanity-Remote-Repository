@@ -233,7 +233,7 @@
         </event-group>
         <event-group description="" sid="5620142069917818" title="Charger Attack">
             <sub-events>
-                <event-block sid="4156269119197647">
+                <event-block disabled="1" sid="4156269119197647">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="8252540471714424" type="Charger">
                             <param id="0" name="Object">Player_Box</param>

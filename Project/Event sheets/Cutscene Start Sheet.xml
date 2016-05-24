@@ -8,6 +8,13 @@
                 <condition id="-2" name="On start of layout" sid="6159837360334139" type="System" />
             </conditions>
             <actions>
+                <action id="33" name="Stop all" sid="1923112014164355" type="Audio" />
+                <action id="0" name="Play" sid="3259674077158882" type="Audio">
+                    <param id="0" name="Audio file">cutscenestart-1</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-15</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
                 <action id="-16" name="Set opacity" sid="1114226402752938" type="IntroText1">
                     <param id="0" name="Opacity">0</param>
                 </action>

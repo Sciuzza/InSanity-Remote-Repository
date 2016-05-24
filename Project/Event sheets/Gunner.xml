@@ -200,6 +200,12 @@
                             <param id="0" name="X">Player_Box.X</param>
                             <param id="1" name="Y">Player_Box.Y - 20</param>
                         </action>
+                        <action id="0" name="Play" sid="9846861682243965" type="Audio">
+                            <param id="0" name="Audio file">Gun_shot</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-15</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <comment>Fight Part</comment>

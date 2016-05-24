@@ -7,7 +7,7 @@
             <sub-events>
                 <event-block disabled="1" sid="445241576665382">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="2858345405913288" type="Biter">
+                        <condition disabled="1" id="0" name="On collision with another object" sid="2858345405913288" type="Biter">
                             <param id="0" name="Object">Player_Box</param>
                         </condition>
                         <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="3801403269893214" type="Player_Box">
@@ -675,6 +675,12 @@
                                 <action id="-10" name="Set value" sid="914413571516795" type="Biter">
                                     <param id="0" name="Instance variable">ShootCheck</param>
                                     <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="0" name="Play" sid="3648930119331933" type="Audio">
+                                    <param id="0" name="Audio file">Walk_Front_LV1</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-15</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
                                 </action>
                             </actions>
                         </event-block>

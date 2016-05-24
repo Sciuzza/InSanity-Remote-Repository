@@ -18,6 +18,12 @@
                 <action id="-2" name="Go to layout" sid="310200969769682" type="System">
                     <param id="0" name="Layout">Menu Start</param>
                 </action>
+                <action id="0" name="Play" sid="6687878535693117" type="Audio">
+                    <param id="0" name="Audio file">Gun_shot</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-15</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="3083968181321678">
@@ -25,10 +31,17 @@
                 <condition id="7" name="Cursor is over object" sid="5688611466181422" type="Mouse">
                     <param id="0" name="Object">Pallino</param>
                 </condition>
+                <condition id="-4" name="Trigger once while true" sid="4046099256559384" type="System" />
             </conditions>
             <actions>
                 <action id="-15" name="Set visible" sid="4255458227363657" type="Pallino">
                     <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="0" name="Play" sid="1837087127009885" type="Audio">
+                    <param id="0" name="Audio file">cristallo colpito</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-15</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
             </actions>
         </event-block>
@@ -40,7 +53,14 @@
                     <param id="2" name="Object clicked">Pallino</param>
                 </condition>
             </conditions>
-            <actions />
+            <actions>
+                <action id="0" name="Play" sid="1641250812925419" type="Audio">
+                    <param id="0" name="Audio file">Gun_shot</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-15</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                </action>
+            </actions>
             <sub-events>
                 <event-block sid="8075291862518223">
                     <conditions>

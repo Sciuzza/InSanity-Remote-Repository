@@ -437,11 +437,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>336.25</x>
-                        <y>333</y>
+                        <x>296.557739258</x>
+                        <y>325.5</y>
                         <z>0</z>
-                        <width>65</width>
-                        <height>36</height>
+                        <width>113</width>
+                        <height>45</height>
                         <depth>0</depth>
                         <hotspotX>0.173076928</hotspotX>
                         <hotspotY>0.166666672</hotspotY>
@@ -698,7 +698,7 @@
                         <Weapon_Max_Loader>4</Weapon_Max_Loader>
                         <Reloading_Time>2</Reloading_Time>
                         <Reloading>false</Reloading>
-                        <Stun_Ability>false</Stun_Ability>
+                        <Stun_Ability>true</Stun_Ability>
                         <Jump_Is_On>true</Jump_Is_On>
                         <Dash_Is_On>true</Dash_Is_On>
                         <Side_Movement_Is_On>true</Side_Movement_Is_On>
@@ -795,10 +795,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>338</x>
-                        <y>435.5</y>
+                        <x>324</x>
+                        <y>438.5</y>
                         <z>0</z>
-                        <width>128</width>
+                        <width>122</width>
                         <height>6</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>

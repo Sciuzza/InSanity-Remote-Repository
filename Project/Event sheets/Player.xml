@@ -589,6 +589,42 @@
                                         </action>
                                     </actions>
                                 </event-block>
+                                <event-block sid="3369438209422849">
+                                    <conditions>
+                                        <condition behavior="Platform" id="7" name="On stopped" sid="7126262430710693" type="Player_Box" />
+                                        <condition id="2" inverted="1" name="Is playing" sid="5869031484702825" type="Player_Frame">
+                                            <param id="0" name="Animation">&quot;Dying_2&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="7728989063488316" type="Player_Frame">
+                                            <param id="0" name="Animation">&quot;Idle&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="4698229573226753">
+                                    <conditions>
+                                        <condition behavior="Platform" id="5" name="On jump" sid="6605819026694777" type="Player_Box" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="318586545615696" type="Player_Frame">
+                                            <param id="0" name="Animation">&quot;Jumping&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="573759240633501">
+                                    <conditions>
+                                        <condition behavior="Platform" id="6" name="On fall" sid="8701099532334252" type="Player_Box" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="4" name="Set animation" sid="8663158298325014" type="Player_Frame">
+                                            <param id="0" name="Animation">&quot;Falling&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
                                 <event-block sid="4256699117502673">
                                     <conditions>
                                         <condition id="-8" name="Is boolean instance variable set" sid="5327189801373386" type="Player_Box">
@@ -602,6 +638,35 @@
                                             <param id="1" name="From">1</param>
                                         </action>
                                     </actions>
+                                </event-block>
+                                <event-block sid="4491270990527305">
+                                    <conditions>
+                                        <condition behavior="Platform" id="9" name="On landed" sid="9015026583006328" type="Player_Box" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="6665230291528031" type="Audio">
+                                            <param id="0" name="Audio file">Walk_Front_LV1</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">-15</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="507437352306771">
+                                            <conditions>
+                                                <condition id="-8" name="Is boolean instance variable set" sid="5327189801373386" type="Player_Box">
+                                                    <param id="0" name="Instance variable">Dash</param>
+                                                </condition>
+                                                <condition id="-4" name="Trigger once while true" sid="750248828048401" type="System" />
+                                            </conditions>
+                                            <actions>
+                                                <action id="4" name="Set animation" sid="7121278673141146" type="Player_Frame">
+                                                    <param id="0" name="Animation">&quot;Dash&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                                 <event-block sid="4491270990527305">
                                     <conditions>
@@ -645,15 +710,12 @@
                                 <condition id="2" inverted="1" name="Is playing" sid="5853183643672253" type="Player_Frame">
                                     <param id="0" name="Animation">&quot;Dying&quot;</param>
                                 </condition>
-                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="1747068034706356" type="Player_Box">
-                                    <param id="0" name="Instance variable">Dash</param>
-                                </condition>
                             </conditions>
                             <actions />
                             <sub-events>
                                 <event-block sid="1159803885227963">
                                     <conditions>
-                                        <condition id="0" name="On collision with another object" sid="5042923902190254" type="Biter">
+                                        <condition id="0" name="On collision with another object" sid="5042923902190254" type="Bat">
                                             <param id="0" name="Object">Player_Frame</param>
                                         </condition>
                                     </conditions>
@@ -680,19 +742,14 @@
                                         <action id="-9" name="Destroy" sid="7679250472132092" type="GunnerBullet" />
                                     </actions>
                                 </event-block>
-                                <event-block sid="8358159829332526">
+                                <event-block sid="267403635042756">
                                     <conditions>
-                                        <condition id="0" name="On collision with another object" sid="1914965304523171" type="Player_Box">
-                                            <param id="0" name="Object">Gunner</param>
-                                        </condition>
-                                        <condition id="-7" name="Compare instance variable" sid="9452032247688507" type="Gunner">
-                                            <param id="0" name="Instance variable">Health</param>
-                                            <param id="1" name="Comparison">4</param>
-                                            <param id="2" name="Value">0</param>
+                                        <condition id="0" name="On collision with another object" sid="1545769042336193" type="Gunner">
+                                            <param id="0" name="Object">Player_Frame</param>
                                         </condition>
                                     </conditions>
                                     <actions>
-                                        <action behavior="Flash" id="0" name="Flash" sid="6213579961358523" type="Player_Frame">
+                                        <action behavior="Flash" id="0" name="Flash" sid="5878561219195252" type="Player_Frame">
                                             <param id="0" name="&apos;On&apos; time">0.1</param>
                                             <param id="1" name="&apos;Off&apos; time">0.1</param>
                                             <param id="2" name="Duration">1.0</param>
@@ -996,6 +1053,12 @@
                                         </condition>
                                     </conditions>
                                     <actions>
+                                        <action id="0" name="Play" sid="9499699243988418" type="Audio">
+                                            <param id="0" name="Audio file">Gun_shot</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">-15</param>
+                                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                        </action>
                                         <action id="-3" name="Create object" sid="3783778561415573" type="System">
                                             <param id="0" name="Object to create">Bullet_1_Player</param>
                                             <param id="1" name="Layer">&quot;Player&quot;</param>
@@ -1096,6 +1159,12 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="0" name="Play" sid="6032033920465476" type="Audio">
+                            <param id="0" name="Audio file">onda d&apos;urto</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-15</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
                         <action id="-3" name="Create object" sid="6913133210977106" type="System">
                             <param id="0" name="Object to create">Bullet_S_Player</param>
                             <param id="1" name="Layer">&quot;Player&quot;</param>
@@ -1169,6 +1238,12 @@
                         <condition id="-4" name="Trigger once while true" sid="8250706713834789" type="System" />
                     </conditions>
                     <actions>
+                        <action id="0" name="Play" sid="9155401423208129" type="Audio">
+                            <param id="0" name="Audio file">Ricarica</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-15</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
                         <action id="-15" name="Set visible" sid="6449551130581803" type="Reloading">
                             <param id="0" name="Visibility">1</param>
                         </action>
@@ -3375,100 +3450,6 @@
                             </actions>
                         </event-block>
                     </sub-events>
-                </event-block>
-            </sub-events>
-        </event-group>
-        <event-group description="" sid="4264007511611137" title="Temp">
-            <sub-events>
-                <event-block disabled="1" sid="673454712746855">
-                    <conditions>
-                        <condition id="2" name="Mouse button is down" sid="6713331898606807" type="Mouse">
-                            <param id="0" name="Mouse button">2</param>
-                        </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="486046552034733" type="Player_Box">
-                            <param id="0" name="Instance variable">Stun_Ability</param>
-                        </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="3771661987811033" type="Player_Box">
-                            <param id="0" name="Instance variable">Weapon_Is_On</param>
-                        </condition>
-                        <condition id="-8" name="Is boolean instance variable set" sid="4128534442546601" type="Player_Box">
-                            <param id="0" name="Instance variable">Stun_Is_On</param>
-                        </condition>
-                        <condition id="2" inverted="1" name="Is playing" sid="4558434531831036" type="Player_Frame">
-                            <param id="0" name="Animation">&quot;Dying&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block disabled="1" sid="9561723000840983">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="2737721352504303" type="Player_Box">
-                                    <param id="0" name="Instance variable">Weapon_Level</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">0</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block disabled="1" sid="900971329656206">
-                                    <conditions>
-                                        <condition id="-7" name="Compare instance variable" sid="9606831445740396" type="Player_Box">
-                                            <param id="0" name="Instance variable">Cooldown_Stun</param>
-                                            <param id="1" name="Comparison">0</param>
-                                            <param id="2" name="Value">-1</param>
-                                        </condition>
-                                        <condition id="-4" name="Trigger once while true" sid="5017011827150402" type="System" />
-                                    </conditions>
-                                    <actions>
-                                        <action id="-3" name="Create object" sid="7210752118431093" type="System">
-                                            <param id="0" name="Object to create">Bullet_S_Player</param>
-                                            <param id="1" name="Layer">&quot;Player&quot;</param>
-                                            <param id="2" name="X">Player_arm.ImagePointX(1)</param>
-                                            <param id="3" name="Y">Player_arm.ImagePointY(1)</param>
-                                        </action>
-                                        <action behavior="Bullet" id="3" name="Set angle of motion" sid="5487533513461033" type="Bullet_S_Player">
-                                            <param id="0" name="Angle">Player_arm.Angle</param>
-                                        </action>
-                                        <action id="4" name="Set animation" sid="2745614370225948" type="Bullet_S_Player">
-                                            <param id="0" name="Animation">&quot;Wave&quot;</param>
-                                            <param id="1" name="From">1</param>
-                                        </action>
-                                        <action behavior="Bullet" id="5" name="Set enabled" sid="3509325102026463" type="Bullet_S_Player">
-                                            <param id="0" name="State">0</param>
-                                        </action>
-                                        <action behavior="Pin" id="0" name="Pin to object" sid="4741798782369611" type="Bullet_S_Player">
-                                            <param id="0" name="Pin to">Player_arm</param>
-                                            <param id="1" name="Mode">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block disabled="1" sid="7584082831794288">
-                    <conditions>
-                        <condition id="3" name="On button released" sid="9725345814899042" type="Mouse">
-                            <param id="0" name="Mouse button">2</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-10" name="Set value" sid="3370124538359088" type="Player_Box">
-                            <param id="0" name="Instance variable">Cooldown_Stun</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action behavior="Pin" id="1" name="Unpin" sid="9397540771881737" type="Bullet_S_Player" />
-                        <action behavior="Bullet" id="5" name="Set enabled" sid="1324538430376937" type="Bullet_S_Player">
-                            <param id="0" name="State">1</param>
-                        </action>
-                        <action behavior="Bullet" id="6" name="Set distance travelled" sid="7094807846278801" type="Bullet_S_Player">
-                            <param id="0" name="Distance">50</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="3874194178435754" type="Bullet_S_Player">
-                            <param id="0" name="Animation">&quot;Bullet&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
                 </event-block>
             </sub-events>
         </event-group>

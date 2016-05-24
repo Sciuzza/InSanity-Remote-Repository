@@ -13,40 +13,18 @@
                         <condition id="-2" name="On start of layout" sid="4323823249592912" type="System" />
                     </conditions>
                     <actions>
+                        <action id="33" name="Stop all" sid="7949893203948575" type="Audio" />
+                        <action id="0" name="Play" sid="7476158103569079" type="Audio">
+                            <param id="0" name="Audio file">livello1-1</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">-20</param>
+                            <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                        </action>
                         <action id="0" name="Call function" sid="5804018926632902" type="Function">
                             <param id="0" name="Name">&quot;Hud and Text Positioning&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
                         <action id="2" name="Stop" sid="6746251571539744" type="CheckPoint" />
-                        <action id="1" name="Set size" sid="3506362689263001" type="MinutesContainer">
-                            <param id="0" name="Width">4</param>
-                            <param id="1" name="Height">1</param>
-                            <param id="2" name="Depth">1</param>
-                        </action>
-                        <action id="4" name="Set at XYZ" sid="7490869024871606" type="MinutesContainer">
-                            <param id="0" name="X">0</param>
-                            <param id="1" name="Y">0</param>
-                            <param id="2" name="Z">0</param>
-                            <param id="3" name="Value">00</param>
-                        </action>
-                        <action id="4" name="Set at XYZ" sid="2338454044462042" type="MinutesContainer">
-                            <param id="0" name="X">1</param>
-                            <param id="1" name="Y">0</param>
-                            <param id="2" name="Z">0</param>
-                            <param id="3" name="Value">15</param>
-                        </action>
-                        <action id="4" name="Set at XYZ" sid="1676922173755401" type="MinutesContainer">
-                            <param id="0" name="X">2</param>
-                            <param id="1" name="Y">0</param>
-                            <param id="2" name="Z">0</param>
-                            <param id="3" name="Value">30</param>
-                        </action>
-                        <action id="4" name="Set at XYZ" sid="331694110444246" type="MinutesContainer">
-                            <param id="0" name="X">3</param>
-                            <param id="1" name="Y">0</param>
-                            <param id="2" name="Z">0</param>
-                            <param id="3" name="Value">45</param>
-                        </action>
                         <action id="-9" name="Set value" sid="1734623839527706" type="System">
                             <param id="0" name="Variable">Layout</param>
                             <param id="1" name="Value">1</param>
@@ -59,15 +37,16 @@
                             <param id="0" name="Variable">Player_pos_y_temp</param>
                             <param id="1" name="Value">Player_Box.Y</param>
                         </action>
-                        <action id="-9" name="Destroy" sid="7350306490229499" type="Camera" />
-                        <action id="-3" name="Create object" sid="6398102666946997" type="System">
-                            <param id="0" name="Object to create">Camera</param>
-                            <param id="1" name="Layer">&quot;Overlay&quot;</param>
-                            <param id="2" name="X">Player_Box.X</param>
-                            <param id="3" name="Y">Player_Box.Y</param>
-                        </action>
                         <action id="0" name="Call function" sid="1529646722463106" type="Function">
                             <param id="0" name="Name">&quot;Player Memory Load&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="9940369218368253" type="Function">
+                            <param id="0" name="Name">&quot;Hud Stamina&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="0" name="Call function" sid="8202504839599026" type="Function">
+                            <param id="0" name="Name">&quot;Hud Bullets&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
@@ -356,7 +335,34 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Play" sid="2791811761303707" type="Audio">
-                                    <param id="0" name="Audio file">Metal_Gong-Dianakc-109711828</param>
+                                    <param id="0" name="Audio file">Campana1</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="5896494492597229" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="0" name="Play" sid="2511990689001996" type="Audio">
+                                    <param id="0" name="Audio file">Campana2</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="6105061282355866" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="0" name="Play" sid="7633694357583937" type="Audio">
+                                    <param id="0" name="Audio file">Campana3</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">0</param>
+                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="4741716041659039" type="System">
+                                    <param id="0" name="Seconds">0.5</param>
+                                </action>
+                                <action id="0" name="Play" sid="885537317843569" type="Audio">
+                                    <param id="0" name="Audio file">Campana4</param>
                                     <param id="2" name="Loop">0</param>
                                     <param id="3" name="Volume">0</param>
                                     <param id="1" name="Tag (optional)">&quot;&quot;</param>
@@ -445,7 +451,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Play" sid="7351273684974352" type="Audio">
-                                    <param id="0" name="Audio file">Metal_Gong-Dianakc-109711828</param>
+                                    <param id="0" name="Audio file">Campana2</param>
                                     <param id="2" name="Loop">0</param>
                                     <param id="3" name="Volume">0</param>
                                     <param id="1" name="Tag (optional)">&quot;Sound First Bell&quot;</param>
@@ -486,89 +492,6 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block disabled="1" sid="3158305957455762">
-                            <conditions>
-                                <condition id="-8" name="Is boolean instance variable set" sid="16483723996739" type="chiesaCampanaPiccola">
-                                    <param id="0" name="Instance variable">Vibrating</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-18" name="Rotate clockwise" sid="6525244118583348" type="chiesaCampanaPiccola">
-                                    <param id="0" name="Degrees">45*dt</param>
-                                </action>
-                            </actions>
-                            <sub-events>
-                                <event-block disabled="1" sid="7158787933885467">
-                                    <conditions>
-                                        <condition id="-11" name="Is within angle" sid="1819666401576377" type="chiesaCampanaPiccola">
-                                            <param id="0" name="Within">0.5</param>
-                                            <param id="1" name="Angle"> 45</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-13" name="Set boolean" sid="4487430994751125" type="chiesaCampanaPiccola">
-                                            <param id="0" name="Instance variable">To_The_Right</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block disabled="1" sid="2165927433125454">
-                                    <conditions>
-                                        <condition id="-8" name="Is boolean instance variable set" sid="3312995269383993" type="chiesaCampanaPiccola">
-                                            <param id="0" name="Instance variable">To_The_Right</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-18" name="Rotate clockwise" sid="4312250634213449" type="chiesaCampanaPiccola">
-                                            <param id="0" name="Degrees">(-90)*(dt)</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block disabled="1" sid="5605906386943758">
-                                    <conditions>
-                                        <condition id="-11" name="Is within angle" sid="2427978504007973" type="chiesaCampanaPiccola">
-                                            <param id="0" name="Within">0.5</param>
-                                            <param id="1" name="Angle"> -45</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-13" name="Set boolean" sid="2865576496518846" type="chiesaCampanaPiccola">
-                                            <param id="0" name="Instance variable">To_The_Left</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                        <action id="-13" name="Set boolean" sid="1551974057311672" type="chiesaCampanaPiccola">
-                                            <param id="0" name="Instance variable">To_The_Right</param>
-                                            <param id="1" name="Value">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block disabled="1" sid="7272791569014034">
-                                    <conditions>
-                                        <condition id="-8" name="Is boolean instance variable set" sid="561057149135436" type="chiesaCampanaPiccola">
-                                            <param id="0" name="Instance variable">To_The_Left</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-18" name="Rotate clockwise" sid="1236211424750133" type="chiesaCampanaPiccola">
-                                            <param id="0" name="Degrees">45*dt</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block sid="4493593028511676">
-                            <conditions>
-                                <condition behavior="Timer" id="0" name="On timer" sid="7062682321542473" type="Player_Box">
-                                    <param id="0" name="Tag">&quot;Bell 1 Vibrating&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-13" name="Set boolean" sid="7474542249241352" type="chiesaCampanaPiccola">
-                                    <param id="0" name="Instance variable">Vibrating</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
                         <event-block sid="2174056306152117">
                             <conditions>
                                 <condition id="0" name="On collision with another object" sid="236683328338729" type="Bullet_1_Player">
@@ -577,7 +500,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Play" sid="2725701285990003" type="Audio">
-                                    <param id="0" name="Audio file">Metal_Gong-Dianakc-109711828</param>
+                                    <param id="0" name="Audio file">Campana3</param>
                                     <param id="2" name="Loop">0</param>
                                     <param id="3" name="Volume">0</param>
                                     <param id="1" name="Tag (optional)">&quot;Sound First Bell&quot;</param>
@@ -617,7 +540,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Play" sid="7489995354106772" type="Audio">
-                                    <param id="0" name="Audio file">Metal_Gong-Dianakc-109711828</param>
+                                    <param id="0" name="Audio file">Campana1</param>
                                     <param id="2" name="Loop">0</param>
                                     <param id="3" name="Volume">0</param>
                                     <param id="1" name="Tag (optional)">&quot;Sound First Bell&quot;</param>
@@ -657,7 +580,7 @@
                             </conditions>
                             <actions>
                                 <action id="0" name="Play" sid="7712742361996811" type="Audio">
-                                    <param id="0" name="Audio file">Metal_Gong-Dianakc-109711828</param>
+                                    <param id="0" name="Audio file">Campana4</param>
                                     <param id="2" name="Loop">0</param>
                                     <param id="3" name="Volume">0</param>
                                     <param id="1" name="Tag (optional)">&quot;Sound First Bell&quot;</param>

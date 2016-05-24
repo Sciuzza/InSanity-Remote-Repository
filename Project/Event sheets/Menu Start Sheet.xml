@@ -15,6 +15,16 @@
                 <action id="-2" name="Go to layout" sid="6748799798416593" type="System">
                     <param id="0" name="Layout">Cutscene Start</param>
                 </action>
+                <action id="25" name="Play at object" sid="5557921169153817" type="Audio">
+                    <param id="0" name="Audio file">Gun_shot</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">-15</param>
+                    <param id="3" name="Object">MenuPrincipaleRiquadroNuovaPartitaCrediti</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;&quot;</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="5863939981811179">
@@ -22,6 +32,7 @@
                 <condition id="7" name="Cursor is over object" sid="5641626098728834" type="Mouse">
                     <param id="0" name="Object">MenuPrincipaleRiquadroNuovaPartitaCrediti</param>
                 </condition>
+                <condition id="-4" name="Trigger once while true" sid="1415872300725644" type="System" />
             </conditions>
             <actions>
                 <action id="-15" name="Set visible" sid="5483377723652561" type="MenuPrincipaleRiquadroNuovaPartitaCrediti">
@@ -32,6 +43,16 @@
                 </action>
                 <action id="-15" name="Set visible" sid="3914174958644383" type="MenuPrincipaleRiquadroNuovaPartitaCrediti2">
                     <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="25" name="Play at object" sid="9932931996106733" type="Audio">
+                    <param id="0" name="Audio file">cristallo colpito</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">-15</param>
+                    <param id="3" name="Object">MenuPrincipaleRiquadroNuovaPartitaCrediti</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;&quot;</param>
                 </action>
             </actions>
         </event-block>
@@ -44,8 +65,15 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-2" name="Go to layout" sid="4968480821074725" type="System">
-                    <param id="0" name="Layout">Load Checkpoints</param>
+                <action id="25" name="Play at object" sid="838328856140154" type="Audio">
+                    <param id="0" name="Audio file">Gun_shot</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">-15</param>
+                    <param id="3" name="Object">MenuPrincipaleRiquadroCheckpoint</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;&quot;</param>
                 </action>
             </actions>
         </event-block>
@@ -54,6 +82,7 @@
                 <condition id="7" name="Cursor is over object" sid="8193612193347569" type="Mouse">
                     <param id="0" name="Object">MenuPrincipaleRiquadroCheckpoint</param>
                 </condition>
+                <condition id="-4" name="Trigger once while true" sid="6018141123700066" type="System" />
             </conditions>
             <actions>
                 <action id="-15" name="Set visible" sid="909631397790837" type="MenuPrincipaleRiquadroCheckpoint">
@@ -64,6 +93,16 @@
                 </action>
                 <action id="-15" name="Set visible" sid="3077742675571639" type="MenuPrincipaleRiquadroNuovaPartitaCrediti">
                     <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="25" name="Play at object" sid="4565567320921213" type="Audio">
+                    <param id="0" name="Audio file">cristallo colpito</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">-15</param>
+                    <param id="3" name="Object">MenuPrincipaleRiquadroCheckpoint</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;&quot;</param>
                 </action>
             </actions>
         </event-block>
@@ -79,6 +118,16 @@
                 <action id="-2" name="Go to layout" sid="2145997225220562" type="System">
                     <param id="0" name="Layout">Credits</param>
                 </action>
+                <action id="25" name="Play at object" sid="1928810306272935" type="Audio">
+                    <param id="0" name="Audio file">Gun_shot</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">-15</param>
+                    <param id="3" name="Object">MenuPrincipaleRiquadroNuovaPartitaCrediti2</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;&quot;</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="5840978723150303">
@@ -86,6 +135,7 @@
                 <condition id="7" name="Cursor is over object" sid="7828684558763606" type="Mouse">
                     <param id="0" name="Object">MenuPrincipaleRiquadroNuovaPartitaCrediti2</param>
                 </condition>
+                <condition id="-4" name="Trigger once while true" sid="5692572370244889" type="System" />
             </conditions>
             <actions>
                 <action id="-15" name="Set visible" sid="2683316214211982" type="MenuPrincipaleRiquadroNuovaPartitaCrediti2">
@@ -93,6 +143,19 @@
                 </action>
                 <action id="-15" name="Set visible" sid="9721823550167198" type="MenuPrincipaleRiquadroCheckpoint">
                     <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="3383957862803268" type="MenuPrincipaleRiquadroNuovaPartitaCrediti">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="25" name="Play at object" sid="5734102820585882" type="Audio">
+                    <param id="0" name="Audio file">cristallo colpito</param>
+                    <param id="1" name="Loop">0</param>
+                    <param id="2" name="Volume">-15</param>
+                    <param id="3" name="Object">MenuPrincipaleRiquadroNuovaPartitaCrediti2</param>
+                    <param id="4" name="Inner angle">360</param>
+                    <param id="5" name="Outer angle">360</param>
+                    <param id="6" name="Outer gain">0</param>
+                    <param id="7" name="Tag (optional)">&quot;&quot;</param>
                 </action>
             </actions>
         </event-block>
@@ -147,6 +210,19 @@
             <actions>
                 <action id="-15" name="Set visible" sid="6672627758019767" type="MenuPrincipaleOcchi">
                     <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9308980287741801">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="7958261911915118" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="7864920186205943" type="Audio">
+                    <param id="0" name="Audio file">menu-2</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-20</param>
+                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
                 </action>
             </actions>
         </event-block>
